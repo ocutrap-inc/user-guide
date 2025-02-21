@@ -73,3 +73,7 @@ The **Accessory Port** on OcuTrap enables **automation and remote activation** o
 1. **Rebaiter / Feeder** – Automatically dispense bait at specific intervals to keep the trap effective longer.
 2. **Vaccine Feeder** – Deliver oral vaccines to target animals, aiding in disease control efforts.
 3. **Lure Dispenser** – Release scent-based attractants to increase trapping efficiency for specific species.
+
+### Accessory Shutdown When Door Motor is Operated
+
+**Important:** If the door motor is moved to an open or closed position while the accessory is running, the accessory will automatically power off. This behavior is an intentional safety feature designed to prevent potential conflicts between the door mechanism and the accessory. To avoid an unexpected shutdown, always ensure that the accessory is stopped before adjusting the door motor.
