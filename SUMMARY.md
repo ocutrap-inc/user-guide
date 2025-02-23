@@ -22,7 +22,7 @@
     * [Link Sharing](getting-started/app/sharing-with-users/link-sharing.md)
   * [Logs](getting-started/app/logs.md)
   * [Image Recognition](getting-started/app/image-recognition.md)
-  * [Notifications](getting-started/app/notifications.md)
+  * [Notification Settings](getting-started/app/notification-settings.md)
   * [Resetting Password](getting-started/app/resetting-password.md)
   * [LED modes](getting-started/app/led-modes.md)
   * [Other app information](getting-started/app/other-app-information.md)
