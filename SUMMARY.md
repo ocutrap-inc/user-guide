@@ -37,7 +37,6 @@
 * [User Levels](faqs/user-levels.md)
 * [Common questions](faqs/common-questions.md)
 * [Safe-mode](faqs/safe-mode.md)
-* [Jun 1 Installation](faqs/jun-1-installation.md)
 * [Battery](faqs/battery.md)
 * [Updating firmware](faqs/updating-firmware.md)
 * [Manually taking an image](faqs/manually-taking-an-image.md)
