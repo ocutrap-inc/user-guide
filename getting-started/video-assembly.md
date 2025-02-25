@@ -62,21 +62,27 @@ To attach the motor to the door, you’ll need:
 3. Feed the cable through the metal handle.
 4. Double-check that all components are securely fastened and that the door moves smoothly.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FpUDxHnCghGSd2QDUYGbJ%2F20250118_1436_Raccoon's%20Remote%20Trap%20Control_simple_compose_01jhxngb9sf0r8gq2a16ptfmen.mp4?alt=media&token=3d1d3ffb-cbe0-44cc-84eb-d593a94e128c" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FAOyWXROHWPmZ0GBJpsUe%2FStep%202-.mp4?alt=media&token=c640745c-ae9a-403f-811a-ff34d6450447" %}
 
 ***
 
 ## Section 2 : POD Assembly
 
-**Step 1:** **Prepare** **Battery**
+**Step 1:** **Connect** **Battery**
 
-1. Ensure the battery is fully charged. Charging can take 4-5 hours.
+1. Connect the yellow connectors together.
 
 **Step 2: Connect the Wire to the POD**
 
 1. Connect the wire from the motor to the POD.
 2. Make sure the connection is secure.
 3. Then mount the pod to the trap
+
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FvLKoDo1xQNQCxGlq8S5c%2FThreadingHandle.mp4?alt=media&token=2806ef49-3151-41ba-87a5-ea31e5a2e35b" %}
+
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FkoAJktRXPNLp2bEkA9eQ%2Finstallingbattery.mp4?alt=media&token=d0e6c617-8ddc-41c0-8e28-58da949c85a0" %}
+
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FExiPQxGBQWbeM0JDGdUC%2Fmountingpod.mp4?alt=media&token=712fbbf3-ee09-42fd-8e99-57d5113af170" %}
 
 Connect the wire to the POD, ensuring the connection is secure.
 
@@ -99,7 +105,7 @@ Connect the wire to the POD, ensuring the connection is secure.
 
 Once complete, your new trap will appear in your dashboard.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FkhgpmGPqDQAA8NMEwR2x%2F20250118_1447_Tech-Savvy%20Raccoon%20Adventure_simple_compose_01jhxp5kfvf22vseag44yd6ag4.mp4?alt=media&token=bcd15adf-da5a-47ab-a267-c16f97ceb348" %}
+
 
 ***
 
