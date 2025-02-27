@@ -5,13 +5,12 @@ import requests
 DEEPL_API_KEY = os.getenv("DEEPL_API_KEY")
 DEEPL_URL = "https://api-free.deepl.com/v2/translate"  # Use "https://api.deepl.com/v2/translate" for PRO users
 
-# Language Configuration
+# Define source and target language
 SOURCE_LANG = "EN"
 TARGET_LANG = "ES"
 
-# Directories
-GITBOOK_SRC = "docs/"
-GITBOOK_TRANSLATED = "translated/"
+# Root directory where Markdown files are stored
+ROOT_DIR = "."  # Start from the root directory
 
 def translate_text(text, target_language=TARGET_LANG):
     """Translates text using DeepL API"""
@@ -30,24 +29,23 @@ def translate_text(text, target_language=TARGET_LANG):
     return result["translations"][0]["text"] if "translations" in result else text
 
 def translate_files():
-    """Translates all markdown files in GitBook repo"""
-    if not os.path.exists(GITBOOK_TRANSLATED):
-        os.makedirs(GITBOOK_TRANSLATED)
+    """Recursively finds and translates all Markdown (.md) files"""
+    for root, _, files in os.walk(ROOT_DIR):
+        for filename in files:
+            if filename.endswith(".md"):
+                src_path = os.path.join(root, filename)
+                translated_path = os.path.join(root.replace("OcuTrap_Knowledge_Base", "OcuTrap_Knowledge_Base_spanish"), filename)
 
-    for filename in os.listdir(GITBOOK_SRC):
-        if filename.endswith(".md"):
-            src_path = os.path.join(GITBOOK_SRC, filename)
-            dest_path = os.path.join(GITBOOK_TRANSLATED, filename)
+                with open(src_path, "r", encoding="utf-8") as f:
+                    content = f.read()
 
-            with open(src_path, "r", encoding="utf-8") as f:
-                content = f.read()
+                translated_content = translate_text(content)
 
-            translated_content = translate_text(content)
+                os.makedirs(os.path.dirname(translated_path), exist_ok=True)
+                with open(translated_path, "w", encoding="utf-8") as f:
+                    f.write(translated_content)
 
-            with open(dest_path, "w", encoding="utf-8") as f:
-                f.write(translated_content)
-
-            print(f"Translated: {filename}")
+                print(f"Translated: {src_path} -> {translated_path}")
 
 if __name__ == "__main__":
     translate_files()
