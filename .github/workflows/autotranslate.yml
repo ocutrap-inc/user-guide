@@ -3,7 +3,7 @@ name: Auto Translate GitBook (English to Spanish)
 on:
   push:
     branches:
-      - main
+      - main  # Runs when changes are pushed to main in the English repo
 
 jobs:
   translate:
@@ -36,11 +36,11 @@ jobs:
 
       - name: Clone Spanish Repository with Authentication
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git spanish-repo
+          git clone --branch main https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git spanish-repo
           cd spanish-repo
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
 
-      - name: Copy Translated Files & Push to Spanish Repo
+      - name: Copy Translated Files & Push to Spanish Repo (Main Branch)
         run: |
           cp -r translated/* spanish-repo/
           cd spanish-repo
@@ -48,4 +48,4 @@ jobs:
           git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
           git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
