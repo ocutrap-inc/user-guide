@@ -1,0 +1,40 @@
+name: Auto Translate GitBook (English to Spanish)
+
+on:
+  push:
+    branches:
+      - main  # Runs when changes are pushed to main in the English repo
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout English Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Translate GitBook Content
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: python translate_gitbook.py
+
+      - name: Push Translated Files to Spanish Repository
+        run: |
+          git clone https://github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git spanish-repo
+          cp -r translated/* spanish-repo/docs/
+          cd spanish-repo
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
