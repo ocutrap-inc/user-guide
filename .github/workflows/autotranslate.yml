@@ -13,9 +13,6 @@ jobs:
       - name: Checkout English Repository
         uses: actions/checkout@v3
 
-      - name: Verify File Structure
-        run: ls -R  # Debugging step to check file structure
-
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -24,25 +21,19 @@ jobs:
       - name: Install Dependencies
         run: pip install requests
 
-      - name: Translate GitBook Content
-        env:
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-        run: python translate_gitbook.py
-
-      - name: Configure Git User
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "github-actions@github.com"
-
       - name: Clone Spanish Repository with Authentication
         run: |
           git clone --branch main https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git spanish-repo
           cd spanish-repo
           git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
 
-      - name: Copy Translated Files & Push to Spanish Repo (Main Branch)
+      - name: Translate GitBook Content
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: python translate_gitbook.py
+
+      - name: Push Translated Files to Spanish Repo (Main Branch)
         run: |
-          cp -r translated/* spanish-repo/
           cd spanish-repo
           git add .
           git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
