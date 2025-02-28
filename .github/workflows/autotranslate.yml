@@ -44,8 +44,8 @@ jobs:
           git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
 
       - name: Push Translated Files to Spanish Repo (Main Branch)
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           cd spanish-repo
           git push origin main || echo "No changes pushed"
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
