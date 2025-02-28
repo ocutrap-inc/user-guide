@@ -5,12 +5,13 @@ import requests
 DEEPL_API_KEY = os.getenv("DEEPL_API_KEY")
 DEEPL_URL = "https://api-free.deepl.com/v2/translate"  # Use "https://api.deepl.com/v2/translate" for PRO users
 
-# Define source and target language
+# Language Configuration
 SOURCE_LANG = "EN"
 TARGET_LANG = "ES"
 
-# Root directory where Markdown files are stored
-ROOT_DIR = "."  # Start from the root directory
+# Define directories
+ROOT_DIR = "."  # English repo root
+SPANISH_REPO = "spanish-repo"  # Spanish repo name inside GitHub Actions workspace
 
 def translate_text(text, target_language=TARGET_LANG):
     """Translates text using DeepL API"""
@@ -29,23 +30,30 @@ def translate_text(text, target_language=TARGET_LANG):
     return result["translations"][0]["text"] if "translations" in result else text
 
 def translate_files():
-    """Recursively finds and translates all Markdown (.md) files"""
+    """Recursively finds and translates all Markdown (.md) files while maintaining the directory structure"""
     for root, _, files in os.walk(ROOT_DIR):
         for filename in files:
             if filename.endswith(".md"):
                 src_path = os.path.join(root, filename)
-                translated_path = os.path.join(root.replace("OcuTrap_Knowledge_Base", "OcuTrap_Knowledge_Base_spanish"), filename)
 
+                # Determine the destination path inside the Spanish repository
+                rel_path = os.path.relpath(src_path, ROOT_DIR)  # Keep relative folder structure
+                dest_path = os.path.join(SPANISH_REPO, rel_path)
+
+                # Ensure the destination folder exists
+                os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+
+                # Read and translate content
                 with open(src_path, "r", encoding="utf-8") as f:
                     content = f.read()
 
                 translated_content = translate_text(content)
 
-                os.makedirs(os.path.dirname(translated_path), exist_ok=True)
-                with open(translated_path, "w", encoding="utf-8") as f:
+                # Save translated content in the same folder structure
+                with open(dest_path, "w", encoding="utf-8") as f:
                     f.write(translated_content)
 
-                print(f"Translated: {src_path} -> {translated_path}")
+                print(f"Translated: {src_path} -> {dest_path}")
 
 if __name__ == "__main__":
     translate_files()
