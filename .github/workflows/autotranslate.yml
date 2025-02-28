@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install Dependencies
-        run: pip install requests
+        run: pip install google-cloud-translate
 
       - name: Clone Spanish Repository with Authentication
         run: |
@@ -29,7 +29,7 @@ jobs:
 
       - name: Translate GitBook Content
         env:
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: python translate_gitbook.py
 
       - name: Debug - List Translated Files
@@ -39,9 +39,8 @@ jobs:
       - name: Ensure Git Detects Changes
         run: |
           cd spanish-repo
-          git status  # Show changes (debugging)
+          git status
           git add .
-          git status  # Check if changes are staged
           git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
 
       - name: Push Translated Files to Spanish Repo (Main Branch)
