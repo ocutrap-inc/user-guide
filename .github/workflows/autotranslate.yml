@@ -32,27 +32,19 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: python translate_gitbook.py
 
-      - name: Debug - List Translated Files
-        run: |
-          ls -R spanish-repo/
-
-      - name: Configure Git User with Your GitHub Identity
+      - name: Configure Git User
         run: |
           cd spanish-repo
           git config user.name "grahamPatico"
-          git config user.email "graham@patico.org"
+          git config user.email "grahamPatico@users.noreply.github.com"
 
       - name: Ensure Git Detects Changes
         run: |
           cd spanish-repo
-          git status  # Show changes (debugging)
           git add .
-          git status  # Check if changes are staged
           git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
 
-      - name: Push Translated Files to Spanish Repo (Main Branch)
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: Push Translated Files to Spanish Repo
         run: |
           cd spanish-repo
           git push origin main || echo "No changes pushed"
