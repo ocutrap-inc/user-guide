@@ -1,40 +1,30 @@
 import os
-import requests
+import json
+from google.cloud import translate_v2 as translate
 
-# DeepL API Configuration
-DEEPL_API_KEY = os.getenv("DEEPL_API_KEY")
-DEEPL_URL = "https://api-free.deepl.com/v2/translate"  # Use "https://api.deepl.com/v2/translate" for PRO users
+# Google Cloud authentication setup
+GOOGLE_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+if GOOGLE_CREDENTIALS:
+    with open("gcp_credentials.json", "w") as f:
+        f.write(GOOGLE_CREDENTIALS)
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "gcp_credentials.json"
+
+# Initialize Google Translate client
+translate_client = translate.Client()
 
 # Source & Destination Repositories
 SOURCE_DIR = "."  # English repo root
 DEST_DIR = "spanish-repo"  # Cloned Spanish repo directory
 
-def translate_text(text, target_language="ES"):
-    """Translates text using DeepL API"""
-    response = requests.post(
-        DEEPL_URL,
-        data={
-            "auth_key": DEEPL_API_KEY,
-            "text": text,
-            "source_lang": "EN",
-            "target_lang": target_language,
-            "preserve_formatting": 1,
-            "split_sentences": 1
-        },
-    )
-
-    try:
-        result = response.json()
-        return result["translations"][0]["text"]
-    except requests.exceptions.JSONDecodeError:
-        print("⚠️ Error: Failed to decode JSON response from DeepL. Check API key or rate limits.")
-        print("Response content:", response.text)
-        return text  # Return original text in case of failure
+def translate_text(text, target_language="es"):
+    """Translates text using Google Translate API"""
+    result = translate_client.translate(text, target_language=target_language)
+    return result["translatedText"]
 
 def translate_files():
-    """Recursively finds and translates all Markdown (.md) files while maintaining folder structure"""
+    """Recursively translates all Markdown (.md) files while preserving folder structure"""
     for root, _, files in os.walk(SOURCE_DIR):
-        if "spanish-repo" in root:  # Skip files already in the Spanish repo
+        if "spanish-repo" in root:  # Avoid overwriting Spanish repo files
             continue
 
         for filename in files:
