@@ -3,7 +3,7 @@ name: Auto Translate GitBook (English to Spanish)
 on:
   push:
     branches:
-      - main  # Runs when changes are pushed to main in the English repo
+      - main
 
 jobs:
   translate:
@@ -36,11 +36,18 @@ jobs:
         run: |
           ls -R spanish-repo/
 
+      - name: Configure Git User with Your GitHub Identity
+        run: |
+          cd spanish-repo
+          git config user.name "grahamPatico"
+          git config user.email "graham@patico.org"
+
       - name: Ensure Git Detects Changes
         run: |
           cd spanish-repo
-          git status
+          git status  # Show changes (debugging)
           git add .
+          git status  # Check if changes are staged
           git commit -m "Auto-translated GitBook content to Spanish" || echo "No changes to commit"
 
       - name: Push Translated Files to Spanish Repo (Main Branch)
