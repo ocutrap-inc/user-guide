@@ -33,7 +33,8 @@ jobs:
         run: python translate_gitbook.py
 
       - name: Debug: List Translated Files
-        run: ls -R spanish-repo/
+        run: |
+          ls -R spanish-repo/
 
       - name: Ensure Git Detects Changes
         run: |
