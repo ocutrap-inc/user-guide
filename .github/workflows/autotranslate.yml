@@ -32,7 +32,7 @@ jobs:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: python translate_gitbook.py
 
-      - name: Debug: List Translated Files
+      - name: Debug - List Translated Files
         run: |
           ls -R spanish-repo/
 
