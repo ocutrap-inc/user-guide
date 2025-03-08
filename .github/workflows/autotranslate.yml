@@ -28,7 +28,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
 
       - name: Setup Google Cloud Credentials
-        run: echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > ${{ github.workspace }}/gcp_credentials.json
+        run: printf "%s" "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > ${{ github.workspace }}/gcp_credentials.json
 
       - name: Translate GitBook Content
         env:
