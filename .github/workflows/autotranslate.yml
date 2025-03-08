@@ -1,4 +1,4 @@
-name: Auto Translate Gitbook to Spanish
+name: Auto Translate Gitbook to Spanish using OpenAI
 
 on:
   push:
@@ -9,36 +9,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout English repo
-      uses: actions/checkout@v2
+      - name: Checkout English repo
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install google-cloud-translate
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai
 
-    - name: Run translation script
-      env:
-        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-      run: python translate_gitbook.py
+      - name: Run translation script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python translate_gitbook.py
 
-    # Assuming you want to push changes to a separate Spanish repo.
-    - name: Clone Spanish repository
-      run: |
-        git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/your_username/OcuTrap_Knowledge_Base_spanish.git
-    - name: Copy translated files to Spanish repo
-      run: |
-        rsync -av --delete ../OcuTrap_Knowledge_Base_spanish/ OcuTrap_Knowledge_Base_spanish/
-    - name: Commit and push changes to Spanish repo
-      working-directory: OcuTrap_Knowledge_Base_spanish
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git add .
-        git commit -m "Auto-translated update from OcuTrap_Knowledge_Base" || echo "No changes to commit"
-        git push
+      # Clone the Spanish repository, copy the translated files, and push updates.
+      - name: Clone Spanish repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/your_username/OcuTrap_Knowledge_Base_spanish.git
+      - name: Copy translated files to Spanish repo
+        run: |
+          rsync -av --delete ../OcuTrap_Knowledge_Base_spanish/ OcuTrap_Knowledge_Base_spanish/
+      - name: Commit and push changes to Spanish repo
+        working-directory: OcuTrap_Knowledge_Base_spanish
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "Auto-translated update from OcuTrap_Knowledge_Base" || echo "No changes to commit"
+          git push
