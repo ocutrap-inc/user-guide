@@ -29,7 +29,7 @@ jobs:
 
       - name: Clone Spanish repository
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
+          git clone https://x-access-token:${{ secrets.MY_PAT }}@github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
 
       - name: Copy translated files to Spanish repo
         run: |
