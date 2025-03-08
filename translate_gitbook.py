@@ -1,16 +1,32 @@
 #!/usr/bin/env python
 import os
 import shutil
-from google.cloud import translate_v2 as translate
+import openai
+import time
 
-def translate_text(text, target='es'):
-    result = translate_client.translate(text, target_language=target)
-    return result["translatedText"]
+def translate_text(text):
+    """
+    Uses the OpenAI Chat API to translate text to Spanish.
+    Note: For large texts, consider breaking into smaller chunks due to token limits.
+    """
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a professional translator. Translate the following text to Spanish, preserving any markdown formatting."},
+                {"role": "user", "content": text},
+            ],
+            temperature=0.3,
+        )
+        return response["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        print(f"Error during translation: {e}")
+        return text  # fallback: return the original text if an error occurs
 
 def translate_file(input_path, output_path):
     with open(input_path, "r", encoding="utf-8") as f:
         text = f.read()
-    translated_text = translate_text(text, target='es')
+    translated_text = translate_text(text)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(translated_text)
 
@@ -30,22 +46,24 @@ def translate_directory(input_dir, output_dir):
         os.makedirs(new_dir, exist_ok=True)
         
         for file in files:
-            # For example, translate markdown files
             if file.endswith(".md"):
                 in_file = os.path.join(root, file)
                 out_file = os.path.join(new_dir, file)
+                print(f"Translating {in_file} to {out_file}")
                 translate_file(in_file, out_file)
+                # Pause briefly to avoid hitting API rate limits
+                time.sleep(1)
             else:
                 # Copy non-markdown files as is
                 shutil.copy2(os.path.join(root, file), new_dir)
 
 if __name__ == "__main__":
-    # Initialize the Google Translate client.
-    # This uses the GOOGLE_APPLICATION_CREDENTIALS env variable.
-    translate_client = translate.Client()
+    # Set your OpenAI API key from the environment variable
+    openai.api_key = os.getenv("OPENAI_API_KEY")
+    if not openai.api_key:
+        raise ValueError("Please set your OPENAI_API_KEY environment variable.")
     
-    # Assuming your Gitbook repo is the current directory.
-    # Define the output directory as a sibling (or adjust as needed).
+    # Define directories. This example assumes the Spanish repo is a sibling directory.
     input_directory = "."
     output_directory = "../OcuTrap_Knowledge_Base_spanish"
     
