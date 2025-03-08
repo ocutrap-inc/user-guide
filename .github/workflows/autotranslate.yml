@@ -33,7 +33,9 @@ jobs:
 
       - name: Copy translated files to Spanish repo
         run: |
-          rsync -av --delete ../OcuTrap_Knowledge_Base_spanish/ OcuTrap_Knowledge_Base_spanish/
+          rsync -av --delete --exclude='.git'../OcuTrap_Knowledge_Base_spanish/ OcuTrap_Knowledge_Base_spanish/
+          - name: Copy translated files to Spanish repo
+  
 
       - name: Commit and push changes to Spanish repo
         working-directory: OcuTrap_Knowledge_Base_spanish
