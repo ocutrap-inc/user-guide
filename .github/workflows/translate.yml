@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+      - name: Check OpenAI version
+        run: python -c "import openai; print(openai.__version__)"
+
 
       - name: Set up Python
         uses: actions/setup-python@v4
