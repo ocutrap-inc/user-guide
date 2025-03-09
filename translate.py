@@ -3,30 +3,29 @@ import re
 import subprocess
 import openai
 
-# Set up the API key from the environment variable
+# Set up your OpenAI API key
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def translate_markdown(content):
     """
-    Translates given Markdown content from English to Spanish using the updated ChatCompletion API.
+    Translates Markdown content from English to Spanish.
+    Uses the new ChatCompletion.create() method.
     """
     messages = [
         {
             "role": "system",
             "content": (
                 "You are a translation assistant that translates Markdown content from English to Spanish. "
-                "Preserve all formatting exactly (including Markdown syntax such as headers, lists, code blocks, etc.)."
+                "Preserve all Markdown formatting (headers, lists, code blocks, etc.)."
             )
         },
         {
             "role": "user",
-            "content": (
-                "Please translate the following Markdown text into Spanish while preserving the formatting:\n\n"
-                + content
-            )
+            "content": "Please translate the following text to Spanish:\n\n" + content
         }
     ]
     try:
+        # Ensure we call the create() method explicitly.
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages,
@@ -35,18 +34,16 @@ def translate_markdown(content):
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"Error translating text: {e}")
-        return content  # Fallback to original content if an error occurs
+        return content
 
 def translate_summary(summary_text):
     """
-    Processes the SUMMARY.md file line-by-line.
-    For lines containing markdown links, only the link text is translated
-    (the URL remains unchanged). Other lines are translated as a whole.
+    Processes a SUMMARY.md file line by line.
+    For markdown links, only the link text is translated.
     """
     lines = summary_text.splitlines()
     translated_lines = []
     for line in lines:
-        # Look for markdown links: [link text](URL)
         if re.search(r'\[.*?\]\(.*?\)', line):
             translated_line = re.sub(
                 r'\[(.*?)\]\((.*?)\)',
@@ -60,14 +57,12 @@ def translate_summary(summary_text):
 
 def process_files(src_dir, dest_dir):
     """
-    Recursively processes files in src_dir:
-      - For SUMMARY.md, uses translate_summary.
-      - For other Markdown files, translates the entire content.
-      - Copies non-Markdown files as-is.
-    The output is written to dest_dir preserving the directory structure.
+    Recursively translates all Markdown files from src_dir into dest_dir.
+    For SUMMARY.md, uses a custom translation that preserves URLs.
+    Non-Markdown files are copied as is.
     """
     for root, dirs, files in os.walk(src_dir):
-        # Skip the destination folder to avoid processing output files
+        # Skip the destination directory itself
         if os.path.abspath(dest_dir) in os.path.abspath(root):
             continue
 
@@ -93,7 +88,7 @@ def process_files(src_dir, dest_dir):
                 with open(dest_file, 'w', encoding='utf-8') as f_out:
                     f_out.write(translated_content)
             else:
-                # Copy non-Markdown files
+                # Copy non-Markdown files unchanged
                 with open(src_file, 'rb') as f_src, open(dest_file, 'wb') as f_dest:
                     f_dest.write(f_src.read())
 
@@ -103,12 +98,13 @@ if __name__ == '__main__':
     
     process_files(source_directory, destination_directory)
 
-    # Initialize Git in the translated folder and set remote
+    # Initialize Git in the translated folder and commit changes
     os.chdir(destination_directory)
     subprocess.run(["git", "init"], check=True)
     subprocess.run(["git", "config", "user.email", "action@github.com"], check=True)
     subprocess.run(["git", "config", "user.name", "GitHub Action"], check=True)
     
+    # Set or add remote (ensure that SPANISH_REPO_URL is correct and the repo exists)
     try:
         subprocess.run(["git", "remote", "set-url", "origin", os.environ["SPANISH_REPO_URL"]], check=True)
     except subprocess.CalledProcessError:
@@ -122,5 +118,5 @@ if __name__ == '__main__':
     if commit_result.returncode != 0:
         print("No changes to commit.")
     else:
-        # Note: Push to the 'main' branch (not 'master')
+        # Push changes to the 'main' branch (make sure the repo exists and the branch name is correct)
         subprocess.run(["git", "push", "--force", "origin", "main"], check=True)
