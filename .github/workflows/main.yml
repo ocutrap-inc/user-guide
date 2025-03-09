@@ -1,0 +1,27 @@
+name: Translate Content to Spanish using ChatGPT
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Run translation script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SPANISH_REPO_URL: https://github.com/grahamPatico/OcuTrap_Knowledge_Base_spanish.git
+        run: python translate.py
