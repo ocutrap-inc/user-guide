@@ -1,23 +1,23 @@
 import os
+import re
 import subprocess
 import openai
 from openai import ChatCompletion
 
-# Set the API key from the environment
+# Set up the API key from the environment variable
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def translate_markdown(content):
     """
-    Translates Markdown content from English to Spanish.
-    Uses the updated ChatCompletion interface from the OpenAI package.
-    Preserves Markdown formatting.
+    Translates given Markdown content from English to Spanish using the updated
+    ChatCompletion API. This function is used for generic files.
     """
     messages = [
         {
             "role": "system",
             "content": (
-                "You are a translation assistant that translates Markdown content from English to Spanish, "
-                "preserving all formatting (headers, code blocks, links, etc.) exactly."
+                "You are a translation assistant that translates Markdown content from English to Spanish. "
+                "Preserve all formatting (e.g., headers, code blocks, and other Markdown syntax) exactly."
             )
         },
         {
@@ -37,16 +37,39 @@ def translate_markdown(content):
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"Error translating text: {e}")
-        return content  # fallback to original text if translation fails
+        return content  # Fallback: return original content
+
+def translate_summary(summary_text):
+    """
+    Processes the SUMMARY.md file line-by-line. For any line that contains a markdown link,
+    it translates only the link text (leaving the URL intact). Other lines are translated as a whole.
+    """
+    lines = summary_text.splitlines()
+    translated_lines = []
+    for line in lines:
+        # Use regex to find markdown links [link text](URL)
+        if re.search(r'\[.*?\]\(.*?\)', line):
+            # Replace each link using a lambda that translates the link text only.
+            translated_line = re.sub(
+                r'\[(.*?)\]\((.*?)\)',
+                lambda m: f"[{translate_markdown(m.group(1))}]({m.group(2)})",
+                line
+            )
+        else:
+            translated_line = translate_markdown(line)
+        translated_lines.append(translated_line)
+    return "\n".join(translated_lines)
 
 def process_files(src_dir, dest_dir):
     """
-    Recursively processes files in src_dir. For Markdown files (.md),
-    it translates their content; other files are copied as is.
-    The translated files are saved under dest_dir with the same structure.
+    Recursively processes files in src_dir.
+      - For SUMMARY.md, use a specialized function that translates link texts only.
+      - For other Markdown files, translate the entire content.
+      - Non-Markdown files are copied without modification.
+    The output files are written to dest_dir preserving the same folder structure.
     """
     for root, dirs, files in os.walk(src_dir):
-        # Skip the destination folder to avoid reprocessing translated files
+        # Skip the destination folder to avoid reprocessing output files
         if os.path.abspath(dest_dir) in os.path.abspath(root):
             continue
 
@@ -57,7 +80,14 @@ def process_files(src_dir, dest_dir):
         for file in files:
             src_file = os.path.join(root, file)
             dest_file = os.path.join(dest_root, file)
-            if file.endswith('.md'):
+            if file.lower() == "summary.md":
+                print(f"Translating SUMMARY file: {src_file} -> {dest_file}")
+                with open(src_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                translated_content = translate_summary(content)
+                with open(dest_file, 'w', encoding='utf-8') as f_out:
+                    f_out.write(translated_content)
+            elif file.endswith('.md'):
                 print(f"Translating {src_file} -> {dest_file}")
                 with open(src_file, 'r', encoding='utf-8') as f:
                     content = f.read()
@@ -65,30 +95,29 @@ def process_files(src_dir, dest_dir):
                 with open(dest_file, 'w', encoding='utf-8') as f_out:
                     f_out.write(translated_content)
             else:
-                # Copy non-Markdown files directly
+                # Copy non-Markdown files as binary
                 with open(src_file, 'rb') as f_src, open(dest_file, 'wb') as f_dest:
                     f_dest.write(f_src.read())
 
 if __name__ == '__main__':
-    source_directory = '.'         # Root of your repo
+    source_directory = '.'         # Root of your repository
     destination_directory = './translated'
     
     process_files(source_directory, destination_directory)
 
-    # Change working directory to the translated folder and set up Git.
+    # Change working directory to the output folder and set up Git.
     os.chdir(destination_directory)
     subprocess.run(["git", "init"], check=True)
     subprocess.run(["git", "config", "user.email", "action@github.com"], check=True)
     subprocess.run(["git", "config", "user.name", "GitHub Action"], check=True)
     
-    # Update remote URL if it exists; otherwise, add it.
+    # Update remote URL if already present; otherwise, add it.
     try:
         subprocess.run(["git", "remote", "set-url", "origin", os.environ["SPANISH_REPO_URL"]], check=True)
     except subprocess.CalledProcessError:
         subprocess.run(["git", "remote", "add", "origin", os.environ["SPANISH_REPO_URL"]], check=True)
     
     subprocess.run(["git", "add", "."], check=True)
-    # Only attempt to commit if there are changes.
     commit_result = subprocess.run(
         ["git", "commit", "-m", "Automated Spanish translation update using updated ChatGPT API"],
         capture_output=True, text=True
