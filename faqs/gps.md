@@ -13,16 +13,9 @@ OcuTrap uses a GPS module to provide location tracking and mapping capabilities.
 
 #### GPS Status Indicators
 
-When viewing trap locations, you'll see two key metrics:
+When viewing trap locations, you'll a key metric:
 
-* **Sats**: Number of satellites currently visible to the GPS receiver
-  * Higher numbers (generally 4+) indicate better potential accuracy
-  * Displayed as "Sats: X" where X is the number of satellites
-* **Fix**: The type of position lock achieved
-  * Displayed as "Fix: X" where X is the number of dimensions
-  * 3 = 3D fix (latitude, longitude, altitude) - most accurate
-  * 2 = 2D fix (latitude, longitude only)
-  * 0 = No fix
+* **Radius**:  The trap's last location is within the approximate radius.
 
 ### Best Practices
 
