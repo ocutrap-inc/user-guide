@@ -34,7 +34,8 @@
 
 ## FAQs
 
-* [User Levels](faqs/user-levels.md)
+* [Sharing Traps](faqs/sharing-traps/README.md)
+  * [User Levels](faqs/sharing-traps/user-levels.md)
 * [Common questions](faqs/common-questions.md)
 * [Safe-mode](faqs/safe-mode.md)
 * [Battery](faqs/battery.md)
