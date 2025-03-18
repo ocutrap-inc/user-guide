@@ -1,6 +1,6 @@
 # User Levels
 
-<figure><img src="../.gitbook/assets/User Levels (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/User Levels (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Account Owners** have privileges over the entire account. Only the account owner can update billing and add or remove users.
 
