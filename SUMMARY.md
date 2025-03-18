@@ -46,6 +46,8 @@
 * [Weather & Environmental Guidelines](faqs/weather-and-environmental-guidelines.md)
 * [Accessory Port](faqs/accessory-port.md)
 * [Camera](faqs/camera.md)
+* [Power Modes](faqs/power-modes.md)
+* [Unarmed Hibernation](faqs/unarmed-hibernation.md)
 
 ## Support
 
