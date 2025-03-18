@@ -49,6 +49,8 @@
 * [Camera](faqs/camera.md)
 * [Power Modes](faqs/power-modes.md)
 * [Unarmed Hibernation](faqs/unarmed-hibernation.md)
+* [Troubleshooting](faqs/troubleshooting/README.md)
+  * [Trap Not Sending Commands](faqs/troubleshooting/trap-not-sending-commands.md)
 
 ## Support
 
