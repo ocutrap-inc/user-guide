@@ -17,6 +17,23 @@ We call the plastic case containing the camera, circuitboard, and battery the "P
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-09-10 at 8.09.31 PM.png" alt="" width="375"><figcaption></figcaption></figure>
 
+
+
+1. Align the metal door inside the trap.
+2. Thread the metal rod through the oval slot in the metal bracket attached to the top of the solid metal trap door.\
+   ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdor5a_LVWg86CLkCPhjIEcAErAPKkNJfgSDUm2XH1wCl99obaAM0d5LT-kxM_0mSUHrSZy91caXsy_qHHDyjZx8IoDJ4LT4QhlqUzIVxevtimn3RsCwhPFINktwZR3JwpqiAScWg?key=-7FbCauuULkCNnpd7jVxOIpl)
+3. On each end of the rod:
+
+
+
+1. Place a white washer.
+2. Add a spring.
+3. Secure it with the black capped nut.
+4. Use the nut assembly tool on each end to tighten the nut until snug.
+
+\
+**Connect Motor**&#x20;
+
 1. Connect motor to top and bottom door hinge with pin and clevis
 2. Feed motor cable through handle
 3. Slide Pod down the back rails
