@@ -29,6 +29,3 @@ Long battery life allows leaving the trap for weeks, unattended and monitored.
 #### Smart Tech
 
 Image recognition is used for target animals.
-
-<figure><img src="../.gitbook/assets/OcuTrap R1 View.png" alt=""><figcaption></figcaption></figure>
-
