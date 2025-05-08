@@ -28,7 +28,6 @@
   * [Other app information](getting-started/app/other-app-information.md)
   * [Interface Views](getting-started/app/interface-views.md)
   * [Wi-Fi Setup Guide](getting-started/app/wi-fi-setup-guide.md)
-* [Troubleshooting Connection Issues with OcuTrap](getting-started/troubleshooting-connection-issues-with-ocutrap.md)
 * [Tips and Tricks](getting-started/tips-and-tricks.md)
 * [Maintenance](getting-started/maintenance.md)
 
@@ -54,6 +53,7 @@
 
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
+* [Connection Issues](troubleshooting/troubleshooting-connection-issues-with-ocutrap.md)
 
 ## Support
 
