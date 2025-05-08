@@ -49,7 +49,6 @@
 * [Camera](faqs/camera.md)
 * [Power Modes](faqs/power-modes.md)
 * [Unarmed Hibernation](faqs/unarmed-hibernation.md)
-* [Troubleshooting](faqs/troubleshooting.md)
 
 ## Troubleshooting
 
