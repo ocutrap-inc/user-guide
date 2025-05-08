@@ -6,8 +6,7 @@
 
 * [Introduction](getting-started/introduction.md)
 * [Set-up Tutorial](getting-started/set-up-tutorial.md)
-* [Hardware set-up](getting-started/setting-up/README.md)
-  * [Troubleshooting: Motor-to-Pin Connection Too Tight](getting-started/setting-up/troubleshooting-motor-to-pin-connection-too-tight.md)
+* [Hardware set-up](getting-started/setting-up.md)
 * [Video Assembly](getting-started/video-assembly.md)
 * [Hardware Features](getting-started/hardware-features.md)
 * [App](getting-started/app/README.md)
@@ -50,8 +49,12 @@
 * [Camera](faqs/camera.md)
 * [Power Modes](faqs/power-modes.md)
 * [Unarmed Hibernation](faqs/unarmed-hibernation.md)
-* [Troubleshooting](faqs/troubleshooting/README.md)
-  * [Trap Not Sending Commands](faqs/troubleshooting/trap-not-sending-commands.md)
+* [Troubleshooting](faqs/troubleshooting.md)
+
+## Troubleshooting
+
+* [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
+* [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
 
 ## Support
 

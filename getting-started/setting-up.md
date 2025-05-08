@@ -97,8 +97,12 @@ Step 2: Connect the Wire to the POD
 
 At this point, your hardware setup is complete.
 
-<figure><img src="../../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
+{% hint style="warning" %}
+If you have issues, check out [Broken link](broken-reference "mention")
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
 
 
 
-[hardware-features.md](../hardware-features.md "mention")
+[hardware-features.md](hardware-features.md "mention")
