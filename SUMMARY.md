@@ -6,7 +6,8 @@
 
 * [Introduction](getting-started/introduction.md)
 * [Set-up Tutorial](getting-started/set-up-tutorial.md)
-* [Hardware set-up](getting-started/setting-up.md)
+* [Hardware set-up](getting-started/setting-up/README.md)
+  * [Troubleshooting: Motor-to-Pin Connection Too Tight](getting-started/setting-up/troubleshooting-motor-to-pin-connection-too-tight.md)
 * [Video Assembly](getting-started/video-assembly.md)
 * [Hardware Features](getting-started/hardware-features.md)
 * [App](getting-started/app/README.md)
