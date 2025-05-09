@@ -49,6 +49,10 @@
 * [Power Modes](faqs/power-modes.md)
 * [Unarmed Hibernation](faqs/unarmed-hibernation.md)
 
+***
+
+* [Deleting a Trap](deleting-a-trap.md)
+
 ## Troubleshooting
 
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
