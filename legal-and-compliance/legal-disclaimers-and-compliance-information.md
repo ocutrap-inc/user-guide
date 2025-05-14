@@ -8,9 +8,9 @@
 
 {% embed url="https://ocutrap.com/pages/privacy-policy" %}
 
-### Lifetime Warranty
+### Hardware Warranty
 
-{% embed url="https://ocutrap.com/pages/lifetime-warranty" %}
+{% embed url="https://ocutrap.com/pages/warranty" %}
 
 ### Software License
 
