@@ -16,8 +16,10 @@
 
 {% embed url="https://ocutrap.com/pages/software-license-usage-terms" %}
 
-### Return Policy
+### Refund Policy
 
-{% embed url="https://ocutrap.com/pages/return-policy" fullWidth="false" %}
+{% embed url="https://ocutrap.com/policies/refund-policy" %}
 
-\
+### Animal Recognition Policy
+
+{% embed url="https://ocutrap.com/pages/ocutrap-image-recognition" %}
