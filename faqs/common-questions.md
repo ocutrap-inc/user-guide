@@ -1,6 +1,20 @@
 # Common questions
 
+<details>
 
+<summary>Can OcuTrap differentiate species like raccoons, skunks, or opossums?</summary>
+
+Currently, OcuTrap traps any animal that enters the trap. However, you have full remote control to **release non-target animals** safely without needing to visit the trap in person.
+
+This remote release feature allows you to:
+
+* Minimize stress and harm to unintended animals.
+* Save time and reduce unnecessary trap visits.
+* Improve efficiency by focusing on target species like raccoons.
+
+We’re actively developing smarter species identification to allow selective trapping in future updates.
+
+</details>
 
 <details>
 
