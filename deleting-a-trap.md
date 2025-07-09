@@ -6,13 +6,23 @@ Clicking **Delete Trap** permanently removes your trap and all of its data. Plea
 **Warning:** This action cannot be undone.
 {% endhint %}
 
-### Steps
+### Deleting a Trap
 
-1. **Confirm the Trap Name**\
-   Type the exact name of the trap to verify you really want to delete it. If the names don’t match, deletion is cancelled.
-2. **Cancel Subscription (if any)**\
-   Any active subscription linked to this trap will be cancelled automatically.
-3. **Remove Trap Data**\
-   All information associated with the trap—such as images, settings, logs, and status—is deleted.
-4. **Send Confirmation Email**\
-   You’ll receive an email confirming the trap has been deleted, including the Trap ID.
+**Warning:** This action is permanent and cannot be undone. Please review the steps carefully before proceeding.
+
+#### Steps
+
+1. **Go to Your Account Page**\
+   Visit [https://base.ocutrap.com/account/](https://base.ocutrap.com/account/) and scroll down to the **Devices** section.
+2. **Open the Delete Trap Menu**\
+   Click the **Delete Devices** link. A popup titled **Delete Owned Traps** will appear.
+3. **Select the Trap**\
+   Use the dropdown to select the trap you want to delete. Each entry shows the trap name followed by a unique ID.\
+   &#xNAN;_&#x4F;nly the part **before the dash** is the actual trap name_—you’ll need this in the next step.
+4. **Confirm the Trap Name**\
+   Type the **exact trap name** (before the dash) into the red box to confirm. If the name does not match exactly, deletion will be cancelled.
+5. **Cancel Subscription (if any)**\
+   Any active subscription linked to the trap will be canceled automatically.
+6. **Receive Confirmation Email**\
+   You will receive an email confirming deletion, including the Trap ID for your records.
+
