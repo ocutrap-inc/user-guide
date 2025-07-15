@@ -73,6 +73,10 @@
 * [Warranty Information](legal-and-compliance/warranty-information.md)
 * [Legal disclaimers and compliance information](legal-and-compliance/legal-disclaimers-and-compliance-information.md)
 
+## Device Managment
+
+* [Selling or Transferring a Trap](device-managment/selling-or-transferring-a-trap.md)
+
 ## Account and Billing
 
 * [Billing](account-and-billing/billing.md)
@@ -86,7 +90,3 @@
 * [Case Study](appendix-and-resources/case-study.md)
 * [Updates](appendix-and-resources/updates.md)
 * [OcuTrap in News](appendix-and-resources/ocutrap-in-news.md)
-
-## Device Managment
-
-* [Selling or Transferring a Trap](device-managment/selling-or-transferring-a-trap.md)
