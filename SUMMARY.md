@@ -86,3 +86,7 @@
 * [Case Study](appendix-and-resources/case-study.md)
 * [Updates](appendix-and-resources/updates.md)
 * [OcuTrap in News](appendix-and-resources/ocutrap-in-news.md)
+
+## Device Managment
+
+* [Selling or Transferring a Trap](device-managment/selling-or-transferring-a-trap.md)
