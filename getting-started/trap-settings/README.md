@@ -1,10 +1,10 @@
+---
+description: >-
+  OcuTrap’s settings allow you to customize and control every aspect of your
+  trap’s operation, notifications, and hardware features.
+---
+
 # Trap Settings
-
-## Trap Settings Overview
-
-OcuTrap’s settings allow you to customize and control every aspect of your trap’s operation, notifications, and hardware features. Use the settings panel to optimize your trap for different environments, animal targets, and alert preferences.
-
-The settings are organized into two main sections:
 
 ### Main Settings
 
