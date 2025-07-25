@@ -29,6 +29,8 @@
   * [Interface Views](getting-started/app/interface-views.md)
   * [Wi-Fi Setup Guide](getting-started/app/wi-fi-setup-guide.md)
 * [Tips and Tricks](getting-started/tips-and-tricks.md)
+* [Trap Settings](getting-started/trap-settings/README.md)
+  * [Enhanced Door Closing](getting-started/trap-settings/enhanced-door-closing.md)
 * [Maintenance](getting-started/maintenance.md)
 
 ## FAQs
