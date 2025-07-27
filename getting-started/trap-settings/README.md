@@ -23,6 +23,7 @@ By clicking **More Settings**, you can access advanced configuration options, in
 * **Battery Type** – Select the battery for your trap.
 * **Accessory Controls** – Enable or disable accessory ports and set their timing.
 * [**Enhanced Door Closing** ](enhanced-door-closing.md)– Improve lock reliability by enabling automatic door re-locking.
+* [**Pre-capture Notifications**](pre-capture-notification.md) – Get alerts and images when an animal nears the trap, before capture
 * **Camera Controls** – Set up time lapse, image quality, and night vision thresholds.
 * **Sensor Settings** – Adjust sensor width, trigger distances, and infrared brightness.
 * **Alert Thresholds** – Set up alerts for battery level, temperature, and capture intervals.
