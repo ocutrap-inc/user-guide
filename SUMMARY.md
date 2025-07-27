@@ -32,6 +32,7 @@
 * [Trap Settings](getting-started/trap-settings/README.md)
   * [Enhanced Door Closing](getting-started/trap-settings/enhanced-door-closing.md)
 * [Maintenance](getting-started/maintenance.md)
+* [LED Guide](getting-started/led-guide.md)
 
 ## FAQs
 
