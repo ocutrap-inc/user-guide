@@ -31,6 +31,7 @@
 * [Tips and Tricks](getting-started/tips-and-tricks.md)
 * [Trap Settings](getting-started/trap-settings/README.md)
   * [Enhanced Door Closing](getting-started/trap-settings/enhanced-door-closing.md)
+  * [Pre-Capture Notification](getting-started/trap-settings/pre-capture-notification.md)
 * [Maintenance](getting-started/maintenance.md)
 * [LED Guide](getting-started/led-guide.md)
 
