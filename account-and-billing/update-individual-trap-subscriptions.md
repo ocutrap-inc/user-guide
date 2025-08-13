@@ -5,7 +5,7 @@ description: >-
   OcuTrap connected and working at its best.
 ---
 
-# How to Update Individual Trap Subscriptions
+# Update Individual Trap Subscriptions
 
 ### When You Might Need to Update
 
