@@ -12,6 +12,6 @@ You need to be logged in to OcuTrap.com and have the POD with you in order to re
 4. You will be prompted to enter the serial number or scan the QR code
 5. Once you complete the process, the new trap will appear in your dashboard
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt="" width="188"><figcaption></figcaption></figure>
