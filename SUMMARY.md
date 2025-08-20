@@ -73,6 +73,7 @@
 * [Safety Information](support/safety-information.md)
 * [Purchases](support/purchases.md)
 * [Cloud Debug Guide for OcuTrap](support/cloud-debug-guide-for-ocutrap.md)
+* [Nonprofit and 501(c) Program](support/nonprofit-and-501-c-program.md)
 
 ## Legal & Compliance
 
