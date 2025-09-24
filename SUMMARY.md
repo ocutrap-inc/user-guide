@@ -86,6 +86,7 @@
 * [Billing](account-and-billing/billing.md)
 * [Update Individual Trap Subscriptions](account-and-billing/update-individual-trap-subscriptions.md)
 * [Resetting Password](account-and-billing/resetting-password.md)
+* [Managing Your Subscription](account-and-billing/managing-your-subscription.md)
 * [Account Deletion](account-and-billing/account-deletion.md)
 
 ## Appendix and Resources
