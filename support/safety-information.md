@@ -78,7 +78,6 @@ The OcuTrap door is designed to open and close automatically and swiftly. While 
 
 ***
 
-**Note:**\
-
+**Note:**<br>
 
 ***

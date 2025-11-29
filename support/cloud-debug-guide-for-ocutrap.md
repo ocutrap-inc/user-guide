@@ -47,4 +47,4 @@ Here is an example of how the code will look
 
 <figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption><p>Here is an example of how the code will look</p></figcaption></figure>
 
-Once the debug log output has been captured, please copy the results and send them to OcuTrap support at **support@ocutrap.com** for further analysis.\
+Once the debug log output has been captured, please copy the results and send them to OcuTrap support at **support@ocutrap.com** for further analysis.<br>

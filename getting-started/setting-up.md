@@ -4,19 +4,17 @@
 
 Carefully unpack your OcuTrap R1 and check that all components are included:
 
-Cage&#x20;
+**Cage**&#x20;
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeh-fdhNLgwyX0dd75wNVqjVpgWZ80zkjjYbnM-c5392_RBs1SWn615Se6SPCq7zXFAcxi82rW_BXt_eKUnI8jBiw2mzrvK7c9UV24Dk_I9mrDSJSCkkPvPtbambFhPghiJJ0SL?key=-7FbCauuULkCNnpd7jVxOIpl)
 
-POD (camera, circuit board, and battery)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcCsGimhmV4qo5ZFShkI5gzzZtGCaTs-N-U43LoPKPaoMtjVf0mtooeYbqh1hH8OctDS5lgG_3rjQ6hrKNJHFu48ao9TTUTKN_z0JeiePZqT5Zsow3JstwOWxpPFu5x-NIm7oA7?key=-7FbCauuULkCNnpd7jVxOIpl)
 
-Motor Assembly
+**Parts Box**
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXef4D5cGe2LZ4d5SDCrmW_GqmfN5rJ69R3tT9em_4h1bholqjMxAc-ytLQbzohLIup_QQ4LexM8pM1Uf5DJs0AjcYZKhPUc272U_2WmLU3aizY5Nm-9IqspZEKbcjlLS1sn1TJY?key=-7FbCauuULkCNnpd7jVxOIpl)
+![](<../.gitbook/assets/unknown (7).png>)<br>
 
-Examine each item for any visible damage. If anything is missing or appears damaged, halt installation and contact OcuTrap Support with your trap ID.
+Examine each item for any visible damage. If anything is missing or appears damaged, halt installation and contact OcuTrap Support with your Trap ID.
 
 Hardware Setup
 
@@ -30,60 +28,95 @@ Charge the Battery
 1. Fully charge the blue battery until the light is green using the accompanying charger found in the small white box.\
    ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeJAv9JVa-Yz74SSbiMbgH7QOb_fDpETGc7enuiOVyM8iptiXcG9v70auXDYWedxc8IBfpy5y64XLtJ19dFkp0unFSLMzerBiV6NsYKM75u_G1NGN7usAQcyBmvlqpk3HgrFuCX7g?key=-7FbCauuULkCNnpd7jVxOIpl)
 
-Introduction Welcome to the OcuTrap Assembly and Setup Manual. This guide will walk you through the process of assembling your OcuTrap step by step. The assembly process is divided into three main sections:
+Introduction Welcome to the OcuTrap Assembly and Setup Manual. This guide will walk you through the process of assembling your OcuTrap step by step. The assembly process is divided into four main sections:
 
-1. Door Assembly
-2. POD Assembly
-3. App Setup
+1. Handle Assembly
+2. Door Assembly
+3. POD Assembly
+4. App Setup
 
 Carefully follow each step to ensure your OcuTrap functions correctly and efficiently
 
-Section 1: Door Assembly
+### Section 1: Handle Assembly
 
-Step 1: Gather Your Components                                                                                           Before beginning, ensure you have the following parts for the door assembly:
+#### Step 1: Gather Your Components
+
+Before beginning, ensure you have the following parts for the door assembly:
+
+* 4x 3” bolt
+* 1x handle guard
+* 1x tube
+* 4x washer
+* 2x Upper tube plastic spacer &#x20;
+* 2x Lower tube plastic handle spacer
+* 2x in-trap bracket with press-fit nut
+* 2x top metal bracket
+* 1x nut driver
+
+![](<../.gitbook/assets/unknown (5).png>)
+
+#### Step 2: Assembly of handle
+
+1. Center the handle guard on the trap.
+2. Insert the two top handle assembly pieces into the holes in the handle guard.
+3. Slide the tube between the two handle guards and ensure it is centered.
+4. Place the bracket (with the press-fit nut) inside the trap and hand-tighten the bolts.
+5. Use the nut driver to fully tighten the bolts from the top, ensuring the handle remains secure.
+
+<figure><img src="../.gitbook/assets/image (25).png" alt="" width="135"><figcaption><p>Top View</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (27).png" alt="" width="188"><figcaption><p>Inside trap view</p></figcaption></figure>
+
+### Section 2: Door Assembly
+
+#### Step 1: Gather Your Components
+
+Before beginning, ensure you have the following parts for the door assembly:
+
+**Door**
 
 * 2x Brackets (top locking mechanism)
-* 2x White washers
-* 2x Springs
-* 2x Nuts
+* 2x Black spacers
+* 2x Black capped nuts
 * 1x Metal door
-* 1x Rod
+* 1x 12” Rod
+* 1x Nut Driver
+* 1x Nut Assembly Tool (figure right)
+
+**Motor**
+
 * 1x Motor
 * 2x Pins&#x20;
 * 2x Clevises
-* 2x Nut Assembly Tool (figure below)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeTsJqF-GrVwdsdCwDL8a5TUs9p2I55f3A6Kw3aoUym4Z-yMIZCYxJnKzvXTYn6OUHM17Gcm1oI_nuoOs6UMkoFw3z9G9ce0hnVGk-vljKOuoiCp_Zv6tm7AhnJErY6GV6r_9JQ-w?key=-7FbCauuULkCNnpd7jVxOIpl)
-
-\
-\
-
-
-Step 2: Assemble the Door Mechanism and Attach the Motor
+#### Step 2: Assemble the Door Mechanism&#x20;
 
 1. Align the metal door inside the trap.
-2. Thread the metal rod through the oval slot in the metal bracket attached to the top of the solid metal trap door.\
-   ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXftF3R_YgX51ZjAzsgp_UXhPQv7yzdwDOItp4ROh3H172oocjCw49y6B7NtGt9MN9TegemlSCTo1n-SF1p1FFeZxfoui1Qk_R-CDiyfkGNZ6Uu3dFiKj78m1zVxMLDHUTjKvbl9Gw?key=-7FbCauuULkCNnpd7jVxOIpl)
+2. Thread the metal rod through the oval slot in the metal bracket attached to the top of the solid metal trap door.<br>
 3. On each end of the rod:
-   1. Place a white washer.
-   2. Add a spring.
-   3. Secure it with the black capped nut.
-   4. Use the nut assembly tool on each end to tighten the nut until snug.\
-      \
-      ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeTsJqF-GrVwdsdCwDL8a5TUs9p2I55f3A6Kw3aoUym4Z-yMIZCYxJnKzvXTYn6OUHM17Gcm1oI_nuoOs6UMkoFw3z9G9ce0hnVGk-vljKOuoiCp_Zv6tm7AhnJErY6GV6r_9JQ-w?key=-7FbCauuULkCNnpd7jVxOIpl)![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeGyZKcY8ceervvHWdvpFGbNKVw9vH7hhB8DgQKuugOp-ERx0lOvQXnVChg2SIEudSJ-jvEEY09DilaXA3LftwV3f0G1ITSudK81eZWrSXQtj381o7sRZ3nLQgKrQXYsRFrAZGTeA?key=-7FbCauuULkCNnpd7jVxOIpl)
+   1. Place a black spacer.
+   2. Secure it with the black capped nut on both sides
+   3. Use the nut assembly tool and the nut driver on each end to tighten the nut until snug.\
+      <br>
+
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+
+<br>
+
+#### Step 3: Assemble the Motor&#x20;
+
+1. Install top bracket with washers and bolts. Tighten with nut driver.
+2. Use the pins and clevises to secure the motor to the door at both the top and bottom attachment points.
+3. Feed the cable through the metal handle.
+4. Verify that all components are securely fastened.
+5. Check that the door moves smoothly and is properly aligned.
 
 \
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcLujqDGMEW_dSvHxNs6dSqnxeR-084fW5G06A_SpnIZZtYor1iAST3XD6vpNrXWY3LppbQGchi9qZxB_sZpXL4mtViXR-RJGFxg028qMVMpyNcCEWj_l65-zzLN7jWVeYrYxXs?key=-7FbCauuULkCNnpd7jVxOIpl)![](<../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png>)
 
+### Section 3: POD Assembly
 
-4. Use the pins and clevises to secure the motor to the door at both the top and bottom attachment points.\
-   ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcLujqDGMEW_dSvHxNs6dSqnxeR-084fW5G06A_SpnIZZtYor1iAST3XD6vpNrXWY3LppbQGchi9qZxB_sZpXL4mtViXR-RJGFxg028qMVMpyNcCEWj_l65-zzLN7jWVeYrYxXs?key=-7FbCauuULkCNnpd7jVxOIpl)
-5. Feed the cable through the metal handle.
-6. Verify that all components are securely fastened.
-7. Check that the door moves smoothly and is properly aligned.
-
-***
-
-Section 2: POD Assembly
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Step 1: Prepare the Battery
 
@@ -98,7 +131,7 @@ Step 2: Connect the Wire to the POD
 At this point, your hardware setup is complete.
 
 {% hint style="warning" %}
-If you have issues, check out [Broken link](broken-reference "mention")
+If you have issues, check out [Broken link](/broken/pages/yBQAVI9zJiW73awmxbcQ "mention")
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
