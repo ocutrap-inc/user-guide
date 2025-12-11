@@ -38,8 +38,7 @@
   * [User Levels](faqs/sharing-traps/user-levels.md)
 * [Common questions](faqs/common-questions.md)
 * [Safe-mode](faqs/safe-mode.md)
-* [Battery](faqs/battery/README.md)
-  * [Changing Your Subscription Payment Method](faqs/battery/changing-your-subscription-payment-method.md)
+* [Battery](faqs/battery.md)
 * [Updating firmware](faqs/updating-firmware.md)
 * [Manually taking an image](faqs/manually-taking-an-image.md)
 * [Seeing Camera view](faqs/seeing-camera-view.md)
@@ -84,7 +83,8 @@
 
 ## Account and Billing
 
-* [Billing](account-and-billing/billing.md)
+* [Billing](account-and-billing/billing/README.md)
+  * [Changing Your Subscription Payment Method](account-and-billing/billing/changing-your-subscription-payment-method.md)
 * [Update Individual Trap Subscriptions](account-and-billing/update-individual-trap-subscriptions.md)
 * [Resetting Password](account-and-billing/resetting-password.md)
 * [Managing Your Subscription](account-and-billing/managing-your-subscription.md)
