@@ -15,7 +15,7 @@ description: >-
 
 You will be taken to your **Account** page, which displays personal information (name, email, phone number), security settings, and billing information.
 
-<div><figure><img src="../.gitbook/assets/Screenshot 2025-01-30 at 10.30.00 AM (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Screenshot 2025-01-30 at 10.30.08 AM (1).png" alt=""><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.30.00 AM (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.30.08 AM (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ***
 
@@ -24,7 +24,7 @@ You will be taken to your **Account** page, which displays personal information 
 1. From the **Account** page, scroll to the **Billing** section.
 2. Click on **Manage Subscriptions** to open the secure billing portal.
 
-## <img src="../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM (1).png" alt="" data-size="original">
+## <img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM (1).png" alt="" data-size="original">
 
 This portal allows you to view and manage all aspects of your subscription, including:
 

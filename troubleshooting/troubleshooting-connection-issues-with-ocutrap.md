@@ -6,7 +6,7 @@ If your OcuTrap is having trouble connecting, follow these steps to troubleshoot
 
 * **Ensure the battery is fully charged** and properly connected.
 * If the battery is not fully charged, charge it and reconnect it to the device.
-* Instructions on how to charge:[battery](../faqs/battery/ "mention")
+* Instructions on how to charge:[battery.md](../faqs/battery.md "mention")
 * Plug the two yellow connectors together to supply&#x20;
 
 #### 2. **Inspect the LED Light**
