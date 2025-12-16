@@ -2,7 +2,7 @@
 
 OcuTrap R1 Video Assembly
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FjZWSLB8zc0kWtPeDTP1E%2FOcuTrapAssembly.mp4?alt=media&token=d7ca3480-3496-4474-8595-4ca4ea30db64" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2Fs1sKhVb7HYatlgcbSflA%2FOcuTrap%20Assembly.mp4?alt=media&token=1b6d1663-01e3-4161-91f8-d0ed1791837a" %}
 
 ## Unboxing and Initial Inspection
 
