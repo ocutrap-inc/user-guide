@@ -1,6 +1,6 @@
 # Hardware set-up
 
-
+OcuTrap R1 Video Assembly
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FjZWSLB8zc0kWtPeDTP1E%2FOcuTrapAssembly.mp4?alt=media&token=d7ca3480-3496-4474-8595-4ca4ea30db64" %}
 
