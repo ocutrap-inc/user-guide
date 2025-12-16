@@ -1,8 +1,6 @@
 # Trap Control
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-18 at 10.31.07 AM.png" alt="" width="188"><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (29).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Power
 
@@ -32,3 +30,4 @@ Interact directly by:
 * Requesting latest data
 * Sending a buzz
 * Rebooting the device
+* Hibernation (go to sleep until battery change or power button press)
