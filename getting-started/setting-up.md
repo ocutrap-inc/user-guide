@@ -90,17 +90,9 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 #### Step 1: Gather Your Components
 
-Before beginning, ensure you have the following parts for the door assembly:
+Before beginning, ensure you have the following parts for the handle assembly:
 
-* 4x 3” bolt
-* 1x handle guard
-* 1x tube
-* 4x washer
-* 2x Upper tube plastic spacer &#x20;
-* 2x Lower tube plastic handle spacer
-* 2x in-trap bracket with press-fit nut
-* 2x top metal bracket
-* 1x nut driver
+<table><thead><tr><th width="113.140625">Quantity</th><th>Part</th><th data-type="image"></th></tr></thead><tbody><tr><td>4</td><td>3” bolt</td><td><a href="../.gitbook/assets/Untitled design (81).png">Untitled design (81).png</a></td></tr><tr><td>1</td><td>Handle Guard</td><td></td></tr><tr><td>1</td><td>Tube</td><td></td></tr><tr><td>4</td><td>Washers</td><td></td></tr><tr><td>2</td><td>Top Handle Metal Bracket</td><td></td></tr><tr><td>2</td><td>Upper tube plastic spacer  </td><td></td></tr><tr><td>2</td><td>Lower tube Plastic Handle Spacer</td><td></td></tr><tr><td>2</td><td>Internal Trap Bracket with Press-Fit Nut</td><td></td></tr><tr><td>1</td><td>Nut Driver</td><td></td></tr></tbody></table>
 
 ![](<../.gitbook/assets/unknown (5).png>)
 
@@ -110,7 +102,10 @@ Before beginning, ensure you have the following parts for the door assembly:
 2. Insert the two top handle assembly pieces into the holes in the handle guard.
 3. Slide the tube between the two handle guards and ensure it is centered.
 4. Place the bracket (with the press-fit nut) inside the trap and hand-tighten the bolts.
-5. Use the nut driver to fully tighten the bolts from the top, ensuring the handle remains secure.
+
+{% hint style="warning" %}
+Do not fully tighten the bolts until the motor connector is fully through the tube
+{% endhint %}
 
 <figure><img src="../.gitbook/assets/image (25).png" alt="" width="135"><figcaption><p>Top View</p></figcaption></figure>
 
@@ -122,24 +117,22 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Step 1: Prepare the Battery
-
-1. Ensure the battery is fully charged. Charging can take 4-5 hours.
-
 Step 2: Connect the Wire to the POD
 
 1. Slide the POD down the rails on the trap until it is in place.
-2. Attach the motor’s wire to the POD using the locking screw connector, ensuring a secure connection.
-3. Use the top latch to secure the pod in place.
+2. Attatch the clip to to the top keep the POD in place
 
-At this point, your hardware setup is complete.
+<figure><img src="../.gitbook/assets/Screenshot 2025-12-17 at 10.26.40 AM.png" alt=""><figcaption></figcaption></figure>
+
+1. Attach the motor’s wire to the POD using the locking screw connector, ensuring a secure connection.
+2. Use the top latch to secure the pod in place.
+
+Fully tighten all the bolts. At this point, your hardware setup is complete.
 
 {% hint style="warning" %}
 If you have issues, check out [Broken link](/broken/pages/yBQAVI9zJiW73awmxbcQ "mention")
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
-
-
 
 [hardware-features.md](hardware-features.md "mention")
