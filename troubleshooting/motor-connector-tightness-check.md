@@ -12,6 +12,8 @@
 The motor is **not tightened enough**.\
 If the motor mounting hardware is too loose, the motor shaft does not stay properly aligned under load. This prevents effective torque transfer and can cause the motor to slip or fail to engage.
 
+<figure><img src="../.gitbook/assets/IMG_0998.jpeg" alt=""><figcaption></figcaption></figure>
+
 #### Correct Gap Specification
 
 The motor must be tightened to leave a small, controlled gap.
