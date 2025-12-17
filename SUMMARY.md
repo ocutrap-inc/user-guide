@@ -6,7 +6,7 @@
 
 * [Introduction](getting-started/introduction.md)
 * [Set-up Tutorial](getting-started/set-up-tutorial.md)
-* [Hardware set-up](getting-started/setting-up.md)
+* [Hardware Set Up](getting-started/setting-up.md)
 * [Video Assembly](getting-started/video-assembly.md)
 * [Hardware Features](getting-started/hardware-features.md)
 * [App](getting-started/app/README.md)
@@ -65,6 +65,7 @@
 * [Connection Issues](troubleshooting/troubleshooting-connection-issues-with-ocutrap.md)
 * [Condensation on the Camera](troubleshooting/condensation-on-the-camera.md)
 * [Motor Connector Use](troubleshooting/motor-connector-use.md)
+* [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)
 
 ## Support
 
