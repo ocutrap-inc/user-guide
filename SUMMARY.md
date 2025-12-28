@@ -20,6 +20,7 @@
   * [Notification Settings](getting-started/app/notification-settings.md)
   * [Trap Control](getting-started/app/trap-control.md)
   * [Logs](getting-started/app/logs.md)
+  * [Deleting an Image](getting-started/app/deleting-an-image.md)
   * [Image Recognition](getting-started/app/image-recognition.md)
   * [Resetting Password](getting-started/app/resetting-password.md)
   * [LED modes](getting-started/app/led-modes.md)
