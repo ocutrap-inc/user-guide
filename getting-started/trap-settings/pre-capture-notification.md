@@ -1,14 +1,14 @@
 ---
 description: >-
-  Get notified when an animal is about to enter the trap—before a capture
-  happens.
+  Get notified (only in ARMED mode) when an animal is about to enter the
+  trap—before a capture happens.
 ---
 
 # Pre-Capture Notification
 
 ### What It Does
 
-When enabled, **Pre-Capture Notification** alerts you when an animal is detected approaching the trigger point. This early warning system sends a notification and a photo (if applicable), helping you stay ahead of trap activity.
+**When enabled and the trap is in Armed Mode**, Pre-Capture Notification alerts you when an animal is detected approaching the trigger point. This early warning system sends a notification and a photo (if applicable), helping you stay ahead of trap activity.
 
 ### How It Works
 
