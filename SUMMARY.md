@@ -54,7 +54,7 @@
 * [Unarmed Hibernation](faqs/unarmed-hibernation.md)
 * [Miscellaneous](faqs/miscellaneous/README.md)
   * [Password Policy for Users](faqs/miscellaneous/password-policy-for-users.md)
-* [Accessory Button and Accessory Port](faqs/accessory-button-and-accessory-port.md)
+* [Accessory Button/Port](faqs/accessory-button-port.md)
 
 ***
 
