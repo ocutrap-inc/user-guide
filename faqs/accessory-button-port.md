@@ -5,7 +5,7 @@ description: >-
   guidelines for using the accessory output.
 ---
 
-# Accessory Button and Accessory Port
+# Accessory Button/Port
 
 #### Modifying Settings: Enable, Disable, and Adjust
 
