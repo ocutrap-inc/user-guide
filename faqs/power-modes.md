@@ -4,6 +4,8 @@ OcuTrap is designed with multiple power modes to **maximize battery life** while
 
 The power management system optimizes energy consumption by adjusting connectivity, sensor activity, and LED brightness based on usage. This allows for **extended deployment without frequent battery replacements or recharges**.
 
+> **Quick Reference**: OcuTrap has 6 power modes ranging from full operation to complete shutdown. The device automatically transitions between modes based on activity, battery level, and armed state.
+
 ***
 
 ### Power Modes
@@ -29,22 +31,34 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: Same as Low Power Idle, but the trap is armed and ready to capture an animal.
 * **When Active**: When the trap is armed and waiting.
 * **Indicators**: LED brightness is dimmed.
+* **Sensor Activity**: Time-of-Flight sensor operating at ~300ms intervals (optimized for battery)
 
 > **Important**: When in **armed mode**, the device will **not enter hibernation** unless a **very** **low battery event** occurs.
 
 ***
 
-#### 4. Armed Sleep Offline Mode _(Coming Soon)_
+#### 4. Sleep Mode
 
-* **Description**: A specialized armed mode that extends battery life further by periodically checking in with the cloud while keeping the internet disconnected in between.
-* **When Active**: When armed, but conserving power between check-ins.
-* **Check-In Interval**: Every **20 minutes** (fixed, cannot be changed by the user).
-* **Power Consumption**: Lower than Low Power Armed Mode due to reduced network usage.
+* **Description**: A deeper power-saving state where most systems are powered down except essential wake functions.
+* **When Active**: Extended periods of inactivity without being armed.
 * **Indicators**: LED is powered off.
+* **Power Consumption**: Very low — most sensors disabled.
+* **Wake Events**: Button press, scheduled check-in, or incoming cloud command.
 
 ***
 
-#### 5. Hibernation Mode
+#### 5. Armed Sleep Offline Mode
+
+* **Description**: A specialized armed mode that extends battery life further by periodically checking in with the cloud while keeping the internet disconnected in between. The trap remains armed and monitoring for captures even when offline.
+* **When Active**: When armed, but conserving power between check-ins, or when cellular connectivity is unavailable.
+* **Check-In Interval**: Every **20 minutes** (fixed, cannot be changed by the user).
+* **Power Consumption**: Lower than Low Power Armed Mode due to reduced network usage.
+* **Indicators**: LED flashes at 3-second intervals.
+* **Capture Behavior**: If a capture occurs while offline, the trap will report it at the next check-in.
+
+***
+
+#### 6. Hibernation Mode
 
 * **Description**: The lowest power state where the device is completely inactive. No communication is possible in this mode.
 * **When Active**:
@@ -92,20 +106,20 @@ These alerts help prevent unexpected downtime and allow users to take action bef
 
 ### Future Enhancements _(Coming Soon)_
 
-* **Armed Sleep Offline Mode** for even longer battery life.
 * **Prevent Idle Hibernation** setting to keep the device awake indefinitely when unarmed.
 
 ***
 
 #### Summary Table
 
-| Power Mode                              | Description                                | LED Status      | Can Receive Commands?    | Can Send Data?           |
-| --------------------------------------- | ------------------------------------------ | --------------- | ------------------------ | ------------------------ |
-| **Normal Power Mode**                   | Full power, user interaction               | Full brightness | ✅ Yes                    | ✅ Yes                    |
-| **Low Power Idle Mode**                 | Reduced power while waiting                | Dimmed          | ✅ Yes                    | ✅ Yes                    |
-| **Low Power Armed Mode**                | Trap is armed, waiting                     | Dimmed          | ✅ Yes                    | ✅ Yes                    |
-| **Armed Sleep Offline** _(Coming Soon)_ | Periodic check-ins, no internet in between | Off             | ❌ No (Between check-ins) | ✅ Yes (During check-ins) |
-| **Hibernation**                         | Fully powered down, no communication       | Off             | ❌ No                     | ❌ No                     |
+| Power Mode                 | Description                                | LED Status       | Can Receive Commands?    | Can Send Data?           |
+| -------------------------- | ------------------------------------------ | ---------------- | ------------------------ | ------------------------ |
+| **Normal Power Mode**      | Full power, user interaction               | Full brightness  | ✅ Yes                    | ✅ Yes                    |
+| **Low Power Idle Mode**    | Reduced power while waiting                | Dimmed           | ✅ Yes                    | ✅ Yes                    |
+| **Low Power Armed Mode**   | Trap is armed, waiting                     | Dimmed           | ✅ Yes                    | ✅ Yes                    |
+| **Sleep Mode**             | Deep sleep, most systems off               | Off              | ✅ Yes (wakes on command) | ✅ Yes (when awake)       |
+| **Armed Sleep Offline**    | Periodic check-ins, no internet in between | Flashing (3s)    | ❌ No (Between check-ins) | ✅ Yes (During check-ins) |
+| **Hibernation**            | Fully powered down, no communication       | Off              | ❌ No                     | ❌ No                     |
 
 
 
