@@ -54,8 +54,8 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 | Specification | Value |
 |---------------|-------|
-| **Primary Connection** | 4G LTE Cellular (Particle B404x SoM) |
-| **Backup Connection** | Wi-Fi (for areas with limited cellular) |
+| **Connection** | 4G LTE Cellular (Particle B404x SoM) |
+| **Coverage** | Nationwide cellular coverage |
 | **Cloud Platform** | Particle Cloud |
 | **GPS** | Integrated u-blox GPS module |
 | **GPS Update Interval** | Every 8 hours (default, battery-optimized) |
@@ -161,7 +161,7 @@ OcuTrap uses a sophisticated dual-zone verification system to prevent false trig
 |---------------|-------|
 | **Current Firmware** | v1.14.x |
 | **Device OS** | Particle Device OS 6.3.4 |
-| **Updates** | Over-the-air (OTA) via Particle Cloud |
+| **Updates** | Over-the-air (OTA)|
 | **Mobile App** | iOS and Android |
 
 ---
