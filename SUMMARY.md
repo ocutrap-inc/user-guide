@@ -9,12 +9,14 @@
 * [Hardware Set Up](getting-started/setting-up.md)
 * [Video Assembly](getting-started/video-assembly.md)
 * [Hardware Features](getting-started/hardware-features.md)
+* [Technical Specifications](getting-started/technical-specifications.md)
 * [App](getting-started/app/README.md)
   * [Adding a trap to your account](getting-started/app/adding-a-trap-to-your-account.md)
   * [Billing](getting-started/app/billing.md)
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
+    * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
     * [More Settings Overview](getting-started/app/trap-settings/more-settings-overview.md)
     * [Advanced Settings](getting-started/app/trap-settings/advanced-settings.md)
   * [Notification Settings](getting-started/app/notification-settings.md)
@@ -62,6 +64,7 @@
 
 ## Troubleshooting
 
+* [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
 * [Connection Issues](troubleshooting/troubleshooting-connection-issues-with-ocutrap.md)
