@@ -20,7 +20,7 @@ OcuTrap’s exterior is designed to resist harsh weather, including rain, wind, 
 For best performance:
 
 * **Ideal Range:** Operate OcuTrap between **0°C (32°F)** and **40°C (104°F)**.
-* **Extended Range:** It can function in temperatures as low as **-10°C (14°F)** and as high as **49°C (120°F)**; however, prolonged exposure to these extremes is not recommended as it may impact performance and battery longevity.
+* **Extended Range:** It can function in temperatures as low as **-10°C (14°F)** and as high as **45°C (113°F)**; however, prolonged exposure to these extremes is not recommended as it may impact performance and battery longevity.
 
 #### Charging Temperature
 
@@ -49,6 +49,8 @@ In freezing weather:
 * The moving door mechanism (which opens and closes) may freeze shut.
 * To maintain functionality, avoid operating OcuTrap in conditions where icing is likely.
 
+For comprehensive cold weather guidance including battery care, condensation prevention, and seasonal deployment tips, see [Cold Weather](cold-weather.md).
+
 #### Heavy Rain and Flooding
 
 Even though the external design is weatherproof:
@@ -64,3 +66,10 @@ To maximize the performance and longevity of the lithium-ion battery:
 * Avoid exposing the battery to prolonged extreme temperatures.
 * No additional maintenance is required beyond following these guidelines.
 
+For more battery information, see [Battery Overview](../getting-started/battery-overview.md).
+
+## Related Pages
+
+* [Cold Weather](cold-weather.md) — Detailed guide for winter deployments
+* [Battery Overview](../getting-started/battery-overview.md) — Complete battery information
+* [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md) — Troubleshooting camera condensation

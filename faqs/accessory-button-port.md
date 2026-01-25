@@ -1,11 +1,10 @@
 ---
 description: >-
-  This article explains how the Accessory button works in the OcuTrap interface,
-  where the physical accessory port is located, and the electrical and safety
-  guidelines for using the accessory output.
+  Complete guide to the OcuTrap Accessory Port: enabling and configuring the
+  port, electrical specifications, safety guidelines, and common use cases.
 ---
 
-# Accessory Button/Port
+# Accessory Port
 
 #### Modifying Settings: Enable, Disable, and Adjust
 
@@ -139,7 +138,37 @@ A built-in **100kΩ pull-down resistor** ensures:
 * Low-power motors
 * Custom accessories using the OcuTrap accessory port
 
+#### Potential Automation Applications
+
+The Accessory Port enables automation and remote activation for various external devices:
+
+1. **Rebaiter / Feeder** – Automatically dispense bait at specific intervals to keep the trap effective longer.
+2. **Vaccine Feeder** – Deliver oral vaccines to target animals, aiding in disease control efforts.
+3. **Lure Dispenser** – Release scent-based attractants to increase trapping efficiency for specific species.
+
 Always test new accessories with short activations before regular use.
+
+***
+
+### Important Safety Notes
+
+#### Do Not Use the Accessory and Main Door Motor Simultaneously
+
+* The accessory port and the main door motor should not be activated at the same time because both draw power from the same 12V battery.
+* The trap door motor can momentarily draw up to 5A, and if an accessory is also in use, it can exceed the power supply limits.
+* **Result:** Excessive current draw may cause:
+  * Device shutdown due to voltage drop
+  * Overheating and potential failure of the power circuit
+  * Reduced battery life
+
+#### Accessory Shutdown When Door Motor is Operated
+
+If the door motor is moved to an open or closed position while the accessory is running, the accessory will automatically power off. This behavior is an intentional safety feature designed to prevent potential conflicts between the door mechanism and the accessory. To avoid an unexpected shutdown, always ensure that the accessory is stopped before adjusting the door motor.
+
+#### Timing Conflicts
+
+* If the trap door is operating, avoid triggering the accessory at the same time.
+* If using an automated system, set a delay between door operation and accessory activation in the app settings.
 
 ***
 

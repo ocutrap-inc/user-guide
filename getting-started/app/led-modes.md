@@ -5,7 +5,7 @@
 * **Breathing Cyan**: The device is successfully connected to the Internet, enabling function calls and code flashing.
 * <img src="../../.gitbook/assets/Breathing Cyan.gif" alt="" data-size="line">
 
-### **Connecting to the Cloud**
+### Connecting to the Cloud
 
 * **Rapidly Blinking Cyan**: Signifies the process of cloud connection, usually following a green blink indicating cellular connection attempts.
 * <img src="../../.gitbook/assets/Untitled design (5).gif" alt="" data-size="line">
