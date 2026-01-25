@@ -50,13 +50,13 @@
 * [Taking higher quality images](faqs/taking-higher-quality-images.md)
 * [GPS](faqs/gps.md)
 * [Weather & Environmental Guidelines](faqs/weather-and-environmental-guidelines.md)
-* [Accessory Port](faqs/accessory-port.md)
+* [Cold Weather](faqs/cold-weather.md)
 * [Camera](faqs/camera.md)
 * [Power Modes](faqs/power-modes.md)
 * [Unarmed Hibernation](faqs/unarmed-hibernation.md)
 * [Miscellaneous](faqs/miscellaneous/README.md)
   * [Password Policy for Users](faqs/miscellaneous/password-policy-for-users.md)
-* [Accessory Button/Port](faqs/accessory-button-port.md)
+* [Accessory Port](faqs/accessory-button-port.md)
 
 ***
 
@@ -86,9 +86,9 @@
 * [Warranty Information](legal-and-compliance/warranty-information.md)
 * [Legal disclaimers and compliance information](legal-and-compliance/legal-disclaimers-and-compliance-information.md)
 
-## Device Managment
+## Device Management
 
-* [Selling or Transferring a Trap](device-managment/selling-or-transferring-a-trap.md)
+* [Selling or Transferring a Trap](device-management/selling-or-transferring-a-trap.md)
 
 ## Account and Billing
 

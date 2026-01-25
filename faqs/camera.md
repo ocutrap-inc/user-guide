@@ -6,15 +6,15 @@ description: >-
 
 # Camera
 
-The **OcuTrap camera** provides **daytime and night vision capabilities**, allowing users to configure image capture settings based on lighting conditions.&#x20;
+The **OcuTrap camera** provides **daytime and night vision capabilities**, allowing users to configure image capture settings based on lighting conditions.
 
 ***
 
-### **Camera Time-Lapse Mode**
+### Camera Time-Lapse Mode
 
 OcuTrap can **automatically capture images** at set intervals while the trap is in **armed mode**.
 
-#### **Configurable Option**
+#### Configurable Option
 
 * **Photo Capture Frequency** – Defines how often the camera captures an image while the trap is armed.
 
@@ -24,7 +24,7 @@ If images are too frequent, **reduce the frequency** to conserve battery and dat
 
 ***
 
-### **Camera Image Settings**
+### Camera Image Settings
 
 These settings control **image quality, resolution, and night vision brightness**.
 
@@ -40,7 +40,7 @@ If **daytime images look fine but nighttime images are too dark**, **increase** 
 If **nighttime images are washed out or too bright**, **lower** _Max IR Brightness_.
 {% endhint %}
 
-#### **Limits for IR Brightness**
+#### Limits for IR Brightness
 
 | **Setting**           | **Min Value** | **Default Value** | **Max Value** |
 | --------------------- | ------------- | ----------------- | ------------- |
@@ -49,7 +49,7 @@ If **nighttime images are washed out or too bright**, **lower** _Max IR Brightne
 
 ***
 
-### **Night Vision & Light Adaptation**
+### Night Vision & Light Adaptation
 
 {% hint style="warning" %}
 **Most users do not need to adjust light settings**, as the camera is designed to work automatically. However, users can fine-tune these settings for optimal image clarity in specific environments.
@@ -59,18 +59,18 @@ If **nighttime images are washed out or too bright**, **lower** _Max IR Brightne
 
 The camera **automatically adjusts** between **color mode** (daytime) and **night vision (greyscale)** based on ambient light levels.
 
-#### **Automatic Light Switching**
+#### Automatic Light Switching
 
 * **Dark Lux Threshold**
   * If ambient light **falls below this value**, the camera activates **night vision mode** (greyscale) and **enables IR**.
 * **Dynamic Light Adaptation**
   * When light is **between the two thresholds**, the IR brightness **gradually adjusts** to optimize visibility.
 
-#### **Limits for Light Thresholds**
+#### Limits for Light Thresholds
 
 | **Setting**              | **Min Value** | **Default Value** | **Max Value** |
 | ------------------------ | ------------- | ----------------- | ------------- |
-| _**Dark Lux Threshold**_ | `10.0`        | 2`0.0`            | `100.0`       |
+| _**Dark Lux Threshold**_ | `10.0`        | `20.0`            | `100.0`       |
 
 {% hint style="info" %}
 If **daytime images are still in greyscale**, **lower** _Dark Lux Threshold_ so the camera switches to color mode sooner.
@@ -80,7 +80,7 @@ If **nighttime images are still in color and too dark**, **increase** _Dark Lux 
 
 ***
 
-### **Understanding and Adjusting Image Quality**
+### Understanding and Adjusting Image Quality
 
 If you experience **image quality issues**, use the guide below to fine-tune your settings:
 
@@ -95,7 +95,7 @@ If you experience **image quality issues**, use the guide below to fine-tune you
 
 ***
 
-### **How OcuTrap Adapts to Different Light Conditions**
+### How OcuTrap Adapts to Different Light Conditions
 
 | **Light Condition**                              | **Camera Mode**              | **IR Brightness**                       |
 | ------------------------------------------------ | ---------------------------- | --------------------------------------- |
@@ -104,13 +104,13 @@ If you experience **image quality issues**, use the guide below to fine-tune you
 
 ***
 
-### **Summary of Best Practices**
+### Summary of Best Practices
 
-✅ **For Most Users:**
+**For Most Users:**
 
 * No need to adjust light settings—the camera adapts automatically.
 
-🔧 **If Adjustments Are Needed:**
+**If Adjustments Are Needed:**
 
 * **Improve night images** → Increase `maxIrBrightness`.
 * **Fix overexposed IR images** → Lower `maxIrBrightness`.

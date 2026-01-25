@@ -36,7 +36,15 @@ Personal details would include your first name, last name, email. These can be c
 
 <summary>How to share trap to other accounts?</summary>
 
+You can share your trap with other users to allow them to monitor and control it. To share a trap:
 
+1. Open the **OcuTrap Mobile App** and select the trap you want to share.
+2. Navigate to **Settings** → **Sharing** (or **Manage Users**).
+3. Tap **Add User** and enter the email address of the person you want to share with.
+4. Select the **permission level** for the new user (see User Levels for details).
+5. The invited user will receive a notification and can access the trap once they accept.
+
+For more details on permission levels, see [User Levels](sharing-traps/user-levels.md).
 
 </details>
 
@@ -276,7 +284,14 @@ While there is no maximum range for remote monitoring as long as there is intern
 
 <summary>How does OcuTrap handle false triggers or accidental captures?</summary>
 
-OcuTrap's advanced sensors are designed to minimize false triggers. In case of
+OcuTrap's advanced sensors are designed to minimize false triggers. In case of an accidental capture or false trigger:
+
+* **Remote Release:** You can release the animal remotely using the app without visiting the trap in person.
+* **Notification Review:** Check the captured images to verify whether an animal was caught before taking action.
+* **Sensitivity Adjustment:** Adjust the sensor sensitivity in trap settings if you experience frequent false triggers.
+* **Pre-Capture Notifications:** Enable pre-capture notifications to review images before the door closes automatically.
+
+These features help ensure efficient operation while minimizing disruptions from false triggers.
 
 </details>
 
