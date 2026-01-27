@@ -20,7 +20,8 @@ OcuTrap’s exterior is designed to resist harsh weather, including rain, wind, 
 For best performance:
 
 * **Ideal Range:** Operate OcuTrap between **0°C (32°F)** and **40°C (104°F)**.
-* **Extended Range:** It can function in temperatures as low as **-10°C (14°F)** and as high as **45°C (113°F)**; however, prolonged exposure to these extremes is not recommended as it may impact performance and battery longevity.
+
+
 
 #### Charging Temperature
 
