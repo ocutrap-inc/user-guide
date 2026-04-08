@@ -22,7 +22,7 @@ description: >-
 1. The new owner must have their own OcuTrap account.
 2. After logging in, they should go to the **Account Page** and scroll to the bottom.
 3. Click the **Add Trap** button.
-4. Enter the **Trap ID** and **QR Code**, found inside the trap’s POD cover.
+4. Enter the **Trap ID** (serial number), found inside the trap’s POD cover.
 
 ### Step 3: Subscription and Setup
 
