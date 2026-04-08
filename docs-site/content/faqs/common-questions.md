@@ -154,9 +154,9 @@ Yes, the OcuTrap app is designed to be compatible with both iOS and Android plat
 
 <details>
 
-<summary>Can OcuTrap be used in areas with limited or no Wi-Fi connectivity?</summary>
+<summary>Can OcuTrap be used in areas with no Wi-Fi?</summary>
 
-OcuTrap requires a stable internet connection for remote monitoring and notifications. In areas with limited connectivity, its functionality may be restricted.
+Yes. OcuTrap connects exclusively via 4G LTE cellular — no Wi-Fi is required or supported. As long as there is cellular coverage in the deployment area, OcuTrap will work normally.
 
 </details>
 

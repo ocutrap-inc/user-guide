@@ -150,8 +150,7 @@ The trap has automatic stuck-offline detection. After 20 minutes offline, it wil
 1. Check battery level — low battery can affect connectivity
 2. Verify cellular coverage in the deployment area
 3. Press the power button to wake the device
-4. If connected to Wi-Fi, verify the network is still available
-5. Contact support if the trap remains offline for extended periods
+4. Contact support if the trap remains offline for extended periods
 
 ### Commands Not Reaching Trap
 

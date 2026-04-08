@@ -14,7 +14,7 @@ OcuTrap firmware updates are delivered automatically over-the-air (OTA) to ensur
 
 For a successful firmware update:
 
-* The trap must be powered on and connected to cellular or Wi-Fi.
+* The trap must be powered on and connected to cellular.
 * Battery level should be above 20% to prevent interruption during the update.
 * The trap should remain powered during the update process (usually 5-15 minutes).
 
