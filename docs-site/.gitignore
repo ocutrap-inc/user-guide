@@ -1,0 +1,7 @@
+.next/
+node_modules/
+public/gitbook-assets/
+.env.local
+.env
+out/
+.vercel
