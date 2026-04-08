@@ -2,6 +2,39 @@
 
 <details>
 
+<summary>April 3, 2026</summary>
+
+## Firmware v2.1.2-632 — Monitoring Mode Update
+
+> **Release date:** 3 Apr 2026
+
+> ⚠️ **Note:** Monitoring Mode is not yet released and is currently in testing. This feature is not available to users at this time.
+
+_Monitoring mode now uses the live armed detection logic for scouting without closing the trap._
+
+***
+
+### What changed
+
+* Added a dedicated **Monitoring Mode** behavior for scouting
+* The trap now requires the **door to be fully open** before monitoring can start
+* Monitoring sends an alert when an animal reaches the **pre-capture distance**
+* Monitoring sends another alert if the animal reaches the **trigger distance**
+* The trap **does not close the door** while in monitoring mode
+* After the animal leaves, monitoring resets and applies a **5-minute cooldown** before a new monitoring alert cycle can begin
+
+***
+
+### Version note
+
+If you are checking with support, the firmware version for this release is **`v2.1.2-632`**.
+
+***
+
+</details>
+
+<details>
+
 <summary>April 21, 2024</summary>
 
 ## Firmware v1.12.7‑250 — Release Notes
@@ -55,4 +88,3 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 2. **UI Enhancements:** The user interface has been improved for better navigation and responsiveness across devices.
 
 </details>
-

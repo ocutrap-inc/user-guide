@@ -97,10 +97,10 @@ Connect the wire to the POD, ensuring the connection is secure.
 
 ### Instructions:
 
-* Locate the POD for your OcuTrap and open it to find the serial number and QR code at the top of the device.
+* Locate the POD for your OcuTrap and open it to find the serial number at the top of the device.
 * Log in to your account at [OcuTrap.com](https://www.ocutrap.com).
 * Navigate to the ‘Account’ section in the top-right corner of the dashboard, and click **Add Trap** at the bottom of the page.
-* Enter the serial number or scan the QR code.
+* Enter the serial number.
 * Follow the in-app prompts to enable your subscription.
 
 Once complete, your new trap will appear in your dashboard.
