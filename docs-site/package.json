@@ -7,7 +7,8 @@
     "dev": "next dev",
     "prebuild": "node scripts/setup.mjs",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "cd .. && git add docs-site/ && git commit -m 'Update docs' && git push"
   },
   "dependencies": {
     "next": "^15.3.0",
