@@ -252,18 +252,31 @@ export function buildSearchIndex(): SearchDoc[] {
       const raw = fs.readFileSync(fullPath, "utf-8");
       const { content } = matter(raw);
 
-      // Strip markdown syntax for plain text excerpt
+      // Strip markdown syntax and HTML entities for plain text excerpt
       const plainText = content
         .replace(/\{%[\s\S]*?%\}/g, "")
-        .replace(/#+\s/g, "")
+        .replace(/#+\s+/g, "")
         .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
         .replace(/[*_`~]/g, "")
         .replace(/<[^>]+>/g, "")
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&quot;/g, '"')
+        .replace(/&#x[0-9a-fA-F]+;/g, " ")
+        .replace(/&[a-z]+;/g, " ")
         .replace(/\s+/g, " ")
         .trim();
 
       const section = getSectionTitle(sections, item.href);
-      const excerpt = plainText.slice(0, 300);
+      // Trim to ~160 chars at word boundary, skip the page title if it starts the excerpt
+      let rawExcerpt = plainText.startsWith(item.title)
+        ? plainText.slice(item.title.length).trimStart()
+        : plainText;
+      if (rawExcerpt.length > 160) {
+        rawExcerpt = rawExcerpt.slice(0, 160).replace(/\s\S*$/, "") + "…";
+      }
+      const excerpt = rawExcerpt;
 
       results.push({
         title: item.title,
