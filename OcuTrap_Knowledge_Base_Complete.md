@@ -43,7 +43,6 @@ www.ocutrap.com
    - Bug Reporting
    - Safety Information
    - Purchases
-   - Cloud Debug Guide
    - Nonprofit Program
 5. [Account & Billing](#5-account--billing)
    - Billing Overview
@@ -162,7 +161,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Runtime | 4+ weeks per charge (usage dependent) |
 | Connectivity | 4G LTE cellular, multi-network |
 | GPS Updates | Default every 8 hours; requires 5+ satellites / 3D fix |
-| Sensor | SparkFun VL53L1X ToF — 0–4 m range, 250 mm default capture distance |
+| Sensor | VL53L1X ToF — 0–4 m range, 250 mm default capture distance |
 | Camera Resolution | QVGA to UXGA (6 sizes) |
 | IR LEDs | Automatic activation; 0–100% brightness control |
 | Dark Threshold | 25 lux default (configurable 1–100) |
@@ -328,7 +327,7 @@ The sensor has a 20-degree field of view. An approaching animal first enters the
 |---|---|
 | Check Status | Single press of User button |
 | Open/Close Door | Double-press + hold User button for 5 seconds |
-| Arm / Disarm | Press User + Power buttons simultaneously |
+| Arm / Disarm | Press User button, then Power button |
 | Power Off | Hold Power button for 3 seconds |
 | Wake from Hibernation | Press Power button |
 
@@ -817,30 +816,6 @@ Report bugs promptly at base.ocutrap.com/bug_report. Include a detailed descript
 ## Purchases
 
 OcuTrap devices are available for purchase online only at www.ocutrap.com.
-
----
-
-## Cloud Debug Guide
-
-For advanced troubleshooting, you can connect your OcuTrap to a computer for cloud diagnostics.
-
-### Requirements
-
-- OcuTrap device and a USB-C cable
-- Supported browser: Chrome 61+ on Windows, Mac, Linux, Chromebook, or Android
-
-### Steps
-
-1. Power off the OcuTrap (unplug the battery)
-2. Connect a USB-C cable between the circuit board and your computer
-3. Plug the battery back in
-4. Navigate to the Particle Cloud Debug page
-5. Click "Select Device" and choose your device
-6. Click "Connect" and wait up to 30 seconds
-7. Update firmware if prompted (~5 minutes)
-8. Click the Reset button on the circuit board
-9. Complete when the device shows a pulsing blue LED
-10. Copy results and email to support@ocutrap.com
 
 ---
 

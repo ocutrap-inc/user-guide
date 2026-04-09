@@ -62,7 +62,7 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 | Specification        | Value                                      |
 | -------------------- | ------------------------------------------ |
-| **Model**            | SparkFun VL53L1X                           |
+| **Model**            | VL53L1X                                    |
 | **Maximum Range**    | 0–4 meters                                 |
 | **Capture Distance** | Configurable 125mm–1000mm (default: 250mm) |
 | **Detection Zone**   | 300–450mm from sensor                      |

@@ -251,6 +251,5 @@ The trap sends tilt alerts when not level during armed mode.
 
 If you've tried the solutions above and still have issues:
 
-1. Check the [Cloud Debug Guide](../support/cloud-debug-guide-for-ocutrap.md) for advanced diagnostics
-2. [Contact Support](../support/support.md) with details about your issue
+1. [Contact Support](../support/support.md) with details about your issue
 3. Include: trap serial number, battery voltage, LED status, and steps already tried
