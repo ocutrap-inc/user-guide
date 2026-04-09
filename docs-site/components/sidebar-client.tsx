@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, BookOpen } from "lucide-react";
 import type { NavSection, NavItem } from "@/lib/docs";
@@ -99,7 +100,14 @@ export default function SidebarClient({
         aria-label="Documentation navigation"
       >
         <Link href="/" className="sidebar-logo">
-          <span className="sidebar-logo-icon">O</span>
+          <span className="sidebar-logo-icon">
+            <Image
+              src="/gitbook-assets/OcuTrap_icon_favpng.png"
+              alt="OcuTrap"
+              width={28}
+              height={28}
+            />
+          </span>
           OcuTrap Docs
         </Link>
 
