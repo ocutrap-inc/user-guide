@@ -83,7 +83,7 @@ The OcuTrap is an innovative smart wildlife trap that transforms how traps are m
 
 ## Hardware Setup
 
-> **🎬 Video Tutorial:** A step-by-step hardware setup video is available at base.ocutrap.com
+> **🎬 Video Tutorial:** A step-by-step hardware setup video is available at docs.ocutrap.com
 
 Setting up your OcuTrap involves unboxing and assembling the cage, door mechanism, handle, and POD (the smart electronics unit). Follow these steps carefully for a successful installation.
 
@@ -124,7 +124,7 @@ Gather the 4 three-inch bolts, handle guard, tube, washers, 2 top metal brackets
 
 ## Video Assembly Guide
 
-> **🎬 Video Tutorial:** A comprehensive step-by-step assembly video is available at base.ocutrap.com
+> **🎬 Video Tutorial:** A comprehensive step-by-step assembly video is available at docs.ocutrap.com
 
 The video walkthrough covers all assembly steps: battery preparation, door assembly with rod/washers/springs/nuts, motor attachment with pins and clevises, and POD assembly with battery connection and mounting.
 
@@ -158,7 +158,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Door States | 6 states tracked (open, closed, opening, closing, locked, fault) |
 | Battery | KBT 12V Li-ion — 10 Ah (standard) / 5 Ah (Canada) |
 | Operating Voltage | 7.0–15.0 V |
-| Runtime | 4+ weeks per charge (usage dependent) |
+| Runtime | 3+ weeks per charge (usage dependent) |
 | Connectivity | 4G LTE cellular, multi-network |
 | GPS Updates | Default every 8 hours; requires 5+ satellites / 3D fix |
 | Sensor | VL53L1X ToF — 0–4 m range, 250 mm default capture distance |
@@ -196,10 +196,9 @@ The trap operates in three distinct states:
 
 ### Interface Views
 
-The app offers three main viewing modes:
+The app offers two main viewing modes:
 
 - **Feed View:** Default view showing your trap activity feed
-- **Multi View:** Displays all camera feeds simultaneously
 - **Map View:** Shows geographical locations of all traps
 
 ### Notification Settings
@@ -435,6 +434,7 @@ Both the sharer and the recipient must have OcuTrap accounts. To share a trap:
 
 - **Account Owners:** Full account privileges including billing management
 - **Managers:** Can view, share, and edit settings and alerts in assigned groups
+- **TNR:** Trap-Neuter-Return users with access to shared traps for TNR operations
 
 ---
 
@@ -450,7 +450,7 @@ A: The standard unit measures 10" × 12" × 34" and targets animals in the 5–2
 A: Absolutely. The system is designed with animal welfare as a priority, featuring rapid door closure, remote monitoring to minimize stress, and selective targeting to avoid non-target species.
 
 **Q: What is the battery life?**
-A: Several weeks to months depending on usage, settings, and environmental conditions. The 10 Ah battery provides approximately 40+ days per charge.
+A: 3+ weeks depending on usage, settings, and environmental conditions. The 10 Ah battery provides extended runtime per charge.
 
 **Q: Is a subscription required?**
 A: A subscription enables cloud connectivity features. Check the current plans at ocutrap.com.
@@ -724,7 +724,7 @@ The device has automatic recovery after 20 minutes offline (disconnects, power c
 
 ## Motor Connection Issues
 
-> **🎬 Video Tutorial:** A motor connector assembly video is available at base.ocutrap.com
+> **🎬 Video Tutorial:** A motor connector assembly video is available at docs.ocutrap.com
 
 ### Pin and Clevis Won't Fit
 
@@ -1033,6 +1033,10 @@ Dark mode and general user interface improvements.
 OcuTrap founders Brian Quispe '20 '22G and Graham Patterson '20 won the Joan F. and John M. Thalheimer '55 Grand Prize at the Baker Institute's annual award competitions at Lehigh University, recognizing OcuTrap's innovative approach to humane wildlife management technology.
 
 ---
+
+---
+
+**Document Version:** v1.0 | April 2026
 
 *OcuTrap — Smart Wildlife Management*
 *www.ocutrap.com | info@ocutrap.com*
