@@ -54,14 +54,14 @@ export default function RootLayout({
               <div style={{ width: 32, display: "none" }} aria-hidden="true" className="hamburger-spacer" />
               <Link href="/" className="site-logo" style={{ marginRight: "auto" }}>
                 <Image
-                  src="/gitbook-assets/OcuTrap_icon_favpng.png"
+                  src="/gitbook-assets/Removed Background logo.png"
                   alt="OcuTrap"
-                  width={28}
-                  height={28}
+                  width={120}
+                  height={30}
                   className="site-logo-img"
                   priority
+                  style={{ height: 30, width: "auto" }}
                 />
-                OcuTrap Docs
               </Link>
               <SearchDialog />
               <PrintButton />

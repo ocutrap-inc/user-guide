@@ -148,26 +148,33 @@ export default function SearchDialog() {
               {displayResults.length === 0 && query.trim() ? (
                 <div className="search-empty">No results for &ldquo;{query}&rdquo;</div>
               ) : displayResults.length === 0 ? (
-                <div className="search-empty">Type to search...</div>
+                <div className="search-empty">Start typing to search…</div>
               ) : (
-                displayResults.map((doc, i) => (
-                  <button
-                    key={doc.href}
-                    className={`search-result${i === focused ? " search-result--focused" : ""}`}
-                    onClick={() => navigate(doc.href)}
-                    onMouseEnter={() => setFocused(i)}
-                    role="option"
-                    aria-selected={i === focused}
-                  >
-                    {doc.section && (
-                      <div className="search-result-section">{doc.section}</div>
-                    )}
-                    <div className="search-result-title">{doc.title}</div>
-                    {doc.excerpt && (
-                      <div className="search-result-excerpt">{doc.excerpt}</div>
-                    )}
-                  </button>
-                ))
+                <>
+                  {!query.trim() && (
+                    <div style={{ padding: "0.375rem 1.125rem 0.125rem", fontSize: "0.6875rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--color-muted)" }}>
+                      Recent pages
+                    </div>
+                  )}
+                  {displayResults.map((doc, i) => (
+                    <button
+                      key={doc.href}
+                      className={`search-result${i === focused ? " search-result--focused" : ""}`}
+                      onClick={() => navigate(doc.href)}
+                      onMouseEnter={() => setFocused(i)}
+                      role="option"
+                      aria-selected={i === focused}
+                    >
+                      {doc.section && (
+                        <div className="search-result-section">{doc.section}</div>
+                      )}
+                      <div className="search-result-title">{doc.title}</div>
+                      {doc.excerpt && (
+                        <div className="search-result-excerpt">{doc.excerpt}</div>
+                      )}
+                    </button>
+                  ))}
+                </>
               )}
             </div>
 
