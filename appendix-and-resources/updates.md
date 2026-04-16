@@ -4,7 +4,7 @@
 
 <summary>April 3, 2026</summary>
 
-## Firmware v2.1.2-632 — Monitoring Mode Update
+### Firmware v2.1.2-632 — Monitoring Mode Update
 
 > **Release date:** 3 Apr 2026
 
@@ -14,7 +14,7 @@ _Monitoring mode now uses the live armed detection logic for scouting without cl
 
 ***
 
-### What changed
+#### What changed
 
 * Added a dedicated **Monitoring Mode** behavior for scouting
 * The trap now requires the **door to be fully open** before monitoring can start
@@ -25,7 +25,7 @@ _Monitoring mode now uses the live armed detection logic for scouting without cl
 
 ***
 
-### Version note
+#### Version note
 
 If you are checking with support, the firmware version for this release is **`v2.1.2-632`**.
 
@@ -37,7 +37,7 @@ If you are checking with support, the firmware version for this release is **`v2
 
 <summary>April 21, 2024</summary>
 
-## Firmware v1.12.7‑250 — Release Notes
+### Firmware v1.12.7‑250 — Release Notes
 
 > **Release date:** 21 Apr 2025
 
@@ -45,16 +45,16 @@ _New toggle for keeping the trap awake while unarmed, plus faster GPS, clearer b
 
 ***
 
-### How the update installs
+#### How the update installs
 
 This version is delivered **over‑the‑air (OTA)**. It downloads and installs automatically the next time the trap reboots or powers up (for example, after a battery swap). No manual action is required.
 
 > **Check the version**\
-> &#xNAN;_&#x53;ettings → Device Info → Firmware_ should show `v1.12.7‑250`.
+> \&#xNAN;_Settings → Device Info → Firmware_ should show `v1.12.7‑250`.
 
 ***
 
-### 🎛️ New — Unarmed Hibernation Control
+#### 🎛️ New — Unarmed Hibernation Control
 
 | Setting                | Behaviour                                                                              | Default |
 | ---------------------- | -------------------------------------------------------------------------------------- | ------- |
@@ -67,7 +67,7 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 
 ***
 
-### 🔧 General improvements
+#### 🔧 General improvements
 
 * Faster location fixes & steadier GPS reporting
 * Smoother, more accurate battery percentages and voltage readings
