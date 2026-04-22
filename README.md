@@ -11,3 +11,8 @@
 **Website Status**&#x20;
 
 {% embed url="https://ocutrap.statuspage.io/" %}
+
+***
+
+_\[sync-test-marker-2026-04-22] Verifying GitHub → GitBook sync after repo migration. This line will be removed._
+
