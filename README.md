@@ -12,7 +12,3 @@
 
 {% embed url="https://ocutrap.statuspage.io/" %}
 
-***
-
-_\[sync-test-marker-2026-04-22-v2] Post-install sync test. This line will be removed._
-
