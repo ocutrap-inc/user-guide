@@ -14,5 +14,5 @@
 
 ***
 
-_\[sync-test-marker-2026-04-22] Verifying GitHub → GitBook sync after repo migration. This line will be removed._
+_\[sync-test-marker-2026-04-22-v2] Post-install sync test. This line will be removed._
 
