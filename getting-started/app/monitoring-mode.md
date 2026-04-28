@@ -9,7 +9,7 @@ Monitoring mode lets you observe trap activity — see what's approaching the tr
 | **Detects animals**   | Yes (same detection logic)                                   | Yes (same detection logic)                                     |
 | **Closes the door**   | Yes — on first verified detection                            | **Never** — observation only                                   |
 | **Sends pre-capture alerts** | Yes (if enabled)                                       | Yes                                                            |
-| **Captures images**   | Yes — at zone entry and at trigger                           | Yes — on detection                                             |
+| **Captures images**   | Yes — at zone entry and at trigger                           | Yes — on detection **and** every ~30 s while animal stays in the trap (v675+) |
 | **Reset after activity** | N/A (door closed; trap is captured)                       | Auto-reset ~5 minutes after the animal leaves                  |
 
 ## Activating monitoring mode
@@ -23,8 +23,9 @@ Monitoring mode lets you observe trap activity — see what's approaching the tr
 
 * **Pre-capture alerts** — when an animal enters the outer detection zone (if pre-capture alerts are enabled in your trap settings).
 * **Trigger alerts** — when an animal reaches the trigger distance. The trap takes a photo and sends it to you, but the door **does not close**.
+* **Periodic photos while the animal is in the trap (v675+)** — once an animal enters a detection zone, the trap requests a fresh photo about every 30 seconds for as long as something stays in the zone, so you can watch the activity unfold instead of seeing only the entry shot. If the previous monitoring image is still being transmitted (slow signal, large image), the trap waits for it to finish before starting the next one — you'll never get half a photo or two photos competing for the same connection. Older firmware (v598–v674) only takes a photo on initial detection.
 * **Cooldown after departure** — once the animal leaves the detection zones, the trap waits about 5 minutes before re-arming the alerts. This prevents the same animal from generating a flood of duplicate notifications as it moves around near the trap.
-* **Battery usage** — monitoring uses the same low-power detection mode as armed, so battery life is similar.
+* **Battery usage** — monitoring uses the same low-power detection mode as armed, so battery life is similar. The 30-second photo cadence draws meaningfully more power while an animal is parked in the trap; if you want to stretch battery life further on a long deployment, ask your fleet admin to lengthen the interval (`monImgInt`) or set it to `0` to disable periodic photos entirely.
 
 ## Exiting monitoring mode
 
@@ -51,6 +52,7 @@ If you want to override the default, ask your installer or fleet admin to set th
 | Close-the-door from monitoring (one-tap exit)          | **v633 or newer**                                  |
 | Reliable monitoring cleanup on close (timer/sensor reset) | **v644 or newer**                              |
 | Separate `monImg` image-quality setting for monitoring | **v672 or newer**                                  |
+| Periodic monitoring photos every ~30 s (`monImgInt`)   | **v675 or newer**                                  |
 
 > **Most deployed traps run firmware v550** as of April 2026. **v550 firmware does not support monitoring mode at all** — the device will reject the `monitor` command. If your trap doesn't show a Monitor option in the app, or if Monitor commands fail with a generic error, your trap likely needs an over-the-air firmware update before monitoring will work.
 >
