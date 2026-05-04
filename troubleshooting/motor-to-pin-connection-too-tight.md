@@ -15,7 +15,7 @@ When attaching the motor to the bracket:
 
 **Example scenario:**
 
-![](../../.gitbook/assets/11B9D2D8-CDFF-4395-A167-CEF1BE76B000_1_105_c.jpeg)
+![](../.gitbook/assets/11B9D2D8-CDFF-4395-A167-CEF1BE76B000_1_105_c.jpeg)
 
 ### Cause
 
@@ -30,7 +30,7 @@ To solve this:
    * This will expand the motor outward, creating enough clearance for the pin and clevis to fit properly.
 3. **Prop up the motor** to allow it room to extend fully (see images below).
 
-<figure><img src="../../.gitbook/assets/DE68151C-8ECC-4ED7-BDC7-857640B4E369_1_105_c (2).jpeg" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/DE68151C-8ECC-4ED7-BDC7-857640B4E369_1_105_c (2).jpeg" alt="" width="188"><figcaption></figcaption></figure>
 
 #### Step-by-Step
 
@@ -45,7 +45,7 @@ To solve this:
 
 **Photos for reference:**
 
-| ![](<../../.gitbook/assets/IMG_7064 2.jpeg>) | ![](<../../.gitbook/assets/IMG_7065 2 (1).jpeg>) |
+| ![](<../.gitbook/assets/IMG_7064 2.jpeg>) | ![](<../.gitbook/assets/IMG_7065 2 (1).jpeg>) |
 | :------------------------------------------: | :----------------------------------------------: |
 
 ### Tip
