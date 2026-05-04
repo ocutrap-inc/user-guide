@@ -43,8 +43,6 @@ This version is delivered **over-the-air (OTA)**. It downloads and installs auto
 
 Full customer documentation for **Scouting Mode** — observe trap activity without closing the door — is now live in the docs at **Getting Started → App → Scouting Mode**. It covers how to start scouting, what alerts and photos to expect, when to use it instead of Armed mode, and troubleshooting.
 
-> Most deployed traps still run firmware **v550** as of April 2026, which **does not support** Scouting Mode. If your trap doesn't show a Scout button in the app, see [Updating firmware](../faqs/updating-firmware.md) to bring it up to date.
-
 ***
 
 #### Version note
