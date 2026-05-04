@@ -200,3 +200,36 @@ def test_fetch_external_returns_none_on_failure(tmp_path):
     cache = tmp_path / ".cache"
     with patch("build_kb_pdf.requests.get", side_effect=Exception("network down")):
         assert fetch_external("https://example.com/x.png", cache_dir=cache) is None
+
+
+from build_kb_pdf import rewrite_images, BuildContext
+
+
+def test_rewrite_images_handles_markdown_and_html(tmp_path):
+    img = _make_png(tmp_path / "pic.png", 100, 100)
+    src = tmp_path / "doc.md"
+    md = '![alt](pic.png)\n<figure><img src="pic.png" alt=""></figure>'
+    ctx = BuildContext(cache_dir=tmp_path / ".cache")
+    out = rewrite_images(md, source_md=src, ctx=ctx)
+    file_url = (tmp_path / "pic.png").as_uri()
+    assert f"![alt]({file_url})" in out
+    assert f'<img src="{file_url}"' in out
+
+
+def test_rewrite_images_strips_when_missing(tmp_path):
+    src = tmp_path / "doc.md"
+    src.parent.mkdir(parents=True, exist_ok=True)
+    md = "before\n![](nope.png)\nafter\n"
+    ctx = BuildContext(cache_dir=tmp_path / ".cache")
+    out = rewrite_images(md, source_md=src, ctx=ctx)
+    assert "nope.png" not in out
+    assert "before" in out and "after" in out
+
+
+def test_rewrite_images_external_url_passthrough_when_fetch_fails(tmp_path, monkeypatch):
+    monkeypatch.setattr("build_kb_pdf.fetch_external", lambda url, cache_dir: None)
+    src = tmp_path / "doc.md"
+    md = "![](https://example.com/missing.png)"
+    ctx = BuildContext(cache_dir=tmp_path / ".cache")
+    out = rewrite_images(md, source_md=src, ctx=ctx)
+    assert out == ""  # the only image stripped, leaving an empty doc

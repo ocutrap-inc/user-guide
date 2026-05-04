@@ -268,3 +268,62 @@ def fetch_external(url: str, *, cache_dir: Path) -> Path | None:
     out = cache_dir / f"ext-{key}{ext}"
     out.write_bytes(r.content)
     return out
+
+
+# ============================================================================
+# Image pipeline — markdown rewriting
+# ============================================================================
+
+@dataclass
+class BuildContext:
+    cache_dir: Path
+    images_embedded: int = 0
+    images_converted: int = 0
+    images_downloaded: int = 0
+    images_skipped: int = 0
+
+
+_MD_IMG_RE = re.compile(r'!\[([^\]]*)\]\(([^)\s]+|<[^>]+>)\)')
+_HTML_IMG_RE = re.compile(r'<img\s+([^>]*?)src="([^"]+)"([^>]*)/?>', re.IGNORECASE)
+
+
+def _resolve_or_fetch(raw: str, source_md: Path, ctx: BuildContext) -> Path | None:
+    raw = _strip_angle_brackets(raw)
+    if raw.startswith(("http://", "https://")):
+        out = fetch_external(raw, cache_dir=ctx.cache_dir)
+        if out:
+            ctx.images_downloaded += 1
+        return out
+    p = resolve_image_path(raw, source_md)
+    if p is None:
+        return None
+    out = process_image(p, cache_dir=ctx.cache_dir)
+    if out != p:
+        ctx.images_converted += 1
+    return out
+
+
+def rewrite_images(text: str, *, source_md: Path, ctx: BuildContext) -> str:
+    def md_repl(m: re.Match) -> str:
+        alt, raw = m.group(1), m.group(2)
+        out = _resolve_or_fetch(raw, source_md, ctx)
+        if out is None:
+            ctx.images_skipped += 1
+            return ""
+        ctx.images_embedded += 1
+        return f"![{alt}]({out.as_uri()})"
+
+    def html_repl(m: re.Match) -> str:
+        before, raw, after = m.group(1), m.group(2), m.group(3)
+        out = _resolve_or_fetch(raw, source_md, ctx)
+        if out is None:
+            ctx.images_skipped += 1
+            return ""
+        ctx.images_embedded += 1
+        return f'<img {before}src="{out.as_uri()}"{after}/>'
+
+    text = _MD_IMG_RE.sub(md_repl, text)
+    text = _HTML_IMG_RE.sub(html_repl, text)
+    # Tidy: collapse stray empty lines left by stripped images
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
