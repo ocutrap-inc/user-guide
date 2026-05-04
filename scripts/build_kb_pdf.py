@@ -221,5 +221,7 @@ def process_image(src: Path, *, cache_dir: Path) -> Path:
             save_kwargs = {"optimize": True}
             if out_ext in (".jpg", ".jpeg"):
                 save_kwargs["quality"] = JPEG_QUALITY
+                if im.mode != "RGB":
+                    im = im.convert("RGB")
             im.save(out, **save_kwargs)
     return out

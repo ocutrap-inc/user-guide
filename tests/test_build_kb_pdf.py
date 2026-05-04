@@ -161,3 +161,17 @@ def test_process_image_caches_repeated_calls(tmp_path):
     out2 = process_image(src, cache_dir=cache)
     assert out1 == out2
     assert out2.stat().st_mtime == mtime1  # not regenerated
+
+
+def test_process_image_rgba_jpeg_does_not_crash(tmp_path):
+    """A .jpg source opened as RGBA (rare but possible) must not raise on save."""
+    from PIL import Image
+    src = tmp_path / "weird.jpg"
+    # Create a large RGBA image saved as PNG, then rename to .jpg to simulate
+    # the rare case where Pillow opens a .jpg-suffixed file as RGBA.
+    Image.new("RGBA", (4000, 2000), (255, 0, 0, 128)).save(src, "PNG")
+    out = process_image(src, cache_dir=tmp_path / ".cache")
+    # Should not crash. Output should be valid and openable.
+    assert out.exists()
+    with Image.open(out) as im:
+        im.verify()
