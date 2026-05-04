@@ -6,7 +6,7 @@ Print single sheet, double-sided (flip on long edge). Folded in half for
 shipping; read unfolded. Focus: bare-minimum hardware setup + a push to the
 video guides at docs.ocutrap.com.
 
-Source of truth for content: pdf-docs/printed/R1_Manual_v2.docx
+Source of truth for content: docs.ocutrap.com (canonical knowledge base)
 Reference:                   getting-started/setting-up.md
 
 Usage:

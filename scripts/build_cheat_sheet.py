@@ -3,7 +3,7 @@
 Build the OcuTrap R1 Operation Cheat Sheet — a one-page, letter-size,
 print-ready PDF aimed at users not yet familiar with the device.
 
-Source of truth for content: pdf-docs/online/R1_Manual_v2.docx
+Source of truth for content: docs.ocutrap.com (canonical knowledge base)
 LED/button reference graphic: pdf-docs/printed/inside_sticker.png
 
 Usage:
@@ -361,7 +361,7 @@ def build():
 
     # Footer
     footer_txt = (
-        "Full manual: <b>R1_Manual_v2.pdf</b> &nbsp; | &nbsp; "
+        "Full manual: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
         "Videos &amp; docs: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
         "Dashboard: <b>base.ocutrap.com</b> &nbsp; | &nbsp; "
         "Support: <b>support@ocutrap.com</b>"
