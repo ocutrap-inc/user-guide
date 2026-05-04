@@ -20,3 +20,5 @@
 *.JPEG !text !filter !merge !diff
 *.gif !text !filter !merge !diff
 *.GIF !text !filter !merge !diff
+*.pdf !text !filter !merge !diff
+*.PDF !text !filter !merge !diff
