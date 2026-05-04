@@ -11,7 +11,3 @@ Click on the camera icon on the bottom right
 ### Fast image request
 
 Tap the lightning bolt icon to request an image faster. The trap returns a lower-quality image in exchange for the speed boost — useful when you need to check on something right now.
-
-{% hint style="info" %}
-Available on firmware **v550 and newer**. Older traps will not show the lightning bolt option — update firmware to enable it.
-{% endhint %}
