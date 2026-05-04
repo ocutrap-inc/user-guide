@@ -88,6 +88,7 @@ def parse_summary(summary_path: Path) -> list[SummaryEntry]:
 
 _FRONTMATTER_RE = re.compile(r'^---\n(.*?)\n---\n+', re.DOTALL)
 _HIDDEN_RE = re.compile(r'^\s*hidden\s*:\s*true\s*$', re.MULTILINE | re.IGNORECASE)
+_PDF_EXCLUDE_RE = re.compile(r'^\s*pdf-exclude\s*:\s*true\s*$', re.MULTILINE | re.IGNORECASE)
 
 _HINT_RE = re.compile(
     r'\{%\s*hint\s+style="([^"]+)"\s*%\}\n(.*?)\n\{%\s*endhint\s*%\}',
@@ -118,19 +119,26 @@ _VIDEO_HOSTS = ("youtube.com", "youtu.be", "vimeo.com")
 def strip_frontmatter(text: str) -> tuple[str, dict[str, bool]]:
     """Remove leading YAML frontmatter; return (cleaned_text, flags).
 
-    `flags` exposes the booleans we care about (currently `hidden`).
-    Frontmatter is content between two `---` markers at the very top
-    of the file. GitBook-authored markdown commonly puts `description:`
-    and `hidden:` here; without stripping, pandoc renders these lines
-    as visible body text.
+    `flags` exposes the booleans we care about:
+      - `hidden`      — page is hidden from BOTH the website and the PDF
+      - `pdf-exclude` — page is on the website but skipped from the PDF
+                        (use for press/marketing pages that aren't part
+                        of the customer manual)
+
+    Frontmatter is content between two `---` markers at the very top of
+    the file. GitBook-authored markdown commonly puts `description:` and
+    `hidden:` here; without stripping, pandoc renders these lines as
+    visible body text.
     """
-    flags: dict[str, bool] = {"hidden": False}
+    flags: dict[str, bool] = {"hidden": False, "pdf-exclude": False}
     m = _FRONTMATTER_RE.match(text)
     if not m:
         return text, flags
     block = m.group(1)
     if _HIDDEN_RE.search(block):
         flags["hidden"] = True
+    if _PDF_EXCLUDE_RE.search(block):
+        flags["pdf-exclude"] = True
     return text[m.end():], flags
 
 
@@ -545,13 +553,17 @@ def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
     render_pdf via pandoc's --include-before-body, so it lands before
     the auto-generated TOC.
     """
-    parts: list[str] = []
+    # Build a per-chapter list of page parts so we can drop chapters that
+    # end up empty (e.g. when every page in the chapter is pdf-excluded).
     pages_processed = 0
     pages_hidden = 0
+    pages_pdf_excluded = 0
+
+    chapters: list[tuple[str | None, list[str]]] = [(None, [])]  # (chapter_title, page_parts)
 
     for entry in entries:
         if entry.kind == "chapter":
-            parts.append(f"# {entry.title}\n")
+            chapters.append((entry.title, []))
             continue
         if entry.path is None or not entry.path.exists():
             print(f"  WARN: page missing on disk: {entry.title} ({entry.path})")
@@ -562,14 +574,30 @@ def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
             pages_hidden += 1
             print(f"  skip (hidden:true): {entry.title} ({entry.path.name})")
             continue
+        if flags.get("pdf-exclude"):
+            pages_pdf_excluded += 1
+            print(f"  skip (pdf-exclude:true): {entry.title} ({entry.path.name})")
+            continue
         body = _preprocess_page(body, source_md=entry.path, ctx=ctx)
         # Shift: +1 if under any chapter, +depth for nesting
         shift = (1 if entry.chapter else 0) + entry.depth
         body = _shift_headings(body, shift)
-        parts.append(body)
+        chapters[-1][1].append(body)
         pages_processed += 1
+
+    parts: list[str] = []
+    for chapter_title, page_parts in chapters:
+        if not page_parts:
+            if chapter_title:
+                print(f"  skip empty chapter: {chapter_title}")
+            continue
+        if chapter_title:
+            parts.append(f"# {chapter_title}\n")
+        parts.extend(page_parts)
+
     ctx.pages_processed = pages_processed  # type: ignore[attr-defined]
     ctx.pages_hidden = pages_hidden  # type: ignore[attr-defined]
+    ctx.pages_pdf_excluded = pages_pdf_excluded  # type: ignore[attr-defined]
     return "\n\n".join(parts) + "\n"
 
 
@@ -660,11 +688,12 @@ from source_hash import write_sidecar as write_sources_sidecar  # noqa: E402
 def _print_summary(ctx: BuildContext, output: Path, page_count: int) -> None:
     pages_processed = getattr(ctx, "pages_processed", 0)
     pages_hidden = getattr(ctx, "pages_hidden", 0)
+    pages_pdf_excluded = getattr(ctx, "pages_pdf_excluded", 0)
     size_mb = output.stat().st_size / (1024 * 1024)
     print()
     print("─" * 60)
     print(f"Markdown files processed: {pages_processed} "
-          f"({pages_hidden} skipped via hidden:true)")
+          f"({pages_hidden} hidden, {pages_pdf_excluded} pdf-excluded)")
     print(f"Images embedded:          {ctx.images_embedded} "
           f"({ctx.images_converted} converted, "
           f"{ctx.images_downloaded} downloaded externally, "

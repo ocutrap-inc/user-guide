@@ -1,3 +1,7 @@
+---
+pdf-exclude: true
+---
+
 # Updates
 
 <details>

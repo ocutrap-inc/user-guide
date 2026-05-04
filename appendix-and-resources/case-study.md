@@ -1,3 +1,7 @@
+---
+pdf-exclude: true
+---
+
 # Case Study
 
 #### Case Study: Revolutionizing Animal Trapping with OcuTrap Technology
