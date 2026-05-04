@@ -15,6 +15,7 @@
   * [Billing](getting-started/app/billing.md)
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
+  * [Monitoring Mode](getting-started/app/monitoring-mode.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
     * [More Settings Overview](getting-started/app/trap-settings/more-settings-overview.md)
