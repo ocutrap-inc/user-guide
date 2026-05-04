@@ -7,7 +7,7 @@ Usage:
     python scripts/build_pdf.py
 
 Run from the repo root (OcuTrap_Knowledge_Base/).
-Output: OcuTrap_Knowledge_Base.pdf in the repo root.
+Output: pdf-docs/online/OcuTrap_Knowledge_Base.pdf
 """
 
 import os
@@ -28,7 +28,7 @@ from PIL import Image as PILImage
 # Resolve paths relative to the repo root
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ASSETS = os.path.join(REPO_ROOT, "docs-site", "public", "gitbook-assets")
-OUTPUT = os.path.join(REPO_ROOT, "OcuTrap_Knowledge_Base.pdf")
+OUTPUT = os.path.join(REPO_ROOT, "pdf-docs", "online", "OcuTrap_Knowledge_Base.pdf")
 
 # Allow overriding output path via CLI argument
 if len(sys.argv) > 1:

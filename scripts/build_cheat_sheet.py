@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Build the OcuTrap R1 Cheat Sheet — a one-page, letter-size, print-ready PDF.
+Build the OcuTrap R1 Operation Cheat Sheet — a one-page, letter-size,
+print-ready PDF aimed at users not yet familiar with the device.
 
-Source of truth for content: printed/R1_Manual_v2.docx
-LED/button reference graphic: printed/inside_sticker.png
+Source of truth for content: pdf-docs/online/R1_Manual_v2.docx
+LED/button reference graphic: pdf-docs/printed/inside_sticker.png
 
 Usage:
     pip install reportlab Pillow
     python scripts/build_cheat_sheet.py
 
-Output: printed/R1_Cheat_Sheet.pdf
+Output: pdf-docs/online/R1_Operation_Cheat_Sheet.pdf
 """
 
 import os
@@ -32,10 +33,10 @@ from reportlab.platypus import (
 )
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-PRINTED_DIR = os.path.join(REPO_ROOT, "printed")
-STICKER = os.path.join(PRINTED_DIR, "inside_sticker.png")
+PDF_DOCS = os.path.join(REPO_ROOT, "pdf-docs")
+STICKER = os.path.join(PDF_DOCS, "printed", "inside_sticker.png")
 LOGO = os.path.join(REPO_ROOT, ".gitbook", "assets", "Removed Background logo.png")
-OUTPUT = os.path.join(PRINTED_DIR, "R1_Cheat_Sheet.pdf")
+OUTPUT = os.path.join(PDF_DOCS, "online", "R1_Operation_Cheat_Sheet.pdf")
 
 # OcuTrap brand palette (from shopify-theme settings_schema.json)
 BRAND_GREEN = HexColor("#3A6B35")
@@ -99,8 +100,8 @@ def header_flowable(width):
         logo_cell = img
 
     title_block = [
-        Paragraph("OcuTrap R1 &nbsp;&middot;&nbsp; Cheat Sheet", sTitle),
-        Paragraph("Setup, Buttons, LEDs &amp; Controls — keep near the trap.", sSubtitle),
+        Paragraph("OcuTrap R1 &nbsp;&middot;&nbsp; Operation Cheat Sheet", sTitle),
+        Paragraph("Buttons, LEDs &amp; device states — keep near the trap.", sSubtitle),
     ]
 
     tbl = Table(
@@ -154,25 +155,55 @@ def boxed(flowables, width, pad=6):
     return inner
 
 
-def quick_start_table(width):
+def first_time_callout(width):
+    """Point new users at the Quick Start guide for setup."""
+    msg = (
+        "<b>First time setting up?</b> &nbsp;"
+        "Follow the <b>R1 Quick Start</b> card (in the box) for battery, assembly, "
+        "and app pairing. This cheat sheet is for day-to-day operation."
+    )
+    tbl = Table(
+        [[Paragraph(msg, sBodyTight)]],
+        colWidths=[width],
+    )
+    tbl.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, -1), BRAND_CREAM),
+        ("BOX", (0, 0), (-1, -1), 0.5, BRAND_ACCENT),
+        ("LEFTPADDING", (0, 0), (-1, -1), 8),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 8),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    return tbl
+
+
+def system_led_table(width):
+    """System LED patterns — what the top-of-POD LED is telling you."""
     rows = [
-        ["1", "Charge battery", "Use the supplied charger. Light turns green when full (4–5 hrs)."],
-        ["2", "Create account", "Go to base.ocutrap.com or scan the QR code inside the POD."],
-        ["3", "Assemble", "Handle → Door → POD. Follow the printed manual."],
-        ["4", "Install battery", "Open latch, seat battery, push yellow connectors straight in."],
-        ["5", "Power on & connect", "Wait for breathing cyan LED — up to 10 min on cellular."],
-        ["6", "Arm in the app", "In the app: Settings → Arm. Door must be open to arm."],
+        ("Breathing cyan", "Connected to cloud — operational."),
+        ("Fast blinking cyan", "Connecting to the cloud."),
+        ("Blinking green", "Searching for cellular signal."),
+        ("Blinking magenta", "Firmware update in progress."),
+        ("Rapid red SOS", "Firmware crash — contact support if >10 blinks."),
+        ("Solid red at boot", "Battery too low (<9.6V). Charge and retry."),
+        ("No light", "Off or hibernating. Press Power to wake."),
     ]
-    data = [[Paragraph(f"<b>{n}</b>", sBody), Paragraph(f"<b>{t}</b>", sBody), Paragraph(d, sBody)] for n, t, d in rows]
-    tbl = Table(data, colWidths=[0.2 * inch, 1.15 * inch, width - 1.35 * inch - 0.12 * inch])
+    header = [
+        Paragraph("<b>Pattern</b>", sBodyTight),
+        Paragraph("<b>Meaning</b>", sBodyTight),
+    ]
+    body = [[Paragraph(f"<b>{p}</b>", sBodyTight), Paragraph(m, sBodyTight)] for p, m in rows]
+    data = [header] + body
+    tbl = Table(data, colWidths=[1.25 * inch, width - 1.25 * inch])
     tbl.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 2),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 2),
-        ("TOPPADDING", (0, 0), (-1, -1), 2),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
+        ("BACKGROUND", (0, 0), (-1, 0), BRAND_CREAM),
+        ("LEFTPADDING", (0, 0), (-1, -1), 4),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+        ("TOPPADDING", (0, 0), (-1, -1), 3),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
         ("LINEBELOW", (0, 0), (-1, -2), 0.25, RULE),
-        ("TEXTCOLOR", (0, 0), (0, -1), BRAND_ACCENT),
+        ("BOX", (0, 0), (-1, -1), 0.5, RULE),
     ]))
     return tbl
 
@@ -244,8 +275,7 @@ def safety_list():
 
 
 def build():
-    if not os.path.exists(PRINTED_DIR):
-        os.makedirs(PRINTED_DIR, exist_ok=True)
+    os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
 
     doc = BaseDocTemplate(
         OUTPUT, pagesize=letter,
@@ -277,9 +307,12 @@ def build():
 
     # --- LEFT COLUMN ---
     left_story = []
-    left_story.append(section_header("Quick Start", left_w))
+    left_story.append(first_time_callout(left_w))
+    left_story.append(Spacer(1, 6))
+
+    left_story.append(section_header("System LED (top of POD)", left_w))
     left_story.append(Spacer(1, 3))
-    left_story.append(quick_start_table(left_w))
+    left_story.append(system_led_table(left_w))
     left_story.append(Spacer(1, 6))
 
     left_story.append(section_header("Buttons &amp; Controls", left_w))
@@ -328,10 +361,10 @@ def build():
 
     # Footer
     footer_txt = (
-        "Full manual: <b>printed/R1_Manual_v2.pdf</b> &nbsp; | &nbsp; "
-        "Online KB: <b>OcuTrap_Knowledge_Base.pdf</b> &nbsp; | &nbsp; "
-        "Support: <b>support@ocutrap.com</b> &nbsp; | &nbsp; "
-        "Dashboard: <b>base.ocutrap.com</b>"
+        "Full manual: <b>R1_Manual_v2.pdf</b> &nbsp; | &nbsp; "
+        "Videos &amp; docs: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
+        "Dashboard: <b>base.ocutrap.com</b> &nbsp; | &nbsp; "
+        "Support: <b>support@ocutrap.com</b>"
     )
     story.append(Paragraph(footer_txt, sFooter))
     story.append(Paragraph(

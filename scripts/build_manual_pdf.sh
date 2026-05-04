@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Convert printed/R1_Manual_v2.docx to printed/R1_Manual_v2.pdf
+# Convert pdf-docs/online/R1_Manual_v2.docx to pdf-docs/online/R1_Manual_v2.pdf
 # Pipeline: docx -> HTML (pandoc, media extracted) -> PDF (Chrome headless)
 #
 # Requirements:
@@ -11,8 +11,8 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SRC_DOCX="${REPO_ROOT}/printed/R1_Manual_v2.docx"
-OUT_PDF="${REPO_ROOT}/printed/R1_Manual_v2.pdf"
+SRC_DOCX="${REPO_ROOT}/pdf-docs/online/R1_Manual_v2.docx"
+OUT_PDF="${REPO_ROOT}/pdf-docs/online/R1_Manual_v2.pdf"
 WORK_DIR="$(mktemp -d)"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
