@@ -1,6 +1,24 @@
 name: build-kb-pdf
 
+# Verifies that the committed Knowledge Base PDF matches what the build
+# script would produce from the current docs. If they don't match, the
+# workflow fails with instructions for the contributor to regenerate
+# and commit the PDF.
+#
+# We do NOT auto-commit the PDF here on purpose — having two authors
+# (the bot and contributors) for the same binary file caused merge
+# conflicts on every overlapping PR. One source of truth: the PR that
+# changes docs also commits the regenerated PDF.
+
 on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.gitbook/assets/**'
+      - 'scripts/build_kb_pdf.py'
+      - 'scripts/kb_pdf_style.css'
+      - '.github/workflows/build-kb-pdf.yml'
+      - 'requirements-dev.txt'
   push:
     branches: [main]
     paths:
@@ -13,20 +31,14 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: build-kb-pdf
+  group: build-kb-pdf-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: write
-
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -44,16 +56,13 @@ jobs:
           key: kb-pdf-${{ hashFiles('SUMMARY.md', '.gitbook/assets/**', 'scripts/build_kb_pdf.py') }}
           restore-keys: |
             kb-pdf-
-      - name: Build PDF
+      - name: Stash the committed PDF for comparison
+        run: cp .gitbook/assets/OcuTrap_Knowledge_Base.pdf /tmp/committed.pdf
+      - name: Build the PDF from current docs
         run: python3 scripts/build_kb_pdf.py
-      - name: Commit if PDF changed
-        run: |
-          if ! git diff --quiet -- .gitbook/assets/OcuTrap_Knowledge_Base.pdf; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add .gitbook/assets/OcuTrap_Knowledge_Base.pdf
-            git commit -m "chore(kb-pdf): regenerate from docs [skip ci]"
-            git push
-          else
-            echo "PDF unchanged, skipping commit."
-          fi
+      - name: Verify committed PDF content matches what the script produces
+        # WeasyPrint output is non-deterministic at the byte level (PDF metadata
+        # timestamps and object IDs vary), so we compare extracted text + page
+        # count instead of the raw binary. This catches real docs drift while
+        # ignoring cosmetic binary churn.
+        run: python3 scripts/verify_kb_pdf.py /tmp/committed.pdf .gitbook/assets/OcuTrap_Knowledge_Base.pdf
