@@ -379,3 +379,45 @@ def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
         pages_processed += 1
     ctx.pages_processed = pages_processed  # type: ignore[attr-defined]
     return "\n\n".join(parts) + "\n"
+
+
+# ============================================================================
+# Render: markdown → HTML → PDF
+# ============================================================================
+
+import subprocess
+
+from weasyprint import HTML, CSS as WeasyCSS
+from pypdf import PdfReader
+
+
+def _markdown_to_html(markdown: str) -> str:
+    """Run pandoc to turn the assembled markdown into a standalone HTML doc."""
+    proc = subprocess.run(
+        [
+            "pandoc",
+            "--from=gfm+raw_html+pipe_tables+definition_lists",
+            "--to=html5",
+            "--standalone",
+            "--toc",
+            "--toc-depth=3",
+            "--metadata=title:OcuTrap Knowledge Base",
+        ],
+        input=markdown,
+        capture_output=True,
+        text=True,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(f"pandoc failed:\n{proc.stderr}")
+    return proc.stdout
+
+
+def render_pdf(markdown: str, *, css_path: Path, output: Path) -> int:
+    """Render assembled markdown to a PDF. Returns page count."""
+    html = _markdown_to_html(markdown)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    HTML(string=html, base_url=str(output.parent)).write_pdf(
+        target=str(output),
+        stylesheets=[WeasyCSS(filename=str(css_path))],
+    )
+    return len(PdfReader(str(output)).pages)

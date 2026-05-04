@@ -254,3 +254,16 @@ def test_assemble_document_orders_and_shifts_headings(tmp_path):
     assert "### Settings" in out
     # GitBook syntax inside a page is transformed before assembly
     assert 'class="hint hint-info"' in out
+
+
+from build_kb_pdf import render_pdf
+
+CSS_PATH = Path(__file__).parent.parent / "scripts" / "kb_pdf_style.css"
+
+
+def test_render_pdf_produces_a_pdf(tmp_path):
+    md = "# Hello\n\nWorld.\n\n# Chapter Two\n\nMore."
+    out = tmp_path / "out.pdf"
+    pages = render_pdf(md, css_path=CSS_PATH, output=out)
+    assert out.exists() and out.stat().st_size > 0
+    assert pages >= 2  # one page per H1 due to page-break-before
