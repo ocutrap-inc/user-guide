@@ -83,16 +83,77 @@ def parse_summary(summary_path: Path) -> list[SummaryEntry]:
 
 
 # ============================================================================
-# GitBook syntax transforms
+# GitBook syntax transforms + frontmatter handling
 # ============================================================================
+
+_FRONTMATTER_RE = re.compile(r'^---\n(.*?)\n---\n+', re.DOTALL)
+_HIDDEN_RE = re.compile(r'^\s*hidden\s*:\s*true\s*$', re.MULTILINE | re.IGNORECASE)
 
 _HINT_RE = re.compile(
     r'\{%\s*hint\s+style="([^"]+)"\s*%\}\n(.*?)\n\{%\s*endhint\s*%\}',
     re.DOTALL,
 )
 _EMBED_RE = re.compile(r'\{%\s*embed\s+url="([^"]+)"\s*%\}')
+_CONTENT_REF_RE = re.compile(
+    r'\{%\s*content-ref\s+url="([^"]+)"\s*%\}\s*(.*?)\s*\{%\s*endcontent-ref\s*%\}',
+    re.DOTALL,
+)
+_FILE_RE = re.compile(r'\{%\s*file\s+src="([^"]+)"\s*%\}')
+_TABS_RE = re.compile(r'\{%\s*tabs\s*%\}\s*(.*?)\s*\{%\s*endtabs\s*%\}', re.DOTALL)
+_TAB_RE = re.compile(
+    r'\{%\s*tab\s+title="([^"]+)"\s*%\}\s*(.*?)\s*\{%\s*endtab\s*%\}',
+    re.DOTALL,
+)
+# Bare GitBook-hosted video URLs that pandoc would auto-link as ugly raw text.
+_BARE_VIDEO_URL_RE = re.compile(
+    r'(?<![("\[])(https://files\.gitbook\.com/[^\s)<\]]+\.(?:mp4|mov|webm)[^\s)<\]]*)',
+    re.IGNORECASE,
+)
 
 _KNOWN_HINT_STYLES = {"info", "danger", "warning", "success"}
+_VIDEO_EXTS = (".mp4", ".mov", ".webm", ".m4v", ".avi")
+_VIDEO_HOSTS = ("youtube.com", "youtu.be", "vimeo.com")
+
+
+def strip_frontmatter(text: str) -> tuple[str, dict[str, bool]]:
+    """Remove leading YAML frontmatter; return (cleaned_text, flags).
+
+    `flags` exposes the booleans we care about (currently `hidden`).
+    Frontmatter is content between two `---` markers at the very top
+    of the file. GitBook-authored markdown commonly puts `description:`
+    and `hidden:` here; without stripping, pandoc renders these lines
+    as visible body text.
+    """
+    flags: dict[str, bool] = {"hidden": False}
+    m = _FRONTMATTER_RE.match(text)
+    if not m:
+        return text, flags
+    block = m.group(1)
+    if _HIDDEN_RE.search(block):
+        flags["hidden"] = True
+    return text[m.end():], flags
+
+
+def _is_video_url(url: str) -> bool:
+    u = url.lower().split("?", 1)[0]
+    if any(u.endswith(ext) for ext in _VIDEO_EXTS):
+        return True
+    return any(host in url.lower() for host in _VIDEO_HOSTS)
+
+
+def _video_callout(url: str) -> str:
+    """Render a video reference as a styled callout block.
+
+    Print can't play videos and the GitBook-hosted URLs are ~200 characters
+    of opaque tokens — useless in print. So we just point customers to the
+    online docs and skip the URL entirely.
+    """
+    return (
+        f'<div class="video-link">\n\n'
+        f'**▶ This page has a video.** Watch it online at '
+        f'<a href="{url}">docs.ocutrap.com</a>.\n\n'
+        f'</div>'
+    )
 
 
 def transform_hints(text: str) -> str:
@@ -107,7 +168,78 @@ def transform_hints(text: str) -> str:
 
 
 def transform_embeds(text: str) -> str:
-    return _EMBED_RE.sub(lambda m: f"[{m.group(1)}]({m.group(1)})", text)
+    """Convert {% embed url=X %} to a link, with friendly callout for videos."""
+    def repl(m: re.Match) -> str:
+        url = m.group(1)
+        if _is_video_url(url):
+            return _video_callout(url)
+        return f"[{url}]({url})"
+    return _EMBED_RE.sub(repl, text)
+
+
+def transform_content_refs(text: str) -> str:
+    """Drop the {% content-ref %} wrapper. The body usually contains the link
+    already; if not, leave nothing — the SUMMARY-driven assembly already
+    provides cross-page navigation via the TOC."""
+    def repl(m: re.Match) -> str:
+        body = m.group(2).strip()
+        return body if body else ""
+    return _CONTENT_REF_RE.sub(repl, text)
+
+
+def transform_files(text: str) -> str:
+    """Render {% file src="X" %} as a download callout. The PDF reader can
+    follow the link if the relative path resolves on the live site."""
+    def repl(m: re.Match) -> str:
+        src = m.group(1)
+        # Friendly label: just the filename
+        name = src.rsplit("/", 1)[-1]
+        return (
+            f'<div class="file-link">\n\n'
+            f'**📎 Download:** [{name}]({src})\n\n'
+            f'</div>'
+        )
+    return _FILE_RE.sub(repl, text)
+
+
+def transform_tabs(text: str) -> str:
+    """Flatten {% tabs %}...{% endtabs %} into sequential subsections.
+
+    Tabs are interactive on the website but make no sense in a PDF. Each
+    tab becomes a labeled chunk of content rendered in document order.
+    """
+    def tabs_repl(m: re.Match) -> str:
+        body = m.group(1)
+        out: list[str] = []
+        for tm in _TAB_RE.finditer(body):
+            title, content = tm.group(1), tm.group(2).strip()
+            out.append(f'**{title}:**\n\n{content}')
+        return "\n\n".join(out) if out else ""
+    return _TABS_RE.sub(tabs_repl, text)
+
+
+def transform_bare_video_urls(text: str) -> str:
+    """Wrap bare GitBook-hosted video URLs in a friendly callout.
+
+    Some pages reference the long `https://files.gitbook.com/...mp4` URL
+    directly without the `{% embed %}` wrapper. Pandoc would auto-link
+    these as ugly multi-line raw URLs in the PDF.
+    """
+    return _BARE_VIDEO_URL_RE.sub(lambda m: _video_callout(m.group(1)), text)
+
+
+# GitBook's "mention" link: `[some-file.md](some-file.md "mention")` — a
+# card-style cross-reference that renders as a styled tile on the website.
+# In the PDF this just shows up as a raw filename link. The SUMMARY-driven
+# TOC already provides cross-page navigation, so drop these entirely.
+_MENTION_LINK_RE = re.compile(
+    r'\[([^\]]+)\]\(([^)]+\.md(?:#[^)]*)?)\s+"mention"\)'
+)
+
+
+def transform_mention_links(text: str) -> str:
+    """Strip GitBook 'mention' links — they look like raw filenames in print."""
+    return _MENTION_LINK_RE.sub("", text)
 
 
 # ============================================================================
@@ -356,10 +488,45 @@ def _shift_headings(text: str, by: int) -> str:
 
 
 def _preprocess_page(text: str, source_md: Path, ctx: BuildContext) -> str:
+    """Run all source-level transforms in the right order.
+
+    Order matters: tabs first (they may contain hints), then hints (they may
+    contain embeds), then content-refs and files, then embeds + bare video
+    URLs, then image rewriting last (it converts paths to file:// URIs).
+    """
+    text = transform_tabs(text)
     text = transform_hints(text)
+    text = transform_content_refs(text)
+    text = transform_files(text)
     text = transform_embeds(text)
+    text = transform_bare_video_urls(text)
+    text = transform_mention_links(text)
     text = rewrite_images(text, source_md=source_md, ctx=ctx)
     return text
+
+
+def build_cover_html(logo_uri: str | None) -> str:
+    """Return raw HTML for the cover page.
+
+    Goes into pandoc via --include-before-body so it appears before the
+    auto-generated table of contents (a markdown-injected cover ends up
+    AFTER the TOC, which isn't what we want).
+    """
+    logo_html = (
+        f'<img class="cover-logo" src="{logo_uri}" alt="OcuTrap"/>'
+        if logo_uri
+        else ""
+    )
+    return f"""<div class="cover-page">
+{logo_html}
+<h1 class="cover-title">OcuTrap Knowledge Base</h1>
+<p class="cover-subtitle">Complete user guide for the OcuTrap R1 smart wildlife trap.</p>
+<p class="cover-contact">
+Online docs: <strong>docs.ocutrap.com</strong><br/>
+Support: <strong>support@ocutrap.com</strong>
+</p>
+</div>
+"""
 
 
 def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
@@ -369,9 +536,19 @@ def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
       - chapter entries → H1 divider (forces page break via CSS)
       - pages under a chapter → original H1 demoted to H2, then by depth
       - pages with no chapter → original H1 stays H1
+
+    Pages with `hidden: true` in their YAML frontmatter are skipped
+    entirely — they exist on the GitBook site (sometimes as utility
+    pages) but should not appear in the printable PDF.
+
+    Note: the cover page is NOT included here — it's injected by
+    render_pdf via pandoc's --include-before-body, so it lands before
+    the auto-generated TOC.
     """
     parts: list[str] = []
     pages_processed = 0
+    pages_hidden = 0
+
     for entry in entries:
         if entry.kind == "chapter":
             parts.append(f"# {entry.title}\n")
@@ -379,7 +556,12 @@ def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
         if entry.path is None or not entry.path.exists():
             print(f"  WARN: page missing on disk: {entry.title} ({entry.path})")
             continue
-        body = entry.path.read_text(encoding="utf-8")
+        raw = entry.path.read_text(encoding="utf-8")
+        body, flags = strip_frontmatter(raw)
+        if flags.get("hidden"):
+            pages_hidden += 1
+            print(f"  skip (hidden:true): {entry.title} ({entry.path.name})")
+            continue
         body = _preprocess_page(body, source_md=entry.path, ctx=ctx)
         # Shift: +1 if under any chapter, +depth for nesting
         shift = (1 if entry.chapter else 0) + entry.depth
@@ -387,6 +569,7 @@ def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
         parts.append(body)
         pages_processed += 1
     ctx.pages_processed = pages_processed  # type: ignore[attr-defined]
+    ctx.pages_hidden = pages_hidden  # type: ignore[attr-defined]
     return "\n\n".join(parts) + "\n"
 
 
@@ -400,30 +583,53 @@ from weasyprint import HTML, CSS as WeasyCSS
 from pypdf import PdfReader
 
 
-def _markdown_to_html(markdown: str) -> str:
-    """Run pandoc to turn the assembled markdown into a standalone HTML doc."""
-    proc = subprocess.run(
-        [
-            "pandoc",
-            "--from=gfm+raw_html+pipe_tables+definition_lists",
-            "--to=html5",
-            "--standalone",
-            "--toc",
-            "--toc-depth=3",
-            "--metadata=title:OcuTrap Knowledge Base",
-        ],
-        input=markdown,
-        capture_output=True,
-        text=True,
-    )
+def _markdown_to_html(markdown: str, *, cover_html: str | None = None) -> str:
+    """Run pandoc to turn the assembled markdown into a standalone HTML doc.
+
+    If `cover_html` is given, write it to a temp file and pass via
+    --include-before-body so the cover lands BEFORE pandoc's auto-generated
+    table of contents.
+    """
+    import tempfile
+
+    cmd = [
+        "pandoc",
+        "--from=gfm+raw_html+pipe_tables+definition_lists",
+        "--to=html5",
+        "--standalone",
+        "--toc",
+        "--toc-depth=3",
+        # No --metadata=title:... on purpose: the cover page (injected via
+        # --include-before-body below) is the title. Adding a metadata title
+        # here would also render a redundant <h1> above the TOC.
+    ]
+
+    cover_file = None
+    try:
+        if cover_html:
+            cover_file = tempfile.NamedTemporaryFile(
+                mode="w", suffix=".html", delete=False, encoding="utf-8",
+            )
+            cover_file.write(cover_html)
+            cover_file.close()
+            cmd.append(f"--include-before-body={cover_file.name}")
+
+        proc = subprocess.run(
+            cmd, input=markdown, capture_output=True, text=True,
+        )
+    finally:
+        if cover_file:
+            Path(cover_file.name).unlink(missing_ok=True)
+
     if proc.returncode != 0:
         raise RuntimeError(f"pandoc failed:\n{proc.stderr}")
     return proc.stdout
 
 
-def render_pdf(markdown: str, *, css_path: Path, output: Path) -> int:
+def render_pdf(markdown: str, *, css_path: Path, output: Path,
+               cover_html: str | None = None) -> int:
     """Render assembled markdown to a PDF. Returns page count."""
-    html = _markdown_to_html(markdown)
+    html = _markdown_to_html(markdown, cover_html=cover_html)
     output.parent.mkdir(parents=True, exist_ok=True)
     HTML(string=html, base_url=str(output.parent)).write_pdf(
         target=str(output),
@@ -443,6 +649,7 @@ DEFAULT_SUMMARY = REPO_ROOT / "SUMMARY.md"
 DEFAULT_OUTPUT  = REPO_ROOT / ".gitbook" / "assets" / "OcuTrap_Knowledge_Base.pdf"
 DEFAULT_CSS     = REPO_ROOT / "scripts" / "kb_pdf_style.css"
 DEFAULT_CACHE   = REPO_ROOT / ".cache" / "kb-pdf"
+DEFAULT_LOGO    = REPO_ROOT / ".gitbook" / "assets" / "OcuTrap_4228 × 1045_300dpi.png"
 
 
 # Source-hash logic lives in source_hash.py so CI's verify step can run
@@ -452,10 +659,12 @@ from source_hash import write_sidecar as write_sources_sidecar  # noqa: E402
 
 def _print_summary(ctx: BuildContext, output: Path, page_count: int) -> None:
     pages_processed = getattr(ctx, "pages_processed", 0)
+    pages_hidden = getattr(ctx, "pages_hidden", 0)
     size_mb = output.stat().st_size / (1024 * 1024)
     print()
     print("─" * 60)
-    print(f"Markdown files processed: {pages_processed}")
+    print(f"Markdown files processed: {pages_processed} "
+          f"({pages_hidden} skipped via hidden:true)")
     print(f"Images embedded:          {ctx.images_embedded} "
           f"({ctx.images_converted} converted, "
           f"{ctx.images_downloaded} downloaded externally, "
@@ -471,6 +680,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--output",    type=Path, default=DEFAULT_OUTPUT)
     p.add_argument("--css",       type=Path, default=DEFAULT_CSS)
     p.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE)
+    p.add_argument("--cover-logo", type=Path, default=DEFAULT_LOGO,
+                   help="PNG/JPG used on the cover page; pass an empty path to omit.")
     p.add_argument("--min-pages", type=int, default=50)
     p.add_argument("--max-pages", type=int, default=1000)
     p.add_argument("--max-size-mb", type=int, default=100)
@@ -479,8 +690,21 @@ def main(argv: list[str] | None = None) -> int:
     ctx = BuildContext(cache_dir=args.cache_dir)
     entries = parse_summary(args.summary)
     print(f"Parsed {len(entries)} SUMMARY entries from {args.summary}")
+    # Cover logo path may use Unicode whitespace variants in the on-disk
+    # filename (e.g. U+200A hair space around ×); fall back to the same
+    # space-normalized fuzzy lookup we use for body images.
+    cover_logo = None
+    if args.cover_logo:
+        if args.cover_logo.exists():
+            cover_logo = args.cover_logo
+        else:
+            cover_logo = resolve_image_path(args.cover_logo.name, args.cover_logo)
+        if cover_logo is None:
+            print(f"  WARN: cover logo not found at {args.cover_logo} — cover page will be text-only")
     assembled = assemble_document(entries, ctx=ctx)
-    page_count = render_pdf(assembled, css_path=args.css, output=args.output)
+    cover_html = build_cover_html(cover_logo.as_uri() if cover_logo else None)
+    page_count = render_pdf(assembled, css_path=args.css, output=args.output,
+                            cover_html=cover_html)
     _print_summary(ctx, args.output, page_count)
 
     size_mb = args.output.stat().st_size / (1024 * 1024)

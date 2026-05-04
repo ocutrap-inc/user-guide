@@ -5,6 +5,43 @@
   @top-right    { content: string(chapter-title); font-size: 9pt; color: #666; }
 }
 
+/* Cover page — no header, no footer, content centered. */
+@page :first {
+  margin: 0.75in;
+  @bottom-center { content: ""; }
+  @top-right    { content: ""; }
+}
+
+.cover-page {
+  page-break-after: always;
+  text-align: center;
+  padding-top: 1.5in;
+}
+.cover-logo {
+  max-width: 4.5in;
+  margin: 0 auto 0.6in auto;
+  display: block;
+}
+.cover-title {
+  font-size: 36pt;
+  border: none;
+  margin: 0 0 0.3em 0;
+  padding: 0;
+  page-break-before: avoid; /* override the global h1 page-break */
+  color: #0d1117;
+}
+.cover-subtitle {
+  font-size: 14pt;
+  color: #555;
+  margin: 0 0 1.2in 0;
+}
+.cover-contact {
+  font-size: 11pt;
+  color: #555;
+  margin-top: 1.2in;
+  line-height: 1.7;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 10.5pt;
@@ -45,6 +82,22 @@ img {
 .hint-danger  { border-color: #cf222e; background: #ffebe9; }
 .hint-warning { border-color: #9a6700; background: #fff8c5; }
 .hint-success { border-color: #1a7f37; background: #dafbe1; }
+
+/* Video and file-download callouts. The PDF can't play videos or open
+   downloads inline, so these blocks point at the live URL. */
+.video-link, .file-link {
+  padding: 0.6em 1em;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  background: #f6f8fa;
+  margin: 1em 0;
+  page-break-inside: avoid;
+  font-size: 10pt;
+}
+.video-link a, .file-link a {
+  color: #0969da;
+  word-break: break-all;
+}
 
 table {
   border-collapse: collapse;
