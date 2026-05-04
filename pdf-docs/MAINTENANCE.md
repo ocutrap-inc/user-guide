@@ -5,10 +5,11 @@
 via GitHub Actions. The "Pending updates" tracker now only applies to the
 hand-coded scripts (`build_quick_start.py`, `build_cheat_sheet.py`).
 
-The PDFs in `pdf-docs/online/` are **not** auto-compiled from the GitBook docs.
-Each one is hand-maintained by a different mechanism, and they drift from the
-live docs at `docs.ocutrap.com` whenever the markdown changes without a
-corresponding script edit.
+Customer-downloadable PDFs live in `.gitbook/assets/` so GitBook can serve
+them via the `{% file %}` syntax (linked from
+`appendix-and-resources/downloads.md`). They are **not** all auto-compiled
+from the GitBook docs — only the Knowledge Base PDF is. The Cheat Sheet
+remains a hand-maintained ReportLab document.
 
 This file tracks the current drift. Update each item when the PDF is rebuilt.
 
@@ -18,10 +19,10 @@ This file tracks the current drift. Update each item when the PDF is rebuilt.
 
 | PDF | Source of truth | How updates propagate |
 | --- | --- | --- |
-| `printed/R1_Quick_Start.pdf` | `scripts/build_quick_start.py` (hardcoded ReportLab) | Hand-edit Python → rerun script. **Does not** read any markdown. |
-| `online/R1_Operation_Cheat_Sheet.pdf` | `scripts/build_cheat_sheet.py` (hardcoded ReportLab) | Hand-edit Python → rerun script. **Does not** read any markdown. |
-| `online/OcuTrap_Knowledge_Base.pdf` | `scripts/build_kb_pdf.py` (auto-compiled from `SUMMARY.md`) | Edit GitBook markdown → CI rebuild on push to `main`. |
-| `printed/inside_sticker.png` | Hardware team | New sticker design → replace PNG. |
+| `pdf-docs/printed/R1_Quick_Start.pdf` | `scripts/build_quick_start.py` (hardcoded ReportLab) | Hand-edit Python → rerun script. **Does not** read any markdown. |
+| `.gitbook/assets/R1_Operation_Cheat_Sheet.pdf` | `scripts/build_cheat_sheet.py` (hardcoded ReportLab) | Hand-edit Python → rerun script. **Does not** read any markdown. |
+| `.gitbook/assets/OcuTrap_Knowledge_Base.pdf` | `scripts/build_kb_pdf.py` (auto-compiled from `SUMMARY.md`) | Edit GitBook markdown → CI rebuild on push to `main`. |
+| `pdf-docs/printed/inside_sticker.png` | Hardware team | New sticker design → replace PNG. |
 
 The Quick Start and Cheat Sheet have a narrow, intentional scope and don't need
 to mirror every doc page. The Knowledge Base PDF is now a real compilation of

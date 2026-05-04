@@ -10,7 +10,8 @@ Usage:
     pip install reportlab Pillow
     python scripts/build_cheat_sheet.py
 
-Output: pdf-docs/online/R1_Operation_Cheat_Sheet.pdf
+Output: .gitbook/assets/R1_Operation_Cheat_Sheet.pdf
+        (served as a download via {% file %} from the Downloads page)
 """
 
 import os
@@ -36,7 +37,7 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PDF_DOCS = os.path.join(REPO_ROOT, "pdf-docs")
 STICKER = os.path.join(PDF_DOCS, "printed", "inside_sticker.png")
 LOGO = os.path.join(REPO_ROOT, ".gitbook", "assets", "Removed Background logo.png")
-OUTPUT = os.path.join(PDF_DOCS, "online", "R1_Operation_Cheat_Sheet.pdf")
+OUTPUT = os.path.join(REPO_ROOT, ".gitbook", "assets", "R1_Operation_Cheat_Sheet.pdf")
 
 # OcuTrap brand palette (from shopify-theme settings_schema.json)
 BRAND_GREEN = HexColor("#3A6B35")

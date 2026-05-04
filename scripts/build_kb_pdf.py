@@ -440,7 +440,7 @@ import argparse
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SUMMARY = REPO_ROOT / "SUMMARY.md"
-DEFAULT_OUTPUT  = REPO_ROOT / "pdf-docs" / "online" / "OcuTrap_Knowledge_Base.pdf"
+DEFAULT_OUTPUT  = REPO_ROOT / ".gitbook" / "assets" / "OcuTrap_Knowledge_Base.pdf"
 DEFAULT_CSS     = REPO_ROOT / "scripts" / "kb_pdf_style.css"
 DEFAULT_CACHE   = REPO_ROOT / ".cache" / "kb-pdf"
 

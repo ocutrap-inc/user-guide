@@ -4,12 +4,17 @@ All print-ready and online-distribution PDFs for the OcuTrap R1. Organized by
 how the document reaches the customer.
 
 ```
-pdf-docs/
-├── printed/   Physical items that ship with the trap
-└── online/    Downloadable from docs.ocutrap.com and the dashboard
+pdf-docs/printed/        Physical items that ship with the trap
+.gitbook/assets/         Online downloads — served by GitBook on docs.ocutrap.com
+                         (linked via {% file %} from appendix-and-resources/downloads.md)
 ```
 
-## `printed/` — Ships with the trap
+GitBook only serves files referenced through the `{% file src="../.gitbook/assets/X" %}`
+syntax, so customer-downloadable PDFs must live under `.gitbook/assets/`.
+The `pdf-docs/printed/` tree is for physical artifacts that never reach
+docs.ocutrap.com.
+
+## `pdf-docs/printed/` — Ships with the trap
 
 The Quick Start is the only paper document in the box. Everything else the
 customer needs is pushed to `docs.ocutrap.com` via QR code.
@@ -19,7 +24,10 @@ customer needs is pushed to `docs.ocutrap.com` via QR code.
 | `R1_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. Bare-minimum setup (charge → assemble → app → arm) plus a big QR code to the video guides. | `scripts/build_quick_start.py` |
 | `inside_sticker.png` | LED/button reference graphic pre-applied inside the POD lid. | Hardware team |
 
-## `online/` — Downloadable only
+## `.gitbook/assets/` — Customer downloads
+
+Linked from `appendix-and-resources/downloads.md` (which appears in the docs
+sidebar as "Downloads") via GitBook's `{% file %}` syntax.
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
