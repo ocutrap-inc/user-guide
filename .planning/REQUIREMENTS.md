@@ -82,19 +82,17 @@
 
 ## Traceability
 
-<!-- Filled by /gsd-new-project's roadmapper. -->
-
-| REQ-ID  | Phase |
-|---------|-------|
-| AUD-01  | TBD   |
-| AUD-02  | TBD   |
-| AUD-03  | TBD   |
-| DOC-01  | TBD   |
-| DOC-02  | TBD   |
-| DOC-03  | TBD   |
-| DOC-04  | TBD   |
-| PDF-01  | TBD   |
-| PDF-02  | TBD   |
-| PDF-03  | TBD   |
-| PDF-04  | TBD   |
-| TRK-01  | TBD   |
+| REQ-ID  | Phase                          |
+|---------|--------------------------------|
+| AUD-01  | Phase 1: Audit                 |
+| AUD-02  | Phase 1: Audit                 |
+| AUD-03  | Phase 1: Audit                 |
+| DOC-01  | Phase 2: Patch                 |
+| DOC-02  | Phase 2: Patch                 |
+| DOC-03  | Phase 2: Patch                 |
+| DOC-04  | Phase 2: Patch                 |
+| PDF-01  | Phase 3: Regenerate & Verify   |
+| PDF-02  | Phase 3: Regenerate & Verify   |
+| PDF-03  | Phase 3: Regenerate & Verify   |
+| PDF-04  | Phase 3: Regenerate & Verify   |
+| TRK-01  | Phase 3: Regenerate & Verify   |
