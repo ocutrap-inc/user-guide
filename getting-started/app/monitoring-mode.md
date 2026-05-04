@@ -24,6 +24,8 @@ Monitoring mode lets you observe trap activity — see what's approaching the tr
 * **Pre-capture alerts** — when an animal enters the outer detection zone (if pre-capture alerts are enabled in your trap settings).
 * **Trigger alerts** — when an animal reaches the trigger distance. The trap takes a photo and sends it to you, but the door **does not close**.
 * **Periodic photos while the animal is in the trap (v675+)** — once an animal enters a detection zone, the trap requests a fresh photo about every 30 seconds for as long as something stays in the zone, so you can watch the activity unfold instead of seeing only the entry shot. If the previous monitoring image is still being transmitted (slow signal, large image), the trap waits for it to finish before starting the next one — you'll never get half a photo or two photos competing for the same connection. Older firmware (v598–v674) only takes a photo on initial detection.
+* **No more dropped approach photos (v700+)** — on older firmware, if the animal moved while a photo was already being uploaded, the next approach photo would be silently dropped (`Approach photo dropped at NNNmm - queue full` in serial logs). v700+ defers the dropped photo into a single-slot pending queue and fires it as soon as the camera is free. If multiple approach moments collide, the **nearest** distance wins. You'll see one extra photo per detection cycle that previously would have been lost — especially useful when the animal is moving quickly.
+* **Faster image upload (v705+)** — modern-camera chunk-read timeout reduced from 200 ms to 100 ms (legacy cameras kept at 500 ms). Each timeout that previously fired stalled the main loop for the full window; v705 cuts the idle penalty in half during heavy transfers.
 * **Cooldown after departure** — once the animal leaves the detection zones, the trap waits about 5 minutes before re-arming the alerts. This prevents the same animal from generating a flood of duplicate notifications as it moves around near the trap.
 * **Battery usage** — monitoring uses the same low-power detection mode as armed, so battery life is similar. The 30-second photo cadence draws meaningfully more power while an animal is parked in the trap; if you want to stretch battery life further on a long deployment, ask your fleet admin to lengthen the interval (`monImgInt`) or set it to `0` to disable periodic photos entirely.
 
@@ -53,6 +55,15 @@ If you want to override the default, ask your installer or fleet admin to set th
 | Reliable monitoring cleanup on close (timer/sensor reset) | **v644 or newer**                              |
 | Separate `monImg` image-quality setting for monitoring | **v672 or newer**                                  |
 | Periodic monitoring photos every ~30 s (`monImgInt`)   | **v675 or newer**                                  |
+| Approach photos no longer dropped under cellular pressure (single-slot deferred photo with nearer-wins coalescing) | **v700 or newer** |
+| `arm=N pend=N` visible on serial heartbeat for diagnostics | **v700 or newer**                              |
+| `pwrOff` always reported in `callback_settings` (no longer hidden when at default) | **v701 or newer** |
+| LED off during low-power sleep (no more solid red drain) | **v702 or newer**                                |
+| Hibernation retries on sleep-fail; cellular auto-recovers | **v703 or newer**                              |
+| Durable `Low battery shutdown` + `low_voltage_shutdown` events at runtime, not just at boot | **v704 or newer** |
+| 20%/10% battery alerts use durable cloud queue (survive offline windows + reboot) | **v704 or newer** |
+| Faster image transfers — modern cameras 200ms→100ms chunk timeout (legacy unchanged at 500ms) | **v705 or newer** |
+| Boot-time emergency-halt loop replaced with main-loop retry (deprecated `System.sleep` API removed) | **v706 or newer** |
 
 > **Most deployed traps run firmware v550** as of April 2026. **v550 firmware does not support monitoring mode at all** — the device will reject the `monitor` command. If your trap doesn't show a Monitor option in the app, or if Monitor commands fail with a generic error, your trap likely needs an over-the-air firmware update before monitoring will work.
 >
