@@ -63,3 +63,33 @@ def test_transform_embeds_handles_multiple():
     out = transform_embeds(src)
     assert "[https://a](https://a)" in out
     assert "[https://b](https://b)" in out
+
+
+from build_kb_pdf import resolve_image_path
+
+IMAGES = Path(__file__).parent / "fixtures" / "images"
+
+
+def test_resolve_image_path_normal():
+    src = IMAGES.parent / "dummy.md"
+    assert resolve_image_path("images/normal.png", src) == IMAGES / "normal.png"
+
+
+def test_resolve_image_path_unwraps_angle_brackets():
+    src = IMAGES.parent / "dummy.md"
+    assert resolve_image_path("<images/has spaces.png>", src) == IMAGES / "has spaces.png"
+
+
+def test_resolve_image_path_handles_unicode_space_variant(tmp_path):
+    """The on-disk filename uses U+00A0 (NBSP) but the markdown uses a regular space."""
+    target = tmp_path / "weird name.png"
+    target.write_bytes(b"\x89PNG\r\n\x1a\n")
+    src = tmp_path / "doc.md"
+    src.write_text("")
+    assert resolve_image_path("weird name.png", src) == target
+
+
+def test_resolve_image_path_returns_none_when_missing(tmp_path):
+    src = tmp_path / "doc.md"
+    src.write_text("")
+    assert resolve_image_path("nope.png", src) is None

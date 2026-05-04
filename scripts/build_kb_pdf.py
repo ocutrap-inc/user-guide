@@ -101,3 +101,49 @@ def transform_hints(text: str) -> str:
 
 def transform_embeds(text: str) -> str:
     return _EMBED_RE.sub(lambda m: f"[{m.group(1)}]({m.group(1)})", text)
+
+
+# ============================================================================
+# Image pipeline — path normalization
+# ============================================================================
+
+import unicodedata
+
+
+def _strip_angle_brackets(s: str) -> str:
+    s = s.strip()
+    if s.startswith("<") and s.endswith(">"):
+        return s[1:-1].strip()
+    return s
+
+
+def _normalize_spaces(s: str) -> str:
+    """Collapse all Unicode whitespace to a regular space for matching."""
+    return "".join(" " if unicodedata.category(c).startswith("Z") else c for c in s)
+
+
+def resolve_image_path(raw: str, source_md: Path) -> Path | None:
+    """Resolve a markdown image ref to an on-disk Path, or None if missing.
+
+    Handles `<>`-wrapped paths and Unicode-space variants in filenames.
+    External http(s):// URLs are NOT handled here — see fetch_external().
+    """
+    raw = _strip_angle_brackets(raw)
+    if raw.startswith(("http://", "https://")):
+        return None  # caller must use fetch_external
+
+    base = source_md.parent
+    direct = (base / raw).resolve()
+    if direct.exists():
+        return direct
+
+    # Fuzzy fallback: scan the resolved parent directory for a filename whose
+    # space-normalized form matches the requested one.
+    parent = direct.parent
+    if not parent.exists():
+        return None
+    target = _normalize_spaces(direct.name)
+    for candidate in parent.iterdir():
+        if _normalize_spaces(candidate.name) == target:
+            return candidate
+    return None
