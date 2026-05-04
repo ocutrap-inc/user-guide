@@ -23,10 +23,9 @@ customer needs is pushed to `docs.ocutrap.com` via QR code.
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
-| `R1_Manual_v2.docx` | Full Installation & User Manual (Word source). Edited in Word. | Word (hand-edited) |
-| `R1_Manual_v2.pdf` | PDF export of the manual. | Generated from `.docx` |
-| `R1_Operation_Cheat_Sheet.pdf` | One-page letter-size reference for users unfamiliar with the device: system LEDs, buttons, device states, safety. | `scripts/build_cheat_sheet.py` |
-| `OcuTrap_Knowledge_Base.pdf` | ~50 MB PDF of every KB article with images. | `scripts/build_pdf.py` |
+| `R1_Manual_v2.pdf` | Full Installation & User Manual. Hand-edited in Word, exported to PDF. | `R1_Manual_v2.docx` (hand-edited; **not currently tracked in this repo** — held by the docs author) |
+| `R1_Operation_Cheat_Sheet.pdf` | One-page letter-size reference for users unfamiliar with the device: system LEDs, buttons, device states, safety. | `scripts/build_cheat_sheet.py` (hardcoded ReportLab content; see `MAINTENANCE.md`) |
+| `OcuTrap_Knowledge_Base.pdf` | ~50 MB reference PDF styled like a knowledge base. **Not auto-compiled from the GitBook docs** — `scripts/build_pdf.py` is a 1,372-line ReportLab document with hardcoded sections, paragraphs, and image references. Adding a page to GitBook does **not** update this PDF; the script must be hand-edited and rerun. See `MAINTENANCE.md` for current drift between the PDFs and the live docs. | `scripts/build_pdf.py` (hand-edited) |
 
 ## Rebuilding
 
