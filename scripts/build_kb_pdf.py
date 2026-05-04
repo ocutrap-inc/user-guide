@@ -225,3 +225,46 @@ def process_image(src: Path, *, cache_dir: Path) -> Path:
                     im = im.convert("RGB")
             im.save(out, **save_kwargs)
     return out
+
+
+# ============================================================================
+# Image pipeline — external URL fetcher
+# ============================================================================
+
+import requests
+
+_CONTENT_TYPE_EXT = {
+    "image/png": ".png",
+    "image/jpeg": ".jpg",
+    "image/jpg": ".jpg",
+    "image/gif": ".gif",
+    "image/webp": ".webp",
+    "image/heic": ".heic",
+}
+
+
+def fetch_external(url: str, *, cache_dir: Path) -> Path | None:
+    """Download an external image to the cache and return its local path.
+
+    Returns None on any failure — external image errors are warnings,
+    not build failures.
+    """
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    key = hashlib.sha256(url.encode()).hexdigest()[:16]
+
+    # Check for any existing cached file with this key prefix
+    for existing in cache_dir.glob(f"ext-{key}.*"):
+        return existing
+
+    try:
+        r = requests.get(url, timeout=30)
+        r.raise_for_status()
+    except Exception as e:
+        print(f"  WARN: external fetch failed for {url}: {e}")
+        return None
+
+    ctype = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
+    ext = _CONTENT_TYPE_EXT.get(ctype, ".bin")
+    out = cache_dir / f"ext-{key}{ext}"
+    out.write_bytes(r.content)
+    return out

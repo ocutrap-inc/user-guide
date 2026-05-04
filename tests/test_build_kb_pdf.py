@@ -175,3 +175,28 @@ def test_process_image_rgba_jpeg_does_not_crash(tmp_path):
     assert out.exists()
     with Image.open(out) as im:
         im.verify()
+
+
+from unittest.mock import patch, MagicMock
+from build_kb_pdf import fetch_external
+
+
+def test_fetch_external_downloads_and_caches(tmp_path):
+    cache = tmp_path / ".cache"
+    fake_response = MagicMock()
+    fake_response.content = b"\x89PNG\r\n\x1a\n" + b"x" * 100
+    fake_response.headers = {"Content-Type": "image/png"}
+    fake_response.raise_for_status = MagicMock()
+    with patch("build_kb_pdf.requests.get", return_value=fake_response) as get:
+        out1 = fetch_external("https://example.com/img.png", cache_dir=cache)
+        out2 = fetch_external("https://example.com/img.png", cache_dir=cache)
+    assert out1 is not None
+    assert out1 == out2  # same cache hit
+    assert out1.read_bytes().startswith(b"\x89PNG")
+    assert get.call_count == 1  # second call hit cache
+
+
+def test_fetch_external_returns_none_on_failure(tmp_path):
+    cache = tmp_path / ".cache"
+    with patch("build_kb_pdf.requests.get", side_effect=Exception("network down")):
+        assert fetch_external("https://example.com/x.png", cache_dir=cache) is None
