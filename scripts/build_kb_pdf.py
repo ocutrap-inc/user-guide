@@ -147,3 +147,79 @@ def resolve_image_path(raw: str, source_md: Path) -> Path | None:
         if _normalize_spaces(candidate.name) == target:
             return candidate
     return None
+
+
+# ============================================================================
+# Image pipeline — conversion and downscaling
+# ============================================================================
+
+import hashlib
+
+from PIL import Image
+try:
+    from pillow_heif import register_heif_opener
+    register_heif_opener()
+except ImportError:
+    pass
+
+MAX_IMAGE_WIDTH = 1600
+JPEG_QUALITY = 82
+HEIC_EXTS = {".heic", ".heif"}
+RASTER_EXTS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp"} | HEIC_EXTS
+
+
+def _cache_key(src: Path) -> str:
+    """Stable cache key from path + mtime + transform params."""
+    h = hashlib.sha256()
+    h.update(str(src.resolve()).encode())
+    h.update(str(src.stat().st_mtime_ns).encode())
+    h.update(f"w{MAX_IMAGE_WIDTH}q{JPEG_QUALITY}".encode())
+    return h.hexdigest()[:16]
+
+
+def process_image(src: Path, *, cache_dir: Path) -> Path:
+    """Return a path to a print-ready version of the image.
+
+    May be the original (when no transform is needed), or a cached derivative.
+    """
+    if src.suffix.lower() not in RASTER_EXTS:
+        return src
+
+    needs_heic   = src.suffix.lower() in HEIC_EXTS
+    needs_gif    = src.suffix.lower() == ".gif"
+    needs_resize = False
+    try:
+        with Image.open(src) as probe:
+            if probe.width > MAX_IMAGE_WIDTH:
+                needs_resize = True
+    except Exception:
+        return src  # let WeasyPrint deal with it; we don't break the build over one image
+
+    if not (needs_heic or needs_gif or needs_resize):
+        return src
+
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    key = _cache_key(src)
+    out_ext = ".jpg" if needs_heic else ".png" if needs_gif else src.suffix.lower()
+    out = cache_dir / f"{src.stem}.{key}{out_ext}"
+    if out.exists():
+        return out
+
+    with Image.open(src) as im:
+        if needs_gif and getattr(im, "n_frames", 1) > 1:
+            im.seek(0)
+        if im.mode not in ("RGB", "RGBA", "L"):
+            im = im.convert("RGB")
+        if im.width > MAX_IMAGE_WIDTH:
+            ratio = MAX_IMAGE_WIDTH / im.width
+            im = im.resize((MAX_IMAGE_WIDTH, int(im.height * ratio)), Image.LANCZOS)
+        if needs_heic:
+            im.convert("RGB").save(out, "JPEG", quality=JPEG_QUALITY, optimize=True)
+        elif needs_gif:
+            im.save(out, "PNG", optimize=True)
+        else:
+            save_kwargs = {"optimize": True}
+            if out_ext in (".jpg", ".jpeg"):
+                save_kwargs["quality"] = JPEG_QUALITY
+            im.save(out, **save_kwargs)
+    return out

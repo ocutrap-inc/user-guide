@@ -93,3 +93,71 @@ def test_resolve_image_path_returns_none_when_missing(tmp_path):
     src = tmp_path / "doc.md"
     src.write_text("")
     assert resolve_image_path("nope.png", src) is None
+
+
+from build_kb_pdf import process_image, MAX_IMAGE_WIDTH
+
+
+def _make_png(path: Path, w: int, h: int, color="red") -> Path:
+    from PIL import Image
+    Image.new("RGB", (w, h), color).save(path)
+    return path
+
+
+def test_process_image_passthrough_when_small_and_supported(tmp_path):
+    src = _make_png(tmp_path / "small.png", 800, 600)
+    out = process_image(src, cache_dir=tmp_path / ".cache")
+    assert out == src  # no transform needed
+
+
+def test_process_image_downscales_when_too_wide(tmp_path):
+    from PIL import Image
+    src = _make_png(tmp_path / "big.png", 4000, 2000)
+    out = process_image(src, cache_dir=tmp_path / ".cache")
+    assert out != src
+    assert out.parent == tmp_path / ".cache"
+    with Image.open(out) as im:
+        assert im.width == MAX_IMAGE_WIDTH
+
+
+def test_process_image_converts_heic_to_jpeg(tmp_path):
+    """We can't easily synthesize a HEIC file in tests, so we use an extension
+    swap on a JPEG and patch pillow-heif registration. Use a real fixture if
+    available; otherwise this test is skipped."""
+    import pytest
+    try:
+        from pillow_heif import register_heif_opener  # noqa
+    except ImportError:
+        pytest.skip("pillow-heif not installed")
+
+    # Use a real HEIC fixture if present; otherwise skip
+    fixture = Path(__file__).parent / "fixtures" / "images" / "sample.heic"
+    if not fixture.exists():
+        pytest.skip("no sample.heic fixture")
+    out = process_image(fixture, cache_dir=tmp_path / ".cache")
+    assert out.suffix == ".jpg"
+    assert out.parent == tmp_path / ".cache"
+
+
+def test_process_image_gif_first_frame(tmp_path):
+    from PIL import Image
+    gif = tmp_path / "anim.gif"
+    Image.new("P", (100, 100), 0).save(
+        gif, save_all=True,
+        append_images=[Image.new("P", (100, 100), 128)],
+        duration=100, loop=0,
+    )
+    out = process_image(gif, cache_dir=tmp_path / ".cache")
+    assert out.suffix == ".png"
+    with Image.open(out) as im:
+        assert getattr(im, "n_frames", 1) == 1
+
+
+def test_process_image_caches_repeated_calls(tmp_path):
+    src = _make_png(tmp_path / "big.png", 4000, 2000)
+    cache = tmp_path / ".cache"
+    out1 = process_image(src, cache_dir=cache)
+    mtime1 = out1.stat().st_mtime
+    out2 = process_image(src, cache_dir=cache)
+    assert out1 == out2
+    assert out2.stat().st_mtime == mtime1  # not regenerated
