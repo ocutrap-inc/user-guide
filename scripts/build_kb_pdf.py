@@ -25,6 +25,21 @@ class SummaryEntry:
     chapter: str | None       # the enclosing "## Chapter" or None for pre-chapter pages
 
 
+# ---------------------------------------------------------------------------
+# SUMMARY.md grammar (subset)
+#
+#   * [Title](path/to/file.md)         ← page entry
+#     * [Sub-title](path/to/sub.md)    ← child page (2-space indent per level)
+#   ## Chapter Heading                 ← chapter divider
+#
+# Constraints:
+#   - Indentation: 2 spaces per nesting level (tabs not supported).
+#   - Title text cannot contain `]`. Paths cannot contain `)`.
+#   - Only `.md` paths are matched. External URLs and anchor-only links
+#     are silently skipped.
+#   - Lines that match neither pattern (e.g. `# Table of contents`, `***`,
+#     `<details>`) are silently skipped.
+# ---------------------------------------------------------------------------
 _PAGE_RE = re.compile(r'^(\s*)\* \[([^\]]+)\]\(([^)]+\.md)\)')
 _CHAPTER_RE = re.compile(r'^## (.+?)\s*$')
 
@@ -40,7 +55,7 @@ def parse_summary(summary_path: Path) -> list[SummaryEntry]:
     entries: list[SummaryEntry] = []
     current_chapter: str | None = None
 
-    for line in summary_path.read_text().splitlines():
+    for line in summary_path.read_text(encoding="utf-8").splitlines():
         ch = _CHAPTER_RE.match(line)
         if ch:
             current_chapter = ch.group(1)
