@@ -6,10 +6,17 @@ See pdf-docs/specs/2026-05-04-kb-pdf-compiler-design.md for design.
 
 from __future__ import annotations
 
+import os
 import re
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
+
+# macOS dylib quirk: WeasyPrint's CFFI loader needs help finding Pango/Cairo
+# from Homebrew. Set this BEFORE any weasyprint import below.
+if sys.platform == "darwin" and "DYLD_FALLBACK_LIBRARY_PATH" not in os.environ:
+    os.environ["DYLD_FALLBACK_LIBRARY_PATH"] = "/opt/homebrew/lib"
 
 
 # ============================================================================
@@ -421,3 +428,67 @@ def render_pdf(markdown: str, *, css_path: Path, output: Path) -> int:
         stylesheets=[WeasyCSS(filename=str(css_path))],
     )
     return len(PdfReader(str(output)).pages)
+
+
+# ============================================================================
+# CLI
+# ============================================================================
+
+import argparse
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_SUMMARY = REPO_ROOT / "SUMMARY.md"
+DEFAULT_OUTPUT  = REPO_ROOT / "pdf-docs" / "online" / "OcuTrap_Knowledge_Base.pdf"
+DEFAULT_CSS     = REPO_ROOT / "scripts" / "kb_pdf_style.css"
+DEFAULT_CACHE   = REPO_ROOT / ".cache" / "kb-pdf"
+
+
+def _print_summary(ctx: BuildContext, output: Path, page_count: int) -> None:
+    pages_processed = getattr(ctx, "pages_processed", 0)
+    size_mb = output.stat().st_size / (1024 * 1024)
+    print()
+    print("─" * 60)
+    print(f"Markdown files processed: {pages_processed}")
+    print(f"Images embedded:          {ctx.images_embedded} "
+          f"({ctx.images_converted} converted, "
+          f"{ctx.images_downloaded} downloaded externally, "
+          f"{ctx.images_skipped} skipped)")
+    print(f"Final PDF: {size_mb:.1f} MB, {page_count} pages")
+    print(f"Output:    {output}")
+    print("─" * 60)
+
+
+def main(argv: list[str] | None = None) -> int:
+    p = argparse.ArgumentParser(description="Build OcuTrap_Knowledge_Base.pdf from GitBook docs")
+    p.add_argument("--summary",   type=Path, default=DEFAULT_SUMMARY)
+    p.add_argument("--output",    type=Path, default=DEFAULT_OUTPUT)
+    p.add_argument("--css",       type=Path, default=DEFAULT_CSS)
+    p.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE)
+    p.add_argument("--min-pages", type=int, default=50)
+    p.add_argument("--max-pages", type=int, default=1000)
+    p.add_argument("--max-size-mb", type=int, default=100)
+    args = p.parse_args(argv)
+
+    ctx = BuildContext(cache_dir=args.cache_dir)
+    entries = parse_summary(args.summary)
+    print(f"Parsed {len(entries)} SUMMARY entries from {args.summary}")
+    assembled = assemble_document(entries, ctx=ctx)
+    page_count = render_pdf(assembled, css_path=args.css, output=args.output)
+    _print_summary(ctx, args.output, page_count)
+
+    size_mb = args.output.stat().st_size / (1024 * 1024)
+    if page_count < args.min_pages or page_count > args.max_pages:
+        print(f"FAIL: page count {page_count} outside [{args.min_pages}, {args.max_pages}]",
+              file=sys.stderr)
+        args.output.unlink(missing_ok=True)
+        return 2
+    if size_mb > args.max_size_mb:
+        print(f"FAIL: PDF size {size_mb:.1f} MB exceeds max {args.max_size_mb} MB",
+              file=sys.stderr)
+        args.output.unlink(missing_ok=True)
+        return 2
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -267,3 +267,42 @@ def test_render_pdf_produces_a_pdf(tmp_path):
     pages = render_pdf(md, css_path=CSS_PATH, output=out)
     assert out.exists() and out.stat().st_size > 0
     assert pages >= 2  # one page per H1 due to page-break-before
+
+
+import subprocess as _sp
+
+
+def test_cli_end_to_end_against_fixture(tmp_path):
+    """Run the script as a CLI against the mini-summary fixture and verify it
+    produces a PDF and prints a sane summary."""
+    output = tmp_path / "fixture.pdf"
+    proc = _sp.run(
+        ["python3", str(Path(__file__).parent.parent / "scripts" / "build_kb_pdf.py"),
+         "--summary", str(FIXTURE / "SUMMARY.md"),
+         "--output", str(output),
+         "--css", str(CSS_PATH),
+         "--cache-dir", str(tmp_path / ".cache"),
+         "--min-pages", "1",
+         "--max-pages", "100"],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
+    assert output.exists() and output.stat().st_size > 0
+    assert "Markdown files processed:" in proc.stdout
+    assert "Final PDF:" in proc.stdout
+
+
+def test_cli_fails_when_below_min_pages(tmp_path):
+    output = tmp_path / "fixture.pdf"
+    proc = _sp.run(
+        ["python3", str(Path(__file__).parent.parent / "scripts" / "build_kb_pdf.py"),
+         "--summary", str(FIXTURE / "SUMMARY.md"),
+         "--output", str(output),
+         "--css", str(CSS_PATH),
+         "--cache-dir", str(tmp_path / ".cache"),
+         "--min-pages", "9999",
+         "--max-pages", "10000"],
+        capture_output=True, text=True,
+    )
+    assert proc.returncode != 0
+    assert "page count" in proc.stderr.lower()
