@@ -73,3 +73,31 @@ def parse_summary(summary_path: Path) -> list[SummaryEntry]:
                 path=base / ref, chapter=current_chapter,
             ))
     return entries
+
+
+# ============================================================================
+# GitBook syntax transforms
+# ============================================================================
+
+_HINT_RE = re.compile(
+    r'\{%\s*hint\s+style="([^"]+)"\s*%\}\n(.*?)\n\{%\s*endhint\s*%\}',
+    re.DOTALL,
+)
+_EMBED_RE = re.compile(r'\{%\s*embed\s+url="([^"]+)"\s*%\}')
+
+_KNOWN_HINT_STYLES = {"info", "danger", "warning", "success"}
+
+
+def transform_hints(text: str) -> str:
+    def repl(m: re.Match) -> str:
+        style = m.group(1)
+        if style not in _KNOWN_HINT_STYLES:
+            style = "info"
+        body = m.group(2)
+        # Blank lines around body so pandoc sees inline markdown inside the div
+        return f'<div class="hint hint-{style}">\n\n{body}\n\n</div>'
+    return _HINT_RE.sub(repl, text)
+
+
+def transform_embeds(text: str) -> str:
+    return _EMBED_RE.sub(lambda m: f"[{m.group(1)}]({m.group(1)})", text)
