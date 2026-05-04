@@ -9,12 +9,14 @@
 * **Behavior**: Once armed and the door is confirmed open, the trap enters a low-power mode, conserving energy while remaining active for an animal to enter.
 * **Notifications**: The trap maintains a connection by sending periodic updates. If disconnected for more than an hour, a notification is sent to the user.
 
-### Monitoring State
+### Scouting State
 
-* **Purpose**: The trap is set for scouting and activity monitoring without closing the door.
-* **Safety Requirement**: The door must already be fully open before monitoring can be enabled.
-* **Behavior**: Monitoring uses the same animal-detection logic as armed mode, including the outer pre-capture zone and the final trigger-distance zone, but it never closes the door.
-* **Notifications**: The user can receive an alert when an animal first approaches and another alert if it reaches the trigger distance. After the animal leaves, monitoring resets and waits about 5 minutes before sending a new set of scouting alerts.
+* **Purpose**: The trap is set for observing activity without closing the door.
+* **Safety Requirement**: The door must already be fully open before Scouting Mode can be enabled.
+* **Behavior**: Scouting uses the same animal-detection logic as armed mode, including the outer pre-capture zone and the final trigger-distance zone, but it never closes the door.
+* **Notifications**: The user can receive an alert when an animal first approaches and another alert if it reaches the trigger distance. After the animal leaves, scouting resets and waits about 5 minutes before sending a new set of scouting alerts.
+
+For full details, see the [Scouting Mode](scouting-mode.md) page. (Scouting Mode was previously called Monitoring Mode.)
 
 ### Unarmed State
 

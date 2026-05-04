@@ -8,7 +8,7 @@
 
 > **Release date:** 4 May 2026
 
-_Quieter LEDs, no more dropped approach photos, faster image uploads, and battery alerts that survive offline windows. Plus periodic photos while an animal is in the trap during Monitoring Mode._
+_Quieter LEDs, no more dropped approach photos, faster image uploads, and battery alerts that survive offline windows. Plus periodic photos while an animal is in the trap during Scouting Mode._
 
 ***
 
@@ -25,7 +25,7 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 
 * **No more dropped approach photos (v700+).** On older firmware, if the animal moved while a photo was already being uploaded, the next approach photo would be silently dropped. v700+ defers the dropped photo into a single-slot pending queue and fires it as soon as the camera is free. If multiple approach moments collide, the **nearest** distance wins — so you see the most useful frame.
 * **Faster image transfers (v705+).** Modern cameras now use a 100 ms chunk-read timeout (down from 200 ms). Image uploads finish noticeably faster on cellular, especially during heavy transfers.
-* **Periodic photos during Monitoring (v675+).** While an animal stays inside a detection zone in Monitoring Mode, the trap now requests a fresh photo about every 30 seconds — so you can watch activity unfold instead of seeing only the entry shot. Tunable per-trap with `monImgInt`.
+* **Periodic photos during Scouting (v675+).** While an animal stays inside a detection zone in Scouting Mode, the trap now requests a fresh photo about every 30 seconds — so you can watch activity unfold instead of seeing only the entry shot. Tunable per-trap with `monImgInt`.
 
 #### 🔋 Battery and power
 
@@ -45,9 +45,9 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 
 ***
 
-#### Monitoring Mode is now documented
+#### Scouting Mode is now documented
 
-Full customer documentation for **Monitoring Mode** (use it for scouting without closing the door) is now live in the docs at **Getting Started → App → Monitoring Mode**, including the firmware-version requirements table and troubleshooting tips. Most deployed traps run **v550** as of April 2026, which **does not support** Monitoring Mode — see [Updating firmware](../faqs/updating-firmware.md) to bring your trap up to date.
+Full customer documentation for **Scouting Mode** (formerly called Monitoring Mode — use it to observe trap activity without closing the door) is now live in the docs at **Getting Started → App → Scouting Mode**, including the firmware-version requirements table and troubleshooting tips. Most deployed traps run **v550** as of April 2026, which **does not support** Scouting Mode — see [Updating firmware](../faqs/updating-firmware.md) to bring your trap up to date.
 
 ***
 
@@ -63,24 +63,24 @@ If you are checking with support, the firmware version for this release is **`v7
 
 <summary>April 3, 2026</summary>
 
-### Firmware v2.1.2-632 — Monitoring Mode Update
+### Firmware v2.1.2-632 — Scouting Mode Update
 
 > **Release date:** 3 Apr 2026
 
-> ⚠️ **Note:** Monitoring Mode is not yet released and is currently in testing. This feature is not available to users at this time.
+> ⚠️ **Note (historical):** This entry pre-dates the Scouting Mode rename. At the time of release the feature was called **Monitoring Mode** in beta and was not yet available to users. It has since been productized as **Scouting Mode** — see the May 4 entry above and the [Scouting Mode page](../getting-started/app/scouting-mode.md).
 
-_Monitoring mode now uses the live armed detection logic for scouting without closing the trap._
+_Scouting mode now uses the live armed detection logic for observing the trap without closing the door._
 
 ***
 
 #### What changed
 
-* Added a dedicated **Monitoring Mode** behavior for scouting
-* The trap now requires the **door to be fully open** before monitoring can start
-* Monitoring sends an alert when an animal reaches the **pre-capture distance**
-* Monitoring sends another alert if the animal reaches the **trigger distance**
-* The trap **does not close the door** while in monitoring mode
-* After the animal leaves, monitoring resets and applies a **5-minute cooldown** before a new monitoring alert cycle can begin
+* Added a dedicated **Scouting Mode** behavior (originally released as Monitoring Mode)
+* The trap now requires the **door to be fully open** before scouting can start
+* Scouting sends an alert when an animal reaches the **pre-capture distance**
+* Scouting sends another alert if the animal reaches the **trigger distance**
+* The trap **does not close the door** while in Scouting Mode
+* After the animal leaves, scouting resets and applies a **5-minute cooldown** before a new scouting alert cycle can begin
 
 ***
 
