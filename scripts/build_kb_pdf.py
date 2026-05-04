@@ -445,6 +445,11 @@ DEFAULT_CSS     = REPO_ROOT / "scripts" / "kb_pdf_style.css"
 DEFAULT_CACHE   = REPO_ROOT / ".cache" / "kb-pdf"
 
 
+# Source-hash logic lives in source_hash.py so CI's verify step can run
+# without pulling in this file's heavy imports (weasyprint, pillow, etc.).
+from source_hash import write_sidecar as write_sources_sidecar  # noqa: E402
+
+
 def _print_summary(ctx: BuildContext, output: Path, page_count: int) -> None:
     pages_processed = getattr(ctx, "pages_processed", 0)
     size_mb = output.stat().st_size / (1024 * 1024)
@@ -489,6 +494,9 @@ def main(argv: list[str] | None = None) -> int:
               file=sys.stderr)
         args.output.unlink(missing_ok=True)
         return 2
+
+    sidecar = write_sources_sidecar(args.output, args.summary, Path(__file__), args.css)
+    print(f"Wrote source-hash sidecar: {sidecar}")
     return 0
 
 

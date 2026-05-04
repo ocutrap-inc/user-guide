@@ -1,33 +1,36 @@
 name: build-kb-pdf
 
 # Verifies that the committed Knowledge Base PDF matches what the build
-# script would produce from the current docs. If they don't match, the
-# workflow fails with instructions for the contributor to regenerate
-# and commit the PDF.
+# script would produce from the current docs by comparing source hashes
+# (the script writes a `<pdf>.sources.sha` sidecar at build time).
 #
-# We do NOT auto-commit the PDF here on purpose — having two authors
-# (the bot and contributors) for the same binary file caused merge
-# conflicts on every overlapping PR. One source of truth: the PR that
-# changes docs also commits the regenerated PDF.
+# We do NOT rebuild the PDF in CI on purpose — pandoc and WeasyPrint
+# produce slightly different output across environments (macOS vs
+# Ubuntu, font availability, library versions), so a rebuilt-PDF
+# comparison would false-fail. The source-hash comparison answers
+# exactly the right question: "did the docs change since the PDF was
+# generated?" without depending on cross-platform render reproducibility.
+#
+# We also do NOT auto-commit the PDF here — having two authors (the bot
+# and contributors) for the same binary file caused merge conflicts on
+# every overlapping PR.
 
 on:
   pull_request:
     paths:
       - '**/*.md'
-      - '.gitbook/assets/**'
       - 'scripts/build_kb_pdf.py'
       - 'scripts/kb_pdf_style.css'
       - '.github/workflows/build-kb-pdf.yml'
-      - 'requirements-dev.txt'
+      - '.gitbook/assets/OcuTrap_Knowledge_Base.pdf.sources.sha'
   push:
     branches: [main]
     paths:
       - '**/*.md'
-      - '.gitbook/assets/**'
       - 'scripts/build_kb_pdf.py'
       - 'scripts/kb_pdf_style.css'
       - '.github/workflows/build-kb-pdf.yml'
-      - 'requirements-dev.txt'
+      - '.gitbook/assets/OcuTrap_Knowledge_Base.pdf.sources.sha'
   workflow_dispatch:
 
 concurrency:
@@ -39,32 +42,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
+        # No lfs:true needed — verify only reads markdown + script + sidecar.
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: pip
-          cache-dependency-path: requirements-dev.txt
-      - name: Install system deps
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc libpango-1.0-0 libpangoft2-1.0-0
-      - name: Install Python deps
-        run: pip install -r requirements-dev.txt
-      - uses: actions/cache@v4
-        with:
-          path: .cache/kb-pdf
-          key: kb-pdf-${{ hashFiles('SUMMARY.md', '.gitbook/assets/**', 'scripts/build_kb_pdf.py') }}
-          restore-keys: |
-            kb-pdf-
-      - name: Stash the committed PDF for comparison
-        run: cp .gitbook/assets/OcuTrap_Knowledge_Base.pdf /tmp/committed.pdf
-      - name: Build the PDF from current docs
-        run: python3 scripts/build_kb_pdf.py
-      - name: Verify committed PDF content matches what the script produces
-        # WeasyPrint output is non-deterministic at the byte level (PDF metadata
-        # timestamps and object IDs vary), so we compare extracted text + page
-        # count instead of the raw binary. This catches real docs drift while
-        # ignoring cosmetic binary churn.
-        run: python3 scripts/verify_kb_pdf.py /tmp/committed.pdf .gitbook/assets/OcuTrap_Knowledge_Base.pdf
+      - name: Verify committed PDF source hash matches current docs
+        run: python3 scripts/verify_kb_pdf.py
