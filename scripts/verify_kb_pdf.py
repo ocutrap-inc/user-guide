@@ -4,14 +4,10 @@
 Compares the source hash recorded in the committed `<pdf>.sources.sha`
 sidecar to a hash freshly computed from the current docs. If they match,
 the committed PDF was generated from the current sources and is in sync.
-If they differ, the contributor changed docs without regenerating the PDF.
 
-We use a source hash (rather than comparing rebuilt PDF text or binary)
-because PDF rendering output drifts across environments — pandoc and
-WeasyPrint produce slightly different output on macOS vs Ubuntu, even
-for identical input. The source hash answers exactly the right question
-("did the docs change since the PDF was generated?") without depending
-on cross-platform render reproducibility.
+Stdlib-only — no pandoc, weasyprint, or pypdf needed in CI. The hash is
+deterministic across environments (no PDF rendering involved), so this
+gate doesn't false-fail on macOS-vs-Ubuntu layout differences.
 
 Usage:
     python3 scripts/verify_kb_pdf.py [<pdf-path>]
@@ -25,13 +21,9 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# Reuse the same hash function the build script writes — single source of
-# truth for what counts as "the docs."
 sys.path.insert(0, str(Path(__file__).parent))
-from build_kb_pdf import (  # noqa: E402  — sys.path tweak above is intentional
-    DEFAULT_OUTPUT,
-    DEFAULT_SUMMARY,
-    DEFAULT_CSS,
+from source_hash import (  # noqa: E402  — sys.path tweak above is intentional
+    OUTPUT_PDF,
     compute_source_hash,
 )
 
@@ -40,22 +32,21 @@ DRIFT_INSTRUCTIONS = """
 ::error::Committed Knowledge Base PDF is out of date with the docs.
 
 The source hash recorded in {sidecar} does not match the current docs.
-That means someone changed a markdown file (or the build script / stylesheet)
+Someone changed a markdown file, the build script, or the stylesheet
 without regenerating the PDF.
 
 To fix (from the repo root):
 
   1. python3 scripts/build_kb_pdf.py
-  2. git add {pdf}
-  3. git add {sidecar}
-  4. Commit and push.
+  2. git add {pdf} {sidecar}
+  3. Commit and push.
 
 See pdf-docs/README.md ("If you change the docs") for the full workflow.
 """
 
 
 def main(argv: list[str]) -> int:
-    pdf_path = Path(argv[1]) if len(argv) > 1 else DEFAULT_OUTPUT
+    pdf_path = Path(argv[1]) if len(argv) > 1 else OUTPUT_PDF
     sidecar = pdf_path.with_suffix(pdf_path.suffix + ".sources.sha")
 
     if not sidecar.exists():
@@ -64,10 +55,10 @@ def main(argv: list[str]) -> int:
         return 2
 
     committed_hash = sidecar.read_text().strip()
-    current_hash = compute_source_hash(DEFAULT_SUMMARY, DEFAULT_CSS)
+    current_hash = compute_source_hash()
 
     if committed_hash != current_hash:
-        print(f"::error::Source hash mismatch.", file=sys.stderr)
+        print("::error::Source hash mismatch.", file=sys.stderr)
         print(f"  committed:  {committed_hash}", file=sys.stderr)
         print(f"  current:    {current_hash}", file=sys.stderr)
         print(DRIFT_INSTRUCTIONS.format(sidecar=sidecar, pdf=pdf_path), file=sys.stderr)

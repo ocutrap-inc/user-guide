@@ -445,54 +445,9 @@ DEFAULT_CSS     = REPO_ROOT / "scripts" / "kb_pdf_style.css"
 DEFAULT_CACHE   = REPO_ROOT / ".cache" / "kb-pdf"
 
 
-def compute_source_hash(summary_path: Path = DEFAULT_SUMMARY,
-                        css_path: Path = DEFAULT_CSS) -> str:
-    """SHA256 of every input that affects the rendered PDF.
-
-    Inputs hashed (in this order):
-      1. SUMMARY.md content
-      2. Each markdown file referenced from SUMMARY (in document order)
-      3. scripts/build_kb_pdf.py content (this file)
-      4. The print stylesheet content
-
-    Returns a hex digest. Used to write a sidecar `.sources.sha` next to the
-    PDF so CI can verify the committed PDF was built from the current sources
-    without having to compare PDF binaries (which differ across rendering
-    environments due to font/layout drift).
-
-    NOT included: image content under .gitbook/assets/. If you replace an
-    image with the same filename, regenerate the PDF explicitly — the source
-    hash won't catch that case.
-    """
-    h = hashlib.sha256()
-
-    h.update(b"--summary--\n")
-    h.update(summary_path.read_bytes())
-
-    h.update(b"\n--markdown--\n")
-    for entry in parse_summary(summary_path):
-        if entry.path is None or not entry.path.exists():
-            continue
-        rel = entry.path.relative_to(summary_path.parent)
-        h.update(str(rel).encode("utf-8"))
-        h.update(b":")
-        h.update(entry.path.read_bytes())
-        h.update(b"\n")
-
-    h.update(b"\n--script--\n")
-    h.update(Path(__file__).read_bytes())
-
-    h.update(b"\n--style--\n")
-    h.update(css_path.read_bytes())
-
-    return h.hexdigest()
-
-
-def write_sources_sidecar(pdf_path: Path, summary_path: Path, css_path: Path) -> Path:
-    """Write `<pdf_path>.sources.sha` containing the current source hash."""
-    sidecar = pdf_path.with_suffix(pdf_path.suffix + ".sources.sha")
-    sidecar.write_text(compute_source_hash(summary_path, css_path) + "\n")
-    return sidecar
+# Source-hash logic lives in source_hash.py so CI's verify step can run
+# without pulling in this file's heavy imports (weasyprint, pillow, etc.).
+from source_hash import write_sidecar as write_sources_sidecar  # noqa: E402
 
 
 def _print_summary(ctx: BuildContext, output: Path, page_count: int) -> None:
@@ -540,7 +495,7 @@ def main(argv: list[str] | None = None) -> int:
         args.output.unlink(missing_ok=True)
         return 2
 
-    sidecar = write_sources_sidecar(args.output, args.summary, args.css)
+    sidecar = write_sources_sidecar(args.output, args.summary, Path(__file__), args.css)
     print(f"Wrote source-hash sidecar: {sidecar}")
     return 0
 
