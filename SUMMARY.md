@@ -101,6 +101,7 @@
 
 ## Appendix and Resources
 
+* [Downloads](appendix-and-resources/downloads.md)
 * [Media Kit](appendix-and-resources/media-kit.md)
 * [Testimonials](appendix-and-resources/testimonials.md)
 * [Case Study](appendix-and-resources/case-study.md)
