@@ -4,56 +4,52 @@
 
 <summary>May 4, 2026</summary>
 
-### Firmware v706 — Reliability, Battery, and Image Improvements
+### Reliability, Battery, and Image Improvements
 
 > **Release date:** 4 May 2026
 
-_Quieter LEDs, no more dropped approach photos, faster image uploads, and battery alerts that survive offline windows. Plus periodic photos while an animal is in the trap during Scouting Mode._
+_Quieter LEDs, no more lost capture photos, faster image uploads, low-battery alerts you won't miss, and live photos while an animal is in the trap during Scouting Mode._
 
 ***
 
 #### How the update installs
 
-This version is delivered **over‑the‑air (OTA)**. It downloads and installs automatically the next time the trap reboots or powers up. No manual action is required.
+This version is delivered **over-the-air (OTA)**. It downloads and installs automatically the next time the trap reboots or powers up. No manual action required.
 
 > **Check the version**\
-> _Settings → Trap Info → Firmware_ should show `v706` or newer.
+> _Settings → Trap Info → Firmware_ should show **v706** or newer.
 
 ***
 
-#### 📷 Image capture improvements
+#### 📷 Image capture
 
-* **No more dropped approach photos (v700+).** On older firmware, if the animal moved while a photo was already being uploaded, the next approach photo would be silently dropped. v700+ defers the dropped photo into a single-slot pending queue and fires it as soon as the camera is free. If multiple approach moments collide, the **nearest** distance wins — so you see the most useful frame.
-* **Faster image transfers (v705+).** Modern cameras now use a 100 ms chunk-read timeout (down from 200 ms). Image uploads finish noticeably faster on cellular, especially during heavy transfers.
-* **Periodic photos during Scouting (v675+).** While an animal stays inside a detection zone in Scouting Mode, the trap now requests a fresh photo about every 30 seconds — so you can watch activity unfold instead of seeing only the entry shot. Tunable per-trap with `monImgInt`.
+* **No more lost approach photos.** If the animal moved closer while your trap was still sending the previous photo, the next photo used to be silently dropped. The trap now holds onto the most recent approach moment and sends it as soon as the camera is free — so you see the most useful frame.
+* **Faster image uploads on cellular.** Photos finish transferring noticeably faster, especially when the trap is sending many in a row.
+* **Live photos while you scout.** During Scouting Mode, the trap now sends a fresh photo about every 30 seconds while an animal is in the detection zone — so you can watch activity unfold instead of seeing only the entry shot. Ask your fleet admin if you want to change the interval.
 
-#### 🔋 Battery and power
+#### 🔋 Battery life
 
-* **LED off during low-power sleep (v702+).** The status LED no longer stays solid red while the trap is in deep sleep. Eliminates a small but constant battery drain.
-* **20%/10% battery alerts now durable (v704+).** Low-battery notifications now survive offline windows and reboots — they queue up if the trap can't reach the cloud and deliver the next time it connects.
-* **`Low battery shutdown` events captured at runtime (v704+).** Previously, the cause of an emergency shutdown was only logged at the next boot. Now the event is queued at runtime so it reaches the cloud reliably.
+* **No more red LED during sleep.** The status LED used to stay solid red while the trap was in deep sleep, slowly draining the battery. It's now off — quieter trap, longer life.
+* **Low-battery alerts you won't miss.** If your trap loses cell service when it tries to alert you about low battery, the alert now waits and delivers as soon as the trap reconnects. No silent dead-trap surprises.
 
 #### 🛠️ Reliability
 
-* **Hibernation retries on sleep-fail (v703+).** If the trap can't enter sleep cleanly, it now retries instead of staying awake. Cellular connections also auto-recover after sleep-related stalls.
-* **Boot-time emergency-halt loop replaced (v706+).** The legacy `System.sleep` API at boot is gone; the main loop now handles the retry instead. Fewer mysterious hangs after power events.
-* **`pwrOff` always reported (v701+).** The power-off setting now appears in `callback_settings` even when at default — useful for fleet diagnostics.
-
-#### 🩺 Diagnostics (for fleet operators)
-
-* **`arm=N pend=N` visible on the serial heartbeat (v700+).** Real-time visibility into armed-detection state and any pending approach photo. Helps diagnose why a detection cycle did or didn't fire.
+* **Sleep retries instead of staying awake.** If the trap can't go to sleep cleanly, it now retries — instead of staying awake and burning battery. Cellular connections also recover automatically after sleep-related stalls.
+* **More reliable boot after power events.** Removed an old recovery routine that occasionally caused mysterious hangs after a power glitch. The trap now comes back up cleanly.
 
 ***
 
 #### Scouting Mode is now documented
 
-Full customer documentation for **Scouting Mode** (formerly called Monitoring Mode — use it to observe trap activity without closing the door) is now live in the docs at **Getting Started → App → Scouting Mode**, including the firmware-version requirements table and troubleshooting tips. Most deployed traps run **v550** as of April 2026, which **does not support** Scouting Mode — see [Updating firmware](../faqs/updating-firmware.md) to bring your trap up to date.
+Full customer documentation for **Scouting Mode** — observe trap activity without closing the door — is now live in the docs at **Getting Started → App → Scouting Mode**. It covers how to start scouting, what alerts and photos to expect, when to use it instead of Armed mode, and troubleshooting.
+
+> Most deployed traps still run firmware **v550** as of April 2026, which **does not support** Scouting Mode. If your trap doesn't show a Scout button in the app, see [Updating firmware](../faqs/updating-firmware.md) to bring it up to date.
 
 ***
 
 #### Version note
 
-If you are checking with support, the firmware version for this release is **`v706`**. Individual feature notes above call out the exact version each capability landed in (v675, v700, v701, v702, v703, v704, v705, v706).
+If you're checking with support, the firmware version for this release is **v706**.
 
 ***
 
@@ -63,30 +59,30 @@ If you are checking with support, the firmware version for this release is **`v7
 
 <summary>April 3, 2026</summary>
 
-### Firmware v2.1.2-632 — Scouting Mode Update
+### Scouting Mode Beta
 
 > **Release date:** 3 Apr 2026
+>
+> _This feature shipped publicly with the v706 release on May 4 — see the entry above. It was originally called Monitoring Mode in beta._
 
-> ⚠️ **Note (historical):** This entry pre-dates the Scouting Mode rename. At the time of release the feature was called **Monitoring Mode** in beta and was not yet available to users. It has since been productized as **Scouting Mode** — see the May 4 entry above and the [Scouting Mode page](../getting-started/app/scouting-mode.md).
-
-_Scouting mode now uses the live armed detection logic for observing the trap without closing the door._
+_Scouting Mode lets you observe the trap without closing the door._
 
 ***
 
-#### What changed
+#### What's new
 
-* Added a dedicated **Scouting Mode** behavior (originally released as Monitoring Mode)
-* The trap now requires the **door to be fully open** before scouting can start
-* Scouting sends an alert when an animal reaches the **pre-capture distance**
-* Scouting sends another alert if the animal reaches the **trigger distance**
-* The trap **does not close the door** while in Scouting Mode
-* After the animal leaves, scouting resets and applies a **5-minute cooldown** before a new scouting alert cycle can begin
+* Added **Scouting Mode** for watching trap activity without capturing
+* The door must be **fully open** before scouting can start
+* You'll get an alert when an animal reaches the **pre-capture distance**
+* You'll get another alert if the animal reaches the **trigger distance**
+* The door **does not close** while in Scouting Mode
+* After the animal leaves, scouting resets and waits about **5 minutes** before sending a new round of alerts
 
 ***
 
 #### Version note
 
-If you are checking with support, the firmware version for this release is **`v2.1.2-632`**.
+If you're checking with support, the firmware version for this release is **v632**.
 
 ***
 
