@@ -361,8 +361,7 @@ def build():
 
     # Footer
     footer_txt = (
-        "Full manual: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
-        "Videos &amp; docs: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
+        "Docs &amp; videos: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
         "Dashboard: <b>base.ocutrap.com</b> &nbsp; | &nbsp; "
         "Support: <b>support@ocutrap.com</b>"
     )

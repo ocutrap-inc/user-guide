@@ -316,6 +316,7 @@ def rewrite_images(text: str, *, source_md: Path, ctx: BuildContext) -> str:
         out = _resolve_or_fetch(raw, source_md, ctx)
         if out is None:
             ctx.images_skipped += 1
+            print(f"  WARN: skipped image {raw!r} referenced from {source_md.name}")
             return ""
         ctx.images_embedded += 1
         return f"![{alt}]({out.as_uri()})"
@@ -325,6 +326,7 @@ def rewrite_images(text: str, *, source_md: Path, ctx: BuildContext) -> str:
         out = _resolve_or_fetch(raw, source_md, ctx)
         if out is None:
             ctx.images_skipped += 1
+            print(f"  WARN: skipped <img> {raw!r} referenced from {source_md.name}")
             return ""
         ctx.images_embedded += 1
         return f'<img {before}src="{out.as_uri()}"{after}/>'
