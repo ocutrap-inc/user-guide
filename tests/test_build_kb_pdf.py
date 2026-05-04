@@ -233,3 +233,24 @@ def test_rewrite_images_external_url_passthrough_when_fetch_fails(tmp_path, monk
     ctx = BuildContext(cache_dir=tmp_path / ".cache")
     out = rewrite_images(md, source_md=src, ctx=ctx)
     assert out == ""  # the only image stripped, leaving an empty doc
+
+
+from build_kb_pdf import assemble_document
+
+
+def test_assemble_document_orders_and_shifts_headings(tmp_path):
+    ctx = BuildContext(cache_dir=tmp_path / ".cache")
+    entries = parse_summary(FIXTURE / "SUMMARY.md")
+    out = assemble_document(entries, ctx=ctx)
+
+    # Chapter dividers appear in document order
+    assert out.index("# Getting Started") < out.index("# FAQs")
+    # Pre-chapter pages keep H1
+    assert "# Welcome" in out
+    # Pages under a chapter get demoted: their H1 becomes H2, etc.
+    assert "## Introduction" in out
+    assert "### Background" in out
+    # Nested-bullet pages get further demotion
+    assert "### Settings" in out
+    # GitBook syntax inside a page is transformed before assembly
+    assert 'class="hint hint-info"' in out

@@ -327,3 +327,55 @@ def rewrite_images(text: str, *, source_md: Path, ctx: BuildContext) -> str:
     # Tidy: collapse stray empty lines left by stripped images
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
+
+
+# ============================================================================
+# Document assembly
+# ============================================================================
+
+_HEADING_RE = re.compile(r'^(#{1,6})\s+(.*)$', re.MULTILINE)
+
+
+def _shift_headings(text: str, by: int) -> str:
+    """Shift all ATX headings down by `by` levels, capped at H6."""
+    if by <= 0:
+        return text
+    def repl(m: re.Match) -> str:
+        level = min(len(m.group(1)) + by, 6)
+        return f"{'#' * level} {m.group(2)}"
+    return _HEADING_RE.sub(repl, text)
+
+
+def _preprocess_page(text: str, source_md: Path, ctx: BuildContext) -> str:
+    text = transform_hints(text)
+    text = transform_embeds(text)
+    text = rewrite_images(text, source_md=source_md, ctx=ctx)
+    return text
+
+
+def assemble_document(entries: list[SummaryEntry], *, ctx: BuildContext) -> str:
+    """Concatenate SUMMARY entries into one big markdown doc.
+
+    Heading-level mapping:
+      - chapter entries → H1 divider (forces page break via CSS)
+      - pages under a chapter → original H1 demoted to H2, then by depth
+      - pages with no chapter → original H1 stays H1
+    """
+    parts: list[str] = []
+    pages_processed = 0
+    for entry in entries:
+        if entry.kind == "chapter":
+            parts.append(f"# {entry.title}\n")
+            continue
+        if entry.path is None or not entry.path.exists():
+            print(f"  WARN: page missing on disk: {entry.title} ({entry.path})")
+            continue
+        body = entry.path.read_text(encoding="utf-8")
+        body = _preprocess_page(body, source_md=entry.path, ctx=ctx)
+        # Shift: +1 if under any chapter, +depth for nesting
+        shift = (1 if entry.chapter else 0) + entry.depth
+        body = _shift_headings(body, shift)
+        parts.append(body)
+        pages_processed += 1
+    ctx.pages_processed = pages_processed  # type: ignore[attr-defined]
+    return "\n\n".join(parts) + "\n"
