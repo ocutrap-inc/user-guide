@@ -4,11 +4,9 @@ Print-friendly PDFs of the OcuTrap docs and reference cards. Tap any link to dow
 
 ### Knowledge Base — full docs as a PDF
 
-The complete OcuTrap Knowledge Base, generated from the live docs and updated automatically. Print-quality letter portrait formatting with a numbered table of contents.
+The complete OcuTrap Knowledge Base. Print-quality letter portrait formatting with a numbered table of contents.
 
 {% file src="../.gitbook/assets/OcuTrap_Knowledge_Base.pdf" %}
-
-> Updated automatically on every change to docs.ocutrap.com. If something is missing, it's likely been added since the last build.
 
 ### Operation Cheat Sheet
 
