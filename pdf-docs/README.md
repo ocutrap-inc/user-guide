@@ -44,13 +44,22 @@ that those pages reference — **you must regenerate the PDF in the same PR**.
 The 3-step recipe (run from the repo root):
 
 ```bash
-pip install -r requirements-dev.txt        # one-time, if you haven't
-python3 scripts/build_kb_pdf.py            # regenerates the PDF
-git add .gitbook/assets/OcuTrap_Knowledge_Base.pdf && git commit
+pip install -r requirements-dev.txt                # one-time, if you haven't
+python3 scripts/build_kb_pdf.py                    # regenerates the PDF + sidecar
+git add .gitbook/assets/OcuTrap_Knowledge_Base.pdf \
+        .gitbook/assets/OcuTrap_Knowledge_Base.pdf.sources.sha
+git commit
 ```
 
-That's it. CI will fail your PR if the committed PDF doesn't match what the
-script produces, with a message pointing back here.
+The build script writes both the PDF and a small `.sources.sha` sidecar
+that records a hash of every input that went into the PDF (markdown files,
+build script, stylesheet). CI uses the sidecar — not the PDF binary — to
+detect drift, because pandoc and WeasyPrint output varies enough between
+macOS and Ubuntu that a binary or text comparison would false-fail. The
+sidecar is the single source of truth for "is this PDF up-to-date."
+
+If you change docs without regenerating, CI will fail with a message
+pointing back here.
 
 > **Why no auto-commit?** Earlier versions of the workflow regenerated and
 > committed the PDF for you on every push to `main`. That created merge

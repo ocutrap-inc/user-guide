@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
-"""Verify two PDFs are content-equivalent (same page count + same extracted text).
+"""Verify the committed Knowledge Base PDF is up-to-date with the docs.
 
-Used by .github/workflows/build-kb-pdf.yml to confirm the committed
-KB PDF matches what `build_kb_pdf.py` produces from the current docs.
+Compares the source hash recorded in the committed `<pdf>.sources.sha`
+sidecar to a hash freshly computed from the current docs. If they match,
+the committed PDF was generated from the current sources and is in sync.
+If they differ, the contributor changed docs without regenerating the PDF.
 
-WeasyPrint output is non-deterministic at the byte level (creation
-timestamps and object IDs vary between runs), so a binary diff would
-always fire. Comparing extracted text catches real docs drift while
-ignoring cosmetic binary churn.
+We use a source hash (rather than comparing rebuilt PDF text or binary)
+because PDF rendering output drifts across environments — pandoc and
+WeasyPrint produce slightly different output on macOS vs Ubuntu, even
+for identical input. The source hash answers exactly the right question
+("did the docs change since the PDF was generated?") without depending
+on cross-platform render reproducibility.
 
 Usage:
-    python3 scripts/verify_kb_pdf.py <committed.pdf> <built.pdf>
+    python3 scripts/verify_kb_pdf.py [<pdf-path>]
 
-Exit code 0 if content matches, 1 if it drifted (with a clear
-contributor message pointing at pdf-docs/README.md).
+Defaults to .gitbook/assets/OcuTrap_Knowledge_Base.pdf if no path given.
+Exit 0 on match, 1 on drift, 2 on missing inputs.
 """
 
 from __future__ import annotations
@@ -21,63 +25,55 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from pypdf import PdfReader
+# Reuse the same hash function the build script writes — single source of
+# truth for what counts as "the docs."
+sys.path.insert(0, str(Path(__file__).parent))
+from build_kb_pdf import (  # noqa: E402  — sys.path tweak above is intentional
+    DEFAULT_OUTPUT,
+    DEFAULT_SUMMARY,
+    DEFAULT_CSS,
+    compute_source_hash,
+)
 
 
 DRIFT_INSTRUCTIONS = """
 ::error::Committed Knowledge Base PDF is out of date with the docs.
 
-The KB PDF in .gitbook/assets/OcuTrap_Knowledge_Base.pdf does not match what
-scripts/build_kb_pdf.py produces from the current SUMMARY.md and markdown.
+The source hash recorded in {sidecar} does not match the current docs.
+That means someone changed a markdown file (or the build script / stylesheet)
+without regenerating the PDF.
 
 To fix (from the repo root):
 
   1. python3 scripts/build_kb_pdf.py
-  2. git add .gitbook/assets/OcuTrap_Knowledge_Base.pdf
-  3. Commit and push.
+  2. git add {pdf}
+  3. git add {sidecar}
+  4. Commit and push.
 
 See pdf-docs/README.md ("If you change the docs") for the full workflow.
 """
 
 
-def _pages_text(path: Path) -> list[str]:
-    return [p.extract_text() for p in PdfReader(str(path)).pages]
-
-
 def main(argv: list[str]) -> int:
-    if len(argv) != 3:
-        print(f"usage: {argv[0]} <committed.pdf> <built.pdf>", file=sys.stderr)
+    pdf_path = Path(argv[1]) if len(argv) > 1 else DEFAULT_OUTPUT
+    sidecar = pdf_path.with_suffix(pdf_path.suffix + ".sources.sha")
+
+    if not sidecar.exists():
+        print(f"::error::No source-hash sidecar at {sidecar}.", file=sys.stderr)
+        print(DRIFT_INSTRUCTIONS.format(sidecar=sidecar, pdf=pdf_path), file=sys.stderr)
         return 2
 
-    committed = Path(argv[1])
-    built = Path(argv[2])
+    committed_hash = sidecar.read_text().strip()
+    current_hash = compute_source_hash(DEFAULT_SUMMARY, DEFAULT_CSS)
 
-    if not committed.exists():
-        print(f"committed PDF not found: {committed}", file=sys.stderr)
-        return 2
-    if not built.exists():
-        print(f"built PDF not found: {built}", file=sys.stderr)
-        return 2
-
-    committed_pages = _pages_text(committed)
-    built_pages = _pages_text(built)
-
-    if len(committed_pages) != len(built_pages):
-        print(
-            f"::error::Page count drift: committed has {len(committed_pages)} pages, "
-            f"built has {len(built_pages)} pages.",
-            file=sys.stderr,
-        )
-        print(DRIFT_INSTRUCTIONS, file=sys.stderr)
+    if committed_hash != current_hash:
+        print(f"::error::Source hash mismatch.", file=sys.stderr)
+        print(f"  committed:  {committed_hash}", file=sys.stderr)
+        print(f"  current:    {current_hash}", file=sys.stderr)
+        print(DRIFT_INSTRUCTIONS.format(sidecar=sidecar, pdf=pdf_path), file=sys.stderr)
         return 1
 
-    for i, (c, b) in enumerate(zip(committed_pages, built_pages), start=1):
-        if c != b:
-            print(f"::error::Page {i} text differs from what the docs produce.", file=sys.stderr)
-            print(DRIFT_INSTRUCTIONS, file=sys.stderr)
-            return 1
-
-    print(f"Committed PDF matches docs ({len(built_pages)} pages, content equivalent). ✅")
+    print(f"PDF is up-to-date with docs (source hash {committed_hash[:12]}…). ✅")
     return 0
 
 
