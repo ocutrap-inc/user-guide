@@ -3,14 +3,15 @@
 Build the OcuTrap R1 Operation Cheat Sheet — a one-page, letter-size,
 print-ready PDF aimed at users not yet familiar with the device.
 
-Source of truth for content: pdf-docs/online/R1_Manual_v2.docx
+Source of truth for content: docs.ocutrap.com (canonical knowledge base)
 LED/button reference graphic: pdf-docs/printed/inside_sticker.png
 
 Usage:
     pip install reportlab Pillow
     python scripts/build_cheat_sheet.py
 
-Output: pdf-docs/online/R1_Operation_Cheat_Sheet.pdf
+Output: .gitbook/assets/R1_Operation_Cheat_Sheet.pdf
+        (served as a download via {% file %} from the Downloads page)
 """
 
 import os
@@ -36,7 +37,7 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PDF_DOCS = os.path.join(REPO_ROOT, "pdf-docs")
 STICKER = os.path.join(PDF_DOCS, "printed", "inside_sticker.png")
 LOGO = os.path.join(REPO_ROOT, ".gitbook", "assets", "Removed Background logo.png")
-OUTPUT = os.path.join(PDF_DOCS, "online", "R1_Operation_Cheat_Sheet.pdf")
+OUTPUT = os.path.join(REPO_ROOT, ".gitbook", "assets", "R1_Operation_Cheat_Sheet.pdf")
 
 # OcuTrap brand palette (from shopify-theme settings_schema.json)
 BRAND_GREEN = HexColor("#3A6B35")
@@ -361,8 +362,7 @@ def build():
 
     # Footer
     footer_txt = (
-        "Full manual: <b>R1_Manual_v2.pdf</b> &nbsp; | &nbsp; "
-        "Videos &amp; docs: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
+        "Docs &amp; videos: <b>docs.ocutrap.com</b> &nbsp; | &nbsp; "
         "Dashboard: <b>base.ocutrap.com</b> &nbsp; | &nbsp; "
         "Support: <b>support@ocutrap.com</b>"
     )

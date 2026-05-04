@@ -1,0 +1,58 @@
+name: build-kb-pdf
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - '.gitbook/assets/**'
+      - 'scripts/build_kb_pdf.py'
+      - 'scripts/kb_pdf_style.css'
+      - '.github/workflows/build-kb-pdf.yml'
+      - 'requirements-dev.txt'
+  workflow_dispatch:
+
+concurrency:
+  group: build-kb-pdf
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libpango-1.0-0 libpangoft2-1.0-0
+      - name: Install Python deps
+        run: pip install -r requirements-dev.txt
+      - uses: actions/cache@v4
+        with:
+          path: .cache/kb-pdf
+          key: kb-pdf-${{ hashFiles('SUMMARY.md', '.gitbook/assets/**', 'scripts/build_kb_pdf.py') }}
+          restore-keys: |
+            kb-pdf-
+      - name: Build PDF
+        run: python3 scripts/build_kb_pdf.py
+      - name: Commit if PDF changed
+        run: |
+          if ! git diff --quiet -- .gitbook/assets/OcuTrap_Knowledge_Base.pdf; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add .gitbook/assets/OcuTrap_Knowledge_Base.pdf
+            git commit -m "chore(kb-pdf): regenerate from docs [skip ci]"
+            git push
+          else
+            echo "PDF unchanged, skipping commit."
+          fi
