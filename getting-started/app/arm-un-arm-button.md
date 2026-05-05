@@ -16,7 +16,7 @@
 * **Behavior**: Scouting uses the same animal-detection logic as armed mode, including the outer pre-capture zone and the final trigger-distance zone, but it never closes the door.
 * **Notifications**: The user can receive an alert when an animal first approaches and another alert if it reaches the trigger distance. After the animal leaves, scouting resets and waits about 5 minutes before sending a new set of scouting alerts.
 
-For full details, see the [Scouting Mode](scouting-mode.md) page. (Scouting Mode was previously called Monitoring Mode.)
+For full details, see the [Scouting Mode](scouting-mode.md) page.
 
 ### Unarmed State
 

@@ -1,7 +1,5 @@
 # Scouting Mode
 
-> **Scouting Mode** was previously called Monitoring Mode. The functionality is unchanged.
-
 Scouting Mode lets you observe trap activity — see what's approaching the trap and what's coming back — without ever closing the door. Use it for scouting, fine-tuning placement, and confirming that the right animals are visiting before you commit to a real capture.
 
 ## How it differs from Armed mode
@@ -14,12 +12,18 @@ Scouting Mode lets you observe trap activity — see what's approaching the trap
 | **Captures images**   | Yes — at zone entry and at trigger                     | Yes — on detection and every ~30 s while the animal stays in the trap |
 | **Reset after activity** | N/A (door closed; trap is captured)                 | Auto-reset ~5 minutes after the animal leaves                  |
 
-## Activating Scouting Mode
+## Activating Scouting Mode (walkthrough)
 
-1. Make sure the trap door is **fully open**. The trap will refuse to enter Scouting Mode if the door isn't open, the same way it would refuse to arm.
-2. From the trap's screen in the OcuTrap app, tap **Scout**.
-3. The trap will run an obstruction check (same as arming). If something is in the capture zone — a stick, a paw, debris — scouting will be refused with an error so you can clear it first.
-4. Once Scouting Mode is active, the trap reports its status as **Scouting** in the app.
+The Scout button lives in the same trap controls popup as Arm, Open, and Close. Here is the full flow from the OcuTrap app:
+
+1. **Open the OcuTrap app** at [app.ocutrap.com](https://app.ocutrap.com) (or the OcuTrap mobile app) and sign in.
+2. **Pick the trap** you want to scout from your trap list / dashboard. Tap it to open its detail view.
+3. **Open the trap controls popup.** This is the popup that contains the door and arm buttons (Open, Close, Arm, Scout, Camera). On the trap detail page, tap the trap controls button to open it if it isn't already showing.
+4. **Confirm the door is fully open.** If the door isn't fully open, tap **Open** first and wait for the trap to report **Open** before continuing. Scouting will not start with the door anywhere other than fully open — this is the same safety gate as arming.
+5. **Tap Scout.** The trap runs an obstruction check (same routine as arming). If something is in the capture zone — a stick, a paw, debris — scouting will be refused with an error message so you can clear the obstruction and try again.
+6. **Wait for confirmation.** Once the obstruction check passes, the trap's status in the app changes to **Scouting**. From this point on, photos and alerts behave as described below.
+
+> **Tip:** If the Scout button is greyed out, it usually means the door isn't reporting fully open yet, or the trap is offline / hasn't checked in recently. Wait for the trap to come back online or tap **Open** again.
 
 ## What you'll see while Scouting Mode is active
 

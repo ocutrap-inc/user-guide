@@ -65,7 +65,7 @@ If you're checking with support, the firmware version for this release is **v706
 
 > **Release date:** 3 Apr 2026
 >
-> _This feature shipped publicly with the v706 release on May 4 — see the entry above. It was originally called Monitoring Mode in beta._
+> _This feature shipped publicly with the v706 release on May 4 — see the entry above._
 
 _Scouting Mode lets you observe the trap without closing the door._
 
