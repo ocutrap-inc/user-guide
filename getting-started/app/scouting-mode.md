@@ -1,7 +1,5 @@
 # Scouting Mode
 
-> **Scouting Mode** was previously called Monitoring Mode. The functionality is unchanged.
-
 Scouting Mode lets you observe trap activity — see what's approaching the trap and what's coming back — without ever closing the door. Use it for scouting, fine-tuning placement, and confirming that the right animals are visiting before you commit to a real capture.
 
 ## How it differs from Armed mode
@@ -11,25 +9,31 @@ Scouting Mode lets you observe trap activity — see what's approaching the trap
 | **Detects animals**   | Yes (same detection logic)                             | Yes (same detection logic)                                     |
 | **Closes the door**   | Yes — on first verified detection                      | **Never** — observation only                                   |
 | **Sends pre-capture alerts** | Yes (if enabled)                                | Yes                                                            |
-| **Captures images**   | Yes — at zone entry and at trigger                     | Yes — on detection and every ~30 s while the animal stays in the trap |
-| **Reset after activity** | N/A (door closed; trap is captured)                 | Auto-reset ~5 minutes after the animal leaves                  |
+| **Captures images**   | Yes — at zone entry and at trigger                     | Yes — on detection and about every 60 s while the animal stays in the trap (configurable 15 s – 5 min) |
+| **Reset after activity** | N/A (door closed; trap is captured)                 | Auto-reset about 5 minutes after the trap confirms the animal has departed (departure is confirmed after ~30 seconds of clear readings) |
 
-## Activating Scouting Mode
+## Activating Scouting Mode (walkthrough)
 
-1. Make sure the trap door is **fully open**. The trap will refuse to enter Scouting Mode if the door isn't open, the same way it would refuse to arm.
-2. From the trap's screen in the OcuTrap app, tap **Scout**.
-3. The trap will run an obstruction check (same as arming). If something is in the capture zone — a stick, a paw, debris — scouting will be refused with an error so you can clear it first.
-4. Once Scouting Mode is active, the trap reports its status as **Scouting** in the app.
+The Scout button lives in the same trap controls popup as Arm, Open, and Close. Here is the full flow from the OcuTrap app:
+
+1. **Open the OcuTrap app** at [app.ocutrap.com](https://app.ocutrap.com) (or the OcuTrap mobile app) and sign in.
+2. **Pick the trap** you want to scout from your trap list / dashboard. Tap it to open its detail view.
+3. **Open the trap controls popup.** This is the popup that contains the door and arm buttons (Open, Close, Arm, Scout, Camera). On the trap detail page, tap the trap controls button to open it if it isn't already showing.
+4. **Confirm the door is fully open.** If the door isn't fully open, tap **Open** first and wait for the trap to report **Open** before continuing. Scouting will not start with the door anywhere other than fully open — this is the same safety gate as arming.
+5. **Tap Scout.** The trap runs an obstruction check (same routine as arming). If something is in the capture zone — a stick, a paw, debris — scouting will be refused with an error message so you can clear the obstruction and try again.
+6. **Wait for confirmation.** Once the obstruction check passes, the trap's status in the app changes to **Scouting**. From this point on, photos and alerts behave as described below.
+
+> **Tip:** If the Scout button is greyed out, it usually means the door isn't reporting fully open yet, or the trap is offline / hasn't checked in recently. Wait for the trap to come back online or tap **Open** again.
 
 ## What you'll see while Scouting Mode is active
 
 * **Pre-capture alerts** — when an animal enters the outer detection zone (if pre-capture alerts are enabled in your trap settings).
 * **Trigger alerts** — when an animal reaches the trigger distance. The trap takes a photo and sends it to you, but the door **does not close**.
-* **Periodic photos while the animal is in the trap** — once an animal enters a detection zone, the trap sends a fresh photo about every 30 seconds for as long as something stays in the zone, so you can watch the activity unfold instead of seeing only the entry shot. If the previous photo is still being transmitted, the trap waits for it to finish before starting the next one — you'll never get half a photo or two photos competing for the same connection.
+* **Periodic photos while the animal is in the trap** — once an animal enters a detection zone, the trap sends a fresh photo about every 60 seconds (default; configurable from 15 seconds to 5 minutes) for as long as something stays in the zone, so you can watch the activity unfold instead of seeing only the entry shot. If the previous photo is still being transmitted, the trap waits for it to finish before starting the next one — you'll never get half a photo or two photos competing for the same connection.
 * **No more lost approach photos** — if the animal moves while a photo is already being uploaded, the trap holds onto the most recent approach moment and sends it as soon as the camera is free. You see the closest, most useful frame.
 * **Faster image uploads** — photos finish transferring noticeably faster on cellular, especially when many are queued.
-* **Cooldown after departure** — once the animal leaves the detection zones, the trap waits about 5 minutes before re-arming the alerts. This prevents the same animal from generating a flood of duplicate notifications as it moves around near the trap.
-* **Battery usage** — Scouting Mode uses the same low-power detection as Armed mode, so battery life is similar. The 30-second photo cadence draws meaningfully more power while an animal is parked in the trap; if you want to stretch battery life on a long deployment, ask your fleet admin to lengthen the interval or turn the periodic photos off.
+* **Cooldown after departure** — the trap first needs to see about **30 seconds of clear readings** to confirm the animal has actually left (rather than briefly stepping out of frame). Once departure is confirmed, it waits another **~5 minutes** before re-arming the pre-capture and trigger alerts. So from the last in-zone reading to the next round of alerts you'll typically see about 5.5 minutes of quiet. This prevents the same animal from generating a flood of duplicate notifications as it moves around near the trap.
+* **Battery usage** — Scouting Mode uses the same low-power detection as Armed mode, so idle battery life is similar. The periodic photo cadence draws meaningfully more power while an animal is parked in the trap; if you want to stretch battery life on a long deployment, ask your fleet admin to lengthen the interval or turn the periodic photos off.
 
 ## Exiting Scouting Mode
 

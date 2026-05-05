@@ -1016,7 +1016,7 @@ OcuTrap provides high-quality media assets for press, partners, and promotional 
 
 ### April 2026 — Firmware v2.1.2-632
 
-Introduced Monitoring Mode (in testing). This mode uses live armed detection for scouting without closing the door. Requires door fully open; sends alerts at pre-capture and trigger distances but does not close the door. Includes a 5-minute cooldown after the animal leaves the area.
+Introduced Scouting Mode (in testing). This mode uses live armed detection for scouting without closing the door. Requires door fully open; sends alerts at pre-capture and trigger distances but does not close the door. Includes a 5-minute cooldown after the animal leaves the area.
 
 ### April 2024 — Firmware v1.12.7-250
 
