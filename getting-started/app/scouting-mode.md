@@ -9,7 +9,7 @@ Scouting Mode lets you observe trap activity — see what's approaching the trap
 | **Detects animals**   | Yes (same detection logic)                             | Yes (same detection logic)                                     |
 | **Closes the door**   | Yes — on first verified detection                      | **Never** — observation only                                   |
 | **Sends pre-capture alerts** | Yes (if enabled)                                | Yes                                                            |
-| **Captures images**   | Yes — at zone entry and at trigger                     | Yes — on detection and every ~30 s while the animal stays in the trap |
+| **Captures images**   | Yes — at zone entry and at trigger                     | Yes — on detection and about every 60 s while the animal stays in the trap (configurable 15 s – 5 min) |
 | **Reset after activity** | N/A (door closed; trap is captured)                 | Auto-reset ~5 minutes after the animal leaves                  |
 
 ## Activating Scouting Mode (walkthrough)
@@ -29,11 +29,11 @@ The Scout button lives in the same trap controls popup as Arm, Open, and Close. 
 
 * **Pre-capture alerts** — when an animal enters the outer detection zone (if pre-capture alerts are enabled in your trap settings).
 * **Trigger alerts** — when an animal reaches the trigger distance. The trap takes a photo and sends it to you, but the door **does not close**.
-* **Periodic photos while the animal is in the trap** — once an animal enters a detection zone, the trap sends a fresh photo about every 30 seconds for as long as something stays in the zone, so you can watch the activity unfold instead of seeing only the entry shot. If the previous photo is still being transmitted, the trap waits for it to finish before starting the next one — you'll never get half a photo or two photos competing for the same connection.
+* **Periodic photos while the animal is in the trap** — once an animal enters a detection zone, the trap sends a fresh photo about every 60 seconds (default; configurable from 15 seconds to 5 minutes) for as long as something stays in the zone, so you can watch the activity unfold instead of seeing only the entry shot. If the previous photo is still being transmitted, the trap waits for it to finish before starting the next one — you'll never get half a photo or two photos competing for the same connection.
 * **No more lost approach photos** — if the animal moves while a photo is already being uploaded, the trap holds onto the most recent approach moment and sends it as soon as the camera is free. You see the closest, most useful frame.
 * **Faster image uploads** — photos finish transferring noticeably faster on cellular, especially when many are queued.
 * **Cooldown after departure** — once the animal leaves the detection zones, the trap waits about 5 minutes before re-arming the alerts. This prevents the same animal from generating a flood of duplicate notifications as it moves around near the trap.
-* **Battery usage** — Scouting Mode uses the same low-power detection as Armed mode, so battery life is similar. The 30-second photo cadence draws meaningfully more power while an animal is parked in the trap; if you want to stretch battery life on a long deployment, ask your fleet admin to lengthen the interval or turn the periodic photos off.
+* **Battery usage** — Scouting Mode uses the same low-power detection as Armed mode, so idle battery life is similar. The periodic photo cadence draws meaningfully more power while an animal is parked in the trap; if you want to stretch battery life on a long deployment, ask your fleet admin to lengthen the interval or turn the periodic photos off.
 
 ## Exiting Scouting Mode
 
