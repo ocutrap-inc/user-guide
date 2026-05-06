@@ -32,7 +32,7 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 * **Pre-capture alerts** when an animal enters the outer detection zone (if enabled).
 * **Trigger alerts** when an animal reaches the trigger distance. The trap takes a photo but the door **does not close**.
 * **Periodic photos** while the animal stays in zone — about **every 5 seconds for the first minute** (entry burst), then **about every 15 seconds** for as long as the animal sticks around. This is effectively as fast as the trap can send photos over cellular, and the timing is built into the firmware — it isn't a setting in the app.
-* **Alert cooldown after departure** — the trap waits ~30 seconds of clear readings to confirm the animal has actually left, then another ~5 minutes before re-arming **alerts and periodic photos**. Expect about 5.5 minutes of quiet after the last in-zone reading. This cooldown is *only* about pausing notifications; **the door does not move during or after this period**.
+* **Alert cooldown after departure** — the trap waits ~30 seconds of clear readings to confirm the animal has actually left, then another ~5 minutes of quiet before it will send the next round of **alerts and periodic photos**. Expect about 5.5 minutes of silence after the last in-zone reading. This cooldown is *only* about pausing notifications; **the door does not move during or after this period**, and the trap stays in Scouting Mode the whole time.
 
 ## Exiting Scouting Mode
 

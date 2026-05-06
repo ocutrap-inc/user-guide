@@ -37,8 +37,8 @@ No. The latch is mechanical; loss of power does not release it.
 **Q: Can I close a trap that's already in Captured state?**
 The door is already closed. Tapping **Close** while in Captured is a no-op (it stays Captured).
 
-**Q: How do I rearm after releasing?**
-After tapping **Open**, the trap is in **Unarmed / Open**. Tap **Arm** on the trap card to re-enter Armed mode for the next capture.
+**Q: How do I get the trap ready for the next capture?**
+After tapping **Open**, the trap is in **Unarmed / Open**. Tap **Arm** on the trap card to put it back into Armed mode for the next capture.
 
 ## See also
 
