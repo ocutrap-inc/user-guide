@@ -39,15 +39,15 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 1. **Stop Scout** in the Controls popup — returns the trap to Unarmed, door still open.
 2. **Close** on the trap card — closes the door and returns to Unarmed in one step.
 
-## What happens if the trap actually does capture (Armed mode only)
-
-This applies only when you've switched to **Armed** — Scouting Mode never closes the door. But because it's a common worry: once an Armed trap closes on a verified detection, the door **stays closed until you manually open it**. There is no auto-release on a timer, no auto-release if the animal calms down, no auto-release if the animal leaves a previous detection zone. The trap holds until you tap **Open** (releases the animal, returns to Unarmed) or **Unarm** (returns to Unarmed; you still need to tap **Open** afterwards to release the door). You can be hours away from the trap; it will stay locked.
-
 ## When Scouting Mode **isn't** what you want
 
 * **Capturing a confirmed animal** — tap **Arm** on the trap card.
 * **A one-off photo** — open Controls and tap **Request Image** (doesn't change trap state).
 * **Testing the door mechanism** — use **Open** / **Close** on the trap card.
+
+## What if I switch to Armed and the trap actually captures?
+
+The door stays locked until you manually open it — no auto-release on a timer or based on the animal's behavior. See [After a Capture](after-capture.md) for the full guarantee, the **Open** vs **Unarm** distinction, and FAQs.
 
 ## Troubleshooting
 
