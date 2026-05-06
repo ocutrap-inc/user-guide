@@ -9,8 +9,10 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 | **Detects animals**          | Yes                                | Yes (same logic as Armed)                                                |
 | **Closes the door**          | Yes — on first verified detection  | **Never** — observation only                                             |
 | **Sends pre-capture alerts** | Yes (if enabled)                   | Yes                                                                      |
-| **Captures images**          | Yes — at zone entry and at trigger | Yes — on detection, then about every 60 s while in zone (15 s – 5 min)   |
-| **Reset after activity**     | N/A (door closes; trap captured)   | Auto-reset ~5 min after departure is confirmed (~30 s of clear readings) |
+| **Captures images**          | Yes — at zone entry and at trigger | Yes — on detection, then ~every 5 s for the first minute, then ~every 15 s while the animal stays in zone |
+| **After the animal leaves**  | N/A (door closes; trap captured)   | Alerts and photos resume about 5 minutes after departure is confirmed (~30 s of clear readings); door does not move |
+
+> **Door behavior in Scouting:** the door **never** closes, opens, or moves on its own — regardless of how many animals come and go. The only things that move the door are direct commands you send: **Open** and **Close**. (Switching to **Arm** doesn't move the door immediately; it just allows a future automatic close on a verified detection.) Whatever the animal does, the trap stays in Scouting with the door open until you change it.
 
 ## Activating Scouting Mode (walkthrough)
 
@@ -29,8 +31,8 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 
 * **Pre-capture alerts** when an animal enters the outer detection zone (if enabled).
 * **Trigger alerts** when an animal reaches the trigger distance. The trap takes a photo but the door **does not close**.
-* **Periodic photos** about every 60 seconds (configurable 15 s – 5 min) while the animal stays in zone. The trap waits for each photo to finish before starting the next, and saves the closest approach frame if the camera is busy. This draws more power than idle scouting; if battery matters, ask your fleet admin to lengthen the interval.
-* **Cooldown after departure** — the trap waits ~30 seconds of clear readings to confirm the animal has actually left, then another ~5 minutes before re-arming the alerts. Expect about 5.5 minutes of quiet after the last in-zone reading.
+* **Periodic photos** while the animal stays in zone — about **every 5 seconds for the first minute** (entry burst), then **about every 15 seconds** for as long as the animal sticks around. This is effectively as fast as the trap can send photos over cellular, and the timing is built into the firmware — it isn't a setting in the app.
+* **Alert cooldown after departure** — the trap waits ~30 seconds of clear readings to confirm the animal has actually left, then another ~5 minutes before re-arming **alerts and periodic photos**. Expect about 5.5 minutes of quiet after the last in-zone reading. This cooldown is *only* about pausing notifications; **the door does not move during or after this period**.
 
 ## Exiting Scouting Mode
 
@@ -42,6 +44,10 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 * **Capturing a confirmed animal** — tap **Arm** on the trap card.
 * **A one-off photo** — open Controls and tap **Request Image** (doesn't change trap state).
 * **Testing the door mechanism** — use **Open** / **Close** on the trap card.
+
+## What if I switch to Armed and the trap actually captures?
+
+The door stays locked until you manually open it — no auto-release on a timer or based on the animal's behavior. See [After a Capture](after-capture.md) for the full guarantee, the **Open** vs **Unarm** distinction, and FAQs.
 
 ## Troubleshooting
 

@@ -22,4 +22,4 @@ For full details, see the [Scouting Mode](scouting-mode.md) page.
 
 * **Purpose**: The trap is not set to capture and is in a standby mode.
 * **Behavior**: In this state, the trap listens for commands and does not initiate the door closure if motion is detected.
-* **Transition**: After capturing an animal, the trap automatically shifts to this state, signaling the door is securely closed.
+* **Transition**: After a verified capture, the trap moves to **Captured** state — door closed and locked — and stays there until you tap **Open** (which releases the door and returns to Unarmed) or **Unarm** (which returns to Unarmed but leaves the door closed). See [After a Capture](after-capture.md) for the full guarantee.

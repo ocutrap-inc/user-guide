@@ -16,6 +16,7 @@
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
   * [Scouting Mode](getting-started/app/scouting-mode.md)
+  * [After a Capture](getting-started/app/after-capture.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
     * [More Settings Overview](getting-started/app/trap-settings/more-settings-overview.md)
