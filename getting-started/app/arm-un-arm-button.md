@@ -14,7 +14,7 @@ _Make sure you are logged in to your account and on the Traps page._
 * **Purpose**: The trap is set for observing activity without closing the door.
 * **Safety Requirement**: The door must already be fully open before Scouting Mode can be enabled.
 * **Behavior**: Scouting uses the same animal-detection logic as armed mode, including the outer pre-capture zone and the final trigger-distance zone, but it never closes the door.
-* **Notifications**: You can receive one Scout Alert when an animal first enters the pre-capture zone and one Scout Trigger if it reaches the trigger distance. After about 30 seconds with no animal detected, scouting resets immediately with no cooldown.
+* **Notifications**: You can receive one Scout Alert when an animal first enters the pre-capture zone and one Scout Trigger if it reaches the trigger distance. Each alert type is throttled to one fire per 5 minutes — repeat visits within that window send photos but no new alerts. When you tap Stop Scout or Unarm, the app updates to the new state immediately.
 
 For full details, see the [Scouting Mode](scouting-mode.md) page.
 

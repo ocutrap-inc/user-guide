@@ -10,7 +10,7 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 | **Closes the door**          | Yes — on first verified detection  | **Never** — observation only                                             |
 | **Sends pre-capture alerts** | Yes (if enabled)                   | Yes                                                                      |
 | **Captures images**          | Yes — at zone entry and at trigger | Yes — on detection, then ~every 5 s for the first minute, then ~every 15 s while the animal stays in zone |
-| **After the animal leaves**  | N/A (door closes; trap captured)   | After ~30 s with no animal detected, alerts reset; the next entry sends new alerts and photos; door does not move |
+| **After the animal leaves**  | N/A (door closes; trap captured)   | The same alert type won't fire again for 5 minutes, even if the animal leaves, 30 seconds pass with no detection, or a different animal arrives. Photos keep flowing on every detection. Door does not move |
 
 > **Door behavior in Scouting:** the door **never** closes, opens, or moves on its own — regardless of how many animals come and go. The only things that move the door are direct commands you send: **Open** and **Close**. (Switching to **Arm** doesn't move the door immediately; it just allows a future automatic close on a verified detection.) Whatever the animal does, the trap stays in Scouting with the door open until you change it.
 
@@ -32,7 +32,7 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 * **One Scout Alert** when an animal first enters the pre-capture zone (if enabled).
 * **One Scout Trigger** when an animal reaches the trigger distance. The trap takes a photo, but the door **does not close**.
 * **Periodic photos** while the animal stays in zone — about **every 5 seconds for the first minute** (entry burst), then **about every 15 seconds** for as long as the animal sticks around. This is effectively as fast as the trap can send photos over cellular, and the timing is built into the firmware — it isn't a setting in the app.
-* **Departure handling** — After about 30 seconds with no animal detected, the trap treats the visit as over. The next time an animal enters, it sends one new **Scout Alert** and, if the animal reaches trigger distance, one new **Scout Trigger**. Photos continue on the scouting cadence. **The door does not move**, and the trap stays in Scouting Mode. If the animal steps out of view for less than 30 seconds, you will not get a new alert for that glimpse.
+* **Alert throttling** — Each alert type (Scout Alert and Scout Trigger) can fire only once every 5 minutes across the trap. That 5-minute quiet window continues even if the animal leaves, the area is clear for 30 seconds, or another animal arrives. **Photos are not throttled**: every detection still produces imagery on the scouting cadence (~5 s for the first minute, ~15 s after), so you see what's happening even during the alert quiet window. **The door does not move**, and the trap stays in Scouting Mode the whole time.
 
 ## Exiting Scouting Mode
 
@@ -53,4 +53,4 @@ The door stays locked until you manually open it — no auto-release on a timer 
 
 * **"Refused with an obstruction error"** — clear the capture zone, then retry.
 * **"Refused with a door-not-open error"** — tap **Open** on the trap card, wait for the status to read **Open**, then retry **Scout**.
-* **Repeated alerts from the same animal** — expected if the animal stays out of the detection zone for about 30 seconds and then returns. The trap treats that as a new visit, so it sends new alerts.
+* **Repeated alerts from the same animal** — should not happen within 5 minutes. Each alert type can fire only once every 5 minutes, even if the animal leaves, the area clears for 30 seconds, or a different animal arrives. If you see new Scout Alerts more often than that, please report it.
