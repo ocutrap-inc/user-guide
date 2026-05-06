@@ -14,7 +14,7 @@
 * **Purpose**: The trap is set for observing activity without closing the door.
 * **Safety Requirement**: The door must already be fully open before Scouting Mode can be enabled.
 * **Behavior**: Scouting uses the same animal-detection logic as armed mode, including the outer pre-capture zone and the final trigger-distance zone, but it never closes the door.
-* **Notifications**: The user can receive an alert when an animal first approaches and another alert if it reaches the trigger distance. Once the animal has actually left the detection zone (confirmed by about 30 seconds of clear readings), scouting resets immediately — the next animal to enter triggers a fresh round of alerts.
+* **Notifications**: The user can receive an alert when an animal first approaches and another alert if it reaches the trigger distance. After about 30 seconds with no animal detected, scouting resets immediately — the next time an animal enters, the trap sends a fresh round of alerts.
 
 For full details, see the [Scouting Mode](scouting-mode.md) page.
 
