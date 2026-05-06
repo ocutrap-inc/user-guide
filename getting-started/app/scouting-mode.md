@@ -29,10 +29,10 @@ Scouting Mode lets you observe trap activity without ever closing the door — u
 
 ## What you'll see while scouting
 
-* **Pre-capture alerts** when an animal enters the outer detection zone (if enabled).
-* **Trigger alerts** when an animal reaches the trigger distance. The trap takes a photo but the door **does not close**.
+* **One Scout Alert** when an animal first enters the pre-capture zone (if enabled).
+* **One Scout Trigger** when an animal reaches the trigger distance. The trap takes a photo, but the door **does not close**.
 * **Periodic photos** while the animal stays in zone — about **every 5 seconds for the first minute** (entry burst), then **about every 15 seconds** for as long as the animal sticks around. This is effectively as fast as the trap can send photos over cellular, and the timing is built into the firmware — it isn't a setting in the app.
-* **Departure handling** — After about 30 seconds with no animal detected, the trap treats the visit as over. The next time an animal enters, it sends a fresh **Scout Alert** and **Scout Trigger**, and photos start again. **The door does not move**, and the trap stays in Scouting Mode. If the animal steps out of view for less than 30 seconds, you will not get a new alert for that glimpse.
+* **Departure handling** — After about 30 seconds with no animal detected, the trap treats the visit as over. The next time an animal enters, it sends one new **Scout Alert** and, if the animal reaches trigger distance, one new **Scout Trigger**. Photos continue on the scouting cadence. **The door does not move**, and the trap stays in Scouting Mode. If the animal steps out of view for less than 30 seconds, you will not get a new alert for that glimpse.
 
 ## Exiting Scouting Mode
 
