@@ -1,6 +1,6 @@
-# Arm/ Un-arm Button
+# Arm / Unarm Button
 
-&#x200B;_&#x4D;ake sure you are logged in to your account and on the traps page._
+_Make sure you are logged in to your account and on the Traps page._
 
 ### Armed State
 
@@ -14,12 +14,12 @@
 * **Purpose**: The trap is set for observing activity without closing the door.
 * **Safety Requirement**: The door must already be fully open before Scouting Mode can be enabled.
 * **Behavior**: Scouting uses the same animal-detection logic as armed mode, including the outer pre-capture zone and the final trigger-distance zone, but it never closes the door.
-* **Notifications**: The user can receive an alert when an animal first approaches and another alert if it reaches the trigger distance. After the animal leaves, scouting resets and waits about 5 minutes before sending a new set of scouting alerts.
+* **Notifications**: You can receive one Scout Alert when an animal first enters the pre-capture zone and one Scout Trigger if it reaches the trigger distance. Each alert type is throttled to one fire per 5 minutes — repeat visits within that window send photos but no new alerts. When you tap Stop Scout or Unarm, the app updates to the new state immediately.
 
 For full details, see the [Scouting Mode](scouting-mode.md) page.
 
 ### Unarmed State
 
 * **Purpose**: The trap is not set to capture and is in a standby mode.
-* **Behavior**: In this state, the trap listens for commands and does not initiate the door closure if motion is detected.
+* **Behavior**: In this state, the trap listens for commands and does not close the door automatically if motion is detected.
 * **Transition**: After a verified capture, the trap moves to **Captured** state — door closed and locked — and stays there until you tap **Open** (which releases the door and returns to Unarmed) or **Unarm** (which returns to Unarmed but leaves the door closed). See [After a Capture](after-capture.md) for the full guarantee.
