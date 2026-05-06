@@ -8,3 +8,5 @@
 * **Open**: Lifts the door for resetting or letting animals exit.
 * **Close**: Shuts and locks the door preventing escape or for safe transportation.
 * **Subtext**: Shows the latest reported door state.
+
+> **Releasing a captured animal:** tap **Open**. This releases the door and returns the trap to **Unarmed** in one step. The trap never auto-releases — see [After a Capture](after-capture.md).

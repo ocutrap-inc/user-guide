@@ -13,7 +13,7 @@ You can be 15 minutes away — or 15 hours away — and the trap will stay locke
 
 ## What you control
 
-Two buttons release a captured trap:
+Two buttons matter after a capture:
 
 | Button | What it does |
 | --- | --- |
