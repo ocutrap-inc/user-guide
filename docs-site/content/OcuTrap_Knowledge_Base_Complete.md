@@ -409,6 +409,8 @@ Perform these checks at the start of every trapping session:
 | KBT 5200 mAh (12V) | 5,200 mAh | ~21 days | 5–6 hours | 1A charger |
 | KBT 10000 mAh (12V) | 10,000 mAh (111 Wh) | ~40+ days | 5–6 hours | 2A charger |
 
+**Trap connectors (XT30):** The 10,000 mAh pack uses a **female XT30** on the yellow harness; the 5,200 mAh pack uses **male XT30** (opposite gender). Each trap is wired for one mating pair. To use a different capacity, contact support for the correct PCB connector and battery holder.
+
 ### Battery Care
 
 - Charge in a cool, dry environment
@@ -502,7 +504,7 @@ The device will proceed through its normal cloud connection sequence before ente
 
 ## Battery FAQ
 
-OcuTrap uses high-quality lithium-ion batteries with built-in protection boards. The yellow connector powers the device; the black connector is for charging. A full charge from empty takes 4–6 hours. The charger indicator shows red while charging and green when complete.
+OcuTrap uses high-quality lithium-ion batteries with built-in protection boards. The yellow **XT30** harness powers the trap (10,000 mAh: female XT30; 5,200 mAh: male XT30); the black connector is for charging only. A full charge from empty takes about 5–6 hours with the matched charger. The indicator shows red while charging and green when complete. To switch pack sizes, contact support for the correct PCB connector and battery holder.
 
 | Specification | Value |
 |---|---|

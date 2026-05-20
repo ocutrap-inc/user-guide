@@ -47,6 +47,9 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 | **Runtime (5200 mAh)**             | \~21 days per charge (typical usage)    |
 | **Charger (10000 mAh)**            | 2A @ 12V, \~5–6 hours full charge       |
 | **Charger (5200 mAh)**             | 1A @ 12V, \~5–6 hours full charge       |
+| **Trap connector (5200 mAh)**      | Male XT30 on pack; female XT30 on trap PCB |
+| **Trap connector (10000 mAh)**   | Female XT30 on pack; male XT30 on trap PCB |
+| **Alternate pack / connector**   | Contact support for PCB + holder swap   |
 
 ***
 

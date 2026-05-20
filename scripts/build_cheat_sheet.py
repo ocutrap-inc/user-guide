@@ -178,6 +178,26 @@ def first_time_callout(width):
     return tbl
 
 
+def battery_callout(width):
+    """Pack sizes, chargers, and opposite XT30 genders."""
+    msg = (
+        "<b>Battery (XT30):</b> &nbsp;5200 mAh &mdash; male XT30, <b>1A</b> charger. "
+        "&nbsp;10,000 mAh (111 Wh) &mdash; female XT30, <b>2A</b> charger. "
+        "Genders are opposite&mdash;do not force. Need the other pack? "
+        "Email <b>support@ocutrap.com</b> for PCB/holder swap."
+    )
+    tbl = Table([[Paragraph(msg, sBodyTight)]], colWidths=[width])
+    tbl.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, -1), white),
+        ("BOX", (0, 0), (-1, -1), 0.5, RULE),
+        ("LEFTPADDING", (0, 0), (-1, -1), 6),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+        ("TOPPADDING", (0, 0), (-1, -1), 4),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+    ]))
+    return tbl
+
+
 def system_led_table(width):
     """System LED patterns — what the top-of-POD LED is telling you."""
     rows = [
@@ -244,8 +264,9 @@ def status_table(width):
     rows = [
         ("Unarmed & Open", HexColor("#2563EB"), "Solid blue"),
         ("Unarmed & Closed", HexColor("#22C55E"), "Solid green"),
+        ("Scouting (app)", HexColor("#2563EB"), "Door open; Scout in app&mdash;no capture"),
         ("Armed", HexColor("#EAB308"), "Solid yellow"),
-        ("Armed & Captured", HexColor("#D946EF"), "Solid magenta"),
+        ("Armed & Captured", HexColor("#D946EF"), "Solid magenta (animal captured)"),
     ]
     data = [[Paragraph(f"<b>{label}</b>", sBodyTight), "", Paragraph(desc, sBodyTight)] for label, _, desc in rows]
     tbl = Table(data, colWidths=[1.4 * inch, 0.45 * inch, width - 1.85 * inch])
@@ -270,7 +291,7 @@ def safety_list():
         "Power off and disconnect the battery before any maintenance.",
         "Wear gloves when approaching a captured animal.",
         "Do not submerge. Avoid freezing conditions (door may stick).",
-        "Use only the supplied charger.",
+        "Use only the supplied charger (1A or 2A&mdash;match your pack).",
     ]
     return [Paragraph(f"&bull; {t}", sBodyTight) for t in items]
 
@@ -309,6 +330,8 @@ def build():
     # --- LEFT COLUMN ---
     left_story = []
     left_story.append(first_time_callout(left_w))
+    left_story.append(Spacer(1, 4))
+    left_story.append(battery_callout(left_w))
     left_story.append(Spacer(1, 6))
 
     left_story.append(section_header("System LED (top of POD)", left_w))

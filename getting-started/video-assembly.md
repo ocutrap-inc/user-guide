@@ -70,7 +70,7 @@ To attach the motor to the door, you’ll need:
 
 **Step 1:** **Connect** **Battery**
 
-1. Connect the yellow connectors together.
+1. Mate the battery **XT30** connector to the trap (10,000 mAh packs use **female XT30** on the harness; 5,200 mAh packs use **male XT30**). The connectors should fit without force — see [Battery](../faqs/battery.md) if they do not mate.
 
 **Step 2: Connect the Wire to the POD**
 

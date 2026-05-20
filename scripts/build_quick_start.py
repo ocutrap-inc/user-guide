@@ -403,8 +403,9 @@ def build_page_1(story, usable_w, qr_docs):
     steps = [
         (
             "1", "Charge the battery",
-            "Plug the blue battery into the supplied charger. "
-            "Light is <b>red</b> while charging, <b>green</b> when full. 4&ndash;5 hrs.",
+            "Charge with the pack&rsquo;s <b>black</b> connector only (not the yellow XT30). "
+            "<b>Red</b> = charging, <b>green</b> = full (~5&ndash;6 hrs with matched charger). "
+            "5200 mAh: 1A. 10k mAh (111 Wh): 2A.",
             asset("DSC03816.JPG"),
         ),
         (
@@ -422,8 +423,9 @@ def build_page_1(story, usable_w, qr_docs):
         ),
         (
             "4", "Slide in the POD",
-            "Slide the POD down the rails. Connect the motor wire. "
-            "Close the top latch firmly for waterproofing.",
+            "Slide the POD down the rails. Mate battery <b>XT30</b> (yellow) to trap&mdash;"
+            "10k pack: <b>female</b>; 5200: <b>male</b>. Do not force. "
+            "Connect motor wire; close latch firmly.",
             asset("image.png", "unknown (7).png"),
         ),
     ]
@@ -703,7 +705,7 @@ def build_page_2(story, usable_w, qr_docs, qr_dash):
     ]
     arm_items = [
         ("Power on",
-         "Install the charged battery and close the POD latch. The trap boots automatically."),
+         "Install charged battery; mate <b>XT30</b> before closing latch. Trap boots automatically."),
         ("Wait for breathing cyan",
          "Up to ~10 minutes to find cellular. A breathing cyan LED means connected."),
         ("Arm in the app",
@@ -734,7 +736,7 @@ def build_page_2(story, usable_w, qr_docs, qr_dash):
         "<b>Power off</b> and disconnect the battery before any maintenance.",
     ]
     safety_right = [
-        "Use only the supplied charger. Do not submerge or expose to fire.",
+        "Use only the supplied charger (1A or 2A&mdash;match your pack). Do not submerge or expose to fire.",
         "Do not let children operate the trap. Wear gloves near captured animals.",
     ]
     story.append(two_panel_row(

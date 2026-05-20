@@ -16,6 +16,13 @@ description: >-
   * Standard for new traps. Doubles the runtime compared to the 5200 mAh battery.
   * Charger: **2A (12V)**
   * Estimated battery life: **~40+ days** per charge (under normal usage).
+  * Trap cable: **female XT30** on the battery harness (trap uses mating **male XT30**).
+
+### Connectors
+
+* **5,200 mAh pack** — **male XT30** on the yellow harness (trap uses **female XT30**).
+* **10,000 mAh pack** — **female XT30** on the yellow harness (trap uses **male XT30**).
+* The two packs use **opposite XT30 genders** so they cannot be plugged into the wrong trap by mistake. If you need to run a different capacity than your trap was built for, contact [support@ocutrap.com](mailto:support@ocutrap.com) to request the matching **PCB connector** and **battery holder**.
 
 ### Charging
 

@@ -11,6 +11,19 @@ OcuTrap traps use rechargeable **KBT 12V lithium-ion** battery packs. Two capaci
 
 Both models include a built-in protection board that prevents over-charge, over-discharge, over-voltage, and short circuits.
 
+## Trap connector (XT30)
+
+Each capacity uses an **XT30** connector on the yellow battery harness, but the **gender is opposite** between packs so the two sizes are not interchangeable on the same trap wiring:
+
+| Pack | Connector on battery harness | Trap side |
+|---|---|---|
+| **10,000 mAh (111 Wh)** | **Female XT30** | Male XT30 (mates with the pack above) |
+| **5,200 mAh** | **Male XT30** | Female XT30 (mates with the pack above) |
+
+Connect only the pack that mates with your trap. The connectors should slide together easily — do not force a connection.
+
+**Using a different capacity:** If you want to switch between the 5,200 mAh and 10,000 mAh packs on the same trap, contact [support@ocutrap.com](mailto:support@ocutrap.com). Support can arrange the correct **PCB connector** and **battery holder** for your trap so the alternate pack fits and connects safely.
+
 ## Charging Process
 
 1. **Identify the connectors:**
