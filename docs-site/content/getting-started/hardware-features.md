@@ -93,7 +93,7 @@ Advanced capture detection with false-trigger prevention:
 #### Construction
 
 - **Weather-resistant enclosure** — Built for outdoor field deployment
-- **Dimensions**: 10"W × 12"H × 32"L
+- **Dimensions**: 10" wide × 12" tall. Cage length is **32"** without the POD and with the door closed. The POD adds ~5"; with the door fully open, add ~4" more (~**41"** total length). See [Technical Specifications](technical-specifications.md) for details.
 - **Weight**: 24 lbs (10.9 kg)
 - **Target animals**: 5–25 lbs (cats, raccoons, opossums)
 

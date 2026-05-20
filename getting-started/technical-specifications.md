@@ -8,7 +8,12 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 | Specification      | Value                                                             |
 | ------------------ | ----------------------------------------------------------------- |
-| **Dimensions**     | 10"W × 12"H × 32"L (25.4cm × 30.5cm × 81.3cm)                     |
+| **Width**          | 10" (25.4 cm)                                                     |
+| **Height**         | 12" (30.5 cm)                                                     |
+| **Length (cage only)** | 32" (81.3 cm) — trap body **without** the POD; door **closed** |
+| **POD (adds to length)** | ~5" (~12.7 cm)                                                |
+| **Door open (adds to length)** | ~4" (~10.2 cm)                                          |
+| **Approx. total length** | ~41" (~104 cm) with POD installed and door fully open       |
 | **Weight**         | 24 lbs (10.9 kg)                                                  |
 | **Construction**   | Weather-resistant enclosure, compatible with Tomahawk trap frames |
 | **Target Animals** | 5–25 lbs (cats, raccoons, opossums, similar wildlife)             |

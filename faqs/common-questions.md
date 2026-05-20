@@ -20,7 +20,7 @@ We’re actively developing smarter species identification to allow selective tr
 
 <summary>What is the size of the OcuTrap</summary>
 
-10" wide, 12" tall, 34" long
+10" wide, 12" tall. The cage alone (without POD, door closed) is **32"** long. The POD adds about **5"**; with the door fully open, add about **4"** more (~**41"** total).
 
 </details>
 
@@ -595,7 +595,7 @@ Like any technology, OcuTrap may have limitations depending on the specific envi
 
 <summary>What are the dimensions and weight of an OcuTrap unit?</summary>
 
-The dimensions and weight vary by model. Specific details can be found in the product specifications.
+The standard OcuTrap R1 is **10" wide × 12" tall**. Cage length is **32"** without the POD and with the door closed; the POD adds ~**5"**, and a fully open door adds ~**4"** more (~**41"** total). Weight is **24 lbs (10.9 kg)**. See [Technical Specifications](../getting-started/technical-specifications.md) for full details.
 
 </details>
 

@@ -149,7 +149,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 
 | Specification | Details |
 |---|---|
-| Dimensions | 10" W × 12" H × 32" L |
+| Dimensions | 10" W × 12" H; 32" L cage only (no POD, door closed). POD adds ~5"; door open adds ~4" (~41" total) |
 | Weight | 24 lbs (complete unit) |
 | Target Species | 5–25 lb animals |
 | Trap Compatibility | Tomahawk-style trap frames |
@@ -444,7 +444,7 @@ Both the sharer and the recipient must have OcuTrap accounts. To share a trap:
 A: Yes. You can review captured images and release non-target animals remotely by opening the door from the app.
 
 **Q: What size is the OcuTrap?**
-A: The standard unit measures 10" × 12" × 34" and targets animals in the 5–25 lb range.
+A: The standard unit is 10" wide × 12" tall. Cage length is 32" without the POD and with the door closed; the POD adds about 5", and a fully open door adds about 4" more (~41" total). Targets animals in the 5–25 lb range.
 
 **Q: Is the OcuTrap humane?**
 A: Absolutely. The system is designed with animal welfare as a priority, featuring rapid door closure, remote monitoring to minimize stress, and selective targeting to avoid non-target species.
