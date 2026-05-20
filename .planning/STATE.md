@@ -38,8 +38,8 @@
 
 - **One-shot sync, not automation** — User explicitly scoped "update once now".
   A continuous drift-bot is captured as a v2 backlog seed.
-- **User guide PDFs only** — Firmware release notes, hardware/setup PDFs, and
-  translations are out of scope this milestone.
+- **User guide PDFs only** — Firmware release notes and hardware/setup PDFs are
+  out of scope this milestone. Spanish translations are not maintained (English only).
 - **Coarse granularity, 3 phases** — Audit → Patch → Regenerate & Verify. The
   shape was inevitable from the requirement structure (AUD / DOC / PDF+TRK).
 - **Audits land on disk before patching** — Phase 1 produces concrete checklists
