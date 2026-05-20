@@ -662,7 +662,7 @@ def support_right(panel_w):
     rows = [
         [Paragraph("DASHBOARD", lbl)],
         [Paragraph("<b>base.ocutrap.com</b>", val)],
-        [Paragraph("Manage your traps &amp; view captures", note)],
+        [Paragraph("Manage your traps &amp; view images", note)],
         [Spacer(1, 5)],
         [Paragraph("SUPPORT", lbl)],
         [Paragraph("<b>support@ocutrap.com</b>", val)],
