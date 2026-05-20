@@ -1,56 +1,66 @@
 # Scouting Mode
 
-Scouting Mode lets you observe trap activity without ever closing the door — useful for confirming the right animals are visiting before you commit to a real capture.
+Scouting Mode lets you watch what visits your trap without catching it. The trap detects animals and sends photos, but the door stays open.
 
-## How it differs from Armed mode
+Use Scouting Mode when you want to:
 
-|                              | Armed                              | Scouting                                                                 |
-| ---------------------------- | ---------------------------------- | ------------------------------------------------------------------------ |
-| **Detects animals**          | Yes                                | Yes (same logic as Armed)                                                |
-| **Closes the door**          | Yes — on first verified detection  | **Never** — observation only                                             |
-| **Sends pre-capture alerts** | Yes (if enabled)                   | Yes                                                                      |
-| **Captures images**          | Yes — at zone entry and at trigger | Yes — on detection, then ~every 5 s for the first minute, then ~every 15 s while the animal stays in zone |
-| **After the animal leaves**  | N/A (door closes; trap captured)   | The same alert type won't fire again for 5 minutes, even if the animal leaves, 30 seconds pass with no detection, or a different animal arrives. Photos keep flowing on every detection. Door does not move |
+* Confirm which animals are visiting before you arm the trap.
+* Check activity around a new trap location.
+* Watch behavior without closing the door.
 
-> **Door behavior in Scouting:** the door **never** closes, opens, or moves on its own — regardless of how many animals come and go. The only things that move the door are direct commands you send: **Open** and **Close**. (Switching to **Arm** doesn't move the door immediately; it just allows a future automatic close on a verified detection.) Whatever the animal does, the trap stays in Scouting with the door open until you change it.
+## Before you start
 
-## Activating Scouting Mode (walkthrough)
+Scouting can only start when the trap is **Open / Unarmed**. If the door is closed, tap **Open** first and wait for the trap status to update.
 
-**Open** / **Close** / **Arm** are on the trap card. **Scout** lives one tap away inside that card's **Controls** popup.
+The trap also checks for an obstruction before scouting begins. If something is already in the capture area, clear it and try again.
 
-1. Sign in to the OcuTrap app at [app.ocutrap.com](https://app.ocutrap.com) (or the mobile app). You'll land on your trap list.
-2. Find the trap you want to scout. Each card shows its status, battery %, and a green dot if online.
-3. Confirm the status reads **Open / Unarmed**. If the door is closed, tap **Open** on the trap card first and wait for the status to update.
-4. Tap **Controls** on the trap card. A popup opens with a top row of icons: **GPS**, **Data**, **Buzzer**, **Reboot**, **Hibernation**, **Scout**.
-5. Tap **Scout** (rightmost, eye icon). The trap runs an obstruction check — if anything is in the capture zone, scouting is refused so you can clear it and retry.
-6. Once the check passes, the card status flips to **Scouting** and the popup icon flips to **Stop Scout** (eye with slash).
+## Scouting vs. Armed
 
-> **Tip:** If **Scout** seems unresponsive, the door usually isn't fully open, the trap is offline, or **Last heard** at the bottom of the popup is stale. Wait for the next check-in or re-open the door.
+|                            | Armed                    | Scouting                  |
+| -------------------------- | ------------------------ | ------------------------- |
+| Detects animals            | Yes                      | Yes                       |
+| Sends alerts               | Yes, if enabled          | Yes, if enabled           |
+| Takes photos               | Yes                      | Yes                       |
+| Closes the door            | Yes, after a detection   | No                        |
+| Best for                   | Capturing an animal      | Observing activity        |
 
-## What you'll see while scouting
+While in Scouting Mode, the door does not close automatically. The only controls that move the door are **Open** and **Close**. Switching from Scouting to **Arm** does not move the door immediately, but it does allow the trap to close on a future detection.
 
-* **One Scout Alert** when an animal first enters the pre-capture zone (if enabled).
-* **One Scout Trigger** when an animal reaches the trigger distance. The trap takes a photo, but the door **does not close**.
-* **Periodic photos** while the animal stays in zone — about **every 5 seconds for the first minute** (entry burst), then **about every 15 seconds** for as long as the animal sticks around. This is effectively as fast as the trap can send photos over cellular, and the timing is built into the firmware — it isn't a setting in the app.
-* **Alert throttling** — Each alert type (Scout Alert and Scout Trigger) can fire only once every 5 minutes across the trap. That 5-minute quiet window continues even if the animal leaves, the area is clear for 30 seconds, or another animal arrives. **Photos are not throttled**: every detection still produces imagery on the scouting cadence (~5 s for the first minute, ~15 s after), so you see what's happening even during the alert quiet window. **The door does not move**, and the trap stays in Scouting Mode the whole time.
+## Start Scouting
 
-## Exiting Scouting Mode
+1. Sign in at [app.ocutrap.com](https://app.ocutrap.com) or open the mobile app.
+2. Find the trap you want to scout.
+3. Make sure the trap status is **Open / Unarmed**.
+4. Tap **Controls** on the trap card.
+5. Tap **Scout** (eye icon).
+6. When the check passes, the trap status changes to **Scouting**.
 
-1. **Stop Scout** in the Controls popup — returns the trap to Unarmed, door still open.
-2. **Close** on the trap card — closes the door and returns to Unarmed in one step.
+If **Scout** does not start, the door may not be fully open, the trap may be offline, or the trap may not have checked in recently. Wait for the next check-in, then try again.
 
-## When Scouting Mode **isn't** what you want
+## What to expect
 
-* **Capturing a confirmed animal** — tap **Arm** on the trap card.
-* **A one-off photo** — open Controls and tap **Request Image** (doesn't change trap state).
-* **Testing the door mechanism** — use **Open** / **Close** on the trap card.
+* **Scout Alert**: Sent when an animal first enters the pre-capture area, if this alert is enabled.
+* **Scout Trigger**: Sent if the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close.
+* **Photos**: Sent about every 5 seconds for the first minute, then about every 15 seconds while the animal remains in the detection area.
 
-## What if I switch to Armed and the trap actually captures?
+Each alert type can be sent once every 5 minutes. During that 5-minute window, you may still receive new photos, but you should not receive another alert of the same type.
 
-The door stays locked until you manually open it — no auto-release on a timer or based on the animal's behavior. See [After a Capture](after-capture.md) for the full guarantee, the **Open** vs **Unarm** distinction, and FAQs.
+## Stop Scouting
+
+You can stop Scouting Mode in either of these ways:
+
+* Tap **Stop Scout** in the Controls popup. The trap returns to Unarmed and the door stays open.
+* Tap **Close** on the trap card. The door closes and the trap returns to Unarmed.
+
+## Use Armed mode instead when
+
+* You are ready to capture a confirmed animal.
+* You want the door to close after a detection.
+
+For capture behavior after the door closes, see [After a Capture](after-capture.md).
 
 ## Troubleshooting
 
-* **"Refused with an obstruction error"** — clear the capture zone, then retry.
-* **"Refused with a door-not-open error"** — tap **Open** on the trap card, wait for the status to read **Open**, then retry **Scout**.
-* **Repeated alerts from the same animal** — should not happen within 5 minutes. Each alert type can fire only once every 5 minutes, even if the animal leaves, the area clears for 30 seconds, or a different animal arrives. If you see new Scout Alerts more often than that, please report it.
+* **Obstruction error**: Clear the capture area, then tap **Scout** again.
+* **Door-not-open error**: Tap **Open**, wait for the trap status to show **Open**, then tap **Scout** again.
+* **Too many alerts**: Each alert type should only send once every 5 minutes. If you receive the same alert type more often than that, please report it.
