@@ -15,6 +15,8 @@
   * [Billing](getting-started/app/billing.md)
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
+  * [Scouting Mode](getting-started/app/scouting-mode.md)
+  * [After a Capture](getting-started/app/after-capture.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
     * [More Settings Overview](getting-started/app/trap-settings/more-settings-overview.md)
@@ -52,7 +54,6 @@
 * [Cold Weather](faqs/cold-weather.md)
 * [Camera](faqs/camera.md)
 * [Power Modes](faqs/power-modes.md)
-* [Unarmed Hibernation](faqs/unarmed-hibernation.md)
 * [Miscellaneous](faqs/miscellaneous/README.md)
   * [Password Policy for Users](faqs/miscellaneous/password-policy-for-users.md)
 * [Accessory Port](faqs/accessory-button-port.md)
@@ -87,6 +88,7 @@
 ## Device Management
 
 * [Selling or Transferring a Trap](device-management/selling-or-transferring-a-trap.md)
+* [Trap Test Mode](device-management/trap-test-mode.md)
 
 ## Account and Billing
 
@@ -99,6 +101,7 @@
 
 ## Appendix and Resources
 
+* [Downloads](appendix-and-resources/downloads.md)
 * [Media Kit](appendix-and-resources/media-kit.md)
 * [Testimonials](appendix-and-resources/testimonials.md)
 * [Case Study](appendix-and-resources/case-study.md)

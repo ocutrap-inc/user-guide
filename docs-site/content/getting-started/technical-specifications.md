@@ -37,16 +37,16 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 | Specification                      | Value                                   |
 | ---------------------------------- | --------------------------------------- |
 | **Battery Type**                   | Rechargeable KBT 12V Lithium-ion        |
-| **Standard Capacity**              | 10,000 mAh (10Ah) — US shipments        |
-| **Canadian Variant**               | 5,000 mAh (5Ah) — Canadian shipments    |
+| **Standard Capacity**              | 10,000 mAh (111 Wh) — new traps / US shipments |
+| **Canadian Variant**               | 5,200 mAh — Canadian shipments          |
 | **Operating Voltage Range**        | 7.0V – 15.0V                            |
 | **Low Battery Warning (20%)**      | 10.4V (default, configurable)           |
 | **Critical Battery Warning (10%)** | \~9.5V                                  |
 | **Auto Power-Off Threshold**       | 9.6V (default, configurable 7.0V–12.0V) |
-| **Runtime (10Ah)**                 | 4+ weeks per charge (typical usage)     |
-| **Runtime (5Ah)**                  | \~21 days per charge (typical usage)    |
-| **Charger (10Ah)**                 | 2A @ 12V, \~5–6 hours full charge       |
-| **Charger (5Ah)**                  | 1A @ 12V, \~5–6 hours full charge       |
+| **Runtime (10000 mAh)**            | ~40+ days per charge (typical usage)    |
+| **Runtime (5200 mAh)**             | \~21 days per charge (typical usage)    |
+| **Charger (10000 mAh)**            | 2A @ 12V, \~5–6 hours full charge       |
+| **Charger (5200 mAh)**             | 1A @ 12V, \~5–6 hours full charge       |
 
 ***
 
@@ -128,7 +128,7 @@ OcuTrap uses a sophisticated dual-zone verification system to prevent false trig
 ## What's in the Box
 
 * OcuTrap R1 Smart Cage Unit
-* 12V Lithium-ion Battery (10Ah US / 5Ah Canada)
+* 12V Lithium-ion Battery (10000 mAh US / 5200 mAh Canada)
 * Battery Charger (2A or 1A depending on battery)
 * Quick-Start Guide
 * Assembly hardware

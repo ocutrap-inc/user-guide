@@ -113,7 +113,7 @@ Once complete, your new trap will appear in your dashboard.
 
 Congratulations! You’ve successfully assembled and set up your OcuTrap.
 
-If you have any questions or need assistance, [`contact our team`](https://ocutrap.com/pages/contact).
+If you have any questions or need assistance, [contact our team](https://ocutrap.com/pages/contact).
 
 Thank you for choosing OcuTrap, and happy trapping!
 

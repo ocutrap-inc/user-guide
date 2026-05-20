@@ -56,7 +56,7 @@ This setting is configured per trap:
 
 * See what’s approaching your trap before it’s too late
 * Detect non-target animals early (like pets or skunks)
-* Monitor animal behavior without needing a capture
+* Monitor animal behavior without needing a capture — or use [Scouting Mode](../app/scouting-mode.md) to watch activity without closing the door
 * Improve trap placement and setup based on activity patterns
 
 ### Need to Turn It Off?

@@ -33,7 +33,7 @@ Cold temperatures significantly affect lithium-ion battery performance:
 
 * **Reduced Capacity:** Battery capacity decreases in cold temperatures, sometimes dramatically
 * **Shorter Runtime:** Expect shorter runtime during winter deployments
-* **Recommended Solution:** Consider the 10Ah battery (standard for US shipments) for extended cold-weather deployments to compensate for reduced capacity
+* **Recommended Solution:** Consider the 10,000 mAh battery (standard for new traps and US shipments) for extended cold-weather deployments to compensate for reduced capacity
 
 ### Battery Care Tips
 

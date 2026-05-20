@@ -63,7 +63,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: The lowest power state where the device is completely inactive. No communication is possible in this mode.
 * **When Active**:
   * If the **battery is too low** to continue operation.
-  * If the device is **idle for 1 hour and 45 minutes** and **not armed**. _(Unless prevent idle hibernation is enabled — Coming Soon)_
+  * If the device is **idle for 1 hour and 45 minutes** and **not armed**.
   * If the **power button is held down for 3+ seconds**.
 * **Power Consumption**: Minimal.
 * **Indicators**: LED is powered off.
@@ -101,12 +101,6 @@ To ensure users are aware of power status, **OcuTrap sends battery warnings** at
 * **Hibernation** – Final alert before shutdown.
 
 These alerts help prevent unexpected downtime and allow users to take action before the device powers off.
-
-***
-
-### Future Enhancements _(Coming Soon)_
-
-* **Prevent Idle Hibernation** setting to keep the device awake indefinitely when unarmed.
 
 ***
 
