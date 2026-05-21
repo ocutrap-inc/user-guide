@@ -1,3 +1,7 @@
+---
+pdf-exclude: true
+---
+
 # Testimonials
 
 Real feedback from OcuTrap users in the field.
