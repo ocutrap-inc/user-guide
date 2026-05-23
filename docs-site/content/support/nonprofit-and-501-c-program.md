@@ -97,4 +97,4 @@ Yes, for qualifying organizations. Include PO details when you contact us.
 ### Contact
 
 Questions or ready to apply\
-[**https://ocutrap.com/pages/contact**](https://ocutrap.com/pages/contact)
+[contact page](https://ocutrap.com/pages/contact)

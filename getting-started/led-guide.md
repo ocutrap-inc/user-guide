@@ -79,4 +79,4 @@ To manually open or close the trap door:
 
 * LED brightness may dim in low power mode to conserve battery.
 * No LED means the device is off or in hibernation.
-* Any pattern not listed here may indicate a malfunction — [contact support ](../support/support.md)if unsure.
+* Any pattern not listed here may indicate a malfunction — [contact support](../support/support.md) if unsure.
