@@ -8,7 +8,7 @@ description: >-
 
 ## 1. Accessing Your Account Page
 
-1. **Log in** to your OcuTrap account at [base.ocutrap.com](https://base.ocutrap.com/).
+1. **Log in** to your OcuTrap account at [app.ocutrap.com](https://app.ocutrap.com/).
 2. Once logged in, either:
    * Click the **Account** link in the navigation bar, **OR**
    * Click the **burger menu** (three horizontal lines) and select **Account**.

@@ -102,7 +102,7 @@ This video shows how your OcuTrap works once it's set up and ready to catch anim
 
 If you're getting unwanted captures:
 
-1. **Increase capture distance** — Makes the trigger less sensitive
+1. **Decrease capture distance** — Requires the animal to be closer before the door closes (reduces false triggers from rain, debris, or distant movement)
 2. **Check sensor window** — Clean any dirt, debris, or condensation
 3. **Reposition the trap** — Avoid areas with blowing debris or heavy rain entry
 4. **Review pre-capture photos** — See what's triggering the trap

@@ -52,7 +52,15 @@ For more details on permission levels, see [User Levels](sharing-traps/user-leve
 
 <summary>How does OcuTrap differentiate between targeted and non-targeted animals?</summary>
 
-OcuTrap utilizes advanced sensor technology that can distinguish between different animal species based on size, shape, and other unique characteristics. This ensures that only the intended species are captured, preventing unintended captures.
+OcuTrap does **not** automatically identify species. Any animal that enters the trap can trigger a capture.
+
+To manage non-target animals:
+
+* Use **remote release** from the app to open the door without visiting the trap.
+* Review **capture and pre-capture photos** to see what triggered the trap.
+* Adjust **trap placement**, bait, and **Capture Distance** to reduce unwanted triggers.
+
+We are developing smarter species identification for future updates. Until then, remote release and careful setup are the best tools for non-target situations.
 
 </details>
 
@@ -288,8 +296,8 @@ OcuTrap's advanced sensors are designed to minimize false triggers. In case of a
 
 * **Remote Release:** You can release the animal remotely using the app without visiting the trap in person.
 * **Notification Review:** Check the captured images to verify whether an animal was caught before taking action.
-* **Sensitivity Adjustment:** Adjust the sensor sensitivity in trap settings if you experience frequent false triggers.
-* **Pre-Capture Notifications:** Enable pre-capture notifications to review images before the door closes automatically.
+* **Capture Distance:** Adjust **Capture Distance** in trap settings if you experience frequent false triggers — smaller values require the animal to be closer before the door closes.
+* **Pre-Capture Notifications:** Enable pre-capture notifications to get an early photo and alert before a capture, so you can decide whether to open the trap remotely.
 
 These features help ensure efficient operation while minimizing disruptions from false triggers.
 

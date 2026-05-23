@@ -88,9 +88,9 @@ If the LED is **blinking green for a long time**, the trap may not have enough c
 2. Open the trap **settings** or **control panel**.
 3. Check **Last Activity** or last heard time.
 4. Tap **refresh** or **request latest data** if that option is available.
-5. Confirm you are viewing the **correct Trap ID**.
+5. Confirm you are viewing the **correct Trap ID** (the serial number from the POD label, shown in the app after registration).
 
-If the trap was recently added, make sure the **Trap ID or serial number** matches the device inside the POD.
+If the trap was recently added, make sure the **Trap ID** in the app matches the **serial number** on the label inside the POD. See [Adding a trap to your account](../getting-started/app/adding-a-trap-to-your-account.md).
 
 ## Step 6: Inspect Connections
 

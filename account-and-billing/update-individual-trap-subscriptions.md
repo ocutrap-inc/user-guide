@@ -18,7 +18,7 @@ description: >-
 ### Update Your Subscription in a Few Steps
 
 1. **Log in to the OcuTrap Console**\
-   Go to [your console](https://base.ocutrap.com/console/) and sign in.
+   Go to [your console](https://app.ocutrap.com/console/) and sign in.
 2. **Open Your Trap Settings**\
    Find the trap in your list and click **Settings**.
 3. **Check the Plan Status**\

@@ -55,7 +55,7 @@ Heavy rain or debris falling through the trap can sometimes trigger captures.
 - **Signal quality filtering** rejects weak or noisy readings
 
 **If you're still getting false triggers:**
-1. Increase the **Capture Distance** setting (move trigger point further from sensor)
+1. **Decrease** the **Capture Distance** setting (smaller = animal must be closer before the door closes)
 2. Ensure the trap is positioned to minimize rain entry
 3. Check that the sensor window is clean and undamaged
 4. Consider repositioning the trap to a more sheltered location
@@ -278,4 +278,4 @@ The trap sends tilt alerts when not level during armed mode.
 If you've tried the solutions above and still have issues:
 
 1. [Contact Support](../support/support.md) with details about your issue
-3. Include: trap serial number, battery voltage, LED status, and steps already tried
+2. Include: trap serial number, battery voltage, LED status, and steps already tried

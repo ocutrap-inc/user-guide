@@ -69,7 +69,6 @@
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
-* [Connection Issues](troubleshooting/troubleshooting-connection-issues-with-ocutrap.md)
 * [Condensation on the Camera](troubleshooting/condensation-on-the-camera.md)
 * [Motor Connector Use](troubleshooting/motor-connector-use.md)
 * [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)

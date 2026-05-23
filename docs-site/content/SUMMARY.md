@@ -15,6 +15,8 @@
   * [Billing](getting-started/app/billing.md)
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
+  * [Scouting Mode](getting-started/app/scouting-mode.md)
+  * [After a Capture](getting-started/app/after-capture.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
     * [More Settings Overview](getting-started/app/trap-settings/more-settings-overview.md)
@@ -67,7 +69,6 @@
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
-* [Connection Issues](troubleshooting/troubleshooting-connection-issues-with-ocutrap.md)
 * [Condensation on the Camera](troubleshooting/condensation-on-the-camera.md)
 * [Motor Connector Use](troubleshooting/motor-connector-use.md)
 * [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)
@@ -88,6 +89,7 @@
 ## Device Management
 
 * [Selling or Transferring a Trap](device-management/selling-or-transferring-a-trap.md)
+* [Trap Test Mode](device-management/trap-test-mode.md)
 
 ## Account and Billing
 
@@ -100,6 +102,7 @@
 
 ## Appendix and Resources
 
+* [Downloads](appendix-and-resources/downloads.md)
 * [Media Kit](appendix-and-resources/media-kit.md)
 * [Testimonials](appendix-and-resources/testimonials.md)
 * [Case Study](appendix-and-resources/case-study.md)
