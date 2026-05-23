@@ -138,6 +138,8 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 
 ### Trap Shows "Offline"
 
+For a step-by-step field guide — battery, hibernation, LED patterns, cellular coverage, and what to send Support — see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
+
 **OcuTrap's Auto-Recovery:**
 The trap has automatic stuck-offline detection. After 20 minutes offline, it will:
 1. Disconnect from the network
@@ -146,11 +148,7 @@ The trap has automatic stuck-offline detection. After 20 minutes offline, it wil
 4. Retry with increasing intervals (10, 20, 30... up to 60 minutes)
 5. Reset the system after 5 failed attempts
 
-**If the trap stays offline:**
-1. Check battery level — low battery can affect connectivity
-2. Verify cellular coverage in the deployment area
-3. Press the power button to wake the device
-4. Contact support if the trap remains offline for extended periods
+If the trap stays offline after the steps in the guide above, contact support.
 
 ### Commands Not Reaching Trap
 

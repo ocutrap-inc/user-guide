@@ -1,8 +1,8 @@
 # Trap Not Sending Commands
 
-Issue
-
 If your OcuTrap is not responding to commands and is displaying error codes, it may have entered hibernation mode or lost connection.
+
+> For a full step-by-step guide when the trap shows offline or will not connect, see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
 
 ### Possible Causes
 

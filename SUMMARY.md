@@ -65,6 +65,7 @@
 
 ## Troubleshooting
 
+* [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)

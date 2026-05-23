@@ -1,5 +1,7 @@
 # Connection Issues
 
+> **Start here:** For the full customer guide — quick checklist, LED table, hibernation, cellular coverage, and what to send Support — see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
+
 If your OcuTrap is having trouble connecting, follow these steps to troubleshoot the issue:
 
 #### 1. **Check the Battery**
