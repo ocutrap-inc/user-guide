@@ -72,6 +72,7 @@
 * [Condensation on the Camera](troubleshooting/condensation-on-the-camera.md)
 * [Motor Connector Use](troubleshooting/motor-connector-use.md)
 * [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)
+* [Wire Exposed](troubleshooting/wire-exposed.md)
 
 ## Support
 
