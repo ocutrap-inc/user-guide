@@ -37,7 +37,8 @@ The trap tests motor connectivity before arming. If the motor doesn't respond, a
 1. Check the motor connector is securely attached
 2. See [Motor Connector Tightness Check](motor-connector-tightness-check.md)
 3. Verify the motor cable isn't damaged
-4. Contact support if the issue persists
+4. If red and black internal wires are visible at the connector, see [Wire Exposed](wire-exposed.md)
+5. Contact support if the issue persists
 
 ---
 
@@ -190,10 +191,11 @@ If the trap enters hibernation unexpectedly:
 
 **Solution:**
 1. Check motor connector is securely attached
-2. Verify no physical obstruction is blocking the door
-3. Check battery level — door operation requires adequate power
-4. Use the manual door control: Double-press User Button + hold for 5 seconds
-5. Check for motor fault indicator (orange LED)
+2. If red and black internal wires are visible at the connector, see [Wire Exposed](wire-exposed.md)
+3. Verify no physical obstruction is blocking the door
+4. Check battery level — door operation requires adequate power
+5. Use the manual door control: Double-press User Button + hold for 5 seconds
+6. Check for motor fault indicator (orange LED)
 
 ### Door Not Latching Behind the Locking Bar
 
