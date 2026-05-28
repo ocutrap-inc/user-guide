@@ -1,3 +1,8 @@
+---
+title: OcuTrap Knowledge Base
+description: Set up, operate, and troubleshoot your OcuTrap smart trap.
+---
+
 # OcuTrap Knowledge Base
 
 Everything you need to set up, operate, and troubleshoot your OcuTrap smart trap — hardware guides, app help, billing, and support.

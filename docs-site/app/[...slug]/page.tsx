@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!doc) return {};
   return {
     title: doc.title,
-    description: `${doc.section ? doc.section + " — " : ""}OcuTrap Documentation`,
+    description: `${doc.section ? doc.section + " — " : ""}OcuTrap Knowledge Base`,
   };
 }
 
@@ -43,7 +43,7 @@ export default async function DocPage({
         {/* Breadcrumb */}
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/" style={{ color: "var(--color-muted)", textDecoration: "none" }}>
-            OcuTrap Docs
+            OcuTrap Knowledge Base
           </Link>
           {doc.section && (
             <>

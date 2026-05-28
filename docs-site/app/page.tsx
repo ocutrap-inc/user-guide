@@ -17,7 +17,7 @@ export default async function HomePage() {
     <div className="page-content">
       <article className="doc-body">
         <div className="breadcrumb">
-          <span>OcuTrap Docs</span>
+          <span>OcuTrap Knowledge Base</span>
         </div>
 
         <h1 className="prose" style={{ fontSize: "1.875rem", fontWeight: 700, marginBottom: "1.5rem", color: "var(--color-heading)" }}>

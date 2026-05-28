@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { default: "OcuTrap Knowledge Base", template: "%s | OcuTrap Docs" },
+  title: { default: "OcuTrap Knowledge Base", template: "%s | OcuTrap Knowledge Base" },
   description: "Documentation and support for OcuTrap trap management.",
 };
 
