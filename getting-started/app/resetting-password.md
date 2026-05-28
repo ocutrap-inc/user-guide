@@ -4,5 +4,5 @@ See [Resetting Password](../../account-and-billing/resetting-password.md) in Acc
 
 Quick steps:
 
-1. Go to [app.ocutrap.com/signuplogin](https://app.ocutrap.com/signuplogin).
+1. Go to [base.ocutrap.com/signuplogin](https://base.ocutrap.com/signuplogin).
 2. Click **Forgot password** and follow the email instructions.

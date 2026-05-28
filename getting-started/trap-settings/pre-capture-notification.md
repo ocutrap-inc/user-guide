@@ -37,7 +37,7 @@ Alert text looks like:
 
 This setting is configured per trap:
 
-1. Open the OcuTrap app or [app.ocutrap.com](https://app.ocutrap.com)
+1. Open the OcuTrap app or [base.ocutrap.com](https://base.ocutrap.com)
 2. Tap on the trap you want to edit
 3. Go to **Settings → More Settings**
 4. Find the **Pre-Capture Notification** option

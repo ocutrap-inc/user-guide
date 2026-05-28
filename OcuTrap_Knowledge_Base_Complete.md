@@ -115,7 +115,7 @@ Gather the 4 three-inch bolts, handle guard, tube, washers, 2 top metal brackets
 
 ### Step 5: Software Setup
 
-1. Create an account at app.ocutrap.com
+1. Create an account at base.ocutrap.com
 2. Locate your POD serial number printed on the top of the POD unit
 3. Go to Account → Add Trap and enter the serial number
 4. Your new trap will appear on the dashboard, ready to configure
@@ -172,7 +172,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 
 ## The OcuTrap App
 
-The OcuTrap app is your command center for managing traps, viewing captures, and configuring settings. Create your account at app.ocutrap.com/signuplogin. The mobile app is available for both iOS (App Store) and Android (Google Play).
+The OcuTrap app is your command center for managing traps, viewing captures, and configuring settings. Create your account at base.ocutrap.com/signuplogin. The mobile app is available for both iOS (App Store) and Android (Google Play).
 
 ### Adding a Trap to Your Account
 
@@ -471,7 +471,7 @@ A: Yes. Name traps clearly, use map view for tracking, share with team members, 
 A: The door closes rapidly and can cause injury. Always keep children away from the trap and never allow unsupervised access.
 
 **Q: What app platforms are supported?**
-A: iOS (App Store) and Android (Google Play), plus the web console at app.ocutrap.com.
+A: iOS (App Store) and Android (Google Play), plus the web console at base.ocutrap.com.
 
 **Q: Is it suitable for residential areas?**
 A: Yes. OcuTrap is effective in urban and suburban environments, including near schools, hospitals, and other sensitive areas.
@@ -788,7 +788,7 @@ Remove the battery and leave the POD cracked open for 24 hours in a warm, ventil
 
 ## Bug Reporting
 
-Report bugs promptly at app.ocutrap.com/bug_report. Include a detailed description, steps to reproduce, screenshots or photos, and expected versus actual behavior. You can also email reports to info@ocutrap.com.
+Report bugs promptly at base.ocutrap.com/bug_report. Include a detailed description, steps to reproduce, screenshots or photos, and expected versus actual behavior. You can also email reports to info@ocutrap.com.
 
 ---
 
@@ -845,7 +845,7 @@ To apply, submit a contact form at ocutrap.com with the title "Nonprofit pricing
 
 ## Billing Overview
 
-Manage your billing through the OcuTrap account portal. Log in at app.ocutrap.com, navigate to Account, and scroll to the Billing section. Click "Manage Subscriptions" to open the secure Stripe billing portal.
+Manage your billing through the OcuTrap account portal. Log in at base.ocutrap.com, navigate to Account, and scroll to the Billing section. Click "Manage Subscriptions" to open the secure Stripe billing portal.
 
 ### Portal Capabilities
 
@@ -890,7 +890,7 @@ Each trap requires its own active subscription. If a trap's plan shows as cancel
 
 ## Managing Your Subscription
 
-1. Go to app.ocutrap.com and log in
+1. Go to base.ocutrap.com and log in
 2. Click Account → Manage Subscription
 3. Select the trap to update
 
@@ -900,7 +900,7 @@ From here you can switch plans (Monthly/Annual), update your payment method, or 
 
 ## Resetting Your Password
 
-Visit app.ocutrap.com/signuplogin and select either:
+Visit base.ocutrap.com/signuplogin and select either:
 
 - **Forgot Password:** Standard password reset via email
 - **Magic Link:** One-time login link sent to your email (expires after 1 hour)
@@ -911,7 +911,7 @@ Visit app.ocutrap.com/signuplogin and select either:
 
 > ⚠️ **Warning:** Account deletion is permanent and cannot be undone. All data, traps, and subscriptions will be removed.
 
-1. Visit app.ocutrap.com/delete-account
+1. Visit base.ocutrap.com/delete-account
 2. Click "Delete Account" (log in if prompted)
 3. Type "Delete" (case sensitive) in the confirmation box
 4. Click "Delete Account" to confirm
@@ -963,7 +963,7 @@ The new owner activates a subscription if required. Note: the warranty period da
 
 > ⚠️ **Warning:** Deleting a trap is permanent and cannot be undone. The associated subscription will be automatically canceled.
 
-1. Visit app.ocutrap.com/account and scroll to Devices
+1. Visit base.ocutrap.com/account and scroll to Devices
 2. Click "Delete Devices"
 3. Select the trap from the dropdown
 4. Type the exact trap name (before the dash) in the red confirmation box
