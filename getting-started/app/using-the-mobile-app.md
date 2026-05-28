@@ -28,7 +28,7 @@ The mobile app uses the **same account** as the web app:
 
 ## What You Can Do
 
-From the mobile app you can:
+The mobile app has the **same features as the web dashboard**. From the app you can:
 
 * View live trap status and **capture images**.
 * **Open, close, arm, and unarm** traps remotely.
@@ -49,9 +49,6 @@ Push notifications are the fastest way to know about a capture. Two things need 
 {% hint style="info" %}
 If you're set up for push but not receiving alerts, the phone-level permission in the step above is the most common thing to check.
 {% endhint %}
-
-<!-- REVIEWER (optional): The capabilities above are described from the web app; confirm they match the
-     mobile app for the live product. Store links verified: Apple ID 1539244938, Google Play com.ocutrap.ocutrap. -->
 
 ***
 
