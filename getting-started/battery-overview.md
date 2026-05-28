@@ -19,7 +19,7 @@ Battery capacity depends on your shipment region:
   * Charger: **1A (12V)**
   * Trap cable: **male XT30** on the yellow harness (trap uses **female XT30**).
 
-The two packs use **opposite XT30 genders** so they cannot be plugged into the wrong trap by mistake. If you need to run a different capacity than your trap was built for, contact [info@ocutrap.com](mailto:info@ocutrap.com) to request the matching connector and battery holder.
+The two packs use **opposite XT30 genders** so they cannot be plugged into the wrong trap by mistake. If you need to run a different capacity than your trap was built for, contact [support@ocutrap.com](mailto:support@ocutrap.com) to request the matching connector and battery holder.
 
 For full electrical specs, see [Technical Specifications](technical-specifications.md).
 

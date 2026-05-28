@@ -781,14 +781,14 @@ Remove the battery and leave the POD cracked open for 24 hours in a warm, ventil
 | Channel | Details |
 |---|---|
 | Live Chat | Message bubble on OcuTrap.com homepage (bottom right) |
-| Email | info@ocutrap.com or via the contact page |
+| Email | support@ocutrap.com or via the contact page |
 | Website Status | ocutrap.statuspage.io |
 
 ---
 
 ## Bug Reporting
 
-Report bugs promptly at base.ocutrap.com/bug_report. Include a detailed description, steps to reproduce, screenshots or photos, and expected versus actual behavior. You can also email reports to info@ocutrap.com.
+Report bugs promptly at base.ocutrap.com/bug_report. Include a detailed description, steps to reproduce, screenshots or photos, and expected versus actual behavior. You can also email reports to support@ocutrap.com.
 
 ---
 
@@ -975,7 +975,7 @@ The new owner activates a subscription if required. Note: the warranty period da
 
 ## Media Kit
 
-OcuTrap provides high-quality media assets for press, partners, and promotional use. Available assets include logos in PNG, JPEG, and SVG formats, social media logos for LinkedIn, Google, and YouTube, app icons, and product brochures. Contact info@ocutrap.com or visit the media kit page for downloads.
+OcuTrap provides high-quality media assets for press, partners, and promotional use. Available assets include logos in PNG, JPEG, and SVG formats, social media logos for LinkedIn, Google, and YouTube, app icons, and product brochures. Contact support@ocutrap.com or visit the media kit page for downloads.
 
 ---
 
@@ -1039,4 +1039,4 @@ OcuTrap founders Brian Quispe '20 '22G and Graham Patterson '20 won the Joan F. 
 **Document Version:** v1.0 | April 2026
 
 *OcuTrap — Smart Wildlife Management*
-*www.ocutrap.com | info@ocutrap.com*
+*www.ocutrap.com | support@ocutrap.com*
