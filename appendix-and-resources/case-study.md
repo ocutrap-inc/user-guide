@@ -10,7 +10,7 @@ pdf-exclude: true
 
 **Background**: OcuTrap represents a significant leap in animal trapping technology. Designed to offer efficient, humane, and smart solutions for both domestic and wild animal control, OcuTrap combines advanced sensor technology with remote monitoring capabilities, drastically reducing the need for manual trap inspections.
 
-<figure><img src="https://images.unsplash.com/photo-1577936558471-8b80b49b0117?crop=entropy&#x26;cs=srgb&#x26;fm=jpg&#x26;ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxyYWNjb29ufGVufDB8fHx8MTcwMjMyNTE3MHww&#x26;ixlib=rb-4.0.3&#x26;q=85" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/case-study-raccoon.jpg" alt=""><figcaption></figcaption></figure>
 
 **Objective**: The primary goal of OcuTrap is to modernize animal trapping, making it more efficient, humane, and safe for both the animals and the users. This case study explores the effectiveness of OcuTrap in a real-world scenario.
 

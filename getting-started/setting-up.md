@@ -10,7 +10,7 @@ Carefully unpack your OcuTrap R1 and check that all components are included:
 
 **Cage**&#x20;
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeh-fdhNLgwyX0dd75wNVqjVpgWZ80zkjjYbnM-c5392_RBs1SWn615Se6SPCq7zXFAcxi82rW_BXt_eKUnI8jBiw2mzrvK7c9UV24Dk_I9mrDSJSCkkPvPtbambFhPghiJJ0SL?key=-7FbCauuULkCNnpd7jVxOIpl)
+![](<../.gitbook/assets/setup-unboxing.png>)
 
 
 
@@ -30,7 +30,7 @@ Unpack the Components
 Charge the Battery
 
 1. Fully charge the blue battery until the light is green using the accompanying charger found in the small white box.\
-   ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeJAv9JVa-Yz74SSbiMbgH7QOb_fDpETGc7enuiOVyM8iptiXcG9v70auXDYWedxc8IBfpy5y64XLtJ19dFkp0unFSLMzerBiV6NsYKM75u_G1NGN7usAQcyBmvlqpk3HgrFuCX7g?key=-7FbCauuULkCNnpd7jVxOIpl)
+   ![](<../.gitbook/assets/setup-charging-battery.png>)
 
 Introduction Welcome to the OcuTrap Setup Manual. This guide will walk you through the process of assembling your OcuTrap step by step. The setup process is divided into four main sections: Door, Handle, POD Setup, and App Setup
 
@@ -79,7 +79,7 @@ Before beginning, ensure you have the following parts for the door assembly:
 5. Check that the door moves smoothly and is properly aligned.
 
 \
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcLujqDGMEW_dSvHxNs6dSqnxeR-084fW5G06A_SpnIZZtYor1iAST3XD6vpNrXWY3LppbQGchi9qZxB_sZpXL4mtViXR-RJGFxg028qMVMpyNcCEWj_l65-zzLN7jWVeYrYxXs?key=-7FbCauuULkCNnpd7jVxOIpl)![](<../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png>)
+![](<../.gitbook/assets/setup-motor-installation.png>)![](<../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png>)
 
 ### Section 2: Handle Setup
 
