@@ -5,7 +5,7 @@ description: >-
 
 # Your Data & Privacy
 
-This page explains, in plain terms, what information your OcuTrap collects and the controls you have over it. For the full legal text, see our [Privacy Policy](legal-disclaimers-and-compliance-information.md).
+This page explains, in plain terms, what information your OcuTrap collects and the controls you have over it. For the full legal text, see the **Privacy Policy** and **Data Use Policy**, linked from [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md).
 
 ***
 
@@ -57,7 +57,7 @@ OcuTrap uses automated image recognition to help identify captures. How that wor
 
 ## See also
 
-* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md) — Privacy Policy, Animal Recognition Policy, Terms of Service.
+* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md) — Privacy Policy, Data Use Policy, Animal Recognition Policy, and more.
 * [Sharing Traps](../faqs/sharing-traps/README.md) and [User Levels](../faqs/sharing-traps/user-levels.md)
 * [Deleting an Image](../getting-started/app/deleting-an-image.md)
 * [Account Deletion](../account-and-billing/account-deletion.md)
