@@ -1,33 +1,22 @@
 # Trap Control
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt="" width="375"><figcaption></figcaption></figure>
+Open **Controls** from a trap's detail screen to send commands to the trap and check its status. The Controls popup looks like this:
 
-### Power
+<figure><img src="../../.gitbook/assets/controls-popup.png" alt="The Controls popup with command icons"><figcaption></figcaption></figure>
 
-* **Battery Type & Voltage:** Stay informed about the trap’s power source, including battery type and voltage, for consistent energy monitoring.
+### Command Icons
 
-### Device
+* **GPS** — Request an updated GPS location for the trap. See [GPS](../../faqs/gps.md).
+* **Accessory** — Activate the trap's accessory port for connected add-ons. See [Accessory Port](../../faqs/accessory-button-port.md).
+* **Data** — Request the trap's latest data and sensor readings.
+* **Buzzer** — Sound the trap's buzzer — handy for locating the trap or confirming it's responsive.
+* **Reboot** — Restart the device.
+* **Hibernation** — Put the trap into hibernation (sleep until you press the power button or change the battery). See [Power Modes](../../faqs/power-modes.md).
+* **Request Image** — Request a photo from the trap's camera. See [Manually taking an image](../../faqs/manually-taking-an-image.md).
 
-*   #### Firmware & Temperature
+### Data & Network Details
 
-    Shows the device's firmware version and temperature, aiding in effective management and monitoring.
-
-### Network
-
-* **Signal Quality:** Provides an evaluation of the communication link's integrity.
-* **Network Operator:** Identifies the carrier facilitating the trap's connection.
-* **Signal Strength:** Measures the power level received by the trap.
-* **Last Activity:** Marks the most recent timestamp of the trap's network communication.
-
-### Data Charts
-
-Visual charts provide graphical analysis of the trap's performance over time.
-
-### Remote Actions
-
-Interact directly by:
-
-* Requesting latest data
-* Sending a buzz
-* Rebooting the device
-* Hibernation (go to sleep until battery change or power button press)
+* **Data** (dropdown) — Expand to view device data such as battery type and voltage, firmware version, and temperature.
+* **Network** (dropdown) — Expand to view connection details: signal quality, network operator, signal strength, and last activity.
+* **View Data Charts** — Open graphical charts of the trap's performance over time.
+* **Last heard** — Shows when the trap last checked in with the cloud.
