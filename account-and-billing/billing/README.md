@@ -24,7 +24,7 @@ You will be taken to your **Account** page, which displays personal information 
 1. From the **Account** page, scroll to the **Billing** section.
 2. Click on **Manage Subscriptions** to open the secure billing portal.
 
-## <img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM (1).png" alt="" data-size="original">
+## <img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM.png" alt="" data-size="original">
 
 This portal allows you to view and manage all aspects of your subscription, including:
 
@@ -76,8 +76,6 @@ Depending on your plan or provider settings, you might see other statuses such a
 #### 4.2 Can I view my billing history?
 
 Yes. In the billing portal, you’ll typically find a **Billing History** or **Invoices** tab that provides a record of all past charges.
-
-
 
 ***
 

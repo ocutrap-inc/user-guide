@@ -2,14 +2,14 @@
 
 You can request a fresh photo of the inside of your trap at any time. On the trap's detail screen, the live image sits in the center with four controls in the corners around it.
 
-<figure><img src="../.gitbook/assets/trap-detail-screen.png" alt="Trap detail screen with the four image controls in the corners around the live image"><figcaption></figcaption></figure>
+<div align="center"><figure><img src="../.gitbook/assets/image (12).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-| Icon | Corner | What it does |
-| --- | --- | --- |
-| Lightning bolt | Bottom left | **Fast image** — a quick, lower-quality photo |
-| Camera | Top right | **Higher-quality image** — a full-quality photo |
-| Grid of squares | Top left | **Gallery** — browse previously captured images |
-| Trash can | Bottom right | **Delete** the current image |
+| Icon            | Corner       | What it does                                    |
+| --------------- | ------------ | ----------------------------------------------- |
+| Lightning bolt  | Bottom left  | **Fast image** — a quick, lower-quality photo   |
+| Camera          | Top right    | **Higher-quality image** — a full-quality photo |
+| Grid of squares | Top left     | **Gallery** — browse previously captured images |
+| Trash can       | Bottom right | **Delete** the current image                    |
 
 ### Fast image (lightning bolt — bottom left)
 

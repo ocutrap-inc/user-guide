@@ -8,7 +8,7 @@ pdf-exclude: true
 
 <summary>May 4, 2026</summary>
 
-### Reliability, Battery, and Image Improvements
+#### Reliability, Battery, and Image Improvements
 
 > **Release date:** 4 May 2026
 
@@ -16,40 +16,40 @@ _Quieter LEDs, no more lost capture photos, faster image uploads, low-battery al
 
 ***
 
-#### How the update installs
+**How the update installs**
 
 This version is delivered **over-the-air (OTA)**. It downloads and installs automatically the next time the trap reboots or powers up. No manual action required.
 
 > **Check the version**\
-> _Settings → Trap Info → Firmware_ should show **v706** or newer.
+> &#xNAN;_&#x53;ettings → Trap Info → Firmware_ should show **v706** or newer.
 
 ***
 
-#### 📷 Image capture
+**📷 Image capture**
 
 * **No more lost approach photos.** If the animal moved closer while your trap was still sending the previous photo, the next photo used to be silently dropped. The trap now holds onto the most recent approach moment and sends it as soon as the camera is free — so you see the most useful frame.
 * **Faster image uploads on cellular.** Photos finish transferring noticeably faster, especially when the trap is sending many in a row.
 * **Live photos while you scout.** During Scouting Mode, the trap now sends a rapid burst of photos when an animal first enters (about every 5 seconds for the first minute) and then a steady photo about every 15 seconds for as long as the animal stays in the detection zone — so you can watch activity unfold instead of seeing only the entry shot.
 
-#### 🔋 Battery life
+**🔋 Battery life**
 
 * **No more red LED during sleep.** The status LED used to stay solid red while the trap was in deep sleep, slowly draining the battery. It's now off — quieter trap, longer life.
 * **Low-battery alerts you won't miss.** If your trap loses cell service when it tries to alert you about low battery, the alert now waits and delivers as soon as the trap reconnects. No silent dead-trap surprises.
 
-#### 🛠️ Reliability
+**🛠️ Reliability**
 
 * **Sleep retries instead of staying awake.** If the trap can't go to sleep cleanly, it now retries — instead of staying awake and burning battery. Cellular connections also recover automatically after sleep-related stalls.
 * **More reliable boot after power events.** Removed an old recovery routine that occasionally caused mysterious hangs after a power glitch. The trap now comes back up cleanly.
 
 ***
 
-#### Scouting Mode is now documented
+**Scouting Mode is now documented**
 
 Full customer documentation for **Scouting Mode** — observe trap activity without closing the door — is now live in the docs at **Getting Started → App → Scouting Mode**. It covers how to start scouting, what alerts and photos to expect, when to use it instead of Armed mode, and troubleshooting.
 
 ***
 
-#### Version note
+**Version note**
 
 If you're checking with support, the firmware version for this release is **v706**.
 
@@ -61,7 +61,7 @@ If you're checking with support, the firmware version for this release is **v706
 
 <summary>April 3, 2026</summary>
 
-### Scouting Mode Beta
+#### Scouting Mode Beta
 
 > **Release date:** 3 Apr 2026
 >
@@ -71,7 +71,7 @@ _Scouting Mode lets you observe the trap without closing the door._
 
 ***
 
-#### What's new
+**What's new**
 
 * Added **Scouting Mode** for watching trap activity without capturing
 * The door must be **fully open** before scouting can start
@@ -82,7 +82,7 @@ _Scouting Mode lets you observe the trap without closing the door._
 
 ***
 
-#### Version note
+**Version note**
 
 If you're checking with support, the firmware version for this release is **v632**.
 
@@ -94,7 +94,7 @@ If you're checking with support, the firmware version for this release is **v632
 
 <summary>April 21, 2024</summary>
 
-### Firmware v1.12.7‑250 — Release Notes
+#### Firmware v1.12.7‑250 — Release Notes
 
 > **Release date:** 21 Apr 2025
 
@@ -102,7 +102,7 @@ _New toggle for keeping the trap awake while unarmed, plus faster GPS, clearer b
 
 ***
 
-#### How the update installs
+**How the update installs**
 
 This version is delivered **over‑the‑air (OTA)**. It downloads and installs automatically the next time the trap reboots or powers up (for example, after a battery swap). No manual action is required.
 
@@ -111,7 +111,7 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 
 ***
 
-#### 🎛️ New — Unarmed Hibernation Control
+**🎛️ New — Unarmed Hibernation Control**
 
 | Setting                | Behaviour                                                                              | Default |
 | ---------------------- | -------------------------------------------------------------------------------------- | ------- |
@@ -124,7 +124,7 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 
 ***
 
-#### 🔧 General improvements
+**🔧 General improvements**
 
 * Faster location fixes & steadier GPS reporting
 * Smoother, more accurate battery percentages and voltage readings
