@@ -44,12 +44,16 @@ Where and how you may release or relocate an animal is regulated and varies by l
 
 ## Transporting Before Release
 
-If you need to move the trap before releasing (for example, to an approved relocation site):
+If you need to move the trap before releasing (for example, to an approved relocation site), you don't need to change the trap's state — it can **stay in Captured mode**, with the door closed, while you transport it.
 
-1. Tap **Unarm** instead of Open — this returns the trap to **Unarmed** but **keeps the door closed**, so the animal stays contained while you transport it.
+1. **Verify the door is fully closed and locked** before you lift the trap, so the animal cannot push it open in transit. For the most secure hold, see [Enhanced Door Closing](trap-settings/enhanced-door-closing.md).
 2. Keep the trap **covered, level, well-ventilated, and out of direct sun and heat**.
 3. Release **as soon as possible** — minimize the time the animal is confined.
-4. At the release site, tap **Open**.
+4. At the release site, tap **Open** to release the door (this also returns the trap to **Unarmed**).
+
+{% hint style="info" %}
+You can also tap **Unarm**, which keeps the door closed but returns the trap to Unarmed for the move. Either way, confirm the door is locked first. See [After a Capture](app/after-capture.md) for how the Open and Unarm buttons differ.
+{% endhint %}
 
 ***
 
