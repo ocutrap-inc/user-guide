@@ -17,7 +17,7 @@ These patterns occur during power-up, connectivity, or firmware activity.
 | Connecting to Cloud  | Fast Blinking Cyan | Attempting to connect to the cloud.                       |
 | OTA Firmware Update  | Blinking Magenta   | Firmware update or booting in safe mode.                  |
 | Looking for Internet | Blinking Green     | Searching for a cellular signal.                          |
-| Red Flash SOS        | Rapid Red Blinks   | Firmware crash. Contact support if >10 blinks.            |
+| Red Flash SOS        | Rapid Red Blinks   | System error. Contact support if >10 blinks.              |
 | No Status LED        | No Light           | Device has no power or failed to boot.                    |
 | Hibernation          | LED Off            | Trap has entered low-power sleep. Wake with power button. |
 
@@ -27,7 +27,7 @@ These patterns occur during power-up, connectivity, or firmware activity.
 
 ### ⚠️ Low Battery Startup Behavior
 
-When the battery is too low (below 9.6V at startup), the following will happen:
+When the battery is **critically low at startup**, the following will happen:
 
 * The trap shows a **solid red LED** during boot.
 * Sends a cloud error notification (if connected).

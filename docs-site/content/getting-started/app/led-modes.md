@@ -28,7 +28,7 @@ The patterns below show animated examples of each status light.
 
 Is your device blinking red?
 
-A pattern of more than 10 red blinks indicates a firmware crash. Count the blinks and contact [OcuTrap Support](../../support/support.md).
+A pattern of more than 10 red blinks indicates a **system error**. Count the blinks and contact [OcuTrap Support](../../support/support.md).
 
 {% content-ref url="../../support/support.md" %}
 [support.md](../../support/support.md)

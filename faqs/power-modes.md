@@ -31,7 +31,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: Same as Low Power Idle, but the trap is armed and ready to capture an animal.
 * **When Active**: When the trap is armed and waiting.
 * **Indicators**: LED brightness is dimmed.
-* **Sensor Activity**: Time-of-Flight sensor operating at ~300ms intervals (optimized for battery)
+* **Detection**: The distance sensor continues monitoring for animals while using less power than full operation
 
 > **Important**: When in **armed mode**, the device will **not enter hibernation** unless a **very** **low battery event** occurs.
 

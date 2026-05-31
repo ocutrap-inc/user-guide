@@ -34,6 +34,7 @@
 * [Trap Settings](getting-started/trap-settings/README.md)
   * [Enhanced Door Closing](getting-started/trap-settings/enhanced-door-closing.md)
   * [Pre-Capture Notification](getting-started/trap-settings/pre-capture-notification.md)
+  * [Distance Limits, Sensor Alerts & Errors](getting-started/trap-settings/distance-safety-and-alerts.md)
 * [Maintenance](getting-started/maintenance.md)
 * [LED Guide](getting-started/led-guide.md)
 * [Battery Overview](getting-started/battery-overview.md)

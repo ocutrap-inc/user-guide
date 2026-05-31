@@ -9,4 +9,4 @@
 3. Wait for the LED to start blinking magenta&#x20;
 4. Release the MODE button.
 
-Before entering safe mode, the device will proceed through the normal steps of connecting to the cloud; blinking green, blinking cyan, and fast blinking cyan. If you're unable to connect to the cloud, you won't actually end up with breathing magenta, but execution of application firmware will still be blocked - so you are in a "sort-of safe mode".
+Before the LED blinks magenta, the trap goes through its normal startup sequence (blinking green, then blinking cyan). If the trap cannot connect to the cloud, you may not see breathing magenta — but if the LED is blinking magenta after you release the MODE button, safe mode is active.
