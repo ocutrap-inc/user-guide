@@ -10,17 +10,17 @@ This page provides a complete reference of all configurable settings on your Ocu
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Capture Distance** | 125–1000mm (5–39 in) | 250mm (10 in) | Distance from sensor that triggers a capture. Objects crossing this threshold will close the door. |
+| **Capture Distance** | 6–18 in (app presets) | 8 in | How far inside the trap an animal must be before the door closes. |
 | **Pre-Capture Alerts** | On/Off | On | Sends an alert when an animal enters the detection zone (before capture). Includes a 2-minute cooldown between alerts. |
 
 ### Detection Zones Explained
 
-OcuTrap uses two detection zones to verify captures and reduce false triggers:
+OcuTrap uses two steps to verify captures and reduce false triggers:
 
-- **Detection Zone**: 300–450mm from sensor — Object must show 3+ consecutive valid readings here first
-- **Capture Zone**: 0–250mm from sensor — Final trigger point that closes the door
+- **Alert zone** (~12–18 in from sensor) — The animal is approaching; you may get a pre-capture alert
+- **Capture zone** (your set distance, default ~8 in) — The door closes when the animal reaches this point
 
-This dual-zone system prevents false triggers from rain, debris, or quick movements.
+This two-step check prevents false triggers from rain, debris, or quick movements.
 
 ---
 
@@ -99,7 +99,7 @@ This dual-zone system prevents false triggers from rain, debris, or quick moveme
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
 | **Accessory** | On/Off | Off | Enables the 12V accessory port for external devices. |
-| **Accessory Timing** | 0–30,000ms | — | Duration the accessory port remains powered when activated. |
+| **Accessory Timing** | 0–30 seconds | — | Duration the accessory port remains powered when activated. |
 
 The 12V accessory port can power external devices like dispensers, pumps, or other add-on hardware.
 

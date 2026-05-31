@@ -6,7 +6,7 @@ description: >-
 
 # Connectivity & Cellular Coverage
 
-OcuTrap connects to the OcuTrap app over **4G LTE cellular** — the same kind of network your phone uses. There is **no Wi-Fi and nothing to set up**: power the trap on and it connects automatically using its built-in cellular modem.
+OcuTrap connects to the OcuTrap app over **4G LTE cellular** — the same kind of network your phone uses. There is **no Wi-Fi and nothing to set up**: power the trap on and it connects automatically.
 
 ***
 
@@ -24,7 +24,7 @@ OcuTrap connects to the OcuTrap app over **4G LTE cellular** — the same kind o
 Like any cellular device, OcuTrap needs a usable signal where it's deployed.
 
 * **Available in the US and Canada.** OcuTrap's cellular service covers the **United States and Canada**. The trap is not supported in other countries.
-* **Place it where there's signal.** Areas with **strong cellular signal** give you the most reliable connection *and* the best battery life — a weak signal makes the modem work harder and drains the battery faster.
+* **Place it where there's signal.** Areas with **strong cellular signal** give you the most reliable connection *and* the best battery life — a weak signal makes the trap work harder to stay connected and drains the battery faster.
 * **Obstacles matter.** Dense buildings, deep valleys, and very remote backcountry may have little or no coverage.
 * **GPS is separate.** Location uses a built-in GPS module (clear view of the sky helps) and updates about every 8 hours. See [GPS](../faqs/gps.md).
 

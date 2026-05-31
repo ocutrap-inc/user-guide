@@ -63,15 +63,12 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 ## Sensors
 
-### Time-of-Flight (ToF) Distance Sensor
+### Distance Sensor
 
 | Specification        | Value                                      |
 | -------------------- | ------------------------------------------ |
-| **Model**            | VL53L1X                                    |
-| **Maximum Range**    | 0–4 meters                                 |
-| **Capture Distance** | Configurable 125mm–1000mm (default: 250mm) |
-| **Detection Zone**   | 300–450mm from sensor                      |
-| **Capture Zone**     | 0–250mm from sensor                        |
+| **Maximum Range**    | Up to 13 ft (4 m)                          |
+| **Capture Distance** | App presets **6–18 in**; default **8 in**. See [Distance Limits & Alerts](trap-settings/distance-safety-and-alerts.md) |
 
 ### Environmental Sensors
 
@@ -107,21 +104,20 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 ## Capture Detection System
 
-OcuTrap uses a sophisticated dual-zone verification system to prevent false triggers from rain, debris, or non-target movement.
+OcuTrap uses a two-step detection process to prevent false triggers from rain, debris, or non-target movement.
 
 ### Detection Process
 
-1. **Object enters Detection Zone** (300–450mm) → 3+ consecutive valid readings required
-2. **Object verified** → Pre-capture alert sent (if enabled)
-3. **Object enters Capture Zone** (0–250mm) → 3+ consecutive readings trigger capture
-4. **Door closes** → Capture photo taken and transmitted
+1. **Animal enters alert zone** (~12–18 in) → Steady readings required before proceeding
+2. **Pre-capture alert sent** (if enabled)
+3. **Animal reaches capture distance** (your preset, default ~8 in) → Door closes
+4. **Capture photo taken and transmitted**
 
 ### False Trigger Prevention
 
-* **Signal quality filtering** — Validates signal-to-ambient ratio (optimized for outdoor sunlight)
-* **Distance consistency checks** — ±20mm tolerance rejects oscillating readings
-* **Rain detection** — Oscillation patterns identified and filtered
-* **Status validation** — Only Status 0 (valid measurement) readings accepted
+* **Steady-readings check** — Requires consistent presence before closing
+* **Rain and debris filtering** — Ignores splashy or erratic movement
+* **Dirty-sensor detection** — Blocks arming when the lens is obstructed
 
 ***
 

@@ -38,7 +38,7 @@ To view your current firmware version:
 ### Trap Unresponsive After Update
 
 * Wait 5 minutes for the trap to complete its restart sequence.
-* If the trap remains unresponsive, perform a manual power cycle.
+* If the trap remains unresponsive, turn the trap off and on again (remove and reconnect the battery, or hold the power button).
 * Contact [support](../support/support.md) if issues persist.
 
 ## Release Notes

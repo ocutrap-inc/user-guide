@@ -62,9 +62,7 @@ This port is intended only for powering external accessories. It does not accept
 | ---------------------- | ------------------------- |
 | Output Voltage         | 12V DC                    |
 | Max Continuous Current | 3.0A                      |
-| Switching Method       | MOSFET, low-side switched |
 | Default State          | OFF                       |
-| Startup Safety         | 100kΩ pull-down resistor  |
 
 ***
 
@@ -90,7 +88,7 @@ Do **not**:
 * Back-feed voltage into the port
 * Connect an external power supply to the accessory pins
 
-Back-feeding power can permanently damage the internal switching MOSFET and control logic.
+Back-feeding power can permanently damage the trap.
 
 ***
 
@@ -104,30 +102,17 @@ If your accessory requires more current, use an external relay or driver circuit
 
 ***
 
-#### Inductive Loads
+#### Motors and Solenoids
 
-If you connect any inductive device, such as:
+For motors, solenoids, or relays, use a **relay or driver circuit** rated for your accessory. Follow the accessory manufacturer's wiring instructions.
 
-* Motors
-* Solenoids
-* Relays
-
-You **must** add external flyback protection.
-
-* Use a diode across the load
-* This protects the internal circuitry from voltage spikes during switching
-
-Failure to add flyback protection may result in permanent damage.
+Failure to use proper wiring may damage the accessory or the trap.
 
 ***
 
 #### Default OFF State
 
-A built-in **100kΩ pull-down resistor** ensures:
-
-* The accessory port remains OFF during boot
-* The port turns OFF if the control signal is lost
-* No accidental activation during startup or reset
+The accessory port stays **OFF during startup** and turns **OFF if the control signal is lost**, so accessories do not activate unexpectedly.
 
 ***
 
@@ -187,7 +172,7 @@ If the door motor is moved to an open or closed position while the accessory is 
 
 **Device resets or behaves unexpectedly**
 
-* Inspect for inductive loads without flyback protection
+* Check that motors or solenoids are wired with a proper relay or driver circuit
 * Check for short circuits or overcurrent conditions
 
 ***

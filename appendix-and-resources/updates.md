@@ -38,8 +38,8 @@ This version is delivered **over-the-air (OTA)**. It downloads and installs auto
 
 **🛠️ Reliability**
 
-* **Sleep retries instead of staying awake.** If the trap can't go to sleep cleanly, it now retries — instead of staying awake and burning battery. Cellular connections also recover automatically after sleep-related stalls.
-* **More reliable boot after power events.** Removed an old recovery routine that occasionally caused mysterious hangs after a power glitch. The trap now comes back up cleanly.
+* If the trap has trouble going to sleep, it retries automatically instead of staying awake and draining the battery. Cellular connection also recovers more reliably after sleep.
+* **More reliable restart after power glitches.** The trap now comes back up cleanly after unexpected power loss.
 
 ***
 

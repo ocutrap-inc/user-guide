@@ -47,7 +47,7 @@ OcuTrap includes multiple sensors for monitoring and capture detection:
 
 | Sensor | Function |
 |--------|----------|
-| **Time-of-Flight (ToF)** | Detects animals entering the trap with millimeter precision |
+| **Distance Sensor** | Detects when an animal enters the trap |
 | **Temperature & Humidity** | Monitors internal conditions, sends alerts if thresholds exceeded |
 | **Ambient Light** | Detects darkness to activate night vision automatically |
 | **Accelerometer** | Detects tilt and movement of the trap |
