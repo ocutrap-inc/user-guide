@@ -37,7 +37,7 @@ Before arming, the trap performs an **obstruction check** to ensure the capture 
 
 A dirty lens with nothing in the trap often reads about **4 in**; that triggers this flow, **not** “Object at 4 in.”
 
-See [Distance Limits, Sensor Alerts & Errors](../getting-started/trap-settings/distance-safety-and-alerts.md) for the full preset table.
+See [Distance Limits, Sensor Alerts & Errors](../getting-started/trap-settings/distance-safety-and-alerts.md) for capture distance presets and other arming errors.
 
 ### Sensor Error (Blocks Arming)
 
