@@ -58,14 +58,16 @@ detect drift, because pandoc and WeasyPrint output varies enough between
 macOS and Ubuntu that a binary or text comparison would false-fail. The
 sidecar is the single source of truth for "is this PDF up-to-date."
 
-If you change docs without regenerating, CI will fail with a message
-pointing back here.
+If you change docs without regenerating, CI will fail on the pull request.
+After merge, the **main-branch workflow rebuilds and commits the PDF
+automatically** if it is still out of date — but including the PDF in your
+PR keeps downloads current immediately and avoids a second bot commit.
 
-> **Why no auto-commit?** Earlier versions of the workflow regenerated and
+> **Why not auto-commit on every PR?** Earlier versions regenerated and
 > committed the PDF for you on every push to `main`. That created merge
-> conflicts on every overlapping PR (two authors — you and the bot — editing
-> the same binary file). One source of truth is simpler: the PR that changes
-> docs also commits the PDF.
+> conflicts on overlapping PRs (two authors — you and the bot — editing the
+> same binary file). PRs still verify; `main` now self-heals when the PDF
+> was missed.
 
 ## Rebuilding the other PDFs
 
