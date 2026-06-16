@@ -18,6 +18,7 @@
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
   * [Scouting Mode](getting-started/app/scouting-mode.md)
+  * [When Your Trap Takes Photos](getting-started/app/image-cadence.md)
   * [After a Capture](getting-started/app/after-capture.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
