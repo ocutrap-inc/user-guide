@@ -1218,7 +1218,7 @@ def back_cover(story):
                             fontSize=10.5, leading=15)
     story.append(Paragraph("<b>OcuTrap, Inc.</b>", center))
     story.append(Paragraph(
-        "5900 Balcones Drive, Suite 100<br/>Austin, Texas 78732, USA",
+        "5900 Balcones Drive, Suite 100<br/>Austin, Texas 78731, USA",
         center))
     story.append(Spacer(1, 0.25 * inch))
     story.append(Paragraph("<b>OcuTrap.com</b>", center))
