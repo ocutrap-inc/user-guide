@@ -70,6 +70,7 @@
 ## Troubleshooting
 
 * [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
+* [LED Light Guide](troubleshooting/led-light-guide.md)
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
