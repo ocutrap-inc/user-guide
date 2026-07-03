@@ -52,7 +52,7 @@ This setting is configured per trap:
 * Monitor animal behavior without needing a capture
 * Improve trap placement and setup based on activity patterns
 
-### What you'll see (v925+ firmware)
+### What you'll see (alert motion gate v906+; scout photo gate v926+)
 
 | Signal | When it fires |
 | --- | --- |
@@ -60,7 +60,7 @@ This setting is configured per trap:
 | **Approach photos** | On zone entry and during approach — **not** blocked by the motion gate on alert text |
 | **Door close** | Only when the animal is confirmed in the capture zone (Armed mode) |
 
-> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for alert text; scout photos are also motion-gated (v925+).
+> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for alert text; scout photos are also motion-gated (v926+).
 
 ### Need to Turn It Off?
 

@@ -25,7 +25,7 @@ Two buttons matter after a capture:
 | Buttons | From **Captured** | Result |
 | --- | --- | --- |
 | **User + Power** (arm/disarm sequence) | Disarm **in place** | **Unarmed**, door **unchanged** (stays closed) — same as cloud **Unarm** |
-| **User hold-open** (double-tap user, hold 5 s) | Release door | Door **opens** — use this to free the animal, not User+Power |
+| **User hold-open** (press User once, then press again and **hold** — door opens ~7 s later) | Release door | Door **opens** and trap returns to **Unarmed** — same as cloud **Open**. Use this to free the animal, not User+Power |
 
 > **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Open** in the app or the **hold-open** button sequence on the trap.
 
