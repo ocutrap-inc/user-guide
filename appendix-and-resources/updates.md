@@ -29,7 +29,7 @@ This version is delivered **over-the-air (OTA)**. It downloads and installs auto
 
 * **No more lost approach photos.** If the animal moved closer while your trap was still sending the previous photo, the next photo used to be silently dropped. The trap now holds onto the most recent approach moment and sends it as soon as the camera is free — so you see the most useful frame.
 * **Faster image uploads on cellular.** Photos finish transferring noticeably faster, especially when the trap is sending many in a row.
-* **Live photos while you scout.** During Scouting Mode, the trap now sends a rapid burst of photos when an animal first enters (about every 5 seconds for the first minute) and then a steady photo about every 15 seconds for as long as the animal stays in the detection zone — so you can watch activity unfold instead of seeing only the entry shot.
+* **Live photos while you scout.** During Scouting Mode, the trap now sends a photo when an animal first enters and then a steady photo about every 15 seconds for as long as the animal stays in the detection zone — so you can watch activity unfold instead of seeing only the entry shot.
 
 **🔋 Battery life**
 
