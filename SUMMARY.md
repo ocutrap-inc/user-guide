@@ -8,6 +8,7 @@
 * [Set-up Tutorial](getting-started/set-up-tutorial.md)
 * [Hardware Set Up](getting-started/setting-up.md)
 * [Video Assembly](getting-started/video-assembly.md)
+* [Deploying Your Trap in the Field](getting-started/deploying-in-the-field.md)
 * [Hardware Features](getting-started/hardware-features.md)
 * [Technical Specifications](getting-started/technical-specifications.md)
 * [Connectivity & Coverage](getting-started/connectivity-and-coverage.md)
