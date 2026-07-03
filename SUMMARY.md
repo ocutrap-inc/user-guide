@@ -8,6 +8,7 @@
 * [Set-up Tutorial](getting-started/set-up-tutorial.md)
 * [Hardware Set Up](getting-started/setting-up.md)
 * [Video Assembly](getting-started/video-assembly.md)
+* [Deploying Your Trap in the Field](getting-started/deploying-in-the-field.md)
 * [Hardware Features](getting-started/hardware-features.md)
 * [Technical Specifications](getting-started/technical-specifications.md)
 * [Connectivity & Coverage](getting-started/connectivity-and-coverage.md)
@@ -18,6 +19,7 @@
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
   * [Scouting Mode](getting-started/app/scouting-mode.md)
+  * [When Your Trap Takes Photos](getting-started/app/image-cadence.md)
   * [After a Capture](getting-started/app/after-capture.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
@@ -70,6 +72,7 @@
 ## Troubleshooting
 
 * [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
+* [LED Light Guide](troubleshooting/led-light-guide.md)
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
