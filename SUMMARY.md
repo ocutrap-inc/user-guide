@@ -49,6 +49,7 @@
 * [Sharing Traps](faqs/sharing-traps/README.md)
   * [User Levels](faqs/sharing-traps/user-levels.md)
 * [Common questions](faqs/common-questions.md)
+* [What animals is the OcuTrap R1 designed for?](faqs/target-animals.md)
 * [Safe-mode](faqs/safe-mode.md)
 * [Battery](faqs/battery.md)
 * [Updating firmware](faqs/updating-firmware.md)
