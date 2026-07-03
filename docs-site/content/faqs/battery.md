@@ -42,6 +42,6 @@
 
 ***
 
-Always charge your battery properly to maintain optimal performance and battery life. If you encounter any issues, contact [info@ocutrap.com](mailto:info@ocutrap.com).
+Always charge your battery properly to maintain optimal performance and battery life. If you encounter any issues, contact [support@ocutrap.com](mailto:support@ocutrap.com).
 
 For regional battery models, runtime estimates, and connector details, see [Battery Overview](../getting-started/battery-overview.md).

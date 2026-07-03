@@ -6,5 +6,5 @@ There are two main parts to getting started.&#x20;
 
 **Using OcuTrap**
 
-* Accessing [web-portal ](https://app.ocutrap.com/console/)(app.ocutrap.com)
+* Accessing [web-portal ](https://base.ocutrap.com/console/)(base.ocutrap.com)
 * Exploring different settings

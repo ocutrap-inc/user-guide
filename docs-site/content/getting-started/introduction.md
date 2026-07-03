@@ -1,6 +1,6 @@
 # Introduction
 
-<figure><picture><source srcset="../.gitbook/assets/OcuTrap_4228 × 1045_300dpi.jpeg" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/OcuTrap_4228 × 1045_300dpi.png" alt=""></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/LogoMakr-1uMIUJ-300dpi (1).jpeg" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/LogoMakr-1uMIUJ-300dpi (2).png" alt=""></picture><figcaption></figcaption></figure>
 
 ## What is OcuTrap?
 

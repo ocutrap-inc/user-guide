@@ -2,11 +2,11 @@
 
 ## Creating an account
 
-[https://app.ocutrap.com/signuplogin](https://app.ocutrap.com/signuplogin)
+[https://base.ocutrap.com/signuplogin](https://base.ocutrap.com/signuplogin)
 
 ## Mobile app‌
 
-### [Apple Devices](https://apps.apple.com/mt/app/ocutrap/id1539244938)​‌ <a href="#apple-devices" id="apple-devices"></a>
+### [Apple Devices](https://apps.apple.com/app/id1539244938)​‌ <a href="#apple-devices" id="apple-devices"></a>
 
 <div align="left"><figure><img src="../../.gitbook/assets/Screenshot 2025-02-11 at 6.55.09 PM.png" alt="" width="122"><figcaption></figcaption></figure></div>
 

@@ -92,7 +92,7 @@ Connect the wire to the POD, ensuring the connection is secure.
 
 ## Section 3: Software Setup
 
-1. Create an account on [app.ocutrap.com](https://app.ocutrap.com).
+1. Create an account on [base.ocutrap.com](https://base.ocutrap.com).
 2. Once your account is created, add your trap to it.
 
 ### Instructions:
@@ -113,7 +113,7 @@ Once complete, your new trap will appear in your dashboard.
 
 Congratulations! You’ve successfully assembled and set up your OcuTrap.
 
-If you have any questions or need assistance, [`contact our team`](https://ocutrap.com/pages/contact).
+If you have any questions or need assistance, [contact our team](https://ocutrap.com/pages/contact).
 
 Thank you for choosing OcuTrap, and happy trapping!
 

@@ -139,7 +139,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 - **Door:** Linear motor with closing speed under 0.5 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
 - **Location:** Integrated GPS module with satellite positioning. Battery-optimized updates every 8 hours by default. Map view in the app.
 - **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Tilt detection.
-- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh capacity for 3+ weeks runtime (5,000 mAh variant for Canada). Low battery alerts at 20% and 10%.
+- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (111 Wh) for new traps (~40+ days runtime); 5,200 mAh variant for Canada (~21 days). Low battery alerts at 20% and 10%.
 - **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. Configurable 0–30 second activation timer. 3.0A maximum continuous current.
 - **Smart Detection:** Two-step verification to reduce false triggers. Rain and debris filtering. Pre-capture notification alerts.
 
@@ -156,9 +156,9 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Door Close Speed | < 0.5 seconds |
 | Door Open Speed | < 1 second |
 | Door States | 6 states tracked (open, closed, opening, closing, locked, fault) |
-| Battery | KBT 12V Li-ion — 10 Ah (standard) / 5 Ah (Canada) |
+| Battery | KBT 12V Li-ion — 10,000 mAh / 111 Wh (new traps) / 5,200 mAh (Canada) |
 | Operating Voltage | 7.0–15.0 V |
-| Runtime | 3+ weeks per charge (usage dependent) |
+| Runtime | ~40+ days (10000 mAh) / ~21 days (5200 mAh), usage dependent |
 | Connectivity | 4G LTE cellular, multi-network |
 | GPS Updates | Default every 8 hours; requires 5+ satellites / 3D fix |
 | Distance Sensor | Up to 13 ft hardware range; the trap actively detects within ~34 in (875 mm); default capture distance ~8 in (200 mm) |
@@ -191,7 +191,7 @@ The Open/Close button controls the trap door remotely. **Open** lifts the door f
 The trap operates in three distinct states:
 
 - **Armed:** Trap set to capture. Door must be manually opened first. Enters low-power mode with periodic updates. Alerts if disconnected for more than 1 hour.
-- **Monitoring:** For scouting without closing the door. Sends pre-capture and trigger alerts but does not close the door. Resets approximately 5 minutes after the animal leaves.
+- **Scouting:** Watch activity without closing the door. Sends Scout Alert and Scout Trigger notifications but does not close the door. Resets approximately 5 minutes after the animal leaves.
 - **Unarmed:** Standby mode. Listens for commands but is not set to capture. Automatically enters this state after a capture event.
 
 ### Interface Views
@@ -261,7 +261,7 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| Battery Type | 5 Ah / 10 Ah selection |
+| Battery Type | 5200 mAh / 10000 mAh selection |
 | Battery Alerts | On / Off |
 | Power-Off Voltage | 7–12 V (default: 9.6 V) |
 
@@ -299,7 +299,7 @@ Hold the power button for 3 seconds for a proper shutdown.
 - Deploy in areas with strong cellular signal (poor signal increases power consumption)
 - Keep GPS interval at the default 8 hours, or disable GPS if not needed
 - Set camera time-lapse to 6 hours or more
-- Use the 10 Ah battery for extended winter deployments
+- Use the 10,000 mAh battery for extended winter deployments
 
 ### Optimal Placement
 
@@ -398,7 +398,7 @@ Perform these checks at the start of every trapping session:
 | Blinking Yellow | Arming Trap |
 | Blinking White | Unarming Trap |
 
-> **Low Battery Startup:** If the battery is critically low, the LED shows solid red during boot. The device will send a cloud error notification and automatically enter hibernation. Press the power button to wake once the battery has been recharged.
+> **Low Battery Startup:** If the battery is critically low, the LED shows solid red during boot. The device will send a cloud error notification and automatically enter hibernation. Once the battery has been recharged the trap wakes on its own (it briefly checks about once an hour), or press the power button to wake it immediately.
 
 ---
 
@@ -406,8 +406,10 @@ Perform these checks at the start of every trapping session:
 
 | Battery Model | Capacity | Runtime | Charge Time | Charger |
 |---|---|---|---|---|
-| KBT 5000 mAh (12V) | 5,000 mAh | ~21 days | 5–6 hours | 1A charger |
-| KBT 10000 mAh (12V) | 10,000 mAh | ~40+ days | 5–6 hours | 2A charger |
+| KBT 5200 mAh (12V) | 5,200 mAh | ~21 days | 5–6 hours | 1A charger |
+| KBT 10000 mAh (12V) | 10,000 mAh (111 Wh) | ~40+ days | 5–6 hours | 2A charger |
+
+**Trap connectors (XT30):** The 10,000 mAh pack uses a **female XT30** on the yellow harness; the 5,200 mAh pack uses **male XT30** (opposite gender). Each trap is wired for one mating pair. To use a different capacity, contact support for the correct PCB connector and battery holder.
 
 ### Battery Care
 
@@ -450,7 +452,7 @@ A: The standard unit is 10" wide × 12" tall. Cage length is 32" without the POD
 A: Absolutely. The system is designed with animal welfare as a priority, featuring rapid door closure, remote monitoring to minimize stress, and selective targeting to avoid non-target species.
 
 **Q: What is the battery life?**
-A: 3+ weeks depending on usage, settings, and environmental conditions. The 10 Ah battery provides extended runtime per charge.
+A: ~40+ days with the 10,000 mAh battery, ~21 days with the 5,200 mAh battery — depending on usage, settings, and environmental conditions.
 
 **Q: Is a subscription required?**
 A: A subscription enables cloud connectivity features. Check the current plans at ocutrap.com.
@@ -502,7 +504,7 @@ The device will proceed through its normal cloud connection sequence before ente
 
 ## Battery FAQ
 
-OcuTrap uses high-quality lithium-ion batteries with built-in protection boards. The yellow connector powers the device; the black connector is for charging. A full charge from empty takes 4–6 hours. The charger indicator shows red while charging and green when complete.
+OcuTrap uses high-quality lithium-ion batteries with built-in protection boards. The yellow **XT30** harness powers the trap (10,000 mAh: female XT30; 5,200 mAh: male XT30); the black connector is for charging only. A full charge from empty takes about 5–6 hours with the matched charger. The indicator shows red while charging and green when complete. To switch pack sizes, contact support for the correct PCB connector and battery holder.
 
 | Specification | Value |
 |---|---|
@@ -576,7 +578,7 @@ GPS is battery-optimized with strategic update intervals. By default, position u
 | Operating Temperature | Ideal: 0°C to 40°C |
 | Charging Temperature | Recommended: 0°C to 45°C |
 | Extreme Heat | Shade the trap; monitor temperature alerts |
-| Freezing | Bring battery indoors for charging; use 10 Ah battery |
+| Freezing | Bring battery indoors for charging; use 10,000 mAh battery |
 | Heavy Rain | Weatherproof but not submersion-rated; inspect after storms |
 | Icing | Door mechanism may freeze; allow natural thaw |
 
@@ -588,7 +590,7 @@ The OcuTrap operates in temperatures as low as -10°C, though battery capacity i
 
 ### Key Recommendations
 
-- Use the 10 Ah battery for extended winter deployments
+- Use the 10,000 mAh battery for extended winter deployments
 - Bring batteries indoors for charging below freezing
 - Store batteries in cool, dry conditions — avoid freezing
 - Swap batteries more frequently in winter
@@ -612,11 +614,7 @@ The OcuTrap has six power modes that automatically optimize battery usage:
 | Armed Sleep Offline | 20-minute check-ins; captures reported at check-in | Flashes 3s |
 | Hibernation | Lowest power; no communication | Off |
 
-Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below the configured power-off voltage (default 9.6V).
-
-### Unarmed Hibernation
-
-When enabled (default), the trap enters hibernation after approximately 2 hours of unarmed inactivity, with a 15-minute warning beforehand. Disabling this setting keeps the trap in low power indefinitely while unarmed, but increases battery consumption. This setting only affects unarmed behavior — it does not change low-battery or manual hibernation.
+Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below the configured power-off voltage (default 9.6V). During low-voltage hibernation the trap briefly wakes about once an hour, so it recovers on its own once the battery is recharged.
 
 ---
 
@@ -1013,13 +1011,13 @@ OcuTrap provides high-quality media assets for press, partners, and promotional 
 
 ## Recent Updates
 
-### April 2026 — Firmware v2.1.2-632
+### April 2026 — Scouting Mode
 
-Introduced Scouting Mode (in testing). This mode uses live armed detection for scouting without closing the door. Requires door fully open; sends alerts at pre-capture and trigger distances but does not close the door. Includes a 5-minute cooldown after the animal leaves the area.
+Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; sends Scout Alert and Scout Trigger notifications at pre-capture and trigger distances but does not close the door. Includes a 5-minute cooldown after the animal leaves the area.
 
-### April 2024 — Firmware v1.12.7-250
+### April 2025 — Firmware v1.12.7-250
 
-Added unarmed hibernation control setting (default enabled, configurable). General improvements including faster GPS acquisition, more accurate battery readings, sharper images, and overall stability enhancements.
+General improvements including faster GPS acquisition, more accurate battery readings, sharper images, and overall stability enhancements.
 
 ### January 2023 — UI Update
 

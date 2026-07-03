@@ -136,7 +136,7 @@ Enable **Pre-Capture Alerts** to get notified when an animal is approaching:
 - Sends alert when object enters detection zone (before capture)
 - Includes a photo of what's approaching
 - 2-minute cooldown between alerts to prevent spam
-- Great for monitoring activity without captures
+- Great alongside [Scouting Mode](app/scouting-mode.md) when you want photos and alerts without animal captures
 
 **Use cases:**
 - See if non-target animals are visiting
@@ -164,7 +164,7 @@ Learn the physical button controls:
 ### Cold Weather
 - Battery capacity decreases in cold temperatures
 - Expect shorter runtime in winter
-- Consider the 10Ah battery for extended cold-weather deployments
+- Consider the 10,000 mAh battery for extended cold-weather deployments
 
 ### Hot Weather
 - Temperature alerts will notify you if internal temps exceed 45°C

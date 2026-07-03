@@ -21,7 +21,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 #### 2. Low Power Idle Mode
 
 * **Description**: A power-saving mode where the device reduces energy consumption while waiting for user interaction.
-* **When Active**: After a period of inactivity in normal power mode.
+* **When Active**: After about 5–6 minutes of inactivity in normal power mode.
 * **Indicators**: LED brightness is dimmed.
 
 ***
@@ -63,13 +63,12 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: The lowest power state where the device is completely inactive. No communication is possible in this mode.
 * **When Active**:
   * If the **battery is too low** to continue operation.
-  * If the device is **idle for about 2 hours** and **not armed** (configurable — see [Unarmed Hibernation](unarmed-hibernation.md)).
   * If the **power button is held down for 3+ seconds**.
 * **Power Consumption**: Minimal.
 * **Indicators**: LED is powered off.
 * **Recovery**:
-  * If due to **low battery**, the user must **replace or recharge** the battery.
-  * If due to **idle timeout or power button press**, the user must **press the power button to wake the device**.
+  * If due to **low battery**, **replace or recharge** the battery. During low-battery hibernation the trap briefly wakes on its own about once an hour, so it comes back online automatically once the battery has power again — or press the **power button** to wake it immediately.
+  * If due to a **power button press**, press the **power button** to wake the device.
 
 > **Note:** In hibernation mode, **OcuTrap cannot receive messages or send notifications**.
 
@@ -83,7 +82,6 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Low Power Idle Mode → Low Power Armed Mode** (when armed).
 * **Armed Sleep Offline → Cloud Check-in** (every 20 minutes).
 * **Any Mode → Hibernation** (if low battery).
-* **Low Power Idle Mode → Hibernation** (if unarmed and idle for about 2 hours, unless [Unarmed Hibernation](unarmed-hibernation.md) is disabled).
 
 #### User-Controlled Transitions:
 
@@ -101,8 +99,6 @@ To ensure users are aware of power status, **OcuTrap sends battery warnings** at
 * **Hibernation** – Final alert before shutdown.
 
 These alerts help prevent unexpected downtime and allow users to take action before the device powers off.
-
-> **Unarmed hibernation:** You can disable automatic hibernation while unarmed in trap settings. See [Unarmed Hibernation](unarmed-hibernation.md) for details.
 
 ***
 

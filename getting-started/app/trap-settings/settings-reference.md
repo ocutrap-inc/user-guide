@@ -52,7 +52,7 @@ This two-step check prevents false triggers from rain, debris, or quick movement
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Battery Type** | 5Ah / 10Ah | Varies by region | Must match installed battery for accurate level estimation. |
+| **Battery Type** | 5200 mAh / 10000 mAh | Varies by region | Must match installed battery for accurate level estimation. |
 | **Battery Alerts** | On/Off | On | Enables low battery notifications at 20% and 10% levels. |
 | **Power-Off Voltage** | 7.0–12.0V | 9.6V | Voltage threshold below which the trap automatically hibernates. |
 

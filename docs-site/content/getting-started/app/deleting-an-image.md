@@ -6,6 +6,10 @@ description: >-
 
 # Deleting an Image
 
+{% hint style="info" %}
+To delete the **current image**, use the **trash icon in the bottom-right corner** of the live image on the trap's detail screen. The steps below cover deleting older images from the gallery.
+{% endhint %}
+
 1. **Open the image gallery**
    * From the trap dashboard, scroll to the image gallery below the live image.
    * Use the left and right arrows to navigate between images if needed.

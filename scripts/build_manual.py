@@ -781,20 +781,6 @@ def pod_operation(story):
         [USABLE_W - 2.0 * inch, 2.0 * inch]))
     story.append(Spacer(1, 8))
 
-    story.append(Paragraph("Unarmed Hibernation Control", sH2))
-    story.append(Paragraph(
-        "Each trap&rsquo;s Unarmed Sleep Mode is configured separately. "
-        "In the app, go to <b>Settings &rarr; More Settings &rarr; Unarmed "
-        "Sleep Mode</b> to adjust it.", sBody))
-    story.append(data_table(
-        ["Setting", "Behavior"],
-        [["<b>Yes</b> (default)", "The trap hibernates when unarmed."],
-         ["<b>No</b>", "The trap stays fully powered when unarmed."]],
-        [1.6 * inch, USABLE_W - 1.6 * inch]))
-    story.append(Spacer(1, 4))
-    story.append(callout("Note", [
-        "Disabling hibernation by selecting &ldquo;No&rdquo; will lead to "
-        "higher battery consumption."], kind="note"))
     story.append(PageBreak())
 
 

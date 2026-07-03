@@ -9,7 +9,7 @@ Clicking **Delete Trap** permanently removes your trap and all of its data. Plea
 #### Steps
 
 1. **Go to Your Account Page**\
-   Visit [app.ocutrap.com/account/](https://app.ocutrap.com/account/) and scroll down to the **Devices** section.
+   Visit [base.ocutrap.com/account/](https://base.ocutrap.com/account/) and scroll down to the **Devices** section.
 2. **Open the Delete Trap Menu**\
    Click the **Delete Devices** link. A popup titled **Delete Owned Traps** will appear.
 3. **Select the Trap**\

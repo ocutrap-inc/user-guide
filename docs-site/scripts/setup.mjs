@@ -21,7 +21,16 @@ const docsRoot = join(__dirname, ".."); // docs-site/
 const kbRoot = join(docsRoot, ".."); // OcuTrap_Knowledge_Base/
 
 // Directories to skip when copying content
-const SKIP_DIRS = new Set(["docs-site", "convex-tutorial", "node_modules", ".git"]);
+const SKIP_DIRS = new Set([
+  "docs-site",
+  "convex-tutorial",
+  "node_modules",
+  ".git",
+  ".planning",
+  "tests",
+  "pdf-docs",
+]);
+const SKIP_FILES = new Set(["AGENTS.md", "CLAUDE.md"]);
 
 // ── 1. Copy .gitbook/assets ───────────────────────────────────
 const assetsSource = join(kbRoot, ".gitbook/assets");
@@ -52,7 +61,7 @@ if (existsSync(kbRoot) && existsSync(join(kbRoot, "SUMMARY.md"))) {
         if (SKIP_DIRS.has(entry.name) || entry.name.startsWith(".")) continue;
         mkdirSync(destPath, { recursive: true });
         copyMarkdown(srcPath, destPath);
-      } else if (entry.name.endsWith(".md")) {
+      } else if (entry.name.endsWith(".md") && !SKIP_FILES.has(entry.name)) {
         copyFileSync(srcPath, destPath);
       }
     }
