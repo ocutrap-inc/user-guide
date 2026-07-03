@@ -41,7 +41,7 @@ If **Scout** does not start, the door may not be fully open, the trap may be off
 
 * **Scout Alert**: Sent when an animal first enters the pre-capture area, if this alert is enabled.
 * **Scout Trigger**: Sent if the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close.
-* **Photos**: Sent about every 5 seconds for the first minute, then about every 15 seconds while the animal remains in the detection area.
+* **Photos**: Sent about every 15 seconds while the animal remains in the detection area. (You may see a couple of quick frames right when it first enters, alongside the alerts above.)
 
 Each alert type can be sent once every 5 minutes. During that 5-minute window, you may still receive new photos, but you should not receive another alert of the same type.
 

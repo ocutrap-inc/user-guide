@@ -161,7 +161,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Runtime | 3+ weeks per charge (usage dependent) |
 | Connectivity | 4G LTE cellular, multi-network |
 | GPS Updates | Default every 8 hours; requires 5+ satellites / 3D fix |
-| Distance Sensor | Up to 13 ft range; default capture distance ~10 in |
+| Distance Sensor | Up to 13 ft hardware range; the trap actively detects within ~34 in (875 mm); default capture distance ~8 in (200 mm) |
 | Camera Resolution | QVGA to UXGA (6 sizes) |
 | IR LEDs | Automatic activation; 0–100% brightness control |
 | Dark Threshold | 25 lux default (configurable 1–100) |
@@ -243,7 +243,7 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| Capture Distance | 125–1000 mm (default: 250 mm) |
+| Capture Distance | 150–460 mm / 6–18 in (default: 200 mm / 8 in) |
 | Pre-Capture Alerts | On / Off (default: On) |
 
 ### Camera

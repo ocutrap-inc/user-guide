@@ -67,7 +67,8 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 | Specification        | Value                                      |
 | -------------------- | ------------------------------------------ |
-| **Maximum Range**    | Up to 13 ft (4 m)                          |
+| **Sensor Range**     | Up to 13 ft (4 m) hardware capability       |
+| **Active Detection Range** | Up to ~**34 in (875 mm)** — the trap detects, alerts, and photographs only within this distance |
 | **Capture Distance** | App presets **6–18 in**; default **8 in**. See [Distance Limits & Alerts](trap-settings/distance-safety-and-alerts.md) |
 
 ### Environmental Sensors
@@ -108,7 +109,7 @@ OcuTrap uses a two-step detection process to prevent false triggers from rain, d
 
 ### Detection Process
 
-1. **Animal enters alert zone** (~12–18 in) → Steady readings required before proceeding
+1. **Animal enters the detection area** (within ~34 in / 875 mm) → Steady readings required before proceeding
 2. **Pre-capture alert sent** (if enabled)
 3. **Animal reaches capture distance** (your preset, default ~8 in) → Door closes
 4. **Capture photo taken and transmitted**
