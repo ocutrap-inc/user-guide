@@ -43,4 +43,4 @@ To view your current firmware version:
 
 ## Release Notes
 
-For information about the latest firmware features and fixes, check the [Updates](../appendix-and-resources/updates.md) page or contact support.
+For information about the latest firmware features and fixes, check the **Updates** page on [docs.ocutrap.com](https://docs.ocutrap.com) or contact support.

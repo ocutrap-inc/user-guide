@@ -20,15 +20,6 @@ Two buttons matter after a capture:
 | **Open** | Releases the door **and** returns the trap to **Unarmed**. This is the one you want most of the time — one tap, animal goes free, trap is reset for inspection. |
 | **Unarm** | Returns the state to **Unarmed** but **leaves the door closed**. Use this if you want to keep the animal contained while you transport the trap, then tap **Open** later when you're ready to release. |
 
-### On-trap buttons (v927+)
-
-| Buttons | From **Captured** | Result |
-| --- | --- | --- |
-| **User + Power** (arm/disarm sequence) | Disarm **in place** | **Unarmed**, door **unchanged** (stays closed) — same as cloud **Unarm** |
-| **User hold-open** (press User once, then press again and **hold** — door opens ~7 s later) | Release door | Door **opens** and trap returns to **Unarmed** — same as cloud **Open**. Use this to free the animal, not User+Power |
-
-> **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Open** in the app or the **hold-open** button sequence on the trap.
-
 ## What you'll see in the app while captured
 
 * Trap card status reads **Captured / Closed**.

@@ -63,8 +63,9 @@ on their screen.** When the docs and the product disagree, the docs lose.
   it.
 - **Firmware release notes PDF, hardware/setup PDFs** — User scoped this to
   *user guide PDF only*. Other PDFs are not in this milestone.
-- **Translations** (`translate_repo.py` exists) — Not part of this sync;
-  English source-of-truth only.
+- **Spanish / translations** — Removed from this repo. Docs are **English only**
+  (`docs.ocutrap.com`). A legacy `translate_repo.py` script was deleted; do not
+  maintain a separate Spanish GitBook export from this tree.
 - **Editing the website or firmware to match the docs** — Direction is
   one-way: product is canonical, docs follow.
 
