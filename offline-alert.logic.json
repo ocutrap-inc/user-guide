@@ -1,0 +1,25 @@
+{
+  "logic_function": {
+    "id": "e45a4c30-a26d-415e-bacd-12b347695b6b",
+    "name": "offline-alert",
+    "description": "",
+    "version": 24,
+    "enabled": true,
+    "source": {
+      "type": "JavaScript"
+    },
+    "api_username": null,
+    "secrets": null,
+    "use_env": null,
+    "logic_triggers": [
+      {
+        "type": "Event",
+        "id": "cf3a4019-c48a-4076-99fa-593d167a7130",
+        "logic_function_id": "e45a4c30-a26d-415e-bacd-12b347695b6b",
+        "enabled": true,
+        "product_id": 28512,
+        "event_name": "spark/status"
+      }
+    ]
+  }
+}

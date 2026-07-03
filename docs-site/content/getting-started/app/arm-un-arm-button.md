@@ -7,7 +7,7 @@ _Make sure you are logged in to your account and on the Traps page._
 * **Purpose**: The trap is set to capture an animal.
 * **Safety Requirement**: The user must manually open the door to activate this state. This ensures safety during the arming process.
 * **Behavior**: Once armed and the door is confirmed open, the trap enters a low-power mode, conserving energy while remaining active for an animal to enter.
-* **Notifications**: The trap maintains a connection by sending periodic updates. If disconnected for more than an hour, a notification is sent to the user.
+* **Notifications**: The trap sends periodic updates while armed. It may also use a low-power check-in cycle (about every **20 minutes**) and can appear briefly offline between check-ins — this is normal. You will receive an alert if the trap stays disconnected for more than an hour.
 
 ### Scouting State
 

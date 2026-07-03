@@ -34,6 +34,7 @@
 * [Trap Settings](getting-started/trap-settings/README.md)
   * [Enhanced Door Closing](getting-started/trap-settings/enhanced-door-closing.md)
   * [Pre-Capture Notification](getting-started/trap-settings/pre-capture-notification.md)
+  * [Distance Limits, Sensor Alerts & Errors](getting-started/trap-settings/distance-safety-and-alerts.md)
 * [Maintenance](getting-started/maintenance.md)
 * [LED Guide](getting-started/led-guide.md)
 * [Battery Overview](getting-started/battery-overview.md)
@@ -64,13 +65,14 @@
 
 ## Troubleshooting
 
+* [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
-* [Connection Issues](troubleshooting/troubleshooting-connection-issues-with-ocutrap.md)
 * [Condensation on the Camera](troubleshooting/condensation-on-the-camera.md)
 * [Motor Connector Use](troubleshooting/motor-connector-use.md)
 * [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)
+* [Wire Exposed](troubleshooting/wire-exposed.md)
 
 ## Support
 

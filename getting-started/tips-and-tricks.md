@@ -53,14 +53,13 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 
 ## How Detection Works
 
-### Sensor Field of View
-The Time-of-Flight sensor projects a **20-degree field of view** from the center of the pod into the trap, constantly monitoring for movement.
+The **distance sensor** in the POD watches the inside of the trap for movement.
 
 ### Detection Process
-1. **Object enters detection zone** (300-450mm) — Sensor starts tracking
-2. **Verification** — System confirms 3+ consecutive readings to avoid false triggers
-3. **Object enters capture zone** (0-250mm) — Trigger confirmed
-4. **Door closes** — Capture photo taken and alert sent
+1. **Animal enters the alert zone** (~12–18 in from the sensor) — You may get a pre-capture alert
+2. **Steady presence confirmed** — The trap waits for several consistent readings to avoid false triggers
+3. **Animal reaches your capture distance** (default ~8 in) — The door closes
+4. **Capture complete** — Photo taken and alert sent
 
 ### Why This Matters
 Unlike traditional traps that use a mechanical trip pan, OcuTrap uses a **distance sensor** to detect the animal's position. This method:
@@ -87,14 +86,14 @@ This video shows how your OcuTrap works once it's set up and ready to catch anim
 ## Trigger Settings
 
 ### Capture Distance
-- **Default**: 250mm (about 10 inches)
-- **Adjustable range**: 125mm–1000mm
+- **Default**: ~8 inches
+- **Adjustable range**: 6–18 inches (app presets)
 - **Tip**: Smaller values = animal must be closer before triggering
 
 ### Timing
 - The sensor must register **continuous presence** before activating
 - This timing **reduces false triggers** while ensuring the animal is fully enclosed
-- Timing is optimized in firmware and cannot be manually adjusted
+- Timing is automatic and cannot be manually adjusted
 
 ---
 
@@ -102,12 +101,12 @@ This video shows how your OcuTrap works once it's set up and ready to catch anim
 
 If you're getting unwanted captures:
 
-1. **Increase capture distance** — Makes the trigger less sensitive
+1. **Decrease capture distance** — Requires the animal to be closer before the door closes (reduces false triggers from rain, debris, or distant movement)
 2. **Check sensor window** — Clean any dirt, debris, or condensation
 3. **Reposition the trap** — Avoid areas with blowing debris or heavy rain entry
 4. **Review pre-capture photos** — See what's triggering the trap
 
-The dual-zone verification system filters out most false triggers from rain and debris automatically.
+The trap uses a **two-step check** to filter out most false triggers from rain and debris automatically.
 
 ---
 

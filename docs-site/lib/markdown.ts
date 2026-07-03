@@ -139,8 +139,38 @@ function preprocessGitBook(content: string): string {
         .slice(1)
         .map((row: string) => {
           const cells = row.match(/<td[^>]*>([\s\S]*?)<\/td>/g) ?? [];
-          const text = (cells[0] ?? "").replace(/<[^>]+>/g, "").trim();
-          return text ? `<div class="card-item">${text}</div>` : "";
+          if (cells.length === 0) return "";
+
+          const strip = (html: string) =>
+            html.replace(/<[^>]+>/g, "").trim();
+          const title = strip(cells[0] ?? "");
+          if (!title) return "";
+
+          let description = "";
+          let href = "";
+          for (const cell of cells.slice(1)) {
+            const linkMatch = cell.match(/href="([^"]+)"/);
+            if (linkMatch) {
+              href = linkMatch[1];
+            } else if (!description) {
+              const text = strip(cell);
+              if (text) description = text;
+            }
+          }
+          if (!href) return "";
+
+          const url =
+            "/" +
+            href
+              .replace(/\.md$/, "")
+              .replace(/\/README$/, "")
+              .replace(/^\//, "")
+              .replace(/\/$/, "");
+
+          const descHtml = description
+            ? `<span class="card-item__desc">${description}</span>`
+            : "";
+          return `<a href="${url}" class="card-item"><span class="card-item__title">${title}</span>${descHtml}</a>`;
         })
         .filter(Boolean);
       return `\n<div class="cards-grid">\n${cards.join("\n")}\n</div>\n`;

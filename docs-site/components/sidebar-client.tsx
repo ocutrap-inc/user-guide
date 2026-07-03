@@ -108,7 +108,7 @@ export default function SidebarClient({
               height={28}
             />
           </span>
-          OcuTrap Docs
+          OcuTrap Knowledge Base
         </Link>
 
         <ul style={{ listStyle: "none", margin: 0, padding: "0 0 2rem" }}>

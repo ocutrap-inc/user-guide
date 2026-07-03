@@ -6,17 +6,15 @@ pdf-exclude: true
 
 OcuTrap is a smart animal trap which will save you time and money. Open the trap door with a press of a button to reset trap after false trigger or capture of non-target animal. Smart controls to capture target animals. Remote open and closing of trap door from anywhere in the world to prevent accidental scratches, bites, or sprays. Get mobile notifications when the set target animal is captured. Deploy and manage more traps without constant in-person inspections.
 
-
-
 ### Full Logo High Quality
 
 {% tabs %}
 {% tab title="PNG" %}
-{% file src="../.gitbook/assets/OcuTrap_4228 × 1045_300dpi.png" %}
+{% file src="../.gitbook/assets/LogoMakr-1uMIUJ-300dpi (2).png" %}
 {% endtab %}
 
 {% tab title="JPEG" %}
-{% file src="../.gitbook/assets/OcuTrap_4228 × 1045_300dpi.jpeg" %}
+{% file src="../.gitbook/assets/LogoMakr-1uMIUJ-300dpi (1).jpeg" %}
 {% endtab %}
 
 {% tab title="SVG" %}
@@ -28,7 +26,7 @@ OcuTrap is a smart animal trap which will save you time and money. Open the trap
 
 {% tabs %}
 {% tab title="Linkedin" %}
-{% file src="../.gitbook/assets/OcuTrap_linkedin.png" %}
+{% file src="../.gitbook/assets/OcuTrap_google.png" %}
 {% endtab %}
 
 {% tab title="Google" %}
@@ -36,7 +34,7 @@ OcuTrap is a smart animal trap which will save you time and money. Open the trap
 {% endtab %}
 
 {% tab title="Youtube" %}
-{% file src="../.gitbook/assets/OcuTrap_youtube.png" %}
+{% file src="../.gitbook/assets/OcuTrap_google.png" %}
 {% endtab %}
 {% endtabs %}
 
@@ -48,15 +46,15 @@ OcuTrap is a smart animal trap which will save you time and money. Open the trap
 {% endtab %}
 
 {% tab title="Facebook" %}
-{% file src="../.gitbook/assets/OcuTrap_icon_facebook.png" %}
+{% file src="../.gitbook/assets/OcuTrap_icon_google.png" %}
 {% endtab %}
 
 {% tab title="Linkedin" %}
-{% file src="../.gitbook/assets/OcuTrap_icon_linkedin.png" %}
+{% file src="../.gitbook/assets/OcuTrap_icon_google.png" %}
 {% endtab %}
 
 {% tab title="Instagram" %}
-{% file src="../.gitbook/assets/OcuTrap_icon_instagram.jpeg" %}
+{% file src="../.gitbook/assets/OcuTrap_icon_Universal.jpg" %}
 {% endtab %}
 
 {% tab title="Universal" %}
@@ -68,7 +66,7 @@ OcuTrap is a smart animal trap which will save you time and money. Open the trap
 
 {% tabs %}
 {% tab title="Small" %}
-{% file src="../.gitbook/assets/OcuTrap_400 × 99.png" %}
+{% file src="../.gitbook/assets/LogoMakr-1uMIUJ.png" %}
 {% endtab %}
 
 {% tab title="PDF" %}

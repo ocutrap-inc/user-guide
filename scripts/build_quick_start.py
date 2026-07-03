@@ -176,8 +176,14 @@ def fit_image(path, max_w, max_h, target_dpi=200):
             target_px_h = int((ih / inch) * target_dpi)
 
             if w > target_px_w * 1.25 or h > target_px_h * 1.25:
-                if mode in ("RGBA", "P"):
-                    im = im.convert("RGB")
+                if mode in ("RGBA", "LA", "P"):
+                    # Flatten transparency onto white — converting straight
+                    # to RGB turns transparent pixels black (logo bug).
+                    im = im.convert("RGBA")
+                    bg = PILImage.new("RGBA", im.size,
+                                      (255, 255, 255, 255))
+                    bg.alpha_composite(im)
+                    im = bg.convert("RGB")
                 im.thumbnail((target_px_w, target_px_h), PILImage.LANCZOS)
                 tmp = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False)
                 im.save(tmp.name, "JPEG", quality=82, optimize=True)

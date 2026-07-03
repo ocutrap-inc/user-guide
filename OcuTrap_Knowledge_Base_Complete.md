@@ -138,10 +138,10 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 - **Camera:** Automatic night vision with IR LEDs. Adjustable image quality across 6 resolution sizes (QVGA to UXGA). Image rotation (0°, 90°, 180°, 270°). Configurable time-lapse photography.
 - **Door:** Linear motor with closing speed under 0.5 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
 - **Location:** Integrated GPS module with satellite positioning. Battery-optimized updates every 8 hours by default. Map view in the app.
-- **Sensors:** Time-of-Flight (ToF) distance detection for precise triggering. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Accelerometer for tilt detection.
-- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (111 Wh) for new traps (~40+ days runtime); 5,200 mAh variant for Canada (~21 days). Low battery alerts at 20% and 10%.
+- **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Tilt detection.
+- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (~40+ days runtime); 5,200 mAh variant for Canada (~21 days). Low battery alerts at 20% and 10%.
 - **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. Configurable 0–30 second activation timer. 3.0A maximum continuous current.
-- **Smart Detection:** Dual-zone verification system to reduce false triggers. Rain and debris filtering. Consecutive reading requirements before capture activation. Pre-capture notification alerts.
+- **Smart Detection:** Two-step verification to reduce false triggers. Rain and debris filtering. Pre-capture notification alerts.
 
 ---
 
@@ -161,7 +161,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Runtime | ~40+ days (10000 mAh) / ~21 days (5200 mAh), usage dependent |
 | Connectivity | 4G LTE cellular, multi-network |
 | GPS Updates | Default every 8 hours; requires 5+ satellites / 3D fix |
-| Sensor | VL53L1X ToF — 0–4 m range, 250 mm default capture distance |
+| Distance Sensor | Up to 13 ft hardware range; the trap actively detects within ~34 in (875 mm); default capture distance ~8 in (200 mm) |
 | Camera Resolution | QVGA to UXGA (6 sizes) |
 | IR LEDs | Automatic activation; 0–100% brightness control |
 | Dark Threshold | 25 lux default (configurable 1–100) |
@@ -243,7 +243,7 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| Capture Distance | 125–1000 mm (default: 250 mm) |
+| Capture Distance | 150–460 mm / 6–18 in (default: 200 mm / 8 in) |
 | Pre-Capture Alerts | On / Off (default: On) |
 
 ### Camera
@@ -280,7 +280,7 @@ Complete list of all configurable trap settings.
 |---|---|
 | GPS Interval | Configurable (default: 8 hours) |
 | Location Tracking | On / Off |
-| Accessory Port | Enable / Disable; timing 0–30,000 ms |
+| Accessory Port | Enable / Disable; activation time 0–30 seconds |
 | Capture Alert Interval | 0–48 hours (default: 8 hours) |
 | User Beeps | On / Off |
 | Enhanced Door Closing | On / Off (default: On) |
@@ -303,13 +303,13 @@ Hold the power button for 3 seconds for a proper shutdown.
 
 ### Optimal Placement
 
-- Position the ToF sensor 6–10 inches inside the cage entrance
+- Position the distance sensor **6–10 inches inside the cage entrance**
 - Place bait behind (deeper than) the sensor
 - Set the trap on level ground to avoid false tilt alerts
 
 ### Detection Zones
 
-The sensor has a 20-degree field of view. An approaching animal first enters the detection zone (approximately 300–450 mm) triggering a pre-capture alert, then enters the capture zone (0–250 mm by default) which closes the door.
+An approaching animal first enters the **alert zone** (~12–18 in from the sensor), which may trigger a pre-capture alert. When the animal reaches your **capture distance** (default ~8 in), the door closes.
 
 ### Reducing False Triggers
 
@@ -318,7 +318,7 @@ The sensor has a 20-degree field of view. An approaching animal first enters the
 - Reposition the trap to minimize rain entering the sensor area
 - Review captured photos to identify the cause
 
-> **How OcuTrap Prevents False Triggers:** The system requires 3+ consecutive readings, uses oscillation detection, and applies signal quality filtering before triggering a capture.
+> **How OcuTrap Prevents False Triggers:** The trap requires several steady readings in a row and ignores splashy movement (like rain) and weak readings before closing the door.
 
 ### Button Shortcuts
 
@@ -381,7 +381,7 @@ Perform these checks at the start of every trapping session:
 | Fast Blinking Cyan | Connecting to cloud |
 | Blinking Magenta | OTA firmware update in progress |
 | Blinking Green | Searching for cellular connection |
-| Red Flash SOS (rapid blinks) | Firmware crash — contact support if >10 blinks |
+| Red Flash SOS (rapid blinks) | System error — contact support if >10 blinks |
 | No LED | No power or failed to boot |
 | LED Off (after armed) | Hibernation — low-power sleep mode |
 
@@ -464,7 +464,7 @@ A: The OcuTrap operates in temperatures from -10°C to 45°C. The weatherproof e
 A: Yes. OcuTrap is suitable for commercial pest control, wildlife management, and research operations.
 
 **Q: How do I handle false triggers?**
-A: The dual-zone detection system, consecutive reading requirements, and oscillation detection minimize false triggers. Adjusting the capture distance and keeping the sensor clean further reduces them.
+A: The trap uses a two-step check and filters out rain and debris before closing the door. Adjusting the capture distance and keeping the sensor clean further reduces false triggers.
 
 **Q: Can I connect multiple traps?**
 A: Yes. Name traps clearly, use map view for tracking, share with team members, and stagger GPS intervals for efficient management.
@@ -525,7 +525,7 @@ Firmware updates are delivered automatically over the air (OTA) when the device 
 - Battery charge above 20%
 - Remain powered throughout the update
 
-Check your current firmware version in the app under Settings / Device Info. If the device is unresponsive after an update, wait 5 minutes or perform a power cycle.
+Check your current firmware version in the app under Settings / Device Info. If the device is unresponsive after an update, wait 5 minutes or turn the trap off and on again.
 
 ---
 
@@ -609,7 +609,7 @@ The OcuTrap has six power modes that automatically optimize battery usage:
 |---|---|---|
 | Normal Power | Full operation, highest power consumption | Full brightness |
 | Low Power Idle | Power-saving during inactivity | Dimmed |
-| Low Power Armed | Armed and waiting; ~300ms ToF intervals | Dimmed |
+| Low Power Armed | Armed and waiting; sensor active at reduced power | Dimmed |
 | Sleep | Deep power-saving; most sensors disabled | Off |
 | Armed Sleep Offline | 20-minute check-ins; captures reported at check-in | Flashes 3s |
 | Hibernation | Lowest power; no communication | Off |
@@ -626,9 +626,8 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 |---|---|
 | Voltage | 12V DC |
 | Max Continuous Current | 3.0 A |
-| Switching | MOSFET low-side switched, 100kΩ pull-down |
 | Polarity | Pin 1: Ground, Pin 2: +12V (not reversible) |
-| Timing | Configurable 0–30,000 ms |
+| Activation Time | Configurable 0–30 seconds |
 
 ### Common Uses
 
@@ -637,7 +636,7 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 - Lure or bait dispensers
 - Vaccine feeders
 
-> ⚠️ **Warning:** Do not use the accessory port and door motor simultaneously — this can cause a power conflict. Do not exceed 3.0A. Add flyback diode protection for inductive loads (motors, solenoids, relays). Do not back-feed power into the port.
+> ⚠️ **Warning:** Do not use the accessory port and door motor simultaneously — this can cause a power conflict. Do not exceed 3.0A. For motors and solenoids, use a relay or driver circuit. Do not connect external power to the port.
 
 ---
 
@@ -653,7 +652,7 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 
 ### False Triggers
 
-OcuTrap uses multiple safeguards: 3+ consecutive readings required, oscillation detection, and signal quality filtering. If false triggers persist:
+OcuTrap uses multiple safeguards to reduce false triggers from rain and debris. If false triggers persist:
 
 - Increase the capture distance setting
 - Position the trap to minimize rain entering the sensor area
@@ -677,12 +676,12 @@ GPS updates at the configured interval (default 8 hours) with a 5-minute delay o
 
 ### Connectivity Issues
 
-The device has automatic recovery after 20 minutes offline (disconnects, power cycles modem, retries with increasing intervals).
+The trap will try to reconnect on its own if it goes offline — this can take up to an hour. Leave it powered on with decent cellular coverage.
 
 1. Check that the battery is charged and connected
 2. Inspect the LED — if no LED, verify all connections are secure
 3. Confirm the trap appears in your Main Console
-4. Verify the serial number on the trap matches the Particle chipset SN in settings
+4. Verify the **Trap ID** in the app matches the **serial number** on the POD label inside the trap
 5. If blinking green, ensure you have adequate cellular coverage
 6. Check that the gold antenna connections are pressed down and secure
 
@@ -779,14 +778,14 @@ Remove the battery and leave the POD cracked open for 24 hours in a warm, ventil
 | Channel | Details |
 |---|---|
 | Live Chat | Message bubble on OcuTrap.com homepage (bottom right) |
-| Email | info@ocutrap.com or via the contact page |
+| Email | support@ocutrap.com or via the contact page |
 | Website Status | ocutrap.statuspage.io |
 
 ---
 
 ## Bug Reporting
 
-Report bugs promptly at base.ocutrap.com/bug_report. Include a detailed description, steps to reproduce, screenshots or photos, and expected versus actual behavior. You can also email reports to info@ocutrap.com.
+Report bugs promptly at base.ocutrap.com/bug_report. Include a detailed description, steps to reproduce, screenshots or photos, and expected versus actual behavior. You can also email reports to support@ocutrap.com.
 
 ---
 
@@ -973,7 +972,7 @@ The new owner activates a subscription if required. Note: the warranty period da
 
 ## Media Kit
 
-OcuTrap provides high-quality media assets for press, partners, and promotional use. Available assets include logos in PNG, JPEG, and SVG formats, social media logos for LinkedIn, Google, and YouTube, app icons, and product brochures. Contact info@ocutrap.com or visit the media kit page for downloads.
+OcuTrap provides high-quality media assets for press, partners, and promotional use. Available assets include logos in PNG, JPEG, and SVG formats, social media logos for LinkedIn, Google, and YouTube, app icons, and product brochures. Contact support@ocutrap.com or visit the media kit page for downloads.
 
 ---
 
@@ -1041,4 +1040,4 @@ OcuTrap founders Brian Quispe '20 '22G and Graham Patterson '20 won the Joan F. 
 **Document Version:** v1.0 | April 2026
 
 *OcuTrap — Smart Wildlife Management*
-*www.ocutrap.com | info@ocutrap.com*
+*www.ocutrap.com | support@ocutrap.com*

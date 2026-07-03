@@ -6,7 +6,7 @@ import TabsInit from "@/components/tabs-init";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Full Manual — OcuTrap Docs",
+  title: "Full Manual — OcuTrap Knowledge Base",
   description: "Complete OcuTrap documentation in one printable page.",
 };
 

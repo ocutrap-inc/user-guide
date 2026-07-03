@@ -31,7 +31,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: Same as Low Power Idle, but the trap is armed and ready to capture an animal.
 * **When Active**: When the trap is armed and waiting.
 * **Indicators**: LED brightness is dimmed.
-* **Sensor Activity**: Time-of-Flight sensor operating at ~300ms intervals (optimized for battery)
+* **Detection**: The distance sensor continues monitoring for animals while using less power than full operation
 
 > **Important**: When in **armed mode**, the device will **not enter hibernation** unless a **very** **low battery event** occurs.
 
@@ -63,7 +63,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: The lowest power state where the device is completely inactive. No communication is possible in this mode.
 * **When Active**:
   * If the **battery is too low** to continue operation.
-  * If the device is **idle for 1 hour and 45 minutes** and **not armed**.
+  * If the device is **idle for about 2 hours** and **not armed** (configurable — see [Unarmed Hibernation](unarmed-hibernation.md)).
   * If the **power button is held down for 3+ seconds**.
 * **Power Consumption**: Minimal.
 * **Indicators**: LED is powered off.
@@ -83,7 +83,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Low Power Idle Mode → Low Power Armed Mode** (when armed).
 * **Armed Sleep Offline → Cloud Check-in** (every 20 minutes).
 * **Any Mode → Hibernation** (if low battery).
-* **Low Power Idle Mode → Hibernation** (if unarmed and idle for 1 hour 45 minutes).
+* **Low Power Idle Mode → Hibernation** (if unarmed and idle for about 2 hours, unless [Unarmed Hibernation](unarmed-hibernation.md) is disabled).
 
 #### User-Controlled Transitions:
 
@@ -101,6 +101,8 @@ To ensure users are aware of power status, **OcuTrap sends battery warnings** at
 * **Hibernation** – Final alert before shutdown.
 
 These alerts help prevent unexpected downtime and allow users to take action before the device powers off.
+
+> **Unarmed hibernation:** You can disable automatic hibernation while unarmed in trap settings. See [Unarmed Hibernation](unarmed-hibernation.md) for details.
 
 ***
 

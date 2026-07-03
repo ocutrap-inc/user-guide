@@ -65,6 +65,12 @@
 
 - (none)
 
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260616-q22 | Image-cadence page + v915 distance/zone/cadence reconciliation | 2026-06-16 | 2f3473c | [260616-q22-add-image-cadence-user-guide-page-and-co](./quick/260616-q22-add-image-cadence-user-guide-page-and-co/) |
+
 ## Session Continuity
 
 - **Last session**: 2026-05-04 — `/gsd-new-project` created PROJECT.md,

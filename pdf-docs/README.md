@@ -16,13 +16,18 @@ docs.ocutrap.com.
 
 ## `pdf-docs/printed/` — Ships with the trap
 
-The Quick Start is the only paper document in the box. Everything else the
-customer needs is pushed to `docs.ocutrap.com` via QR code.
+The Quick Start and the full manual are the paper documents in the box.
+Everything else the customer needs is pushed to `docs.ocutrap.com` via QR code.
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
 | `R1_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. Bare-minimum setup (charge → assemble → app → arm) plus a big QR code to the video guides. | `scripts/build_quick_start.py` |
+| `R1_Manual.pdf` | 20-page, letter-size, branded Installation & User Manual. Prints normally (one page per sheet, portrait — no 2-up). Full assembly, POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. Replaces the Google Docs "Manual v2". | `scripts/build_manual.py` (images in `pdf-docs/manual-images/`) |
 | `inside_sticker.png` | LED/button reference graphic pre-applied inside the POD lid. | Hardware team |
+
+`pdf-docs/manual-images/` holds the photos/renders embedded in the manual,
+stored as plain git blobs. The TOC page numbers in `build_manual.py` are
+hard-coded — if you change the manual's layout, rebuild and re-verify them.
 
 ## `.gitbook/assets/` — Customer downloads
 
@@ -58,14 +63,16 @@ detect drift, because pandoc and WeasyPrint output varies enough between
 macOS and Ubuntu that a binary or text comparison would false-fail. The
 sidecar is the single source of truth for "is this PDF up-to-date."
 
-If you change docs without regenerating, CI will fail with a message
-pointing back here.
+If you change docs without regenerating, CI will fail on the pull request.
+After merge, the **main-branch workflow rebuilds and commits the PDF
+automatically** if it is still out of date — but including the PDF in your
+PR keeps downloads current immediately and avoids a second bot commit.
 
-> **Why no auto-commit?** Earlier versions of the workflow regenerated and
+> **Why not auto-commit on every PR?** Earlier versions regenerated and
 > committed the PDF for you on every push to `main`. That created merge
-> conflicts on every overlapping PR (two authors — you and the bot — editing
-> the same binary file). One source of truth is simpler: the PR that changes
-> docs also commits the PDF.
+> conflicts on overlapping PRs (two authors — you and the bot — editing the
+> same binary file). PRs still verify; `main` now self-heals when the PDF
+> was missed.
 
 ## Rebuilding the other PDFs
 

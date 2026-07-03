@@ -12,7 +12,7 @@ description: >-
 1. Go to [base.ocutrap.com](https://base.ocutrap.com/)
 2. Log in with your account credentials.
 3. Click on [**Account**](https://base.ocutrap.com/account/) in the menu.
-4. Select **Manage Subscription**.
+4. Select **Manage Subscriptions**.
 5. Choose the trap you want to update.
 
 ### Available Options

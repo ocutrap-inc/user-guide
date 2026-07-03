@@ -14,37 +14,30 @@ description: >-
 
 OcuTrap uses a distance sensor to detect animals before they reach the capture zone. It monitors two key areas:
 
-* **Early Detection Zone**: Approximately 6 inches (150mm) _before_ your set capture distance
-  *   #### Example
+* **Detection Zone (300–450 mm from sensor)**: The trap starts tracking an object and may send a pre-capture alert.
+* **Capture Zone (0–250 mm from sensor)**: The door closes when the object is confirmed inside this zone.
 
-      If your **capture distance** is set to **8 inches**, then:
+**Default capture distance** is **250 mm (about 10 inches)**. Pre-capture alerts can fire while an animal is still in the detection zone, before the door closes.
 
-      * The **Primary Detection Zone** starts at **8 inches** from the sensor (this is when a capture can occur).
-      * The **Early Detection Zone** starts at **14 inches**—**6 inches before** your capture distance.
+#### Example
 
-      In this case, if an animal is detected at 13 inches, you’ll receive an **"Early pre-capture"** alert with the message:
+With the default **250 mm** capture distance:
 
-      > “Early pre-capture: 13.0 in detected”
+* At **~350 mm**, you may receive an **"Early pre-capture"** alert with a photo.
+* At **~250 mm or closer**, the trap confirms capture and the door closes.
 
-      This gives you an early warning before the trap activates at 8 inches.
-
-If motion is detected in either zone, the trap will:
-
-1. Take a **pre-capture photo**&#x20;
-2. Send a **push/email alert** with the estimated distance
-
-#### Example Alerts
+Alert text looks like:
 
 * "Pre-capture: 10.0 in detected"
-* "Early pre-capture: 15.7 in detected"
+* "Early pre-capture: 13.8 in detected"
 
-> Units (inches or centimeters) depend on your trap’s settings under **Units**.
+> Units (inches or millimeters) depend on your trap's **Units** setting. For the full sensor model, see [Technical Specifications](../technical-specifications.md).
 
 ### How to Enable or Disable
 
 This setting is configured per trap:
 
-1. Open the OcuTrap app or [base.ocutrap.com](https://base.ocutrap.com)
+1. Open the OcuTrap app or [app.ocutrap.com](https://app.ocutrap.com)
 2. Tap on the trap you want to edit
 3. Go to **Settings → More Settings**
 4. Find the **Pre-Capture Notification** option

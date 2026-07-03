@@ -9,7 +9,7 @@ description: >-
 
 ### Step 1: Remove the Trap From Your Account
 
-1. Log in to your account at [base.ocutrap.com/account](https://base.ocutrap.com/account).
+1. Log in to your account at [app.ocutrap.com/account](https://app.ocutrap.com/account).
 2. Locate the trap you wish to transfer.
 3. Click the **Delete Trap** button.
 4. Confirm the trap name exactly as prompted.

@@ -1,19 +1,10 @@
 name: build-kb-pdf
 
-# Verifies that the committed Knowledge Base PDF matches what the build
-# script would produce from the current docs by comparing source hashes
-# (the script writes a `<pdf>.sources.sha` sidecar at build time).
+# PRs: verify the committed PDF sidecar matches current docs. Contributors
+# should regenerate in the same PR when possible — see pdf-docs/README.md.
 #
-# We do NOT rebuild the PDF in CI on purpose — pandoc and WeasyPrint
-# produce slightly different output across environments (macOS vs
-# Ubuntu, font availability, library versions), so a rebuilt-PDF
-# comparison would false-fail. The source-hash comparison answers
-# exactly the right question: "did the docs change since the PDF was
-# generated?" without depending on cross-platform render reproducibility.
-#
-# We also do NOT auto-commit the PDF here — having two authors (the bot
-# and contributors) for the same binary file caused merge conflicts on
-# every overlapping PR.
+# main / manual: verify first; if drifted, rebuild on Ubuntu and auto-commit
+# so customer downloads stay in sync when a docs PR omits the PDF.
 
 on:
   pull_request:
@@ -21,7 +12,10 @@ on:
       - '**/*.md'
       - 'scripts/build_kb_pdf.py'
       - 'scripts/kb_pdf_style.css'
+      - 'scripts/source_hash.py'
+      - 'scripts/verify_kb_pdf.py'
       - '.github/workflows/build-kb-pdf.yml'
+      - '.gitbook/assets/OcuTrap_Knowledge_Base.pdf'
       - '.gitbook/assets/OcuTrap_Knowledge_Base.pdf.sources.sha'
   push:
     branches: [main]
@@ -29,7 +23,10 @@ on:
       - '**/*.md'
       - 'scripts/build_kb_pdf.py'
       - 'scripts/kb_pdf_style.css'
+      - 'scripts/source_hash.py'
+      - 'scripts/verify_kb_pdf.py'
       - '.github/workflows/build-kb-pdf.yml'
+      - '.gitbook/assets/OcuTrap_Knowledge_Base.pdf'
       - '.gitbook/assets/OcuTrap_Knowledge_Base.pdf.sources.sha'
   workflow_dispatch:
 
@@ -39,12 +36,65 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     steps:
       - uses: actions/checkout@v4
-        # No lfs:true needed — verify only reads markdown + script + sidecar.
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Verify committed PDF source hash matches current docs
         run: python3 scripts/verify_kb_pdf.py
+
+  sync-pdf:
+    if: >-
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      github.event_name == 'workflow_dispatch'
+    runs-on: blacksmith-4vcpu-ubuntu-2404
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libffi-dev
+      - name: Install Python dependencies
+        run: pip install -r requirements-dev.txt
+      - uses: actions/cache@v4
+        with:
+          path: .cache/kb-pdf
+          key: kb-pdf-${{ hashFiles('SUMMARY.md', '.gitbook/assets/**') }}
+          restore-keys: |
+            kb-pdf-
+      - name: Check whether PDF is in sync
+        id: check
+        run: |
+          if python3 scripts/verify_kb_pdf.py; then
+            echo "synced=true" >> "$GITHUB_OUTPUT"
+            echo "Knowledge Base PDF is already in sync."
+          else
+            echo "synced=false" >> "$GITHUB_OUTPUT"
+            echo "Knowledge Base PDF is out of date — will rebuild."
+          fi
+      - name: Rebuild Knowledge Base PDF
+        if: steps.check.outputs.synced == 'false'
+        run: python3 scripts/build_kb_pdf.py
+      - name: Commit regenerated PDF
+        if: steps.check.outputs.synced == 'false'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .gitbook/assets/OcuTrap_Knowledge_Base.pdf \
+                  .gitbook/assets/OcuTrap_Knowledge_Base.pdf.sources.sha
+          if git diff --staged --quiet; then
+            echo "::error::Rebuild completed but PDF and sidecar are unchanged."
+            exit 1
+          fi
+          git commit -m "chore(kb-pdf): regenerate from docs [skip ci]"
+          git push

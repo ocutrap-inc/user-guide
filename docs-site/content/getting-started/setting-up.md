@@ -125,9 +125,9 @@ Step 2: Connect the Wire to the POD
 Fully tighten all the bolts. At this point, your hardware setup is complete.
 
 {% hint style="warning" %}
-If you have issues, check out [Broken link](/broken/pages/yBQAVI9zJiW73awmxbcQ "mention")
+If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
 
-[hardware-features.md](hardware-features.md "mention")
+[Hardware Features](hardware-features.md)

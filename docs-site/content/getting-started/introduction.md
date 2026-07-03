@@ -10,7 +10,7 @@
 * **Smart Control Features:** Facilitates the precise capturing of target animals through advanced technology.
 * **Remote Operation Capability:** Manage trap doors from anywhere in the world, significantly reducing the risk of injuries from accidental encounters with the trapped animals.
 
-First time using you OcuTrap? Check out [set-up-tutorial.md](set-up-tutorial.md "mention")
+First time using your OcuTrap? Check out the [Set-up Tutorial](set-up-tutorial.md).
 
 {% content-ref url="../support/safety-information.md" %}
 [safety-information.md](../support/safety-information.md)

@@ -9,10 +9,10 @@ description: >-
 
 ### How to Access Subscription Settings
 
-1. Go to [base.ocutrap.com](https://base.ocutrap.com/)
+1. Go to [app.ocutrap.com](https://app.ocutrap.com/)
 2. Log in with your account credentials.
-3. Click on [**Account**](https://base.ocutrap.com/account/) in the menu.
-4. Select **Manage Subscription**.
+3. Click on [**Account**](https://app.ocutrap.com/account/) in the menu.
+4. Select **Manage Subscriptions**.
 5. Choose the trap you want to update.
 
 ### Available Options

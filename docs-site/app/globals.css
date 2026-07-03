@@ -531,19 +531,44 @@ body {
 /* Cards grid (from GitBook card tables) */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
-  margin: 1rem 0;
+  margin: 1.25rem 0 1.75rem;
 }
 
 .card-item {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1rem 1.125rem;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 0.875rem;
-  font-weight: 500;
   background: var(--color-sidebar-bg);
-  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.card-item:hover {
+  border-color: var(--color-brand);
+  background: var(--color-brand-light);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+}
+
+.card-item__title {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.card-item:hover .card-item__title {
+  color: var(--color-brand);
+}
+
+.card-item__desc {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-muted);
 }
 
 /* Tabs */
