@@ -67,8 +67,6 @@
   fails when web-app or firmware repos add features without a matching
   user-guide page.
 - Add firmware release notes PDF and hardware/setup PDFs to the sync scope.
-- Translation refresh via `translate_repo.py` after English source of truth
-  stabilizes.
 
 ## Out of Scope
 

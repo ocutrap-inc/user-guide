@@ -1,8 +1,8 @@
-# Open/ Closed Button
+# Open/Closed Button
 
-&#x200B;_&#x4D;ake sure you are logged in to your account and on the traps page._
+_Make sure you are logged in to your account and on the Traps page._
 
-### Open/ Closed Button
+### Open/Closed Button
 
 * **Functionality**: Allows controlling the trap's door.
 * **Open**: Lifts the door for resetting or letting animals exit.

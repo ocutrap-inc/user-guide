@@ -52,6 +52,16 @@ This setting is configured per trap:
 * Monitor animal behavior without needing a capture — or use [Scouting Mode](../app/scouting-mode.md) to watch activity without closing the door
 * Improve trap placement and setup based on activity patterns
 
+### What you'll see (alert motion gate v906+; scout photo gate v926+)
+
+| Signal | When it fires |
+| --- | --- |
+| **Pre-Capture alert text** | After the animal shows **real inward movement** (~3 in / 75 mm) toward the trap — static grass or debris in the detection zone will **not** trigger the text alert |
+| **Approach photos** | On zone entry and during approach — **not** blocked by the motion gate on alert text |
+| **Door close** | Only when the animal is confirmed in the capture zone (Armed mode) |
+
+> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for alert text; scout photos are also motion-gated (v926+).
+
 ### Need to Turn It Off?
 
 If you prefer to only be notified after a capture, you can disable **Pre-Capture Notification** in settings at any time. It will not affect the actual capture or release functions.

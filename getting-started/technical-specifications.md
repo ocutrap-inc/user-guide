@@ -43,13 +43,13 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 | **Low Battery Warning (20%)**      | 10.4V (default, configurable)           |
 | **Critical Battery Warning (10%)** | \~9.5V                                  |
 | **Auto Power-Off Threshold**       | 9.6V (default, configurable 7.0V–12.0V) |
-| **Runtime (10000 mAh)**            | \~40+ days per charge (typical usage)   |
+| **Runtime (10000 mAh)**            | ~40+ days per charge (typical usage)    |
 | **Runtime (5200 mAh)**             | \~21 days per charge (typical usage)    |
 | **Charger (10000 mAh)**            | 2A @ 12V, \~5–6 hours full charge       |
 | **Charger (5200 mAh)**             | 1A @ 12V, \~5–6 hours full charge       |
-| **Trap connector (10000 mAh)**     | Female XT30 on pack; male XT30 on trap  |
-| **Trap connector (5200 mAh)**      | Male XT30 on pack; female XT30 on trap  |
-| **Alternate pack / connector**     | Contact support for PCB + holder swap   |
+| **Trap connector (5200 mAh)**      | Male XT30 on pack; female XT30 on trap PCB |
+| **Trap connector (10000 mAh)**   | Female XT30 on pack; male XT30 on trap PCB |
+| **Alternate pack / connector**   | Contact support for PCB + holder swap   |
 
 ***
 

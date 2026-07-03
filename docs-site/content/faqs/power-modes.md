@@ -21,7 +21,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 #### 2. Low Power Idle Mode
 
 * **Description**: A power-saving mode where the device reduces energy consumption while waiting for user interaction.
-* **When Active**: After about 5–6 minutes of inactivity in normal power mode.
+* **When Active**: After a period of inactivity in normal power mode.
 * **Indicators**: LED brightness is dimmed.
 
 ***
@@ -67,8 +67,8 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Power Consumption**: Minimal.
 * **Indicators**: LED is powered off.
 * **Recovery**:
-  * If due to **low battery**, **replace or recharge** the battery. During low-battery hibernation the trap briefly wakes on its own about once an hour, so it comes back online automatically once the battery has power again — or press the **power button** to wake it immediately.
-  * If due to a **power button press**, press the **power button** to wake the device.
+  * If due to **low battery**, the trap **checks the battery about once an hour on its own** and recovers automatically once voltage is back (for example after solar charging) — or **replace/recharge** the battery to bring it back sooner.
+  * If due to a **power button press**, the user must **press the power button to wake the device**.
 
 > **Note:** In hibernation mode, **OcuTrap cannot receive messages or send notifications**.
 

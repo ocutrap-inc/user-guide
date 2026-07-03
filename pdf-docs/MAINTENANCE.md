@@ -48,9 +48,9 @@ the GitBook docs.
 
 ### Non-critical (housekeeping)
 
-- [x] **Quick Start — “view images”** (not “view captures”) — `build_quick_start.py` + regenerated PDF, 2026-07-03.
-- [x] **Quick Start — battery / XT30 / chargers** — 5200 mAh (1A, male XT30) vs 10k mAh (2A, female XT30); charge via black connector only — script + PDF, 2026-07-03.
-- [x] **Cheat Sheet — battery / XT30 callout** + Scout row in device states — script + PDF, 2026-07-03.
+- [x] **Quick Start — “view images”** (not “view captures”) — `build_quick_start.py` + regenerated PDF, 2026-05-20.
+- [x] **Quick Start — battery / XT30 / chargers** — 5200 mAh (1A, male XT30) vs 10k mAh (2A, female XT30); charge via black connector only — script + PDF, 2026-05-20.
+- [x] **Cheat Sheet — battery / XT30 callout** + Scout row in device states — script + PDF, 2026-05-20.
 - [ ] **Cold weather guidance** — confirm whether the Cheat Sheet and Quick
   Start should include cold-weather guidance, or whether deferring to the
   GitBook docs (now fully captured in the auto-built Knowledge Base PDF) is

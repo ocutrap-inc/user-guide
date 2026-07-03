@@ -13,7 +13,7 @@ description: >-
 * **Capture**\
   Notifies you when a trap successfully captures an animal.
 
-For Scout alerts and photos while the door stays open, see [Scouting Mode](scouting-mode.md).
+For Scout alerts and photos while the door stays open, see [Scouting Mode](../app/scouting-mode.md).
 
 ### Notification Options
 

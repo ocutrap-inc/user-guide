@@ -111,7 +111,7 @@ This version is delivered **over‑the‑air (OTA)**. It downloads and installs 
 
 ***
 
-**🔧 General improvements**
+#### 🔧 General improvements
 
 * Faster location fixes & steadier GPS reporting
 * Smoother, more accurate battery percentages and voltage readings

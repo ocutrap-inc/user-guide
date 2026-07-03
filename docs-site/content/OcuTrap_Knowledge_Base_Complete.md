@@ -172,7 +172,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 
 ## The OcuTrap App
 
-The OcuTrap app is your command center for managing traps, viewing captures, and configuring settings. Create your account at base.ocutrap.com/signuplogin. The mobile app is available for both iOS (App Store) and Android (Google Play).
+The OcuTrap app is your command center for managing traps, viewing photos, and configuring settings. Create your account at base.ocutrap.com/signuplogin. The mobile app is available for both iOS (App Store) and Android (Google Play).
 
 ### Adding a Trap to Your Account
 
@@ -1011,9 +1011,13 @@ OcuTrap provides high-quality media assets for press, partners, and promotional 
 
 ## Recent Updates
 
+### May 2026 — Firmware v706
+
+Reliability, battery, and image improvements including faster cellular uploads, live photos during Scouting Mode, and low-battery alerts that retry after reconnect. See the full release notes in [Updates](appendix-and-resources/updates.md).
+
 ### April 2026 — Scouting Mode
 
-Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; sends Scout Alert and Scout Trigger notifications at pre-capture and trigger distances but does not close the door. Includes a 5-minute cooldown after the animal leaves the area.
+Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; sends Scout Alert and Scout Trigger notifications at pre-capture and trigger distances. Includes a 5-minute cooldown after the animal leaves the area.
 
 ### April 2025 — Firmware v1.12.7-250
 

@@ -32,7 +32,7 @@ When the battery is **critically low at startup**, the following will happen:
 * The trap shows a **solid red LED** during boot.
 * Sends a cloud error notification (if connected).
 * Automatically shuts down and enters hibernation.
-* Will not auto-recover — must be awakened manually using the power button.
+* Low-battery hibernation auto-wakes about once an hour to re-check the battery (v946+); it recovers on its own once voltage is back. Only a manual power-button shutdown stays off until you press the power button.
 * If voltage is still low, it will repeat the cycle.
 
 To recover, charge or replace the battery and press the power button again.
