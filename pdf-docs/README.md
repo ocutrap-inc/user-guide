@@ -16,13 +16,18 @@ docs.ocutrap.com.
 
 ## `pdf-docs/printed/` — Ships with the trap
 
-The Quick Start is the only paper document in the box. Everything else the
-customer needs is pushed to `docs.ocutrap.com` via QR code.
+The Quick Start and the full manual are the paper documents in the box.
+Everything else the customer needs is pushed to `docs.ocutrap.com` via QR code.
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
 | `R1_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. Bare-minimum setup (charge → assemble → app → arm) plus a big QR code to the video guides. | `scripts/build_quick_start.py` |
+| `R1_Manual.pdf` | 20-page, letter-size, branded Installation & User Manual. Prints normally (one page per sheet, portrait — no 2-up). Full assembly, POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. Replaces the Google Docs "Manual v2". | `scripts/build_manual.py` (images in `pdf-docs/manual-images/`) |
 | `inside_sticker.png` | LED/button reference graphic pre-applied inside the POD lid. | Hardware team |
+
+`pdf-docs/manual-images/` holds the photos/renders embedded in the manual,
+stored as plain git blobs. The TOC page numbers in `build_manual.py` are
+hard-coded — if you change the manual's layout, rebuild and re-verify them.
 
 ## `.gitbook/assets/` — Customer downloads
 
