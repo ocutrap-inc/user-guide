@@ -1,3 +1,7 @@
+---
+pdf-exclude: true
+---
+
 # Media Kit
 
 OcuTrap is a smart animal trap which will save you time and money. Open the trap door with a press of a button to reset trap after false trigger or capture of non-target animal. Smart controls to capture target animals. Remote open and closing of trap door from anywhere in the world to prevent accidental scratches, bites, or sprays. Get mobile notifications when the set target animal is captured. Deploy and manage more traps without constant in-person inspections.

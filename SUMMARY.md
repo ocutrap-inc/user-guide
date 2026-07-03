@@ -60,7 +60,6 @@
 * [Cold Weather](faqs/cold-weather.md)
 * [Camera](faqs/camera.md)
 * [Power Modes](faqs/power-modes.md)
-* [Unarmed Hibernation](faqs/unarmed-hibernation.md)
 * [Miscellaneous](faqs/miscellaneous/README.md)
   * [Password Policy for Users](faqs/miscellaneous/password-policy-for-users.md)
 * [Accessory Port](faqs/accessory-button-port.md)

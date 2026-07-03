@@ -11,7 +11,9 @@ description: >-
 * **Alert**\
   Activated to provide warnings or important updates regarding a trap's performance.
 * **Capture**\
-  Notifies you when a trap successfully captures or detects the intended target.
+  Notifies you when a trap successfully captures an animal.
+
+For Scout alerts and photos while the door stays open, see [Scouting Mode](../app/scouting-mode.md).
 
 ### Notification Options
 
