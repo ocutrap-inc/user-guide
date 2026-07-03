@@ -8,14 +8,18 @@
 * [Set-up Tutorial](getting-started/set-up-tutorial.md)
 * [Hardware Set Up](getting-started/setting-up.md)
 * [Video Assembly](getting-started/video-assembly.md)
+* [Deploying Your Trap in the Field](getting-started/deploying-in-the-field.md)
 * [Hardware Features](getting-started/hardware-features.md)
 * [Technical Specifications](getting-started/technical-specifications.md)
+* [Connectivity & Coverage](getting-started/connectivity-and-coverage.md)
 * [App](getting-started/app/README.md)
   * [Adding a trap to your account](getting-started/app/adding-a-trap-to-your-account.md)
+  * [Using the Mobile App](getting-started/app/using-the-mobile-app.md)
   * [Billing](getting-started/app/billing.md)
   * [Open & Closed Button](getting-started/app/open-closed-button.md)
   * [Arm & Un-arm Button](getting-started/app/arm-un-arm-button.md)
   * [Scouting Mode](getting-started/app/scouting-mode.md)
+  * [When Your Trap Takes Photos](getting-started/app/image-cadence.md)
   * [After a Capture](getting-started/app/after-capture.md)
   * [Trap Settings](getting-started/app/trap-settings/README.md)
     * [Settings Reference](getting-started/app/trap-settings/settings-reference.md)
@@ -31,6 +35,7 @@
   * [Other app information](getting-started/app/other-app-information.md)
   * [Interface Views](getting-started/app/interface-views.md)
 * [Tips and Tricks](getting-started/tips-and-tricks.md)
+* [Handling & Releasing a Captured Animal](getting-started/handling-a-captured-animal.md)
 * [Trap Settings](getting-started/trap-settings/README.md)
   * [Enhanced Door Closing](getting-started/trap-settings/enhanced-door-closing.md)
   * [Pre-Capture Notification](getting-started/trap-settings/pre-capture-notification.md)
@@ -44,6 +49,7 @@
 * [Sharing Traps](faqs/sharing-traps/README.md)
   * [User Levels](faqs/sharing-traps/user-levels.md)
 * [Common questions](faqs/common-questions.md)
+* [What animals is the OcuTrap R1 designed for?](faqs/target-animals.md)
 * [Safe-mode](faqs/safe-mode.md)
 * [Battery](faqs/battery.md)
 * [Updating firmware](faqs/updating-firmware.md)
@@ -66,6 +72,7 @@
 ## Troubleshooting
 
 * [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
+* [LED Light Guide](troubleshooting/led-light-guide.md)
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
@@ -86,6 +93,8 @@
 
 * [Warranty Information](legal-and-compliance/warranty-information.md)
 * [Legal disclaimers and compliance information](legal-and-compliance/legal-disclaimers-and-compliance-information.md)
+* [Responsible & Legal Use](legal-and-compliance/responsible-and-legal-use.md)
+* [Your Data & Privacy](legal-and-compliance/data-and-privacy.md)
 
 ## Device Management
 
@@ -94,6 +103,7 @@
 
 ## Account and Billing
 
+* [Your OcuTrap Subscription](account-and-billing/subscription-overview.md)
 * [Billing](account-and-billing/billing/README.md)
   * [Changing Your Subscription Payment Method](account-and-billing/billing/changing-your-subscription-payment-method.md)
 * [Update Individual Trap Subscriptions](account-and-billing/update-individual-trap-subscriptions.md)

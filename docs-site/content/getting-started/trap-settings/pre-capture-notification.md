@@ -12,23 +12,23 @@ description: >-
 
 ### How It Works
 
-OcuTrap uses a distance sensor to detect animals before they reach the capture zone. It monitors two key areas:
+OcuTrap uses a distance sensor to detect animals before they reach the capture point. It watches two areas:
 
-* **Detection Zone (300–450 mm from sensor)**: The trap starts tracking an object and may send a pre-capture alert.
-* **Capture Zone (0–250 mm from sensor)**: The door closes when the object is confirmed inside this zone.
+* **Detection area (out to about 34 in / 875 mm from the sensor)**: The trap tracks an approaching animal and may send a pre-capture alert with a photo.
+* **Capture point (your capture-distance setting; default 8 in / 200 mm)**: The door closes once the animal is confirmed at or inside this distance.
 
-**Default capture distance** is **250 mm (about 10 inches)**. Pre-capture alerts can fire while an animal is still in the detection zone, before the door closes.
+**Default capture distance** is **8 inches (200 mm)**, adjustable from **6–18 inches** in the app. Pre-capture alerts can fire while an animal is still approaching in the detection area, before the door closes.
 
 #### Example
 
-With the default **250 mm** capture distance:
+With the default **8 in (200 mm)** capture distance:
 
-* At **~350 mm**, you may receive an **"Early pre-capture"** alert with a photo.
-* At **~250 mm or closer**, the trap confirms capture and the door closes.
+* As the animal approaches within the detection area (out to ~34 in), you may receive an **"Early pre-capture"** alert with a photo.
+* At **~8 in (200 mm) or closer**, the trap confirms capture and the door closes.
 
 Alert text looks like:
 
-* "Pre-capture: 10.0 in detected"
+* "Pre-capture: 8.0 in detected"
 * "Early pre-capture: 13.8 in detected"
 
 > Units (inches or millimeters) depend on your trap's **Units** setting. For the full sensor model, see [Technical Specifications](../technical-specifications.md).
@@ -37,7 +37,7 @@ Alert text looks like:
 
 This setting is configured per trap:
 
-1. Open the OcuTrap app or [app.ocutrap.com](https://app.ocutrap.com)
+1. Open the OcuTrap app or [base.ocutrap.com](https://base.ocutrap.com)
 2. Tap on the trap you want to edit
 3. Go to **Settings → More Settings**
 4. Find the **Pre-Capture Notification** option
@@ -51,6 +51,16 @@ This setting is configured per trap:
 * Detect non-target animals early (like pets or skunks)
 * Monitor animal behavior without needing a capture — or use [Scouting Mode](../app/scouting-mode.md) to watch activity without closing the door
 * Improve trap placement and setup based on activity patterns
+
+### What you'll see (alert motion gate v906+; scout photo gate v926+)
+
+| Signal | When it fires |
+| --- | --- |
+| **Pre-Capture alert text** | After the animal shows **real inward movement** (~3 in / 75 mm) toward the trap — static grass or debris in the detection zone will **not** trigger the text alert |
+| **Approach photos** | On zone entry and during approach — **not** blocked by the motion gate on alert text |
+| **Door close** | Only when the animal is confirmed in the capture zone (Armed mode) |
+
+> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for alert text; scout photos are also motion-gated (v926+).
 
 ### Need to Turn It Off?
 

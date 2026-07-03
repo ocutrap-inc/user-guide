@@ -8,15 +8,13 @@ OcuTrap R1 Video Set Up
 
 Carefully unpack your OcuTrap R1 and check that all components are included:
 
-**Cage**&#x20;
+**Cage**
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeh-fdhNLgwyX0dd75wNVqjVpgWZ80zkjjYbnM-c5392_RBs1SWn615Se6SPCq7zXFAcxi82rW_BXt_eKUnI8jBiw2mzrvK7c9UV24Dk_I9mrDSJSCkkPvPtbambFhPghiJJ0SL?key=-7FbCauuULkCNnpd7jVxOIpl)
-
-
+![](../.gitbook/assets/setup-unboxing.png)
 
 **Parts Box**
 
-![](<../.gitbook/assets/unknown (7).png>)<br>
+![](<../.gitbook/assets/unknown (6).png>)<br>
 
 Examine each item for any visible damage. If anything is missing or appears damaged, halt installation and contact OcuTrap Support with your Trap ID.
 
@@ -30,7 +28,7 @@ Unpack the Components
 Charge the Battery
 
 1. Fully charge the blue battery until the light is green using the accompanying charger found in the small white box.\
-   ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeJAv9JVa-Yz74SSbiMbgH7QOb_fDpETGc7enuiOVyM8iptiXcG9v70auXDYWedxc8IBfpy5y64XLtJ19dFkp0unFSLMzerBiV6NsYKM75u_G1NGN7usAQcyBmvlqpk3HgrFuCX7g?key=-7FbCauuULkCNnpd7jVxOIpl)
+   ![](../.gitbook/assets/setup-charging-battery.png)
 
 Introduction Welcome to the OcuTrap Setup Manual. This guide will walk you through the process of assembling your OcuTrap step by step. The setup process is divided into four main sections: Door, Handle, POD Setup, and App Setup
 
@@ -55,10 +53,10 @@ Before beginning, ensure you have the following parts for the door assembly:
 **Motor**
 
 * 1x Motor
-* 2x Pins&#x20;
+* 2x Pins
 * 2x Clevises
 
-#### Step 2: Setup the Door Mechanism&#x20;
+#### Step 2: Setup the Door Mechanism
 
 1. Align the metal door inside the trap.
 2. Thread the metal rod through the oval slot in the metal bracket attached to the top of the solid metal trap door.<br>
@@ -70,7 +68,7 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 <figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
-#### Step 3: Setup the Motor&#x20;
+#### Step 3: Setup the Motor
 
 1. Install top bracket with washers and bolts. Tighten with nut driver.
 2. Use the pins and clevises to secure the motor to the door at both the top and bottom attachment points.
@@ -79,7 +77,7 @@ Before beginning, ensure you have the following parts for the door assembly:
 5. Check that the door moves smoothly and is properly aligned.
 
 \
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcLujqDGMEW_dSvHxNs6dSqnxeR-084fW5G06A_SpnIZZtYor1iAST3XD6vpNrXWY3LppbQGchi9qZxB_sZpXL4mtViXR-RJGFxg028qMVMpyNcCEWj_l65-zzLN7jWVeYrYxXs?key=-7FbCauuULkCNnpd7jVxOIpl)![](<../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png>)
+![](../.gitbook/assets/setup-motor-installation.png)![](<../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png>)
 
 ### Section 2: Handle Setup
 
@@ -87,7 +85,7 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 Before beginning, ensure you have the following parts for the handle setup:
 
-<table><thead><tr><th width="113.140625">Quantity</th><th>Part</th></tr></thead><tbody><tr><td>4</td><td>3” bolt</td></tr><tr><td>1</td><td>Handle Guard</td></tr><tr><td>1</td><td>Tube</td></tr><tr><td>4</td><td>Washers</td></tr><tr><td>2</td><td>Top Handle Metal Bracket</td></tr><tr><td>2</td><td>Upper tube plastic spacer  </td></tr><tr><td>2</td><td>Lower tube Plastic Handle Spacer</td></tr><tr><td>2</td><td>Internal Trap Bracket with Press-Fit Nut</td></tr><tr><td>1</td><td>Nut Driver</td></tr></tbody></table>
+<table><thead><tr><th width="113.140625">Quantity</th><th>Part</th></tr></thead><tbody><tr><td>4</td><td>3” bolt</td></tr><tr><td>1</td><td>Handle Guard</td></tr><tr><td>1</td><td>Tube</td></tr><tr><td>4</td><td>Washers</td></tr><tr><td>2</td><td>Top Handle Metal Bracket</td></tr><tr><td>2</td><td>Upper tube plastic spacer</td></tr><tr><td>2</td><td>Lower tube Plastic Handle Spacer</td></tr><tr><td>2</td><td>Internal Trap Bracket with Press-Fit Nut</td></tr><tr><td>1</td><td>Nut Driver</td></tr></tbody></table>
 
 ![](<../.gitbook/assets/unknown (5).png>)
 
@@ -106,9 +104,7 @@ Do not fully tighten the bolts until the motor connector is fully through the tu
 
 <figure><img src="../.gitbook/assets/image (27).png" alt="" width="188"><figcaption><p>Inside trap view</p></figcaption></figure>
 
-
-
-### Section 3: POD&#x20;
+### Section 3: POD
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 

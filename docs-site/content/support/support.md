@@ -6,7 +6,7 @@ You can message OcuTrap support through the chat bubble that can be found on the
 
 ## Email Support
 
-You can send us an email through the [contact page](https://ocutrap.com/pages/contact) or emailing us at [info@ocutrap.com](mailto:info@ocutrap.com?subject=Support%20from%20Knowledge%20Base)
+You can send us an email through the [contact page](https://ocutrap.com/pages/contact) or emailing us at [support@ocutrap.com](mailto:support@ocutrap.com?subject=Support%20from%20Knowledge%20Base)
 
 ## Website Status
 

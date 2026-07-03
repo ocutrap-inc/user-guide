@@ -6,7 +6,7 @@ If your OcuTrap is not responding to commands and is displaying error codes, it 
 
 ### Possible Causes
 
-1. **Hibernation Mode** – When **unarmed and idle**, the trap may enter hibernation after about 2 hours to save battery. This is normal. Press the power button to wake it. See [Unarmed Hibernation](../faqs/unarmed-hibernation.md).
+1. **Sleep Mode** – When **unarmed and idle**, the trap drops into a low-power sleep after a few minutes to save battery. This is normal — it still wakes for commands on its next check-in, or press the power button to wake it immediately.
 2. **No Battery Connection** – Ensure the battery is properly connected and charged. A loose or depleted battery will prevent the trap from operating.
 3. **No Trap Online** – If the trap is not showing as online, it may not be connected to the network.
 4. **Poor Cellular Communication** – Weak signal strength can prevent the trap from sending or receiving commands.
@@ -17,7 +17,7 @@ If your OcuTrap is not responding to commands and is displaying error codes, it 
 
 * Press the **power button** (the left-most button) to wake up the trap.
 * Wait for the LED to show **breathing cyan** before retrying your command.
-* If the trap is **unarmed and idle**, hibernation is expected. You do not need to keep the trap armed to avoid it — see [Unarmed Hibernation](../faqs/unarmed-hibernation.md) if you need the trap to stay awake while unarmed.
+* If the trap is **unarmed and idle**, a low-power sleep is expected — commands are picked up at the next check-in. Full hibernation only happens on very low battery or a long power-button press (see [Power Modes](../faqs/power-modes.md)).
 
 #### Check Battery Connection
 

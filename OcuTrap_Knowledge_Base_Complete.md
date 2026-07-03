@@ -139,7 +139,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 - **Door:** Linear motor with closing speed under 0.5 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
 - **Location:** Integrated GPS module with satellite positioning. Battery-optimized updates every 8 hours by default. Map view in the app.
 - **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Tilt detection.
-- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (~40+ days runtime); 5,200 mAh variant for Canada (~21 days). Low battery alerts at 20% and 10%.
+- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (111 Wh) for new traps (~40+ days runtime); 5,200 mAh variant for Canada (~21 days). Low battery alerts at 20% and 10%.
 - **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. Configurable 0–30 second activation timer. 3.0A maximum continuous current.
 - **Smart Detection:** Two-step verification to reduce false triggers. Rain and debris filtering. Pre-capture notification alerts.
 
@@ -261,7 +261,7 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| Battery Type | 5 Ah / 10 Ah selection |
+| Battery Type | 5200 mAh / 10000 mAh selection |
 | Battery Alerts | On / Off |
 | Power-Off Voltage | 7–12 V (default: 9.6 V) |
 
@@ -299,7 +299,7 @@ Hold the power button for 3 seconds for a proper shutdown.
 - Deploy in areas with strong cellular signal (poor signal increases power consumption)
 - Keep GPS interval at the default 8 hours, or disable GPS if not needed
 - Set camera time-lapse to 6 hours or more
-- Use the 10 Ah battery for extended winter deployments
+- Use the 10,000 mAh battery for extended winter deployments
 
 ### Optimal Placement
 
@@ -398,7 +398,7 @@ Perform these checks at the start of every trapping session:
 | Blinking Yellow | Arming Trap |
 | Blinking White | Unarming Trap |
 
-> **Low Battery Startup:** If the battery is critically low, the LED shows solid red during boot. The device will send a cloud error notification and automatically enter hibernation. Press the power button to wake once the battery has been recharged.
+> **Low Battery Startup:** If the battery is critically low, the LED shows solid red during boot. The device will send a cloud error notification and automatically enter hibernation. Once the battery has been recharged the trap wakes on its own (it briefly checks about once an hour), or press the power button to wake it immediately.
 
 ---
 
@@ -452,7 +452,7 @@ A: The standard unit is 10" wide × 12" tall. Cage length is 32" without the POD
 A: Absolutely. The system is designed with animal welfare as a priority, featuring rapid door closure, remote monitoring to minimize stress, and selective targeting to avoid non-target species.
 
 **Q: What is the battery life?**
-A: 3+ weeks depending on usage, settings, and environmental conditions. The 10 Ah battery provides extended runtime per charge.
+A: ~40+ days with the 10,000 mAh battery, ~21 days with the 5,200 mAh battery — depending on usage, settings, and environmental conditions.
 
 **Q: Is a subscription required?**
 A: A subscription enables cloud connectivity features. Check the current plans at ocutrap.com.
@@ -578,7 +578,7 @@ GPS is battery-optimized with strategic update intervals. By default, position u
 | Operating Temperature | Ideal: 0°C to 40°C |
 | Charging Temperature | Recommended: 0°C to 45°C |
 | Extreme Heat | Shade the trap; monitor temperature alerts |
-| Freezing | Bring battery indoors for charging; use 10 Ah battery |
+| Freezing | Bring battery indoors for charging; use 10,000 mAh battery |
 | Heavy Rain | Weatherproof but not submersion-rated; inspect after storms |
 | Icing | Door mechanism may freeze; allow natural thaw |
 
@@ -590,7 +590,7 @@ The OcuTrap operates in temperatures as low as -10°C, though battery capacity i
 
 ### Key Recommendations
 
-- Use the 10 Ah battery for extended winter deployments
+- Use the 10,000 mAh battery for extended winter deployments
 - Bring batteries indoors for charging below freezing
 - Store batteries in cool, dry conditions — avoid freezing
 - Swap batteries more frequently in winter
@@ -614,7 +614,7 @@ The OcuTrap has six power modes that automatically optimize battery usage:
 | Armed Sleep Offline | 20-minute check-ins; captures reported at check-in | Flashes 3s |
 | Hibernation | Lowest power; no communication | Off |
 
-Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below the configured power-off voltage (default 9.6V).
+Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below the configured power-off voltage (default 9.6V). During low-voltage hibernation the trap briefly wakes about once an hour, so it recovers on its own once the battery is recharged.
 
 ---
 

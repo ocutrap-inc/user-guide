@@ -114,7 +114,7 @@ For more on command failures specifically, see [Trap Not Sending Commands](trap-
 
 ## What To Send OcuTrap Support
 
-If the issue continues, email [info@ocutrap.com](mailto:info@ocutrap.com) with as much of the following as you can:
+If the issue continues, email [support@ocutrap.com](mailto:support@ocutrap.com) with as much of the following as you can:
 
 * **Trap ID**
 * **Screenshot** of the app error message

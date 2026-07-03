@@ -44,4 +44,3 @@ Quick links to the pages customers open most often:
 Check whether OcuTrap services are running normally before troubleshooting a connection issue.
 
 {% embed url="https://ocutrap.statuspage.io/" %}
-
