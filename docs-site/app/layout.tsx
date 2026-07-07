@@ -4,6 +4,7 @@ import { parseSummary } from "@/lib/docs";
 import SidebarClient from "@/components/sidebar-client";
 import SearchDialog from "@/components/search-dialog";
 import PrintButton from "@/components/print-button";
+import ThemeToggle from "@/components/theme-toggle";
 import Link from "next/link";
 import Image from "next/image";
 import { Outfit, Manrope, JetBrains_Mono } from "next/font/google";
@@ -44,6 +45,16 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning className={fontVars}>
+      <head>
+        {/* No-flash theme: apply a stored manual preference before first paint.
+            With no stored preference, CSS @media (prefers-color-scheme) drives the default. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();",
+          }}
+        />
+      </head>
       <body>
         <div className="layout">
           <SidebarClient sections={sections} />
@@ -64,6 +75,7 @@ export default function RootLayout({
                 />
               </Link>
               <SearchDialog />
+              <ThemeToggle />
               <PrintButton />
             </header>
 
