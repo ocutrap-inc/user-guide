@@ -7,6 +7,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
+import { absoluteUrl } from "./site";
 
 export type Heading = {
   id: string;
@@ -146,20 +147,28 @@ function normalizeEntity(text: string): string {
   return text;
 }
 
-function decodeGitBookEntities(content: string): string {
-  // Preserve fenced blocks (``` / ~~~) and inline code spans verbatim; apply
-  // the entity normalization only to the prose between them.
+// Apply `fn` to the prose of `content`, leaving fenced code blocks (``` / ~~~)
+// and inline code spans untouched. Shared by the entity decoders and the
+// residual-HTML stripper so neither mangles literal markup shown as code.
+function applyOutsideCode(
+  content: string,
+  fn: (chunk: string) => string
+): string {
   const codePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|(`+)[\s\S]*?\2)/g;
   let result = "";
   let last = 0;
   let m: RegExpExecArray | null;
   while ((m = codePattern.exec(content)) !== null) {
-    result += normalizeEntity(content.slice(last, m.index));
+    result += fn(content.slice(last, m.index));
     result += m[0];
     last = m.index + m[0].length;
   }
-  result += normalizeEntity(content.slice(last));
+  result += fn(content.slice(last));
   return result;
+}
+
+function decodeGitBookEntities(content: string): string {
+  return applyOutsideCode(content, normalizeEntity);
 }
 
 // Transform GitBook-specific syntax into standard markdown and HTML.
@@ -424,4 +433,206 @@ export function extractHeadings(html: string): Heading[] {
     headings.push({ id, text, level: parseInt(level) });
   }
   return headings;
+}
+
+// ── Plain-markdown pipeline (SITE-09) ────────────────────────────────
+// Convert GitBook-flavored source markdown into clean, portable CommonMark
+// with no GitBook `{% … %}` tags, no numeric/HTML-entity artifacts, and no
+// leftover HTML — suitable for feeding to AI assistants (`/llms-full.txt`)
+// and for the per-page "Copy page as Markdown" button. Both consumers call
+// this single helper so their output is byte-identical.
+
+// GitBook hint style → GitHub-flavored alert keyword.
+const HINT_ALERT: Record<string, string> = {
+  info: "NOTE",
+  success: "TIP",
+  warning: "WARNING",
+  danger: "CAUTION",
+};
+
+// Resolve an image/asset reference to an absolute, portable URL. GitBook
+// asset paths ("../.gitbook/assets/X") become absolute /gitbook-assets/ URLs
+// (spaces percent-encoded so the link stays valid); other URLs pass through.
+function plainAssetUrl(src: string): string {
+  const clean = src.replace(/^</, "").replace(/>$/, "").trim();
+  if (clean.includes(".gitbook/assets/")) {
+    return absoluteUrl(toAssetHref(clean).replace(/ /g, "%20"));
+  }
+  return clean;
+}
+
+// A `{% file %}` reference → a plain markdown download link line.
+function plainFileLink(src: string, caption?: string): string {
+  const url = plainAssetUrl(src);
+  const rawName = url.split("/").pop() || url;
+  let filename = rawName;
+  try {
+    filename = decodeURIComponent(rawName);
+  } catch {
+    // keep rawName as-is if it contains a stray "%"
+  }
+  const label = caption && caption.trim() ? caption.trim() : filename;
+  return `\n[${label}](${url})\n`;
+}
+
+// Decode numeric + the common named HTML entities for plain output. (The HTML
+// pipeline lets rehype decode named entities; plain text has no renderer, so
+// we do it here.) Runs on prose only, via applyOutsideCode.
+function normalizePlainEntity(text: string): string {
+  text = normalizeEntity(text); // NAN sentinel + numeric refs
+  return text
+    .replace(/&nbsp;/g, " ")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, "&");
+}
+
+// Drop residual inline/block HTML tags (keeping their text) so the output is
+// pure markdown. Runs on prose only so `<tags>` shown inside code survive.
+function stripResidualHtml(text: string): string {
+  return text
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/?(?:figure|picture|figcaption|source|div|span)[^>]*>/gi, "")
+    .replace(/<\/?[a-zA-Z][^>]*>/g, "");
+}
+
+export function markdownToPlain(content: string): string {
+  // 1. Hint/callout → GitHub-flavored alert blockquote.
+  content = content.replace(
+    /\{%\s*hint\s+style="(\w+)"\s*%\}([\s\S]*?)\{%\s*endhint\s*%\}/g,
+    (_, style, inner) => {
+      const alert = HINT_ALERT[style] ?? "NOTE";
+      const body = inner
+        .trim()
+        .split("\n")
+        .map((line: string) => `> ${line}`.replace(/\s+$/, ""))
+        .join("\n");
+      return `\n> [!${alert}]\n${body}\n`;
+    }
+  );
+
+  // 2. Content-ref → plain markdown link (absolute URL). Relative `../`/`./`
+  //    segments are stripped so the KB path maps onto its site href, and a
+  //    filename-style link label is humanized ("support.md" → "Support").
+  content = content.replace(
+    /\{%\s*content-ref\s+url="([^"]+)"\s*%\}([\s\S]*?)\{%\s*endcontent-ref\s*%\}/g,
+    (_, url, inner) => {
+      const href =
+        "/" +
+        url
+          .replace(/\.md$/, "")
+          .replace(/\/README$/, "")
+          .replace(/^(?:\.\.?\/)+/, "")
+          .replace(/^\//, "");
+      const linkMatch = inner.match(/\[([^\]]+)\]/);
+      let title = linkMatch ? linkMatch[1].trim() : href;
+      if (/\.md$/i.test(title)) {
+        title = (title.replace(/\.md$/i, "").split("/").pop() || title)
+          .replace(/[-_]/g, " ")
+          .replace(/\b\w/g, (c: string) => c.toUpperCase());
+      }
+      return `\n[${title}](${absoluteUrl(href)})\n`;
+    }
+  );
+
+  // 3. Embed → a URL line (or `[caption](url)` when captioned). Same tempered
+  //    attribute pattern as the HTML pipeline so URL-encoded `%` survives.
+  const embedAttrs = "((?:[^%]|%(?!\\}))*?)";
+  content = content.replace(
+    new RegExp(
+      `\\{%\\s*embed\\s+${embedAttrs}\\s*%\\}([\\s\\S]*?)\\{%\\s*endembed\\s*%\\}`,
+      "g"
+    ),
+    (_, attrs, inner) => {
+      const url = (attrs.match(/url="([^"]+)"/) || [])[1];
+      if (!url) return "";
+      const caption = (attrs.match(/caption="([^"]*)"/) || [])[1] || inner.trim();
+      return caption ? `\n[${caption}](${url})\n` : `\n${url}\n`;
+    }
+  );
+  content = content.replace(
+    new RegExp(`\\{%\\s*embed\\s+${embedAttrs}\\s*%\\}`, "g"),
+    (_, attrs) => {
+      const url = (attrs.match(/url="([^"]+)"/) || [])[1];
+      if (!url) return "";
+      const caption = (attrs.match(/caption="([^"]*)"/) || [])[1];
+      return caption ? `\n[${caption}](${url})\n` : `\n${url}\n`;
+    }
+  );
+
+  // 4. Tab groups → flattened sections, each tab label a bold line.
+  content = content.replace(
+    /\{%\s*tabs\s*%\}([\s\S]*?)\{%\s*endtabs\s*%\}/g,
+    (_, tabsContent) => {
+      const parts: string[] = [];
+      const tabRegex =
+        /\{%\s*tab\s+title="([^"]+)"\s*%\}([\s\S]*?)\{%\s*endtab\s*%\}/g;
+      let match;
+      while ((match = tabRegex.exec(tabsContent)) !== null) {
+        const body = match[2].trim();
+        parts.push(body ? `**${match[1].trim()}**\n\n${body}` : `**${match[1].trim()}**`);
+      }
+      return parts.length ? `\n${parts.join("\n\n")}\n` : "";
+    }
+  );
+
+  // 5. File download blocks → link line (block form carries a caption).
+  content = content.replace(
+    /\{%\s*file\s+src="([^"]+)"\s*%\}([\s\S]*?)\{%\s*endfile\s*%\}/g,
+    (_, src, caption) => plainFileLink(src, caption)
+  );
+  content = content.replace(
+    /\{%\s*file\s+src="([^"]+)"\s*%\}/g,
+    (_, src) => plainFileLink(src)
+  );
+
+  // 6. HTML `<figure>` (incl. `<picture>`) → a markdown image, preferring the
+  //    figcaption then the img alt as the label.
+  content = content.replace(/<figure>[\s\S]*?<\/figure>/gi, (block) => {
+    const src = (block.match(/<img[^>]*\ssrc="([^"]+)"/i) || [])[1];
+    if (!src) return "";
+    const alt = (block.match(/<img[^>]*\salt="([^"]*)"/i) || [])[1] || "";
+    const cap = (block.match(/<figcaption>([\s\S]*?)<\/figcaption>/i) || [])[1]
+      ?.replace(/<[^>]+>/g, "")
+      .trim();
+    return `\n![${cap || alt}](${plainAssetUrl(src)})\n`;
+  });
+
+  // 7. Any remaining bare `<img>` → markdown image.
+  content = content.replace(/<img\b[^>]*>/gi, (tag) => {
+    const src = (tag.match(/\ssrc="([^"]+)"/i) || [])[1];
+    if (!src) return "";
+    const alt = (tag.match(/\salt="([^"]*)"/i) || [])[1] || "";
+    return `![${alt}](${plainAssetUrl(src)})`;
+  });
+
+  // 8. Markdown images pointing at GitBook assets → absolute URLs. Handles the
+  //    angle-bracket form GitBook uses for paths containing spaces.
+  content = content.replace(
+    /(!\[[^\]]*\]\()<?([^)>]*\.gitbook\/assets\/[^)>]*)>?(\))/g,
+    (_, pre, src, post) => `${pre}${plainAssetUrl(src)}${post}`
+  );
+
+  // 9. Fallback for any unhandled GitBook tags: keep inner content of paired
+  //    tags, drop self-closing markup. (Silent here — the HTML pipeline already
+  //    emits the build-time warning for unknown tags.)
+  content = content.replace(
+    /\{%\s*([\w-]+)[^%]*%\}([\s\S]*?)\{%\s*end\1\s*%\}/g,
+    (_, _tag, inner) => inner
+  );
+  content = content.replace(/\{%\s*[\w-]+[^%]*%\}/g, "");
+
+  // 10. Strip residual HTML, then decode entities (order matters: a decoded
+  //     `<` from `&lt;` must not then be treated as a tag).
+  content = applyOutsideCode(content, stripResidualHtml);
+  content = applyOutsideCode(content, normalizePlainEntity);
+
+  // 11. Tidy whitespace.
+  return content
+    .replace(/[ \t]+$/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }

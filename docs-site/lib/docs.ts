@@ -246,6 +246,14 @@ export function getDocBySlug(slug: string[]): DocData | null {
   };
 }
 
+// Load a page's DocData by its site href, dispatching the home page ("/") to
+// getHomeDoc. Shared by the AI-corpus routes (SITE-09) so llms.txt / llms-full
+// resolve exactly the pages SUMMARY.md lists.
+export function getDocByHref(href: string): DocData | null {
+  if (href === "/") return getHomeDoc();
+  return getDocBySlug(href.replace(/^\//, "").split("/"));
+}
+
 export function getHomeDoc(): DocData | null {
   const filePath = "README.md";
   const fullPath = path.join(KB_ROOT, filePath);
