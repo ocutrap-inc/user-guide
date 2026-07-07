@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, FileDown, FileText, Printer } from "lucide-react";
+import { Menu, X, FileDown, FileText } from "lucide-react";
 import type { NavSection, NavItem } from "@/lib/docs";
 
 function NavItemLink({
@@ -112,7 +112,7 @@ export default function SidebarClient({
         </Link>
 
         <ul style={{ listStyle: "none", margin: 0, padding: "0 0 2rem" }}>
-          {/* PDF downloads + print-friendly manual (nav-level shortcut) */}
+          {/* PDF downloads (the /manual route stays reachable by URL, unlinked) */}
           <li>
             <div className="nav-section-title">PDF Downloads</div>
             <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
@@ -137,15 +137,6 @@ export default function SidebarClient({
                   <FileText size={14} />
                   R1 Cheat Sheet (PDF)
                 </a>
-              </li>
-              <li>
-                <Link
-                  href="/manual"
-                  className={`nav-item nav-item--pdf${pathname === "/manual" ? " nav-item--active" : ""}`}
-                >
-                  <Printer size={14} />
-                  Print-friendly Manual
-                </Link>
               </li>
             </ul>
           </li>

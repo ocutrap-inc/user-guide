@@ -40,6 +40,18 @@ This paragraph must survive an unknown block tag.
 {% file src="../.gitbook/assets/OcuTrap_Knowledge_Base.pdf" %}
 
 {% file src="../.gitbook/assets/OcuTrap_PDF.pdf" %}Marketing one-pager{% endfile %}
+
+{% embed url="https://ocutrap.statuspage.io/" %}
+
+{% embed url="https://files.example.com/clip.mp4?token=abc" %}
+
+{% embed url="https://example.com/page" caption="Custom title" %}
+
+> &#xNAN;_&#x53;ettings → Trap Info → Firmware_ should show v706.
+
+> \&#xNAN;_Settings → Device Info_ shows the build.
+
+Inline code keeps entities literal: \`&#x53;ettings\`.
 `;
 
 const html = await markdownToHtml(fixture, "scripts/fixtures/unknown-tag.md");
@@ -80,6 +92,48 @@ check(
   "block-form {% file %} caption overrides the filename label",
   html.includes("Marketing one-pager") &&
     html.includes('href="/gitbook-assets/OcuTrap_PDF.pdf"')
+);
+
+console.log("Embed blocks:");
+check(
+  "non-video {% embed %} renders a bookmark card (not an empty box)",
+  html.includes('class="bookmark-card"') &&
+    html.includes('href="https://ocutrap.statuspage.io/"')
+);
+check(
+  "bookmark card without a caption falls back to the URL hostname",
+  html.includes('class="bookmark-card__title">ocutrap.statuspage.io<')
+);
+check(
+  "video-URL {% embed %} still renders a <video>, not a bookmark card",
+  html.includes("video-embed--native") &&
+    html.includes('src="https://files.example.com/clip.mp4?token=abc"')
+);
+check(
+  "{% embed %} caption attribute becomes the bookmark-card title",
+  html.includes('class="bookmark-card__title">Custom title<')
+);
+check(
+  "no leftover empty embed-block from the old fallback",
+  !html.includes('class="embed-block"')
+);
+
+console.log("GitBook HTML-entity guards:");
+check(
+  "invalid &#xNAN; sentinel is stripped from prose (no visible &#x)",
+  !html.includes("#xNAN")
+);
+check(
+  "valid &#x53; decodes so escaped emphasis reads 'Settings'",
+  html.includes("<em>Settings → Trap Info → Firmware</em>")
+);
+check(
+  "backslash-escaped \\&#xNAN; is also removed",
+  html.includes("<em>Settings → Device Info</em>")
+);
+check(
+  "entities inside inline code are left literal (not decoded)",
+  html.includes("<code>&#x26;#x53;ettings</code>")
 );
 
 if (failures > 0) {
