@@ -68,6 +68,44 @@
   user-guide page.
 - Add firmware release notes PDF and hardware/setup PDFs to the sync scope.
 
+## Docs Platform Migration (SITE)
+
+> Added 2026-07-07. GitBook announced ~8× pricing; renewal is
+> **2026-07-25** — the migration must be live and GitBook cancelled
+> before that date.
+> `docs.ocutrap.com` moves to the self-hosted `docs-site/` Next.js app
+> already scaffolded in this repo. The current GitBook look is the design
+> target — customers should not notice the platform change, except that
+> AI search keeps working.
+
+- [ ] **SITE-01**: Serve the full knowledge base from the `docs-site/`
+  Next.js app, rendering the existing GitBook-flavored markdown in place
+  (`SUMMARY.md` navigation, `{% hint %}` blocks, `{% content-ref %}` /
+  card tables) with visual parity to the current GitBook theme at
+  `docs.ocutrap.com`. Markdown files remain the single source of truth —
+  no content forking.
+- [ ] **SITE-02**: URL parity — every currently-published
+  `docs.ocutrap.com` path resolves to the same content (same slug or 301
+  redirect), with `sitemap.xml` and per-page title/description meta
+  preserved so search rankings survive the cutover.
+- [ ] **SITE-03**: Full-text search across all pages with a keyboard
+  shortcut (`/` or `Cmd+K`). The existing client-side Fuse.js index in
+  `docs-site/` is an acceptable implementation.
+- [ ] **SITE-04**: AI search for users, replacing GitBook AI search:
+  a customer can ask a natural-language question and get an answer
+  grounded only in knowledge-base content, with linked citations to the
+  source pages. No per-seat or per-page vendor pricing — build on our
+  existing Convex + Claude API stack (or a comparable flat-cost service),
+  with rate limiting and prompt-injection-resistant grounding.
+- [ ] **SITE-05**: Publishing pipeline — merge to `main` auto-deploys the
+  site (Vercel, matching `console`). The PDF pipeline
+  (`build_kb_pdf.py` + CI) is unaffected; the AI search index rebuilds on
+  deploy so answers never lag published content.
+- [ ] **SITE-06**: Cutover — point `docs.ocutrap.com` DNS at the new
+  host, verify SITE-01..05 in production, cancel the GitBook plan before
+  the **2026-07-25** renewal, and document a rollback path (GitBook stays
+  readable until cancellation).
+
 ## Out of Scope
 
 - **Editing the website or firmware to match docs** — Product is canonical
@@ -94,3 +132,9 @@
 | PDF-03  | Phase 3: Regenerate & Verify   |
 | PDF-04  | Phase 3: Regenerate & Verify   |
 | TRK-01  | Phase 3: Regenerate & Verify   |
+| SITE-01 | Docs Platform Migration        |
+| SITE-02 | Docs Platform Migration        |
+| SITE-03 | Docs Platform Migration        |
+| SITE-04 | Docs Platform Migration        |
+| SITE-05 | Docs Platform Migration        |
+| SITE-06 | Docs Platform Migration        |
