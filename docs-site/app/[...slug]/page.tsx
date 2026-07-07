@@ -19,9 +19,22 @@ export async function generateMetadata({
   const { slug } = await params;
   const doc = getDocBySlug(slug);
   if (!doc) return {};
+  const description = `${doc.section ? doc.section + " — " : ""}OcuTrap Knowledge Base`;
   return {
     title: doc.title,
-    description: `${doc.section ? doc.section + " — " : ""}OcuTrap Knowledge Base`,
+    description,
+    alternates: { canonical: doc.href },
+    openGraph: {
+      type: "article",
+      url: doc.href,
+      title: doc.title,
+      description,
+    },
+    twitter: {
+      card: "summary",
+      title: doc.title,
+      description,
+    },
   };
 }
 
