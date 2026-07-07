@@ -3,6 +3,7 @@ import { markdownToHtml, extractHeadings } from "@/lib/markdown";
 import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
 import TabsInit from "@/components/tabs-init";
+import PrintButton from "@/components/print-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -53,20 +54,23 @@ export default async function DocPage({
   return (
     <div className="page-content">
       <article className="doc-body">
-        {/* Breadcrumb */}
-        <nav className="breadcrumb" aria-label="Breadcrumb">
-          <Link href="/" style={{ color: "var(--color-muted)", textDecoration: "none" }}>
-            OcuTrap Knowledge Base
-          </Link>
-          {doc.section && (
-            <>
-              <span className="breadcrumb-sep">/</span>
-              <span>{doc.section}</span>
-            </>
-          )}
-          <span className="breadcrumb-sep">/</span>
-          <span style={{ color: "var(--color-heading)" }}>{doc.title}</span>
-        </nav>
+        {/* Breadcrumb + per-page print affordance */}
+        <div className="doc-topbar">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link href="/" style={{ color: "var(--color-muted)", textDecoration: "none" }}>
+              OcuTrap Knowledge Base
+            </Link>
+            {doc.section && (
+              <>
+                <span className="breadcrumb-sep">/</span>
+                <span>{doc.section}</span>
+              </>
+            )}
+            <span className="breadcrumb-sep">/</span>
+            <span style={{ color: "var(--color-heading)" }}>{doc.title}</span>
+          </nav>
+          <PrintButton variant="icon" />
+        </div>
 
         <DocContent html={html} />
 

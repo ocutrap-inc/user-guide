@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Search, X, Sparkles, CornerDownLeft } from "lucide-react";
 import Fuse from "fuse.js";
 import type { SearchDoc } from "@/lib/docs";
+import { renderAnswerMarkdown } from "@/lib/answer-markdown";
 
 type Citation = { title: string; href: string };
 type AskStatus =
@@ -236,14 +237,22 @@ export default function SearchDialog() {
 
   return (
     <>
+      {/* Desktop: full search input. Mobile: collapses to an icon button. */}
       <button
-        className="search-trigger"
+        className="search-trigger search-trigger--full"
         onClick={() => setOpen(true)}
         aria-label="Search documentation"
       >
         <Search size={14} />
         <span>Search docs...</span>
         <span className="search-kbd">⌘K</span>
+      </button>
+      <button
+        className="search-trigger--icon"
+        onClick={() => setOpen(true)}
+        aria-label="Search documentation"
+      >
+        <Search size={18} />
       </button>
 
       {open && (
@@ -431,12 +440,15 @@ export default function SearchDialog() {
                       )}
 
                       {answer && (
-                        <div className="ask-answer">
-                          {answer}
-                          {askStatus === "streaming" && (
-                            <span className="ask-caret" />
-                          )}
-                        </div>
+                        <div
+                          className="ask-answer"
+                          dangerouslySetInnerHTML={{
+                            __html: renderAnswerMarkdown(
+                              answer,
+                              askStatus === "streaming"
+                            ),
+                          }}
+                        />
                       )}
 
                       {citations.length > 0 &&
