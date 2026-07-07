@@ -112,36 +112,6 @@ export default function SidebarClient({
         </Link>
 
         <ul style={{ listStyle: "none", margin: 0, padding: "0 0 2rem" }}>
-          {/* PDF downloads (the /manual route stays reachable by URL, unlinked) */}
-          <li>
-            <div className="nav-section-title">PDF Downloads</div>
-            <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-              <li>
-                <a
-                  href="/gitbook-assets/OcuTrap_Knowledge_Base.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-item nav-item--pdf"
-                >
-                  <FileDown size={14} />
-                  Full Manual (PDF)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/gitbook-assets/R1_Operation_Cheat_Sheet.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-item nav-item--pdf"
-                >
-                  <FileText size={14} />
-                  R1 Cheat Sheet (PDF)
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li><div className="nav-separator" /></li>
-
           {sections.map((section, i) => (
             <li key={i}>
               {section.separator && !section.title && (
@@ -158,6 +128,34 @@ export default function SidebarClient({
                     currentPath={pathname}
                   />
                 ))}
+                {/* PDF downloads live under Appendix and Resources
+                    (the /manual route stays reachable by URL, unlinked) */}
+                {/appendix/i.test(section.title ?? "") && (
+                  <>
+                    <li>
+                      <a
+                        href="/gitbook-assets/OcuTrap_Knowledge_Base.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nav-item nav-item--pdf"
+                      >
+                        <FileDown size={14} />
+                        Full Manual (PDF)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/gitbook-assets/R1_Operation_Cheat_Sheet.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nav-item nav-item--pdf"
+                      >
+                        <FileText size={14} />
+                        R1 Cheat Sheet (PDF)
+                      </a>
+                    </li>
+                  </>
+                )}
               </ul>
             </li>
           ))}
