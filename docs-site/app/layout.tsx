@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { parseSummary } from "@/lib/docs";
+import { SITE_URL } from "@/lib/site";
 import SidebarClient from "@/components/sidebar-client";
 import SearchDialog from "@/components/search-dialog";
 import PrintButton from "@/components/print-button";
@@ -29,9 +30,26 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const SITE_NAME = "OcuTrap Knowledge Base";
+const SITE_DESCRIPTION = "Documentation and support for OcuTrap trap management.";
+
 export const metadata: Metadata = {
-  title: { default: "OcuTrap Knowledge Base", template: "%s | OcuTrap Knowledge Base" },
-  description: "Documentation and support for OcuTrap trap management.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_NAME, template: `%s | ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    url: SITE_URL,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
