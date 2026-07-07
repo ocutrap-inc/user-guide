@@ -1,10 +1,11 @@
 import { getAllSlugs, getDocBySlug } from "@/lib/docs";
-import { markdownToHtml, extractHeadings } from "@/lib/markdown";
+import { markdownToHtml, markdownToPlain, extractHeadings } from "@/lib/markdown";
 import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
 import TabsInit from "@/components/tabs-init";
 import PrintButton from "@/components/print-button";
 import Feedback from "@/components/feedback";
+import CopyMarkdownButton from "@/components/copy-markdown-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -57,11 +58,12 @@ export default async function DocPage({
 
   const html = await markdownToHtml(doc.contentRaw, doc.filePath);
   const headings = extractHeadings(html);
+  const pageMarkdown = `# ${doc.title}\n\n${markdownToPlain(doc.contentRaw)}\n`;
 
   return (
     <div className="page-content">
       <article className="doc-body">
-        {/* Breadcrumb + per-page print affordance */}
+        {/* Breadcrumb + per-page copy/print affordances */}
         <div className="doc-topbar">
           <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link href="/" style={{ color: "var(--color-muted)", textDecoration: "none" }}>
@@ -76,7 +78,10 @@ export default async function DocPage({
             <span className="breadcrumb-sep">/</span>
             <span style={{ color: "var(--color-heading)" }}>{doc.title}</span>
           </nav>
-          <PrintButton variant="icon" />
+          <div className="doc-actions">
+            <CopyMarkdownButton markdown={pageMarkdown} />
+            <PrintButton variant="icon" />
+          </div>
         </div>
 
         <header className="page-header">

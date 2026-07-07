@@ -2154,3 +2154,26 @@ body {
     display: none !important;
   }
 }
+
+/* ── SITE-09: AI-consumable docs — "Copy page as Markdown" button ────────
+   Additive styles for the copy affordance beside the per-page print icon.
+   The button reuses .print-btn / .print-btn--icon; these rules only group it
+   with the print button and hide it in print output. Kept at the end of the
+   file so concurrent topbar work stays conflict-free. */
+.doc-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.copy-md-btn .lucide-check {
+  color: var(--color-brand);
+}
+
+@media print {
+  .copy-md-btn,
+  .doc-actions {
+    display: none !important;
+  }
+}
