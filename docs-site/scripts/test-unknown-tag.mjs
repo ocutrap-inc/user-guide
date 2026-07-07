@@ -136,6 +136,41 @@ check(
   html.includes("<code>&#x26;#x53;ettings</code>")
 );
 
+console.log("Relative inline-link resolution:");
+const linkMd = [
+  "[sibling](set-up-tutorial.md)",
+  "[up](../../faqs/battery.md#top)",
+  "[dir index](trap-settings/README.md)",
+  "[abs kept](/troubleshooting/common-issues)",
+  "[ext kept](https://example.com/a.md)",
+  "[asset](../../.gitbook/assets/pic.png)",
+].join("\n\n");
+const linkHtml = await markdownToHtml(linkMd, "getting-started/app/logs.md");
+check(
+  "sibling .md resolves against the page's directory",
+  linkHtml.includes('href="/getting-started/app/set-up-tutorial"')
+);
+check(
+  "../ traversal resolves and preserves the anchor",
+  linkHtml.includes('href="/faqs/battery#top"')
+);
+check(
+  "README.md maps to the directory route",
+  linkHtml.includes('href="/getting-started/app/trap-settings"')
+);
+check(
+  "absolute path passes through untouched",
+  linkHtml.includes('href="/troubleshooting/common-issues"')
+);
+check(
+  "external URL passes through untouched",
+  linkHtml.includes('href="https://example.com/a.md"')
+);
+check(
+  "relative asset link maps to /gitbook-assets/",
+  linkHtml.includes('href="/gitbook-assets/pic.png"')
+);
+
 if (failures > 0) {
   console.error(`\n${failures} assertion(s) failed.`);
   process.exit(1);
