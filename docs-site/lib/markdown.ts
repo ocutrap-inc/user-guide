@@ -401,6 +401,45 @@ function convertVideoImgs(html: string): string {
   );
 }
 
+/**
+ * Post-process HTML: rewrite relative inline links (`set-up-tutorial.md`,
+ * `../faqs/battery.md`, `trap-settings/README.md#x`) into absolute site
+ * routes, resolved against the source page's directory. GitBook resolved
+ * these itself; without this pass they leak into hrefs and 404 on click.
+ * Absolute paths, schemes (`https:`, `mailto:`), and pure anchors pass
+ * through untouched.
+ */
+function resolveInternalLinks(html: string, sourcePath?: string): string {
+  const dir = sourcePath ? sourcePath.split("/").slice(0, -1).join("/") : "";
+  return html.replace(
+    /(<a\b[^>]*?\shref=")([^"]+)(")/g,
+    (whole, pre, href, post) => {
+      if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#|\/)/i.test(href)) return whole;
+      const cut = href.search(/[#?]/);
+      const relPath = cut === -1 ? href : href.slice(0, cut);
+      const suffix = cut === -1 ? "" : href.slice(cut);
+      const stack: string[] = [];
+      for (const seg of `${dir}/${relPath}`.split("/")) {
+        if (!seg || seg === ".") continue;
+        if (seg === "..") stack.pop();
+        else stack.push(seg);
+      }
+      let resolved = stack.join("/");
+      // Assets referenced relatively map to the copied public dir.
+      const assetIdx = resolved.indexOf(".gitbook/assets/");
+      if (assetIdx !== -1) {
+        resolved = `gitbook-assets/${resolved.slice(assetIdx + ".gitbook/assets/".length)}`;
+        return `${pre}/${resolved}${suffix}${post}`;
+      }
+      resolved = resolved
+        .replace(/\.md$/i, "")
+        .replace(/(^|\/)README$/i, "$1")
+        .replace(/\/+$/, "");
+      return `${pre}/${resolved}${suffix}${post}`;
+    }
+  );
+}
+
 export async function markdownToHtml(
   raw: string,
   sourcePath?: string
@@ -421,7 +460,7 @@ export async function markdownToHtml(
     .use(rehypeStringify)
     .process(preprocessed);
 
-  return convertVideoImgs(String(result));
+  return resolveInternalLinks(convertVideoImgs(String(result)), sourcePath);
 }
 
 // Decode the HTML entities rehype emits (numeric + the common named ones) back
