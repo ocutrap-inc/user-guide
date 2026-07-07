@@ -36,17 +36,36 @@ function hostnameFromUrl(url: string): string {
   }
 }
 
+// Host whose bookmark card gets upgraded with a live system-status pill
+// (SW-331 / spec SITE-08). Kept narrow so only the OcuTrap status page hydrates.
+const STATUSPAGE_HOST = "ocutrap.statuspage.io";
+
 // Render a non-video external URL as a GitBook-style bookmark card: a single
 // clickable card (opens in a new tab) with a globe icon, a title line (the
 // embed caption if present, else the URL hostname) and the URL as a muted
 // second line. No remote fetch — titles are derived locally at build time.
+//
+// For the OcuTrap Statuspage URL we additionally emit a `data-status-url`
+// attribute (the summary JSON endpoint) and a hidden `.bookmark-card__status`
+// pill placeholder. A client hydrator (components/status-pill.tsx) fills and
+// reveals it at runtime; with JS off — or if the fetch fails — the pill stays
+// hidden and the card renders exactly as it did before, so graceful
+// degradation is preserved and there is no layout shift (the pill is appended
+// after the URL line and takes no space until shown).
 function renderBookmarkCard(url: string, caption?: string): string {
   const title = caption && caption.trim() ? caption.trim() : hostnameFromUrl(url);
-  return `<a href="${url}" class="bookmark-card" target="_blank" rel="noopener noreferrer">
+  const isStatuspage = hostnameFromUrl(url) === STATUSPAGE_HOST;
+  const statusAttr = isStatuspage
+    ? ` data-status-url="https://${STATUSPAGE_HOST}/api/v2/status.json"`
+    : "";
+  const statusPill = isStatuspage
+    ? `\n<span class="bookmark-card__status" data-status-pill hidden><span class="bookmark-card__status-dot" aria-hidden="true"></span><span class="bookmark-card__status-text"></span></span>`
+    : "";
+  return `<a href="${url}" class="bookmark-card"${statusAttr} target="_blank" rel="noopener noreferrer">
 <span class="bookmark-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
 <span class="bookmark-card__body">
 <span class="bookmark-card__title">${title}</span>
-<span class="bookmark-card__url">${url}</span>
+<span class="bookmark-card__url">${url}</span>${statusPill}
 </span>
 </a>`;
 }

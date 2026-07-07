@@ -2177,3 +2177,116 @@ body {
     display: none !important;
   }
 }
+
+/* ── Live system-status indicator (SW-331 / spec SITE-08) ──────────────────
+ * Appended at end of file to minimize merge-conflict surface with sibling
+ * edits. Two surfaces:
+ *   1. .bookmark-card__status — a pill hydrated inside the Statuspage bookmark
+ *      card (home "System status"). Hidden until JS reveals it, so the card is
+ *      unchanged with JS off / on fetch failure.
+ *   2. .status-banner — a slim incident banner under the H1 on the offline /
+ *      common-issues troubleshooting pages; only rendered when degraded.
+ * Indicator colors are self-contained (not the hint tokens) and tuned for
+ * readable contrast in both light and dark themes.
+ */
+:root {
+  --status-none: #16a34a;
+  --status-minor: #d97706;
+  --status-major: #ea580c;
+  --status-critical: #dc2626;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --status-none: #4ade80;
+    --status-minor: #fbbf24;
+    --status-major: #fb923c;
+    --status-critical: #f87171;
+  }
+}
+:root[data-theme="dark"] {
+  --status-none: #4ade80;
+  --status-minor: #fbbf24;
+  --status-major: #fb923c;
+  --status-critical: #f87171;
+}
+
+/* Pill inside the Statuspage bookmark card. `hidden` (default) keeps it out of
+   the flow until the hydrator reveals it — no layout shift for the card. */
+.bookmark-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-body);
+}
+.bookmark-card__status[hidden] {
+  display: none;
+}
+.bookmark-card__status-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--status-none);
+}
+.bookmark-card__status[data-indicator="none"] .bookmark-card__status-dot {
+  background: var(--status-none);
+}
+.bookmark-card__status[data-indicator="minor"] .bookmark-card__status-dot {
+  background: var(--status-minor);
+}
+.bookmark-card__status[data-indicator="major"] .bookmark-card__status-dot {
+  background: var(--status-major);
+}
+.bookmark-card__status[data-indicator="critical"] .bookmark-card__status-dot {
+  background: var(--status-critical);
+}
+
+/* Troubleshooting incident banner. Amber for minor/major, red for critical;
+   tinted background derived from the indicator color via color-mix so it reads
+   in both themes without a second variable set. */
+.status-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0 0 1.5rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid;
+  border-left-width: 4px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--color-heading);
+  border-color: color-mix(in srgb, var(--status-minor) 45%, var(--color-border));
+  background: color-mix(in srgb, var(--status-minor) 12%, var(--color-surface));
+}
+.status-banner[data-indicator="critical"] {
+  border-color: color-mix(in srgb, var(--status-critical) 55%, var(--color-border));
+  background: color-mix(in srgb, var(--status-critical) 12%, var(--color-surface));
+}
+.status-banner[data-indicator="major"] {
+  border-color: color-mix(in srgb, var(--status-major) 50%, var(--color-border));
+  background: color-mix(in srgb, var(--status-major) 12%, var(--color-surface));
+}
+.status-banner__dot {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  margin-top: 0.34rem;
+  border-radius: 50%;
+  background: var(--status-minor);
+}
+.status-banner[data-indicator="major"] .status-banner__dot {
+  background: var(--status-major);
+}
+.status-banner[data-indicator="critical"] .status-banner__dot {
+  background: var(--status-critical);
+}
+.status-banner__text a {
+  color: var(--color-link);
+  font-weight: 600;
+  text-decoration: underline;
+}
