@@ -2090,3 +2090,67 @@ body {
     break-inside: avoid;
   }
 }
+
+/* ============================================================================
+   SITE-07 / SW-330 — "Was this helpful?" feedback widget
+   Appended intentionally at end-of-file to minimize merge conflicts.
+   Theme-aware via existing custom properties (works in light + dark);
+   hidden in print. See components/feedback.tsx.
+   ========================================================================== */
+.doc-feedback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 2.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-sidebar-bg);
+  font-family: var(--font-sans);
+}
+
+.doc-feedback-label {
+  font-weight: 600;
+  color: var(--color-heading);
+  font-size: 0.9375rem;
+}
+
+.doc-feedback-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.doc-feedback-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-elevated);
+  color: var(--color-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.doc-feedback-btn:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+  background: var(--color-brand-dim);
+}
+
+.doc-feedback-thanks {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-brand);
+  font-size: 0.9375rem;
+}
+
+@media print {
+  .doc-feedback {
+    display: none !important;
+  }
+}

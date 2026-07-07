@@ -5,6 +5,7 @@ import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, ogImagePath } from "@/lib/site";
 import SidebarClient from "@/components/sidebar-client";
 import SearchDialog from "@/components/search-dialog";
 import ThemeToggle from "@/components/theme-toggle";
+import PostHogProvider from "@/components/posthog-provider";
 import Link from "next/link";
 import Image from "next/image";
 import { Outfit, Manrope, JetBrains_Mono } from "next/font/google";
@@ -79,6 +80,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <PostHogProvider />
         <div className="layout">
           <SidebarClient sections={sections} />
 
