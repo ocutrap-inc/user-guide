@@ -106,6 +106,41 @@
   the **2026-07-25** renewal, and document a rollback path (GitBook stays
   readable until cancellation).
 
+## Docs Site Enhancements (SITE, continued)
+
+> Added 2026-07-07 after the migration buildout. Post-launch improvements to
+> the self-hosted docs site, sequenced: SITE-07 first (it tells us what else
+> is worth building), then SITE-08/09 (small), then SITE-10/11 (bigger swings,
+> after the SITE-06 cutover).
+
+- [ ] **SITE-07**: Docs analytics + feedback loop. PostHog (existing OcuTrap
+  workspace) captures: pageviews, full-text search queries with result
+  counts (zero-result queries especially), AI-ask questions with outcome
+  (answered / declined / rate-limited / error), and a per-page
+  "Was this helpful? 👍👎" widget (vote + page path). No PII beyond
+  PostHog defaults; key via env. Output: a PostHog dashboard showing
+  top zero-result searches, top asked questions, and lowest-rated pages —
+  the content-gap queue.
+- [ ] **SITE-08**: Live system-status indicator. Fetch the public
+  Statuspage API (`ocutrap.statuspage.io/api/v2/status.json`) and render a
+  live status pill (● operational / degraded / outage) on the home
+  "System status" card and troubleshooting pages. Cached/edge-friendly,
+  graceful fallback to the plain bookmark card if unreachable.
+- [ ] **SITE-09**: AI-consumable docs. Build-generated `/llms.txt` (page
+  index per the llms.txt convention) and `/llms-full.txt` (full markdown
+  corpus), plus a per-page "Copy page as Markdown" button beside the print
+  icon. Source from the existing content pipeline; rebuilt every deploy.
+- [ ] **SITE-10**: Interactive LED diagnostic wizard. On the LED guide /
+  troubleshooting flow: pick the LED color → pick the pattern → get the
+  diagnosis and linked fix pages. Content derived from the LED guide
+  markdown (single source of truth — no forked copy); works on mobile;
+  usable offline once SITE-11 lands. After cutover.
+- [ ] **SITE-11**: Offline docs (PWA). Service worker + manifest caching
+  the KB pages, LED guide, and assets needed in the field; offline
+  indicator banner; `/api/*` excluded. Verified in airplane mode on a
+  phone. Rationale: customers operate traps in low-coverage areas.
+  After cutover.
+
 ## Out of Scope
 
 - **Editing the website or firmware to match docs** — Product is canonical
@@ -138,3 +173,8 @@
 | SITE-04 | Docs Platform Migration        |
 | SITE-05 | Docs Platform Migration        |
 | SITE-06 | Docs Platform Migration        |
+| SITE-07 | Docs Enhancements (post-launch)|
+| SITE-08 | Docs Enhancements (post-launch)|
+| SITE-09 | Docs Enhancements (post-launch)|
+| SITE-10 | Docs Enhancements (post-cutover)|
+| SITE-11 | Docs Enhancements (post-cutover)|
