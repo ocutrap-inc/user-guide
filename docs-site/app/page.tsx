@@ -15,7 +15,7 @@ export default async function HomePage() {
 
   const html = await markdownToHtml(doc.contentRaw, doc.filePath);
   const headings = extractHeadings(html);
-  const pageMarkdown = `# ${doc.title}\n\n${markdownToPlain(doc.contentRaw)}\n`;
+  const pageMarkdown = `# ${doc.title}\n\n${markdownToPlain(doc.contentRaw, doc.filePath)}\n`;
 
   return (
     <div className="page-content">

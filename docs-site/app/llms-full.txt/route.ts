@@ -33,7 +33,7 @@ function buildLlmsFull(): string {
   for (const href of hrefs) {
     const doc = getDocByHref(href);
     if (!doc) continue;
-    const body = markdownToPlain(doc.contentRaw);
+    const body = markdownToPlain(doc.contentRaw, doc.filePath);
     parts.push("---");
     parts.push(`# ${doc.title}`);
     parts.push(`URL: ${absoluteUrl(doc.href)}`);
