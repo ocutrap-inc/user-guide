@@ -4,6 +4,7 @@ import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
 import TabsInit from "@/components/tabs-init";
 import PrintButton from "@/components/print-button";
+import Feedback from "@/components/feedback";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -87,6 +88,9 @@ export default async function DocPage({
         </header>
 
         <DocContent html={html} />
+
+        {/* "Was this helpful?" feedback (SITE-07) — bottom of every article. */}
+        <Feedback path={doc.href} />
 
         {/* Prev / Next navigation */}
         {(doc.prev || doc.next) && (

@@ -6,6 +6,25 @@ import { Search, X, Sparkles, CornerDownLeft } from "lucide-react";
 import Fuse from "fuse.js";
 import type { SearchDoc } from "@/lib/docs";
 import { renderAnswerMarkdown } from "@/lib/answer-markdown";
+import { capture } from "@/lib/analytics";
+
+// Grounded-refusal ("declined") heuristic for docs_ask. The ask endpoint always
+// streams citations for the chunks it retrieved, so citations alone don't prove
+// the model actually answered. We treat an ask as "declined" when either no
+// chunks were retrieved (zero citations) OR the answer text matches the
+// documented refusal phrasing the system prompt instructs the model to use
+// ("...don't have that information in the OcuTrap documentation..."). Anything
+// else with body text counts as "answered".
+function isDeclinedAnswer(answer: string, citations: Citation[]): boolean {
+  if (citations.length === 0) return true;
+  const a = answer.toLowerCase();
+  return (
+    /don'?t have (that|this|the)?\s*information/.test(a) ||
+    /couldn'?t find/.test(a) ||
+    /(isn'?t|is not|aren'?t|not) (covered|available|included|documented)/.test(a) ||
+    (/contact (ocutrap )?support/.test(a) && /documentation/.test(a))
+  );
+}
 
 type Citation = { title: string; href: string };
 type AskStatus =
@@ -38,7 +57,29 @@ export default function SearchDialog() {
   const inputRef = useRef<HTMLInputElement>(null);
   const modeRef = useRef(mode);
   const abortRef = useRef<AbortController | null>(null);
+  const resultsRef = useRef(results);
   const router = useRouter();
+
+  // Keep the latest results readable from the debounced analytics timer
+  // without retriggering it on every keystroke.
+  resultsRef.current = results;
+
+  // docs_search: fire once ~800ms after the query settles (not per keystroke),
+  // and only for non-empty queries. resultCount is what search surfaced;
+  // zeroResults flags a likely content gap.
+  useEffect(() => {
+    const q = query.trim();
+    if (!q) return;
+    const t = setTimeout(() => {
+      const count = resultsRef.current.length;
+      capture("docs_search", {
+        query: q,
+        resultCount: count,
+        zeroResults: count === 0,
+      });
+    }, 800);
+    return () => clearTimeout(t);
+  }, [query]);
 
   useEffect(() => {
     modeRef.current = mode;
@@ -144,6 +185,11 @@ export default function SearchDialog() {
     setCitations([]);
     setAskStatus("loading");
 
+    // Local accumulators so we can classify the outcome for docs_ask without
+    // racing React state updates.
+    let localAnswer = "";
+    let localCitations: Citation[] = [];
+
     try {
       const res = await fetch("/api/ask", {
         method: "POST",
@@ -152,9 +198,19 @@ export default function SearchDialog() {
         signal: controller.signal,
       });
 
-      if (res.status === 503) return setAskStatus("unconfigured");
-      if (res.status === 429) return setAskStatus("ratelimited");
-      if (!res.ok || !res.body) return setAskStatus("error");
+      if (res.status === 503) {
+        // AI not configured in this environment (e.g. local without a key).
+        capture("docs_ask", { question: trimmed, outcome: "error" });
+        return setAskStatus("unconfigured");
+      }
+      if (res.status === 429) {
+        capture("docs_ask", { question: trimmed, outcome: "rate_limited" });
+        return setAskStatus("ratelimited");
+      }
+      if (!res.ok || !res.body) {
+        capture("docs_ask", { question: trimmed, outcome: "error" });
+        return setAskStatus("error");
+      }
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -181,8 +237,10 @@ export default function SearchDialog() {
             continue;
           }
           if (msg.type === "citations" && msg.citations) {
+            localCitations = msg.citations;
             setCitations(msg.citations);
           } else if (msg.type === "delta" && msg.text) {
+            localAnswer += msg.text;
             setAnswer((a) => a + msg.text);
           } else if (msg.type === "done") {
             setAskStatus("done");
@@ -190,8 +248,18 @@ export default function SearchDialog() {
         }
       }
       setAskStatus((s) => (s === "streaming" ? "done" : s));
+
+      const declined = isDeclinedAnswer(localAnswer, localCitations);
+      capture("docs_ask", {
+        question: trimmed,
+        outcome: declined ? "declined" : "answered",
+        ...(declined
+          ? {}
+          : { citedPages: localCitations.map((c) => c.href) }),
+      });
     } catch (err) {
       if ((err as Error)?.name === "AbortError") return;
+      capture("docs_ask", { question: trimmed, outcome: "error" });
       setAskStatus("error");
     }
   }, []);
