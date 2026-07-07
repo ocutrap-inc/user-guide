@@ -303,13 +303,31 @@ export async function markdownToHtml(
   return convertVideoImgs(String(result));
 }
 
+// Decode the HTML entities rehype emits (numeric + the common named ones) back
+// to their characters. Heading text is pulled from *rendered* HTML where `&`
+// becomes `&#x26;` etc.; the TOC prints it as a plain React string (no browser
+// decode), so without this it shows the raw entity. (B10)
+function decodeEntities(s: string): string {
+  return s
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) =>
+      String.fromCodePoint(parseInt(h, 16))
+    )
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&");
+}
+
 export function extractHeadings(html: string): Heading[] {
   const headings: Heading[] = [];
   const regex = /<h([23])[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h[23]>/g;
   let match;
   while ((match = regex.exec(html)) !== null) {
     const [, level, id, rawText] = match;
-    const text = rawText.replace(/<[^>]+>/g, "").trim();
+    const text = decodeEntities(rawText.replace(/<[^>]+>/g, "")).trim();
     headings.push({ id, text, level: parseInt(level) });
   }
   return headings;

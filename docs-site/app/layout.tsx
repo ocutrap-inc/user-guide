@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { parseSummary } from "@/lib/docs";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, ogImagePath } from "@/lib/site";
 import SidebarClient from "@/components/sidebar-client";
 import SearchDialog from "@/components/search-dialog";
 import ThemeToggle from "@/components/theme-toggle";
@@ -30,8 +30,12 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const SITE_NAME = "OcuTrap Knowledge Base";
-const SITE_DESCRIPTION = "Documentation and support for OcuTrap trap management.";
+const OG_IMAGE = {
+  url: ogImagePath(),
+  width: 1200,
+  height: 630,
+  alt: SITE_NAME,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -44,11 +48,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
 };
 
@@ -81,15 +87,19 @@ export default function RootLayout({
               {/* Spacer for mobile hamburger */}
               <div style={{ width: 32, display: "none" }} aria-hidden="true" className="hamburger-spacer" />
               <Link href="/" className="site-logo" style={{ marginRight: "auto" }}>
-                <Image
-                  src="/gitbook-assets/Removed Background logo.png"
-                  alt="OcuTrap"
-                  width={120}
-                  height={30}
-                  className="site-logo-img"
-                  priority
-                  style={{ height: 30, width: "auto" }}
-                />
+                <span className="site-logo-chip">
+                  <Image
+                    src="/ocutrap-mark.png"
+                    alt="OcuTrap"
+                    width={26}
+                    height={26}
+                    priority
+                  />
+                </span>
+                <span className="site-logo-word">
+                  OcuTrap
+                  <span className="site-logo-sub">Knowledge Base</span>
+                </span>
               </Link>
               <SearchDialog />
               <ThemeToggle />
