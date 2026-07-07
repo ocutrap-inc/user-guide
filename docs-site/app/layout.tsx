@@ -4,7 +4,6 @@ import { parseSummary } from "@/lib/docs";
 import { SITE_URL } from "@/lib/site";
 import SidebarClient from "@/components/sidebar-client";
 import SearchDialog from "@/components/search-dialog";
-import PrintButton from "@/components/print-button";
 import ThemeToggle from "@/components/theme-toggle";
 import Link from "next/link";
 import Image from "next/image";
@@ -94,7 +93,6 @@ export default function RootLayout({
               </Link>
               <SearchDialog />
               <ThemeToggle />
-              <PrintButton />
             </header>
 
             <main>{children}</main>

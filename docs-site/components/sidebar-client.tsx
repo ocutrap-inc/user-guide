@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X, FileDown, FileText, Printer } from "lucide-react";
 import type { NavSection, NavItem } from "@/lib/docs";
 
 function NavItemLink({
@@ -112,16 +112,42 @@ export default function SidebarClient({
         </Link>
 
         <ul style={{ listStyle: "none", margin: 0, padding: "0 0 2rem" }}>
-          {/* Print manual link */}
+          {/* PDF downloads + print-friendly manual (nav-level shortcut) */}
           <li>
-            <Link
-              href="/manual"
-              className={`nav-item${pathname === "/manual" ? " nav-item--active" : ""}`}
-              style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
-            >
-              <BookOpen size={14} />
-              Print Full Manual
-            </Link>
+            <div className="nav-section-title">PDF Downloads</div>
+            <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+              <li>
+                <a
+                  href="/gitbook-assets/OcuTrap_Knowledge_Base.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-item nav-item--pdf"
+                >
+                  <FileDown size={14} />
+                  Full Manual (PDF)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/gitbook-assets/R1_Operation_Cheat_Sheet.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-item nav-item--pdf"
+                >
+                  <FileText size={14} />
+                  R1 Cheat Sheet (PDF)
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="/manual"
+                  className={`nav-item nav-item--pdf${pathname === "/manual" ? " nav-item--active" : ""}`}
+                >
+                  <Printer size={14} />
+                  Print-friendly Manual
+                </Link>
+              </li>
+            </ul>
           </li>
           <li><div className="nav-separator" /></li>
 

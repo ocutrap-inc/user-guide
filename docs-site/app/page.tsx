@@ -3,6 +3,7 @@ import { markdownToHtml, extractHeadings } from "@/lib/markdown";
 import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
 import TabsInit from "@/components/tabs-init";
+import PrintButton from "@/components/print-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -16,8 +17,11 @@ export default async function HomePage() {
   return (
     <div className="page-content">
       <article className="doc-body">
-        <div className="breadcrumb">
-          <span>OcuTrap Knowledge Base</span>
+        <div className="doc-topbar">
+          <div className="breadcrumb">
+            <span>OcuTrap Knowledge Base</span>
+          </div>
+          <PrintButton variant="icon" />
         </div>
 
         <h1 className="prose" style={{ fontSize: "1.875rem", fontWeight: 700, marginBottom: "1.5rem", color: "var(--color-heading)" }}>
