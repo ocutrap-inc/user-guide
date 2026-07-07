@@ -33,6 +33,7 @@ export type NavSection = {
 
 export type DocData = {
   title: string;
+  description: string | null;
   contentRaw: string;
   filePath: string;
   href: string;
@@ -41,6 +42,25 @@ export type DocData = {
   next: { title: string; href: string } | null;
   section: string | null;
 };
+
+// Normalize a heading/title for equality comparison (trim, collapse spaces,
+// drop trailing markdown emphasis markers).
+function normalizeTitle(s: string): string {
+  return s
+    .replace(/[*_`]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+// Remove a leading `# Heading` from markdown when it duplicates the page title,
+// so the page renders exactly one H1 (the framework-rendered title) plus its
+// subtitle — matching GitBook and de-duping the home page's triple title.
+function stripLeadingH1(content: string, title: string): string {
+  return content.replace(/^\s*#\s+(.+?)\s*(\n|$)/, (full, h1: string) =>
+    normalizeTitle(h1) === normalizeTitle(title) ? "" : full
+  );
+}
 
 export type SearchDoc = {
   title: string;
@@ -208,10 +228,15 @@ export function getDocBySlug(slug: string[]): DocData | null {
     currentIndex < flatItems.length - 1 ? flatItems[currentIndex + 1] : null;
 
   const section = getSectionTitle(sections, href);
+  const description =
+    typeof data.description === "string" && data.description.trim()
+      ? data.description.replace(/\s+/g, " ").trim()
+      : null;
 
   return {
     title,
-    contentRaw: content,
+    description,
+    contentRaw: stripLeadingH1(content, title),
     filePath,
     href,
     headings: [], // populated after HTML processing
@@ -233,9 +258,16 @@ export function getHomeDoc(): DocData | null {
   const flatItems = flattenNav(sections);
   const next = flatItems.length > 0 ? flatItems[0] : null;
 
+  const title: string = data.title ?? "OcuTrap Knowledge Base";
+  const description =
+    typeof data.description === "string" && data.description.trim()
+      ? data.description.replace(/\s+/g, " ").trim()
+      : null;
+
   return {
-    title: data.title ?? "OcuTrap Knowledge Base",
-    contentRaw: content,
+    title,
+    description,
+    contentRaw: stripLeadingH1(content, title),
     filePath,
     href: "/",
     headings: [],

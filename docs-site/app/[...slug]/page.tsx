@@ -7,6 +7,7 @@ import PrintButton from "@/components/print-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ogImagePath } from "@/lib/site";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -20,7 +21,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const doc = getDocBySlug(slug);
   if (!doc) return {};
-  const description = `${doc.section ? doc.section + " — " : ""}OcuTrap Knowledge Base`;
+  const description =
+    doc.description ??
+    `${doc.section ? doc.section + " — " : ""}OcuTrap Knowledge Base`;
+  const ogImage = ogImagePath(doc.title, doc.section);
   return {
     title: doc.title,
     description,
@@ -30,11 +34,13 @@ export async function generateMetadata({
       url: doc.href,
       title: doc.title,
       description,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: doc.title }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: doc.title,
       description,
+      images: [ogImage],
     },
   };
 }
@@ -71,6 +77,14 @@ export default async function DocPage({
           </nav>
           <PrintButton variant="icon" />
         </div>
+
+        <header className="page-header">
+          {doc.section && <div className="page-eyebrow">{doc.section}</div>}
+          <h1 className="page-title">{doc.title}</h1>
+          {doc.description && (
+            <p className="page-subtitle">{doc.description}</p>
+          )}
+        </header>
 
         <DocContent html={html} />
 

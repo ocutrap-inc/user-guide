@@ -24,9 +24,12 @@ export default async function HomePage() {
           <PrintButton variant="icon" />
         </div>
 
-        <h1 className="prose" style={{ fontSize: "1.875rem", fontWeight: 700, marginBottom: "1.5rem", color: "var(--color-heading)" }}>
-          {doc.title}
-        </h1>
+        <header className="page-header">
+          <h1 className="page-title">{doc.title}</h1>
+          {doc.description && (
+            <p className="page-subtitle">{doc.description}</p>
+          )}
+        </header>
 
         <DocContent html={html} />
 

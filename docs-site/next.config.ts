@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
   // Transpile nothing extra needed
   output: undefined,
 
+  // Ensure the OG route's raccoon mark is bundled into its serverless function
+  // (it is read from disk via fs at request time — SITE-01).
+  outputFileTracingIncludes: {
+    "/api/og": ["./public/ocutrap-mark.png"],
+  },
+
   // URL parity with the old GitBook site (SW-299 / spec SITE-02).
   // GitBook serves canonical, non-trailing-slash URLs (e.g.
   // /getting-started/introduction). Next.js' default is also
