@@ -409,33 +409,43 @@ function convertVideoImgs(html: string): string {
  * Absolute paths, schemes (`https:`, `mailto:`), and pure anchors pass
  * through untouched.
  */
-function resolveInternalLinks(html: string, sourcePath?: string): string {
+/**
+ * Resolve a relative doc/asset reference against the source page's KB
+ * directory into a site-absolute path ("/getting-started/faqs/battery",
+ * "/gitbook-assets/pic.png"). Returns null for hrefs that need no rewrite
+ * (absolute paths, schemes, pure anchors). Anchors/queries are preserved.
+ */
+function resolveKbHref(href: string, sourcePath?: string): string | null {
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#|\/)/i.test(href)) return null;
   const dir = sourcePath ? sourcePath.split("/").slice(0, -1).join("/") : "";
+  const cut = href.search(/[#?]/);
+  const relPath = cut === -1 ? href : href.slice(0, cut);
+  const suffix = cut === -1 ? "" : href.slice(cut);
+  const stack: string[] = [];
+  for (const seg of `${dir}/${relPath}`.split("/")) {
+    if (!seg || seg === ".") continue;
+    if (seg === "..") stack.pop();
+    else stack.push(seg);
+  }
+  let resolved = stack.join("/");
+  // Assets referenced relatively map to the copied public dir.
+  const assetIdx = resolved.indexOf(".gitbook/assets/");
+  if (assetIdx !== -1) {
+    return `/gitbook-assets/${resolved.slice(assetIdx + ".gitbook/assets/".length)}${suffix}`;
+  }
+  resolved = resolved
+    .replace(/\.md$/i, "")
+    .replace(/(^|\/)README$/i, "$1")
+    .replace(/\/+$/, "");
+  return `/${resolved}${suffix}`;
+}
+
+function resolveInternalLinks(html: string, sourcePath?: string): string {
   return html.replace(
     /(<a\b[^>]*?\shref=")([^"]+)(")/g,
     (whole, pre, href, post) => {
-      if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#|\/)/i.test(href)) return whole;
-      const cut = href.search(/[#?]/);
-      const relPath = cut === -1 ? href : href.slice(0, cut);
-      const suffix = cut === -1 ? "" : href.slice(cut);
-      const stack: string[] = [];
-      for (const seg of `${dir}/${relPath}`.split("/")) {
-        if (!seg || seg === ".") continue;
-        if (seg === "..") stack.pop();
-        else stack.push(seg);
-      }
-      let resolved = stack.join("/");
-      // Assets referenced relatively map to the copied public dir.
-      const assetIdx = resolved.indexOf(".gitbook/assets/");
-      if (assetIdx !== -1) {
-        resolved = `gitbook-assets/${resolved.slice(assetIdx + ".gitbook/assets/".length)}`;
-        return `${pre}/${resolved}${suffix}${post}`;
-      }
-      resolved = resolved
-        .replace(/\.md$/i, "")
-        .replace(/(^|\/)README$/i, "$1")
-        .replace(/\/+$/, "");
-      return `${pre}/${resolved}${suffix}${post}`;
+      const resolved = resolveKbHref(href, sourcePath);
+      return resolved === null ? whole : `${pre}${resolved}${post}`;
     }
   );
 }
@@ -557,7 +567,7 @@ function stripResidualHtml(text: string): string {
     .replace(/<\/?[a-zA-Z][^>]*>/g, "");
 }
 
-export function markdownToPlain(content: string): string {
+export function markdownToPlain(content: string, sourcePath?: string): string {
   // 1. Hint/callout → GitHub-flavored alert blockquote.
   content = content.replace(
     /\{%\s*hint\s+style="(\w+)"\s*%\}([\s\S]*?)\{%\s*endhint\s*%\}/g,
@@ -688,7 +698,27 @@ export function markdownToPlain(content: string): string {
   content = applyOutsideCode(content, stripResidualHtml);
   content = applyOutsideCode(content, normalizePlainEntity);
 
-  // 11. Tidy whitespace.
+  // 11. Resolve relative inline links/images against the source page's
+  //     directory and emit absolute site URLs — same bug class as the HTML
+  //     pipeline's resolveInternalLinks (SW-335): GitBook resolved these
+  //     itself, and an AI assistant quoting the corpus would otherwise hand
+  //     users dead `../foo.md` links.
+  if (sourcePath) {
+    content = applyOutsideCode(content, (chunk) =>
+      chunk.replace(
+        /(!?)\[([^\]]*)\]\(([^)\s]+)((?:\s+"[^"]*")?)\)/g,
+        (whole, bang, label, target, title) => {
+          const resolved = resolveKbHref(target, sourcePath);
+          if (resolved === null) return whole;
+          // Drop GitBook's editor-only `"mention"` titles; keep real ones.
+          const keptTitle = title.trim() === '"mention"' ? "" : title;
+          return `${bang}[${label}](${absoluteUrl(resolved.replace(/ /g, "%20"))}${keptTitle})`;
+        }
+      )
+    );
+  }
+
+  // 12. Tidy whitespace.
   return content
     .replace(/[ \t]+$/gm, "")
     .replace(/\n{3,}/g, "\n\n")
