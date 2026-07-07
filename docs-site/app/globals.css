@@ -272,6 +272,19 @@ body {
   opacity: 0.8;
 }
 
+/* Desktop: the blue header already carries the brand — the sidebar copy is
+   redundant. Keep it ≤900px where it heads the off-canvas panel next to the
+   close button. */
+@media (min-width: 901px) {
+  .sidebar-logo {
+    display: none;
+  }
+
+  .sidebar {
+    padding-top: 0.75rem;
+  }
+}
+
 .sidebar-logo-icon {
   width: 28px;
   height: 28px;
