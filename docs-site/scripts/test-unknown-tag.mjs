@@ -40,6 +40,12 @@ This paragraph must survive an unknown block tag.
 {% file src="../.gitbook/assets/OcuTrap_Knowledge_Base.pdf" %}
 
 {% file src="../.gitbook/assets/OcuTrap_PDF.pdf" %}Marketing one-pager{% endfile %}
+
+{% embed url="https://ocutrap.statuspage.io/" %}
+
+{% embed url="https://files.example.com/clip.mp4?token=abc" %}
+
+{% embed url="https://example.com/page" caption="Custom title" %}
 `;
 
 const html = await markdownToHtml(fixture, "scripts/fixtures/unknown-tag.md");
@@ -80,6 +86,30 @@ check(
   "block-form {% file %} caption overrides the filename label",
   html.includes("Marketing one-pager") &&
     html.includes('href="/gitbook-assets/OcuTrap_PDF.pdf"')
+);
+
+console.log("Embed blocks:");
+check(
+  "non-video {% embed %} renders a bookmark card (not an empty box)",
+  html.includes('class="bookmark-card"') &&
+    html.includes('href="https://ocutrap.statuspage.io/"')
+);
+check(
+  "bookmark card without a caption falls back to the URL hostname",
+  html.includes('class="bookmark-card__title">ocutrap.statuspage.io<')
+);
+check(
+  "video-URL {% embed %} still renders a <video>, not a bookmark card",
+  html.includes("video-embed--native") &&
+    html.includes('src="https://files.example.com/clip.mp4?token=abc"')
+);
+check(
+  "{% embed %} caption attribute becomes the bookmark-card title",
+  html.includes('class="bookmark-card__title">Custom title<')
+);
+check(
+  "no leftover empty embed-block from the old fallback",
+  !html.includes('class="embed-block"')
 );
 
 if (failures > 0) {
