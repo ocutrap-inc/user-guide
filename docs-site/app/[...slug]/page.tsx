@@ -3,6 +3,8 @@ import { markdownToHtml, markdownToPlain, extractHeadings } from "@/lib/markdown
 import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
 import TabsInit from "@/components/tabs-init";
+import StatusPill from "@/components/status-pill";
+import StatusBanner from "@/components/status-banner";
 import PrintButton from "@/components/print-button";
 import Feedback from "@/components/feedback";
 import CopyMarkdownButton from "@/components/copy-markdown-button";
@@ -10,6 +12,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ogImagePath } from "@/lib/site";
+
+// Pages that surface the live system-status banner under the title when
+// OcuTrap systems are degraded (SW-331 / spec SITE-08). Kept as an explicit
+// href allow-list — these are the two troubleshooting pages a customer lands
+// on when a trap looks "offline", where an active incident is the likely
+// cause. Add an href here to opt another page in.
+const STATUS_BANNER_HREFS = new Set([
+  "/troubleshooting/trap-offline-or-wont-connect",
+  "/troubleshooting/common-issues",
+]);
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -92,6 +104,8 @@ export default async function DocPage({
           )}
         </header>
 
+        {STATUS_BANNER_HREFS.has(doc.href) && <StatusBanner />}
+
         <DocContent html={html} />
 
         {/* "Was this helpful?" feedback (SITE-07) — bottom of every article. */}
@@ -120,6 +134,7 @@ export default async function DocPage({
         )}
 
         <TabsInit />
+        <StatusPill />
       </article>
 
       <aside className="toc-sidebar" aria-label="On this page">

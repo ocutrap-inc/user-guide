@@ -3,6 +3,7 @@ import { markdownToHtml, markdownToPlain, extractHeadings } from "@/lib/markdown
 import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
 import TabsInit from "@/components/tabs-init";
+import StatusPill from "@/components/status-pill";
 import PrintButton from "@/components/print-button";
 import CopyMarkdownButton from "@/components/copy-markdown-button";
 import Link from "next/link";
@@ -49,6 +50,7 @@ export default async function HomePage() {
         )}
 
         <TabsInit />
+        <StatusPill />
       </article>
 
       <aside className="toc-sidebar" aria-label="On this page">
