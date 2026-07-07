@@ -70,7 +70,9 @@
 
 ## Docs Platform Migration (SITE)
 
-> Added 2026-07-07. GitBook announced ~8× pricing; we exit before renewal.
+> Added 2026-07-07. GitBook announced ~8× pricing; renewal is
+> **2026-07-25** — the migration must be live and GitBook cancelled
+> before that date.
 > `docs.ocutrap.com` moves to the self-hosted `docs-site/` Next.js app
 > already scaffolded in this repo. The current GitBook look is the design
 > target — customers should not notice the platform change, except that
@@ -101,8 +103,8 @@
   deploy so answers never lag published content.
 - [ ] **SITE-06**: Cutover — point `docs.ocutrap.com` DNS at the new
   host, verify SITE-01..05 in production, cancel the GitBook plan before
-  the renewal date, and document a rollback path (GitBook stays readable
-  until cancellation).
+  the **2026-07-25** renewal, and document a rollback path (GitBook stays
+  readable until cancellation).
 
 ## Out of Scope
 
