@@ -49,6 +49,14 @@ export type SearchDoc = {
   excerpt: string;
 };
 
+// A heading-scoped slice of a KB page, used for AI-ask retrieval (SITE-04).
+export type Chunk = {
+  pagePath: string; // href, e.g. "/troubleshooting/trap-offline-or-wont-connect"
+  pageTitle: string;
+  heading: string;
+  text: string;
+};
+
 // Convert a file path like "getting-started/introduction.md" to URL href "/getting-started/introduction"
 function filePathToHref(filePath: string): string {
   let href = filePath.replace(/\.md$/, "");
@@ -290,4 +298,89 @@ export function buildSearchIndex(): SearchDoc[] {
   }
 
   return results;
+}
+
+// Strip GitBook/markdown syntax to plain prose for retrieval + prompting.
+function stripMarkdown(md: string): string {
+  return md
+    .replace(/\{%[\s\S]*?%\}/g, "") // GitBook hint/tabs/embed blocks
+    .replace(/^#+\s+/gm, "") // heading markers
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, "") // images
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // links → text
+    .replace(/[*_`~>]/g, "")
+    .replace(/<[^>]+>/g, "") // inline HTML
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#x[0-9a-fA-F]+;/g, " ")
+    .replace(/&[a-z]+;/g, " ")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+// Cap an individual chunk so one huge section can't dominate the prompt.
+const MAX_CHUNK_CHARS = 1800;
+
+// Build a heading-based chunk index over every KB page (SITE-04, SW-300).
+// Server-cached at the route layer, exactly like buildSearchIndex.
+export function buildChunkIndex(): Chunk[] {
+  const sections = parseSummary();
+  const flatItems = flattenNav(sections);
+  const chunks: Chunk[] = [];
+
+  for (const item of flatItems) {
+    const filePath = resolveFilePath(item.href);
+    if (!filePath) continue;
+
+    let raw: string;
+    try {
+      raw = fs.readFileSync(path.join(KB_ROOT, filePath), "utf-8");
+    } catch {
+      continue;
+    }
+
+    const { content, data } = matter(raw);
+    let pageTitle: string = data.title ?? "";
+    if (!pageTitle) {
+      const h1 = content.match(/^#\s+(.+)/m);
+      pageTitle = h1 ? h1[1].trim() : item.title;
+    }
+
+    const lines = content.split("\n");
+    let currentHeading = pageTitle;
+    let buffer: string[] = [];
+
+    const flush = () => {
+      let text = stripMarkdown(buffer.join("\n"));
+      buffer = [];
+      if (!text) return;
+      if (text.length > MAX_CHUNK_CHARS) {
+        text = text.slice(0, MAX_CHUNK_CHARS).replace(/\s\S*$/, "") + "…";
+      }
+      chunks.push({
+        pagePath: item.href,
+        pageTitle,
+        heading: currentHeading,
+        text,
+      });
+    };
+
+    for (const line of lines) {
+      const h = line.match(/^(#{1,6})\s+(.+)/);
+      if (h && h[1].length >= 2) {
+        // New h2+ section boundary.
+        flush();
+        currentHeading = h[2].trim().replace(/[*_`]/g, "");
+      } else if (h && h[1].length === 1) {
+        // Page-level h1: already captured as the title, no boundary.
+      } else {
+        buffer.push(line);
+      }
+    }
+    flush();
+  }
+
+  return chunks;
 }
