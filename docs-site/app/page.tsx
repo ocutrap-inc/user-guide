@@ -10,7 +10,7 @@ export default async function HomePage() {
   const doc = getHomeDoc();
   if (!doc) return notFound();
 
-  const html = await markdownToHtml(doc.contentRaw);
+  const html = await markdownToHtml(doc.contentRaw, doc.filePath);
   const headings = extractHeadings(html);
 
   return (

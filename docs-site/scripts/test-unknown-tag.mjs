@@ -1,0 +1,89 @@
+/**
+ * Fixture test for the GitBook markdown pipeline (SITE-01 / SW-298).
+ *
+ * Exercises lib/markdown.ts directly (Node 22+/24 strips the TS types):
+ *   1. An unrecognized `{% foo %}...{% endfoo %}` tag renders its inner
+ *      content and emits a build-time warning naming the tag and file.
+ *   2. A `{% file %}` block renders a working download link with the
+ *      .gitbook/assets path rewritten to /gitbook-assets/.
+ *
+ * No test framework — run with `node scripts/test-unknown-tag.mjs`.
+ * Exits non-zero on any failed assertion.
+ */
+import { markdownToHtml } from "../lib/markdown.ts";
+
+let failures = 0;
+function check(name, cond) {
+  if (cond) {
+    console.log(`  ok   ${name}`);
+  } else {
+    console.error(`  FAIL ${name}`);
+    failures++;
+  }
+}
+
+// Capture build-time warnings.
+const warnings = [];
+const origWarn = console.warn;
+console.warn = (...args) => {
+  warnings.push(args.join(" "));
+};
+
+const fixture = `# Fixture
+
+{% foo bar="baz" %}
+This paragraph must survive an unknown block tag.
+{% endfoo %}
+
+{% widget id="42" %}
+
+{% file src="../.gitbook/assets/OcuTrap_Knowledge_Base.pdf" %}
+
+{% file src="../.gitbook/assets/OcuTrap_PDF.pdf" %}Marketing one-pager{% endfile %}
+`;
+
+const html = await markdownToHtml(fixture, "scripts/fixtures/unknown-tag.md");
+console.warn = origWarn;
+
+console.log("Unknown-tag guard:");
+check(
+  "inner content of unknown paired tag is preserved",
+  html.includes("This paragraph must survive an unknown block tag.")
+);
+check(
+  "raw {% %} markup does not leak into output",
+  !html.includes("{%") && !html.includes("%}")
+);
+check(
+  "warning names the unknown paired tag 'foo' and the source file",
+  warnings.some((w) => w.includes("{% foo %}") && w.includes("scripts/fixtures/unknown-tag.md"))
+);
+check(
+  "warning names the unknown self-closing tag 'widget'",
+  warnings.some((w) => w.includes("{% widget %}"))
+);
+
+console.log("File download blocks:");
+check(
+  "self-closing {% file %} renders a download link",
+  html.includes('class="file-card"') && html.includes('download')
+);
+check(
+  ".gitbook/assets path is rewritten to /gitbook-assets/",
+  html.includes('href="/gitbook-assets/OcuTrap_Knowledge_Base.pdf"')
+);
+check(
+  "self-closing file uses the filename as its label",
+  html.includes("OcuTrap_Knowledge_Base.pdf")
+);
+check(
+  "block-form {% file %} caption overrides the filename label",
+  html.includes("Marketing one-pager") &&
+    html.includes('href="/gitbook-assets/OcuTrap_PDF.pdf"')
+);
+
+if (failures > 0) {
+  console.error(`\n${failures} assertion(s) failed.`);
+  process.exit(1);
+}
+console.log("\nAll assertions passed.");

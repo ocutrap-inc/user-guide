@@ -34,7 +34,7 @@ export default async function DocPage({
   const doc = getDocBySlug(slug);
   if (!doc) return notFound();
 
-  const html = await markdownToHtml(doc.contentRaw);
+  const html = await markdownToHtml(doc.contentRaw, doc.filePath);
   const headings = extractHeadings(html);
 
   return (

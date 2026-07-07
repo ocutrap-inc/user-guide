@@ -68,8 +68,35 @@ function renderEmbed(url: string): string {
   return `<a href="${url}" class="embed-block" target="_blank" rel="noopener noreferrer">${url}</a>`;
 }
 
-// Transform GitBook-specific syntax into standard markdown and HTML
-function preprocessGitBook(content: string): string {
+// Rewrite a GitBook asset path (".gitbook/assets/X") to the served
+// "/gitbook-assets/X" path, matching the image handling. Non-asset paths
+// (external URLs, etc.) are returned unchanged.
+function toAssetHref(src: string): string {
+  const marker = ".gitbook/assets/";
+  const idx = src.indexOf(marker);
+  if (idx === -1) return src.trim();
+  return "/gitbook-assets/" + src.slice(idx + marker.length).trim();
+}
+
+// Render a `{% file %}` block as a download card/link, styled to match the
+// existing content-ref-card. `caption` (block form) overrides the filename
+// as the visible label.
+function renderFileCard(src: string, caption?: string): string {
+  const href = toAssetHref(src);
+  const rawName = href.split("/").pop() || href;
+  let filename = rawName;
+  try {
+    filename = decodeURIComponent(rawName);
+  } catch {
+    // rawName contained a stray "%"; keep it as-is
+  }
+  const label = caption && caption.trim() ? caption.trim() : filename;
+  return `\n<a href="${href}" class="file-card" download>\n<span class="file-card__icon" aria-hidden="true">↓</span>\n<span class="file-card__body">\n<span class="file-card__name">${label}</span>\n<span class="file-card__hint">Download ${filename}</span>\n</span>\n</a>\n`;
+}
+
+// Transform GitBook-specific syntax into standard markdown and HTML.
+// `sourcePath` (optional) is used only for build-time warnings.
+function preprocessGitBook(content: string, sourcePath?: string): string {
   // 1. Hint/callout blocks
   content = content.replace(
     /\{%\s*hint\s+style="(\w+)"\s*%\}([\s\S]*?)\{%\s*endhint\s*%\}/g,
@@ -177,7 +204,20 @@ function preprocessGitBook(content: string): string {
     }
   );
 
-  // 6. Normalize .gitbook/assets image paths
+  // 6. File download blocks → download card/link
+  //    Block form first (inner text is used as the caption), then the
+  //    self-closing form. Runs before image-path normalization; asset
+  //    paths are rewritten to /gitbook-assets/ inside renderFileCard.
+  content = content.replace(
+    /\{%\s*file\s+src="([^"]+)"\s*%\}([\s\S]*?)\{%\s*endfile\s*%\}/g,
+    (_, src, caption) => renderFileCard(src, caption)
+  );
+  content = content.replace(
+    /\{%\s*file\s+src="([^"]+)"\s*%\}/g,
+    (_, src) => renderFileCard(src)
+  );
+
+  // 7. Normalize .gitbook/assets image paths
   content = content.replace(
     /src="[^"]*\.gitbook\/assets\/([^"]+)"/g,
     (_, filename) => {
@@ -190,11 +230,35 @@ function preprocessGitBook(content: string): string {
     'srcset="/gitbook-assets/$1"'
   );
 
-  // 7. Strip GitBook-specific img attributes (data-size, etc.)
+  // 8. Strip GitBook-specific img attributes (data-size, etc.)
   content = content.replace(/\s+data-size="[^"]*"/g, "");
 
-  // 8. Strip remaining unhandled {% %} tags
-  content = content.replace(/\{%[^%]*?%\}/g, "");
+  // 9. Fallback for any remaining unhandled GitBook tags.
+  //    Instead of silently deleting them (which made new GitBook constructs
+  //    vanish without a trace), preserve the inner content of paired tags,
+  //    drop only the tag markup of self-closing tags, and emit a build-time
+  //    warning naming the tag and the source file so it gets a real transform.
+  const warnUnhandled = (tag: string) =>
+    console.warn(
+      `[markdown] Unhandled GitBook tag {% ${tag} %} in ${
+        sourcePath ?? "unknown file"
+      } — content preserved; add a transform in lib/markdown.ts`
+    );
+
+  // Paired tags: {% x ... %}...{% endx %} → keep inner content, warn.
+  content = content.replace(
+    /\{%\s*([\w-]+)[^%]*%\}([\s\S]*?)\{%\s*end\1\s*%\}/g,
+    (_, tag, inner) => {
+      warnUnhandled(tag);
+      return inner;
+    }
+  );
+
+  // Remaining self-closing / orphan tags → drop markup, keep surrounding text, warn.
+  content = content.replace(/\{%\s*([\w-]+)[^%]*%\}/g, (_, tag) => {
+    warnUnhandled(tag);
+    return "";
+  });
 
   return content;
 }
@@ -216,8 +280,11 @@ function convertVideoImgs(html: string): string {
   );
 }
 
-export async function markdownToHtml(raw: string): Promise<string> {
-  const preprocessed = preprocessGitBook(raw);
+export async function markdownToHtml(
+  raw: string,
+  sourcePath?: string
+): Promise<string> {
+  const preprocessed = preprocessGitBook(raw, sourcePath);
 
   const result = await unified()
     .use(remarkParse)
