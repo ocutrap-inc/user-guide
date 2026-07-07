@@ -508,6 +508,65 @@ body {
   color: var(--color-brand);
 }
 
+/* File download card (from GitBook {% file %} blocks) */
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-heading);
+  background: var(--color-sidebar-bg);
+  margin: 0.75rem 0;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.file-card:hover {
+  border-color: var(--color-brand);
+  background: var(--color-brand-light);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+}
+
+.file-card__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.file-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.file-card__name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-heading);
+  word-break: break-word;
+}
+
+.file-card:hover .file-card__name {
+  color: var(--color-brand);
+}
+
+.file-card__hint {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  word-break: break-word;
+}
+
 .embed-block {
   display: flex;
   align-items: center;

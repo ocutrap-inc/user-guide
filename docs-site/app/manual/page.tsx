@@ -21,7 +21,7 @@ export default async function ManualPage() {
         const slug = item.href === "/" ? [] : item.href.replace(/^\//, "").split("/");
         const doc = slug.length === 0 ? getHomeDoc() : getDocBySlug(slug);
         if (!doc) return null;
-        const html = await markdownToHtml(doc.contentRaw);
+        const html = await markdownToHtml(doc.contentRaw, doc.filePath);
         return { title: item.title, href: item.href, section: doc.section, html };
       })
     )
