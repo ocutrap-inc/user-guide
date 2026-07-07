@@ -2,7 +2,17 @@
 @import "highlight.js/styles/github.css";
 
 /* ── Design tokens ──────────────────────────────────── */
+/*
+ * Colors are driven entirely by CSS custom properties so the theme can flip
+ * between light and dark. The default palette below is LIGHT. The dark palette
+ * lives in the "Dark theme" section near the bottom of this file, applied both
+ * via `@media (prefers-color-scheme: dark)` (system default) and
+ * `:root[data-theme="dark"]` (manual override). The manual `data-theme`
+ * attribute always wins over the media query in both directions.
+ */
 :root {
+  color-scheme: light;
+
   --sidebar-width: 268px;
   --toc-width: 220px;
   --content-max: 720px;
@@ -19,6 +29,21 @@
   --color-border: #e5e7eb;
   --color-code-bg: #f3f4f6;
   --color-pre-bg: #0f1117;
+
+  /* Surfaces & chrome */
+  --color-surface: #ffffff;                     /* page background */
+  --color-header-bg: rgba(255, 255, 255, 0.95); /* sticky header */
+  --color-elevated: #ffffff;                    /* dialogs, kbd, floating chrome */
+  --color-overlay: rgba(0, 0, 0, 0.55);         /* modal backdrop */
+  --color-nav-item: #4b5563;                    /* sidebar link (rest) */
+  --color-table-stripe: #fafafa;                /* zebra rows */
+  --color-code-text: #cdd6f4;                   /* base text inside code blocks */
+
+  /* Hint / callout variants (bg · border · text) */
+  --hint-info-bg: #eff6ff;    --hint-info-border: #3b82f6;    --hint-info-text: #1e40af;
+  --hint-warning-bg: #fffbeb; --hint-warning-border: #f59e0b; --hint-warning-text: #92400e;
+  --hint-danger-bg: #fef2f2;  --hint-danger-border: #ef4444;  --hint-danger-text: #991b1b;
+  --hint-success-bg: #f0fdf4; --hint-success-border: #22c55e; --hint-success-text: #166534;
 
   --font-sans: var(--font-manrope), system-ui, sans-serif;
   --font-display: var(--font-outfit), var(--font-manrope), system-ui, sans-serif;
@@ -37,7 +62,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-body);
-  background: #fff;
+  background: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -96,7 +121,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--color-header-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
   padding: 0 1.5rem;
@@ -201,7 +226,7 @@ body {
   padding: 0.3rem 1rem;
   font-size: 0.875rem;
   font-family: var(--font-sans);
-  color: #4b5563;
+  color: var(--color-nav-item);
   text-decoration: none;
   border-radius: 6px;
   margin: 1px 0.5rem;
@@ -348,7 +373,7 @@ body {
   padding: 0;
   font-size: 0.875rem;
   font-family: var(--font-mono);
-  color: #cdd6f4;
+  color: var(--color-code-text);
 }
 
 .prose table {
@@ -374,7 +399,7 @@ body {
 }
 
 .prose tr:nth-child(even) td {
-  background: #fafafa;
+  background: var(--color-table-stripe);
 }
 
 .prose img {
@@ -456,27 +481,27 @@ body {
 }
 
 .hint-info {
-  background: #eff6ff;
-  border-color: #3b82f6;
-  color: #1e40af;
+  background: var(--hint-info-bg);
+  border-color: var(--hint-info-border);
+  color: var(--hint-info-text);
 }
 
 .hint-warning {
-  background: #fffbeb;
-  border-color: #f59e0b;
-  color: #92400e;
+  background: var(--hint-warning-bg);
+  border-color: var(--hint-warning-border);
+  color: var(--hint-warning-text);
 }
 
 .hint-danger {
-  background: #fef2f2;
-  border-color: #ef4444;
-  color: #991b1b;
+  background: var(--hint-danger-bg);
+  border-color: var(--hint-danger-border);
+  color: var(--hint-danger-text);
 }
 
 .hint-success {
-  background: #f0fdf4;
-  border-color: #22c55e;
-  color: #166534;
+  background: var(--hint-success-bg);
+  border-color: var(--hint-success-border);
+  color: var(--hint-success-text);
 }
 
 .hint p:first-child {
@@ -806,7 +831,7 @@ body {
 .search-kbd {
   margin-left: auto;
   font-size: 0.6875rem;
-  background: #fff;
+  background: var(--color-elevated);
   border: 1px solid var(--color-border);
   border-radius: 3px;
   padding: 0.1em 0.35em;
@@ -815,7 +840,7 @@ body {
 .search-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: var(--color-overlay);
   backdrop-filter: blur(4px);
   z-index: 100;
   display: flex;
@@ -827,7 +852,7 @@ body {
 .search-dialog {
   width: calc(100% - 2rem);
   max-width: 600px;
-  background: #fff;
+  background: var(--color-elevated);
   border-radius: 14px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0,0,0,0.06);
   overflow: hidden;
@@ -945,7 +970,7 @@ body {
 .search-shortcut kbd {
   font-family: var(--font-mono);
   font-size: 0.625rem;
-  background: #fff;
+  background: var(--color-elevated);
   border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 0.15em 0.4em;
@@ -1292,6 +1317,27 @@ body {
   color: var(--color-brand);
 }
 
+/* ── Theme toggle ────────────────────────────────────── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-muted);
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
 /* ── Mobile ──────────────────────────────────────────── */
 .hamburger {
   padding: 0.375rem;
@@ -1325,7 +1371,7 @@ body {
     top: 14px;
     left: 1rem;
     z-index: 50;
-    background: #fff;
+    background: var(--color-elevated);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 0.375rem;
@@ -1394,8 +1440,159 @@ body {
   }
 }
 
+/* ── Dark theme ──────────────────────────────────────── */
+/*
+ * The dark palette is applied two ways so the manual toggle always wins over
+ * the OS setting in BOTH directions:
+ *   1. @media (prefers-color-scheme: dark) gated on :not([data-theme="light"])
+ *      — system default, but a user who forces light under a dark OS stays light.
+ *   2. :root[data-theme="dark"] — forces dark regardless of OS.
+ * Brand blue (#0050ff) stays the accent; it is lightened to #5a8dff on dark
+ * surfaces for readable contrast, matching the app's dark primary in
+ * internal-docs/orchestrator/brand/design-tokens.yaml (app_web.primary_dark).
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --color-brand: #5a8dff;
+    --color-brand-light: rgba(90, 141, 255, 0.16);
+    --color-brand-dim: rgba(90, 141, 255, 0.12);
+    --color-sidebar-bg: #14181e;
+    --color-sidebar-border: #262b33;
+    --color-link: #5a8dff;
+    --color-heading: #e8eaed;
+    --color-body: #c4c9d2;
+    --color-muted: #8a919c;
+    --color-border: #2a2f37;
+    --color-code-bg: #1c2128;
+    --color-pre-bg: #0b0e13;
+
+    --color-surface: #0f1419;
+    --color-header-bg: rgba(15, 20, 25, 0.92);
+    --color-elevated: #1c1f24;
+    --color-overlay: rgba(0, 0, 0, 0.66);
+    --color-nav-item: #b6bcc6;
+    --color-table-stripe: #171b21;
+    --color-code-text: #c9d1d9;
+
+    --hint-info-bg: rgba(59, 130, 246, 0.13);    --hint-info-border: #3b82f6;    --hint-info-text: #a9cbff;
+    --hint-warning-bg: rgba(245, 158, 11, 0.13); --hint-warning-border: #f59e0b; --hint-warning-text: #f4c66a;
+    --hint-danger-bg: rgba(239, 68, 68, 0.13);   --hint-danger-border: #ef4444;  --hint-danger-text: #ff9d9d;
+    --hint-success-bg: rgba(34, 197, 94, 0.13);  --hint-success-border: #22c55e; --hint-success-text: #86e0a6;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-brand: #5a8dff;
+  --color-brand-light: rgba(90, 141, 255, 0.16);
+  --color-brand-dim: rgba(90, 141, 255, 0.12);
+  --color-sidebar-bg: #14181e;
+  --color-sidebar-border: #262b33;
+  --color-link: #5a8dff;
+  --color-heading: #e8eaed;
+  --color-body: #c4c9d2;
+  --color-muted: #8a919c;
+  --color-border: #2a2f37;
+  --color-code-bg: #1c2128;
+  --color-pre-bg: #0b0e13;
+
+  --color-surface: #0f1419;
+  --color-header-bg: rgba(15, 20, 25, 0.92);
+  --color-elevated: #1c1f24;
+  --color-overlay: rgba(0, 0, 0, 0.66);
+  --color-nav-item: #b6bcc6;
+  --color-table-stripe: #171b21;
+  --color-code-text: #c9d1d9;
+
+  --hint-info-bg: rgba(59, 130, 246, 0.13);    --hint-info-border: #3b82f6;    --hint-info-text: #a9cbff;
+  --hint-warning-bg: rgba(245, 158, 11, 0.13); --hint-warning-border: #f59e0b; --hint-warning-text: #f4c66a;
+  --hint-danger-bg: rgba(239, 68, 68, 0.13);   --hint-danger-border: #ef4444;  --hint-danger-text: #ff9d9d;
+  --hint-success-bg: rgba(34, 197, 94, 0.13);  --hint-success-border: #22c55e; --hint-success-text: #86e0a6;
+}
+
+/*
+ * Code syntax highlighting: the base theme is the light `github.css` imported
+ * at the top of this file. In dark mode we override the rehype-highlight token
+ * colors with a github-dark palette so code stays readable on the dark code
+ * surface. Same two-gate pattern as the palette above.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hljs-comment,
+  :root:not([data-theme="light"]) .hljs-quote { color: #8b949e; font-style: italic; }
+  :root:not([data-theme="light"]) .hljs-keyword,
+  :root:not([data-theme="light"]) .hljs-tag,
+  :root:not([data-theme="light"]) .hljs-doctag,
+  :root:not([data-theme="light"]) .hljs-deletion { color: #ff7b72; }
+  :root:not([data-theme="light"]) .hljs-string,
+  :root:not([data-theme="light"]) .hljs-attr,
+  :root:not([data-theme="light"]) .hljs-regexp,
+  :root:not([data-theme="light"]) .hljs-addition { color: #a5d6ff; }
+  :root:not([data-theme="light"]) .hljs-title,
+  :root:not([data-theme="light"]) .hljs-name,
+  :root:not([data-theme="light"]) .hljs-section,
+  :root:not([data-theme="light"]) .hljs-built_in,
+  :root:not([data-theme="light"]) .hljs-type { color: #d2a8ff; }
+  :root:not([data-theme="light"]) .hljs-number,
+  :root:not([data-theme="light"]) .hljs-literal,
+  :root:not([data-theme="light"]) .hljs-symbol,
+  :root:not([data-theme="light"]) .hljs-variable,
+  :root:not([data-theme="light"]) .hljs-attribute,
+  :root:not([data-theme="light"]) .hljs-meta { color: #79c0ff; }
+}
+
+:root[data-theme="dark"] .hljs-comment,
+:root[data-theme="dark"] .hljs-quote { color: #8b949e; font-style: italic; }
+:root[data-theme="dark"] .hljs-keyword,
+:root[data-theme="dark"] .hljs-tag,
+:root[data-theme="dark"] .hljs-doctag,
+:root[data-theme="dark"] .hljs-deletion { color: #ff7b72; }
+:root[data-theme="dark"] .hljs-string,
+:root[data-theme="dark"] .hljs-attr,
+:root[data-theme="dark"] .hljs-regexp,
+:root[data-theme="dark"] .hljs-addition { color: #a5d6ff; }
+:root[data-theme="dark"] .hljs-title,
+:root[data-theme="dark"] .hljs-name,
+:root[data-theme="dark"] .hljs-section,
+:root[data-theme="dark"] .hljs-built_in,
+:root[data-theme="dark"] .hljs-type { color: #d2a8ff; }
+:root[data-theme="dark"] .hljs-number,
+:root[data-theme="dark"] .hljs-literal,
+:root[data-theme="dark"] .hljs-symbol,
+:root[data-theme="dark"] .hljs-variable,
+:root[data-theme="dark"] .hljs-attribute,
+:root[data-theme="dark"] .hljs-meta { color: #79c0ff; }
+
 /* ── Print media ─────────────────────────────────────── */
 @media print {
+  /* Print always renders light, regardless of the active screen theme. */
+  :root,
+  :root[data-theme="dark"],
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --color-surface: #ffffff;
+    --color-header-bg: #ffffff;
+    --color-elevated: #ffffff;
+    --color-heading: #0f1117;
+    --color-body: #374151;
+    --color-muted: #6b7280;
+    --color-border: #e5e7eb;
+    --color-sidebar-bg: #f9fafb;
+    --color-code-bg: #f3f4f6;
+    --color-table-stripe: #fafafa;
+    --hint-info-bg: #eff6ff;    --hint-info-text: #1e40af;
+    --hint-warning-bg: #fffbeb; --hint-warning-text: #92400e;
+    --hint-danger-bg: #fef2f2;  --hint-danger-text: #991b1b;
+    --hint-success-bg: #f0fdf4; --hint-success-text: #166534;
+  }
+
+  body {
+    background: #ffffff;
+    color: #374151;
+  }
+
   /* Hide all UI chrome for single-page prints */
   .sidebar,
   .site-header,
