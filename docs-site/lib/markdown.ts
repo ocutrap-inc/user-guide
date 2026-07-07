@@ -121,9 +121,53 @@ function renderFileCard(src: string, caption?: string): string {
   return `\n<a href="${href}" class="file-card" download>\n<span class="file-card__icon" aria-hidden="true">↓</span>\n<span class="file-card__body">\n<span class="file-card__name">${label}</span>\n<span class="file-card__hint">Download ${filename}</span>\n</span>\n</a>\n`;
 }
 
+// GitBook's markdown export sprinkles numeric HTML character references into
+// prose as typographic guards — a leading `&#x20;` (space) or `&#x53;` (the
+// letter it escapes, e.g. "S") so an adjacent `_emphasis_` marker parses, plus
+// an invalid `&#xNAN;` line-start sentinel (sometimes backslash-escaped as
+// `\&#xNAN;`). Standard CommonMark decodes the *valid* references, but the
+// invalid `&#xNAN;` survives and rehype escapes its `&` to `&#x26;`, so
+// customers see a literal "&#xNAN;". Normalize both here — in the pipeline, not
+// by editing the GitBook-canonical content — so future exports stay clean too.
+//
+// Runs on raw markdown but skips fenced code blocks and inline code spans, so
+// a literal entity shown as code (or code that merely contains `&#…;`) is left
+// untouched.
+function normalizeEntity(text: string): string {
+  // 1. Drop the invalid GitBook sentinel (with an optional escaping backslash).
+  text = text.replace(/\\?&#x?NAN;/gi, "");
+  // 2. Decode valid numeric character references (hex then decimal).
+  text = text.replace(/&#x([0-9A-Fa-f]+);/g, (_, h) =>
+    String.fromCodePoint(parseInt(h, 16))
+  );
+  text = text.replace(/&#(\d+);/g, (_, d) =>
+    String.fromCodePoint(parseInt(d, 10))
+  );
+  return text;
+}
+
+function decodeGitBookEntities(content: string): string {
+  // Preserve fenced blocks (``` / ~~~) and inline code spans verbatim; apply
+  // the entity normalization only to the prose between them.
+  const codePattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|(`+)[\s\S]*?\2)/g;
+  let result = "";
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = codePattern.exec(content)) !== null) {
+    result += normalizeEntity(content.slice(last, m.index));
+    result += m[0];
+    last = m.index + m[0].length;
+  }
+  result += normalizeEntity(content.slice(last));
+  return result;
+}
+
 // Transform GitBook-specific syntax into standard markdown and HTML.
 // `sourcePath` (optional) is used only for build-time warnings.
 function preprocessGitBook(content: string, sourcePath?: string): string {
+  // 0. Normalize GitBook's HTML-entity guards before anything else parses.
+  content = decodeGitBookEntities(content);
+
   // 1. Hint/callout blocks
   content = content.replace(
     /\{%\s*hint\s+style="(\w+)"\s*%\}([\s\S]*?)\{%\s*endhint\s*%\}/g,
