@@ -13,7 +13,7 @@ The **serial number** is printed on a label inside the POD. After you register t
 3. Log in at [base.ocutrap.com](https://base.ocutrap.com/signuplogin).
 4. Go to **Account** and tap **Add Trap** at the bottom of the page.
 5. Enter the serial number when prompted.
-6. When registration completes, the trap appears on your dashboard.
+6. When registration completes, the app opens the new trap's **console page**. Until the device connects for the first time, a **Waiting for first check-in** note appears there; it clears automatically once the trap checks in, usually within a few minutes.
 
 <figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="188"><figcaption></figcaption></figure>
 

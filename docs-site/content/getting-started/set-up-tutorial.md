@@ -44,7 +44,7 @@ You manage your OcuTrap from the web portal at [base.ocutrap.com](https://base.o
 1. Create an account (or log in) at [base.ocutrap.com](https://base.ocutrap.com/signuplogin).
 2. Find the **serial number** on the label **inside the POD**. After registration, the app shows it as your **Trap ID**.
 3. Go to **Account**, tap **Add Trap**, and enter the serial number.
-4. When registration completes, the trap appears on your dashboard.
+4. When registration completes, the app opens the new trap's **console page**, with a **Waiting for first check-in** note that clears once the trap connects.
 
 Full walkthrough with screenshots: [Adding a trap to your account](app/adding-a-trap-to-your-account.md).
 
