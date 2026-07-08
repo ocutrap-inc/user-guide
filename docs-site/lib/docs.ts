@@ -1,6 +1,21 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import {
+  ledFenceRegex,
+  ledMatrixToMarkdownTable,
+  parseLedDiagnostics,
+} from "./led-diagnostics";
+
+// Expand a ```led-diagnostics block (SW-333) into a readable markdown table so
+// the search index and AI-ask corpus carry the LED matrix as prose instead of
+// raw YAML. No-op on pages without the block.
+function expandLedBlock(content: string): string {
+  return content.replace(ledFenceRegex(), (block) => {
+    const matrix = parseLedDiagnostics(block);
+    return matrix ? `\n${ledMatrixToMarkdownTable(matrix)}\n` : "";
+  });
+}
 
 // Prefer content/ (committed copy used during Vercel deployment),
 // fall back to ../ for local development where the KB dir is the parent.
@@ -298,7 +313,8 @@ export function buildSearchIndex(): SearchDoc[] {
     try {
       const fullPath = path.join(KB_ROOT, filePath);
       const raw = fs.readFileSync(fullPath, "utf-8");
-      const { content } = matter(raw);
+      const { content: rawContent } = matter(raw);
+      const content = expandLedBlock(rawContent);
 
       // Strip markdown syntax and HTML entities for plain text excerpt
       const plainText = content
@@ -381,7 +397,8 @@ export function buildChunkIndex(): Chunk[] {
       continue;
     }
 
-    const { content, data } = matter(raw);
+    const { content: rawContent, data } = matter(raw);
+    const content = expandLedBlock(rawContent);
     let pageTitle: string = data.title ?? "";
     if (!pageTitle) {
       const h1 = content.match(/^#\s+(.+)/m);

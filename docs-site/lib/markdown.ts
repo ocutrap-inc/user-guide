@@ -8,6 +8,11 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 import { absoluteUrl } from "./site";
+import {
+  ledFenceRegex,
+  ledMatrixToMarkdownTable,
+  parseLedDiagnostics,
+} from "./led-diagnostics";
 
 export type Heading = {
   id: string;
@@ -195,6 +200,16 @@ function decodeGitBookEntities(content: string): string {
 function preprocessGitBook(content: string, sourcePath?: string): string {
   // 0. Normalize GitBook's HTML-entity guards before anything else parses.
   content = decodeGitBookEntities(content);
+
+  // 0.5. LED diagnostic block (SW-333 / SITE-10). The ```led-diagnostics fenced
+  //      block is structured data, not display content: the interactive wizard
+  //      (rendered above the article by the page route) owns the on-page
+  //      rendering — it shows an accessible fallback table built from this same
+  //      data when JS is off. So strip the block here rather than letting it
+  //      render as a raw YAML code block. The plain-markdown pipeline
+  //      (markdownToPlain) instead expands it into a real markdown table for
+  //      llms.txt / copy-as-markdown / search / print corpora.
+  content = content.replace(ledFenceRegex(), "");
 
   // 1. Hint/callout blocks
   content = content.replace(
@@ -590,6 +605,14 @@ function stripResidualHtml(text: string): string {
 }
 
 export function markdownToPlain(content: string, sourcePath?: string): string {
+  // 0. LED diagnostic block (SW-333 / SITE-10) → real markdown table so the
+  //    AI corpus, "Copy as Markdown", search index and print all carry the
+  //    color/pattern/meaning matrix. Same single source as the wizard.
+  content = content.replace(ledFenceRegex(), (block) => {
+    const matrix = parseLedDiagnostics(block);
+    return matrix ? `\n${ledMatrixToMarkdownTable(matrix)}\n` : "";
+  });
+
   // 1. Hint/callout → GitHub-flavored alert blockquote.
   content = content.replace(
     /\{%\s*hint\s+style="(\w+)"\s*%\}([\s\S]*?)\{%\s*endhint\s*%\}/g,

@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "test": "tsx scripts/test-ask.mts",
+    "test:led": "tsx scripts/test-led-wizard.mts",
     "deploy": "cd .. && git add docs-site/ && git commit -m 'Update docs' && git push"
   },
   "dependencies": {

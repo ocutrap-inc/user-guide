@@ -12,6 +12,10 @@ OcuTrap connects primarily through **4G LTE cellular service**. The trap does **
 
 The **LED light** is the fastest way to see what the trap is doing. Work through the steps below in order.
 
+{% hint style="info" %}
+**Not sure what the light means?** Use the [interactive LED diagnostic](../getting-started/led-guide.md) — tap the color you see, then how it's blinking, and it tells you exactly what's happening and what to do next.
+{% endhint %}
+
 ## Quick Checklist
 
 1. Make sure the battery is charged.
