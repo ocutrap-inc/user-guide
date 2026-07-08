@@ -8,9 +8,9 @@ description: >-
 
 ### 1. Log in to Your Account
 
-1. Visit **OcuTrap.com** and sign in to your account.
-2. Go to **Account Page**
-3. Scroll to **Manage Subscription** page.
+1. Visit [base.ocutrap.com](https://base.ocutrap.com/) and sign in to your account.
+2. Go to your **Account Page**.
+3. Scroll to **Manage Subscriptions**.
 4. This will take you to the **Stripe customer portal** where your subscription details are stored.
 
 ### 2. Add a New Payment Method
@@ -33,7 +33,9 @@ If you see that your card is associated with Link:
 You will now see options to:
 
 * Add a new credit or debit card
-* Add a bank account Enter your details and save the payment method.
+* Add a bank account
+
+Enter your details and save the payment method.
 
 ### 5. Set the New Method as Default (Optional)
 

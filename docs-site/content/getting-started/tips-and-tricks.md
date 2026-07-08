@@ -34,8 +34,8 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 ## Optimal Trap Placement
 
 ### For Best Captures
-- Position trigger sensor **6-10 inches inside the cage** to ensure the animal is fully inside before the door closes
-- Place bait **behind the sensor** so animals must pass through the detection zone
+- Set your **capture distance** so the animal is fully inside before the door closes — the sensor is fixed in the POD, so there's nothing to position (see [Deploying Your Trap in the Field](deploying-in-the-field.md))
+- Place bait **behind the sensor**, near the back of the cage, so animals must pass through the detection zone
 - Level ground helps prevent tilt alerts when armed
 
 ### For Best Connectivity
@@ -56,7 +56,7 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 The **distance sensor** in the POD watches the inside of the trap for movement.
 
 ### Detection Process
-1. **Animal enters the alert zone** (~12–18 in from the sensor) — You may get a pre-capture alert
+1. **Animal enters the detection area** (out to ~34 in / 875 mm from the sensor) — You may get a pre-capture alert
 2. **Steady presence confirmed** — The trap waits for several consistent readings to avoid false triggers
 3. **Animal reaches your capture distance** (default ~8 in) — The door closes
 4. **Capture complete** — Photo taken and alert sent

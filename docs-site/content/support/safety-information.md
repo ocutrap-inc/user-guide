@@ -77,7 +77,3 @@ The OcuTrap door is designed to open and close automatically and swiftly. While 
   For additional support or to report an incident, please contact our support team at [support@ocutrap.com](mailto:support@ocutrap.com).
 
 ***
-
-**Note:**<br>
-
-***

@@ -62,7 +62,7 @@ When viewing trap locations, you'll see key metrics:
 #### No Fix Available
 
 1. Ensure device is outdoors with clear view of sky
-2. Wait up to 2 minutes for initial fix
+2. Wait up to 3 minutes for initial fix
 3. Check GPS Interval setting is not disabled
 4. Try manual update by clicking location data
 5. If problems persist, verify no physical obstructions are blocking GPS antenna

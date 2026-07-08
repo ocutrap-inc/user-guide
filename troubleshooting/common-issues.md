@@ -128,7 +128,7 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 - IR LEDs not activating
 
 **Solution:**
-1. Check **Dark Lux Threshold** setting — lower value = IR activates at higher light levels
+1. Check **Dark Lux Threshold** setting — night vision and IR activate when light falls **below** this value, so **increase** it to enable them earlier (see [Camera](../faqs/camera.md))
 2. Increase **Minimum IR Brightness** setting
 3. Ensure the IR LED window is clean
 4. Verify the camera lens is not blocked or dirty

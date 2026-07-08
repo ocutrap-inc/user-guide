@@ -124,7 +124,7 @@ The remote control feature of OcuTrap works over any distance as long as you hav
 
 <summary>How does OcuTrap ensure the safety of non-target animals?</summary>
 
-OcuTrap's selective targeting system and humane trapping mechanism ensure that non-target animals, if accidentally captured, are not harmed and can be safely released.
+OcuTrap does not identify species — any animal that enters the trap can trigger a capture. Its humane trapping mechanism means a non-target animal is not harmed, and you can review the capture photo and **release it remotely** from the app without visiting the trap.
 
 </details>
 
@@ -204,7 +204,7 @@ Yes, OcuTrap is suitable for use in residential areas, and its humane and discre
 
 <summary>What safety features does OcuTrap have?</summary>
 
-OcuTrap includes various safety features such as secure containment of trapped animals, remote operation to minimize human-animal contact, and selective targeting to prevent capturing non-target species.
+OcuTrap includes various safety features such as secure containment of trapped animals, remote operation to minimize human-animal contact, and photo verification with remote release so non-target animals can be freed without a site visit.
 
 </details>
 
@@ -587,7 +587,7 @@ For large-scale deployments, OcuTrap can provide training and support to ensure 
 
 <summary>Can OcuTrap be programmed to release trapped animals remotely?</summary>
 
-The current version of OcuTrap requires manual release of animals, but future versions may include remote release features.
+Yes. You can open the trap door remotely from the app to release an animal without visiting the trap — see [After a Capture](../getting-started/app/after-capture.md).
 
 </details>
 
