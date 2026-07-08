@@ -8,10 +8,9 @@ description: >-
 
 ### 1. Log in to Your Account
 
-1. Visit [base.ocutrap.com](https://base.ocutrap.com/) and sign in to your account.
-2. Go to your **Account Page**.
-3. Scroll to **Manage Subscriptions**.
-4. This will take you to the **Stripe customer portal** where your subscription details are stored.
+1. Visit [app.ocutrap.com](https://app.ocutrap.com) and sign in to your account.
+2. Open the trap you want to manage and go to its **Billing** tab.
+3. Open the **Stripe** billing portal, where your subscription and payment details are stored.
 
 ### 2. Add a New Payment Method
 

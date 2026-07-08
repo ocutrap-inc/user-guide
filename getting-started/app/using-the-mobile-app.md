@@ -22,7 +22,7 @@ The OcuTrap mobile app gives you the same control as the web dashboard — manag
 The mobile app uses the **same account** as the web app:
 
 * If you already have an account, sign in with your existing email and password.
-* New to OcuTrap? Create an account at [base.ocutrap.com](https://base.ocutrap.com/) (or in the app), then see [Adding a Trap to Your Account](adding-a-trap-to-your-account.md).
+* New to OcuTrap? Create an account at [app.ocutrap.com](https://app.ocutrap.com/) (or in the app), then see [Adding a Trap to Your Account](adding-a-trap-to-your-account.md).
 
 ***
 
@@ -41,7 +41,7 @@ The mobile app has the **same features as the web dashboard**. From the app you 
 
 Push notifications are the fastest way to know about a capture. Two things need to be on:
 
-1. **In the app:** open a trap's **Settings → Notification Settings** and set the types you care about (**Capture**, **Alert**, **Error**) to **Push Notification** or **Push Notification + Email**. See [Notification Settings](notification-settings.md).
+1. **In the app:** open **Notification Settings** and turn on **Push Notifications**, then enable the **Alert Types** you care about (Target detected, Animal captured, Capture reminders, Low battery, Device alerts). See [Notification Settings](notification-settings.md).
 2. **On your phone:** allow notifications for the OcuTrap app.
    * **iOS:** Settings → Notifications → OcuTrap → Allow Notifications.
    * **Android:** Settings → Apps → OcuTrap → Notifications.

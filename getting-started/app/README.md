@@ -2,7 +2,7 @@
 
 ## Creating an account
 
-[https://base.ocutrap.com/signuplogin](https://base.ocutrap.com/signuplogin)
+[https://app.ocutrap.com](https://app.ocutrap.com)
 
 ## Mobile app‌
 

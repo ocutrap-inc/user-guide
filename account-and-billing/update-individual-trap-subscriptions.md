@@ -17,17 +17,12 @@ description: >-
 
 ### Update Your Subscription in a Few Steps
 
-1. **Log in to the OcuTrap Console**\
-   Go to [your console](https://base.ocutrap.com/console/) and sign in.
-2. **Open Your Trap Settings**\
-   Find the trap in your list and click **Settings**.
-3. **Check the Plan Status**\
-   In the Device Info section, look for the **Plan** field.
-   * If it says **Canceled** or **No Subscription**, you’ll see an **Update** link next to it.
-4. **Click Update**\
-   Click **Update** to start the subscription process for this trap.
-5. **Complete Checkout**\
-   Choose your plan, enter payment details, and confirm.
+1. **Sign in**\
+   Go to [app.ocutrap.com](https://app.ocutrap.com) and sign in.
+2. **Open the trap's Billing tab**\
+   Open the trap from your fleet and select the **Billing** tab.
+3. **Start or renew the subscription**\
+   Choose a plan (**Monthly** or **Annual**), enter payment details, and complete checkout.
 
 Once finished, your plan will show as **Active**, and your trap will continue to work without interruption.
 

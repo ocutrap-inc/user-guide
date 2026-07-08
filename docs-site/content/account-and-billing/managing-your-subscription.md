@@ -9,19 +9,21 @@ description: >-
 
 ### How to Access Subscription Settings
 
-1. Go to [base.ocutrap.com](https://base.ocutrap.com/)
-2. Log in with your account credentials.
-3. Click on [**Account**](https://base.ocutrap.com/account/) in the menu.
-4. Select **Manage Subscriptions**.
-5. Choose the trap you want to update.
+1. Go to [app.ocutrap.com](https://app.ocutrap.com) and sign in.
+2. Open the trap you want to manage and go to its **Billing** tab. (You can also open **Billing** from the app for an overview across traps.)
 
 ### Available Options
 
-Within the subscription portal, you can:
+From a trap's **Billing** tab you can:
 
-* **Switch plans** – Change from **Monthly** to **Annual** billing (and vice versa).
-* **Update payment method** – Add a new card or edit your existing payment details.
+* **Switch plans** – Change between **Monthly** and **Annual** billing.
+* **Pause subscription** – Temporarily pause a monthly plan (see below).
+* **Update payment method** – Manage your cards through the secure **Stripe** billing portal.
 * **Cancel subscription** – Stop your subscription at any time. You’ll continue to have access until the end of your current billing period.
+
+### Pausing a Trap
+
+Monthly plans can be **paused** for up to **6 months** from the trap's **Billing** tab (**Pause subscription**). While paused you aren't billed, the trap is dormant (no remote commands or new captures — though you can still open the door and release an animal), and your data and settings are kept and restored when you resume. It resumes automatically on your chosen date, or you can **Resume now** anytime. Annual plans can't be paused. See [Your OcuTrap Subscription](subscription-overview.md).
 
 ### Notes
 
