@@ -203,18 +203,23 @@ function preprocessGitBook(content: string, sourcePath?: string): string {
       `\n<div class="hint hint-${style}">\n\n${inner.trim()}\n\n</div>\n`
   );
 
-  // 2. Content-ref blocks → styled reference link
+  // 2. Content-ref blocks → styled reference link. URLs are relative to the
+  //    source page's directory (same SW-336 bug class as inline links —
+  //    rooting the raw value turns `setting-up.md` into a 404 at /setting-up),
+  //    so resolve through resolveKbHref; the fallback keeps old behavior for
+  //    already-absolute paths.
   content = content.replace(
     /\{%\s*content-ref\s+url="([^"]+)"\s*%\}([\s\S]*?)\{%\s*endcontent-ref\s*%\}/g,
     (_, url, inner) => {
       const linkMatch = inner.match(/\[([^\]]+)\]/);
       const title = linkMatch ? linkMatch[1] : url;
       const href =
+        resolveKbHref(url, sourcePath) ??
         "/" +
-        url
-          .replace(/\.md$/, "")
-          .replace(/\/README$/, "")
-          .replace(/^\//, "");
+          url
+            .replace(/\.md$/, "")
+            .replace(/\/README$/, "")
+            .replace(/^\//, "");
       return `\n<a href="${href}" class="content-ref-card">${title}</a>\n`;
     }
   );
@@ -582,19 +587,21 @@ export function markdownToPlain(content: string, sourcePath?: string): string {
     }
   );
 
-  // 2. Content-ref → plain markdown link (absolute URL). Relative `../`/`./`
-  //    segments are stripped so the KB path maps onto its site href, and a
+  // 2. Content-ref → plain markdown link (absolute URL). URLs resolve against
+  //    the source page's directory via resolveKbHref (same SW-336 bug class as
+  //    inline links — prefix-stripping alone 404s same-dir refs), and a
   //    filename-style link label is humanized ("support.md" → "Support").
   content = content.replace(
     /\{%\s*content-ref\s+url="([^"]+)"\s*%\}([\s\S]*?)\{%\s*endcontent-ref\s*%\}/g,
     (_, url, inner) => {
       const href =
+        resolveKbHref(url, sourcePath) ??
         "/" +
-        url
-          .replace(/\.md$/, "")
-          .replace(/\/README$/, "")
-          .replace(/^(?:\.\.?\/)+/, "")
-          .replace(/^\//, "");
+          url
+            .replace(/\.md$/, "")
+            .replace(/\/README$/, "")
+            .replace(/^(?:\.\.?\/)+/, "")
+            .replace(/^\//, "");
       const linkMatch = inner.match(/\[([^\]]+)\]/);
       let title = linkMatch ? linkMatch[1].trim() : href;
       if (/\.md$/i.test(title)) {
