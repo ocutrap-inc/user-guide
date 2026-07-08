@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, FileDown, FileText, ChevronRight } from "lucide-react";
 import type { NavSection, NavItem } from "@/lib/docs";
@@ -128,15 +127,10 @@ export default function SidebarClient({
         className={`sidebar${open ? " sidebar--open" : ""}`}
         aria-label="Documentation navigation"
       >
+        {/* Mobile drawer header (hidden on desktop). Text-only: the old
+            low-res raccoon PNG is gone, and the left padding clears the
+            fixed close (X) button so the two never overlap. */}
         <Link href="/" className="sidebar-logo">
-          <span className="sidebar-logo-icon">
-            <Image
-              src="/gitbook-assets/OcuTrap_icon_favpng.png"
-              alt="OcuTrap"
-              width={28}
-              height={28}
-            />
-          </span>
           OcuTrap Knowledge Base
         </Link>
 
