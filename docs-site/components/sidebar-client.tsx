@@ -4,8 +4,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, FileDown, FileText } from "lucide-react";
+import { Menu, X, FileDown, FileText, ChevronRight } from "lucide-react";
 import type { NavSection, NavItem } from "@/lib/docs";
+
+/* True when the current page is this item or any of its descendants —
+   used to auto-expand the trail to the page being read (GitBook behavior). */
+function inTrail(item: NavItem, currentPath: string): boolean {
+  if (currentPath === item.href) return true;
+  return item.children.some((child) => inTrail(child, currentPath));
+}
 
 function NavItemLink({
   item,
@@ -18,6 +25,15 @@ function NavItemLink({
 }) {
   const isActive = currentPath === item.href;
   const hasChildren = item.children.length > 0;
+  const active = inTrail(item, currentPath);
+
+  // Subtrees collapse like GitBook: closed by default, open when the current
+  // page lives inside them, and freely toggleable via the chevron (the row
+  // itself still navigates). Navigating into a collapsed subtree re-opens it.
+  const [expanded, setExpanded] = useState(active);
+  useEffect(() => {
+    if (active) setExpanded(true);
+  }, [active]);
 
   const depthClass =
     depth === 0
@@ -28,14 +44,27 @@ function NavItemLink({
 
   return (
     <li>
-      <Link
-        href={item.href}
-        className={`${depthClass}${isActive ? " nav-item--active" : ""}`}
-        aria-current={isActive ? "page" : undefined}
-      >
-        {item.title}
-      </Link>
-      {hasChildren && (
+      <span className="nav-row">
+        <Link
+          href={item.href}
+          className={`${depthClass}${isActive ? " nav-item--active" : ""}`}
+          aria-current={isActive ? "page" : undefined}
+        >
+          {item.title}
+        </Link>
+        {hasChildren && (
+          <button
+            type="button"
+            className={`nav-chevron${expanded ? " nav-chevron--open" : ""}`}
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            aria-label={`${expanded ? "Collapse" : "Expand"} ${item.title}`}
+          >
+            <ChevronRight size={14} />
+          </button>
+        )}
+      </span>
+      {hasChildren && expanded && (
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           {item.children.map((child) => (
             <NavItemLink

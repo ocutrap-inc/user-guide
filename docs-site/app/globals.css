@@ -93,7 +93,9 @@ body {
 .sidebar {
   width: var(--sidebar-width);
   flex-shrink: 0;
-  background: var(--color-sidebar-bg);
+  /* GitBook-parity: the nav sits on the page surface, not a tinted panel.
+     (--color-sidebar-bg still tints table headers, file cards, etc.) */
+  background: var(--color-surface);
   border-right: 1px solid var(--color-sidebar-border);
   position: fixed;
   top: 0;
@@ -308,14 +310,16 @@ body {
   margin-bottom: 0.25rem;
 }
 
+/* GitBook-parity section titles: 12px semibold in heading ink (they read as
+   real headings, not muted labels), tight 0.3px tracking, generous air above. */
 .nav-section-title {
   font-family: var(--font-display);
-  font-size: 0.6875rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--color-muted);
-  padding: 1rem 1rem 0.375rem;
+  letter-spacing: 0.025em;
+  color: var(--color-heading);
+  padding: 1.25rem 1rem 0.375rem;
 }
 
 .nav-separator {
@@ -323,9 +327,13 @@ body {
   margin: 0.5rem 0;
 }
 
+/* GitBook-parity rows: 14px/20px text on 6px vertical padding (32px rows),
+   12px left inset, 2px between rows. */
 .nav-item {
   display: block;
-  padding: 0.42rem 1rem;
+  flex: 1;
+  min-width: 0;
+  padding: 0.375rem 0.375rem 0.375rem 0.75rem;
   font-size: 0.875rem;
   font-family: var(--font-sans);
   color: var(--color-nav-item);
@@ -333,7 +341,7 @@ body {
   border-radius: 6px;
   margin: 2px 0.5rem;
   transition: background 0.15s, color 0.15s;
-  line-height: 1.45;
+  line-height: 1.43;
   position: relative;
 }
 
@@ -360,14 +368,13 @@ body {
   border-radius: 0 2px 2px 0;
 }
 
+/* Children keep the parent's 14px size (GitBook indents without shrinking). */
 .nav-item--child {
-  padding-left: 1.75rem;
-  font-size: 0.8125rem;
+  padding-left: 1.625rem;
 }
 
 .nav-item--grandchild {
   padding-left: 2.5rem;
-  font-size: 0.8125rem;
 }
 
 /* ── Prose content ───────────────────────────────────── */
@@ -2325,5 +2332,49 @@ input:focus-visible,
 @media (max-width: 560px) {
   .doc-topbar {
     align-items: flex-start;
+  }
+}
+
+/* ── GitBook-parity collapsible nav groups (SITE-12 follow-up) ──────────
+   Appended per this file's end-of-file convention. A nav item with children
+   renders inside .nav-row with a chevron toggle on the right; the subtree
+   only mounts when expanded (see components/sidebar-client.tsx). */
+.nav-row {
+  display: flex;
+  align-items: center;
+}
+
+.nav-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-right: 0.625rem;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+
+.nav-chevron:hover {
+  background: var(--color-brand-dim);
+  color: var(--color-brand);
+}
+
+.nav-chevron svg {
+  transition: transform 0.15s ease;
+}
+
+.nav-chevron--open svg {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-chevron svg {
+    transition: none;
   }
 }
