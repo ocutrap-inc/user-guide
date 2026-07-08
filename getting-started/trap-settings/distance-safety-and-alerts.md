@@ -20,24 +20,18 @@ Smaller values mean the animal must be deeper in the trap before the door closes
 
 ## Sensor blocked or dirty
 
-### Error — arming blocked
+### Warning — arms anyway
 
-`Sensor blocked or dirty: Reading at 4.02 in` (or `102 mm` in metric mode)
+If the POD lens looks blocked or dirty when you arm, the trap **still arms** but sends a warning so you know to clean it:
 
-**What to do:** Clean the POD lens, clear anything in front of the sensor, then try arming again.
+- Arm: `Trap armed. Check camera and clean sensor if blocked.`
+- Scout: `Scout on. Check camera and clean sensor if blocked.`
 
-### Warning — arms anyway (temporary override)
+**What to do:** Clean the POD lens and clear anything in front of the sensor. The trap keeps working, but a dirty lens can affect detection, so clean it as soon as you can.
 
-If you try again **within 5 minutes** of the error above, the trap may arm but show a warning:
+### Real obstruction — arming blocked
 
-- Arm: `Armed but sensor may be blocked or dirty`
-- Scout: `Scouting but sensor may be blocked or dirty`
-
-You should still clean the lens when you see this warning. After **5 minutes**, the trap blocks arming again until the sensor reads normally.
-
-### Real obstruction
-
-**Error:** `Object at …` — something is blocking the trap interior. Remove it and try again. This error cannot be overridden by retrying.
+**Error:** `Remove object at <distance> first` (for example, `Remove object at 4.0 in first`) — something is physically blocking the trap interior. Remove it and arm again.
 
 ---
 
@@ -45,8 +39,9 @@ You should still clean the lens when you see this warning. After **5 minutes**, 
 
 | Message | Cause |
 |---|---|
-| **Sensor error** | Sensor self-check failed — clean the lens, power-cycle, or contact support |
-| **Door not open** | Door not fully open |
-| **Cannot arm - trap captured** | Trap in captured state — open the door and unarm first |
+| **`Sensor fault. Power-cycle the trap.`** | Sensor self-check failed — power-cycle the trap, and contact support if it persists |
+| **`Open the door first`** | Door is not fully open — open it all the way, then arm |
+| **`Release animal first (open door)`** | Trap is in the captured state — open the door to release, then arm |
+| **`Cannot disarm`** | A capture is triggering right now — wait a moment and try again |
 
 See [Common Issues — Trap Won't Arm](../../troubleshooting/common-issues.md#trap-wont-arm).
