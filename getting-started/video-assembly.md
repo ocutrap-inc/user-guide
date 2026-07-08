@@ -103,7 +103,7 @@ Connect the wire to the POD, ensuring the connection is secure.
 * Enter the serial number.
 * Follow the in-app prompts to enable your subscription.
 
-Once complete, your new trap will appear in your dashboard.
+Once complete, the app opens your new trap's **console page**, showing a **Waiting for first check-in** note that clears once the trap connects.
 
 
 

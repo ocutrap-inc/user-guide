@@ -118,7 +118,7 @@ Gather the 4 three-inch bolts, handle guard, tube, washers, 2 top metal brackets
 1. Create an account at base.ocutrap.com
 2. Locate your POD serial number printed on the top of the POD unit
 3. Go to Account → Add Trap and enter the serial number
-4. Your new trap will appear on the dashboard, ready to configure
+4. The app opens your new trap's console page, with a "Waiting for first check-in" note that clears once the trap connects
 
 ---
 
@@ -180,7 +180,7 @@ The OcuTrap app is your command center for managing traps, viewing photos, and c
 2. Locate the serial number printed on top of your POD
 3. Navigate to Account → Add Trap
 4. Enter the serial number and complete the process
-5. Your new trap appears on the main dashboard
+5. The app opens your new trap's console page, showing a "Waiting for first check-in" note until the trap connects for the first time
 
 ### Open & Closed Button
 
