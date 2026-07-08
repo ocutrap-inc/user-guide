@@ -31,17 +31,20 @@ Before arming, the trap performs an **obstruction check** to ensure the capture 
 
 ### Sensor blocked or dirty
 
-**First attempt:** **`Sensor blocked or dirty: Reading at …`** — does **not** arm. Clean the lens and clear the sensor path.
+The trap uses a **warn-and-arm** approach: if the POD lens looks blocked or dirty, the trap **still arms** but sends a warning so you know to clean it:
 
-**Retry within 5 minutes:** The trap **will arm** (or enter scout) and sends **`Armed but sensor may be blocked or dirty`** (or the scouting variant). After 5 minutes, the blocking error returns.
+- Arm: **`Trap armed. Check camera and clean sensor if blocked.`**
+- Scout: **`Scout on. Check camera and clean sensor if blocked.`**
 
-A dirty lens with nothing in the trap often reads about **4 in**; that triggers this flow, **not** “Object at 4 in.”
+Clean the POD lens and clear the sensor path when you see this. The trap keeps working, but a dirty lens can affect detection — clean it as soon as you can.
+
+A real object physically blocking the trap interior is different: arming is **blocked** with **`Remove object at <distance> first`**. Remove the object and arm again.
 
 See [Distance Limits, Sensor Alerts & Errors](../getting-started/trap-settings/distance-safety-and-alerts.md) for capture distance presets and other arming errors.
 
 ### Sensor Error (Blocks Arming)
 
-If arming fails with **“Sensor error”**, the distance sensor did not pass its self-check.
+If arming fails with **`Sensor fault. Power-cycle the trap.`**, the distance sensor did not pass its self-check.
 
 **Solution:**
 1. Clean the POD lens

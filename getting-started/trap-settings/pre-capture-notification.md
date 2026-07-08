@@ -23,13 +23,10 @@ OcuTrap uses a distance sensor to detect animals before they reach the capture p
 
 With the default **8 in (200 mm)** capture distance:
 
-* As the animal approaches within the detection area (out to ~34 in), you may receive an **"Early pre-capture"** alert with a photo.
+* As the animal approaches within the detection area (out to ~34 in), you may receive a **Pre-Capture Alert** with an approach photo.
 * At **~8 in (200 mm) or closer**, the trap confirms capture and the door closes.
 
-Alert text looks like:
-
-* "Pre-capture: 8.0 in detected"
-* "Early pre-capture: 13.8 in detected"
+In the app, the notification shows as a **Pre-Capture Alert** — it lets you know an animal is approaching before a capture happens, and includes an approach photo when available. In [Scouting Mode](../app/scouting-mode.md) the same approach event shows as a **Scout Alert** instead. The distance the animal was detected at is recorded on the event details.
 
 > Units (inches or millimeters) depend on your trap's **Units** setting. For the full sensor model, see [Technical Specifications](../technical-specifications.md).
 
@@ -52,15 +49,15 @@ This setting is configured per trap:
 * Monitor animal behavior without needing a capture — or use [Scouting Mode](../app/scouting-mode.md) to watch activity without closing the door
 * Improve trap placement and setup based on activity patterns
 
-### What you'll see (alert motion gate v906+; scout photo gate v926+)
+### What you'll see (alert motion gate, firmware v906+)
 
 | Signal | When it fires |
 | --- | --- |
-| **Pre-Capture alert text** | After the animal shows **real inward movement** (~3 in / 75 mm) toward the trap — static grass or debris in the detection zone will **not** trigger the text alert |
-| **Approach photos** | On zone entry and during approach — **not** blocked by the motion gate on alert text |
+| **Pre-Capture Alert** | After the animal shows **real inward movement** (~3 in / 75 mm) toward the trap — static grass or debris in the detection zone will **not** trigger the alert |
+| **Approach photos** | On zone entry and during approach — **not** blocked by the motion gate that holds the alert |
 | **Door close** | Only when the animal is confirmed in the capture zone (Armed mode) |
 
-> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for alert text; scout photos are also motion-gated (v926+).
+> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for its alert; approach photos are not held by that gate.
 
 ### Need to Turn It Off?
 
