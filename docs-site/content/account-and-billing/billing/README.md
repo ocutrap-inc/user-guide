@@ -6,25 +6,19 @@ description: >-
 
 # Billing
 
-## 1. Accessing Your Account Page
+## 1. Signing In
 
-1. **Log in** to your OcuTrap account at [base.ocutrap.com](https://base.ocutrap.com/).
-2. Once logged in, either:
-   * Click the **Account** link in the navigation bar, **OR**
-   * Click the **burger menu** (three horizontal lines) and select **Account**.
+1. **Log in** to your OcuTrap account at [app.ocutrap.com](https://app.ocutrap.com).
+2. Your **Account** page (personal information, security settings) is available from the sidebar. Per-trap billing lives on each trap's **Billing** tab.
 
-You will be taken to your **Account** page, which displays personal information (name, email, phone number), security settings, and billing information.
-
-<div><figure><img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.30.00 AM (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.30.08 AM (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ***
 
-## 2. Navigating to the Billing Portal
+## 2. Opening the Billing Portal
 
-1. From the **Account** page, scroll to the **Billing** section.
-2. Click on **Manage Subscriptions** to open the secure billing portal.
+1. Open the trap you want to manage and go to its **Billing** tab (or open **Billing** from the app for an overview across traps).
+2. Use the **Stripe** billing portal link to manage payment methods and view invoices.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM.png" alt="" data-size="original"><figcaption></figcaption></figure>
 
 This portal allows you to view and manage all aspects of your subscription, including:
 
@@ -68,8 +62,8 @@ Depending on your plan or provider settings, you might see other statuses such a
 
 #### 4.1 How do I update my payment method?
 
-1. Go to **Account** → **Manage Subscriptions**.
-2. Select **Billing** or **Payment Methods**.
+1. Open the trap's **Billing** tab and open the **Stripe** billing portal.
+2. Select **Payment Methods**.
 3. Add a new card or edit existing card details.
 4. Confirm your changes.
 

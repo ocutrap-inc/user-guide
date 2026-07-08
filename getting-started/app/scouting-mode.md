@@ -28,7 +28,7 @@ While in Scouting Mode, the door does not close automatically. The only controls
 
 ## Start Scouting
 
-1. Sign in at [base.ocutrap.com](https://base.ocutrap.com) or open the mobile app.
+1. Sign in at [app.ocutrap.com](https://app.ocutrap.com) or open the mobile app.
 2. Find the trap you want to scout.
 3. Make sure the trap status is **Open / Unarmed**.
 4. Tap **Controls** on the trap card.

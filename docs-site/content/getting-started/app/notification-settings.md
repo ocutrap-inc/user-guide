@@ -1,41 +1,40 @@
 ---
 description: >-
-  The OcuTrap system supports different types of notifications for each trap.
-  These notifications help you stay informed and take action as needed.
+  Choose which trap events reach you and how. OcuTrap notifications come from
+  your traps' firmware; the app lets you pick the events and delivery channels.
 ---
 
 # Notification Settings
 
-* **Error**\
-  Triggered when a trap encounters an error or fails to operate as expected.
-* **Alert**\
-  Activated to provide warnings or important updates regarding a trap's performance.
-* **Capture**\
-  Notifies you when a trap successfully captures an animal.
+OcuTrap alerts come from your traps themselves (their firmware), and the app lets you choose **which events notify you** and **how they're delivered**. The web and mobile apps present these controls a little differently.
 
-For Scout alerts and photos while the door stays open, see [Scouting Mode](../app/scouting-mode.md).
+## Web (Settings → Notifications)
 
-### Notification Options
+On the web app, open **Settings** and find the **Notifications** section. You pick, for each event category, which channels deliver it:
 
-When configuring notifications, you can choose from the following delivery options:
+**Event categories**
 
-* **No Notification**\
-  No alert will be sent.
-* **Email**\
-  An email will be sent to your registered email address.
-* **Push Notification**\
-  A push notification will be sent to your mobile app (if installed).
-* **Push Notification + Email**\
-  Both a push notification and an email will be sent.
+* **Captures** — confirmed catches from a trap.
+* **Trap alerts** — battery, signal, offline, and tilt alerts.
+* **Billing** — failed payments, renewals, and plan changes.
+* **System updates** — firmware releases and planned maintenance.
 
-### How to Configure Notification Settings
+**Channels**
 
-To configure the notification settings for your traps:
+* **Email** — sent to your account email address.
+* **In-app** — shown in the app's inbox.
+* **Push** — mobile only; configure push in the mobile app (the toggle is disabled on web).
 
-1. Open your OcuTrap dashboard.
-2. Locate the trap you wish to modify.
-3. Click the **Settings** button for that trap.
-4. Select your preferred option for each notification type (Error, Alert, Capture) from the drop-down menu.
+## Mobile (Notification Settings)
 
-Ensure that your mobile app is installed and properly configured if you choose the push notification option.
+In the mobile app, open **Notification Settings**:
 
+* **Notification Channels** — toggle **Push Notifications** and **Email Alerts**.
+* **Alert Types** — toggle **Target detected**, **Animal captured**, **Capture reminders**, **Low battery**, and **Device alerts**.
+* **Digest** — choose **Immediate**, **Daily Digest**, or **Weekly Digest**.
+
+{% hint style="info" %}
+Push notifications also require phone-level permission for the OcuTrap app. See [Using the Mobile App](using-the-mobile-app.md).
+{% endhint %}
+
+For Scout alerts and photos while the door stays open, see [Scouting Mode](scouting-mode.md).

@@ -1,12 +1,16 @@
 # Account Deletion
 
-#### Account Deletion Guide
+You can permanently delete your OcuTrap account from the **Account** page in the app.
 
-To permanently delete your account, please follow the steps below:
+{% hint style="danger" %}
+**Warning:** This permanently deletes your account, your trap shares, and all associated data. It cannot be undone.
+{% endhint %}
 
-1. Visit the [Account Deletion Page](https://base.ocutrap.com/delete-account).
-2. Click on the **Delete Account** button. If prompted, you may need to log in.
-3. Type **Delete** in the input box that appears. Remember, it's case sensitive.
-4. Click on the **Delete Account** button again to confirm your action.
+Before you start, **cancel any active trap subscriptions** — the app blocks account deletion while you still own an active or trialing subscription.
 
-Your account will then be fully deleted.
+1. Sign in at [app.ocutrap.com](https://app.ocutrap.com) and open **Account**.
+2. Scroll to the **Danger zone** section and, next to **Delete account**, click **Delete**.
+3. In the confirmation dialog, **re-enter your account email** to confirm.
+4. Click **Delete account**.
+
+Your account is deleted and you are signed out.

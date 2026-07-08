@@ -9,7 +9,7 @@ description: >-
 
 ### Step 1: Remove the Trap From Your Account
 
-1. Log in to your account at [base.ocutrap.com/account](https://base.ocutrap.com/account).
+1. Log in to your account at [app.ocutrap.com/account](https://app.ocutrap.com/account).
 2. Locate the trap you wish to transfer.
 3. Click the **Delete Trap** button.
 4. Confirm the trap name exactly as prompted.
@@ -19,10 +19,9 @@ description: >-
 
 ### Step 2: New Owner Adds the Trap
 
-1. The new owner must have their own OcuTrap account.
-2. After logging in, they should go to the **Account Page** and scroll to the bottom.
-3. Click the **Add Trap** button.
-4. Enter the **Trap ID** (serial number), found inside the trap’s POD cover.
+1. The new owner must have their own OcuTrap account (with a verified email).
+2. After signing in, they open **Add trap**.
+3. In the wizard, they enter the **Trap ID** and **Device ID** (found on the trap and inside the POD), choose a cellular plan, name the trap and set its location, then tap **Activate trap**.
 
 ### Step 3: Subscription and Setup
 

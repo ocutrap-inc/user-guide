@@ -39,12 +39,11 @@ If any part is missing or damaged, stop and contact [support@ocutrap.com](mailto
 
 ## Step 3: Create your account and add your trap
 
-You manage your OcuTrap from the web portal at [base.ocutrap.com](https://base.ocutrap.com/) — or from the mobile app, which has the same features.
+You manage your OcuTrap from the web portal at [app.ocutrap.com](https://app.ocutrap.com/) — or from the mobile app, which has the same features.
 
-1. Create an account (or log in) at [base.ocutrap.com](https://base.ocutrap.com/signuplogin).
-2. Find the **serial number** on the label **inside the POD**. After registration, the app shows it as your **Trap ID**.
-3. Go to **Account**, tap **Add Trap**, and enter the serial number.
-4. When registration completes, the app opens the new trap's **console page**, with a **Waiting for first check-in** note that clears once the trap connects.
+1. Create an account (or log in) at [app.ocutrap.com](https://app.ocutrap.com). Verify your email — the app asks for this before you can activate a trap.
+2. Open **Add trap** and follow the wizard: enter your **Trap ID** and **Device ID** (both are on labels on/inside the trap), choose a cellular plan, name the trap and set its location, then tap **Activate trap**.
+3. When activation completes, the app opens the new trap's **console page**, with a **Waiting for first check-in** note that clears once the trap connects. Finish billing from the trap's **Billing** tab.
 
 Full walkthrough with screenshots: [Adding a trap to your account](app/adding-a-trap-to-your-account.md).
 

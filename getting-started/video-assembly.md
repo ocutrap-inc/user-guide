@@ -92,13 +92,13 @@ Connect the wire to the POD, ensuring the connection is secure.
 
 ## Section 3: Software Setup
 
-1. Create an account on [base.ocutrap.com](https://base.ocutrap.com).
+1. Create an account on [app.ocutrap.com](https://app.ocutrap.com).
 2. Once your account is created, add your trap to it.
 
 ### Instructions:
 
 * Locate the POD for your OcuTrap and open it to find the serial number at the top of the device.
-* Log in to your account at [base.ocutrap.com](https://base.ocutrap.com/).
+* Log in to your account at [app.ocutrap.com](https://app.ocutrap.com/).
 * Navigate to the ‘Account’ section in the top-right corner of the dashboard, and click **Add Trap** at the bottom of the page.
 * Enter the serial number.
 * Follow the in-app prompts to enable your subscription.

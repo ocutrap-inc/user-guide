@@ -48,11 +48,25 @@ Because cellular data is part of your subscription, a trap **without an active s
 
 Reactivating your subscription restores full function. You can **reactivate at any time**, and the trap continues to work without interruption once the plan is active again:
 
-1. Go to your [console](https://base.ocutrap.com/console/) and sign in.
-2. Open the trap's **Settings** and find the **Plan** field in **Device Info**.
-3. Click **Update**, choose a plan, and complete checkout.
+1. Sign in at [app.ocutrap.com](https://app.ocutrap.com).
+2. Open the trap and go to its **Billing** tab.
+3. Choose a plan and complete checkout.
 
 Full steps: [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md).
+
+***
+
+## Pausing a Trap (Monthly Plans)
+
+If you don't need a trap for a while but don't want to cancel, you can **pause** its subscription instead. Pause it from the trap's **Billing** tab (**Pause subscription**).
+
+* **Monthly plans only**, for up to **6 months**. Annual plans can't be paused.
+* **While paused, you're not billed** and no invoices are generated.
+* A paused trap is **dormant** — remote commands and new captures are off. (Opening the door and releasing an animal stay available for welfare.)
+* **Your data and settings are kept** and restored in full when you resume.
+* It **resumes automatically** on the date you choose, or you can **Resume now** anytime.
+
+A paused trap shows a **Paused** status. This is different from a subscription that lapses from a failed payment (see above) — pausing is something you choose, and you can resume it yourself at any time.
 
 ***
 
