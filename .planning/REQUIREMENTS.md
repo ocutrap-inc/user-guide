@@ -140,6 +140,21 @@
   indicator banner; `/api/*` excluded. Verified in airplane mode on a
   phone. Rationale: customers operate traps in low-coverage areas.
   After cutover.
+- [ ] **SITE-12**: Brand alignment + visual polish. The site shipped on a
+  generic bright SaaS blue (`#0050ff`) and Outfit/Manrope type — both
+  off-brand per `internal-docs/orchestrator/brand/index.md` ("Don't:
+  generic bright SaaS blue"; docs typography follows web marketing).
+  Acceptance: (a) primary/accent/link colors derive from brand navy
+  `#1f3c6b` (light) and `#6291d4` (dark — the documented
+  `app_web.primary_dark`; the previous dark accent `#5a8dff` claimed to
+  match that token but didn't); (b) headings Work Sans, body Inter, mono
+  JetBrains Mono per brand §4; (c) neutrals are the brand's warm stone
+  ramp, not blue-gray; (d) semantic hint/status colors unchanged;
+  (e) visible `:focus-visible` ring on interactive elements; (f) mobile
+  article top bar doesn't crowd breadcrumbs into the action buttons;
+  (g) verified by screenshot on desktop (~1440px) and mobile (390px) in
+  light + dark themes with no regressions to search, sidebar, TOC,
+  hints, cards, tables, or print styles.
 
 ## Out of Scope
 
@@ -178,3 +193,4 @@
 | SITE-09 | Docs Enhancements (post-launch)|
 | SITE-10 | Docs Enhancements (post-cutover)|
 | SITE-11 | Docs Enhancements (post-cutover)|
+| SITE-12 | Docs Enhancements (post-launch)|

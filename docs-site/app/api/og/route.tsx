@@ -19,10 +19,12 @@ const RACCOON_DATA_URI = (() => {
   }
 })();
 
-const BRAND_BLUE = "#0050ff";
+// Brand navy per internal-docs/orchestrator/brand/design-tokens.yaml (SITE-12).
+const BRAND_NAVY = "#1f3c6b";
+const BRAND_NAVY_DEEP = "#142845";
 const FOOTER = "OcuTrap Knowledge Base";
 
-// Dynamic 1200×630 social card: brand-blue background, raccoon mark in a white
+// Dynamic 1200×630 social card: brand-navy background, raccoon mark in a white
 // chip, the page title in large white type, and a footer line (SITE-01).
 export async function GET(req: Request): Promise<ImageResponse> {
   const { searchParams } = new URL(req.url);
@@ -40,8 +42,8 @@ export async function GET(req: Request): Promise<ImageResponse> {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: BRAND_BLUE,
-          backgroundImage: `linear-gradient(135deg, ${BRAND_BLUE} 0%, #003ad1 100%)`,
+          background: BRAND_NAVY,
+          backgroundImage: `linear-gradient(135deg, ${BRAND_NAVY} 0%, ${BRAND_NAVY_DEEP} 100%)`,
           padding: "72px 80px",
           fontFamily: "sans-serif",
         }}
