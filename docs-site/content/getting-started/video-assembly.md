@@ -22,7 +22,7 @@ _Take a moment to confirm you have all these parts._
 
 #### Prepare the Battery
 
-Ensure the battery is fully charged. Charging typically takes 1-3 hours, so it’s best to charge it ahead of time if you haven’t done so already.
+Ensure the battery is fully charged. A full charge takes about 5–6 hours (see [Battery Overview](battery-overview.md)), so it’s best to charge it ahead of time if you haven’t done so already.
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2F1pbBPMveqGGP4li7XUC3%2FMy%20Movie%2010.mp4?alt=media&token=87f4b341-83c0-4c72-b805-7fb92c947164" %}
 
@@ -98,7 +98,7 @@ Connect the wire to the POD, ensuring the connection is secure.
 ### Instructions:
 
 * Locate the POD for your OcuTrap and open it to find the serial number at the top of the device.
-* Log in to your account at [OcuTrap.com](https://www.ocutrap.com).
+* Log in to your account at [base.ocutrap.com](https://base.ocutrap.com/).
 * Navigate to the ‘Account’ section in the top-right corner of the dashboard, and click **Add Trap** at the bottom of the page.
 * Enter the serial number.
 * Follow the in-app prompts to enable your subscription.

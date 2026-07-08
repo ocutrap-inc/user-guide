@@ -15,7 +15,7 @@ Setting up your OcuTrap has two parts: **assembling the hardware** and **connect
 Do this first so the battery charges while you assemble the trap.
 
 1. Open the small white box and find the charger.
-2. Charge the **blue battery** until the charger light turns **green** — typically **1–3 hours**.
+2. Charge the **blue battery** until the charger light turns **green** — a full charge takes about **5–6 hours**.
 
 ***
 

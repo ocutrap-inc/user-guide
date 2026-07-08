@@ -1,6 +1,8 @@
 # Hardware Set Up
 
-OcuTrap R1 Video Set Up
+This guide walks you through assembling your OcuTrap R1 step by step, in three sections: **Door**, **Handle**, and **POD**. Follow each step carefully to ensure your OcuTrap functions correctly. When the hardware is done, continue to [Adding a trap to your account](app/adding-a-trap-to-your-account.md) for the app setup.
+
+Prefer to watch? The full assembly video is below, and [Video Assembly](video-assembly.md) breaks it into per-section clips.
 
 {% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2Fs1sKhVb7HYatlgcbSflA%2FOcuTrap%20Assembly.mp4?alt=media&token=1b6d1663-01e3-4161-91f8-d0ed1791837a" %}
 
@@ -16,23 +18,13 @@ Carefully unpack your OcuTrap R1 and check that all components are included:
 
 ![](<../.gitbook/assets/unknown (6).png>)<br>
 
-Examine each item for any visible damage. If anything is missing or appears damaged, halt installation and contact OcuTrap Support with your Trap ID.
+Examine each item for any visible damage. If anything is missing or appears damaged, halt installation and contact [support@ocutrap.com](mailto:support@ocutrap.com) with your Trap ID.
 
-Hardware Setup
+## Charge the Battery
 
-Unpack the Components
+Fully charge the blue battery until the charger light is green, using the accompanying charger found in the small white box. A full charge takes about 5–6 hours — start it now so it's ready when assembly is done.
 
-1. Remove the OcuTrap Device from its packaging.
-2. If anything appears damaged, contact support@ocutrap.com for assistance.
-
-Charge the Battery
-
-1. Fully charge the blue battery until the light is green using the accompanying charger found in the small white box.\
-   ![](../.gitbook/assets/setup-charging-battery.png)
-
-Introduction Welcome to the OcuTrap Setup Manual. This guide will walk you through the process of assembling your OcuTrap step by step. The setup process is divided into four main sections: Door, Handle, POD Setup, and App Setup
-
-Carefully follow each step to ensure your OcuTrap functions correctly and efficiently
+![](../.gitbook/assets/setup-charging-battery.png)
 
 ### Section 1: Door Setup
 
@@ -108,17 +100,19 @@ Do not fully tighten the bolts until the motor connector is fully through the tu
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Step 2: Connect the Wire to the POD
+#### Step 1: Mount the POD
 
 1. Slide the POD down the rails on the trap until it is in place.
-2. Attach the clip to to the top keep the POD in place
+2. Attach the clip at the top to keep the POD in place.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-12-17 at 10.26.40 AM.png" alt="" width="375"><figcaption></figcaption></figure>
 
-1. Attach the motor’s wire to the POD using the locking screw connector, ensuring a secure connection.
-2. Use the top latch to secure the pod in place.
+#### Step 2: Connect the Wire to the POD
 
-Fully tighten all the bolts. At this point, your hardware setup is complete.
+1. Attach the motor’s wire to the POD using the locking screw connector, ensuring a secure connection.
+2. Use the top latch to secure the POD in place.
+
+Fully tighten all the bolts (including the handle bolts you hand-tightened earlier). At this point, your hardware setup is complete.
 
 {% hint style="warning" %}
 If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
@@ -126,4 +120,4 @@ If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
 
 <figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
 
-[Hardware Features](hardware-features.md)
+**Next:** add the trap to your account — [Adding a trap to your account](app/adding-a-trap-to-your-account.md). To learn what each part of the trap does, see [Hardware Features](hardware-features.md).

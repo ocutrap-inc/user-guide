@@ -35,7 +35,7 @@ All OcuTrap policies, terms, and legal documents are kept in a single place on o
 
 ## See also
 
-* [Warranty Information](warranty-information.md) — warranty summary in this guide.
+* [Warranty Information](warranty-information.md) — where to find the full warranty terms.
 * [Your Data & Privacy](data-and-privacy.md) — what OcuTrap collects and your controls.
 * [Responsible & Legal Use](responsible-and-legal-use.md) — using OcuTrap within local laws.
 * [Safety Information](../support/safety-information.md) — operating the device safely.

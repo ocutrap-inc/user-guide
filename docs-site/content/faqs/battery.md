@@ -37,7 +37,7 @@
 #### **Specifications**:
 
 * **Battery Pack Size**: 70 x 55 x 40 mm (L x W x T)
-* **Battery Weight**: Approx. 295g (5,200 mAh pack)
+* **Battery Weight**: Approx. 295g (5,200 mAh pack) — note the **10,000 mAh** pack is standard for new US shipments; see [Battery Overview](../getting-started/battery-overview.md) for both models
 * **Charger Cable Length**: 90 cm
 
 ***

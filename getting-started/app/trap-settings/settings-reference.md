@@ -17,7 +17,7 @@ This page provides a complete reference of all configurable settings on your Ocu
 
 OcuTrap uses two steps to verify captures and reduce false triggers:
 
-- **Alert zone** (~12–18 in from sensor) — The animal is approaching; you may get a pre-capture alert
+- **Detection area** (out to ~34 in / 875 mm from the sensor) — The animal is approaching; you may get a pre-capture alert
 - **Capture zone** (your set distance, default ~8 in) — The door closes when the animal reaches this point
 
 This two-step check prevents false triggers from rain, debris, or quick movements.

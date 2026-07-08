@@ -40,8 +40,8 @@ A gap larger than 0.20 inches is a common cause of the motor not operating.
 
 #### After Adjustment
 
-After tightening the motor and setting the correct gap, try controlling the door once again
+After tightening the motor and setting the correct gap, try controlling the door once again.
 
-If the motor still does not operate after this adjustment, disconnect and reconnect the motor connector and repeat the steps.
+If the motor still does not operate after this adjustment, disconnect and reconnect the motor connector and repeat the steps. If it still fails, contact [support@ocutrap.com](mailto:support@ocutrap.com) with your Trap ID.
 
-<figure><img src="../.gitbook/assets/IMG_0998.HEIC" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/IMG_0998-connector.jpeg" alt="" width="375"><figcaption></figcaption></figure>

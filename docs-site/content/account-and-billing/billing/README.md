@@ -24,7 +24,7 @@ You will be taken to your **Account** page, which displays personal information 
 1. From the **Account** page, scroll to the **Billing** section.
 2. Click on **Manage Subscriptions** to open the secure billing portal.
 
-## <img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM.png" alt="" data-size="original">
+<figure><img src="../../.gitbook/assets/Screenshot 2025-01-30 at 10.32.34 AM.png" alt="" data-size="original"><figcaption></figcaption></figure>
 
 This portal allows you to view and manage all aspects of your subscription, including:
 
