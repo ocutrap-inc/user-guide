@@ -259,16 +259,20 @@ body {
 }
 
 /* ── Sidebar Nav ─────────────────────────────────────── */
+/* Mobile drawer header: text-only wordmark, left padding clears the fixed
+   close (X) button (16px inset + 34px button + breathing room), and the
+   56px row height vertically centers the name against that button. */
 .sidebar-logo {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 1.125rem 1rem 0.875rem;
+  min-height: 56px;
+  padding: 0 1rem 0 3.75rem;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-heading);
   text-decoration: none;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
   border-bottom: 1px solid var(--color-sidebar-border);
   margin-bottom: 0.75rem;
   transition: opacity 0.15s;
@@ -278,7 +282,7 @@ body {
   opacity: 0.8;
 }
 
-/* Desktop: the blue header already carries the brand — the sidebar copy is
+/* Desktop: the navy header already carries the brand — the sidebar copy is
    redundant. Keep it ≤900px where it heads the off-canvas panel next to the
    close button. */
 @media (min-width: 901px) {
@@ -289,21 +293,6 @@ body {
   .sidebar {
     padding-top: 0.75rem;
   }
-}
-
-.sidebar-logo-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sidebar-logo-icon img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
 }
 
 .nav-section {
@@ -2377,4 +2366,21 @@ input:focus-visible,
   .nav-chevron svg {
     transition: none;
   }
+}
+
+/* ── Mobile drawer close button (SITE-12 follow-up) ─────────────────────
+   The fixed hamburger uses translucent-white header styling, which turns
+   invisible once the white drawer slides beneath it. When the drawer is
+   open (aria-expanded), restyle it for the drawer surface so the X is
+   always visible beside the drawer title. */
+.hamburger[aria-expanded="true"] {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-heading);
+}
+
+.hamburger[aria-expanded="true"]:hover {
+  background: var(--color-brand-dim);
+  border-color: var(--color-brand);
+  color: var(--color-brand);
 }
