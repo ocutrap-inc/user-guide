@@ -17,22 +17,26 @@
   --toc-width: 220px;
   --content-max: 720px;
 
-  --color-brand: #0050ff;
-  --color-brand-light: #eef2ff;
-  --color-brand-dim: rgba(0, 80, 255, 0.08);
-  --color-sidebar-bg: #f9fafb;
-  --color-sidebar-border: #e8eaed;
-  --color-link: #0050ff;
-  --color-heading: #0f1117;
-  --color-body: #374151;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-code-bg: #f3f4f6;
-  --color-pre-bg: #0f1117;
+  /* Brand navy + warm stone neutrals per
+     internal-docs/orchestrator/brand/index.md + design-tokens.yaml (SITE-12).
+     Navy #1f3c6b is the app/unified primary; neutrals are the brand's warm
+     stone ramp (not blue-gray); semantic hint colors below stay semantic. */
+  --color-brand: #1f3c6b;
+  --color-brand-light: #e9eef6;
+  --color-brand-dim: rgba(31, 60, 107, 0.08);
+  --color-sidebar-bg: #f6f5f2;
+  --color-sidebar-border: #e8e6e1;
+  --color-link: #1f3c6b;
+  --color-heading: #211f1d;
+  --color-body: #44423c;
+  --color-muted: #6f6c65;
+  --color-border: #e5e3de;
+  --color-code-bg: #f4f3ef;
+  --color-pre-bg: #0f1419;
 
-  /* Header chrome — GitBook-style brand-blue bar in light mode.
+  /* Header chrome — GitBook-style brand-navy bar in light mode.
      Dark mode overrides these to a dark surface with a blue accent. */
-  --header-bg: #0050ff;
+  --header-bg: #1f3c6b;
   --header-fg: #ffffff;
   --header-border: rgba(255, 255, 255, 0.16);
   /* GitBook-style controls: white icons on translucent-white squares with a
@@ -48,8 +52,8 @@
   --color-header-bg: rgba(255, 255, 255, 0.95); /* sticky header */
   --color-elevated: #ffffff;                    /* dialogs, kbd, floating chrome */
   --color-overlay: rgba(0, 0, 0, 0.55);         /* modal backdrop */
-  --color-nav-item: #4b5563;                    /* sidebar link (rest) */
-  --color-table-stripe: #fafafa;                /* zebra rows */
+  --color-nav-item: #56534d;                    /* sidebar link (rest) */
+  --color-table-stripe: #faf9f7;                /* zebra rows */
   --color-code-text: #cdd6f4;                   /* base text inside code blocks */
 
   /* Hint / callout variants (bg · border · text) */
@@ -58,8 +62,8 @@
   --hint-danger-bg: #fef2f2;  --hint-danger-border: #ef4444;  --hint-danger-text: #991b1b;
   --hint-success-bg: #f0fdf4; --hint-success-border: #22c55e; --hint-success-text: #166534;
 
-  --font-sans: var(--font-manrope), system-ui, sans-serif;
-  --font-display: var(--font-outfit), var(--font-manrope), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-work-sans), var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), "SFMono-Regular", Consolas, monospace;
 }
 
@@ -1812,7 +1816,7 @@ body {
  *   1. @media (prefers-color-scheme: dark) gated on :not([data-theme="light"])
  *      — system default, but a user who forces light under a dark OS stays light.
  *   2. :root[data-theme="dark"] — forces dark regardless of OS.
- * Brand blue (#0050ff) stays the accent; it is lightened to #5a8dff on dark
+ * Brand navy (#1f3c6b) stays the accent; it is lightened to #6291d4 on dark
  * surfaces for readable contrast, matching the app's dark primary in
  * internal-docs/orchestrator/brand/design-tokens.yaml (app_web.primary_dark).
  */
@@ -1820,12 +1824,12 @@ body {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
 
-    --color-brand: #5a8dff;
-    --color-brand-light: rgba(90, 141, 255, 0.16);
-    --color-brand-dim: rgba(90, 141, 255, 0.12);
+    --color-brand: #6291d4;
+    --color-brand-light: rgba(98, 145, 212, 0.16);
+    --color-brand-dim: rgba(98, 145, 212, 0.12);
     --color-sidebar-bg: #14181e;
     --color-sidebar-border: #262b33;
-    --color-link: #5a8dff;
+    --color-link: #6291d4;
     --color-heading: #e8eaed;
     --color-body: #c4c9d2;
     --color-muted: #8a919c;
@@ -1839,11 +1843,11 @@ body {
     /* Dark header: a dark surface with a blue accent border — NOT bright blue. */
     --header-bg: #14181e;
     --header-fg: #e8eaed;
-    --header-border: rgba(90, 141, 255, 0.30);
+    --header-border: rgba(98, 145, 212, 0.30);
     --header-control-bg: rgba(255, 255, 255, 0.04);
     --header-control-border: #2a2f37;
-    --header-control-hover-bg: rgba(90, 141, 255, 0.14);
-    --header-control-hover-border: rgba(90, 141, 255, 0.40);
+    --header-control-hover-bg: rgba(98, 145, 212, 0.14);
+    --header-control-hover-border: rgba(98, 145, 212, 0.40);
     --header-control-fg-muted: rgba(232, 234, 237, 0.60);
 
     --color-elevated: #1c1f24;
@@ -1862,12 +1866,12 @@ body {
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --color-brand: #5a8dff;
-  --color-brand-light: rgba(90, 141, 255, 0.16);
-  --color-brand-dim: rgba(90, 141, 255, 0.12);
+  --color-brand: #6291d4;
+  --color-brand-light: rgba(98, 145, 212, 0.16);
+  --color-brand-dim: rgba(98, 145, 212, 0.12);
   --color-sidebar-bg: #14181e;
   --color-sidebar-border: #262b33;
-  --color-link: #5a8dff;
+  --color-link: #6291d4;
   --color-heading: #e8eaed;
   --color-body: #c4c9d2;
   --color-muted: #8a919c;
@@ -1881,11 +1885,11 @@ body {
   /* Dark header: a dark surface with a blue accent border — NOT bright blue. */
   --header-bg: #14181e;
   --header-fg: #e8eaed;
-  --header-border: rgba(90, 141, 255, 0.30);
+  --header-border: rgba(98, 145, 212, 0.30);
   --header-control-bg: rgba(255, 255, 255, 0.04);
   --header-control-border: #2a2f37;
-  --header-control-hover-bg: rgba(90, 141, 255, 0.14);
-  --header-control-hover-border: rgba(90, 141, 255, 0.40);
+  --header-control-hover-bg: rgba(98, 145, 212, 0.14);
+  --header-control-hover-border: rgba(98, 145, 212, 0.40);
   --header-control-fg-muted: rgba(232, 234, 237, 0.60);
 
   --color-elevated: #1c1f24;
@@ -2289,4 +2293,37 @@ body {
   color: var(--color-link);
   font-weight: 600;
   text-decoration: underline;
+}
+
+/* ── SITE-12: brand alignment polish ─────────────────────
+   Appended at end-of-file per this file's convention to minimize merge
+   conflicts. Two small accessibility/layout fixes that ride along with the
+   brand token pass:
+   1. A consistent keyboard-focus ring (brand navy on content; white on the
+      navy header, where a navy ring would vanish).
+   2. On phones, pin the article action buttons to the top of the topbar so a
+      wrapping breadcrumb doesn't push them out of alignment. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.site-header :focus-visible,
+.hamburger:focus-visible {
+  outline-color: var(--header-fg);
+}
+
+/* The search dialog input is intentionally borderless inside its framed
+   wrapper — keep it that way under the global focus rule above. */
+.search-input:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 560px) {
+  .doc-topbar {
+    align-items: flex-start;
+  }
 }

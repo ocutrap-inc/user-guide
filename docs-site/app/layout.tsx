@@ -8,18 +8,20 @@ import ThemeToggle from "@/components/theme-toggle";
 import PostHogProvider from "@/components/posthog-provider";
 import Link from "next/link";
 import Image from "next/image";
-import { Outfit, Manrope, JetBrains_Mono } from "next/font/google";
+import { Work_Sans, Inter, JetBrains_Mono } from "next/font/google";
 
-const outfit = Outfit({
+// Brand typography (internal-docs/orchestrator/brand/index.md §4):
+// headings Work Sans, body Inter, mono JetBrains Mono. (SITE-12)
+const workSans = Work_Sans({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-work-sans",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-inter",
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
@@ -65,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const sections = parseSummary();
-  const fontVars = `${outfit.variable} ${manrope.variable} ${jetbrainsMono.variable}`;
+  const fontVars = `${workSans.variable} ${inter.variable} ${jetbrainsMono.variable}`;
 
   return (
     <html lang="en" suppressHydrationWarning className={fontVars}>
