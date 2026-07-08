@@ -1,6 +1,8 @@
 .next/
 node_modules/
 public/gitbook-assets/
+# Build-time generated service worker (build-id-keyed; regenerated each build).
+public/sw.js
 .env.local
 .env
 out/

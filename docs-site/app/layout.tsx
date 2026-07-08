@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { parseSummary } from "@/lib/docs";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, ogImagePath } from "@/lib/site";
@@ -6,6 +6,7 @@ import SidebarClient from "@/components/sidebar-client";
 import SearchDialog from "@/components/search-dialog";
 import ThemeToggle from "@/components/theme-toggle";
 import PostHogProvider from "@/components/posthog-provider";
+import PWA from "@/components/pwa";
 import Link from "next/link";
 import Image from "next/image";
 import { Work_Sans, Inter, JetBrains_Mono } from "next/font/google";
@@ -40,10 +41,25 @@ const OG_IMAGE = {
   alt: SITE_NAME,
 };
 
+// Brand-navy chrome for installed PWA + mobile browser UI (SITE-11).
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#1f3c6b" },
+    { media: "(prefers-color-scheme: dark)", color: "#12151b" },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: SITE_NAME, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
+  // app/manifest.ts is auto-linked, but declaring it here is explicit + stable.
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "OcuTrap Docs",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -83,6 +99,7 @@ export default function RootLayout({
       </head>
       <body>
         <PostHogProvider />
+        <PWA />
         <div className="layout">
           <SidebarClient sections={sections} />
 
