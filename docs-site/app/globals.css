@@ -1379,6 +1379,40 @@ body {
   margin-bottom: 0;
 }
 
+/* Headings in AI answers. The answer popover is compact and already shows the
+   question as its title, so keep heading sizes modest — section labels, not
+   page titles. h1/h2 read the same to avoid an oversized leading heading. */
+.ask-answer h1,
+.ask-answer h2,
+.ask-answer h3,
+.ask-answer h4,
+.ask-answer h5,
+.ask-answer h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-heading);
+  line-height: 1.3;
+  margin: 1rem 0 0.4rem;
+}
+
+.ask-answer h1,
+.ask-answer h2 {
+  font-size: 1.0625rem;
+}
+
+.ask-answer h3,
+.ask-answer h4,
+.ask-answer h5,
+.ask-answer h6 {
+  font-size: 1rem;
+}
+
+.ask-answer h1:first-child,
+.ask-answer h2:first-child,
+.ask-answer h3:first-child {
+  margin-top: 0;
+}
+
 .ask-answer ul,
 .ask-answer ol {
   margin: 0.25rem 0 0.75rem;
