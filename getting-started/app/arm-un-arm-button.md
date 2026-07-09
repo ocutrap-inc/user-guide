@@ -1,4 +1,4 @@
-# Arm / Unarm Button
+# Arm / Disarm
 
 _Make sure you are logged in to your account and on the Traps page._
 

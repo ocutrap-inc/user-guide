@@ -1,43 +1,33 @@
 # Other app information
 
-### Connectivity and Reporting
+### Connectivity and reporting
 
-* **Regular Updates**: The trap pings several times an hour to report its status and confirm network connection.
-* **Disconnection Alert**: Users are alerted if the trap loses network connectivity for over an hour.
+* **Regular check-ins**: The trap checks in several times an hour to report its status and confirm its network connection.
+* **Disconnection alert**: You're alerted if the trap loses connectivity for more than an hour.
 
-### User Interface
+### Trap status
 
-* **Indicator**: The trap's status is communicated through its armed/unarmed state indicator.
-* **Command Listening**: In the unarmed state, the trap awaits user commands for further operations.
+A trap's mode — **Off**, **Scout**, or **Armed** — is set and shown in the **Controls** card on the trap's detail page. When a trap is **Off** it stands down and simply waits for your next command. See [Trap Control](trap-control.md).
 
-This concise guide helps users understand the operational modes of the OcuTrap, ensuring efficient and safe usage.
+### Checking a trap's readings
 
-### Refresh
+Open a trap to see its **vitals strip** at the top of the detail page:
 
-The refresh button will send a request to the trap for the most recent data if the trap is connected.
+* **Battery** and **signal** are shown as live readings.
+* **Last heard** shows when the trap last checked in — select it to **Ping** the trap (ask it to check in now).
+* **Temperature** and **firmware** are in the **Trap info** block on the Overview tab.
 
-### Control Button
+To sound the trap's buzzer — handy for locating the trap or confirming it's responsive — use **Buzz** in the Controls card.
 
-The control button opens a popup. You can see:
+### Camera and map
 
-* Signal Strength
-* Temperature
-* Last Heard time
-* Flash LED light
-* Sound the alarm
-* Share the trap with other users
+* The most recent photo is the hero image on the trap's detail page; the **Images** tab and the **Captures** gallery hold the rest.
+* Each trap's location shows on the Overview tab's mini-map, and every trap appears on the **Map** page.
 
-### Expand ⬇️
+### Sharing a trap
 
-The options icon is located at the bottom of the trap tab. You can view the camera and map.
+Open a trap, go to its **Settings**, and share it by entering the email of an existing OcuTrap user. You can't share with yourself, with someone who isn't an OcuTrap user, or share the same trap twice. When shared, the trap appears in the other person's Traps list under **Shared**. A shared user can operate the trap like any other, but can't re-share it.
 
-### Sharing
+### Renaming a trap
 
-You can share traps with other users within the traps options popup. Enter the email of an existing OcuTrap users email to share the trap. You cannot share with yourself, non-OcuTrap users, or double share traps. If the email fits these conditions, an email will be sent and the trap will appear at the bottom of the shared user's traps page under the Shared section.
-
-When the trap is shared, the shared user can perform the activites of a regular trap, except the shared user cannot share the shared trap with other users.
-
-### Changing trap name
-
-Click on the current name of the trap such as "52353454" or "Farm Trap". A pop-up will appear and you can rename the trap.
-
+Rename a trap from its **Settings** tab.

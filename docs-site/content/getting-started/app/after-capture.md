@@ -13,27 +13,29 @@ You can be 15 minutes away — or 15 hours away — and the trap will stay locke
 
 ## What you control
 
-Two buttons matter after a capture:
+In the app, a captured trap's **Controls** card shows two actions:
 
 | Button | What it does |
 | --- | --- |
-| **Open** | Releases the door **and** returns the trap to **Unarmed**. This is the one you want most of the time — one tap, animal goes free, trap is reset for inspection. |
-| **Unarm** | Returns the state to **Unarmed** but **leaves the door closed**. Use this if you want to keep the animal contained while you transport the trap, then tap **Open** later when you're ready to release. |
+| **Disarm & release** | Opens the door **and** disarms the trap, freeing the animal. The app asks you to confirm first. This is the one you want most of the time — the animal goes free and the trap is reset for inspection. |
+| **Snooze** | Defers the next capture reminder. Use it when you already know about the capture and don't need reminding again right away. |
+
+The app releases in one step — there's no app button that disarms while keeping the door closed. To move the trap with the animal still inside, use the on-trap buttons below instead of releasing from the app.
 
 ### On-trap buttons (v927+)
 
 | Buttons | From **Captured** | Result |
 | --- | --- | --- |
-| **User + Power** (arm/disarm sequence) | Disarm **in place** | **Unarmed**, door **unchanged** (stays closed) — same as cloud **Unarm** |
-| **User hold-open** (press User once, then press again and **hold** — door opens ~7 s later) | Release door | Door **opens** and trap returns to **Unarmed** — same as cloud **Open**. Use this to free the animal, not User+Power |
+| **User + Power** (arm/disarm sequence) | Disarm **in place** | **Disarmed**, door **unchanged** (stays closed). Use this on the trap when you want to keep the animal contained — the app doesn't offer a keep-closed disarm while captured. |
+| **User hold-open** (press User once, then press again and **hold** — door opens ~7 s later) | Release door | Door **opens** and the trap disarms — the same as the app's **Disarm & release**. Use this to free the animal, not User+Power. |
 
-> **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Open** in the app or the **hold-open** button sequence on the trap.
+> **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Disarm & release** in the app or the **hold-open** button sequence on the trap.
 
 ## What you'll see in the app while captured
 
-* Trap card status reads **Captured / Closed**.
+* The trap shows a **Captured** status, and the Controls card reads **CAPTURED · ANIMAL INSIDE**.
 * You'll get repeat reminders for up to 48 hours so a captured animal isn't forgotten. They stop after 48 hours by design.
-* Manual **Request Image** still works if you want a fresh photo of the captured animal.
+* **Request image** still works if you want a fresh photo of the captured animal.
 
 ## Common questions
 
@@ -44,10 +46,10 @@ No. The trap holds locally — no cloud command, no door movement.
 No. The latch is mechanical; loss of power does not release it.
 
 **Q: Can I close a trap that's already in Captured state?**
-The door is already closed. Tapping **Close** while in Captured is a no-op (it stays Captured).
+The door is already closed and locked while captured — there's no separate Close action to take. The Controls card shows **Disarm & release** instead.
 
 **Q: How do I get the trap ready for the next capture?**
-After tapping **Open**, the trap is in **Unarmed / Open**. Tap **Arm** on the trap card to put it back into Armed mode for the next capture.
+After you tap **Disarm & release**, the trap is **Off** with the door **open**. Choose **Armed** from the arm-mode dropdown to set it for the next capture (a trap must have its door open to arm — it is, right after a release).
 
 ## See also
 

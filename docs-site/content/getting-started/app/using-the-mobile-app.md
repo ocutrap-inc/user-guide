@@ -6,7 +6,7 @@ description: >-
 
 # Using the Mobile App
 
-The OcuTrap mobile app gives you the same control as the web dashboard — manage traps, view captures, control the door, adjust settings, and see trap locations — from your phone. It's also how you receive **push notifications** the moment something happens.
+The OcuTrap mobile app gives you the same control as the web app — manage traps, view captures, control the door, adjust settings, and see trap locations — from your phone. It's also how you receive **push notifications** the moment something happens.
 
 ***
 
@@ -28,10 +28,10 @@ The mobile app uses the **same account** as the web app:
 
 ## What You Can Do
 
-The mobile app has the **same features as the web dashboard**. From the app you can:
+The mobile app has the **same features as the web app**. From the app you can:
 
 * View live trap status and **capture images**.
-* **Open, close, arm, and unarm** traps remotely.
+* **Open and close the door**, and set the mode to **Off, Scout, or Armed**, remotely.
 * Adjust [Trap Settings](trap-settings/README.md) and [Notification Settings](notification-settings.md).
 * See trap locations on the map.
 

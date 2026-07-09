@@ -1,66 +1,43 @@
 ---
 description: >-
-  The advanced settings provide additional control over alerts, temperature
-  monitoring, and image processing. These options are intended for users who
-  want finer control over trap behavior.
+  The more technical trap settings — motion tuning, image cropping, and battery
+  voltage calibration. They live in the same Settings tab as everything else and
+  are intended for users who want finer control.
 ---
 
 # Advanced Settings
 
-> **Note:** After changing any advanced settings, a reboot of the trap is recommended to ensure all changes are applied correctly.
+These are the more technical settings. They live in the same **Settings** tab as everything else — there's no separate advanced screen. Most users never need to change them. For exact ranges and defaults, see the [Settings Reference](settings-reference.md).
+
+> **Note:** After changing settings, a reboot of the trap is recommended so all changes take effect.
 
 ***
 
-#### Temperature Alerts
+#### Motion detection
 
-Enables or disables alerts when the trap temperature goes outside the configured range. When enabled, the trap will periodically evaluate temperature readings and send alerts if thresholds are exceeded.
+Tune how the trap decides something is worth capturing:
 
-The selected interval determines how often temperature alerts can be sent.
-
-***
-
-#### Temperature Alert Thresholds
-
-Defines the temperature limits that trigger alerts. These values use the selected unit system, shown as Imperial in the interface.
-
-**Above Upper Limit**
-
-Sets the maximum allowable temperature. An alert is sent if the internal trap temperature rises above this value.
-
-**Below Lower Limit**
-
-Sets the minimum allowable temperature. An alert is sent if the internal trap temperature falls below this value.
-
-***
-
-#### Capture Alerts
-
-Controls notifications related to capture events.
-
-**Capture Alerts Interval**
-
-Defines the minimum amount of time between capture alerts. This helps prevent repeated notifications for the same capture event or ongoing activity.
+* **Capture Distance** — how far inside the trap an animal must be before the door closes.
+* **Accelerometer Time** — how long movement must persist to count as motion.
+* **Dark Threshold** — the light level below which the trap turns on its infrared lighting.
+* **Min / Max IR Brightness** — the floor and ceiling for the infrared LEDs. Lowering the maximum cuts glare and saves power.
 
 ***
 
 #### Image Cropping
 
-Adjusts how images are cropped before being processed or uploaded. Cropping can be used to remove unnecessary areas of the image, reduce file size, or focus on a specific region inside the trap.
+Trim edges out of the photo before it's processed or uploaded — handy for cutting a bright cage bar, the sky, or the ground so the image focuses on the trap interior.
 
-**Left Crop**
-
-Removes a portion of the image from the left side.
-
-**Right Crop**
-
-Removes a portion of the image from the right side.
-
-**Top Crop**
-
-Removes a portion of the image from the top.
-
-**Bottom Crop**
-
-Removes a portion of the image from the bottom.
+* **Top / Bottom / Left / Right Crop** — remove a portion of the image from each edge.
 
 ***
+
+#### Battery voltage calibration
+
+The **Battery Thresholds** (20% / 10% / Full voltages) and **Power Off Voltage** calibrate the voltages behind the battery percentages you see elsewhere. Match them to your battery chemistry only if the percentages read inaccurately.
+
+***
+
+#### Arm When Offline
+
+Lets a trap arm even when it can't reach the network. Use it where cell coverage is spotty but you still want the trap working.

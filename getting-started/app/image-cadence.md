@@ -22,7 +22,7 @@ Photos only flow when the trap has cellular signal and enough battery. On low ba
 | **At capture** | One photo when the door closes |
 | **After a capture** | A short burst (~every 15 s for the first minute), then one **every 2 hours** |
 | **Time-lapse** | **Every 6 hours** by default while armed (adjustable, or off) |
-| **On demand** | Instantly, whenever you tap the camera button in the app |
+| **On demand** | Instantly, whenever you tap **Request image** in the app |
 
 ## Approach photos (Armed Mode)
 
@@ -53,7 +53,7 @@ Independent of animal activity, the trap can take periodic **time-lapse** photos
 
 ## On-demand photos
 
-Any time, you can request a photo from the app—tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Taking Higher-Quality Images](../../faqs/taking-higher-quality-images.md).
+Any time, you can request a photo from the app. On the web app, tap **Request image** for a full-quality photo. On the mobile app you also get a **Request quick image** option for a faster, lower-quality frame. On-demand photos ignore all the timers above and capture right away. See [Taking Higher-Quality Images](../../faqs/taking-higher-quality-images.md).
 
 ## What affects the timing
 
