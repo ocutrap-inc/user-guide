@@ -1,12 +1,11 @@
 # OcuTrap Agent Alignment — user-guide
 
-**Read first:** `internal-docs/orchestrator/agents.md` (company-wide agent rules: goal routing, tracker routing, cross-repo contracts). This header is the shared alignment block — keep it consistent with that file.
+**Read [`../internal-docs/orchestrator/agents.md`](../internal-docs/orchestrator/agents.md) first** — the company-wide rules every agent follows (north star + `exit-impact:` tags, spec-first, Linear/ClickUp split, and the §4 shared-contract solidarity rule). Don't restate them here; this header adds only user-guide-specific detail.
 
-- **North star:** every change serves the $100M exit. Tag work `exit-impact: revenue | platform | ops | none`; prune `none` unless maintenance.
-- **Spec first:** this repo's requirements home is `.planning/REQUIREMENTS.md`. Git specs are canonical — write/update the spec before implementing. Agents read specs, not chat history.
-- **Tracking:** ClickUp — list: **Internal Documentation** (Engineering space). Every task description: `spec: REQ-ID` + `exit-impact:`. Software issues go to Linear (agents.md §3).
-- **Solidarity (cross-repo consistency):** docs follow product — the terminology contract's home is `app/requirements.md`, and notification behavior is governed by ADR 0003 (firmware-sourced only). Every customer-visible change in `app` or firmware requires a pass through this repo (agents.md §7: "Do not skip user-guide for customer-visible changes").
-- **Repo rules:** the GSD project doc below governs the docs-sync workflow; canonical source is git, GitBook is the publish target.
+- **Requirements home (spec-first):** `.planning/REQUIREMENTS.md`.
+- **Tracking:** ClickUp — **Internal Documentation** (Engineering space). Every task: `spec: REQ-ID` + `exit-impact:`.
+- **Docs follow product:** terminology home is `app/requirements.md`; notification behavior is ADR 0003 (firmware-sourced). Every customer-visible `app`/firmware change needs a pass through this repo (agents.md §7 — don't skip user-guide).
+- **Repo rules:** the GSD project doc below governs the docs-sync workflow; canonical source is git, published site is the target. (This file and `CLAUDE.md` are GSD-generated variants — parallel by design; edit sources, not the generated blocks.)
 
 ---
 
