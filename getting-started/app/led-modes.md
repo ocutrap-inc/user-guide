@@ -31,7 +31,7 @@ Is your device blinking red?
 A pattern of more than 10 red blinks indicates a **system error**. Count the blinks and contact [OcuTrap Support](../../support/support.md).
 
 {% content-ref url="../../support/support.md" %}
-[support.md](../../support/support.md)
+[Contact Us](../../support/support.md)
 {% endcontent-ref %}
 
 ### No status LED <a href="#no-status-led" id="no-status-led"></a>

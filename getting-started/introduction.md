@@ -13,5 +13,5 @@
 First time using your OcuTrap? Check out the [Set-up Tutorial](set-up-tutorial.md).
 
 {% content-ref url="../support/safety-information.md" %}
-[safety-information.md](../support/safety-information.md)
+[Safety Information](../support/safety-information.md)
 {% endcontent-ref %}
