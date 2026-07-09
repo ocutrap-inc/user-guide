@@ -2,6 +2,8 @@
 
 _Make sure you are logged in to your account and on the Traps page._
 
+You set the trap's mode — **Off**, **Scout**, or **Armed** — from the **arm-mode dropdown** at the top of the trap's **Controls** card. The dropdown lists what each mode does, so the difference is clear before you choose. Picking the mode the trap is already in does nothing.
+
 ### Armed State
 
 * **Purpose**: The trap is set to capture an animal.
@@ -22,4 +24,4 @@ For full details, see the [Scouting Mode](scouting-mode.md) page.
 
 * **Purpose**: The trap is not set to capture and is in a standby mode.
 * **Behavior**: In this state, the trap listens for commands and does not close the door automatically if motion is detected.
-* **Transition**: After a verified capture, the trap moves to **Captured** state — door closed and locked — and stays there until you tap **Open** (which releases the door and returns to Unarmed) or **Unarm** (which returns to Unarmed but leaves the door closed). See [After a Capture](after-capture.md) for the full guarantee.
+* **Transition**: After a verified capture, the trap moves to **Captured** state — door closed and locked — and stays there until you tap **Open door** (which releases the door and returns to Unarmed) or **Disarm** / set the mode to **Off** (which returns to Unarmed but leaves the door closed). See [After a Capture](after-capture.md) for the full guarantee.

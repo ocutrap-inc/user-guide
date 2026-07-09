@@ -19,4 +19,4 @@ Open **Controls** from a trap's detail screen to send commands to the trap and c
 * **Data** (dropdown) — Expand to view device data such as battery type and voltage, firmware version, and temperature.
 * **Network** (dropdown) — Expand to view connection details: signal quality, network operator, signal strength, and last activity.
 * **View Data Charts** — Open graphical charts of the trap's performance over time.
-* **Last heard** — Shows when the trap last checked in with the cloud.
+* **Last heard** — Shows when the trap last checked in with the cloud. Select it to **Ping** the trap — asking it to check in right now.
