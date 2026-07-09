@@ -31,8 +31,8 @@ While in Scouting Mode, the door does not close automatically. The only controls
 1. Sign in at [app.ocutrap.com](https://app.ocutrap.com) or open the mobile app.
 2. Find the trap you want to scout.
 3. Make sure the trap status is **Open / Unarmed**.
-4. Tap **Controls** on the trap card.
-5. Tap **Scout** (eye icon).
+4. Open the trap's detail page and find the **Controls** card.
+5. Open the **arm-mode dropdown** (top of the Controls card — it shows the current mode) and choose **Scout**. Each choice lists what it does, so you can see the difference before you pick.
 6. When the check passes, the trap status changes to **Scouting**.
 
 If **Scout** does not start, the door may not be fully open, the trap may be offline, or the trap may not have checked in recently. Wait for the next check-in, then try again.
@@ -49,8 +49,8 @@ Each alert type can be sent once every 5 minutes. During that 5-minute window, y
 
 You can stop Scouting Mode in either of these ways:
 
-* Tap **Stop Scout** in the Controls popup. The trap returns to Unarmed and the door stays open.
-* Tap **Close** on the trap card. The door closes and the trap returns to Unarmed.
+* In the **Controls** card, set the arm mode to **Off** from the dropdown (or tap **Disarm**). The trap returns to Unarmed and the door stays open.
+* Tap **Close door** in the **Controls** card. The door closes and the trap returns to Unarmed.
 
 ## Use Armed mode instead when
 
