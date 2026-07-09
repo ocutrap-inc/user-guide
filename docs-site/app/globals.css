@@ -472,6 +472,24 @@ body {
   margin: 0.25rem 0;
 }
 
+/* GFM task lists (`- [ ] item`). remark-gfm emits a checkbox <input> inside
+   each <li>, so the list bullet is redundant — drop the disc marker and the
+   marker indent so the checkbox aligns flush and there's no bullet+checkbox
+   double marker. */
+.prose ul.contains-task-list {
+  list-style: none;
+  padding-left: 0.25rem;
+}
+
+.prose li.task-list-item {
+  list-style: none;
+}
+
+.prose li.task-list-item input[type="checkbox"] {
+  margin: 0 0.5rem 0 0;
+  vertical-align: middle;
+}
+
 .prose blockquote {
   border-left: 3px solid var(--color-border);
   padding-left: 1rem;
@@ -553,6 +571,16 @@ body {
   border: none;
   border-top: 1px solid var(--color-border);
   margin: 2rem 0;
+}
+
+/* h2 already carries a top border as a section divider. When authors also put
+   a thematic break (`---` / `***`) right before a heading, the two stack into
+   a double line — suppress the heading's own border in that case so the hr is
+   the only divider. */
+.prose hr + h2 {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1rem;
 }
 
 .prose details {
