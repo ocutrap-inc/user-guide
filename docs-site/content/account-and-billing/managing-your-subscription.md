@@ -21,6 +21,7 @@ From a trap's **Billing** tab you can:
 * **Update payment method** – Manage your cards through the secure **Stripe** billing portal.
 * **Cancel subscription** – Stop your subscription at any time. You’ll continue to have access until the end of your current billing period.
 * **Reactivate** – Changed your mind after canceling? Until your billing period ends, a notice on the trap's **Billing** tab lets you reactivate with one tap — your subscription continues as if you never canceled.
+* **View invoices** – See past charges on the trap's **Billing** tab (trap-specific) or the main **Billing** page (all traps), and open any invoice for a detailed receipt.
 
 ### Pausing a Trap
 
