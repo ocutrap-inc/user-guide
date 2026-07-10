@@ -3,14 +3,14 @@
 `docs.ocutrap.com` was cut over from GitBook to this Vercel-hosted docs-site
 on **2026-07-10** (Vercel project `ocutrap-docs`, team `grahampaticos-projects`).
 
-## Phase 1 — GitBook plan still active (until cancellation)
+## Phase 1 — GitBook plan still active (HISTORICAL — plan cancelled 2026-07-10)
 
 Rollback is a **pure DNS revert**: the GitBook space is intact and still
 serves the old content, so pointing `docs.ocutrap.com` back at GitBook
 (re-add the custom domain in GitBook, remove it from the Vercel project)
 fully restores the old site. No data restore needed.
 
-## Phase 2 — after the GitBook plan is cancelled (**point of no return**)
+## Phase 2 — after the GitBook plan is cancelled (**point of no return — ACTIVE since 2026-07-10**)
 
 The GitBook space (and its `files.gitbook.com` file storage) is gone.
 Rollback then means **redeploy-only**:
@@ -35,4 +35,4 @@ Rollback then means **redeploy-only**:
 - [x] AI ask (`/api/ask`) live-verified with citations (2026-07-10)
 - [x] sitemap/robots/canonical/OG all on docs.ocutrap.com (2026-07-10)
 - [x] No content references `files.gitbook.com` (videos moved to Vercel Blob)
-- [ ] GitBook plan cancelled, no auto-renew charge confirmed (Graham, before 07-25)
+- [x] GitBook plan cancelled + GitHub app uninstalled (Graham, 2026-07-10)

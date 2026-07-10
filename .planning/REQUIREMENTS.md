@@ -74,9 +74,9 @@
 > Added 2026-07-07. GitBook announced ~8× pricing; renewal is
 > **2026-07-25** — the migration must be live and GitBook cancelled
 > before that date.
-> **Status 2026-07-10: DNS cutover DONE — docs.ocutrap.com serves the
-> Vercel docs-site (SITE-06). Remaining: cancel the GitBook plan before
-> 07-25. Rollback path: `docs-site/CUTOVER-ROLLBACK.md`.**
+> **Status 2026-07-10: COMPLETE — docs.ocutrap.com serves the Vercel
+> docs-site and the GitBook plan is cancelled (SITE-06 done, SW-297
+> closed). Rollback is redeploy-only: `docs-site/CUTOVER-ROLLBACK.md`.**
 > `docs.ocutrap.com` moves to the self-hosted `docs-site/` Next.js app
 > already scaffolded in this repo. The current GitBook look is the design
 > target — customers should not notice the platform change, except that
