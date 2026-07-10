@@ -455,6 +455,20 @@ function resolveInternalLinks(html: string, sourcePath?: string): string {
   );
 }
 
+// Same rewrite for image/video sources. The preprocessor's src= pass only
+// sees raw-HTML tags in the markdown source; markdown-syntax images
+// (`![](../.gitbook/assets/x.png)`) become <img> only after remark renders
+// them, so their relative asset paths reached prod unrewritten and 404'd.
+function resolveImageSrcs(html: string, sourcePath?: string): string {
+  return html.replace(
+    /(<(?:img|source)\b[^>]*?\ssrc=")([^"]+)(")/g,
+    (whole, pre, src, post) => {
+      const resolved = resolveKbHref(src, sourcePath);
+      return resolved === null ? whole : `${pre}${resolved}${post}`;
+    }
+  );
+}
+
 export async function markdownToHtml(
   raw: string,
   sourcePath?: string
@@ -475,7 +489,10 @@ export async function markdownToHtml(
     .use(rehypeStringify)
     .process(preprocessed);
 
-  return resolveInternalLinks(convertVideoImgs(String(result)), sourcePath);
+  return resolveImageSrcs(
+    resolveInternalLinks(convertVideoImgs(String(result)), sourcePath),
+    sourcePath
+  );
 }
 
 // Decode the HTML entities rehype emits (numeric + the common named ones) back

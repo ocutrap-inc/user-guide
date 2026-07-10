@@ -50,7 +50,9 @@
 
 ### Standing Constraints
 
-- Images committed as plain Git blobs only (no LFS) — GitBook sync skips LFS.
+- Images committed as plain Git blobs only (no LFS) — docs-site serves them
+  from the repo. Video/large media → `ocutrap-docs-media` Vercel Blob store,
+  not git. (GitBook retired 2026-07-10, SITE-06 cutover.)
 - Cellular-only firmware (Particle B-Series); no WiFi anywhere in docs.
 - Notification policy: notify only when `detectionType === "captured"`.
 - ADR-0002 rejected post-detection-delay; R1 closes on first verified

@@ -33,7 +33,8 @@
   (e.g. post-detection-delay knob — ADR-0002).
 - [ ] **DOC-03**: Update screenshots and images for any pages whose UI has
   visually changed in the redesign. Images are committed as plain Git blobs
-  (no LFS) so GitBook sync picks them up.
+  (no LFS) so docs-site and the PDF build read them from the repo.
+  (Originally a GitBook-sync constraint; GitBook retired 2026-07-10.)
 - [ ] **DOC-04**: Update GitBook markdown so firmware-gated behavior matches
   what current firmware actually does (covering the AUD-02 checklist).
 
@@ -73,6 +74,9 @@
 > Added 2026-07-07. GitBook announced ~8× pricing; renewal is
 > **2026-07-25** — the migration must be live and GitBook cancelled
 > before that date.
+> **Status 2026-07-10: DNS cutover DONE — docs.ocutrap.com serves the
+> Vercel docs-site (SITE-06). Remaining: cancel the GitBook plan before
+> 07-25. Rollback path: `docs-site/CUTOVER-ROLLBACK.md`.**
 > `docs.ocutrap.com` moves to the self-hosted `docs-site/` Next.js app
 > already scaffolded in this repo. The current GitBook look is the design
 > target — customers should not notice the platform change, except that
