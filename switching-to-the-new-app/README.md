@@ -1,7 +1,7 @@
 ---
 description: >-
   How to move from the old OcuTrap app (base.ocutrap.com) to the new OcuTrap
-  app: create your account, confirm your traps and billing carried over, and
+  app: set your password, confirm your traps and billing carried over, and
   get familiar with what's new.
 ---
 
@@ -10,7 +10,7 @@ description: >-
 We've rebuilt the OcuTrap app from the ground up — faster, clearer, and built for the field. Your traps, capture history, and subscription are already waiting for you in the new app. This page walks you through the short, one-time move.
 
 {% hint style="info" %}
-**You keep everything.** Your traps, images, capture history, and subscription carry over. The only thing you create fresh is your login — see step&nbsp;2 for why.
+**You keep everything.** Your traps, images, capture history, and subscription carry over automatically. Your account is already set up for you under the same email — the one thing you do is set a password. See step&nbsp;2.
 {% endhint %}
 
 ***
@@ -20,7 +20,7 @@ We've rebuilt the OcuTrap app from the ground up — faster, clearer, and built 
 | | Old app | New app |
 | --- | --- | --- |
 | Web address | `base.ocutrap.com` | `app.ocutrap.com` |
-| Sign in | Your old username + password | A **new** account you create (same email) |
+| Sign in | Your old username + password | The **same email**, with a new password you set from your welcome email |
 
 ***
 
@@ -28,33 +28,41 @@ We've rebuilt the OcuTrap app from the ground up — faster, clearer, and built 
 
 ### 1. Watch for the announcement
 
-You'll get an email from us with your personal move date and a short action list. We'll also post a banner in the old app. Nothing breaks the moment you get the email — you'll have a clear window to make the switch at your own pace.
+You'll get an email from us when it's your turn to move. It confirms your account is ready and includes a **"Set your password"** link. We'll also post a banner in the old app. Nothing breaks the moment you get the email — the old app keeps working, so you can make the switch at your own pace.
 
-### 2. Create your new account — use the same email
+### 2. Set your password — your account is already set up
 
-Go to **app.ocutrap.com** and sign up. **Use the same email address you used with the old app.**
+Your new account already exists, under the **same email** you used with the old app. You don't create a new one — you just set a password.
 
-* **Why a new account?** The new app runs on a new, more secure sign-in system. For your security, passwords cannot be copied over from the old app, so you'll set a fresh password (and can turn on extra sign-in protection later).
-* **Why the same email?** Your email is how the app finds and reconnects the traps you already own. Sign up with a different email and your traps won't be waiting for you — so double-check it matches your old account.
+Open the **"Set your password"** link in your welcome email, choose a new password, and you're in at **app.ocutrap.com**.
 
-You'll verify your email during sign-up. Once verified, your traps are connected automatically — no codes to copy, nothing to re-register.
+* **Why set a password?** The new app runs on a new, more secure sign-in system, and for your security passwords can't be copied over from the old app. (You can turn on extra sign-in protection later.)
+* **Same email as before.** Your account, traps, shared access, and subscription are all attached to the email you used with the old app — that's the address you sign in with.
+
+{% hint style="info" %}
+**Prefer your phone?** The new OcuTrap app is available for iPhone and Android. <!-- TODO(CUT-08 / SW-147): insert final App Store + Google Play links before publish --> Download it, then sign in with the same email and the password you just set.
+{% endhint %}
 
 {% hint style="warning" %}
-Use the **same email**, spelled the same way. If you're not sure which email your traps are under, check an old OcuTrap notification email, or [contact support](../support/support.md) before you sign up.
+If the email we sent isn't the address you use day-to-day anymore, **don't create a separate account** — reply to the welcome email (or [contact support](../support/support.md)) and we'll move your account to the right address.
 {% endhint %}
 
 ### 3. Confirm your traps
 
-After you sign in, open your trap list. Every trap you owned in the old app should appear, along with its recent images and capture history.
+After you set your password and sign in, open your trap list. Every trap you owned in the old app is already there, along with its recent images and capture history.
 
-* Traps that were **shared with you** will also reconnect, as long as they were shared to this same email.
+* Traps that were **shared with you** are reconnected too, as long as they were shared to this same email.
 * Open a trap to confirm its images and activity are loading.
 
 If a trap is missing, don't re-register it — [contact support](../support/support.md) and we'll reconnect it for you.
 
+{% hint style="info" %}
+**Did your team share one login?** Some teams signed in to the old app with a single shared username. In the new app, each person gets their own account. Your shared login becomes **one** account, and you invite your teammates to the traps they need: open a trap, go to its **Sharing** tab, and enter each teammate's email. They'll get their own invite to set up an account, and the trap appears for them automatically. See [Sharing Traps](../faqs/sharing-traps/README.md).
+{% endhint %}
+
 ### 4. Check your billing
 
-Your subscription moves with your traps. Open **Billing** to confirm:
+Your subscription moved with your traps — same plan, same price, same renewal date, same payment method. There's no new checkout and nothing to re-enter. To confirm:
 
 * Open a trap and check its **Billing** page — your plan and next renewal date should be shown there.
 * Then check the main **Billing** overview for your account.
@@ -74,15 +82,14 @@ When you first sign in, the app also offers a short guided tour that points out 
 ### 6. Need a hand?
 
 * Everything above, plus common questions, is covered across this guide — start with **[Getting Started → App](../getting-started/app/README.md)**.
-* Stuck on any step? **[Contact support](../support/support.md)** — tell us the email you signed up with and we'll sort it out.
-* The old app stays available in **read-only** mode for a limited time after your move, so you can look back at anything you need. After that window it's retired and `base.ocutrap.com` will send you to the new app.
+* Stuck on any step? **[Contact support](../support/support.md)** — tell us the email your account is under and we'll sort it out.
+* The old app stays available until the retire date in your welcome email — so you have a clear window to move at your own pace. After that it's retired, and `base.ocutrap.com` automatically sends you to the new app (your old bookmark still works). Everything you need is already in the new app, so there's nothing to save or export from the old one.
 
 ***
 
 ## Quick checklist
 
-* [ ] I signed up at **app.ocutrap.com** with the **same email** as my old account.
-* [ ] I verified my email.
+* [ ] I set my password from the welcome email and signed in at **app.ocutrap.com** with the **same email** as my old account.
 * [ ] My traps, images, and history appear.
 * [ ] My billing / subscription looks right (checked per-trap **and** account Billing).
 * [ ] I skimmed [What's new](whats-new.md).

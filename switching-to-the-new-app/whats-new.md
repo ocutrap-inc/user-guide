@@ -25,7 +25,7 @@ mode-name cells in the table below and the one line under "Arming your trap".
 | Old app | New app |
 | --- | --- |
 | `base.ocutrap.com` | `app.ocutrap.com` |
-| Your old username and password | A new account you create with the **same email** — see [Switching to the new OcuTrap app](README.md) |
+| Your old username and password | The **same email**, with a new password you set from your welcome email — your account is already set up, see [Switching to the new OcuTrap app](README.md) |
 
 ***
 
