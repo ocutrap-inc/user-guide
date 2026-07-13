@@ -53,9 +53,8 @@ When viewing trap locations, you'll see key metrics:
 
 #### Access Levels
 
-* GPS viewing capabilities are restricted by user access level
-* Owner and Manager level users and above can view all trap locations in map tab
-* Lower access levels may have restricted viewing capabilities
+* Anyone with access to a trap can view that trap's location. The owner and any managers the trap is shared with all see the trap on the map tab.
+* You only see traps you own or that have been shared with you — a trap's location is not visible to anyone you haven't shared it with.
 
 ### Troubleshooting
 

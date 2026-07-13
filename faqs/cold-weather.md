@@ -12,8 +12,8 @@ Operating OcuTrap in cold weather requires some additional considerations. This 
 
 ### Operating Temperature
 
-* **Ideal Range:** 0°C (32°F) to 40°C (104°F)
-* **Extended Range:** The trap can function in temperatures as low as 0°C (32°F). However, prolonged exposure is not recommended as it may impact performance and battery longevity. Possible issues include door and motor sticking, icing, and motor seizing.
+* **Supported operating range:** 0°C (32°F) to 40°C (104°F). **0°C is the published operating floor** — the trap is not rated or supported below it.
+* **Below 0°C:** The trap may still power on, but operation below freezing is outside the supported range and is not recommended. Prolonged sub-freezing exposure can impact performance and battery longevity, with issues such as door and motor sticking, icing, and motor seizing.
 
 ### Charging Temperature
 
@@ -24,8 +24,10 @@ Operating OcuTrap in cold weather requires some additional considerations. This 
 
 The OcuTrap R1 model features an integrated temperature sensor that monitors internal conditions:
 
-* **Low Temperature Alert:** Triggers at -10°C (14°F)
+* **Low Temperature Alert:** Triggers at -10°C (14°F) by default
 * **Alert Interval:** Every 8 hours (configurable from 0–48 hours)
+
+The low-temperature alert default (-10°C) sits **below** the 0°C operating floor on purpose: it is an early warning that the trap is now running below its supported range, not a sign that -10°C is safe. Treat the alert as a prompt to retrieve or warm the trap. You can raise the Low Temperature Limit in Settings if you want to be warned before conditions reach freezing.
 
 ## Battery Performance in Cold Weather
 

@@ -66,7 +66,7 @@ Use the table below to interpret what the trap is doing. If the LED never turns 
 | Fast blinking cyan | Connecting to the cloud | Wait a few minutes |
 | Blinking green | Looking for cellular/internet connection | Move to better cellular coverage |
 | Blinking magenta | Firmware update or safe mode activity | Leave powered on and wait |
-| Rapid red blinks | System error | Count the blinks and contact Support |
+| Rapid red blinks | Powering down — the power button is being held | Release the power button within ~3 seconds to cancel, or let it finish and press power again to restart |
 | Solid red during boot | Battery too low at startup | Charge or replace the battery |
 | No light | Powered off, hibernating, no battery, or failed boot | Reconnect battery and press power button |
 

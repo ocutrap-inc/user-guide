@@ -152,7 +152,7 @@ Learn the physical button controls:
 | Action | How To |
 |--------|--------|
 | **View status** | Single press User button (5 second display) |
-| **Open/close door** | Double-press User button + hold 5 seconds |
+| **Open/close door** | Press User button once, then press again and hold ~5 seconds (about 7 seconds total before the door moves) |
 | **Arm/disarm** | Press User button, then Power button |
 | **Power off** | Hold Power button for 3 seconds |
 | **Wake from hibernation** | Press Power button |
