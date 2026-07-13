@@ -22,7 +22,7 @@ On the web app, open **Settings** and find the **Notifications** section. You pi
 **Channels**
 
 * **Email** — sent to your account email address.
-* **In-app** — shown in the app's inbox.
+* **In-app** — shown in the app's **Inbox**. The **notification bell** in the app header shows your unread-inbox count (the same number as the Inbox); open it to read in-app notifications.
 * **Push** — mobile only; configure push in the mobile app (the toggle is disabled on web).
 
 ## Mobile (Notification Settings)

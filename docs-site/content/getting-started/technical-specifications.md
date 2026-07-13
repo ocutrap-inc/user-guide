@@ -36,13 +36,13 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 | Specification                      | Value                                   |
 | ---------------------------------- | --------------------------------------- |
-| **Battery Type**                   | Rechargeable KBT 12V Lithium-ion        |
+| **Battery Type**                   | Rechargeable KBT 12V Lithium-ion (6-cell pack)  |
 | **Standard Capacity**              | 10,000 mAh (111 Wh) — new traps / US shipments |
-| **Canadian Variant**               | 5,200 mAh — Canadian shipments          |
+| **Canadian Variant**               | 5,200 mAh (56 Wh) — Canadian shipments  |
 | **Operating Voltage Range**        | 7.0V – 15.0V                            |
-| **Low Battery Warning (20%)**      | 10.4V (default, configurable)           |
+| **Low Battery Warning (20%)**      | \~10.4V (internal, set by Battery Type) |
 | **Critical Battery Warning (10%)** | \~9.5V                                  |
-| **Auto Power-Off Threshold**       | 9.6V (default, configurable 7.0V–12.0V) |
+| **Auto Power-Off Threshold**       | \~9.6V (internal, set by Battery Type)  |
 | **Runtime (10000 mAh)**            | ~40+ days per charge (typical usage)    |
 | **Runtime (5200 mAh)**             | \~21 days per charge (typical usage)    |
 | **Charger (10000 mAh)**            | 2A @ 12V, \~5–6 hours full charge       |
@@ -50,6 +50,8 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 | **Trap connector (5200 mAh)**      | Male XT30 on pack; female XT30 on trap PCB |
 | **Trap connector (10000 mAh)**   | Female XT30 on pack; male XT30 on trap PCB |
 | **Alternate pack / connector**   | Contact support for PCB + holder swap   |
+
+> **Selecting your battery in the app:** OcuTrap ships with either the **5,200 mAh (56 Wh)** or **10,000 mAh (111 Wh)** 12 V 6-cell pack. Tell the app which one your trap uses under **Settings → Battery Type** — it adjusts the low-battery alert thresholds and level readout to match. The setting defaults to the 5,200 mAh pack, so update it if your trap shipped with the 10,000 mAh battery. There are no manual voltage or percentage threshold controls; the app derives them from your Battery Type.
 
 ***
 

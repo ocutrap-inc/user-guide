@@ -1,6 +1,6 @@
 # Adding a trap to your account
 
-You add ("activate") a trap from the OcuTrap app at [app.ocutrap.com](https://app.ocutrap.com) or in the mobile app. Have the trap with you so you can read its ID labels, and make sure your email is verified first — the app blocks activation until it is (use **Resend verification email** if needed).
+You add ("activate") a trap from the OcuTrap app at [app.ocutrap.com](https://app.ocutrap.com) or in the mobile app. Have the trap with you so you can read its ID labels, and make sure your email is verified first — until it is, the **Activate** button is disabled and explains why (use **Resend verification email** if needed). If you leave the wizard to verify your email, your progress is saved, so you can pick up where you left off.
 
 ## What you'll need
 
@@ -19,11 +19,11 @@ Support may ask for either — they refer to the same device.
 4. **Cellular plan** — choose **Monthly** or **Annual**.
 5. **Site & location** — give the trap a name and set its location.
 6. **Confirm** — review the summary and tap **Activate trap**.
-7. When activation completes, the app opens the new trap's **console page**. Until the device connects for the first time, a **Waiting for first check-in** note appears there; it clears automatically once the trap checks in, usually within a few minutes. To finish setting up billing, open the trap's **Billing** tab.
+7. When activation completes, the app opens the new trap's page and shows an amber **Start your free trial** callout. Your **30-day free trial** begins when you set up billing at checkout — **not** at activation — so open the trap's **Billing** page from that callout to start it. Until the device connects for the first time, a **Waiting for first check-in** note appears on the trap page; it clears automatically once the trap checks in, usually within a few minutes.
 
 ## Activate a trap (mobile)
 
 1. Open the OcuTrap mobile app and sign in.
 2. Tap **Add trap**.
 3. Enter a **Name** and the **Device ID**, and optionally a location.
-4. Tap **Create Trap**. Set up billing afterward from the trap's Billing screen.
+4. Tap **Create Trap**. Set up billing afterward from the trap's Billing screen — your 30-day free trial starts when you set up billing at checkout, not at activation.

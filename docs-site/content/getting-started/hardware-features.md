@@ -65,7 +65,8 @@ OcuTrap includes multiple sensors for monitoring and capture detection:
 
 Rechargeable **12V lithium-ion battery** for extended field deployment:
 - **10,000 mAh (111 Wh)** — Standard for new traps; ~40+ days runtime per charge
-- **5,200 mAh variant** — Canadian shipments (~21 days runtime)
+- **5,200 mAh (56 Wh)** — Canadian shipments (~21 days runtime)
+- **Battery Type setting** — Pick your pack in **Settings → Battery Type**; alert thresholds adjust automatically
 - **Low battery alerts** — Notifications at 20% and 10% levels
 - **Auto-hibernation** — Protects battery when voltage drops too low
 
