@@ -35,16 +35,19 @@ Ensure the battery is fully charged. A full charge takes about 5–6 hours (see 
 For the motor assembly, gather these components:
 
 * The bracket (top locking mechanism)
-* White washers
-* Springs
-* Nuts
-* Assembly tool
+* Black spacers
+* Black capped nuts
+* Nut driver + nut assembly tool
 * The metal door
 
 ### Instructions:
 
 1. Thread the rod through the metal door.
-2. On each end of the rod, add a white washer, followed by a spring, and secure it with a nut.
+2. On each end of the rod, add a spacer and secure it with a capped nut. Tighten with the nut driver and assembly tool until snug.
+
+{% hint style="info" %}
+**Hardware note:** The video above shows an earlier door-rod revision with white washers and springs. Current OcuTrap R1 units ship with **black spacers and black capped nuts** instead — follow the written steps here and in [Hardware Set Up](setting-up.md), which match the parts in your box.
+{% endhint %}
 
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/my-movie-10doro2-Q8qAjNeBMNMRF5biVpUmca5OkOoOda.mp4" %}
 

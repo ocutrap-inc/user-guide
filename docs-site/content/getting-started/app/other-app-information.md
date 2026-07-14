@@ -12,30 +12,17 @@
 
 This concise guide helps users understand the operational modes of the OcuTrap, ensuring efficient and safe usage.
 
-### Refresh
+### Refreshing data
 
-The refresh button will send a request to the trap for the most recent data if the trap is connected.
+To pull the latest data, select **Last heard** on the trap's vitals and **Ping** the trap — it will check in right away if it's connected.
 
-### Control Button
+### Trap controls
 
-The control button opens a popup. You can see:
-
-* Signal Strength
-* Temperature
-* Last Heard time
-* Flash LED light
-* Sound the alarm
-* Share the trap with other users
-
-### Expand ⬇️
-
-The options icon is located at the bottom of the trap tab. You can view the camera and map.
+Commands are sent from the **Trap Controls** bar on the trap detail screen — arm mode (Unarmed / Scouting / Armed), open/close door, request image, location, buzz, and (under Advanced) reboot and sleep. Battery, signal, temperature, last-heard, camera, and map are all shown on the same trap detail screen. See [Trap Control](trap-control.md) for the full rundown.
 
 ### Sharing
 
-You can share traps with other users within the traps options popup. Enter the email of an existing OcuTrap users email to share the trap. You cannot share with yourself, non-OcuTrap users, or double share traps. If the email fits these conditions, an email will be sent and the trap will appear at the bottom of the shared user's traps page under the Shared section.
-
-When the trap is shared, the shared user can perform the activites of a regular trap, except the shared user cannot share the shared trap with other users.
+Share a trap from its **Sharing** tab: enter the email of the person you want to share with, and (if you're the owner) choose their manager level. You cannot share with yourself or double-share the same trap. Once they accept the emailed invite, the trap appears in their account. See [Sharing Traps](../../faqs/sharing-traps/README.md) and [User Levels](../../faqs/sharing-traps/user-levels.md) for details.
 
 ### Changing trap name
 

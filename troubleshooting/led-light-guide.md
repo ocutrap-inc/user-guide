@@ -55,8 +55,8 @@ The light briefly confirms your action, then returns to its idle pattern:
 | Pattern | Meaning |
 |---|---|
 | Brief solid red (~2 seconds) after a command | The action was blocked (for example, arming failed) — see the row above |
-| Rapid red blinking | Powering down, or a low‑battery shutdown |
-| Solid red (staying red) | Hibernating or shut down |
+| Rapid red blinking | The trap is **powering down** because the power button is being held. Release within ~3 seconds to cancel; otherwise it finishes shutting down. This is **not** an error code. |
+| Solid red (staying red) | Hibernating or shut down — including after a low‑battery shutdown. Charge or replace the battery and press the power button to wake it. |
 
 ---
 

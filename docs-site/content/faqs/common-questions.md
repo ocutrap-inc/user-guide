@@ -38,11 +38,11 @@ Personal details would include your first name, last name, email. These can be c
 
 You can share your trap with other users to allow them to monitor and control it. To share a trap:
 
-1. Open the **OcuTrap Mobile App** and select the trap you want to share.
-2. Navigate to **Settings** → **Sharing** (or **Manage Users**).
-3. Tap **Add User** and enter the email address of the person you want to share with.
-4. Select the **permission level** for the new user (see User Levels for details).
-5. The invited user will receive a notification and can access the trap once they accept.
+1. Open the app and select the trap you want to share.
+2. Open the trap's **Sharing** tab.
+3. Enter the email address of the person you want to share with.
+4. If you're the trap **owner**, choose their manager level — **Standard Manager** or **Full Manager**.
+5. Send the invitation. The invited user gets an email and can access the trap once they accept it.
 
 For more details on permission levels, see [User Levels](sharing-traps/user-levels.md).
 
@@ -657,8 +657,12 @@ While OcuTrap operates as a standalone device, future iterations may offer integ
 
 <details>
 
-<summary>What is one-player id?</summary>
+<summary>Why am I not getting push notifications?</summary>
 
-This ID is used to maintain push notifications to your mobile device. If the field is blank under your account page, you will not receive push notifications. Please allow notifications on your mobile device to enable the capture of the one-player ID. If the issue persists, please delete the OcuTrap app and redownload it.
+The OcuTrap mobile app registers your device for push notifications automatically when you sign in — there's no ID or code for you to enter. If you're not receiving notifications:
+
+* Make sure you **allowed notifications** for the OcuTrap app in your phone's settings.
+* Confirm your **notification preferences** in the app (Account settings) are turned on for the alerts you want.
+* If notifications still don't arrive, **delete the OcuTrap app and reinstall it**, then sign in again so the app can re-register your device.
 
 </details>

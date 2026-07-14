@@ -29,11 +29,9 @@
   * [Trap Control](getting-started/app/trap-control.md)
   * [Logs](getting-started/app/logs.md)
   * [Deleting an Image](getting-started/app/deleting-an-image.md)
-  * [Image Recognition](getting-started/app/image-recognition.md)
   * [Resetting Password](getting-started/app/resetting-password.md)
   * [LED modes](getting-started/app/led-modes.md)
   * [Other app information](getting-started/app/other-app-information.md)
-  * [Interface Views](getting-started/app/interface-views.md)
 * [Tips and Tricks](getting-started/tips-and-tricks.md)
 * [Handling & Releasing a Captured Animal](getting-started/handling-a-captured-animal.md)
 * [Trap Settings](getting-started/trap-settings/README.md)
@@ -80,7 +78,7 @@
 ## Support
 
 * [Contact Us](support/support.md)
-* [Bug reporting](support/support-1.md)
+* [Bug reporting](support/bug-reporting.md)
 * [Safety Information](support/safety-information.md)
 * [Purchases](support/purchases.md)
 * [Nonprofit and 501(c) Program](support/nonprofit-and-501-c-program.md)
