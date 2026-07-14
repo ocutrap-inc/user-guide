@@ -63,10 +63,6 @@
   * [Password Policy for Users](faqs/miscellaneous/password-policy-for-users.md)
 * [Accessory Port](faqs/accessory-button-port.md)
 
-***
-
-* [Deleting a Trap](deleting-a-trap.md)
-
 ## Troubleshooting
 
 * [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
@@ -96,6 +92,7 @@
 
 ## Device Management
 
+* [Deleting a Trap](deleting-a-trap.md)
 * [Selling or Transferring a Trap](device-management/selling-or-transferring-a-trap.md)
 * [Trap Test Mode](device-management/trap-test-mode.md)
 

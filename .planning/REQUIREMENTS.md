@@ -37,6 +37,20 @@
   (Originally a GitBook-sync constraint; GitBook retired 2026-07-10.)
 - [ ] **DOC-04**: Update GitBook markdown so firmware-gated behavior matches
   what current firmware actually does (covering the AUD-02 checklist).
+- [x] **DOC-05** (SW-355): Rewrite the trap delete/transfer lifecycle pages to
+  the shipped React app. `deleting-a-trap.md` describes the real flow (trap →
+  Settings tab → Danger zone → Remove trap → confirm dialog; owner-only; web
+  only) and the cancel-subscription-first requirement enforced by the app
+  (SW-475 / app PR #273 — publish after it deploys). No auto-cancel, no
+  confirmation email (both were Bubble-era). `selling-or-transferring-a-trap.md`
+  leads with the explicit order — cancel subscription → remove trap → new
+  owner adds + subscribes — and states that images/history are deleted, not
+  transferred. Both pages cross-link each other, managing-your-subscription,
+  adding-a-trap, and support (for the "Device ID already registered" dead end,
+  SW-476). Nav: "Deleting a Trap" moves from the orphan `***` block into
+  `## Device Management` beside the transfer page (drift item justifying the
+  TOC exception; URL slug unchanged). Root and `docs-site/content/` copies stay
+  byte-identical.
 
 ### PDF Regeneration (PDF)
 
@@ -181,6 +195,7 @@
 | DOC-02  | Phase 2: Patch                 |
 | DOC-03  | Phase 2: Patch                 |
 | DOC-04  | Phase 2: Patch                 |
+| DOC-05  | Post-launch drift (SW-355)     |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
