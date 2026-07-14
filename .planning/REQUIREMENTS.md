@@ -51,6 +51,23 @@
   `## Device Management` beside the transfer page (drift item justifying the
   TOC exception; URL slug unchanged). Root and `docs-site/content/` copies stay
   byte-identical.
+- [x] **DOC-06** (SW-479 / SW-476): Sync two customer-visible app changes.
+  Scout-mode notifications (SW-479 / app PR #288, ADR 0003 Amendment 1): Scout
+  Alert / Scout Trigger events are now recorded in the trap's activity feed
+  only — they never send push or email, never appear in the Inbox, and never
+  affect the notification-bell count (outdoor-temperature/weather alerts are
+  unaffected). Patched `getting-started/app/scouting-mode.md` (Scouting vs.
+  Armed table, What-to-expect bullets, 5-minute cadence reframed as feed
+  cadence, troubleshooting item) and `getting-started/app/notification-settings.md`
+  (In-app channel exception, Mobile Device-alerts scope, closing note).
+  Second-hand trap claim (SW-476 / app PR #290): the Add flow now self-serve
+  transfers a parked unit when the entered Trap ID matches the Device ID pair
+  printed on the unit; added a "Buying a trap second-hand" section to
+  `device-management/selling-or-transferring-a-trap.md` and replaced the
+  outdated "contact us to release the device" hint. Aggregate
+  `OcuTrap_Knowledge_Base_Complete.md` synced (scout glossary + Recent Updates +
+  transfer note). Root and `docs-site/content/` copies byte-identical; KB PDF
+  regenerated. Publishes only when app PRs #288 and #290 deploy.
 
 ### PDF Regeneration (PDF)
 
@@ -196,6 +213,7 @@
 | DOC-03  | Phase 2: Patch                 |
 | DOC-04  | Phase 2: Patch                 |
 | DOC-05  | Post-launch drift (SW-355)     |
+| DOC-06  | Post-launch drift (SW-479/476)  |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

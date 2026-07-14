@@ -190,7 +190,7 @@ The Open/Close button controls the trap door remotely. **Open** lifts the door f
 The trap operates in three distinct states:
 
 - **Armed:** Trap set to capture. Door must be manually opened first. Enters low-power mode with periodic updates. Alerts if disconnected for more than 1 hour.
-- **Scouting:** Watch activity without closing the door. Sends Scout Alert and Scout Trigger notifications but does not close the door. Resets approximately 5 minutes after the animal leaves.
+- **Scouting:** Watch activity without closing the door. Records Scout Alert and Scout Trigger events in the trap's activity feed only — these do not send push or email notifications, appear in your Inbox, or affect the notification-bell count. Resets approximately 5 minutes after the animal leaves.
 - **Unarmed:** Standby mode. Listens for commands but is not set to capture. Automatically enters this state after a capture event.
 
 ### Interface Views
@@ -945,6 +945,8 @@ Log in, locate the trap, click "Delete Trap," and confirm by typing the exact tr
 
 The new owner creates an OcuTrap account (if needed), verifies their email, opens **Add trap**, and completes the wizard — entering the **Trap ID** and **Device ID**, choosing a cellular plan, and tapping **Activate trap**.
 
+If the app reports the Device ID is already registered — common when buying a trap the previous owner already removed — OcuTrap automatically transfers the trap to the new owner when the entered **Trap ID** matches the one printed on the unit; no support ticket is needed. If it can't be claimed automatically, double-check the printed Trap ID or contact support.
+
 ### Step 3: Activate subscription
 
 The new owner activates a subscription if required. Note: the warranty period dates from the original first activation, and the free trial may already have been used.
@@ -1012,7 +1014,7 @@ Reliability, battery, and image improvements including faster cellular uploads, 
 
 ### April 2026 — Scouting Mode
 
-Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; sends Scout Alert and Scout Trigger notifications at pre-capture and trigger distances. Includes a 5-minute cooldown after the animal leaves the area.
+Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; records Scout Alert and Scout Trigger events in the trap's activity feed at pre-capture and trigger distances (feed only — no push, email, or Inbox notifications). Includes a 5-minute cooldown after the animal leaves the area.
 
 ### April 2025 — Firmware v1.12.7-250
 

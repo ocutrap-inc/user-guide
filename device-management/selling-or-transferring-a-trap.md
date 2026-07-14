@@ -42,8 +42,16 @@ Removing the trap permanently deletes your images and history for that trap — 
 2. After signing in, they open **Add trap** and enter the **Trap ID** and **Device ID** (found on the trap and inside the POD), choose a cellular plan, name the trap, set its location, and tap **Activate trap** — see [adding-a-trap-to-your-account.md](../getting-started/app/adding-a-trap-to-your-account.md "mention").
 3. They then start a subscription from the trap's **Billing** tab to bring the trap online.
 
+### Buying a trap second-hand
+
+If you bought a trap from a previous owner, add it the normal way: open **Add trap** and enter the **Trap ID** and **Device ID** printed on the unit (and inside the POD), then finish the wizard — see [adding-a-trap-to-your-account.md](../getting-started/app/adding-a-trap-to-your-account.md "mention").
+
+If the app says **"Device ID already registered,"** OcuTrap automatically checks whether the trap is unclaimed. When the **Trap ID** you entered matches the one printed on the unit, the trap is transferred to your account and the add continues as normal — no support ticket needed.
+
+If it can't be claimed automatically — the Trap ID doesn't match the unit, the trap still belongs to someone else, or the unit can't be verified — you'll be asked to double-check the **Trap ID** printed on the unit or contact support. Re-enter the printed Trap ID exactly; if it still won't add, contact us via [support.md](../support/support.md "mention").
+
 {% hint style="info" %}
-If the new owner sees **"Device ID already registered"** when adding the trap, contact us via [support.md](../support/support.md "mention") — the device may need to be released by our team before it can be added to the new account.
+A seller doesn't need to do anything special to release a trap — removing it from their account (Steps 1–2 above) is enough for the next owner to add it.
 {% endhint %}
 
 ***
