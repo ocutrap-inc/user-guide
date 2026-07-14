@@ -9,12 +9,11 @@ OcuTrap allows users to share traps with others, enabling collaboration and remo
 
 ### How to Share a Trap
 
-1. **Log into your OcuTrap account.**
-2. Navigate to the **Sharing** section.
-3. Select the **trap** you want to share.
-4. Click the **plus (+) icon** to add a new user.
-5. Enter the recipient’s **valid email address**.
-6. Confirm the sharing action.
+1. **Log into your OcuTrap account** and open the **trap** you want to share.
+2. Open the trap's **Sharing** tab.
+3. Enter the recipient’s **valid email address**.
+4. If you're the trap **owner**, choose the manager level for this person — **Standard Manager** or **Full Manager** (see [User Levels](user-levels.md)).
+5. Send the invitation.
 
 ### Pending invites
 

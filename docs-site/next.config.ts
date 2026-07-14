@@ -23,12 +23,18 @@ const nextConfig: NextConfig = {
 
   // 301 redirects for any legacy GitBook URL whose slug does NOT match a
   // current app route. The full live GitBook sitemap (sitemap-pages.xml, 92
-  // URLs) was diffed against the SUMMARY.md-derived routes and matched 1:1,
-  // so no redirects are required today (see docs-site/seo-parity-report.md).
-  // Add { source, destination, permanent: true } entries here if a slug is
-  // ever renamed so customer bookmarks and search results keep resolving.
+  // URLs) was diffed against the SUMMARY.md-derived routes and matched 1:1.
+  // Add { source, destination, permanent: true } entries here when a slug is
+  // renamed so customer bookmarks and search results keep resolving.
   async redirects() {
-    return [];
+    return [
+      // Bug reporting page renamed support-1 → bug-reporting (SW-341).
+      {
+        source: "/support/support-1",
+        destination: "/support/bug-reporting",
+        permanent: true,
+      },
+    ];
   },
 };
 

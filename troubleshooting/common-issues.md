@@ -108,7 +108,7 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 
 **Solution:**
 1. Wait for the next scheduled update (check your GPS Interval setting)
-2. Request a manual update: Go to Controls → tap the Data button
+2. Request a manual update: in the Trap Controls bar, tap **Location**
 3. Ensure GPS is not disabled in settings
 
 ### No GPS Fix Available
@@ -210,8 +210,8 @@ If the trap enters hibernation unexpectedly:
 2. If red and black internal wires are visible at the connector, see [Wire Exposed](wire-exposed.md)
 3. Verify no physical obstruction is blocking the door
 4. Check battery level — door operation requires adequate power
-5. Use the manual door control: Double-press User Button + hold for 5 seconds
-6. Check for motor fault indicator (orange LED)
+5. Use the manual door control: press the **User Button** once, then press again and **hold ~5 seconds** (about 7 seconds total before the door moves)
+6. Check for a sensor-fault indicator (3 orange flashes)
 
 ### Door Not Latching Behind the Locking Bar
 
@@ -265,14 +265,14 @@ When the door closes correctly, it sits **behind and underneath the locking bar*
 3. Check battery connections
 4. If battery is charged and power button doesn't respond, contact support
 
-### Rapid Red Blinking (SOS)
+### Rapid Red Blinking
 
-This indicates a **system error**.
+Rapid red blinking means the trap is **powering down** because the power button is being held — it is **not** an error code.
 
 **Solution:**
-1. If fewer than 10 blinks, the trap may recover automatically
-2. If more than 10 blinks, contact support
-3. Note any patterns or counts to share with support
+1. If you didn't mean to power off, **release the power button within about 3 seconds** to cancel the shutdown.
+2. If it finishes shutting down, the LED goes **solid red** and the trap powers off. Press the power button again to turn it back on.
+3. Genuine faults show as brief flash bursts instead: **3 orange flashes** (sensor error — clean the POD lens and power-cycle) or **5 magenta flashes** (data error). If a fault repeats, contact support.
 
 For LED status meanings, see the [LED Guide](../getting-started/led-guide.md).
 

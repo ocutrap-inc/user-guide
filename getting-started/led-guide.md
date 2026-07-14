@@ -17,11 +17,11 @@ These patterns occur during power-up, connectivity, or firmware activity.
 | Connecting to Cloud  | Fast Blinking Cyan | Attempting to connect to the cloud.                       |
 | OTA Firmware Update  | Blinking Magenta   | Firmware update or booting in safe mode.                  |
 | Looking for Internet | Blinking Green     | Searching for a cellular signal.                          |
-| Red Flash SOS        | Rapid Red Blinks   | System error. Contact support if >10 blinks.              |
+| Powering Down        | Rapid Red Blinks   | The power button is being held to shut the trap down. Release within ~3 seconds to cancel; otherwise the LED goes solid red and the trap powers off. |
 | No Status LED        | No Light           | Device has no power or failed to boot.                    |
-| Hibernation          | LED Off            | Trap has entered low-power sleep. Wake with power button. |
+| Hibernation          | LED Off / Solid Red | Trap has entered low-power sleep (often after a low-battery shutdown). Wake with power button. |
 
-> Note: These modes are managed automatically. Only use the power button if the LED does not respond.
+> Note: Rapid red blinking is **not** an error code — it means the trap is powering down. Genuine faults show as brief flash bursts: **3 orange flashes** for a sensor error (clean the lens and power-cycle) or **5 magenta flashes** for a data error. If a fault repeats, [contact support](../support/support.md). These modes are managed automatically; only use the power button if the LED does not respond.
 
 ***
 
@@ -56,8 +56,10 @@ These appear when using the physical **User Button** or **Power Button** on the 
 
 To manually open or close the trap door:
 
-1. Press the **User Button**
-2. Press again and hold for 5 seconds
+1. Press the **User Button** once.
+2. Press it again and **hold for about 5 seconds**. After a short confirmation delay (about **7 seconds total** from the start of the hold), the door actuates.
+
+Hold the button for the full duration — releasing early cancels the action. The door then opens (or closes) and stays in that position; there is no auto-close timer.
 
 | Action     | LED Pattern    |
 | ---------- | -------------- |

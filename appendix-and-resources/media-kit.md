@@ -24,43 +24,17 @@ OcuTrap is a smart animal trap which will save you time and money. Open the trap
 
 ### Social Media Full Logo
 
-{% tabs %}
-{% tab title="Linkedin" %}
-{% file src="../.gitbook/assets/OcuTrap_google.png" %}
-{% endtab %}
+The same full logo works across LinkedIn, Google, and YouTube.
 
-{% tab title="Google" %}
 {% file src="../.gitbook/assets/OcuTrap_google.png" %}
-{% endtab %}
-
-{% tab title="Youtube" %}
-{% file src="../.gitbook/assets/OcuTrap_google.png" %}
-{% endtab %}
-{% endtabs %}
 
 ### Icons
 
-{% tabs %}
-{% tab title="Google" %}
-{% file src="../.gitbook/assets/OcuTrap_icon_google.png" %}
-{% endtab %}
+Use the standard app icon for most platforms (Google, Facebook, LinkedIn). The universal icon is a square variant that also suits Instagram.
 
-{% tab title="Facebook" %}
 {% file src="../.gitbook/assets/OcuTrap_icon_google.png" %}
-{% endtab %}
 
-{% tab title="Linkedin" %}
-{% file src="../.gitbook/assets/OcuTrap_icon_google.png" %}
-{% endtab %}
-
-{% tab title="Instagram" %}
 {% file src="../.gitbook/assets/OcuTrap_icon_Universal.jpg" %}
-{% endtab %}
-
-{% tab title="Universal" %}
-{% file src="../.gitbook/assets/OcuTrap_icon_Universal.jpg" %}
-{% endtab %}
-{% endtabs %}
 
 ### Other files
 

@@ -118,7 +118,7 @@ The 12V accessory port can power external devices like dispensers, pumps, or oth
 | Setting | Options | Default | Description |
 |---------|---------|---------|-------------|
 | **User Beeps** | On/Off | On | Audible beeps for button presses, state changes, and feedback. |
-| **Enhanced Door Closing** | On/Off | Off | Performs additional open/close cycle to ensure door is fully locked. |
+| **Enhanced Door Closing** | On/Off | On | Performs an additional open/close cycle to ensure the door is fully locked. |
 | **Units** | Metric/Imperial | Imperial | Display units for distance and temperature throughout the app. |
 
 ---
