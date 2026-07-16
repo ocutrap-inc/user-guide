@@ -5,3 +5,4 @@ public/gitbook-assets/
 .env
 out/
 .vercel
+.env*

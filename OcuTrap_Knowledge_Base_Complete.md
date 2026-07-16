@@ -117,7 +117,7 @@ Gather the 4 three-inch bolts, handle guard, tube, washers, 2 top metal brackets
 
 1. Create an account at app.ocutrap.com and verify your email
 2. Open **Add trap** and follow the wizard: enter your **Trap ID** and **Device ID**, choose a cellular plan, name the trap and set its location, then tap **Activate trap**
-3. The app opens your new trap's console page, with a "Waiting for first check-in" note that clears once the trap connects; finish billing from its **Billing** tab
+3. The app opens your new trap's page with an amber **Start your free trial** callout and a "Waiting for first check-in" note that clears once the trap connects. Your **30-day free trial** starts when you set up billing at checkout (not at activation) — open the trap's **Billing** page from the callout to start it
 
 ---
 
@@ -138,7 +138,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 - **Door:** Linear motor with closing speed under 0.5 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
 - **Location:** Integrated GPS module with satellite positioning. Battery-optimized updates every 8 hours by default. Map view in the app.
 - **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Tilt detection.
-- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (111 Wh) for new traps (~40+ days runtime); 5,200 mAh variant for Canada (~21 days). Low battery alerts at 20% and 10%.
+- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (111 Wh) for new traps (~40+ days runtime); 5,200 mAh (56 Wh) variant for Canada (~21 days). Set your pack under **Settings → Battery Type**; low battery alerts fire at 20% and 10% with thresholds set automatically.
 - **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. Configurable 0–30 second activation timer. 3.0A maximum continuous current.
 - **Smart Detection:** Two-step verification to reduce false triggers. Rain and debris filtering. Pre-capture notification alerts.
 
@@ -155,7 +155,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Door Close Speed | < 0.5 seconds |
 | Door Open Speed | < 1 second |
 | Door States | 6 states tracked (open, closed, opening, closing, locked, fault) |
-| Battery | KBT 12V Li-ion — 10,000 mAh / 111 Wh (new traps) / 5,200 mAh (Canada) |
+| Battery | KBT 12V Li-ion — 10,000 mAh / 111 Wh (new traps) / 5,200 mAh / 56 Wh (Canada) |
 | Operating Voltage | 7.0–15.0 V |
 | Runtime | ~40+ days (10000 mAh) / ~21 days (5200 mAh), usage dependent |
 | Connectivity | 4G LTE cellular, multi-network |
@@ -179,7 +179,7 @@ The OcuTrap app is your command center for managing traps, viewing photos, and c
 2. Open **Add trap** to start the wizard
 3. Enter your **Trap ID** and **Device ID** (both are on labels on/inside the trap)
 4. Choose a cellular plan, name the trap and set its location, then tap **Activate trap**
-5. The app opens your new trap's console page, showing a "Waiting for first check-in" note until the trap connects for the first time; finish billing from its **Billing** tab
+5. The app opens your new trap's page with an amber **Start your free trial** callout and a "Waiting for first check-in" note until the trap connects. The **30-day free trial** starts when you set up billing at checkout, not at activation — start it from the trap's **Billing** page
 
 ### Open & Closed Button
 
@@ -190,7 +190,7 @@ The Open/Close button controls the trap door remotely. **Open** lifts the door f
 The trap operates in three distinct states:
 
 - **Armed:** Trap set to capture. Door must be manually opened first. Enters low-power mode with periodic updates. Alerts if disconnected for more than 1 hour.
-- **Scouting:** Watch activity without closing the door. Sends Scout Alert and Scout Trigger notifications but does not close the door. Resets approximately 5 minutes after the animal leaves.
+- **Scouting:** Watch activity without closing the door. Records Scout Alert and Scout Trigger events in the trap's activity feed only — these do not send push or email notifications, appear in your Inbox, or affect the notification-bell count. Resets approximately 5 minutes after the animal leaves.
 - **Unarmed:** Standby mode. Listens for commands but is not set to capture. Automatically enters this state after a capture event.
 
 ### Interface Views
@@ -204,7 +204,7 @@ The app offers two main viewing modes:
 
 OcuTrap alerts come from your traps' firmware; the app lets you choose which events reach you and how they're delivered.
 
-On the **web** app (Settings → Notifications), pick channels (**Email**, **In-app**, **Push** — push is mobile-only) for each event category: **Captures**, **Trap alerts** (battery, signal, offline, tilt), **Billing**, and **System updates**.
+On the **web** app (Settings → Notifications), pick channels (**Email**, **In-app**, **Push** — push is mobile-only) for each event category: **Captures**, **Trap alerts** (battery, signal, offline, tilt), **Billing**, and **System updates**. In-app notifications appear in your **Inbox**; the **notification bell** in the app header shows your unread-inbox count (the same number as the Inbox).
 
 In the **mobile** app (Notification Settings), toggle the **Push Notifications** and **Email Alerts** channels, then choose the **Alert Types** you want (Target detected, Animal captured, Capture reminders, Low battery, Device alerts) and a digest cadence (Immediate, Daily, or Weekly).
 
@@ -343,7 +343,11 @@ An approaching animal first enters the **alert zone** (~12–18 in from the sens
 
 ### Enhanced Door Closing
 
-When enabled, the door cycles open and closed after closing to ensure a secure lock. This improves door lock reliability in the field. Enabled by default.
+The door locks by sliding under a locking rod. One close does not always get it there. The door can rest on top of the rod instead, which looks shut but does not hold.
+
+When enabled, the door backs off and re-closes after every close, including closes on a capture, to seat under the rod. This improves door lock reliability in the field. It does not confirm the lock: the trap has no sensor that can tell a locked door from a closed one, and the app reports Closed for both.
+
+Enabled by default. Turn it off only if support asks. With it off, a capture gets one close and no re-seat.
 
 ### Pre-Capture Notification
 
@@ -403,7 +407,7 @@ Perform these checks at the start of every trapping session:
 
 | Battery Model | Capacity | Runtime | Charge Time | Charger |
 |---|---|---|---|---|
-| KBT 5200 mAh (12V) | 5,200 mAh | ~21 days | 5–6 hours | 1A charger |
+| KBT 5200 mAh (12V) | 5,200 mAh (56 Wh) | ~21 days | 5–6 hours | 1A charger |
 | KBT 10000 mAh (12V) | 10,000 mAh (111 Wh) | ~40+ days | 5–6 hours | 2A charger |
 
 **Trap connectors (XT30):** The 10,000 mAh pack uses a **female XT30** on the yellow harness; the 5,200 mAh pack uses **male XT30** (opposite gender). Each trap is wired for one mating pair. To use a different capacity, contact support for the correct PCB connector and battery holder.
@@ -611,7 +615,7 @@ The OcuTrap has six power modes that automatically optimize battery usage:
 | Armed Sleep Offline | 20-minute check-ins; captures reported at check-in | Flashes 3s |
 | Hibernation | Lowest power; no communication | Off |
 
-Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below the configured power-off voltage (default 9.6V). During low-voltage hibernation the trap briefly wakes about once an hour, so it recovers on its own once the battery is recharged.
+Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below an internal power-off threshold (about 9.6V, set automatically from your **Battery Type** — there are no manual voltage controls). During low-voltage hibernation the trap briefly wakes about once an hour, so it recovers on its own once the battery is recharged.
 
 ---
 
@@ -945,6 +949,8 @@ Log in, locate the trap, click "Delete Trap," and confirm by typing the exact tr
 
 The new owner creates an OcuTrap account (if needed), verifies their email, opens **Add trap**, and completes the wizard — entering the **Trap ID** and **Device ID**, choosing a cellular plan, and tapping **Activate trap**.
 
+If the app reports the Device ID is already registered — common when buying a trap the previous owner already removed — OcuTrap automatically transfers the trap to the new owner when the entered **Trap ID** matches the one printed on the unit; no support ticket is needed. If it can't be claimed automatically, double-check the printed Trap ID or contact support.
+
 ### Step 3: Activate subscription
 
 The new owner activates a subscription if required. Note: the warranty period dates from the original first activation, and the free trial may already have been used.
@@ -1012,7 +1018,7 @@ Reliability, battery, and image improvements including faster cellular uploads, 
 
 ### April 2026 — Scouting Mode
 
-Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; sends Scout Alert and Scout Trigger notifications at pre-capture and trigger distances. Includes a 5-minute cooldown after the animal leaves the area.
+Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; records Scout Alert and Scout Trigger events in the trap's activity feed at pre-capture and trigger distances (feed only — no push, email, or Inbox notifications). Includes a 5-minute cooldown after the animal leaves the area.
 
 ### April 2025 — Firmware v1.12.7-250
 

@@ -20,6 +20,8 @@ From a trap's **Billing** tab you can:
 * **Pause subscription** – Temporarily pause a monthly plan (see below).
 * **Update payment method** – Manage your cards through the secure **Stripe** billing portal.
 * **Cancel subscription** – Stop your subscription at any time. You’ll continue to have access until the end of your current billing period.
+* **Reactivate** – Changed your mind after canceling? Until your billing period ends, a notice on the trap's **Billing** tab lets you reactivate with one tap — your subscription continues as if you never canceled.
+* **View invoices** – See past charges on the trap's **Billing** tab (trap-specific) or the main **Billing** page (all traps), and open any invoice for a detailed receipt.
 
 ### Pausing a Trap
 
@@ -28,6 +30,6 @@ Monthly plans can be **paused** for up to **6 months** from the trap's **Billing
 ### Notes
 
 * All billing is processed securely through Stripe.
-* If you cancel, you won’t be charged again, but your subscription remains active until the billing period ends.
+* If you cancel, you won’t be charged again, but your subscription remains active until the billing period ends — and you can reactivate it any time before then.
 * Annual subscriptions are billed once per year, offering savings compared to monthly billing.
 

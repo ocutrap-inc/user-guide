@@ -10,16 +10,20 @@ description: >-
 
 Battery capacity depends on your shipment region:
 
-* **KBT 10,000 mAh (12V)** — standard for **US shipments**
+* **KBT 10,000 mAh (111 Wh, 12V)** — standard for **US shipments**
   * Estimated battery life: **~40+ days** per charge (under normal usage).
   * Charger: **2A (12V)**
   * Trap cable: **female XT30** on the battery harness (trap uses mating **male XT30**).
-* **KBT 5,200 mAh (12V)** — included with **Canadian shipments**; also used on some earlier US traps
+* **KBT 5,200 mAh (56 Wh, 12V)** — included with **Canadian shipments**; also used on some earlier US traps
   * Estimated battery life: **~21 days** per charge (under normal usage).
   * Charger: **1A (12V)**
   * Trap cable: **male XT30** on the yellow harness (trap uses **female XT30**).
 
-The two packs use **opposite XT30 genders** so they cannot be plugged into the wrong trap by mistake. If you need to run a different capacity than your trap was built for, contact [support@ocutrap.com](mailto:support@ocutrap.com) to request the matching connector and battery holder.
+Both packs are **12 V, 6-cell** lithium-ion batteries. The two packs use **opposite XT30 genders** so they cannot be plugged into the wrong trap by mistake. If you need to run a different capacity than your trap was built for, contact [support@ocutrap.com](mailto:support@ocutrap.com) to request the matching connector and battery holder.
+
+### Tell the app which battery you have
+
+In the app, set your pack under **Settings → Battery Type** (choose **5,200 mAh** or **10,000 mAh**). The app uses this to adjust the **low-battery alert thresholds** and level readout for your pack, so alerts fire at the right time. Battery thresholds are handled automatically from this setting — there are no manual voltage or percentage controls. Battery Type **defaults to the 5,200 mAh pack**, so if your trap shipped with the 10,000 mAh battery, update this setting so battery level and alerts read correctly.
 
 For full electrical specs, see [Technical Specifications](technical-specifications.md).
 

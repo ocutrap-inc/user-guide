@@ -62,8 +62,8 @@ The OcuTrap door is designed to open and close automatically and swiftly. While 
   Familiarize yourself with all aspects of this manual and the device’s operation to fully understand the safety features and risks.
 * **Regular Maintenance:**\
   Inspect the device frequently to ensure that the door mechanism and other components are functioning properly without signs of wear or misalignment.
-* **Emergency Stop:**\
-  Learn and utilize the emergency stop feature (if available) to quickly disable the door mechanism in the event of an emergency.
+* **Stopping the Trap Quickly:**\
+  The OcuTrap has no dedicated emergency-stop button. The fastest ways to halt the door mechanism are: (1) set the trap to **Unarmed** in the app — an unarmed trap will not close on detection; and (2) **power the trap off** by holding the **power button** on the POD for about 3 seconds. Because the door can close quickly whenever the trap is armed, keep hands and fingers clear of the door path at all times rather than relying on a stop after the fact.
 
 ***
 

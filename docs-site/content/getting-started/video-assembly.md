@@ -24,7 +24,7 @@ _Take a moment to confirm you have all these parts._
 
 Ensure the battery is fully charged. A full charge takes about 5–6 hours (see [Battery Overview](battery-overview.md)), so it’s best to charge it ahead of time if you haven’t done so already.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2F1pbBPMveqGGP4li7XUC3%2FMy%20Movie%2010.mp4?alt=media&token=87f4b341-83c0-4c72-b805-7fb92c947164" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/my-movie-10-M84zQnBckVKb4czt9FKmPXSH5nOuOo.mp4" %}
 
 ***
 
@@ -35,18 +35,21 @@ Ensure the battery is fully charged. A full charge takes about 5–6 hours (see 
 For the motor assembly, gather these components:
 
 * The bracket (top locking mechanism)
-* White washers
-* Springs
-* Nuts
-* Assembly tool
+* Black spacers
+* Black capped nuts
+* Nut driver + nut assembly tool
 * The metal door
 
 ### Instructions:
 
 1. Thread the rod through the metal door.
-2. On each end of the rod, add a white washer, followed by a spring, and secure it with a nut.
+2. On each end of the rod, add a spacer and secure it with a capped nut. Tighten with the nut driver and assembly tool until snug.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FoIQ4oXYPtE1GZq1UW0AP%2FMy%20Movie%2010doro2.mp4?alt=media&token=11e6e78b-36e1-4866-ad52-32c45123f627" %}
+{% hint style="info" %}
+**Hardware note:** The video above shows an earlier door-rod revision with white washers and springs. Current OcuTrap R1 units ship with **black spacers and black capped nuts** instead — follow the written steps here and in [Hardware Set Up](setting-up.md), which match the parts in your box.
+{% endhint %}
+
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/my-movie-10doro2-Q8qAjNeBMNMRF5biVpUmca5OkOoOda.mp4" %}
 
 ### Step 2: Attach the Motor to the Door
 
@@ -62,7 +65,7 @@ To attach the motor to the door, you’ll need:
 3. Feed the cable through the metal handle.
 4. Double-check that all components are securely fastened and that the door moves smoothly.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FAOyWXROHWPmZ0GBJpsUe%2FStep%202-.mp4?alt=media&token=c640745c-ae9a-403f-811a-ff34d6450447" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/step-2-7Jrvto8rxIEfzs85tRwyPWUOQyVzzW.mp4" %}
 
 ***
 
@@ -78,11 +81,11 @@ To attach the motor to the door, you’ll need:
 2. Make sure the connection is secure.
 3. Then mount the pod to the trap
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FvLKoDo1xQNQCxGlq8S5c%2FThreadingHandle.mp4?alt=media&token=2806ef49-3151-41ba-87a5-ea31e5a2e35b" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/threadinghandle-LoTQMHoDIqcmeRy4SfpYXhHUJ5KQNr.mp4" %}
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FkoAJktRXPNLp2bEkA9eQ%2Finstallingbattery.mp4?alt=media&token=d0e6c617-8ddc-41c0-8e28-58da949c85a0" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/installingbattery-SS2Xt9R20XbhSAps9NmpI9GJvIR6tE.mp4" %}
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MTaWOrEK9jx-3w2Vwjy%2Fuploads%2FExiPQxGBQWbeM0JDGdUC%2Fmountingpod.mp4?alt=media&token=712fbbf3-ee09-42fd-8e99-57d5113af170" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/mountingpod-YAguldLA78bRYlOQhphOO89w3L3gfr.mp4" %}
 
 Connect the wire to the POD, ensuring the connection is secure.
 

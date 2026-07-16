@@ -19,7 +19,7 @@ The trap also checks for an obstruction before scouting begins. If something is 
 |                            | Armed                    | Scouting                  |
 | -------------------------- | ------------------------ | ------------------------- |
 | Detects animals            | Yes                      | Yes                       |
-| Sends alerts               | Yes, if enabled          | Yes, if enabled           |
+| Sends alerts               | Yes, if enabled          | Activity feed only — no notifications |
 | Takes photos               | Yes                      | Yes                       |
 | Closes the door            | Yes, after a detection   | No                        |
 | Best for                   | Capturing an animal      | Observing activity        |
@@ -31,26 +31,26 @@ While in Scouting Mode, the door does not close automatically. The only controls
 1. Sign in at [app.ocutrap.com](https://app.ocutrap.com) or open the mobile app.
 2. Find the trap you want to scout.
 3. Make sure the trap status is **Open / Unarmed**.
-4. Tap **Controls** on the trap card.
-5. Tap **Scout** (eye icon).
+4. Open the trap's detail page and find the **Controls** card.
+5. Open the **arm-mode dropdown** (top of the Controls card — it shows the current mode) and choose **Scout**. Each choice lists what it does, so you can see the difference before you pick.
 6. When the check passes, the trap status changes to **Scouting**.
 
 If **Scout** does not start, the door may not be fully open, the trap may be offline, or the trap may not have checked in recently. Wait for the next check-in, then try again.
 
 ## What to expect
 
-* **Scout Alert**: Sent when an animal first enters the pre-capture area, if this alert is enabled.
-* **Scout Trigger**: Sent if the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close.
-* **Photos**: Sent about every 15 seconds while the animal remains in the detection area. (You may see a couple of quick frames right when it first enters, alongside the alerts above.)
+* **Scout Alert**: Recorded in the trap's activity feed when an animal first enters the pre-capture area. Scout events are routine scouting data, not alerts — they do **not** send a push or email, do **not** appear in your Inbox, and do **not** add to the notification-bell count.
+* **Scout Trigger**: Recorded in the trap's activity feed when the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close. Like the Scout Alert, it stays in the activity feed only — no push, email, Inbox entry, or bell count.
+* **Photos**: Sent about every 15 seconds while the animal remains in the detection area. (You may see a couple of quick frames right when it first enters, alongside the feed entries above.)
 
-Each alert type can be sent once every 5 minutes. During that 5-minute window, you may still receive new photos, but you should not receive another alert of the same type.
+Each scout event type is recorded at most once every 5 minutes. During that 5-minute window, new photos may still arrive, but the same scout event will not be recorded again in the activity feed.
 
 ## Stop Scouting
 
 You can stop Scouting Mode in either of these ways:
 
-* Tap **Stop Scout** in the Controls popup. The trap returns to Unarmed and the door stays open.
-* Tap **Close** on the trap card. The door closes and the trap returns to Unarmed.
+* In the **Controls** card, set the arm mode to **Off** from the dropdown (or tap **Disarm**). The trap returns to Unarmed and the door stays open.
+* Tap **Close door** in the **Controls** card. The door closes and the trap returns to Unarmed.
 
 ## Use Armed mode instead when
 
@@ -63,4 +63,4 @@ For capture behavior after the door closes, see [After a Capture](after-capture.
 
 * **Obstruction error**: Clear the capture area, then tap **Scout** again.
 * **Door-not-open error**: Tap **Open**, wait for the trap status to show **Open**, then tap **Scout** again.
-* **Too many alerts**: Each alert type should only send once every 5 minutes. If you receive the same alert type more often than that, please report it.
+* **Scouting activity showing up as notifications**: Scout triggers and alerts are recorded in the trap's activity feed only — they no longer send a push or email, appear in your Inbox, or add to the notification-bell count. If you still receive push or email notifications, or see Inbox entries, for scouting activity, please report it.

@@ -2,6 +2,8 @@
 
 If your OcuTrap is not responding to commands and is displaying error codes, it may have entered hibernation mode or lost connection.
 
+When you send a command, the app shows its live status — **Sending…**, then **confirmed** once the trap acknowledges it, or a failure message with the device's error if something went wrong — so you can see exactly what happened.
+
 > For a full step-by-step guide when the trap shows offline or will not connect, see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
 
 ### Possible Causes

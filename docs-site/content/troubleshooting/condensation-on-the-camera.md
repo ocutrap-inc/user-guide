@@ -55,17 +55,6 @@ If internal moisture persists:
 
 1. Take **two clear photos** of the issue: one of the lens/window and one of the interior POD.
 2. Email [**support@ocutrap.com**](mailto:support@ocutrap.com) with the photos, trap id, and a brief description.
-3. Our technicians will review within **1 business day** and advise the next step:
+3. Our technicians will review your case and advise the next step — whether the issue is covered under warranty, repairable, or best resolved with a replacement or upgrade.
 
-| Scenario                                    | Cost to You                                         |
-| ------------------------------------------- | --------------------------------------------------- |
-| **Under warranty** & seal failure confirmed | _Free_ repair or replacement + prepaid return label |
-| Out of warranty, but repairable             | Flat service fee **$25** (includes return shipping) |
-| Severe water damage / corrosion             | Discounted upgrade to the latest revision           |
-
-***
-
-#### 6. Warranty Quick Facts
-
-* Standard coverage: **12 months** from delivery.
-* Exclusions: submersion, impact damage, or housing modifications.
+For current repair terms, turnaround times, and any service fees, **contact support** — they'll confirm what applies to your trap based on its warranty status and condition.

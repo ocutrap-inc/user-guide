@@ -20,13 +20,13 @@ On the main trap settings page, you can:
 
 By clicking **More Settings**, you can access advanced configuration options, including:
 
-* **Battery Type** – Select the battery for your trap.
+* **Battery Type** – Select which battery your trap uses (**5,200 mAh** or **10,000 mAh**). The app adjusts the low-battery alert thresholds to match your pack automatically.
 * **Accessory Controls** – Enable or disable accessory ports and set their timing.
 * [**Enhanced Door Closing** ](enhanced-door-closing.md)– Improve lock reliability by enabling automatic door re-locking.
 * [**Pre-capture Notifications**](pre-capture-notification.md) – Get alerts and images when an animal nears the trap, before capture
 * [**Distance limits, sensor alerts & errors**](distance-safety-and-alerts.md) – App preset table, 6 in expanded zone, dirty-sensor arm gate + 5 min retry
 * **Camera Controls** – Set up time lapse, image quality, and night vision thresholds.
 * **Sensor Settings** – Adjust capture distance and infrared brightness.
-* **Alert Thresholds** – Set up alerts for battery level, temperature, and capture intervals.
+* **Temperature Alerts** – Turn temperature alerts on or off. (Battery alerts are always on, with thresholds set automatically from your **Battery Type** — there are no manual battery voltage or percentage controls.)
 
 Each of these setting can be adjusted for each individual trap. All changes are applied when trap is connected. This will usually take about 1-5 minutes.

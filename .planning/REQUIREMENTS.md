@@ -33,9 +33,41 @@
   (e.g. post-detection-delay knob — ADR-0002).
 - [ ] **DOC-03**: Update screenshots and images for any pages whose UI has
   visually changed in the redesign. Images are committed as plain Git blobs
-  (no LFS) so GitBook sync picks them up.
+  (no LFS) so docs-site and the PDF build read them from the repo.
+  (Originally a GitBook-sync constraint; GitBook retired 2026-07-10.)
 - [ ] **DOC-04**: Update GitBook markdown so firmware-gated behavior matches
   what current firmware actually does (covering the AUD-02 checklist).
+- [x] **DOC-05** (SW-355): Rewrite the trap delete/transfer lifecycle pages to
+  the shipped React app. `deleting-a-trap.md` describes the real flow (trap →
+  Settings tab → Danger zone → Remove trap → confirm dialog; owner-only; web
+  only) and the cancel-subscription-first requirement enforced by the app
+  (SW-475 / app PR #273 — publish after it deploys). No auto-cancel, no
+  confirmation email (both were Bubble-era). `selling-or-transferring-a-trap.md`
+  leads with the explicit order — cancel subscription → remove trap → new
+  owner adds + subscribes — and states that images/history are deleted, not
+  transferred. Both pages cross-link each other, managing-your-subscription,
+  adding-a-trap, and support (for the "Device ID already registered" dead end,
+  SW-476). Nav: "Deleting a Trap" moves from the orphan `***` block into
+  `## Device Management` beside the transfer page (drift item justifying the
+  TOC exception; URL slug unchanged). Root and `docs-site/content/` copies stay
+  byte-identical.
+- [x] **DOC-06** (SW-479 / SW-476): Sync two customer-visible app changes.
+  Scout-mode notifications (SW-479 / app PR #288, ADR 0003 Amendment 1): Scout
+  Alert / Scout Trigger events are now recorded in the trap's activity feed
+  only — they never send push or email, never appear in the Inbox, and never
+  affect the notification-bell count (outdoor-temperature/weather alerts are
+  unaffected). Patched `getting-started/app/scouting-mode.md` (Scouting vs.
+  Armed table, What-to-expect bullets, 5-minute cadence reframed as feed
+  cadence, troubleshooting item) and `getting-started/app/notification-settings.md`
+  (In-app channel exception, Mobile Device-alerts scope, closing note).
+  Second-hand trap claim (SW-476 / app PR #290): the Add flow now self-serve
+  transfers a parked unit when the entered Trap ID matches the Device ID pair
+  printed on the unit; added a "Buying a trap second-hand" section to
+  `device-management/selling-or-transferring-a-trap.md` and replaced the
+  outdated "contact us to release the device" hint. Aggregate
+  `OcuTrap_Knowledge_Base_Complete.md` synced (scout glossary + Recent Updates +
+  transfer note). Root and `docs-site/content/` copies byte-identical; KB PDF
+  regenerated. Publishes only when app PRs #288 and #290 deploy.
 
 ### PDF Regeneration (PDF)
 
@@ -73,6 +105,9 @@
 > Added 2026-07-07. GitBook announced ~8× pricing; renewal is
 > **2026-07-25** — the migration must be live and GitBook cancelled
 > before that date.
+> **Status 2026-07-10: COMPLETE — docs.ocutrap.com serves the Vercel
+> docs-site and the GitBook plan is cancelled (SITE-06 done, SW-297
+> closed). Rollback is redeploy-only: `docs-site/CUTOVER-ROLLBACK.md`.**
 > `docs.ocutrap.com` moves to the self-hosted `docs-site/` Next.js app
 > already scaffolded in this repo. The current GitBook look is the design
 > target — customers should not notice the platform change, except that
@@ -177,6 +212,8 @@
 | DOC-02  | Phase 2: Patch                 |
 | DOC-03  | Phase 2: Patch                 |
 | DOC-04  | Phase 2: Patch                 |
+| DOC-05  | Post-launch drift (SW-355)     |
+| DOC-06  | Post-launch drift (SW-479/476)  |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
