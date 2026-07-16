@@ -27,10 +27,11 @@ A row of quick actions handles the most common commands:
 
 ### Advanced
 
-Expand **Advanced** for less-common, confirmation-gated commands:
+Expand **Advanced** for less-common commands:
 
-* **Reboot** — restart the device.
-* **Sleep** — put the trap into hibernation (sleeps until you press the power button or change the battery). See [Power Modes](../../faqs/power-modes.md).
+* **Data refresh** — ask the trap to take a fresh set of readings and send them in right now, instead of waiting for its next scheduled check-in. Use it when you want up-to-the-minute battery, signal, or temperature values. The trap has to be awake and in range to answer.
+* **Reboot** — restart the device. Asks you to confirm first.
+* **Sleep** — put the trap into hibernation (sleeps until you press the power button or change the battery). Asks you to confirm first. See [Power Modes](../../faqs/power-modes.md).
 
 ### Command status
 
@@ -40,5 +41,5 @@ After you send a command, a status line under the controls shows its progress �
 
 Device and network details live outside the controls bar, on the trap detail screen:
 
-* **Vitals** — battery, signal, temperature, and **Last heard**. Select **Last heard** to **Ping** the trap (ask it to check in right now).
-* **Charts** — graphical history of the trap's performance over time.
+* **Vitals** — battery, signal, temperature, and **Last heard**. Select **Last heard** to **Ping** the trap (ask it to check in right now). When the trap answers, **Last heard** updates to show that check-in.
+* **Charts** — graphical history of the trap's performance over time. Pick a reading (battery, signal, and more) and a time range. A trap builds this history as it checks in, so a newly added trap has little to show at first and fills in over the following days.

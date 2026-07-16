@@ -11,25 +11,29 @@ description: >-
 
 ***
 
-#### Temperature Alerts
+#### Outdoor Temperature Alerts
 
-Enables or disables alerts when the trap temperature goes outside the configured range. When enabled, the trap will periodically evaluate temperature readings and send alerts if thresholds are exceeded.
+Enables or disables alerts when the weather at the trap gets too hot or too cold.
 
-The selected interval determines how often temperature alerts can be sent.
+These alerts use the **outdoor weather at the trap's location**, not a reading from the trap's own sensor. The trap's location comes from its GPS fix, so a trap that has never reported a location cannot check the weather.
+
+The selected interval determines how often the weather is checked.
+
+Until the first check comes back, the card shows **Not checked yet** and no temperature. Checks run on a schedule rather than the moment you switch them on, so give it up to an hour to fill in.
 
 ***
 
 #### Temperature Alert Thresholds
 
-Defines the temperature limits that trigger alerts. These values use the selected unit system, shown as Imperial in the interface.
+Defines the outdoor temperature limits that trigger alerts. These values use the selected unit system, shown as Imperial in the interface.
 
 **Above Upper Limit**
 
-Sets the maximum allowable temperature. An alert is sent if the internal trap temperature rises above this value.
+Sets the maximum temperature. An alert is sent if the outdoor temperature at the trap rises above this value.
 
 **Below Lower Limit**
 
-Sets the minimum allowable temperature. An alert is sent if the internal trap temperature falls below this value.
+Sets the minimum temperature. An alert is sent if the outdoor temperature at the trap falls below this value.
 
 ***
 
