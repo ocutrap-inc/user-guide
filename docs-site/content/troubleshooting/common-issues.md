@@ -235,7 +235,7 @@ When the door closes correctly, it sits **behind and underneath the locking bar*
 **If the door is on top of or in front of the locking bar:**
 
 1. Tap **Open**, wait for the door to fully retract, then tap **Close** again.
-2. If the issue repeats, enable **Enhanced Door Closing** (Settings → More Settings) — it re-cycles the door to clear obstructions and seat the latch.
+2. Check that **Enhanced Door Closing** is on (Settings → Door). It is on by default. It re-seats the door under the locking rod after every close. It does not confirm the lock, so keep checking the door at the trap when a capture matters.
 3. Inspect the door track and locking bar area for debris (dirt, vegetation, ice).
 4. Check that the door is not bent. A previously bent door may not seat correctly even when the mechanism works. Contact support if the door edge is deformed.
 
