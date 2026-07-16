@@ -343,7 +343,11 @@ An approaching animal first enters the **alert zone** (~12–18 in from the sens
 
 ### Enhanced Door Closing
 
-When enabled, the door cycles open and closed after closing to ensure a secure lock. This improves door lock reliability in the field. Enabled by default.
+The door locks by sliding under a locking rod. One close does not always get it there. The door can rest on top of the rod instead, which looks shut but does not hold.
+
+When enabled, the door backs off and re-closes after every close, including closes on a capture, to seat under the rod. This improves door lock reliability in the field. It does not confirm the lock: the trap has no sensor that can tell a locked door from a closed one, and the app reports Closed for both.
+
+Enabled by default. Turn it off only if support asks. With it off, a capture gets one close and no re-seat.
 
 ### Pre-Capture Notification
 

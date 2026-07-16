@@ -37,7 +37,9 @@ Enables or disables audible beeps from the trap hardware. Beeps are typically us
 
 #### Enhanced Door Closing
 
-Enables an enhanced door close and re-lock sequence. When enabled, the trap will perform an additional open and close cycle to help ensure the door is fully closed and locked.
+Re-seats the door after every close, including closes on a capture. The door backs off slightly, then drives closed again to seat under the locking rod.
+
+This improves the chance the door locks. It does not confirm the lock. Enabled by default. Turn it off only if support asks. See [Enhanced Door Closing](../../trap-settings/enhanced-door-closing.md).
 
 ***
 
