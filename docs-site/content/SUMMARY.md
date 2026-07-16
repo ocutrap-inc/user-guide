@@ -99,9 +99,11 @@
 ## Account and Billing
 
 * [Your OcuTrap Subscription](account-and-billing/subscription-overview.md)
+* [Billing When You Move to the New App](account-and-billing/billing-when-you-move-to-the-new-app.md)
 * [Billing](account-and-billing/billing/README.md)
   * [Changing Your Subscription Payment Method](account-and-billing/billing/changing-your-subscription-payment-method.md)
 * [Update Individual Trap Subscriptions](account-and-billing/update-individual-trap-subscriptions.md)
+* [Transferring Trap Billing to an Organization](account-and-billing/transferring-trap-billing-to-an-organization.md)
 * [Resetting Password](account-and-billing/resetting-password.md)
 * [Managing Your Subscription](account-and-billing/managing-your-subscription.md)
 * [Account Deletion](account-and-billing/account-deletion.md)

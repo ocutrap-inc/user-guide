@@ -72,6 +72,7 @@ A paused trap shows a **Paused** status. This is different from a subscription t
 
 ## See also
 
+* [Billing When You Move to the New App](billing-when-you-move-to-the-new-app.md)
 * [Managing Your Subscription](managing-your-subscription.md)
 * [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md)
 * [Transferring Trap Billing to an Organization](transferring-trap-billing-to-an-organization.md)
