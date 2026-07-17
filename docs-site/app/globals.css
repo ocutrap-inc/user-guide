@@ -74,6 +74,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Anchor targets must clear the 56px sticky .site-header; 80px matches the
+     TOC observer's -80px top rootMargin so the highlighted section and the
+     scrolled-to heading agree. */
+  scroll-padding-top: 80px;
 }
 
 body {
