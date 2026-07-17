@@ -68,6 +68,19 @@
   `OcuTrap_Knowledge_Base_Complete.md` synced (scout glossary + Recent Updates +
   transfer note). Root and `docs-site/content/` copies byte-identical; KB PDF
   regenerated. Publishes only when app PRs #288 and #290 deploy.
+- [ ] **DOC-08** (SW-536): Publish a sign-in troubleshooting page,
+  `troubleshooting/cant-sign-in.md` ("Can't Sign In to Your Account"), shaped
+  as one section per failure mode: forgot password, reset code didn't arrive,
+  sign-in errors, lost email access, coming from the old app
+  (base.ocutrap.com), escalation to support. Password path ONLY — no Magic
+  Auth, SSO, or 2FA (those buttons render for nobody on the logged-out page,
+  SW-535) and no invented policy (we have no 2FA and no inactive-account
+  purge). Every UI label matches the shipped auth code (SignInForm /
+  ForgotPassword / ResetPassword). Cross-links: resetting-password,
+  password-policy-for-users, account-deletion, support. Nav: new bullet at the
+  end of `## Troubleshooting` in SUMMARY.md. Root and `docs-site/content/`
+  copies stay byte-identical; KB PDF regenerated. Ships docs-first, paired
+  with the app login-page help link (REQ-AUTH-HELP-01, app repo).
 
 ### PDF Regeneration (PDF)
 
@@ -214,6 +227,7 @@
 | DOC-04  | Phase 2: Patch                 |
 | DOC-05  | Post-launch drift (SW-355)     |
 | DOC-06  | Post-launch drift (SW-479/476)  |
+| DOC-08  | Post-launch drift (SW-536)     |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
