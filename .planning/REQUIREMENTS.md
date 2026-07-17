@@ -187,7 +187,25 @@
   the KB pages, LED guide, and assets needed in the field; offline
   indicator banner; `/api/*` excluded. Verified in airplane mode on a
   phone. Rationale: customers operate traps in low-coverage areas.
-  After cutover.
+  After cutover. Acceptance (SW-334): (a) `app/manifest.ts` serves an
+  installable web manifest (name/short_name, `start_url`, `display:
+  standalone`, 192 + 512 icons from the existing raccoon mark, brand-navy
+  `theme_color`); Lighthouse installability passes. (b) A build-generated
+  service worker (`scripts/generate-sw.mjs` → `public/sw.js`, run in
+  pre(dev|build)) precaches the app shell + every KB route + critical
+  images (LED status GIFs especially), with the route/asset list derived
+  from the content itself (SUMMARY.md + markdown image refs) — no
+  hardcoded lists that drift. (c) Repeat visits are stale-while-revalidate;
+  content-hashed `/_next/static/*` is cache-first. (d) Cache names are
+  keyed by a per-deploy build id (Vercel commit SHA, else a content hash);
+  `activate` deletes every older cache so a stale docs cache can't persist.
+  (e) `/api/*` is network-only EXCEPT `/api/search` (precached so full-text
+  search works offline); videos are network-only with the poster falling
+  through the image path; the AI ask shows a friendly "needs connection"
+  state offline. (f) A slim "Offline — showing saved docs" banner renders
+  while the browser is offline; an `/offline` fallback route is precached.
+  (g) Real-phone airplane-mode validation is the remaining manual step
+  (checklist in the SW-334 PR).
 - [ ] **SITE-12**: Brand alignment + visual polish. The site shipped on a
   generic bright SaaS blue (`#0050ff`) and Outfit/Manrope type — both
   off-brand per `internal-docs/orchestrator/brand/index.md` ("Don't:
