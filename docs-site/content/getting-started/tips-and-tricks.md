@@ -167,7 +167,7 @@ Learn the physical button controls:
 - Consider the 10,000 mAh battery for extended cold-weather deployments
 
 ### Hot Weather
-- Temperature alerts will notify you if internal temps exceed 45°C
+- Temperature alerts will notify you if the outdoor temperature at the trap exceeds 45°C (they watch the local weather, not the trap's internal sensor)
 - Shade the trap if possible in extreme heat
 - Electronics are rated to 45°C operating temperature
 

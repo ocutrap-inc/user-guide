@@ -32,7 +32,9 @@ Since OcuTrap is powered by a lithium-ion battery:
 
 #### Temperature Monitoring
 
-The OcuTrap R1 model features an integrated temperature sensor that monitors the internal environment. This sensor alerts users if the internal temperature reaches adverse levels, helping to prevent potential issues.
+The OcuTrap R1 has an integrated temperature sensor. You can see what it reports on the trap's **Charts**, under the temperature reading.
+
+This sensor does not send alerts. The temperature alerts you can switch on in **Trap settings** watch the **outdoor weather at the trap's location** instead, not the trap's own sensor. See [Advanced settings](../getting-started/app/trap-settings/advanced-settings.md).
 
 ### Handling Extreme Weather Conditions
 

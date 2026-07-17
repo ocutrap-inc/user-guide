@@ -69,12 +69,14 @@ This two-step check prevents false triggers from rain, debris, or quick movement
 
 ## Temperature Alert Settings
 
+These alerts watch the **outdoor weather at the trap's location**, not the trap's own internal sensor. The trap's location can come from its GPS fix or from a location you set manually. See [Advanced settings](advanced-settings.md).
+
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Temperature Alerts** | On/Off | On | Enables alerts when temperature exceeds thresholds. |
-| **High Temperature Limit** | Configurable | 45°C (113°F) | Alert sent if internal temperature rises above this. |
-| **Low Temperature Limit** | Configurable | -10°C (14°F) | Alert sent if internal temperature falls below this. |
-| **Temperature Alert Interval** | 0–48 hours | 8 hours | Minimum time between temperature alerts. Set to 0 to disable repeat alerts. |
+| **Temperature Alerts** | On/Off | Off | Enables alerts when the outdoor temperature at the trap passes a limit below. |
+| **High Temperature Limit** | Configurable | 45°C (113°F) | Alert sent if the outdoor temperature rises above this. |
+| **Low Temperature Limit** | Configurable | -10°C (14°F) | Alert sent if the outdoor temperature falls below this. |
+| **Temperature Alert Interval** | 1–24 hours | 6 hours | Minimum time between repeat temperature alerts. |
 
 ---
 
