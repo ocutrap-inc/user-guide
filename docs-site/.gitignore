@@ -6,3 +6,4 @@ public/gitbook-assets/
 out/
 .vercel
 .env*
+*.tsbuildinfo
