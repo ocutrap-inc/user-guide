@@ -29,7 +29,7 @@ A row of quick actions handles the most common commands:
 
 Expand **Advanced** for less-common commands:
 
-* **Data refresh** — ask the trap to take a fresh set of readings and send them in right now, instead of waiting for its next scheduled check-in. Use it when you want up-to-the-minute battery, signal, or temperature values. The trap has to be awake and in range to answer.
+* **Data refresh** — ask the trap to take a fresh set of readings and send them in right now, instead of waiting for its next scheduled check-in. Use it when you want up-to-the-minute battery, signal, or temperature values. The trap has to be awake and in range to answer. On the mobile app this command is called **Status Check**.
 * **Reboot** — restart the device. Asks you to confirm first.
 * **Sleep** — put the trap into hibernation (sleeps until you press the power button or change the battery). Asks you to confirm first. See [Power Modes](../../faqs/power-modes.md).
 

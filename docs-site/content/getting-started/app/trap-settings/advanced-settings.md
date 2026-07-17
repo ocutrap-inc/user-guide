@@ -15,7 +15,9 @@ description: >-
 
 Enables or disables alerts when the weather at the trap gets too hot or too cold.
 
-These alerts use the **outdoor weather at the trap's location**, not a reading from the trap's own sensor. The trap's location comes from its GPS fix, so a trap that has never reported a location cannot check the weather.
+These alerts use the **outdoor weather at the trap's location**, not a reading from the trap's own sensor.
+
+The trap's location can come from either its **GPS fix** or a location you **set manually**. Only a trap that has neither, one that has never reported a location and never had one set, cannot check the weather. If that happens, set the location yourself and the checks begin at the next interval.
 
 The selected interval determines how often the weather is checked.
 

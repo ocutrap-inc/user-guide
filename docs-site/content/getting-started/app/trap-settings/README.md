@@ -12,7 +12,7 @@ The top of **Settings** covers how you identify the trap. None of it changes how
 * **Location note** — a short line about where the trap sits, like "Back fence line, under the cedar".
 * **Notes** — a longer, free-form note for anything else you need on site: the customer the trap is placed with, access directions, a gate code. It appears on the trap's **Overview**, on both the web app and your phone.
 
-Everyone you share the trap with can read these, so leave out anything you would not want a shared user to see. The trap owner and managers can edit them.
+Everyone you share the trap with can both read **and edit** these — sharing has no view-only level, so every shared user is a manager. Leave out anything you would not want a shared user to see or change.
 
 Where to go from here:
 
