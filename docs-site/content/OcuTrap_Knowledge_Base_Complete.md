@@ -279,7 +279,6 @@ Complete list of all configurable trap settings.
 | Location Tracking | On / Off |
 | Accessory Port | Enable / Disable; activation time 0–30 seconds |
 | Capture Alert Interval | 0–48 hours (default: 8 hours) |
-| User Beeps | On / Off |
 | Enhanced Door Closing | On / Off (default: On) |
 | Units | Metric / Imperial |
 
