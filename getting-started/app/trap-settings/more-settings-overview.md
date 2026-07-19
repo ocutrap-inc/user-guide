@@ -29,12 +29,6 @@ Controls how long the accessory port remains powered when activated. Shorter dur
 
 ***
 
-#### User Beeps
-
-Enables or disables audible beeps from the trap hardware. Beeps are typically used for user feedback during actions such as button presses, state changes, or troubleshooting.
-
-***
-
 #### Enhanced Door Closing
 
 Re-seats the door after every close, including closes on a capture. The door backs off slightly, then drives closed again to seat under the locking rod.
