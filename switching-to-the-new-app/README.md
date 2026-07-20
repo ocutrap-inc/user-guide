@@ -10,7 +10,11 @@ description: >-
 We've rebuilt the OcuTrap app from the ground up — faster, clearer, and built for the field. Your traps, capture history, and subscription are already waiting for you in the new app. This page walks you through the short, one-time move.
 
 {% hint style="info" %}
-**You keep everything.** Your traps, images, capture history, and subscription carry over automatically. Your account is already set up for you under the same email — the one thing you do is set a password. See step&nbsp;2.
+**Dates (locked 2026-07-20):** Switchover **2026-07-27**. The old app at `base.ocutrap.com` stays readable through **2026-08-27**, then redirects to the new app.
+{% endhint %}
+
+{% hint style="info" %}
+**You keep everything.** Your traps, images, capture history, and subscription carry over automatically. Use the **same email** as before — either set a password from your welcome email, or create an account with that email and we'll link your traps. See step&nbsp;2.
 {% endhint %}
 
 ***
@@ -20,7 +24,7 @@ We've rebuilt the OcuTrap app from the ground up — faster, clearer, and built 
 | | Old app | New app |
 | --- | --- | --- |
 | Web address | `base.ocutrap.com` | `app.ocutrap.com` |
-| Sign in | Your old username + password | The **same email**, with a new password you set from your welcome email |
+| Sign in | Your old username + password | The **same email** — set a password from your welcome email, or sign up with that email |
 
 ***
 
@@ -28,16 +32,17 @@ We've rebuilt the OcuTrap app from the ground up — faster, clearer, and built 
 
 ### 1. Watch for the announcement
 
-You'll get an email from us when it's your turn to move. It confirms your account is ready and includes a **"Set your password"** link. We'll also post a banner in the old app. Nothing breaks the moment you get the email — the old app keeps working, so you can make the switch at your own pace.
+You'll get an email from us when it's your turn to move (switchover **2026-07-27**). It confirms your account path and includes either a **"Set your password"** link or a clear sign-up link. We'll also post a banner in the old app. The old app stays readable through **2026-08-27**, so you have a clear window to move at your own pace.
 
-### 2. Set your password — your account is already set up
+### 2. Activate your account — same email as before
 
-Your new account already exists, under the **same email** you used with the old app. You don't create a new one — you just set a password.
+Use the **same email** you used with the old app. Two supported paths:
 
-Open the **"Set your password"** link in your welcome email, choose a new password, and you're in at **app.ocutrap.com**.
+* **Set your password** — if we pre-set your account, open the **"Set your password"** link in your welcome email, choose a new password, and sign in at **app.ocutrap.com**.
+* **Sign up with the same email** — if you create a new account with that email, your traps, shared access, and subscription link automatically.
 
-* **Why set a password?** The new app runs on a new, more secure sign-in system, and for your security passwords can't be copied over from the old app. (You can turn on extra sign-in protection later.)
-* **Same email as before.** Your account, traps, shared access, and subscription are all attached to the email you used with the old app — that's the address you sign in with.
+* **Why a new password?** The new app runs on a new, more secure sign-in system, and for your security passwords can't be copied over from the old app. (You can turn on extra sign-in protection later.)
+* **Same email as before.** Your traps, shared access, and subscription are attached to the email you used with the old app — that's the address you sign in with.
 
 {% hint style="info" %}
 **Prefer your phone?** The new OcuTrap app is available for iPhone and Android. <!-- TODO(CUT-08 / SW-147): insert final App Store + Google Play links before publish --> Download it, then sign in with the same email and the password you just set.
@@ -83,13 +88,13 @@ When you first sign in, the app also offers a short guided tour that points out 
 
 * Everything above, plus common questions, is covered across this guide — start with **[Getting Started → App](../getting-started/app/README.md)**.
 * Stuck on any step? **[Contact support](../support/support.md)** — tell us the email your account is under and we'll sort it out.
-* The old app stays available until the retire date in your welcome email — so you have a clear window to move at your own pace. After that it's retired, and `base.ocutrap.com` automatically sends you to the new app (your old bookmark still works). Everything you need is already in the new app, so there's nothing to save or export from the old one.
+* The old app stays readable through **2026-08-27**. After that, `base.ocutrap.com` automatically sends you to the new app (your old bookmark still works). Everything you need is already in the new app, so there's nothing to save or export from the old one.
 
 ***
 
 ## Quick checklist
 
-* [ ] I set my password from the welcome email and signed in at **app.ocutrap.com** with the **same email** as my old account.
+* [ ] I activated my account (set password **or** signed up) at **app.ocutrap.com** with the **same email** as my old account.
 * [ ] My traps, images, and history appear.
 * [ ] My billing / subscription looks right (checked per-trap **and** account Billing).
 * [ ] I skimmed [What's new](whats-new.md).
