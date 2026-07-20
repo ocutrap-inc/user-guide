@@ -88,6 +88,19 @@
   customer's email. Nav under `## Account and Billing`; cross-linked from
   `subscription-overview.md`. Root and `docs-site/content/` copies
   byte-identical; KB PDF regenerated. Publishes with the cutover comms.
+- [ ] **DOC-08** (SW-536): Publish a sign-in troubleshooting page,
+  `troubleshooting/cant-sign-in.md` ("Can't Sign In to Your Account"), shaped
+  as one section per failure mode: forgot password, reset code didn't arrive,
+  sign-in errors, lost email access, coming from the old app
+  (base.ocutrap.com), escalation to support. Password path ONLY — no Magic
+  Auth, SSO, or 2FA (those buttons render for nobody on the logged-out page,
+  SW-535) and no invented policy (we have no 2FA and no inactive-account
+  purge). Every UI label matches the shipped auth code (SignInForm /
+  ForgotPassword / ResetPassword). Cross-links: resetting-password,
+  password-policy-for-users, account-deletion, support. Nav: new bullet at the
+  end of `## Troubleshooting` in SUMMARY.md. Root and `docs-site/content/`
+  copies stay byte-identical; KB PDF regenerated. Ships docs-first, paired
+  with the app login-page help link (REQ-AUTH-HELP-01, app repo).
 
 ### PDF Regeneration (PDF)
 
@@ -194,7 +207,25 @@
   the KB pages, LED guide, and assets needed in the field; offline
   indicator banner; `/api/*` excluded. Verified in airplane mode on a
   phone. Rationale: customers operate traps in low-coverage areas.
-  After cutover.
+  After cutover. Acceptance (SW-334): (a) `app/manifest.ts` serves an
+  installable web manifest (name/short_name, `start_url`, `display:
+  standalone`, 192 + 512 icons from the existing raccoon mark, brand-navy
+  `theme_color`); Lighthouse installability passes. (b) A build-generated
+  service worker (`scripts/generate-sw.mjs` → `public/sw.js`, run in
+  pre(dev|build)) precaches the app shell + every KB route + critical
+  images (LED status GIFs especially), with the route/asset list derived
+  from the content itself (SUMMARY.md + markdown image refs) — no
+  hardcoded lists that drift. (c) Repeat visits are stale-while-revalidate;
+  content-hashed `/_next/static/*` is cache-first. (d) Cache names are
+  keyed by a per-deploy build id (Vercel commit SHA, else a content hash);
+  `activate` deletes every older cache so a stale docs cache can't persist.
+  (e) `/api/*` is network-only EXCEPT `/api/search` (precached so full-text
+  search works offline); videos are network-only with the poster falling
+  through the image path; the AI ask shows a friendly "needs connection"
+  state offline. (f) A slim "Offline — showing saved docs" banner renders
+  while the browser is offline; an `/offline` fallback route is precached.
+  (g) Real-phone airplane-mode validation is the remaining manual step
+  (checklist in the SW-334 PR).
 - [ ] **SITE-12**: Brand alignment + visual polish. The site shipped on a
   generic bright SaaS blue (`#0050ff`) and Outfit/Manrope type — both
   off-brand per `internal-docs/orchestrator/brand/index.md` ("Don't:
@@ -235,6 +266,7 @@
 | DOC-05  | Post-launch drift (SW-355)     |
 | DOC-06  | Post-launch drift (SW-479/476)  |
 | DOC-07  | Cutover comms (SW-517)         |
+| DOC-08  | Post-launch drift (SW-536)     |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

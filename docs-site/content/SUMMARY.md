@@ -74,6 +74,7 @@
 * [Motor Connector Use](troubleshooting/motor-connector-use.md)
 * [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)
 * [Wire Exposed](troubleshooting/wire-exposed.md)
+* [Can't Sign In to Your Account](troubleshooting/cant-sign-in.md)
 
 ## Support
 

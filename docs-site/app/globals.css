@@ -2450,3 +2450,357 @@ input:focus-visible,
   border-color: var(--color-brand);
   color: var(--color-brand);
 }
+
+/* ── SW-333 / SITE-10: Interactive LED diagnostic wizard ────────────────────
+   Mounted at the top of the LED guide article (app/[...slug]/page.tsx). The
+   component renders an interactive picker plus a plain fallback table built
+   from the same data (lib/led-diagnostics.ts). Progressive enhancement: the
+   fallback table is the server / JS-off / print state; once the component
+   mounts, `.led-wizard--ready` hides it and the interactive UI takes over
+   ("wizard hydrates on top"). Mobile-first, theme-aware, brand tokens only. */
+.led-wizard {
+  margin: 0 0 2rem;
+}
+
+/* Fallback table: visible by default (server, no-JS). Hidden once interactive
+   UI is live; restored for print below. */
+.led-wizard--ready .led-wizard__fallback {
+  display: none;
+}
+
+.led-wizard__interactive {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-sidebar-bg);
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.led-wizard__steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-muted);
+}
+
+.led-wizard__steps li.is-active {
+  color: var(--color-brand);
+}
+
+.led-wizard__q {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.075rem;
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.led-wizard__q-chip,
+.led-wizard__result-chip,
+.led-wizard__result-head .led-wizard__result-chip {
+  display: inline-block;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  vertical-align: middle;
+}
+
+.led-wizard__q-color {
+  font-weight: 700;
+}
+
+.led-wizard__hint {
+  margin: 0 0 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+/* Step 1 — color swatches. Auto-fill grid: big one-thumb targets on phones,
+   tidy rows on desktop. */
+.led-wizard__swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 0.6rem;
+}
+
+.led-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-elevated);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease,
+    transform 0.05s ease;
+}
+
+.led-swatch:hover {
+  border-color: var(--color-brand);
+  background: var(--color-brand-dim);
+}
+
+.led-swatch:active {
+  transform: scale(0.97);
+}
+
+.led-swatch__chip {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.28);
+}
+
+/* White chip needs a visible ring on light surfaces. */
+.led-swatch__chip--white {
+  border-color: var(--color-border);
+}
+
+.led-swatch__label {
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Step 2 — pattern buttons. */
+.led-wizard__patterns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.led-pattern-btn {
+  flex: 1 1 auto;
+  min-width: 130px;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-elevated);
+  color: var(--color-heading);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.led-pattern-btn:hover {
+  border-color: var(--color-brand);
+  background: var(--color-brand-dim);
+}
+
+.led-wizard__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0 0.75rem;
+  padding: 0.3rem 0.55rem 0.3rem 0.4rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.led-wizard__back:hover {
+  color: var(--color-brand);
+  background: var(--color-brand-dim);
+}
+
+/* Step 3 — result. */
+.led-wizard__result-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.led-result-card {
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-brand);
+  border-radius: 10px;
+  background: var(--color-elevated);
+  padding: 0.9rem 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.led-result-card__alt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  margin-bottom: 0.35rem;
+}
+
+.led-result-card__meaning {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  line-height: 1.5;
+}
+
+.led-result-card__context {
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.led-result-card__action {
+  margin: 0.55rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-body);
+}
+
+.led-result-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.7rem;
+}
+
+.led-result-card__link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.led-result-card__link:hover {
+  text-decoration: underline;
+}
+
+.led-wizard__restart {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-elevated);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.led-wizard__restart:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+  background: var(--color-brand-dim);
+}
+
+/* Fallback / reference table (rendered outside .prose, so it carries its own
+   styling that mirrors the prose tables). */
+.led-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.led-table th,
+.led-table td {
+  border: 1px solid var(--color-border);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.led-table thead th {
+  background: var(--color-sidebar-bg);
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.led-table tbody tr:nth-child(even) {
+  background: var(--color-table-stripe);
+}
+
+.led-table a {
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+.led-table__context {
+  color: var(--color-muted);
+}
+
+/* Print: always show the reference table, never the interactive controls. */
+@media print {
+  .led-wizard__interactive {
+    display: none !important;
+  }
+  .led-wizard--ready .led-wizard__fallback {
+    display: block !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .led-swatch,
+  .led-pattern-btn {
+    transition: none;
+  }
+}
+/* ── SITE-11: offline PWA banner ─────────────────────────
+   Slim fixed bar shown by <PWA /> while the browser reports no connection.
+   Bottom-anchored so it never collides with the sticky site header or the
+   SITE-08 incident banner. Semantic warning tint; theme-aware via tokens. */
+.offline-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: calc(100vw - 2rem);
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--hint-warning-border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--hint-warning-text);
+  background: var(--hint-warning-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.offline-banner__dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hint-warning-border);
+}
+@media print {
+  .offline-banner {
+    display: none;
+  }
+}

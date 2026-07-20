@@ -34,7 +34,8 @@ type AskStatus =
   | "done"
   | "error"
   | "ratelimited"
-  | "unconfigured";
+  | "unconfigured"
+  | "offline";
 
 // A row in the keyboard-navigable list: the "Ask AI" action or a search hit.
 type NavItem = { kind: "ask" } | { kind: "result"; doc: SearchDoc };
@@ -175,6 +176,17 @@ export default function SearchDialog() {
   const runAsk = useCallback(async (q: string) => {
     const trimmed = q.trim();
     if (!trimmed) return;
+    // AI ask needs a live connection (the /api/* routes are network-only in the
+    // offline SW). Short-circuit with a friendly notice instead of a failed
+    // fetch when the browser reports no connection (SITE-11).
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      setMode("answer");
+      setQuestion(trimmed);
+      setAnswer("");
+      setCitations([]);
+      setAskStatus("offline");
+      return;
+    }
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
@@ -479,7 +491,13 @@ export default function SearchDialog() {
                 </div>
 
                 <div className="ask-body">
-                  {askStatus === "unconfigured" ? (
+                  {askStatus === "offline" ? (
+                    <div className="ask-notice">
+                      AI ask needs a connection. You&rsquo;re offline right now —
+                      full-text search still works on your saved docs, or
+                      reconnect to ask the AI.
+                    </div>
+                  ) : askStatus === "unconfigured" ? (
                     <div className="ask-notice">
                       AI answers aren&rsquo;t available right now. You can still
                       use search, or browse the documentation directly.

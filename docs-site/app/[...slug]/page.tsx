@@ -8,6 +8,8 @@ import StatusBanner from "@/components/status-banner";
 import PrintButton from "@/components/print-button";
 import Feedback from "@/components/feedback";
 import CopyMarkdownButton from "@/components/copy-markdown-button";
+import LedWizard from "@/components/led-wizard";
+import { LED_GUIDE_FILE, parseLedDiagnostics } from "@/lib/led-diagnostics";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -72,6 +74,15 @@ export default async function DocPage({
   const headings = extractHeadings(html);
   const pageMarkdown = `# ${doc.title}\n\n${markdownToPlain(doc.contentRaw, doc.filePath)}\n`;
 
+  // Interactive LED diagnostic wizard (SW-333 / SITE-10). Only the LED guide
+  // page carries the ```led-diagnostics data block; parse it here and mount the
+  // wizard at the top of the article. Degrades to the wizard's own fallback
+  // table when JS is off. Null (block missing/malformed) → wizard not rendered.
+  const ledMatrix =
+    doc.filePath === LED_GUIDE_FILE
+      ? parseLedDiagnostics(doc.contentRaw)
+      : null;
+
   return (
     <div className="page-content">
       <article className="doc-body">
@@ -105,6 +116,8 @@ export default async function DocPage({
         </header>
 
         {STATUS_BANNER_HREFS.has(doc.href) && <StatusBanner />}
+
+        {ledMatrix && <LedWizard matrix={ledMatrix} />}
 
         <DocContent html={html} />
 
