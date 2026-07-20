@@ -68,6 +68,26 @@
   `OcuTrap_Knowledge_Base_Complete.md` synced (scout glossary + Recent Updates +
   transfer note). Root and `docs-site/content/` copies byte-identical; KB PDF
   regenerated. Publishes only when app PRs #288 and #290 deploy.
+- [x] **DOC-07** (SW-517): Add a customer-facing billing-continuity page for the
+  cutover to the new app, backed by CUT-04 in
+  `internal-docs/specs/2026-07-bubble-app-cutover.md` (billing transfers) and its
+  §5 billing invariants. New page
+  `account-and-billing/billing-when-you-move-to-the-new-app.md` states only what
+  CUT-04 establishes: the trap's existing Stripe subscription continues
+  uninterrupted (same customer, same payment method, same price, same renewal
+  date), no new checkout, no second subscription, no lapse. Claiming repoints
+  `subscriptions.userId` only; Stripe-side objects are never touched (spec §2
+  CUT-D5), so invoice history and the billing account survive the move. Leads
+  customers to the §5 invariant "zero new checkouts from migrated customers" as
+  an actionable instruction: if the app prompts a checkout for an already-paid
+  trap, stop and contact support rather than starting a second subscription
+  (the app-side guard for this is SW-148 / app PR #307). Deliberately omits any
+  refund promise, any absolute "cannot be double-charged" guarantee, and any
+  bank-dispute instruction: the spec establishes none of the three. No dates
+  (CUT-D4 dates are gate-conditioned); the retire date is deferred to the
+  customer's email. Nav under `## Account and Billing`; cross-linked from
+  `subscription-overview.md`. Root and `docs-site/content/` copies
+  byte-identical; KB PDF regenerated. Publishes with the cutover comms.
 - [ ] **DOC-08** (SW-536): Publish a sign-in troubleshooting page,
   `troubleshooting/cant-sign-in.md` ("Can't Sign In to Your Account"), shaped
   as one section per failure mode: forgot password, reset code didn't arrive,
@@ -245,6 +265,7 @@
 | DOC-04  | Phase 2: Patch                 |
 | DOC-05  | Post-launch drift (SW-355)     |
 | DOC-06  | Post-launch drift (SW-479/476)  |
+| DOC-07  | Cutover comms (SW-517)         |
 | DOC-08  | Post-launch drift (SW-536)     |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
