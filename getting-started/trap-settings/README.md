@@ -10,11 +10,11 @@ description: >-
 
 On the main trap settings page, you can:
 
-* **Change the Trap Name** – Personalize each trap for easy identification.
-* **Add Notes to the trap** – Add more detail to trap
 * **Set Notifications** – Choose how you want to receive alerts for errors, captures, and important events.
 * **Adjust Capture Distance** – Set how far inside the trap an animal must be to trigger the door.
 * **Change Image Size** – Select the photo resolution for captured images.
+
+Trap **name** and **Notes** are edited from the trap detail top bar (not Settings). Map position uses **Set location** (pin or address).
 
 ### Advanced / More Settings
 
