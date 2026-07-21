@@ -101,6 +101,20 @@
   end of `## Troubleshooting` in SUMMARY.md. Root and `docs-site/content/`
   copies stay byte-identical; KB PDF regenerated. Ships docs-first, paired
   with the app login-page help link (REQ-AUTH-HELP-01, app repo).
+- [x] **DOC-09** (FW-305): Document the new firmware motor-direction setting,
+  Actuator Inverse. It reverses the door motor drive direction for traps built
+  with reversed motor wiring, where the door drives open when it should close;
+  firmware corrects it with no hardware rework. Bool, default Off, set by
+  OcuTrap support (not exposed to customers in the current app UI). Added a row
+  to the "Hardware & Feedback Settings" table in
+  `getting-started/app/trap-settings/settings-reference.md` (directly after
+  Enhanced Door Closing), a matching row to the settings table in
+  `OcuTrap_Knowledge_Base_Complete.md`, and an `### Actuator Inverse`
+  subsection under `## Trap Settings` (after Enhanced Door Closing). Copy stays
+  telegraphic and tells customers to leave it Off unless support turns it on.
+  KB PDF regenerated. `more-settings-overview.md` / `advanced-settings.md` left
+  untouched (they document the current app UI, which does not surface this
+  setting).
 
 ### PDF Regeneration (PDF)
 
@@ -267,6 +281,7 @@
 | DOC-06  | Post-launch drift (SW-479/476)  |
 | DOC-07  | Cutover comms (SW-517)         |
 | DOC-08  | Post-launch drift (SW-536)     |
+| DOC-09  | Post-launch drift (FW-305)     |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
