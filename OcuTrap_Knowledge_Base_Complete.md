@@ -351,9 +351,9 @@ Enabled by default. Turn it off only if support asks. With it off, a capture get
 
 ### Actuator Inverse
 
-Reverses the door motor drive direction. Some traps are built with reversed motor wiring. The door drives open when it should close. This setting corrects it in firmware with no hardware rework.
+Reverses the door motor drive direction. Turn it On if your motor is going the wrong way. The door opens when it should close and this setting corrects it.
 
-Off by default. Set by OcuTrap support. Leave it Off unless support turns it on.
+Off by default.
 
 ### Pre-Capture Notification
 
