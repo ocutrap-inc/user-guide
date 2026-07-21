@@ -1,4 +1,4 @@
-# Trap Settings
+# Settings in the App
 
 <figure><img src="../../../.gitbook/assets/image (30).png" alt="" width="375"><figcaption></figcaption></figure>
 

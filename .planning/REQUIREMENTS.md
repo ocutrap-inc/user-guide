@@ -115,7 +115,7 @@
   KB PDF regenerated. `more-settings-overview.md` / `advanced-settings.md` left
   untouched (they document the current app UI, which does not surface this
   setting).
-- [ ] **DOC-10**: Publish a mobile-app reset page,
+- [x] **DOC-10** (SW-574 / user-guide#93): Publish a mobile-app reset page,
   `troubleshooting/resetting-the-mobile-app.md` ("Resetting the Mobile App"),
   with iOS and Android steps for force-quit, optional Android cache clear,
   delete + reinstall, and post-reinstall sign-in / notification permissions.
@@ -123,7 +123,31 @@
   Cross-links: using-the-mobile-app, notification-settings, cant-sign-in,
   support. Nav: new bullet at the end of `## Troubleshooting` in SUMMARY.md.
   Root and `docs-site/content/` copies stay byte-identical; KB PDF
-  regenerated. exit-impact: ops.
+  regenerated. exit-impact: ops. Merged 2026-07-21.
+- [x] **DOC-11** (SW-575): High-ROI docs simplify from the 2026-07-21 audit —
+  LED consolidation + dual Trap Settings nav labels + Getting Started regroup.
+  Does **not** include FAQ triage, billing/password stub removal, thin-page
+  merges, or marketing appendix drops (deferred; account-deletion docs left
+  alone for SW-570 / user-guide#90). Acceptance checklist:
+  - [x] Canonical LED page remains `getting-started/led-guide.md` (interactive
+    diagnostic + reference table; FW-218 SCOUT row still lands here later).
+  - [x] `troubleshooting/led-light-guide.md` is a stub pointing at the
+    canonical LED Guide; `docs-site/next.config.ts` 301-redirects
+    `/troubleshooting/led-light-guide` → `/getting-started/led-guide`;
+    removed from Troubleshooting nav; `common-issues.md` links to led-guide.
+  - [x] `getting-started/app/led-modes.md` no longer claims rapid red =
+    SOS/system error (conflicts with power-down); retitled LED Pattern
+    Animations, keeps connection GIFs, defers red/no-light to led-guide;
+    nested under LED Guide in SUMMARY (not under App).
+  - [x] Dual Trap Settings trees have distinct sidebar labels: **Settings in
+    the App** (`getting-started/app/trap-settings/`) vs **Door & Capture
+    Features** (`getting-started/trap-settings/`); H1s match; feature hub
+    cross-links the app settings hub.
+  - [x] Getting Started SUMMARY regrouped under Setup · Daily use ·
+    Reference · Care hub pages (`setup.md`, `daily-use.md`, `reference.md`,
+    `care.md`) without moving billing/password stubs or dropping appendix.
+  - [x] Root and `docs-site/content/` twins byte-identical for every touched
+    markdown page + SUMMARY. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -292,6 +316,7 @@
 | DOC-08  | Post-launch drift (SW-536)     |
 | DOC-09  | Post-launch drift (FW-305)     |
 | DOC-10  | Post-launch drift (mobile reset) |
+| DOC-11  | Docs simplify / nav cleanup (SW-575) |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
