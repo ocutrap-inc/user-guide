@@ -28,7 +28,7 @@ This two-step check prevents false triggers from rain, debris, or quick movement
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Camera Time Lapse** | 0–24 hours | 6 hours | How often the camera takes periodic photos while armed. Set to 0 to disable timelapse. |
+| **Camera Time Lapse** | 0–24 hours | 6 hours | How often the camera takes periodic photos in any mode (including Unarmed and Armed idle). Independent of Scout photo interval. Set to 0 to disable. |
 | **Camera Quality** | 1–6 | 2 | Image resolution size (1=QVGA smallest, 6=UXGA largest). Higher = better quality but more data/power. |
 | **Rotate Image** | 0°, 90°, 180°, 270° | 0° | Rotates captured images. Useful if trap is mounted in non-standard orientation. |
 | **Dark Lux Threshold** | 1–100 lux | 25 lux | Light level below which the environment is considered "dark" and IR lighting activates. |

@@ -16,7 +16,7 @@ The integrated camera provides a clear view inside the trap with:
 - **Automatic night vision** — IR LEDs activate in low-light conditions
 - **Adjustable image quality** — Choose from 6 resolution sizes
 - **Image rotation** — 0°, 90°, 180°, or 270° to match your trap orientation
-- **Timelapse photos** — Periodic images while armed (configurable interval)
+- **Timelapse photos** — Periodic images in any mode (configurable interval; default 6 hours)
 
 ---
 

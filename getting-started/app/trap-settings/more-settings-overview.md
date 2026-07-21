@@ -39,7 +39,7 @@ This improves the chance the door locks. It does not confirm the lock. Enabled b
 
 #### Camera Time Lapse
 
-Sets how often the camera captures periodic photos while the trap is armed. More frequent photos provide better visibility but increase power and data usage.
+Sets how often the camera captures periodic photos in any mode (including Unarmed and Armed idle). Independent of the Scout photo interval. More frequent photos provide better visibility but increase power and data usage.
 
 ***
 

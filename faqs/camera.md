@@ -12,11 +12,11 @@ The **OcuTrap camera** provides **daytime and night vision capabilities**, allow
 
 ### Camera Time-Lapse Mode
 
-OcuTrap can **automatically capture images** at set intervals while the trap is in **armed mode**.
+OcuTrap can **automatically capture images** at set intervals in **any mode** (Unarmed, Scouting, Armed, or after a capture)—not only while Armed.
 
 #### Configurable Option
 
-* **Photo Capture Frequency** – Defines how often the camera captures an image while the trap is armed.
+* **Photo Capture Frequency** – Defines how often the camera captures a periodic time-lapse image (independent of Scout photo interval).
 
 {% hint style="info" %}
 If images are too frequent, **reduce the frequency** to conserve battery and data. If you need more monitoring, **increase the frequency** to capture more activity.
