@@ -120,7 +120,7 @@ The 12V accessory port can power external devices like dispensers, pumps, or oth
 | Setting | Options | Default | Description |
 |---------|---------|---------|-------------|
 | **Enhanced Door Closing** | On/Off | On | Re-seats the door under the locking rod after every close, captures included. Improves the chance the door locks. Does not confirm it. |
-| **Actuator Inverse** | On/Off | Off | Reverses the door motor drive direction. For traps built with reversed motor wiring, where the door drives the wrong way. Set by OcuTrap support. Leave Off unless support turns it on. |
+| **Actuator Inverse** | On/Off | Off | Reverses the door motor drive direction. Turn On if your motor is going the wrong way and the door opens when it should close. |
 | **Units** | Metric/Imperial | Imperial | Display units for distance and temperature throughout the app. |
 
 ---

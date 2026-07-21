@@ -111,7 +111,7 @@
   Enhanced Door Closing), a matching row to the settings table in
   `OcuTrap_Knowledge_Base_Complete.md`, and an `### Actuator Inverse`
   subsection under `## Trap Settings` (after Enhanced Door Closing). Copy stays
-  telegraphic and tells customers to leave it Off unless support turns it on.
+  telegraphic: turn it On if your motor is going the wrong way (support-copy dropped 07-21 per Graham).
   KB PDF regenerated. `more-settings-overview.md` / `advanced-settings.md` left
   untouched (they document the current app UI, which does not surface this
   setting).
