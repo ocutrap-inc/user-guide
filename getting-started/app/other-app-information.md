@@ -24,7 +24,7 @@ Commands are sent from the **Trap Controls** bar on the trap detail screen — a
 
 Share a trap from its **Sharing** tab: enter the email of the person you want to share with, and (if you're the owner) choose their manager level. You cannot share with yourself or double-share the same trap. Once they accept the emailed invite, the trap appears in their account. See [Sharing Traps](../../faqs/sharing-traps/README.md) and [User Levels](../../faqs/sharing-traps/user-levels.md) for details.
 
-### Changing trap name
+### Changing trap name and notes
 
-Click on the current name of the trap such as "52353454" or "Farm Trap". A pop-up will appear and you can rename the trap.
+On the trap detail screen, tap the **name** in the top bar to rename the trap. Tap **Notes** in the same top bar for the single free-form notes field (access directions, gate codes, etc.). Map position is separate — use **Set location** for a pin or address; that is not a text “location note.”
 
