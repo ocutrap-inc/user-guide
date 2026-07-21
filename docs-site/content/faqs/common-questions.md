@@ -663,6 +663,6 @@ The OcuTrap mobile app registers your device for push notifications automaticall
 
 * Make sure you **allowed notifications** for the OcuTrap app in your phone's settings.
 * Confirm your **notification preferences** in the app (Account settings) are turned on for the alerts you want.
-* If notifications still don't arrive, **delete the OcuTrap app and reinstall it**, then sign in again so the app can re-register your device.
+* If notifications still don't arrive, **delete the OcuTrap app and reinstall it**, then sign in again so the app can re-register your device. Step-by-step for iPhone and Android: [Resetting the Mobile App](../troubleshooting/resetting-the-mobile-app.md).
 
 </details>

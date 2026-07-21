@@ -34,7 +34,7 @@ In the mobile app, open **Notification Settings**:
 * **Digest** — choose **Immediate**, **Daily Digest**, or **Weekly Digest**.
 
 {% hint style="info" %}
-Push notifications also require phone-level permission for the OcuTrap app. See [Using the Mobile App](using-the-mobile-app.md).
+Push notifications also require phone-level permission for the OcuTrap app. See [Using the Mobile App](using-the-mobile-app.md). If permissions look correct and push still fails, try [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md).
 {% endhint %}
 
 Scout-mode triggers and alerts work differently from **Captures** and **Trap alerts**: they are recorded in the trap's activity feed only, and never send push or email, never appear in your Inbox, and never affect the notification-bell count. For how Scouting works and where to see photos while the door stays open, see [Scouting Mode](scouting-mode.md).

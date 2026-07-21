@@ -115,6 +115,15 @@
   KB PDF regenerated. `more-settings-overview.md` / `advanced-settings.md` left
   untouched (they document the current app UI, which does not surface this
   setting).
+- [ ] **DOC-10**: Publish a mobile-app reset page,
+  `troubleshooting/resetting-the-mobile-app.md` ("Resetting the Mobile App"),
+  with iOS and Android steps for force-quit, optional Android cache clear,
+  delete + reinstall, and post-reinstall sign-in / notification permissions.
+  Clarify that traps, images, and subscription stay on the account (cloud).
+  Cross-links: using-the-mobile-app, notification-settings, cant-sign-in,
+  support. Nav: new bullet at the end of `## Troubleshooting` in SUMMARY.md.
+  Root and `docs-site/content/` copies stay byte-identical; KB PDF
+  regenerated. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -282,6 +291,7 @@
 | DOC-07  | Cutover comms (SW-517)         |
 | DOC-08  | Post-launch drift (SW-536)     |
 | DOC-09  | Post-launch drift (FW-305)     |
+| DOC-10  | Post-launch drift (mobile reset) |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
