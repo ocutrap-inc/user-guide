@@ -280,6 +280,7 @@ Complete list of all configurable trap settings.
 | Accessory Port | Enable / Disable; activation time 0–30 seconds |
 | Capture Alert Interval | 0–48 hours (default: 8 hours) |
 | Enhanced Door Closing | On / Off (default: On) |
+| Actuator Inverse | On / Off (default: Off) |
 | Units | Metric / Imperial |
 
 ---
@@ -347,6 +348,12 @@ The door locks by sliding under a locking rod. One close does not always get it 
 When enabled, the door backs off and re-closes after every close, including closes on a capture, to seat under the rod. This improves door lock reliability in the field. It does not confirm the lock: the trap has no sensor that can tell a locked door from a closed one, and the app reports Closed for both.
 
 Enabled by default. Turn it off only if support asks. With it off, a capture gets one close and no re-seat.
+
+### Actuator Inverse
+
+Reverses the door motor drive direction. Some traps are built with reversed motor wiring. The door drives open when it should close. This setting corrects it in firmware with no hardware rework.
+
+Off by default. Set by OcuTrap support. Leave it Off unless support turns it on.
 
 ### Pre-Capture Notification
 
