@@ -47,7 +47,7 @@ Push notifications are the fastest way to know about a capture. Two things need 
    * **Android:** Settings → Apps → OcuTrap → Notifications.
 
 {% hint style="info" %}
-If you're set up for push but not receiving alerts, the phone-level permission in the step above is the most common thing to check.
+If you're set up for push but not receiving alerts, the phone-level permission in the step above is the most common thing to check. If that looks right and alerts still don't arrive, try [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md).
 {% endhint %}
 
 ***
@@ -56,4 +56,5 @@ If you're set up for push but not receiving alerts, the phone-level permission i
 
 * [Notification Settings](notification-settings.md)
 * [Adding a Trap to Your Account](adding-a-trap-to-your-account.md)
+* [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md) — force quit or reinstall on iOS and Android
 * [App](README.md) — overview of the OcuTrap app.
