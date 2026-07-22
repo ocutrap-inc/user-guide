@@ -21,7 +21,7 @@ Below the arm mode is the main door control:
 
 A row of quick actions handles the most common commands:
 
-* **Request Image** — request a fresh photo from the camera. See [Manually taking an image](../../faqs/manually-taking-an-image.md).
+* **Request Image** — request a fresh photo from the camera. See [Requesting photos](../../faqs/manually-taking-an-image.md).
 * **Location** — request an updated GPS location. See [GPS](../../faqs/gps.md).
 * **Buzz** — sound the trap's buzzer, handy for locating the trap or confirming it's responsive.
 

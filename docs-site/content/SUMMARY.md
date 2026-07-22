@@ -53,9 +53,7 @@
 * [Safe-mode](faqs/safe-mode.md)
 * [Battery](faqs/battery.md)
 * [Updating firmware](faqs/updating-firmware.md)
-* [Manually taking an image](faqs/manually-taking-an-image.md)
-* [Seeing Camera view](faqs/seeing-camera-view.md)
-* [Taking higher quality images](faqs/taking-higher-quality-images.md)
+* [Requesting photos](faqs/manually-taking-an-image.md)
 * [GPS](faqs/gps.md)
 * [Weather & Environmental Guidelines](faqs/weather-and-environmental-guidelines.md)
 * [Cold Weather](faqs/cold-weather.md)
@@ -72,7 +70,6 @@
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)
 * [Condensation on the Camera](troubleshooting/condensation-on-the-camera.md)
-* [Motor Connector Use](troubleshooting/motor-connector-use.md)
 * [Motor Connector Tightness Check](troubleshooting/motor-connector-tightness-check.md)
 * [Wire Exposed](troubleshooting/wire-exposed.md)
 * [Can't Sign In to Your Account](troubleshooting/cant-sign-in.md)
@@ -114,8 +111,4 @@
 ## Appendix and Resources
 
 * [Downloads](appendix-and-resources/downloads.md)
-* [Media Kit](appendix-and-resources/media-kit.md)
-* [Testimonials](appendix-and-resources/testimonials.md)
-* [Case Study](appendix-and-resources/case-study.md)
 * [Updates](appendix-and-resources/updates.md)
-* [OcuTrap in News](appendix-and-resources/ocutrap-in-news.md)

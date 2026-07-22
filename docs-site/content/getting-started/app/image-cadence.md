@@ -53,7 +53,7 @@ Independent of animal activity, the trap can take periodic **time-lapse** photos
 
 ## On-demand photos
 
-Any time, you can request a photo from the app—tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Taking Higher-Quality Images](../../faqs/taking-higher-quality-images.md).
+Any time, you can request a photo from the app—tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Requesting photos](../../faqs/manually-taking-an-image.md).
 
 ## What affects the timing
 
