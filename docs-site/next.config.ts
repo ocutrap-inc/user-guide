@@ -34,6 +34,12 @@ const nextConfig: NextConfig = {
         destination: "/support/bug-reporting",
         permanent: true,
       },
+      // LED pages consolidated to getting-started/led-guide (SW-575 / DOC-11).
+      {
+        source: "/troubleshooting/led-light-guide",
+        destination: "/getting-started/led-guide",
+        permanent: true,
+      },
     ];
   },
 };

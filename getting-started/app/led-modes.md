@@ -1,8 +1,8 @@
-# LED modes
+# LED Pattern Animations
 
-For a customer-friendly guide to LED patterns — including what to do when troubleshooting — see the [LED Guide](../led-guide.md).
+For what each color and pattern means — including red blinks, battery idle flashes, and what to do next — use the [LED Guide](../led-guide.md). That page is the single source of truth (interactive diagnostic + full reference table).
 
-The patterns below show animated examples of each status light.
+The GIFs below are short visual examples of the most common **connection** patterns. They do not replace the LED Guide.
 
 ### Connected Mode
 
@@ -24,16 +24,6 @@ The patterns below show animated examples of each status light.
 * **Blinking Green**: The device is attempting to establish a cellular connection.
 * <img src="../../.gitbook/assets/Rapidly Blinking Green.gif" alt="" data-size="line">
 
-### Red flash SOS <a href="#red-flash-sos" id="red-flash-sos"></a>
+### Red light or no light?
 
-Is your device blinking red?
-
-A pattern of more than 10 red blinks indicates a **system error**. Count the blinks and contact [OcuTrap Support](../../support/support.md).
-
-{% content-ref url="../../support/support.md" %}
-[Contact Us](../../support/support.md)
-{% endcontent-ref %}
-
-### No status LED <a href="#no-status-led" id="no-status-led"></a>
-
-If you power up your device and the status LED never comes on, reconnect the battery, press the power button once, and see [Trap Offline or Won't Connect](../../troubleshooting/trap-offline-or-wont-connect.md).
+Rapid red blinking usually means the trap is **powering down** (power button held) — not an SOS/error code. Solid red, brief red flashes after a command, and “no light” cases are all covered in the [LED Guide](../led-guide.md). If the LED never comes on after you reconnect the battery and press power, see [Trap Offline or Won't Connect](../../troubleshooting/trap-offline-or-wont-connect.md).

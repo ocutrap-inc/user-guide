@@ -4,7 +4,9 @@ description: >-
   trap’s operation, notifications, and hardware features.
 ---
 
-# Trap Settings
+# Door & Capture Features
+
+Deep dives on door closing, pre-capture alerts, and capture-distance / sensor behavior. For the full list of knobs in the app UI, see [Settings in the App](../app/trap-settings/README.md).
 
 ### Main Settings
 

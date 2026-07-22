@@ -15,7 +15,7 @@ The trap **requires the door to be fully open** before arming. This is a safety 
 **Solution:**
 1. Open the OcuTrap app
 2. Tap the **Open** button and wait for the door to fully open
-3. Check that the light shows **blue** (unarmed and open) — see the [LED Light Guide](led-light-guide.md)
+3. Check that the light shows **blue** (unarmed and open) — see the [LED Guide](../getting-started/led-guide.md)
 4. Try arming again
 
 ### Obstruction Detected
