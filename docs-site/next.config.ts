@@ -40,6 +40,17 @@ const nextConfig: NextConfig = {
         destination: "/getting-started/led-guide",
         permanent: true,
       },
+      // App-nav billing/password stubs → Account and Billing (SW-575 / DOC-12).
+      {
+        source: "/getting-started/app/billing",
+        destination: "/account-and-billing/subscription-overview",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/app/resetting-password",
+        destination: "/account-and-billing/resetting-password",
+        permanent: true,
+      },
     ];
   },
 };
