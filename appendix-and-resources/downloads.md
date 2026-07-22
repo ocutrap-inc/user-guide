@@ -21,4 +21,4 @@ A one-page letter-size reference card covering system LEDs, buttons, device stat
 ### Need something else?
 
 * The **Quick Start guide** ships physically inside every OcuTrap. If you need a replacement, contact [support@ocutrap.com](mailto:support@ocutrap.com).
-* For brand assets (logos, social images), see the [Media Kit](media-kit.md).
+* For brand assets (logos, social images), contact [support@ocutrap.com](mailto:support@ocutrap.com) or visit [ocutrap.com](https://ocutrap.com).
