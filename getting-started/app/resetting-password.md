@@ -1,8 +1,7 @@
 # Resetting Password
 
-See [Resetting Password](../../account-and-billing/resetting-password.md) in Account and Billing for full instructions.
+This page moved to **Account and Billing**.
 
-Quick steps:
+→ [Resetting Password](../../account-and-billing/resetting-password.md)
 
-1. Go to [app.ocutrap.com](https://app.ocutrap.com).
-2. Click **Forgot password?**, enter your email, and use the **6-digit reset code** we email you to set a new password.
+If you still can't get in: [Can't Sign In to Your Account](../../troubleshooting/cant-sign-in.md).

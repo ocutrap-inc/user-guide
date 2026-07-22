@@ -148,6 +148,18 @@
     `care.md`) without moving billing/password stubs or dropping appendix.
   - [x] Root and `docs-site/content/` twins byte-identical for every touched
     markdown page + SUMMARY. exit-impact: ops.
+- [x] **DOC-12** (SW-575 follow-on): FAQ triage + billing/password nav unify.
+  Deferred from DOC-11 so SW-570 / user-guide#90 could stay isolated.
+  Acceptance checklist:
+  - [x] `faqs/common-questions.md` cut from ~79 marketing FAQs to ~17 ops
+    FAQs; stale “does not require a subscription” answers corrected to match
+    `account-and-billing/subscription-overview.md`; deep how-tos link out.
+  - [x] Billing + Resetting Password removed from App nav in SUMMARY; stubs
+    remain as move notices; `docs-site/next.config.ts` 301-redirects
+    `/getting-started/app/billing` → subscription-overview and
+    `/getting-started/app/resetting-password` → account resetting-password.
+  - [x] Root and `docs-site/content/` twins byte-identical for touched pages +
+    SUMMARY. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -317,6 +329,7 @@
 | DOC-09  | Post-launch drift (FW-305)     |
 | DOC-10  | Post-launch drift (mobile reset) |
 | DOC-11  | Docs simplify / nav cleanup (SW-575) |
+| DOC-12  | FAQ triage + billing/password nav (SW-575) |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
