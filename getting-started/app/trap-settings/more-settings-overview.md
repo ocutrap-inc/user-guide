@@ -54,7 +54,7 @@ Requires trap firmware v2.3.2-1010 or newer. Older firmware ignores this setting
 
 #### Camera Time Lapse
 
-Sets how often the camera captures periodic photos while the trap is armed. More frequent photos provide better visibility but increase power and data usage.
+Sets how often the camera captures periodic photos in any mode (including Unarmed and Armed idle). Independent of the Scout photo interval. More frequent photos provide better visibility but increase power and data usage.
 
 ***
 

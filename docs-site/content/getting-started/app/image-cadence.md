@@ -21,7 +21,7 @@ Photos only flow when the trap has cellular signal and enough battery. On low ba
 | **Scouting Mode** | About every **15 seconds** while an animal is in the detection area |
 | **At capture** | One photo when the door closes |
 | **After a capture** | A short burst (~every 15 s for the first minute), then one **every 2 hours** |
-| **Time-lapse** | **Every 6 hours** by default while armed (adjustable, or off) |
+| **Time-lapse** | **Every 6 hours** by default in any mode (adjustable, or off) |
 | **On demand** | Instantly, whenever you tap the camera button in the app |
 
 ## Approach photos (Armed Mode)
@@ -49,7 +49,7 @@ See [Scouting Mode](scouting-mode.md) and [Pre-Capture Notification](../trap-set
 
 ## Time-lapse photos
 
-Independent of animal activity, the trap can take periodic **time-lapse** photos while armed—**every 6 hours by default**. You can change the interval (up to 24 hours) or turn it off in [Settings](trap-settings/settings-reference.md).
+Independent of animal activity, the trap can take periodic **time-lapse** photos in **any mode** (Unarmed, Scouting, Armed, or after a capture)—**every 6 hours by default**. This is separate from the Scout photo interval. You can change the interval (up to 24 hours) or turn it off in [Settings](trap-settings/settings-reference.md).
 
 ## On-demand photos
 
