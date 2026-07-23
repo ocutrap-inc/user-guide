@@ -120,7 +120,7 @@ The 12V accessory port can power external devices like dispensers, pumps, or oth
 | Setting | Options | Default | Description |
 |---------|---------|---------|-------------|
 | **Enhanced Door Closing** | On/Off | On | Re-seats the door under the locking rod after every close, captures included. Improves the chance the door locks. Does not confirm it. |
-| **EDC Backoff** | 30–130 ms (10 ms steps) | 80 ms | How far the door backs off during Enhanced Door Closing. Lower it if the door reverses too far on a fresh battery. Raise it if the lock rod never drops. Needs firmware v2.3.2-1010+. |
+| **EDC Backoff** | 30–130 ms (10 ms steps) | 50 ms | How far the door backs off during Enhanced Door Closing. Lower it if the door reverses too far on a fresh battery. Raise it if the lock rod never drops. Needs firmware v2.3.2-1010+. |
 | **Actuator Inverse** | On/Off | Off | Reverses the door motor drive direction. Turn On if your motor is going the wrong way and the door opens when it should close. |
 | **Units** | Metric/Imperial | Imperial | Display units for distance and temperature throughout the app. |
 
