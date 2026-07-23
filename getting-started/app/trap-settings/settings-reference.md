@@ -94,6 +94,17 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 - **Fix requirements**: Minimum 5 satellites, 3D fix required for valid position
 - **Automatic updates**: GPS automatically triggered on capture events
 
+### Indoor and covered deployments
+
+GPS needs a clear view of the sky. Indoors, under a roof, or in a metal building, fixes often fail or take much longer — and **longer acquisition attempts use more battery than a quick outdoor fix**. The app cannot tell whether a trap is inside or outside; that is a setting you choose.
+
+If the trap stays in a building or other GPS-poor site:
+
+1. Turn **Location (GPS)** **Off** in trap settings.
+2. Set the map position yourself with **Set location** (pin or address) on the trap detail screen.
+
+Leave GPS **On** for outdoor deployments where satellite reception is good.
+
 ---
 
 ## Accessory Port Settings
@@ -155,6 +166,7 @@ Settings are accessible in different locations:
 
 ### For Maximum Battery Life
 - Set GPS Interval to 8+ hours
+- Turn **Location (GPS)** **Off** when the trap is indoors or under cover, and use **Set location** instead (indoor GPS searches waste battery)
 - Use Camera Quality level 1–2
 - Set Camera Time Lapse to 6+ hours or disable
 - Reduce Maximum IR Brightness if images are overexposed
