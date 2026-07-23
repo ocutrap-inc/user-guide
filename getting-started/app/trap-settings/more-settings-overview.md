@@ -39,7 +39,7 @@ This improves the chance the door locks. It does not confirm the lock. Enabled b
 
 #### EDC Backoff
 
-Sets how far the door backs off during Enhanced Door Closing, in milliseconds. Options run from 30 ms to 130 ms in 10 ms steps. Default is 85 ms.
+Sets how far the door backs off during Enhanced Door Closing, in milliseconds. Options run from 30 ms to 130 ms in 10 ms steps. Default is 80 ms.
 
 Every trap door is slightly different, and door speed rises with battery voltage. Two symptoms tell you to adjust:
 
