@@ -160,6 +160,19 @@
     `/getting-started/app/resetting-password` → account resetting-password.
   - [x] Root and `docs-site/content/` twins byte-identical for touched pages +
     SUMMARY. exit-impact: ops.
+- [x] **DOC-13** (SW-575 leftover): thin-page merges + marketing appendix drop.
+  Acceptance checklist:
+  - [x] Motor connector video folded into
+    `troubleshooting/motor-connector-tightness-check.md`;
+    `motor-connector-use.md` is a stub; 301 redirect; removed from nav.
+  - [x] Camera FAQ trio consolidated into `faqs/manually-taking-an-image.md`
+    (retitled Requesting photos); seeing-camera-view +
+    taking-higher-quality-images are stubs with 301s; nav has one entry.
+  - [x] Appendix nav keeps Downloads + Updates only; media kit /
+    testimonials / case study / news removed from SUMMARY with 301s to
+    ocutrap.com; source files remain (pdf-exclude already).
+  - [x] Root and `docs-site/content/` twins byte-identical for touched pages +
+    SUMMARY. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -330,6 +343,7 @@
 | DOC-10  | Post-launch drift (mobile reset) |
 | DOC-11  | Docs simplify / nav cleanup (SW-575) |
 | DOC-12  | FAQ triage + billing/password nav (SW-575) |
+| DOC-13  | Thin-page merges + appendix drop (SW-575) |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

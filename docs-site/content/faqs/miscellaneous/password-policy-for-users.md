@@ -17,14 +17,13 @@ description: >-
 
 ### Password requirements
 
-* 8 or more characters
-* Includes a number
-* Includes a special character
+* 10 or more characters
+* No required mix of numbers or symbols. We check real password strength instead.
+* Common passwords and passwords found in known data breaches are not allowed.
 * Do not reuse a password that you use on other sites.
-* We do not block common passwords.
 
 ### How to create a strong password
 
-* Use a passphrase with several random words, then add a capital letter and a symbol. Example: `River tulip taxi folder cloud!`
+* Use a passphrase with several random words. Example: `river tulip taxi folder cloud`
 * Avoid personal info like names, addresses, or dates.
 * Use a password manager to generate and store unique passwords.

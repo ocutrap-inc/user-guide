@@ -51,6 +51,43 @@ const nextConfig: NextConfig = {
         destination: "/account-and-billing/resetting-password",
         permanent: true,
       },
+      // Thin-page merges (SW-575 / DOC-13).
+      {
+        source: "/faqs/seeing-camera-view",
+        destination: "/faqs/manually-taking-an-image",
+        permanent: true,
+      },
+      {
+        source: "/faqs/taking-higher-quality-images",
+        destination: "/faqs/manually-taking-an-image",
+        permanent: true,
+      },
+      {
+        source: "/troubleshooting/motor-connector-use",
+        destination: "/troubleshooting/motor-connector-tightness-check",
+        permanent: true,
+      },
+      // Marketing appendix pages removed from customer KB nav (DOC-13).
+      {
+        source: "/appendix-and-resources/media-kit",
+        destination: "https://ocutrap.com",
+        permanent: true,
+      },
+      {
+        source: "/appendix-and-resources/testimonials",
+        destination: "https://ocutrap.com",
+        permanent: true,
+      },
+      {
+        source: "/appendix-and-resources/case-study",
+        destination: "https://ocutrap.com",
+        permanent: true,
+      },
+      {
+        source: "/appendix-and-resources/ocutrap-in-news",
+        destination: "https://ocutrap.com",
+        permanent: true,
+      },
     ];
   },
 };
