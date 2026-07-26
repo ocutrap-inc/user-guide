@@ -69,6 +69,7 @@ Use the table below to interpret what the trap is doing. If the LED never turns 
 | Breathing cyan | Connected and online | Refresh the app and try the command again |
 | Fast blinking cyan | Connecting to the cloud | Wait a few minutes |
 | Blinking green | Looking for cellular/internet connection | Move to better cellular coverage |
+| Fast blinking blue | Trying to join the cellular network and failing | Move to better cellular coverage. If it keeps blinking blue quickly, contact Support |
 | Blinking magenta | Firmware update or safe mode activity | Leave powered on and wait |
 | Rapid red blinks | Powering down — the power button is being held | Release the power button within ~3 seconds to cancel, or let it finish and press power again to restart |
 | Solid red during boot | Battery too low at startup | Charge or replace the battery |
@@ -85,6 +86,10 @@ If the LED is **blinking green for a long time**, the trap may not have enough c
 1. Move the trap **outdoors** or to a more open area.
 2. Give it a few minutes to search for signal and reconnect.
 3. The trap may reconnect automatically once signal improves.
+
+{% hint style="warning" %}
+**Fast blinking blue** means the trap is trying to join the cellular network and cannot. Move it to better coverage and wait 10 minutes. If it is still blinking blue quickly, that is not something you can fix in the field. Contact [OcuTrap Support](../support/support.md) with your Trap ID.
+{% endhint %}
 
 ## Step 5: Check the App or Dashboard
 

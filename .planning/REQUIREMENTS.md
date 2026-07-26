@@ -173,6 +173,24 @@
     ocutrap.com; source files remain (pdf-exclude already).
   - [x] Root and `docs-site/content/` twins byte-identical for touched pages +
     SUMMARY. exit-impact: ops.
+- [x] **DOC-14**: Document the fast-blinking-blue LED as a cellular-network
+  join failure. Support was fielding this pattern with no page to point at,
+  and the guide only covered blue as "door open" (solid) and "opening the
+  door" (blinking after a command). Acceptance checklist:
+  - [x] `led-diagnostics` entry in `getting-started/led-guide.md`:
+    `blue` / `fast-blink`, context "idle, not after a command", meaning =
+    cannot join the cellular network and keeps retrying, action = move to
+    better coverage, wait 10 minutes, then contact support with the Trap ID.
+    Links to trap-offline, connectivity-and-coverage, support. The wizard and
+    the on-page reference table both pick it up from this one entry.
+  - [x] Row added to the Step 3 LED table in
+    `troubleshooting/trap-offline-or-wont-connect.md`, plus a warning hint in
+    Step 4 (Check Cellular Coverage) naming it as the escalate-to-support
+    signal rather than a field-fixable one.
+  - [x] Row added to the System Status LEDs table in
+    `OcuTrap_Knowledge_Base_Complete.md` (hand-maintained; feeds the KB PDF).
+  - [x] Root and `docs-site/content/` twins byte-identical for all three
+    touched pages. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 

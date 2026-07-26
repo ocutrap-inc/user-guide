@@ -78,6 +78,18 @@ entries:
     context: just after a command
     meaning: Opening the door after a manual open command.
     action: Normal for a few seconds while the door opens.
+  - color: blue
+    pattern: fast-blink
+    context: idle, not after a command
+    meaning: The trap is trying to join the cellular network and cannot. It keeps retrying and never reaches the cloud, so it stays offline in the app.
+    action: Move the trap outdoors or to an area with better cellular coverage and give it 10 minutes. If it is still blinking blue quickly, contact support with your Trap ID.
+    links:
+      - label: Trap Offline or Won't Connect
+        href: /troubleshooting/trap-offline-or-wont-connect
+      - label: Connectivity & Coverage
+        href: /getting-started/connectivity-and-coverage
+      - label: Contact Support
+        href: /support/support
 
   - color: yellow
     pattern: solid

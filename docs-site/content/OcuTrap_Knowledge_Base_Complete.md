@@ -280,6 +280,7 @@ Complete list of all configurable trap settings.
 | Accessory Port | Enable / Disable; activation time 0–30 seconds |
 | Capture Alert Interval | 0–48 hours (default: 8 hours) |
 | Enhanced Door Closing | On / Off (default: On) |
+| Actuator Inverse | On / Off (default: Off) |
 | Units | Metric / Imperial |
 
 ---
@@ -348,6 +349,12 @@ When enabled, the door backs off and re-closes after every close, including clos
 
 Enabled by default. Turn it off only if support asks. With it off, a capture gets one close and no re-seat.
 
+### Actuator Inverse
+
+Reverses the door motor drive direction. Turn it On if your motor is going the wrong way. The door opens when it should close and this setting corrects it.
+
+Off by default.
+
 ### Pre-Capture Notification
 
 When enabled in armed mode, the system monitors two zones: an early detection zone (approximately 6 inches before the capture distance) and the primary detection zone (at the set capture distance). When an animal approaches, a pre-capture photo and alert are sent with the measured distance. There is a 2-minute cooldown between alerts. Enabled by default.
@@ -381,6 +388,7 @@ Perform these checks at the start of every trapping session:
 | Fast Blinking Cyan | Connecting to cloud |
 | Blinking Magenta | OTA firmware update in progress |
 | Blinking Green | Searching for cellular connection |
+| Fast Blinking Blue | Trying to join the cellular network and failing. Move to better coverage. Contact support if it persists |
 | Red Flash SOS (rapid blinks) | System error — contact support if >10 blinks |
 | No LED | No power or failed to boot |
 | LED Off (after armed) | Hibernation — low-power sleep mode |
