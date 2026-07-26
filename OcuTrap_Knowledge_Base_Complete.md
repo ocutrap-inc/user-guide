@@ -388,6 +388,7 @@ Perform these checks at the start of every trapping session:
 | Fast Blinking Cyan | Connecting to cloud |
 | Blinking Magenta | OTA firmware update in progress |
 | Blinking Green | Searching for cellular connection |
+| Fast Blinking Blue | Trying to join the cellular network and failing. Move to better coverage. Contact support if it persists |
 | Red Flash SOS (rapid blinks) | System error — contact support if >10 blinks |
 | No LED | No power or failed to boot |
 | LED Off (after armed) | Hibernation — low-power sleep mode |
