@@ -25,11 +25,20 @@ The fastest hand-off. The trap keeps its capture history and moves to the new ow
 1. **The new owner needs an OcuTrap account first.** The transfer is addressed to their account email, so have them sign up and tell you the email they used.
 2. **Cancel the trap's subscription.** Open the trap's **Billing** tab and cancel it (see [managing-your-subscription.md](../account-and-billing/managing-your-subscription.md "mention")). If the trap is billed through an organization, remove it from the organization's billing first. The app will not transfer a trap that still carries a subscription.
 3. On the trap's page, open the **Settings** tab, scroll to the **Danger zone**, and choose **Transfer ownership**.
-4. Enter the new owner's account email and confirm. The confirmation reminds you that the new owner will see this trap's capture history.
+4. Enter the new owner's account email and confirm. The confirmation reminds you what the hand-off does: the new owner will see this trap's capture history, everyone you shared the trap with loses access, and the trap leaves any organization it belongs to. If the trap is in an organization, the confirmation names it.
 5. Done. The trap leaves your account and appears in the new owner's account right away. They start their own subscription from the trap's **Billing** tab to bring it online.
 
+{% hint style="warning" %}
+**A transfer clears every kind of access, not just yours.**
+
+* **Shared users.** Everyone you shared the trap with loses access, including people you invited who have not accepted yet. The new owner starts with an empty sharing list and re-invites whoever they want.
+* **Organizations.** The trap leaves every organization it belongs to, along with any trap group it was assigned to. Members of that organization lose access to the trap, its photos, and its controls. The organization itself, its trap groups, and its members are not changed.
+
+Nothing here is reversible from your side after the transfer. If the trap should stay with an organization, do not transfer it: the new owner adds it to an organization themselves.
+{% endhint %}
+
 {% hint style="info" %}
-Only the trap's owner can transfer it. If the email you enter has no OcuTrap account, the app will ask you to have the new owner sign up first.
+Only the trap's owner can transfer it. Being an owner in an organization the trap belongs to is not enough. If the email you enter has no OcuTrap account, the app will ask you to have the new owner sign up first.
 {% endhint %}
 
 ## Option 2: Remove, then re-add (fresh start)
