@@ -9,8 +9,12 @@ description: >-
 ### 1. Log in to Your Account
 
 1. Visit [app.ocutrap.com](https://app.ocutrap.com) and sign in to your account.
-2. Open the trap you want to manage and go to its **Billing** tab.
-3. Open the **Stripe** billing portal, where your subscription and payment details are stored.
+2. Select **Billing** in the sidebar.
+3. Select **Payment portal** at the top of the page, or **Manage in portal** on the **Payment method** card. Either one opens the Stripe portal, where your card is stored.
+
+<!-- TODO: screenshot: Billing page header with the Payment portal button and the Payment method card -->
+
+The **Payment method** card shows **Provider: Stripe** and a status of **Active subscription**, **Update required**, or **No active subscription**.
 
 ### 2. Add a New Payment Method
 
