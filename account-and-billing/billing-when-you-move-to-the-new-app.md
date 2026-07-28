@@ -39,14 +39,13 @@ Your traps, photos, shared access, and subscription are already attached when yo
 
 ## What You Should See
 
-Sign in, open a trap, and go to its **Billing** tab. You should see:
+Sign in and select **Billing** in the sidebar. You should see:
 
-* The **Plan** you already pay for, marked **Active** (or **Trialing** if you're in a free trial).
-* Your renewal date, unchanged.
-* Your card, already on file.
-* Your invoices, through the **Stripe** billing portal link.
+* Each trap listed under **Per-trap status**, marked **Active** (or **Trial** if you're in a free trial), never **Inactive**.
+* Your **Payment method** showing **Provider: Stripe** and **Active subscription**.
+* Your past charges under **Invoices**.
 
-The trap's **Device Info** also shows the **Plan** field. It should read the plan you pay for, not **No Subscription**.
+Select **Manage** next to a trap to open its **Trap billing** page. There, **Plan** reads **Cellular plan**, **Billing frequency** reads **Monthly** or **Annual**, and **Next charge** shows your renewal date, unchanged.
 
 ***
 

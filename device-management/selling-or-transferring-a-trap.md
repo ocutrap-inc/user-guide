@@ -23,10 +23,10 @@ Pick based on the history. An in-app transfer hands the new owner your images an
 The fastest hand-off. The trap keeps its capture history and moves to the new owner immediately.
 
 1. **The new owner needs an OcuTrap account first.** The transfer is addressed to their account email, so have them sign up and tell you the email they used.
-2. **Cancel the trap's subscription.** Open the trap's **Billing** tab and cancel it (see [managing-your-subscription.md](../account-and-billing/managing-your-subscription.md "mention")). If the trap is billed through an organization, remove it from the organization's billing first. The app will not transfer a trap that still carries a subscription.
+2. **Cancel the trap's subscription.** Select **Billing** in the sidebar, find the trap under **Per-trap status**, select **Manage**, then **Manage subscription** to cancel in the Stripe portal (see [managing-your-subscription.md](../account-and-billing/managing-your-subscription.md "mention")). If the trap is billed through an organization, remove it from the organization's billing first. The app will not transfer a trap that still carries a subscription.
 3. On the trap's page, open the **Settings** tab, scroll to the **Danger zone**, and choose **Transfer ownership**.
 4. Enter the new owner's account email and confirm. The confirmation reminds you what the hand-off does: the new owner will see this trap's capture history, everyone you shared the trap with loses access, and the trap leaves any organization it belongs to. If the trap is in an organization, the confirmation names it.
-5. Done. The trap leaves your account and appears in the new owner's account right away. They start their own subscription from the trap's **Billing** tab to bring it online.
+5. Done. The trap leaves your account and appears in the new owner's account right away. They start their own subscription from the trap's **Trap billing** page to bring it online.
 
 {% hint style="warning" %}
 **A transfer clears every kind of access, not just yours.**
@@ -59,9 +59,9 @@ Removing the trap permanently deletes your images and history for that trap. Sav
 
 ### Step 1: Cancel the trap's subscription
 
-1. Sign in at [app.ocutrap.com](https://app.ocutrap.com) and open the trap's **Billing** tab.
-2. Cancel the subscription. See [managing-your-subscription.md](../account-and-billing/managing-your-subscription.md "mention").
-3. A canceled subscription stays active until the end of the current billing period; the trap can be removed once it shows as canceled.
+1. Sign in at [app.ocutrap.com](https://app.ocutrap.com), select **Billing** in the sidebar, find the trap under **Per-trap status**, and select **Manage**.
+2. Select **Manage subscription** and cancel in the Stripe portal. See [managing-your-subscription.md](../account-and-billing/managing-your-subscription.md "mention").
+3. A canceled subscription stays active until the end of the current billing period; the trap can be removed once it shows **Canceled**.
 
 > If the trap is billed through an organization, remove it from the organization's billing first.
 
@@ -76,7 +76,7 @@ Removing the trap permanently deletes your images and history for that trap. Sav
 
 1. The new owner needs their own OcuTrap account with a verified email.
 2. After signing in, they open **Add trap** and enter the **Trap ID** and **Device ID** (found on the trap and inside the POD), choose a cellular plan, name the trap, set its location, and tap **Activate trap**. See [adding-a-trap-to-your-account.md](../getting-started/app/adding-a-trap-to-your-account.md "mention").
-3. They then start a subscription from the trap's **Billing** tab to bring the trap online.
+3. They then start a subscription from the trap's **Trap billing** page to bring the trap online.
 
 ### Buying a trap second-hand
 

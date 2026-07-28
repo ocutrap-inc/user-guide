@@ -916,7 +916,9 @@ On the **Trap billing** page you can switch between **Monthly** and **Annual** u
 
 ## Resetting Your Password
 
-Visit app.ocutrap.com and click **Forgot password?** Enter your email, then use the **6-digit reset code** we email you to set a new password. Your password stays in sync across the web and mobile apps.
+Visit app.ocutrap.com and click **Forgot password?** Enter your email and click **Send Reset Code**, then open the email and click **Reset Password**. The page opens headed **Choose a new password**, already knowing your email and code, so you only pick the new password.
+
+If your mail app strips the button, the email also carries a reset code underneath. Click **Enter Reset Code** in the app and paste it in. The code is **long** (32 characters of mixed letters and numbers) and **case-sensitive**, so paste it rather than typing it. Your password stays in sync across the web and mobile apps.
 
 ---
 
