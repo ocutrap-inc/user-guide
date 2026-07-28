@@ -39,7 +39,7 @@ With an active subscription, your trap stays online and you get the full OcuTrap
 
 ## If Your Subscription Lapses
 
-A trap's subscription can end because you canceled it, a payment failed, or it was never started. When that happens, the **Plan** field in the trap's **Device Info** shows **Canceled** or **No Subscription**.
+A trap’s subscription can end because you canceled it, a payment failed, or it was never started. When that happens, the trap shows **Canceled** (it ran before) or **Inactive** (it never started) under **Per-trap status** on the **Billing** page.
 
 Because cellular data is part of your subscription, a trap **without an active subscription can no longer connect to the OcuTrap cloud.** This means:
 
@@ -49,8 +49,8 @@ Because cellular data is part of your subscription, a trap **without an active s
 Reactivating your subscription restores full function. You can **reactivate at any time**, and the trap continues to work without interruption once the plan is active again:
 
 1. Sign in at [app.ocutrap.com](https://app.ocutrap.com).
-2. Open the trap and go to its **Billing** tab.
-3. Choose a plan and complete checkout.
+2. Select **Billing** in the sidebar, find the trap under **Per-trap status**, and select **Manage**.
+3. Under **Cellular plan**, pick **Monthly** or **Annual** and complete checkout.
 
 Full steps: [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md).
 
@@ -58,7 +58,7 @@ Full steps: [Update Individual Trap Subscriptions](update-individual-trap-subscr
 
 ## Pausing a Trap (Monthly Plans)
 
-If you don't need a trap for a while but don't want to cancel, you can **pause** its subscription instead. Pause it from the trap's **Billing** tab (**Pause subscription**).
+If you don’t need a trap for a while but don’t want to cancel, you can **pause** its subscription instead. Pause it from the trap’s **Trap billing** page (**Pause subscription**).
 
 * **Monthly plans only**, for up to **6 months**. Annual plans can't be paused.
 * **While paused, you're not billed** and no invoices are generated.

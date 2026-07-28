@@ -850,29 +850,39 @@ To apply, submit a contact form at ocutrap.com with the title "Nonprofit pricing
 
 ## Billing Overview
 
-Manage your billing from each trap's **Billing** tab. Log in at app.ocutrap.com, open the trap, go to its **Billing** tab, and open the secure **Stripe** billing portal.
+Log in at app.ocutrap.com and select **Billing** in the sidebar. The **Billing** page shows your plan, your **Payment method**, **Per-trap status** for every trap you can see, and **Invoices**. Each trap has its own subscription, so select **Manage** next to a trap to open its **Trap billing** page.
+
+To reach the secure Stripe portal, select **Payment portal** at the top of the **Billing** page, or **Manage in portal** on the **Payment method** card.
 
 ### Portal Capabilities
 
 - Update billing information and credit cards
-- Change plans (Monthly or Annual)
-- View subscription status and billing history
 - Manage payment methods
+- Cancel a subscription
+- View past invoices
+
+Switching between **Monthly** and **Annual** is done in the app, under **Cellular plan** on the trap's **Trap billing** page.
 
 ### Subscription Statuses
 
+Shown under **Per-trap status** on the **Billing** page.
+
 | Status | Description |
 |---|---|
-| Active | Full access to all features |
-| Trialing | Free trial period; no charges until trial ends |
-| Canceled | Service continues until the end of the current billing cycle |
+| Active | Subscription paid; trap has full function |
+| Trial | Free trial period; no charges until the trial ends |
+| Past Due | A payment failed; trap still works. Select **Update payment** |
+| Suspended | Payment unresolved; trap stops taking images and accepting commands. Select **Resolve payment** |
+| Canceled | Access continues until the end of the current billing cycle |
+| Paused | Monthly plan paused by you; billing stopped and trap dormant |
+| Inactive | No subscription was ever started for this trap |
 
 ---
 
 ## Changing Your Payment Method
 
-1. Sign in at app.ocutrap.com and open the trap's **Billing** tab
-2. Open the **Stripe** billing portal
+1. Sign in at app.ocutrap.com and select **Billing** in the sidebar
+2. Select **Payment portal**, or **Manage in portal** on the **Payment method** card
 3. In the Stripe portal, scroll to Payment Methods
 4. Click "Add payment method"
 5. Enter your new payment information
@@ -884,27 +894,31 @@ Manage your billing from each trap's **Billing** tab. Log in at app.ocutrap.com,
 
 ## Updating Individual Trap Subscriptions
 
-Each trap requires its own active subscription. If a trap's plan shows as canceled, blank, or expired:
+Each trap requires its own active subscription. If a trap shows **Canceled** or **Inactive**:
 
-1. Log into the console and find the trap
-2. Click Settings and check the Plan status in Device Info
-3. Click "Update" if the subscription needs renewal
-4. Complete the checkout process
+1. Sign in at app.ocutrap.com and select **Billing** in the sidebar
+2. Find the trap under **Per-trap status** and select **Manage**
+3. Under **Cellular plan**, pick **Monthly** or **Annual**
+4. Complete checkout in Stripe
+
+On a canceled or never-started trap the button reads **Subscribe · Monthly** or **Subscribe · Annual**.
 
 ---
 
 ## Managing Your Subscription
 
 1. Go to app.ocutrap.com and sign in
-2. Open the trap you want to manage and go to its **Billing** tab
+2. Select **Billing** in the sidebar, then **Manage** next to the trap you want
 
-From here you can switch plans (Monthly/Annual), **pause** a monthly plan (up to 6 months — you're not billed and the trap is dormant, but data and settings are kept and restored on resume), update your payment method, or cancel your subscription. Canceled subscriptions retain access until the end of the current billing period. All transactions are processed securely through Stripe.
+On the **Trap billing** page you can switch between **Monthly** and **Annual** under **Cellular plan**, **Pause subscription** on a monthly plan (up to 6 months: you're not billed and the trap is dormant, but data and settings are kept and restored on resume), or select **Manage subscription** to open the Stripe portal and update your card or cancel. Canceled subscriptions retain access until the end of the current billing period. Annual plans can't be paused, and the button shows as **Pause (monthly only)**. Only the trap owner can make these changes. All transactions are processed securely through Stripe.
 
 ---
 
 ## Resetting Your Password
 
-Visit app.ocutrap.com and click **Forgot password?** Enter your email, then use the **6-digit reset code** we email you to set a new password. Your password stays in sync across the web and mobile apps.
+Visit app.ocutrap.com and click **Forgot password?** Enter your email and click **Send Reset Code**, then open the email and click **Reset Password**. The page opens headed **Choose a new password**, already knowing your email and code, so you only pick the new password.
+
+If your mail app strips the button, the email also carries a reset code underneath. Click **Enter Reset Code** in the app and paste it in. The code is **long** (32 characters of mixed letters and numbers) and **case-sensitive**, so paste it rather than typing it. Your password stays in sync across the web and mobile apps.
 
 ---
 

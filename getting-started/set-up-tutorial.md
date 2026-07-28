@@ -43,7 +43,7 @@ You manage your OcuTrap from the web portal at [app.ocutrap.com](https://app.ocu
 
 1. Create an account (or log in) at [app.ocutrap.com](https://app.ocutrap.com). Verify your email — the app asks for this before you can activate a trap.
 2. Open **Add trap** and follow the wizard: enter your **Trap ID** and **Device ID** (both are on labels on/inside the trap), choose a cellular plan, name the trap and set its location, then tap **Activate trap**.
-3. When activation completes, the app opens the new trap's **console page**, with a **Waiting for first check-in** note that clears once the trap connects. Finish billing from the trap's **Billing** tab.
+3. When activation completes, the app opens the new trap's **console page**, with a **Waiting for first check-in** note that clears once the trap connects. To finish billing, select **Billing** in the sidebar, find the trap under **Per-trap status**, and select **Manage**. The plan you picked in the wizard is already selected.
 
 Full walkthrough with screenshots: [Adding a trap to your account](app/adding-a-trap-to-your-account.md).
 
