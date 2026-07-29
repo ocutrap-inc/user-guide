@@ -12,7 +12,7 @@ The **OcuTrap camera** provides **daytime and night vision capabilities**, allow
 
 ### Camera Time-Lapse Mode
 
-OcuTrap can **automatically capture images** at set intervals while the trap is in **armed mode**.
+OcuTrap can **automatically capture images** at set intervals in **any mode**: unarmed, armed, or scouting.
 
 #### Configurable Option
 
