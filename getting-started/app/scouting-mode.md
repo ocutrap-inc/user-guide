@@ -41,9 +41,9 @@ If **Scout** does not start, the door may not be fully open, the trap may be off
 
 * **Scout Alert**: Recorded in the trap's activity feed when an animal first enters the pre-capture area. Scout events are routine scouting data, not alerts — they do **not** send a push or email, do **not** appear in your Inbox, and do **not** add to the notification-bell count.
 * **Scout Trigger**: Recorded in the trap's activity feed when the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close. Like the Scout Alert, it stays in the activity feed only — no push, email, Inbox entry, or bell count.
-* **Photos**: Sent about every 15 seconds while the animal remains in the detection area. (You may see a couple of quick frames right when it first enters, alongside the feed entries above.)
+* **Photos**: Fast photos about every 15 seconds while the animal is active. If it stays put, the spacing stretches to about every 4 minutes to protect battery; fresh movement brings it back to 15 seconds. The full-quality shot arrives at the Scout Trigger moment. (You may see a couple of quick frames right when it first enters, alongside the feed entries above.)
 
-Each scout event type is recorded at most once every 5 minutes. During that 5-minute window, new photos may still arrive, but the same scout event will not be recorded again in the activity feed.
+Repeat scout events from the same visit are throttled in the activity feed so it isn't flooded. New photos still arrive during that window; only the duplicate event entries are held back.
 
 ## Stop Scouting
 

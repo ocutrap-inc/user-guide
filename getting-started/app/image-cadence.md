@@ -17,11 +17,11 @@ Photos only flow when the trap has cellular signal and enough battery. On low ba
 | Situation | When photos are taken |
 | --- | --- |
 | **Armed — animal approaching** | A photo the moment an animal is detected, then more as it moves deeper in |
-| **Armed — animal lingering in range** | About every **15 seconds** while it stays in the detection area |
-| **Scouting Mode** | About every **15 seconds** while an animal is in the detection area |
+| **Armed — animal lingering in range** | Every **15 seconds** at first, stretching to about **every 4 minutes** if it stays put |
+| **Scouting Mode** | Fast photos about every **15 seconds** while an animal is active, with the same stretch-out if it stays put |
 | **At capture** | One photo when the door closes |
 | **After a capture** | A short burst (~every 15 s for the first minute), then one **every 2 hours** |
-| **Time-lapse** | **Every 6 hours** by default while armed (adjustable, or off) |
+| **Time-lapse** | **Every 6 hours** by default, in every mode (adjustable, or off) |
 | **On demand** | Instantly, whenever you tap the camera button in the app |
 
 ## Approach photos (Armed Mode)
@@ -36,9 +36,14 @@ Approach photos use a **fast, lower-resolution** setting so they arrive quickly 
 
 ## Presence photos (Armed or Scouting)
 
-While an animal stays within the detection area—without triggering a capture—the trap sends a **full-quality** photo **about every 15 seconds**.
+While an animal stays within the detection area without triggering a capture, the trap keeps sending photos. The two modes use different photo types:
 
-In **Scouting Mode**, this is how you watch what's visiting without closing the door. You'll also get a **Scout Alert** when an animal first enters and a **Scout Trigger** if it reaches the trigger distance. Each alert type is limited to once every 5 minutes, but **photos keep coming** during that window. The scouting photo interval is adjustable in settings (from 15 seconds up to 5 minutes, or off).
+* **Armed Mode:** a **full-quality** photo about every **15 seconds**.
+* **Scouting Mode:** a **fast** photo about every **15 seconds**. Scouting saves the full-quality shot for the moment an animal reaches the trigger distance (the **Scout Trigger** photo).
+
+If the animal stays put, the trap stretches the spacing to protect battery: after the first few photos the gap doubles each time, up to about **4 minutes**. Fresh movement toward the trap (about 3 inches) snaps it back to 15 seconds. In Scouting Mode photos are movement-based, so a parked animal or a fixed object like a branch will not generate an endless photo stream.
+
+In **Scouting Mode**, this is how you watch what's visiting without closing the door. You'll also get a **Scout Alert** when an animal first enters and a **Scout Trigger** if it reaches the trigger distance. Repeat alerts from the same visit are throttled so your activity feed isn't flooded, but **photos keep coming** either way. The scouting photo interval is adjustable in settings (from 15 seconds up to 5 minutes, or off).
 
 See [Scouting Mode](scouting-mode.md) and [Pre-Capture Notification](../trap-settings/pre-capture-notification.md).
 
@@ -49,7 +54,7 @@ See [Scouting Mode](scouting-mode.md) and [Pre-Capture Notification](../trap-set
 
 ## Time-lapse photos
 
-Independent of animal activity, the trap can take periodic **time-lapse** photos while armed—**every 6 hours by default**. You can change the interval (up to 24 hours) or turn it off in [Settings](trap-settings/settings-reference.md).
+Independent of animal activity, the trap takes periodic **time-lapse** photos in **every mode**: unarmed, armed, scouting, even while holding a catch. The default is **every 6 hours**. You can change the interval (up to 24 hours) or turn it off in [Settings](trap-settings/settings-reference.md).
 
 ## On-demand photos
 
