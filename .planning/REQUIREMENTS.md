@@ -331,6 +331,20 @@
   (g) verified by screenshot on desktop (~1440px) and mobile (390px) in
   light + dark themes with no regressions to search, sidebar, TOC,
   hints, cards, tables, or print styles.
+- [ ] **SITE-13**: Unique per-page meta descriptions. A Semrush audit
+  (2026-08-02) found 27 duplicate meta descriptions: pages with no
+  `description:` frontmatter fall back to `<Section> — OcuTrap Knowledge
+  Base`, so every page in a section shares one string. Acceptance: every
+  published KB page (each `.md` referenced from `SUMMARY.md`) carries a
+  unique `description:` frontmatter block, read by `docs-site/lib/docs.ts`
+  and used for both the meta description tag and the visible page subtitle
+  under the H1; no page falls back to the section-level default.
+  Descriptions summarize what the page actually says (no invented features
+  or numbers), 80–155 characters, no em dashes, varied openings — they are
+  customer-visible copy, not keyword filler. External links point at the
+  apex `https://ocutrap.com`, never the `www.` host (which 301-redirects),
+  and link anchor text is descriptive rather than a raw URL. Root and
+  `docs-site/content/` copies stay byte-identical. exit-impact: ops.
 
 ## Out of Scope
 
@@ -379,3 +393,4 @@
 | SITE-10 | Docs Enhancements (post-cutover)|
 | SITE-11 | Docs Enhancements (post-cutover)|
 | SITE-12 | Docs Enhancements (post-launch)|
+| SITE-13 | Docs Enhancements (post-launch)|
