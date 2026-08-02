@@ -10,7 +10,7 @@ Nonprofit and 501(c) Program
 
 OcuTrap partners with wildlife rescues, shelters, conservation groups, municipalities, and schools. Eligible 501(c) organizations can receive discounted pricing and tax exempt purchasing where allowed by state law.
 
-**Apply here:** [https://ocutrap.com/pages/contact](https://ocutrap.com/pages/contact)
+**Apply here:** the [OcuTrap contact page](https://ocutrap.com/pages/contact)
 
 ***
 
@@ -38,7 +38,7 @@ OcuTrap partners with wildlife rescues, shelters, conservation groups, municipal
 ### How to get the nonprofit discount
 
 1. **Submit the application.** Use the contact form and title form “Nonprofit pricing and tax exemption.”\
-   Apply at [https://ocutrap.com/pages/contact](https://ocutrap.com/pages/contact) or email [support@ocutrap.com](mailto:support@ocutrap.com)
+   Apply on the [OcuTrap contact page](https://ocutrap.com/pages/contact) or email [support@ocutrap.com](mailto:support@ocutrap.com)
 2. **Share basic info.** Organization legal name, EIN, billing and shipping addresses, website, and a primary contact.
 3. **Account review.** We verify your details and flag your customer account for nonprofit pricing.
 4. **Sign in to order.** Your nonprofit pricing appears on quotes or invoices when you shop or place POs.
