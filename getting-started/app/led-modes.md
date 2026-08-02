@@ -1,3 +1,9 @@
+---
+description: >-
+  Animated examples of the most common connection LED patterns: breathing
+  cyan, blinking cyan, magenta updates, and blinking green.
+---
+
 # LED Pattern Animations
 
 For what each color and pattern means — including red blinks, battery idle flashes, and what to do next — use the [LED Guide](../led-guide.md). That page is the single source of truth (interactive diagnostic + full reference table).

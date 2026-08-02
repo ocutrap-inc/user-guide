@@ -1,3 +1,9 @@
+---
+description: >-
+  How OcuTrap's GPS works: the 8-hour update interval, satellite and fix
+  requirements, manual updates, accuracy tips, and battery impact.
+---
+
 # GPS
 
 OcuTrap uses an integrated u-blox GPS module to provide location tracking and mapping capabilities. This guide explains the GPS settings and functionality to help you get the most accurate location data for your traps.

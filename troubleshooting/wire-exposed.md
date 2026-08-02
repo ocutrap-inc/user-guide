@@ -1,3 +1,9 @@
+---
+description: >-
+  Red and black wires showing at the motor cable connector reduce the
+  waterproof seal. Four steps to reseat the cable and tighten it.
+---
+
 # Wire Exposed
 
 #### What You Are Seeing

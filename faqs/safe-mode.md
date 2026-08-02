@@ -1,3 +1,9 @@
+---
+description: >-
+  Safe Mode is a recovery step for a trap stuck in a crash or boot loop.
+  Button sequence, the magenta LED, and when support will ask you to use it.
+---
+
 # Safe-mode
 
 **What Safe Mode is for:** Safe Mode is a recovery mode built into the trap's cellular controller. In Safe Mode the device still starts up and connects to the cloud, but it does **not** run the trap's normal program. That lets it accept a firmware update (or clear a bad state) when the trap is stuck in a crash or boot loop and won't come online on its own. It's an advanced step — you normally only need it when **OcuTrap Support** asks you to use it while recovering a device.

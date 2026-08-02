@@ -1,3 +1,9 @@
+---
+description: >-
+  Share a trap with another OcuTrap account: how to send the invite, what
+  Pending means, and how to cancel an invite or revoke access later.
+---
+
 # Sharing Traps
 
 OcuTrap allows users to share traps with others, enabling collaboration and remote monitoring. To share a trap, follow these steps:

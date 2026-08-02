@@ -1,3 +1,9 @@
+---
+description: >-
+  OcuTrap's six power modes, from full operation to hibernation: what triggers
+  each one, the LED you see, and when the trap can still be reached.
+---
+
 # Power Modes
 
 OcuTrap is designed with multiple power modes to **maximize battery life** while maintaining functionality in the field. These modes ensure that the device can operate efficiently for extended periods while allowing users to interact when needed.

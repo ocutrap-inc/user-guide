@@ -1,3 +1,9 @@
+---
+description: >-
+  What each part of the OcuTrap R1 does: cellular, camera, door motor, GPS,
+  sensors, battery, accessory port, and the detection system.
+---
+
 # Hardware Features
 
 Overview of the OcuTrap R1 hardware components and capabilities.

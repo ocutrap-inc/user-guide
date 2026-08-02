@@ -1,3 +1,9 @@
+---
+description: >-
+  The R1 is built for 5 to 25 lb wildlife like raccoons, feral cats, and
+  skunks. Which animals fit the cage, and which ones it will not detect.
+---
+
 # What animals is the OcuTrap R1 designed for?
 
 The OcuTrap R1 is built for **medium-sized nuisance wildlife** — animals roughly **5–25 lbs** that fit comfortably inside the cage. This page covers which species the trap is designed around, which ones are a poor match, and how to set your expectations honestly before you deploy.

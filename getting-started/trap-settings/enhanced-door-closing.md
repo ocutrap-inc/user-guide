@@ -1,3 +1,9 @@
+---
+description: >-
+  Enhanced Door Closing re-seats the door after every close so it locks under
+  the rod. Why it exists, what it cannot confirm, and how to change it.
+---
+
 # Enhanced Door Closing
 
 **Enhanced Door Closing** re-seats the trap door after every close, including closes on a capture.

@@ -1,3 +1,9 @@
+---
+description: >-
+  Owner, Full Manager, and Standard Manager compared. There is no view-only
+  role, so everyone you share a trap with can control it.
+---
+
 # User Levels
 
 When you share a trap, each person you share with is a **Manager**. There is no view-only role — everyone you share a trap with can both see it and control it. What differs between levels is who can manage billing, ownership, and other users.

@@ -1,3 +1,9 @@
+---
+description: >-
+  Activate a trap on web or mobile. What Trap ID and Device ID are, the four-
+  step wizard, and when your 30-day free trial actually starts.
+---
+
 # Adding a trap to your account
 
 You add ("activate") a trap from the OcuTrap app at [app.ocutrap.com](https://app.ocutrap.com) or in the mobile app. Have the trap with you so you can read its ID labels, and make sure your email is verified first — until it is, the **Activate** button is disabled and explains why (use **Resend verification email** if needed). If you leave the wizard to verify your email, your progress is saved, so you can pick up where you left off.

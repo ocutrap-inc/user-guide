@@ -1,3 +1,9 @@
+---
+description: >-
+  This page moved. Every LED color and pattern, plus the interactive
+  diagnostic, now lives on the single LED Guide page.
+---
+
 # LED Light Guide
 
 This page has moved.

@@ -1,3 +1,9 @@
+---
+description: >-
+  Step-by-step assembly of the OcuTrap R1 in three sections: door and motor,
+  handle, and POD. Includes the full assembly video.
+---
+
 # Hardware Set Up
 
 This guide walks you through assembling your OcuTrap R1 step by step, in three sections: **Door**, **Handle**, and **POD**. Follow each step carefully to ensure your OcuTrap functions correctly. When the hardware is done, continue to [Adding a trap to your account](app/adding-a-trap-to-your-account.md) for the app setup.

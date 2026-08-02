@@ -1,3 +1,9 @@
+---
+description: >-
+  Odds and ends of app behavior: check-in frequency, refreshing vitals with
+  Ping, the controls bar, sharing, and renaming or adding notes.
+---
+
 # Other app information
 
 ### Connectivity and Reporting

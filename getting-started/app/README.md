@@ -1,3 +1,9 @@
+---
+description: >-
+  Create your OcuTrap account at app.ocutrap.com, or download the mobile app
+  for Apple and Android devices.
+---
+
 # App
 
 ## Creating an account

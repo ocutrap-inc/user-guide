@@ -1,3 +1,9 @@
+---
+description: >-
+  Field-tested advice on battery life, placement, reducing false triggers,
+  better images, button shortcuts, and seasonal deployment.
+---
+
 # Tips and Tricks
 
 Get the most out of your OcuTrap with these best practices and pro tips.

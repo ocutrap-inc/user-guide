@@ -1,3 +1,9 @@
+---
+description: >-
+  Where trap settings live in the app, plus how Name, Notes, and map location
+  work on the trap detail screen instead of under Settings.
+---
+
 # Settings in the App
 
 <figure><img src="../../../.gitbook/assets/image (30).png" alt="" width="375"><figcaption></figcaption></figure>

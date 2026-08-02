@@ -1,3 +1,9 @@
+---
+description: >-
+  Specs, connectivity, LED patterns, and battery details. Look here when you
+  need a number or a status light explained.
+---
+
 # Reference
 
 Specs, connectivity, LEDs, and battery — look here when you need a number or a status light explained.

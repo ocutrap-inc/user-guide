@@ -1,3 +1,9 @@
+---
+description: >-
+  Permanently delete your OcuTrap account from the web or mobile app. Cancel
+  trap subscriptions first, and know exactly what gets erased.
+---
+
 # Account Deletion
 
 You can permanently delete your OcuTrap account from the web app or the mobile app. Deletion cannot be undone.

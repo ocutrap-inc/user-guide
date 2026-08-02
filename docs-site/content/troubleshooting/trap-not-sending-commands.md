@@ -1,3 +1,9 @@
+---
+description: >-
+  When a trap stops responding to commands: sleep mode, battery connection,
+  and cellular signal, with the steps to bring it back.
+---
+
 # Trap Not Sending Commands
 
 If your OcuTrap is not responding to commands and is displaying error codes, it may have entered hibernation mode or lost connection.

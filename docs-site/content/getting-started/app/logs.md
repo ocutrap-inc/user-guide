@@ -1,3 +1,9 @@
+---
+description: >-
+  Every trap keeps an Activity feed of captures, commands, alerts, check-ins,
+  and settings changes. Where to find it and how to filter it.
+---
+
 # Logs
 
 Every trap keeps a running history of what it has done, so you can troubleshoot, monitor performance, and see exactly what happened and when. In the app this history is the trap's **Activity** feed.
