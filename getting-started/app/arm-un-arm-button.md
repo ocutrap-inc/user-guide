@@ -1,3 +1,9 @@
+---
+description: >-
+  Set the trap to Off, Scout, or Armed from the arm-mode dropdown. What each
+  state does, its safety requirement, and the alerts it sends.
+---
+
 # Arm / Unarm Button
 
 _Make sure you are logged in to your account and on the Traps page._

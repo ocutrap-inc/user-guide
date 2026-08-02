@@ -1,3 +1,9 @@
+---
+description: >-
+  Where to find the full OcuTrap hardware warranty terms, and how to start a
+  warranty claim with your Trap ID.
+---
+
 # Warranty Information
 
 The full OcuTrap hardware warranty terms are published on our website:

@@ -1,3 +1,9 @@
+---
+description: >-
+  This page moved to Account and Billing. Subscriptions and per-trap plans are
+  managed from the Billing section of the app.
+---
+
 # Billing
 
 This page moved to **Account and Billing**.

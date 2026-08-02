@@ -1,3 +1,9 @@
+---
+description: >-
+  Odds and ends that don't fit the other sections, starting with the password
+  policy, plus pointers to the FAQ, troubleshooting, and support.
+---
+
 # Miscellaneous
 
 This section covers additional topics and frequently asked questions that don't fit into other categories.

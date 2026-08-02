@@ -1,3 +1,9 @@
+---
+description: >-
+  Get your OcuTrap assembled, powered, and into the field. Introduction, setup
+  tutorial, hardware assembly, video, and field deployment.
+---
+
 # Setup
 
 Get your OcuTrap assembled, powered, and in the field.

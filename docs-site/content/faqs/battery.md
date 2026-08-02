@@ -1,3 +1,9 @@
+---
+description: >-
+  Charging your 12V battery pack: which connector to use, what the charger
+  lights mean, and the specs for both the 5,200 and 10,000 mAh packs.
+---
+
 # Battery
 
 **Features**

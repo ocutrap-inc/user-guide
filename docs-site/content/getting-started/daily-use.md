@@ -1,3 +1,9 @@
+---
+description: >-
+  Day-to-day app controls, field tips, releasing a captured animal, and the
+  door and capture features you will use after setup.
+---
+
 # Daily use
 
 Day-to-day app controls, tips, and the feature guides you’ll use after setup.

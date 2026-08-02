@@ -1,3 +1,9 @@
+---
+description: >-
+  What OcuTrap is and what it changes about trapping: remote monitoring,
+  instant capture alerts, and door control from anywhere.
+---
+
 # Introduction
 
 <figure><picture><source srcset="../.gitbook/assets/LogoMakr-1uMIUJ-300dpi (1).jpeg" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/LogoMakr-1uMIUJ-300dpi (2).png" alt=""></picture><figcaption></figcaption></figure>

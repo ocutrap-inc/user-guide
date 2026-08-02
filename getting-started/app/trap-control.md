@@ -1,3 +1,9 @@
+---
+description: >-
+  The Trap Controls bar in detail: arm mode, door commands, quick actions like
+  image and location, advanced commands, and command status.
+---
+
 # Trap Control
 
 Each trap's detail screen has a **Trap Controls** bar — a card that sets the trap's arm mode and sends commands to the device. (This replaces the older pop-up control panel.)

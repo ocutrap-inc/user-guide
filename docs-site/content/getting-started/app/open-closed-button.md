@@ -1,3 +1,9 @@
+---
+description: >-
+  Open and close the trap door from the app. Open also returns the trap to
+  Unarmed, which is how you release a captured animal.
+---
+
 # Open/Closed Button
 
 _Make sure you are logged in to your account and on the Traps page._

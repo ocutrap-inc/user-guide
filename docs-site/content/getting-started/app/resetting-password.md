@@ -1,3 +1,9 @@
+---
+description: >-
+  This page moved to Account and Billing. Password resets are covered there,
+  with a link out for broader sign-in problems.
+---
+
 # Resetting Password
 
 This page moved to **Account and Billing**.

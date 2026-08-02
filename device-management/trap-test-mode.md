@@ -1,3 +1,9 @@
+---
+description: >-
+  Run a safe, audio-only test of your trap's detection pipeline. No door
+  movement, just beeps through four phases as you wave at the sensor.
+---
+
 # Trap Tests
 
 {% hint style="info" %}

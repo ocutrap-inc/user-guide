@@ -1,3 +1,9 @@
+---
+description: >-
+  Capture distance presets from 6 to 18 inches, plus the sensor warnings and
+  arming errors the app shows and what each one means.
+---
+
 # Distance Limits, Sensor Alerts & Errors
 
 Quick reference for capture distance settings and arming errors you may see in the app.

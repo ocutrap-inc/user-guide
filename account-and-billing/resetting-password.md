@@ -1,3 +1,9 @@
+---
+description: >-
+  Reset a forgotten password from the email OcuTrap sends. Includes the backup
+  32-character reset code and what to do if the button fails.
+---
+
 # Resetting Password
 
 If you forget your password, you can reset it from the email we send you:

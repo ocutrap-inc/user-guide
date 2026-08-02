@@ -1,8 +1,14 @@
+---
+description: >-
+  Ways to reach OcuTrap support: chat on the website, email or the contact
+  form, and where to check current system status.
+---
+
 # Contact Us
 
 ## Chat Support
 
-You can message OcuTrap support through the chat bubble that can be found on the [OcuTrap.com](https://www.ocutrap.com) homepage by clicking the chat icon on the bottom right of the page. &#x20;
+You can message OcuTrap support through the chat bubble that can be found on the [OcuTrap.com](https://ocutrap.com) homepage by clicking the chat icon on the bottom right of the page. &#x20;
 
 ## Email Support
 

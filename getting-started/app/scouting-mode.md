@@ -1,3 +1,9 @@
+---
+description: >-
+  Watch what visits your trap without catching it. The door stays open while
+  the trap detects and photographs animals, and events stay in the feed.
+---
+
 # Scouting Mode
 
 Scouting Mode lets you watch what visits your trap without catching it. The trap detects animals and sends photos, but the door stays open.

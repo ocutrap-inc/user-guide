@@ -1,3 +1,9 @@
+---
+description: >-
+  Ask your trap for a fresh photo at any time. Covers full-quality and quick
+  image requests, the camera view, and browsing past images.
+---
+
 # Requesting photos
 
 You can request a fresh photo of the inside of your trap at any time. Open the trap's detail screen — the most recent photo is shown as a large image (the **camera view**) with the trap's controls beside it. There's no separate step to open the camera view.

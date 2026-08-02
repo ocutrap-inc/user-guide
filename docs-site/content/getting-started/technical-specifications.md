@@ -1,3 +1,9 @@
+---
+description: >-
+  Full OcuTrap R1 specifications: dimensions, door speeds, battery and
+  runtime, connectivity, sensors, camera, and environmental ratings.
+---
+
 # Technical Specifications
 
 This page provides detailed technical specifications for the OcuTrap R1 smart wildlife trap.

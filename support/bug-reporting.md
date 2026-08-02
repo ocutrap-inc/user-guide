@@ -1,3 +1,9 @@
+---
+description: >-
+  Report a bug straight from the web or mobile app so your account, version,
+  and screen come with it. Email and chat options too.
+---
+
 # Bug reporting
 
 The fastest way to report a bug is from inside the OcuTrap app — your report goes straight to our team along with the details we need to reproduce the issue (your account email, app version, and the page or screen you were on).
@@ -10,4 +16,4 @@ We'll follow up by email if we need more detail.
 
 You can also report bugs by emailing [support@ocutrap.com](mailto:support@ocutrap.com?subject=Bug%20Report%20from%20Knowledge%20Base). Include a detailed bug description, reproduction steps, and any relevant visuals. Explain what you expected to happen and what actually did. Your detailed feedback helps improve our service.
 
-You can also reach us through the chat bubble on the [OcuTrap.com](https://www.ocutrap.com) homepage.
+You can also reach us through the chat bubble on the [OcuTrap.com](https://ocutrap.com) homepage.

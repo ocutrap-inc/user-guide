@@ -1,3 +1,9 @@
+---
+description: >-
+  A door motor that will not move is often just loose. How to check the 0.15
+  to 0.20 inch mounting gap and tighten it correctly.
+---
+
 # Motor Connector Tightness Check
 
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/ocutrapconnector-obr9pAZdtXc729LOPqp9yRqguDy0Aa.mp4" %}

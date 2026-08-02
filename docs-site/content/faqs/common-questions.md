@@ -1,3 +1,9 @@
+---
+description: >-
+  Short answers to the questions customers ask most: subscriptions, trap size,
+  sharing, notifications, coverage, battery life, and where to buy.
+---
+
 # Common questions
 
 Short answers for the questions customers ask most. For deeper how-tos, follow the links.

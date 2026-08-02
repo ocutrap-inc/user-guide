@@ -1,3 +1,9 @@
+---
+description: >-
+  Setting the trap up on site: choosing a location, picking a capture
+  distance, confirming the connection, and testing before you walk away.
+---
+
 # Deploying Your Trap in the Field
 
 You've assembled your OcuTrap and added it to your account — this guide walks you through actually **setting it up on site**: where to place it, how to set your capture distance, and how to confirm everything works before you leave.
