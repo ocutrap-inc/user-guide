@@ -1,4 +1,7 @@
 ---
+description: >-
+  Print-friendly PDF downloads: the full OcuTrap Knowledge Base plus quick
+  reference cards for field use.
 pdf-exclude: true
 ---
 

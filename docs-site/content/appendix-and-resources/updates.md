@@ -1,4 +1,7 @@
 ---
+description: >-
+  Release notes for OcuTrap firmware and app updates, newest first, with what
+  changed and why it matters in the field.
 pdf-exclude: true
 ---
 
