@@ -42,6 +42,10 @@ Where and how you may release or relocate an animal is regulated and varies by l
 3. In the app, tap **Open** — this releases the door **and** returns the trap to **Unarmed**.
 4. Let the animal **leave on its own**. Do not reach in or tip the trap to force it out.
 
+{% hint style="info" %}
+**Out of cellular range?** You don't need the app. You can unarm the trap and open the door with the **User** and **Power** buttons on the POD. See [Using the Buttons on the Trap](using-the-trap-buttons.md).
+{% endhint %}
+
 ## Transporting Before Release
 
 If you need to move the trap before releasing (for example, to an approved relocation site), you don't need to change the trap's state — it can **stay in Captured mode**, with the door closed, while you transport it.

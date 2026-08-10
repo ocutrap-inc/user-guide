@@ -32,7 +32,7 @@ The door is powered by a **linear motor** for fast, reliable operation:
 - **Close speed**: Less than 0.5 seconds
 - **Open speed**: Less than 1 second
 - **Remote control** — Open, close, and lock via the app
-- **Manual control** — Button sequence on the device
+- **Manual control** — Button sequence on the device; see [Using the Buttons on the Trap](using-the-trap-buttons.md)
 - **Enhanced closing** — Optional double-close sequence for secure locking
 
 ---
