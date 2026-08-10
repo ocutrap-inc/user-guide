@@ -87,6 +87,8 @@ If the LED is **blinking green for a long time**, the trap may not have enough c
 2. Give it a few minutes to search for signal and reconnect.
 3. The trap may reconnect automatically once signal improves.
 
+For antenna checks, placement and height fixes, and how long to wait before escalating, see [Improving a Weak Cellular Signal](improving-a-weak-cellular-signal.md).
+
 {% hint style="warning" %}
 **Fast blinking blue** means the trap is trying to join the cellular network and cannot. Move it to better coverage and wait 10 minutes. If it is still blinking blue quickly, that is not something you can fix in the field. Contact [OcuTrap Support](../support/support.md) with your Trap ID.
 {% endhint %}

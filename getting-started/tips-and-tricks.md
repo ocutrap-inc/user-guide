@@ -163,6 +163,8 @@ Learn the physical button controls:
 | **Power off** | Hold Power button for 3 seconds |
 | **Wake from hibernation** | Press Power button |
 
+Full step-by-step instructions, including the LED and beep cues for each sequence, are in [Using the Buttons on the Trap](using-the-trap-buttons.md).
+
 ---
 
 ## Seasonal Considerations

@@ -191,6 +191,48 @@
     `OcuTrap_Knowledge_Base_Complete.md` (hand-maintained; feeds the KB PDF).
   - [x] Root and `docs-site/content/` twins byte-identical for all three
     touched pages. exit-impact: ops.
+- [ ] **DOC-17**: Give the on-trap buttons their own page. The button
+  sequences were scattered across a shortcut table in
+  `getting-started/tips-and-tricks.md` and a partial how-to in
+  `getting-started/led-guide.md`, so a customer standing at a trap with no
+  signal had nowhere to be sent. Acceptance checklist:
+  - [ ] New page `getting-started/using-the-trap-buttons.md` covers status
+    check, door open/close hold sequence, arm (including the three refusal
+    LED patterns), unarm, power off/on, and a "no signal, buttons still
+    work" section. No em dashes; no internal hardware brand names.
+  - [ ] `SUMMARY.md` lists it under **Daily use** immediately after the
+    **App** block and before **Tips and Tricks**, at the same 2-space level.
+    It therefore also enters the SUMMARY-driven KB PDF assembly.
+  - [ ] Cross-links added from `getting-started/app/arm-un-arm-button.md`
+    (info hint), `getting-started/app/after-capture.md` (On-trap buttons
+    section), `getting-started/handling-a-captured-animal.md` (release
+    section hint), `getting-started/hardware-features.md` (Manual control
+    bullet), `getting-started/tips-and-tricks.md` (Button Shortcuts), and
+    `getting-started/led-guide.md` (User Button Interactions).
+  - [ ] Page summarized in `OcuTrap_Knowledge_Base_Complete.md`
+    (hand-maintained) at the matching SUMMARY position.
+  - [ ] Root and `docs-site/content/` twins byte-identical for the new page,
+    every touched page, and `SUMMARY.md`. exit-impact: ops.
+- [ ] **DOC-18**: Weak-cellular-signal troubleshooting page plus
+  multi-network connectivity copy. Support had no page describing what
+  actually helps in marginal coverage, and repeated power cycling was making
+  network searches worse. Acceptance checklist:
+  - [ ] New page `troubleshooting/improving-a-weak-cellular-signal.md`
+    explains multi-network 4G LTE selection, what weak signal looks like, the
+    ordered field ladder (antenna, move, raise, one power cycle, wait an
+    hour, then support), and trapping while disconnected.
+  - [ ] `SUMMARY.md` lists it in **Troubleshooting** immediately after
+    **Trap Offline or Won't Connect**.
+  - [ ] `getting-started/connectivity-and-coverage.md` gains a short
+    multi-network paragraph pointing at the new page;
+    `troubleshooting/trap-offline-or-wont-connect.md` Step 4 (Check Cellular
+    Coverage) links to it.
+  - [ ] `faqs/safe-mode.md` brand fix: "the Particle module inside the POD"
+    becomes "the cellular module inside the POD".
+  - [ ] Page summarized in `OcuTrap_Knowledge_Base_Complete.md`
+    (hand-maintained) at the matching SUMMARY position.
+  - [ ] Root and `docs-site/content/` twins byte-identical for the new page,
+    every touched page, and `SUMMARY.md`. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -376,6 +418,8 @@
 | DOC-11  | Docs simplify / nav cleanup (SW-575) |
 | DOC-12  | FAQ triage + billing/password nav (SW-575) |
 | DOC-13  | Thin-page merges + appendix drop (SW-575) |
+| DOC-17  | On-trap buttons page + cross-links |
+| DOC-18  | Weak cellular signal page + multi-network copy |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

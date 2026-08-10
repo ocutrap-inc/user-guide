@@ -28,6 +28,7 @@
     * [Logs](getting-started/app/logs.md)
     * [Deleting an Image](getting-started/app/deleting-an-image.md)
     * [Other app information](getting-started/app/other-app-information.md)
+  * [Using the Buttons on the Trap](getting-started/using-the-trap-buttons.md)
   * [Tips and Tricks](getting-started/tips-and-tricks.md)
   * [Handling & Releasing a Captured Animal](getting-started/handling-a-captured-animal.md)
   * [Door & Capture Features](getting-started/trap-settings/README.md)
@@ -66,6 +67,7 @@
 ## Troubleshooting
 
 * [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md)
+* [Improving a Weak Cellular Signal](troubleshooting/improving-a-weak-cellular-signal.md)
 * [Common Issues](troubleshooting/common-issues.md)
 * [Trap Not Sending Commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-Pin Connection Too Tight](troubleshooting/motor-to-pin-connection-too-tight.md)

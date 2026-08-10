@@ -17,6 +17,8 @@ OcuTrap connects to the OcuTrap app over **4G LTE cellular** — the same kind o
 * **Automatic.** On power-up, the trap finds a network and comes online on its own.
 * **No hotspot or router needed.** You don't need any other equipment in the field.
 
+The trap is not tied to a single carrier. It reaches **multiple nationwide 4G LTE networks** and picks whichever one has the best usable signal at your site, switching automatically if that network fails. If a trap sits in marginal coverage, work through [Improving a Weak Cellular Signal](../troubleshooting/improving-a-weak-cellular-signal.md).
+
 ***
 
 ## What Affects Coverage

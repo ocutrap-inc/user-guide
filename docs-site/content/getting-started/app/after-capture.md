@@ -35,6 +35,8 @@ Two buttons matter after a capture:
 
 > **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Open** in the app or the **hold-open** button sequence on the trap.
 
+For full step-by-step instructions on both sequences, see [Using the Buttons on the Trap](../using-the-trap-buttons.md).
+
 ## What you'll see in the app while captured
 
 * Trap card status reads **Captured / Closed**.

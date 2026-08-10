@@ -175,6 +175,8 @@ To recover, charge or replace the battery and press the power button again.
 
 The color and pattern for each of these actions is in the diagnostic and table
 above. This section covers **how to trigger** them with the physical buttons.
+For the full how-to, including arming failures and power off, see
+[Using the Buttons on the Trap](using-the-trap-buttons.md).
 
 #### Manual Door Control
 

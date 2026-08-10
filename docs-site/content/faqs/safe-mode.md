@@ -10,7 +10,7 @@ description: >-
 
 While in Safe Mode the LED shows **magenta** (the same firmware-update color you'll see in the [LED Guide](../getting-started/led-guide.md)).
 
-**Buttons:** The **RESET** and **MODE** buttons referred to below are the two small buttons on the trap's internal cellular controller (the Particle module inside the POD) — not the User and Power buttons you use for everyday operation.
+**Buttons:** The **RESET** and **MODE** buttons referred to below are the two small buttons on the trap's internal cellular controller (the cellular module inside the POD) — not the User and Power buttons you use for everyday operation.
 
 **Prerequisite:** Make sure the device has enough battery charge. If it will not turn on, charge the battery and try again.
 

@@ -10,6 +10,10 @@ _Make sure you are logged in to your account and on the Traps page._
 
 You set the trap's mode — **Off**, **Scout**, or **Armed** — from the **arm-mode dropdown** at the top of the trap's **Controls** card. The dropdown lists what each mode does, so the difference is clear before you choose. Picking the mode the trap is already in does nothing.
 
+{% hint style="info" %}
+You can also arm and unarm at the trap itself, using the User and Power buttons on the POD. That works even when the trap has no cellular signal. See [Using the Buttons on the Trap](../using-the-trap-buttons.md).
+{% endhint %}
+
 ### Armed State
 
 * **Purpose**: The trap is set to capture an animal.

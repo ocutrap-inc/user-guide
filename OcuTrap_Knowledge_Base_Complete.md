@@ -15,6 +15,7 @@ www.ocutrap.com
    - Hardware Features
    - Technical Specifications
    - The OcuTrap App
+   - Using the Buttons on the Trap
    - Tips and Tricks
    - Trap Settings
    - Maintenance
@@ -33,6 +34,7 @@ www.ocutrap.com
    - Power Modes
    - Accessory Port
 3. [Troubleshooting](#3-troubleshooting)
+   - Improving a Weak Cellular Signal
    - Common Issues
    - Trap Not Sending Commands
    - Motor Connection Issues
@@ -282,6 +284,64 @@ Complete list of all configurable trap settings.
 | Enhanced Door Closing | On / Off (default: On) |
 | Actuator Inverse | On / Off (default: Off) |
 | Units | Metric / Imperial |
+
+---
+
+## Using the Buttons on the Trap
+
+The POD has two buttons: the **Power button** on the left and the **User button** on the right. Every sequence below works at the trap, with no app and no cellular signal. The trap updates the app the next time it connects.
+
+### Check Status
+
+Press the User button once. A short beep sounds and the LED shows the trap's state for about 5 seconds.
+
+| LED | State |
+|---|---|
+| Magenta | Captured |
+| Yellow | Armed |
+| Alternating Yellow and Blue | Scouting |
+| Blue | Unarmed, door open |
+| Green | Unarmed, door closed |
+
+Press again to keep the display up longer.
+
+### Open or Close the Door
+
+1. Press the User button once (status shows).
+2. Within 5 seconds, press the User button again and keep holding it.
+3. The LED blinks the color of what will happen: blue to open, green to close.
+4. Keep holding about 5 seconds, until the LED goes solid, then release.
+5. The trap beeps rapidly for 2 seconds as a warning, then the door moves.
+
+Release the button while the LED is still blinking to cancel.
+
+> ⚠️ **Warning:** Keep hands and fingers out of the door opening once the rapid beeps start. The beeps mean the door is about to move.
+
+### Arm the Trap
+
+The door must be fully open first. Press the User button once, then press the Power button within 5 seconds. The LED blinks yellow while the trap checks that the capture zone is clear. One long high beep and a solid yellow LED confirm the trap is armed.
+
+If arming fails:
+
+| LED | Cause | Fix |
+|---|---|---|
+| Pulsing green and red | Door is not fully open | Open the door fully and retry |
+| Pulsing red (a few times) | Object in the capture zone, or a sensor fault | Clear the area in front of the sensor, or power cycle, then retry |
+| Pulsing red | Firmware update in progress | Wait a minute and retry |
+
+Scouting mode cannot be started from the buttons. Use the app.
+
+### Unarm the Trap
+
+Same sequence as arming: User button, then Power button. The LED blinks white, then goes solid white, with one long high beep. Works while armed, scouting, or after a capture.
+
+> **Note:** After a capture, User + Power unarms the trap but leaves the door closed, so the animal stays contained. Use the hold-open sequence to release the animal.
+
+Pressing either button on a captured trap acknowledges the capture and quiets the capture reminder notifications.
+
+### Power Off and On
+
+Hold the Power button about 3 seconds. The LED flashes red while you hold, then goes solid red with a descending beep, and the trap shuts down. It stays off until you press the Power button again.
 
 ---
 
@@ -649,6 +709,36 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 ---
 
 # 3. Troubleshooting
+
+## Improving a Weak Cellular Signal
+
+### How the Trap Connects
+
+The trap connects over 4G LTE using multiple nationwide networks, not just one carrier. It picks whichever network has the best usable signal at the site and switches automatically if that network fails. Its radio is a long-range, low-power type built for remote equipment, so it can hold a connection where a phone shows no bars. The reverse is also true: phone bars are not a reliable guide to the trap's coverage.
+
+### Signs of Weak Signal
+
+- Long stretches of blinking green LED (still searching for a network)
+- Photos and check-ins arriving late
+- The trap showing offline between check-ins
+- Faster battery drain, because the radio works harder in weak signal
+
+### Field Steps
+
+1. **Check the antenna.** Connections snug, antenna pointing straight up.
+2. **Move the trap a few feet.** Toward open sky, away from metal roofs, siding, vehicles, and tanks, and out of dips and low spots.
+3. **Raise it.** Height helps more than anything else.
+4. **Power cycle once.** Off, wait 30 seconds, back on. The cellular module starts a fresh network search.
+5. **Wait up to an hour.** The trap rotates through every available network on its own and a full search cycle takes time.
+6. **Still offline after an hour?** Contact support and describe the site. Support can review the trap's signal history and tell weak coverage apart from a hardware fault.
+
+> ⚠️ **Warning:** Power cycle once, then wait. Repeated power cycling restarts the network search from the beginning and makes things worse, not better.
+
+### Trapping in Weak-Signal Areas
+
+An armed trap does not need continuous signal. It stays armed and keeps monitoring while disconnected, checks in about every 20 minutes, and reports any capture at its next check-in. Arming, unarming, and opening the door all work from the buttons on the trap with no signal at all.
+
+---
 
 ## Common Issues
 
