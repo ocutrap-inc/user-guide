@@ -257,6 +257,19 @@
   - [x] Root and `docs-site/content/` twins are byte-identical for every
     touched customer page. Docs site builds, Knowledge Base PDF is regenerated,
     and PDF source verification passes. exit-impact: ops.
+- [x] **DOC-20**: Add a prominent default-value caveat and advanced-setting
+  warning to the EDC Backoff documentation. Acceptance checklist:
+  - [x] Canonical EDC page says the default is 50 ms and directs customers not
+    to change it when the door consistently finishes under the locking bar.
+  - [x] Warning labels EDC Backoff as an advanced, per-trap setting and states
+    that an incorrect value can prevent EDC recovery or leave the door
+    effectively unlocked.
+  - [x] More Settings overview, settings reference, and hand-maintained
+    Knowledge Base carry the same caveat without changing the calibration
+    procedure or product default.
+  - [x] Root and `docs-site/content/` mirrors are byte-identical. Docs site and
+    PDF builds pass, the PDF source hash verifies, and the rendered warning is
+    visually clean. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -445,6 +458,7 @@
 | DOC-17  | On-trap buttons page + cross-links |
 | DOC-18  | Weak cellular signal page + multi-network copy |
 | DOC-19  | EDC backoff calibration procedure |
+| DOC-20  | EDC default and advanced-setting warning |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

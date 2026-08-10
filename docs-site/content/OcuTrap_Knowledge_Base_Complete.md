@@ -414,6 +414,8 @@ Enabled by default. Turn it off only if support asks. With it off, a capture get
 
 **EDC Backoff (ms)** controls how long the door reverses during the re-seat. Higher timing reverses farther; lower timing reverses less.
 
+> ⚠️ **Advanced setting:** EDC Backoff defaults to **50 ms**. If the door consistently finishes underneath the locking bar at 50 ms, **do not change it**. An incorrect value can prevent EDC recovery or reverse the door too far, leaving it on top of the bar and effectively unlocked. Adjust only while calibrating an empty trap, one 10 ms step at a time.
+
 | Timing | Result |
 |---|---|
 | Too short | The door does not retract enough and may remain on top of the bar. |

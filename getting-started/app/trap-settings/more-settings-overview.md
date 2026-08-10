@@ -41,6 +41,10 @@ This improves the chance the door locks. It does not confirm the lock. Enabled b
 
 Sets how long the door reverses during Enhanced Door Closing. A higher time reverses farther; a lower time reverses less. Options run from 30 to 130 ms in 10 ms steps. Default is 50 ms, and most traps calibrate between about 40 and 120 ms.
 
+{% hint style="warning" %}
+**Advanced setting:** Leave EDC Backoff at its **50 ms default** if the door consistently finishes underneath the locking bar. An incorrect value can prevent EDC recovery or reverse the door too far and leave it effectively unlocked. Adjust only while calibrating an empty trap.
+{% endhint %}
+
 Every trap door is slightly different, and a fully charged battery can move the motor faster. Both too little and too much reverse can leave the door on top of the fixed locking bar:
 
 - Door does not retract enough to re-seat: raise the value by 10 ms.
