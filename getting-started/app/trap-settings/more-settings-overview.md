@@ -39,14 +39,14 @@ This improves the chance the door locks. It does not confirm the lock. Enabled b
 
 #### EDC Backoff
 
-Sets how far the door backs off during Enhanced Door Closing, in milliseconds. Options run from 30 ms to 130 ms in 10 ms steps. Default is 50 ms.
+Sets how long the door reverses during Enhanced Door Closing. A higher time reverses farther; a lower time reverses less. Options run from 30 to 130 ms in 10 ms steps. Default is 50 ms, and most traps calibrate between about 40 and 120 ms.
 
-Every trap door is slightly different, and door speed rises with battery voltage. Two symptoms tell you to adjust:
+Every trap door is slightly different, and a fully charged battery can move the motor faster. Both too little and too much reverse can leave the door on top of the fixed locking bar:
 
-- Door reverses too far while closing, most often right after installing a freshly charged battery: pick a lower value. Try 50 ms.
-- Door closes but never locks under the rod: pick a higher value. Try 100 ms.
+- Door does not retract enough to re-seat: raise the value by 10 ms.
+- Door retracts so far that it begins to lift and lands on top of the bar again: lower the value by 10 ms.
 
-Change one step at a time and re-test with a fully charged battery. That is the worst case for over-reversing.
+Start at 40 ms and change one step at a time, testing with a fully charged battery. Pass only when repeated cycles finish underneath the bar every time. See [Enhanced Door Closing](../../trap-settings/enhanced-door-closing.md) for the complete calibration and optional recovery test.
 
 Requires trap firmware v2.3.2-1010 or newer. Older firmware ignores this setting. Only applies while Enhanced Door Closing is On. If adjusting it does not fix the door, the mechanism needs physical inspection. Contact support.
 

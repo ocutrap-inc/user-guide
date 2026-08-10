@@ -282,6 +282,7 @@ Complete list of all configurable trap settings.
 | Accessory Port | Enable / Disable; activation time 0–30 seconds |
 | Capture Alert Interval | 0–48 hours (default: 8 hours) |
 | Enhanced Door Closing | On / Off (default: On) |
+| EDC Backoff (ms) | 30 to 130 ms in 10 ms steps (default: 50 ms) |
 | Actuator Inverse | On / Off (default: Off) |
 | Units | Metric / Imperial |
 
@@ -403,11 +404,59 @@ An approaching animal first enters the **alert zone** (~12–18 in from the sens
 
 ### Enhanced Door Closing
 
-The door locks by sliding under a locking rod. One close does not always get it there. The door can rest on top of the rod instead, which looks shut but does not hold.
+The locking bar is fixed. The door locks by rotating down and then sliding under it. One close does not always get there. The door can rest on top of the bar instead, which looks shut but does not hold.
 
 When enabled, the door backs off and re-closes after every close, including closes on a capture, to seat under the rod. This improves door lock reliability in the field. It does not confirm the lock: the trap has no sensor that can tell a locked door from a closed one, and the app reports Closed for both.
 
 Enabled by default. Turn it off only if support asks. With it off, a capture gets one close and no re-seat.
+
+#### EDC Backoff timing
+
+**EDC Backoff (ms)** controls how long the door reverses during the re-seat. Higher timing reverses farther; lower timing reverses less.
+
+| Timing | Result |
+|---|---|
+| Too short | The door does not retract enough and may remain on top of the bar. |
+| Correct | The door retracts enough to drop flat, then re-closes underneath the bar. |
+| Too long | The door begins to lift and may land on top of the bar again, leaving it effectively unlocked. |
+
+The app offers 30 to 130 ms in 10 ms steps and defaults to 50 ms. Most traps calibrate between about 40 and 120 ms. Calibrate each trap separately; do not copy a value from another unit.
+
+Battery voltage affects motor speed. Fully charge the battery before calibration so the test includes the fastest normal movement and the greatest risk of reversing too far.
+
+In the advanced settings layout, open **Settings → More Settings → Advanced Settings → Enhanced Door Closing Timing**. In the newer web and mobile layout, open **Settings → Door**. Turn Enhanced Door Closing On, then select **EDC Backoff (ms)**. Firmware v2.3.2-1010 or newer is required.
+
+#### Calibration
+
+> ⚠️ **Warning:** Use an empty, unarmed trap on a stable surface. Keep hands, fingers, clothing, and your body out of the door opening.
+
+1. Fully charge and install the battery. Confirm the door and hinge are clean, aligned, and move freely.
+2. Close the door with the app or the physical buttons. Confirm it is underneath the locking bar.
+3. Set EDC Backoff to **40 ms**, save, and wait for the setting to sync.
+4. Run a complete Open and Close cycle. Inspect the door at the trap after the brief reverse and second close.
+5. Repeat several times. If the door does not retract enough, increase by **10 ms** and re-test.
+6. Stop at the lowest value that finishes underneath the bar every time. If the reverse starts lifting the door or travels too far, reduce by 10 ms.
+
+If no value in the usual 40 to 120 ms window works repeatedly, stop and contact OcuTrap support. The mechanism may need inspection or alignment.
+
+#### Optional obstruction recovery test
+
+This test checks whether EDC can recover when the first close leaves the door on top of the bar.
+
+> ⚠️ **Use caution:** Test only with an empty, unarmed trap. Work from outside the cage using a long wooden broom handle. Never use your hand, a screwdriver, or another conductive metal tool. Remove the handle before the EDC reverse begins. Stop if the mechanism binds or the object becomes trapped.
+
+1. Complete the normal calibration first.
+2. Start a Close cycle and briefly use the wooden handle to prevent the first movement from completing its normal slide under the bar.
+3. When the door reaches the top of the bar, remove the handle and stay clear.
+4. Let EDC reverse and close the door again, then inspect the final position.
+
+| Final position | Adjustment |
+|---|---|
+| Under the bar | Pass. Repeat to confirm consistent recovery. |
+| Still on top after a small reverse | Increase by 10 ms. |
+| Reversed too far, lifted, and landed on top again | Decrease by 10 ms. |
+
+EDC improves the chance of re-locking. It cannot verify the lock, so inspect the final door position yourself.
 
 ### Actuator Inverse
 
