@@ -233,6 +233,30 @@
     (hand-maintained) at the matching SUMMARY position.
   - [ ] Root and `docs-site/content/` twins byte-identical for the new page,
     every touched page, and `SUMMARY.md`. exit-impact: ops.
+- [x] **DOC-19**: Expand Enhanced Door Closing documentation into a complete
+  per-trap EDC Backoff calibration procedure. Acceptance checklist:
+  - [x] `getting-started/trap-settings/enhanced-door-closing.md` explains the
+    fixed locking bar and sliding door, how higher/lower timing changes the
+    retract, and why both too-short and too-long timing can leave the door on
+    top of the bar.
+  - [x] Calibration starts with a fully charged battery and a closed door,
+    starts at 40 ms, increases by 10 ms, and succeeds only when repeated cycles
+    finish with the door under the bar every time. It identifies roughly
+    40–120 ms as the usual tuning window without redefining the app's exposed
+    30–130 ms range or 50 ms default.
+  - [x] Optional obstruction recovery test is explicitly empty-trap only and
+    uses a long wooden handle from outside the cage, with hands/body clear and
+    the obstruction removed before the EDC re-seat. Pass/fail states cover
+    correct recovery, insufficient retract, and excessive retract.
+  - [x] Setting navigation covers **Settings → More Settings → Advanced
+    Settings** and the newer **Settings → Door** layout; app Open/Close and
+    on-trap button instructions are cross-linked.
+  - [x] `more-settings-overview.md`, `settings-reference.md`, and the
+    hand-maintained `OcuTrap_Knowledge_Base_Complete.md` agree with the
+    canonical page. No copy claims EDC verifies or guarantees a lock.
+  - [x] Root and `docs-site/content/` twins are byte-identical for every
+    touched customer page. Docs site builds, Knowledge Base PDF is regenerated,
+    and PDF source verification passes. exit-impact: ops.
 
 ### PDF Regeneration (PDF)
 
@@ -420,6 +444,7 @@
 | DOC-13  | Thin-page merges + appendix drop (SW-575) |
 | DOC-17  | On-trap buttons page + cross-links |
 | DOC-18  | Weak cellular signal page + multi-network copy |
+| DOC-19  | EDC backoff calibration procedure |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
