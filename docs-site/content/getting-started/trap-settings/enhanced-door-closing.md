@@ -26,6 +26,10 @@ EDC Backoff is the duration of that brief reverse movement. A higher time revers
 
 The app offers **30 to 130 ms** in 10 ms steps and defaults to **50 ms**. Most traps calibrate between about **40 and 120 ms**, but there is no single best value for every trap. Do not copy a value from another unit.
 
+{% hint style="warning" %}
+**Advanced setting:** EDC Backoff defaults to **50 ms**. If the door consistently finishes underneath the locking bar at 50 ms, **do not change it**. An incorrect value can prevent EDC from recovering after an obstruction or can reverse the door too far, leaving it on top of the bar and effectively unlocked. Adjust it only while calibrating an empty trap, one 10 ms step at a time.
+{% endhint %}
+
 Battery voltage changes motor speed. A fully charged battery makes the motor move faster; lower voltage makes it move more slowly. Always calibrate with a fully charged battery so you test the fastest normal movement and the greatest risk of reversing too far.
 
 ## Enabled or disabled
