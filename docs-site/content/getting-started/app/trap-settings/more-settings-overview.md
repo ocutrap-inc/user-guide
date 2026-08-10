@@ -37,6 +37,21 @@ This improves the chance the door locks. It does not confirm the lock. Enabled b
 
 ***
 
+#### EDC Backoff
+
+Sets how far the door backs off during Enhanced Door Closing, in milliseconds. Options run from 30 ms to 130 ms in 10 ms steps. Default is 50 ms.
+
+Every trap door is slightly different, and door speed rises with battery voltage. Two symptoms tell you to adjust:
+
+- Door reverses too far while closing, most often right after installing a freshly charged battery: pick a lower value. Try 50 ms.
+- Door closes but never locks under the rod: pick a higher value. Try 100 ms.
+
+Change one step at a time and re-test with a fully charged battery. That is the worst case for over-reversing.
+
+Requires trap firmware v2.3.2-1010 or newer. Older firmware ignores this setting. Only applies while Enhanced Door Closing is On. If adjusting it does not fix the door, the mechanism needs physical inspection. Contact support.
+
+***
+
 #### Camera Time Lapse
 
 Sets how often the camera captures periodic photos while the trap is armed. More frequent photos provide better visibility but increase power and data usage.
