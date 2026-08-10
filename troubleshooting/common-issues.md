@@ -120,6 +120,8 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 4. Check that GPS is enabled in settings
 5. If problems persist, contact support for GPS troubleshooting
 
+**Indoor / covered sites:** GPS usually cannot get a reliable fix indoors, and failed or long searches use **more** battery than a normal outdoor fix. The app cannot tell if a trap is inside or outside. For indoor deployments, turn **Location (GPS)** off in trap settings and use **Set location** (pin or address) on the trap detail screen so the map still shows where the trap is.
+
 ---
 
 ## Camera Issues
@@ -179,16 +181,18 @@ See [Trap Not Sending Commands](trap-not-sending-commands.md) for detailed troub
 
 **Common Causes:**
 - Poor cellular signal (device uses more power searching)
+- GPS left on indoors or under cover (weak satellite signal → longer searches, more battery use)
 - GPS interval set too frequently
 - Camera timelapse interval set too short
 - Cold temperatures reduce battery capacity
 
 **Solution:**
 1. Deploy in areas with good cellular coverage
-2. Increase GPS Interval (8+ hours recommended)
-3. Increase Camera Time Lapse interval (6+ hours recommended)
-4. In cold weather, expect reduced battery life
-5. Keep firmware updated (includes battery optimizations)
+2. If the trap is indoors or covered, turn **Location (GPS)** off and set the map position with **Set location**
+3. Increase GPS Interval (8+ hours recommended) when GPS stays on outdoors
+4. Increase Camera Time Lapse interval (6+ hours recommended)
+5. In cold weather, expect reduced battery life
+6. Keep firmware updated (includes battery optimizations)
 
 ### Trap Keeps Hibernating
 

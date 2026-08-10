@@ -108,6 +108,8 @@ Sets how often the trap updates its GPS location. Shorter intervals provide more
 
 #### Location
 
-Enables or disables periodic location logging. When enabled, the trap logs its location at regular intervals for tracking and history purposes.
+Enables or disables periodic GPS location updates. When enabled, the trap updates its position on a schedule (and on captures) for the map and location history.
+
+**Indoor tip:** GPS works best outdoors with a clear view of the sky. Indoors or under cover, the trap may keep trying for a fix and use **more** battery than a successful outdoor update. The app does not detect indoor vs outdoor — if the trap stays inside, turn **Location (GPS)** off and place the trap on the map with **Set location** instead.
 
 ***
