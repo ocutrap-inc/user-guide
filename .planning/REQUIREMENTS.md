@@ -213,25 +213,25 @@
     (hand-maintained) at the matching SUMMARY position.
   - [ ] Root and `docs-site/content/` twins byte-identical for the new page,
     every touched page, and `SUMMARY.md`. exit-impact: ops.
-- [ ] **DOC-18**: Weak-cellular-signal troubleshooting page plus
+- [x] **DOC-18**: Weak-cellular-signal troubleshooting page plus
   multi-network connectivity copy. Support had no page describing what
   actually helps in marginal coverage, and repeated power cycling was making
   network searches worse. Acceptance checklist:
-  - [ ] New page `troubleshooting/improving-a-weak-cellular-signal.md`
+  - [x] New page `troubleshooting/improving-a-weak-cellular-signal.md`
     explains multi-network 4G LTE selection, what weak signal looks like, the
     ordered field ladder (antenna, move, raise, one power cycle, wait an
     hour, then support), and trapping while disconnected.
-  - [ ] `SUMMARY.md` lists it in **Troubleshooting** immediately after
+  - [x] `SUMMARY.md` lists it in **Troubleshooting** immediately after
     **Trap Offline or Won't Connect**.
-  - [ ] `getting-started/connectivity-and-coverage.md` gains a short
+  - [x] `getting-started/connectivity-and-coverage.md` gains a short
     multi-network paragraph pointing at the new page;
     `troubleshooting/trap-offline-or-wont-connect.md` Step 4 (Check Cellular
     Coverage) links to it.
-  - [ ] `faqs/safe-mode.md` brand fix: "the Particle module inside the POD"
+  - [x] `faqs/safe-mode.md` brand fix: "the Particle module inside the POD"
     becomes "the cellular module inside the POD".
-  - [ ] Page summarized in `OcuTrap_Knowledge_Base_Complete.md`
+  - [x] Page summarized in `OcuTrap_Knowledge_Base_Complete.md`
     (hand-maintained) at the matching SUMMARY position.
-  - [ ] Root and `docs-site/content/` twins byte-identical for the new page,
+  - [x] Root and `docs-site/content/` twins byte-identical for the new page,
     every touched page, and `SUMMARY.md`. exit-impact: ops.
 - [x] **DOC-19**: Expand Enhanced Door Closing documentation into a complete
   per-trap EDC Backoff calibration procedure. Acceptance checklist:
