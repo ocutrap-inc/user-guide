@@ -11,13 +11,14 @@ Sign-in problems almost always come down to one of a few causes. Find the sectio
 
 ## Forgot Your Password
 
-Reset it with a code emailed to you:
+Reset it from the email we send you:
 
 1. Go to [app.ocutrap.com](https://app.ocutrap.com) and click **Forgot password?**
 2. Enter your email and click **Send Reset Code**.
-3. Check your email for a **6-digit reset code**.
-4. Back in the app, click **Enter Reset Code**, then enter the code along with your new password.
-5. Click **Reset Password**. When you see **Password reset complete**, sign in with your new password.
+3. Open the email and click **Reset Password**. The page opens headed **Choose a new password**.
+4. Enter your new password, confirm it, and submit. When you see **Password reset complete**, sign in with your new password.
+
+If your mail app strips the button, the email also carries a reset code. Click **Enter Reset Code** in the app and paste it in. The code is **long** (32 characters of mixed letters and numbers) and **case-sensitive**, so paste it rather than typing it.
 
 Your new password needs at least 8 characters, a number, and a special character.
 
