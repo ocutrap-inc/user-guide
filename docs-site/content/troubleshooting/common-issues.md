@@ -44,12 +44,15 @@ See [Distance Limits, Sensor Alerts & Errors](../getting-started/trap-settings/d
 
 ### Sensor Error (Blocks Arming)
 
-If arming fails with **`Sensor fault. Power-cycle the trap.`**, the distance sensor did not pass its self-check.
+If the distance sensor can't see at all, arming is blocked with one of two errors:
+
+- **`Sensor blocked or dirty. Clean sensor window, then power-cycle.`** — the sensor is healthy but can't see through the POD lens. Usually condensation or grime on the lens; overnight dew is a common cause and clears as the day warms.
+- **`Sensor fault. Power-cycle the trap.`** — the sensor did not respond to its self-check. Traps on firmware v1061 or earlier also show this message for the blocked/dirty case above.
 
 **Solution:**
-1. Clean the POD lens
+1. Clean the POD lens with a dry, soft cloth
 2. Power-cycle the trap
-3. Contact support if the error persists after cleaning
+3. Arm again — contact support if the error persists with a clean lens
 
 ### Motor Connectivity Issue
 

@@ -271,6 +271,22 @@
     PDF builds pass, the PDF source hash verifies, and the rendered warning is
     visually clean. exit-impact: ops.
 
+- [x] **DOC-21** (FW-405): Post-launch drift — firmware v1062 splits the
+  arm-blocking sensor error into two messages. Document the new
+  `Sensor blocked or dirty. Clean sensor window, then power-cycle.` (sensor
+  healthy but can't see through the POD lens — usually condensation or grime;
+  hard-blocks arming, unlike the warn-and-arm lens warning that still arms)
+  alongside the existing `Sensor fault. Power-cycle the trap.` (self-check
+  failure; firmware v1061 and earlier shows it for both causes). Acceptance:
+  - [x] `troubleshooting/common-issues.md` "Sensor Error (Blocks Arming)"
+    lists both messages, their causes, and the clean → power-cycle → re-arm
+    fix.
+  - [x] "Other arm errors" table in
+    `getting-started/trap-settings/distance-safety-and-alerts.md` carries a
+    row for each message, with the older-firmware note on the fault row.
+  - [x] Root and `docs-site/content/` mirrors are byte-identical; KB PDF
+    regenerated. exit-impact: ops.
+
 ### PDF Regeneration (PDF)
 
 - [ ] **PDF-01**: If `R1_Quick_Start.pdf` content drifted, edit
@@ -459,6 +475,7 @@
 | DOC-18  | Weak cellular signal page + multi-network copy |
 | DOC-19  | EDC backoff calibration procedure |
 | DOC-20  | EDC default and advanced-setting warning |
+| DOC-21  | Post-launch drift (FW-405 sensor-fault copy split) |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |
