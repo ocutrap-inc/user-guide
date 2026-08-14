@@ -129,7 +129,7 @@ OcuTrap uses a two-step detection process to prevent false triggers from rain, d
 
 * **Steady-readings check** — Requires consistent presence before closing
 * **Rain and debris filtering** — Ignores splashy or erratic movement
-* **Dirty-sensor detection** — Blocks arming when the lens is obstructed
+* **Dirty-sensor detection** — Warns when the lens looks dirty; blocks arming only when the sensor cannot range after recovery
 
 ***
 

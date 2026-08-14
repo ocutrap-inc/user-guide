@@ -271,21 +271,24 @@
     PDF builds pass, the PDF source hash verifies, and the rendered warning is
     visually clean. exit-impact: ops.
 
-- [x] **DOC-21** (FW-405): Post-launch drift — firmware v1062 splits the
+- [x] **DOC-21** (FW-405): Post-launch drift — firmware v1062–v1063 splits the
   arm-blocking sensor error into two messages. Document the new
-  `Sensor blocked or dirty. Clean sensor window, then power-cycle.` (sensor
+  `Sensor blocked or dirty. Clean sensor window, then try again.` (sensor
   healthy but can't see through the POD lens — usually condensation or grime;
   hard-blocks arming, unlike the warn-and-arm lens warning that still arms)
   alongside the existing `Sensor fault. Power-cycle the trap.` (self-check
   failure; firmware v1061 and earlier shows it for both causes). Acceptance:
   - [x] `troubleshooting/common-issues.md` "Sensor Error (Blocks Arming)"
-    lists both messages, their causes, and the clean → power-cycle → re-arm
-    fix.
+    lists both messages, their causes, and keeps power-cycling exclusive to
+    the genuine reset-failure path.
   - [x] "Other arm errors" table in
     `getting-started/trap-settings/distance-safety-and-alerts.md` carries a
     row for each message, with the older-firmware note on the fault row.
   - [x] Root and `docs-site/content/` mirrors are byte-identical; KB PDF
     regenerated. exit-impact: ops.
+  - [x] `getting-started/technical-specifications.md` distinguishes the normal
+    dirty-lens warn-and-arm path from recovery-failed non-ranging, which blocks
+    arming.
 
 ### PDF Regeneration (PDF)
 

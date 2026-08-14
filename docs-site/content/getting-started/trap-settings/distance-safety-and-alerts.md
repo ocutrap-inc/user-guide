@@ -45,7 +45,7 @@ If the POD lens looks blocked or dirty when you arm, the trap **still arms** but
 
 | Message | Cause |
 |---|---|
-| **`Sensor blocked or dirty. Clean sensor window, then power-cycle.`** | Sensor can't see through the POD lens (usually condensation or grime) — clean the lens, power-cycle, then arm again |
+| **`Sensor blocked or dirty. Clean sensor window, then try again.`** | Sensor can't see through the POD lens (usually condensation or grime) — clean the lens, then arm again |
 | **`Sensor fault. Power-cycle the trap.`** | Sensor self-check failed — power-cycle the trap, and contact support if it persists. Firmware v1061 and earlier also shows this when the lens is blocked or dirty |
 | **`Open the door first`** | Door is not fully open — open it all the way, then arm |
 | **`Release animal first (open door)`** | Trap is in the captured state — open the door to release, then arm |
