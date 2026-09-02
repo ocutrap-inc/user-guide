@@ -26,10 +26,10 @@ This file tracks the current drift. Update each item when the PDF is rebuilt.
 
 | PDF | Source of truth | How updates propagate |
 | --- | --- | --- |
-| `pdf-docs/printed/R2_Manual.pdf` (+ `.gitbook/assets/R2_Manual.pdf`) | `scripts/build_box_manual.py` (hardcoded ReportLab) | Hand-edit Python → `python3 scripts/build_box_manual.py --model r2` → copy to `.gitbook/assets/`. **Does not** read any markdown. |
-| `pdf-docs/printed/R2_Manual_print-2up.pdf` | derived from `R2_Manual.pdf` by the same script (pypdf imposition) | Never hand-edited. Rebuilt automatically with the reading-order file. |
-| `pdf-docs/printed/R1_Manual.pdf` (+ `.gitbook/assets/R1_Manual.pdf`) | `scripts/build_box_manual.py` | Hand-edit Python → `python3 scripts/build_box_manual.py --model r1` → copy to `.gitbook/assets/`. |
-| `pdf-docs/printed/R1_Manual_print-2up.pdf` | derived from `R1_Manual.pdf` by the same script | Never hand-edited. |
+| `pdf-docs/printed/R2_Quick_Start_Guide.pdf` (+ `.gitbook/assets/R2_Quick_Start_Guide.pdf`) | `scripts/build_box_manual.py` (hardcoded ReportLab) | Hand-edit Python → `python3 scripts/build_box_manual.py --model r2` → copy to `.gitbook/assets/`. **Does not** read any markdown. |
+| `pdf-docs/printed/R2_Quick_Start_Guide_print-2up.pdf` | derived from `R2_Quick_Start_Guide.pdf` by the same script (pypdf imposition) | Never hand-edited. Rebuilt automatically with the reading-order file. |
+| `pdf-docs/printed/R1_Quick_Start_Guide.pdf` (+ `.gitbook/assets/R1_Quick_Start_Guide.pdf`) | `scripts/build_box_manual.py` | Hand-edit Python → `python3 scripts/build_box_manual.py --model r1` → copy to `.gitbook/assets/`. |
+| `pdf-docs/printed/R1_Quick_Start_Guide_print-2up.pdf` | derived from `R1_Quick_Start_Guide.pdf` by the same script | Never hand-edited. |
 | `.gitbook/assets/R1_Operation_Cheat_Sheet.pdf` | `scripts/build_cheat_sheet.py` (hardcoded ReportLab) | Hand-edit Python → rerun script. **Does not** read any markdown. |
 | `.gitbook/assets/OcuTrap_Knowledge_Base.pdf` | `scripts/build_kb_pdf.py` (auto-compiled from `SUMMARY.md`) | Edit GitBook markdown → CI rebuild on push to `main`. |
 | `pdf-docs/printed/inside_sticker.png` | Hardware team | New sticker design → replace PNG. |
@@ -42,8 +42,8 @@ the GitBook docs.
 
 | Flavor | Page size | What it is for |
 | --- | --- | --- |
-| `<MODEL>_Manual.pdf` | half-letter 5.5 x 8.5 in portrait, 8 pages | Reading order. This is the docs download and the file you read on screen. |
-| `<MODEL>_Manual_print-2up.pdf` | letter landscape 11 x 8.5 in, 4 sheet sides | Imposed for saddle folding. This is the file you send to the printer. |
+| `<MODEL>_Quick_Start_Guide.pdf` | half-letter 5.5 x 8.5 in portrait, 8 pages | Reading order. This is the docs download and the file you read on screen. |
+| `<MODEL>_Quick_Start_Guide_print-2up.pdf` | letter landscape 11 x 8.5 in, 4 sheet sides | Imposed for saddle folding. This is the file you send to the printer. |
 
 **Print recipe:** print the `_print-2up` file on US letter, **duplex**,
 **flip on the short edge**, at **1 page per sheet** (do not let the driver
@@ -54,8 +54,8 @@ sheet 1**. Pages then read 1 through 8.
 
 ```bash
 python3 scripts/build_box_manual.py --model all
-cp pdf-docs/printed/R2_Manual.pdf .gitbook/assets/R2_Manual.pdf
-cp pdf-docs/printed/R1_Manual.pdf .gitbook/assets/R1_Manual.pdf
+cp pdf-docs/printed/R2_Quick_Start_Guide.pdf .gitbook/assets/R2_Quick_Start_Guide.pdf
+cp pdf-docs/printed/R1_Quick_Start_Guide.pdf .gitbook/assets/R1_Quick_Start_Guide.pdf
 ```
 
 The script exits non-zero if a booklet is not exactly 8 pages (the imposition

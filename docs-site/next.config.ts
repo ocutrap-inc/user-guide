@@ -90,6 +90,27 @@ const nextConfig: NextConfig = {
       },
       // Trap Test / demo mode was dropped from the app (SW-117); the page is
       // gone, so send bookmarks to the field-test step (DOC-25).
+      // In-box booklet files renamed to Quick Start Guide (DOC-29).
+      {
+        source: "/gitbook-assets/R1_Manual.pdf",
+        destination: "/gitbook-assets/R1_Quick_Start_Guide.pdf",
+        permanent: true,
+      },
+      {
+        source: "/gitbook-assets/R1_Manual_print-2up.pdf",
+        destination: "/gitbook-assets/R1_Quick_Start_Guide_print-2up.pdf",
+        permanent: true,
+      },
+      {
+        source: "/gitbook-assets/R2_Manual.pdf",
+        destination: "/gitbook-assets/R2_Quick_Start_Guide.pdf",
+        permanent: true,
+      },
+      {
+        source: "/gitbook-assets/R2_Manual_print-2up.pdf",
+        destination: "/gitbook-assets/R2_Quick_Start_Guide_print-2up.pdf",
+        permanent: true,
+      },
       {
         source: "/device-management/trap-test-mode",
         destination: "/getting-started/deploying-in-the-field",

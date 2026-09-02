@@ -15,9 +15,9 @@ carries four booklet pages.
 
 Two outputs per model:
 
-    pdf-docs/printed/<MODEL>_Manual.pdf            half-letter, reading order
+    pdf-docs/printed/<MODEL>_Quick_Start_Guide.pdf            half-letter, reading order
                                                    (also the docs download)
-    pdf-docs/printed/<MODEL>_Manual_print-2up.pdf  letter landscape, imposed
+    pdf-docs/printed/<MODEL>_Quick_Start_Guide_print.pdf  letter landscape, imposed
                                                    for saddle folding
 
 Imposition for n booklet pages (n a multiple of 4), sheets k = 0..n/4-1, with
@@ -553,7 +553,7 @@ class BookletDoc(BaseDocTemplate):
             topMargin=MARGIN, bottomMargin=MARGIN + FOOTER_H,
             title=f"OcuTrap {model_label} Manual",
             author="OcuTrap, Inc.",
-            subject="Setup and quick reference",
+            subject="Quick Start Guide",
         )
         self.model_label = model_label
         self.page_no = 0
@@ -722,7 +722,7 @@ def cover_page(model, setup_url):
 
     story.append(Paragraph(f"OcuTrap {model}", sCoverTitle))
     story.append(Spacer(1, 3))
-    story.append(Paragraph("Setup and quick reference", sCoverSub))
+    story.append(Paragraph("Quick Start Guide", sCoverSub))
 
     # TODO: swap for R2 photo. No R2 product photo exists in the repo yet, so
     # both models currently use the assembled-R1 hero shot on the cover.
@@ -1266,7 +1266,7 @@ def r1_pages(cfg):
 def build_reading_order(model_key):
     cfg = MODELS[model_key]
     label = cfg["label"]
-    out = os.path.join(OUT_DIR, f"{label}_Manual.pdf")
+    out = os.path.join(OUT_DIR, f"{label}_Quick_Start_Guide.pdf")
     os.makedirs(OUT_DIR, exist_ok=True)
 
     pages = r2_pages(cfg) if model_key == "r2" else r1_pages(cfg)

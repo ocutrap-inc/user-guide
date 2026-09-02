@@ -15,27 +15,27 @@ The complete OcuTrap Knowledge Base. Print-quality letter portrait formatting wi
 
 {% file src="../.gitbook/assets/OcuTrap_Knowledge_Base.pdf" %}
 
-### In-box manuals
+### Quick Start Guide
 
-The same booklet that ships inside every trap, page by page.
+The booklet that ships inside every trap, page by page.
 
 **OcuTrap R2**
 
-{% file src="../.gitbook/assets/R2_Manual.pdf" %}
+{% file src="../.gitbook/assets/R2_Quick_Start_Guide.pdf" %}
 
 Eight pages, half-letter, in reading order.
 
-{% file src="../.gitbook/assets/R2_Manual_print-2up.pdf" %}
+{% file src="../.gitbook/assets/R2_Quick_Start_Guide_print-2up.pdf" %}
 
 Print-ready version: two letter sheets, already laid out for folding.
 
 **OcuTrap R1**
 
-{% file src="../.gitbook/assets/R1_Manual.pdf" %}
+{% file src="../.gitbook/assets/R1_Quick_Start_Guide.pdf" %}
 
 Eight pages, half-letter, in reading order, with the door, motor, and handle assembly steps.
 
-{% file src="../.gitbook/assets/R1_Manual_print-2up.pdf" %}
+{% file src="../.gitbook/assets/R1_Quick_Start_Guide_print-2up.pdf" %}
 
 Print-ready version: two letter sheets, already laid out for folding.
 
@@ -49,5 +49,5 @@ A one-page letter-size reference card covering system LEDs, buttons, device stat
 
 ### Need something else?
 
-* The **in-box manual** ships physically inside every OcuTrap. It is the download above, so you can print a replacement yourself, or contact [support@ocutrap.com](mailto:support@ocutrap.com).
+* The **Quick Start Guide** ships physically inside every OcuTrap. It is the download above, so you can print a replacement yourself, or contact [support@ocutrap.com](mailto:support@ocutrap.com).
 * For brand assets (logos, social images), contact [support@ocutrap.com](mailto:support@ocutrap.com) or visit [ocutrap.com](https://ocutrap.com).
