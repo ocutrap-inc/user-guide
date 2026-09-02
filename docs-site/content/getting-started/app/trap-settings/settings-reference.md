@@ -1,6 +1,10 @@
+---
+description: Check every OcuTrap setting, including ranges, defaults, locations, and what each option controls.
+---
+
 # Settings Reference
 
-This page provides a complete reference of all configurable settings on your OcuTrap, including their ranges, defaults, and descriptions.
+Use this reference to check every configurable OcuTrap setting, including ranges and defaults.
 
 > **Note:** After changing settings, a reboot of the trap is recommended to ensure all changes are applied correctly.
 
@@ -10,15 +14,15 @@ This page provides a complete reference of all configurable settings on your Ocu
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Capture Distance** | 6–18 in (app presets) | 8 in | How far inside the trap an animal must be before the door closes. |
+| **Capture Distance** | 6 to 18 in (app presets) | 8 in | How far inside the trap an animal must be before the door closes. |
 | **Pre-Capture Alerts** | On/Off | On | Sends an alert when an animal enters the detection zone (before capture). Includes a 60-second cooldown between alerts. |
 
 ### Detection Zones Explained
 
 OcuTrap uses two steps to verify captures and reduce false triggers:
 
-- **Detection area** (out to ~34 in / 875 mm from the sensor) — The animal is approaching; you may get a pre-capture alert
-- **Capture zone** (your set distance, default ~8 in) — The door closes when the animal reaches this point
+- **Detection area** (out to ~34 in / 875 mm from the sensor): The animal is approaching; you may get a pre-capture alert
+- **Capture zone** (your set distance, default ~8 in): The door closes when the animal reaches this point
 
 This two-step check prevents false triggers from rain, debris, or quick movements.
 
@@ -28,12 +32,12 @@ This two-step check prevents false triggers from rain, debris, or quick movement
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Camera Time Lapse** | 0–24 hours | 6 hours | How often the camera takes periodic photos in every mode (unarmed, armed, scouting, and after a capture). Set to 0 to disable timelapse. |
-| **Camera Quality** | 1–6 | 2 | Image resolution size (1=QVGA smallest, 6=UXGA largest). Higher = better quality but more data/power. |
+| **Camera Time Lapse** | 0 to 24 hours | 6 hours | How often the camera takes periodic photos in every mode (unarmed, armed, scouting, and after a capture). Set to 0 to disable timelapse. |
+| **Camera Quality** | 1 to 6 | 2 | Image resolution size (1=QVGA smallest, 6=UXGA largest). Higher = better quality but more data/power. |
 | **Rotate Image** | 0°, 90°, 180°, 270° | 0° | Rotates captured images. Useful if trap is mounted in non-standard orientation. |
-| **Dark Lux Threshold** | 1–100 lux | 25 lux | Light level below which the environment is considered "dark" and IR lighting activates. |
-| **Minimum IR Brightness** | 0–100% | 10% | Minimum infrared LED brightness in dark conditions. |
-| **Maximum IR Brightness** | 0–100% | 100% | Maximum infrared LED brightness. Lower values reduce glare and save power. |
+| **Dark Lux Threshold** | 1 to 100 lux | 25 lux | Light level below which the environment is considered "dark" and IR lighting activates. |
+| **Minimum IR Brightness** | 0 to 100% | 10% | Minimum infrared LED brightness in dark conditions. |
+| **Maximum IR Brightness** | 0 to 100% | 100% | Maximum infrared LED brightness. Lower values reduce glare and save power. |
 
 ### Camera Quality Levels
 
@@ -78,7 +82,7 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 | **Temperature Alerts** | On/Off | Off | Enables alerts when the outdoor temperature at the trap passes a limit below. |
 | **High Temperature Limit** | Configurable | 45°C (113°F) | Alert sent if the outdoor temperature rises above this. |
 | **Low Temperature Limit** | Configurable | -10°C (14°F) | Alert sent if the outdoor temperature falls below this. |
-| **Temperature Alert Interval** | 1–24 hours | 6 hours | Minimum time between repeat temperature alerts. |
+| **Temperature Alert Interval** | 1 to 24 hours | 6 hours | Minimum time between repeat temperature alerts. |
 
 ---
 
@@ -101,7 +105,7 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Accessory Port on-duration** | 0–30,000 ms | 0 (off) | How long the 12V accessory port stays powered when activated. 0 means off. The **Accessory** quick action appears in Controls only when the duration is above 0. |
+| **Accessory Port on-duration** | 0 to 30,000 ms | 0 (off) | How long the 12V accessory port stays powered when activated. 0 means off. The **Accessory** quick action appears in Controls only when the duration is above 0. |
 
 The 12V accessory port can power external devices like dispensers, pumps, or other add-on hardware.
 
@@ -111,7 +115,7 @@ The 12V accessory port can power external devices like dispensers, pumps, or oth
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Capture Alerts Interval** | 0–48 hours | 8 hours | Minimum time between capture alert notifications. Prevents repeated alerts for same capture. |
+| **Capture Alerts Interval** | 0 to 48 hours | 8 hours | Minimum time between capture alert notifications. Prevents repeated alerts for same capture. |
 
 ---
 
@@ -132,10 +136,10 @@ These settings remove portions of the image before processing. Values are percen
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Left Crop** | 0–50% | 0% | Removes left portion of image |
-| **Right Crop** | 0–50% | 0% | Removes right portion of image |
-| **Top Crop** | 0–50% | 0% | Removes top portion of image |
-| **Bottom Crop** | 0–50% | 0% | Removes bottom portion of image |
+| **Left Crop** | 0 to 50% | 0% | Removes left portion of image |
+| **Right Crop** | 0 to 50% | 0% | Removes right portion of image |
+| **Top Crop** | 0 to 50% | 0% | Removes top portion of image |
+| **Bottom Crop** | 0 to 50% | 0% | Removes bottom portion of image |
 
 ---
 
@@ -155,12 +159,12 @@ Settings are accessible in different locations:
 
 ### For Maximum Battery Life
 - Turn Location (GPS) off if you do not need location tracking
-- Use Camera Quality level 1–2
+- Use Camera Quality level 1 to 2
 - Set Camera Time Lapse to 6+ hours or disable
 - Reduce Maximum IR Brightness if images are overexposed
 
 ### For Best Image Quality
-- Use Camera Quality level 4–6
+- Use Camera Quality level 4 to 6
 - Adjust Dark Lux Threshold based on your deployment (lower = earlier IR activation)
 - Fine-tune IR brightness settings for your environment
 

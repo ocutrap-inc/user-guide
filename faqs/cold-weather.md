@@ -6,13 +6,13 @@ description: >-
 
 # Cold Weather
 
-Operating OcuTrap in cold weather requires some additional considerations. This guide consolidates all cold weather-related information to help you maintain optimal performance during winter months.
+Cold weather affects your trap and battery. Use these guidelines during winter deployments.
 
 ## Temperature Ranges
 
 ### Operating Temperature
 
-* **Supported operating range:** 0°C (32°F) to 40°C (104°F). **0°C is the published operating floor** — the trap is not rated or supported below it.
+* **Supported operating range:** 0°C (32°F) to 40°C (104°F). **0°C is the published operating floor.** The trap is not rated or supported below it.
 * **Below 0°C:** The trap may still power on, but operation below freezing is outside the supported range and is not recommended. Prolonged sub-freezing exposure can impact performance and battery longevity, with issues such as door and motor sticking, icing, and motor seizing.
 
 ### Charging Temperature
@@ -25,7 +25,7 @@ Operating OcuTrap in cold weather requires some additional considerations. This 
 The OcuTrap features an integrated temperature sensor that monitors internal conditions:
 
 * **Low Temperature Alert:** Triggers at -10°C (14°F) by default
-* **Alert Interval:** Every 8 hours (configurable from 0–48 hours)
+* **Alert Interval:** Every 8 hours (configurable from 0 to 48 hours)
 
 The low-temperature alert default (-10°C) sits **below** the 0°C operating floor on purpose: it is an early warning that the trap is now running below its supported range, not a sign that -10°C is safe. Treat the alert as a prompt to retrieve or warm the trap. You can raise the Low Temperature Limit in Settings if you want to be warned before conditions reach freezing.
 
@@ -59,7 +59,7 @@ In freezing weather, the door mechanism may be affected:
 * Check weather forecasts before deployment
 * If ice formation is expected, consider temporarily retrieving the trap
 * After ice events, inspect the door mechanism before resuming operation
-* Allow frozen components to thaw naturally—do not force the door open
+* Allow frozen components to thaw naturally. Do not force the door open
 
 ## Condensation
 
@@ -73,7 +73,7 @@ Temperature swings common in cold weather (such as morning/evening transitions) 
 ### Solutions
 
 * **Immediate Fix:** Place a fresh silica gel pack inside the trap pod before closing
-* **Deep-Dry Procedure:** Leave the POD cracked open in a warm, ventilated spot for 24 hours, or seal in a zipper bag with desiccant packs for 12–18 hours
+* **Deep-Dry Procedure:** Leave the POD cracked open in a warm, ventilated spot for 24 hours, or seal in a zipper bag with desiccant packs for 12 to 18 hours
 
 ## Seasonal Deployment Tips
 
@@ -100,7 +100,7 @@ Temperature swings common in cold weather (such as morning/evening transitions) 
 
 ## Related Pages
 
-* [Weather & Environmental Guidelines](weather-and-environmental-guidelines.md) — Full environmental guidelines including heat and rain
-* [Battery Overview](../getting-started/battery-overview.md) — Complete battery information
-* [Tips and Tricks](../getting-started/tips-and-tricks.md) — General deployment tips
-* [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md) — Detailed condensation troubleshooting
+* [Weather & Environmental Guidelines](weather-and-environmental-guidelines.md): Full environmental guidelines including heat and rain
+* [Battery Overview](../getting-started/battery-overview.md): Complete battery information
+* [Tips and Tricks](../getting-started/tips-and-tricks.md): General deployment tips
+* [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md): Detailed condensation troubleshooting

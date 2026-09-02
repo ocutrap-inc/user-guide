@@ -25,7 +25,7 @@ The trap also checks for an obstruction before scouting begins. If something is 
 |                            | Armed                    | Scouting                  |
 | -------------------------- | ------------------------ | ------------------------- |
 | Detects animals            | Yes                      | Yes                       |
-| Sends alerts               | Yes, if enabled          | Activity feed only — no notifications |
+| Sends alerts               | Yes, if enabled          | Activity feed only, no notifications |
 | Takes photos               | Yes                      | Yes                       |
 | Closes the door            | Yes, after a detection   | No                        |
 | Best for                   | Capturing an animal      | Observing activity        |
@@ -38,15 +38,15 @@ While in Scouting Mode, the door does not close automatically. The only controls
 2. Find the trap you want to scout.
 3. Make sure the trap status is **Open / Unarmed**.
 4. Open the trap's detail page and find the **Controls** card.
-5. Open the **arm-mode dropdown** (top of the Controls card — it shows the current mode) and choose **Scout**. Each choice lists what it does, so you can see the difference before you pick.
+5. Open the **arm-mode dropdown** (it shows the current mode at the top of the Controls card) and choose **Scout**. Each choice lists what it does, so you can see the difference before you pick.
 6. When the check passes, the trap status changes to **Scouting**.
 
 If **Scout** does not start, the door may not be fully open, the trap may be offline, or the trap may not have checked in recently. Wait for the next check-in, then try again.
 
 ## What to expect
 
-* **Scout Alert**: Recorded in the trap's activity feed when an animal first enters the pre-capture area. Scout events are routine scouting data, not alerts — they do **not** send a push or email, do **not** appear in your Inbox, and do **not** add to the notification-bell count.
-* **Scout Trigger**: Recorded in the trap's activity feed when the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close. Like the Scout Alert, it stays in the activity feed only — no push, email, Inbox entry, or bell count.
+* **Scout Alert**: Recorded in the trap's activity feed when an animal first enters the pre-capture area. Scout events are routine scouting data, not alerts. They do **not** send a push or email, do **not** appear in your Inbox, and do **not** add to the notification-bell count.
+* **Scout Trigger**: Recorded in the trap's activity feed when the animal reaches the normal trigger distance. The trap takes a photo, but the door does not close. Like the Scout Alert, it stays in the activity feed only, with no push, email, Inbox entry, or bell count.
 * **Photos**: Fast photos about every 15 seconds while the animal is active. If it stays put, the spacing stretches to about every 4 minutes to protect battery; fresh movement brings it back to 15 seconds. The full-quality shot arrives at the Scout Trigger moment. (You may see a couple of quick frames right when it first enters, alongside the feed entries above.)
 
 Repeat scout events from the same visit are throttled in the activity feed so it isn't flooded. New photos still arrive during that window; only the duplicate event entries are held back.
@@ -69,4 +69,4 @@ For capture behavior after the door closes, see [After a Capture](after-capture.
 
 * **Obstruction error**: Clear the capture area, then tap **Scout** again.
 * **Door-not-open error**: Tap **Open**, wait for the trap status to show **Open**, then tap **Scout** again.
-* **Scouting activity showing up as notifications**: Scout triggers and alerts are recorded in the trap's activity feed only — they no longer send a push or email, appear in your Inbox, or add to the notification-bell count. If you still receive push or email notifications, or see Inbox entries, for scouting activity, please report it.
+* **Scouting activity showing up as notifications**: Scout triggers and alerts are recorded in the trap's activity feed only. They no longer send a push or email, appear in your Inbox, or add to the notification-bell count. If you still receive push or email notifications or see Inbox entries for scouting activity, report it.

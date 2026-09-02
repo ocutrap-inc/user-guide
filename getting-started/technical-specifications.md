@@ -6,7 +6,7 @@ description: >-
 
 # Technical Specifications
 
-This page provides detailed technical specifications for the OcuTrap R2 smart wildlife trap, with R1 values where they differ.
+These are the OcuTrap R2 technical specifications, with R1 values where they differ.
 
 ***
 
@@ -21,9 +21,9 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | **Door open (adds to length)** | ~4" (~10.2 cm) | ~4" (~10.2 cm) |
 | **Approx. total length** · with POD installed and door fully open | ~45" (~114 cm) | ~41" (~104 cm) |
 | **Weight** | 19.8 lbs (8.98 kg) with the 56 Wh battery · 19.1 lbs (8.68 kg) without | 24 lbs (10.9 kg) with the 111 Wh battery |
-| **Shipping box** | 36.5" × 11" × 15.5" | — see packing slip |
+| **Shipping box** | 36.5" × 11" × 15.5" | See packing slip |
 | **Construction** | Weather-resistant enclosure, compatible with Tomahawk trap frames | Weather-resistant enclosure, compatible with Tomahawk trap frames |
-| **Target Animals** | 5–25 lbs (cats, raccoons, opossums, similar wildlife) | 5–25 lbs (cats, raccoons, opossums, similar wildlife) |
+| **Target Animals** | 5 to 25 lbs (cats, raccoons, opossums, similar wildlife) | 5 to 25 lbs (cats, raccoons, opossums, similar wildlife) |
 
 ***
 
@@ -52,8 +52,8 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | **Auto Power-Off Threshold**       | \~9.6V (internal, set by Battery Type)  |
 | **Runtime (10000 mAh)**            | ~40+ days per charge (typical usage)    |
 | **Runtime (5200 mAh)**             | \~21 days per charge (typical usage)    |
-| **Charger (10000 mAh)**            | 2A @ 12V, \~5–6 hours full charge       |
-| **Charger (5200 mAh)**             | 1A @ 12V, \~5–6 hours full charge       |
+| **Charger (10000 mAh)**            | 2A @ 12V, \~5 to 6 hours full charge       |
+| **Charger (5200 mAh)**             | 1A @ 12V, \~5 to 6 hours full charge       |
 | **Trap connector (5200 mAh)**      | Male XT30 on pack; female XT30 on trap PCB |
 | **Trap connector (10000 mAh)**   | Female XT30 on pack; male XT30 on trap PCB |
 | **Alternate pack / connector**   | Contact support for PCB + holder swap   |
@@ -80,8 +80,8 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | Specification        | Value                                      |
 | -------------------- | ------------------------------------------ |
 | **Sensor Range**     | Up to 13 ft (4 m) hardware capability       |
-| **Active Detection Range** | Up to ~**34 in (875 mm)** — the trap detects, alerts, and photographs only within this distance |
-| **Capture Distance** | App presets **6–18 in**; default **8 in**. See [Distance Limits & Alerts](trap-settings/distance-safety-and-alerts.md) |
+| **Active Detection Range** | Up to ~**34 in (875 mm)**. The trap detects, alerts, and photographs only within this distance |
+| **Capture Distance** | App presets **6 to 18 in**; default **8 in**. See [Distance Limits & Alerts](trap-settings/distance-safety-and-alerts.md) |
 
 ### Environmental Sensors
 
@@ -97,7 +97,7 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | -------------------------- | --------------------------------------- |
 | **High Temperature Alert** | 45°C (113°F)                            |
 | **Low Temperature Alert**  | -10°C (14°F)                            |
-| **Alert Interval**         | Every 8 hours (configurable 0–48 hours) |
+| **Alert Interval**         | Every 8 hours (configurable 0 to 48 hours) |
 
 ***
 
@@ -106,12 +106,12 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | Specification                | Value                                         |
 | ---------------------------- | --------------------------------------------- |
 | **Night Vision**             | Integrated IR LED (automatic activation)      |
-| **IR Brightness**            | 0–100% (configurable min/max)                 |
+| **IR Brightness**            | 0 to 100% (configurable min/max)                 |
 | **Image Sizes**              | QVGA to UXGA (6 selectable sizes)             |
 | **Rotation Options**         | 0°, 90°, 180°, 270°                           |
 | **Color Modes**              | Grayscale (dark conditions), Color (daylight) |
-| **Dark Detection Threshold** | 25 lux (default, configurable 1–100 lux)      |
-| **Timelapse Interval**       | 0–24 hours (default: 6 hours)                 |
+| **Dark Detection Threshold** | 25 lux (default, configurable 1 to 100 lux)      |
+| **Timelapse Interval**       | 0 to 24 hours (default: 6 hours)                 |
 
 ***
 
@@ -128,9 +128,9 @@ OcuTrap uses a two-step detection process to prevent false triggers from rain, d
 
 ### False Trigger Prevention
 
-* **Steady-readings check** — Requires consistent presence before closing
-* **Rain and debris filtering** — Ignores splashy or erratic movement
-* **Dirty-sensor detection** — Blocks arming when the lens is obstructed
+* **Steady-readings check:** Requires consistent presence before closing
+* **Rain and debris filtering:** Ignores splashy or erratic movement
+* **Dirty-sensor detection:** Blocks arming when the lens is obstructed
 
 ***
 

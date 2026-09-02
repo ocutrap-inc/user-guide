@@ -13,7 +13,7 @@ OcuTrap connects primarily through **4G LTE cellular service**. The trap does **
 The **LED light** is the fastest way to see what the trap is doing. Work through the steps below in order.
 
 {% hint style="info" %}
-**Not sure what the light means?** Use the [interactive LED diagnostic](../getting-started/led-guide.md) — tap the color you see, then how it's blinking, and it tells you exactly what's happening and what to do next.
+**Not sure what the light means?** Use the [interactive LED diagnostic](../getting-started/led-guide.md). Tap the color you see, then how it's blinking, and it tells you what's happening and what to do next.
 {% endhint %}
 
 ## Quick Checklist
@@ -31,7 +31,7 @@ The **LED light** is the fastest way to see what the trap is doing. Work through
 A low or disconnected battery is one of the most common reasons a trap appears offline.
 
 1. **Disconnect and reconnect** the yellow battery connector.
-2. Make sure the connector is **fully seated** — it should click into place without forcing.
+2. Make sure the connector is **fully seated**. It should click into place without forcing.
 3. If the battery may be low, charge it using the **charger that came with your trap**.
    * The charger light turns **red** while charging and **green** when charged.
 4. A very low battery can cause the trap to shut down or fail to connect.
@@ -71,11 +71,11 @@ Use the table below to interpret what the trap is doing. If the LED never turns 
 | Blinking green | Looking for cellular/internet connection | Move to better cellular coverage |
 | Fast blinking blue | Trying to join the cellular network and failing | Move to better cellular coverage. If it keeps blinking blue quickly, contact Support |
 | Blinking magenta | Firmware update or safe mode activity, or captured (on battery) | Leave powered on and wait. If the app shows a capture, release the animal |
-| Rapid red blinks | Powering down — the power button is being held | Release the power button within ~3 seconds to cancel, or let it finish and press power again to restart |
+| Rapid red blinks | Powering down while the power button is being held | Release the power button within ~3 seconds to cancel, or let it finish and press power again to restart |
 | Solid red during boot | Battery too low at startup | Charge or replace the battery |
 | No light | Powered off, hibernating, no battery, or failed boot | Reconnect battery and press power button |
 
-For a full list of LED patterns — including door and arm/unarm indicators — see the [LED Guide](../getting-started/led-guide.md).
+For a full list of LED patterns, including door and arm/unarm indicators, see the [LED Guide](../getting-started/led-guide.md).
 
 ## Step 4: Check Cellular Coverage
 
@@ -131,7 +131,7 @@ If the issue continues, email [support@ocutrap.com](mailto:support@ocutrap.com) 
 * **Screenshot** of the app error message
 * **LED color or pattern** (or note if there is **no LED at all**)
 * Whether the battery was **recently charged**
-* **Approximate location type** — for example: indoors, garage, field, metal building, wooded area
+* **Approximate location type,** for example: indoors, garage, field, metal building, wooded area
 * **Last Activity** time shown in the app
 * Any recent **weather**, **battery change**, or **impact/transport**
 

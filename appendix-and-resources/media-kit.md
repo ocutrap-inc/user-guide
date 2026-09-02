@@ -1,10 +1,11 @@
 ---
+description: Download OcuTrap logos, app icons, social images, a PDF, and the trifold brochure.
 pdf-exclude: true
 ---
 
 # Media Kit
 
-OcuTrap is a smart animal trap which will save you time and money. Open the trap door with a press of a button to reset trap after false trigger or capture of non-target animal. Smart controls to capture target animals. Remote open and closing of trap door from anywhere in the world to prevent accidental scratches, bites, or sprays. Get mobile notifications when the set target animal is captured. Deploy and manage more traps without constant in-person inspections.
+OcuTrap is a smart animal trap with remote monitoring and controls for capturing target animals. You can open or close the door remotely after a false trigger or the capture of a non-target animal. Remote control helps you avoid close contact that could lead to scratches, bites, or sprays. The app sends mobile notifications when the trap captures an animal. You can manage more traps with fewer in-person inspections, which can save time and money.
 
 ### Full Logo High Quality
 

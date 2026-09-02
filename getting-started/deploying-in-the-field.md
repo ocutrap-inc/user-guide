@@ -6,20 +6,20 @@ description: >-
 
 # Deploying Your Trap in the Field
 
-You've assembled your OcuTrap and added it to your account — this guide walks you through actually **setting it up on site**: where to place it, how to set your capture distance, and how to confirm everything works before you leave.
+You've assembled your OcuTrap and added it to your account. Now **set it up on site**: choose a location, set the capture distance, and confirm everything works before you leave.
 
 **Before you start, make sure you've done:**
 
-- [Hardware Set Up](setting-up.md) — trap assembled, POD attached, battery charged
-- [Adding a trap to your account](app/adding-a-trap-to-your-account.md) — trap paired and visible in the app
+- [Hardware Set Up](setting-up.md): trap assembled, POD attached, battery charged
+- [Adding a trap to your account](app/adding-a-trap-to-your-account.md): trap paired and visible in the app
 
 ---
 
 ## Where the camera and sensor are (why placement is what matters)
 
-The **camera and the distance sensor both live inside the POD** — the module that attaches to the trap. They sit in a single fixed position, so **there's nothing to aim or point.** You don't adjust the sensor angle or the camera direction.
+The **camera and the distance sensor both live inside the POD**, the module that attaches to the trap. They sit in one fixed position, so **there's nothing to aim or point.** You don't adjust the sensor angle or camera direction.
 
-What this means for setup: getting a good result is about **where you place the whole trap** and **how you set the capture distance** — not about aiming anything. The steps below cover both.
+Good results depend on **where you place the whole trap** and **how you set the capture distance**, not on aiming anything. The steps below cover both.
 
 ---
 
@@ -33,7 +33,7 @@ What this means for setup: getting a good result is about **where you place the 
 
 ### For the best connection
 
-- **Avoid metal buildings and dense structures** that block cellular signal — poor signal also drains the battery faster.
+- **Avoid metal buildings and dense structures** that block cellular signal. Poor signal also drains the battery faster.
 - **Leave a clear view of the sky** where you can, so GPS can update your trap's location.
 
 For more placement and battery tips, see [Tips and Tricks](tips-and-tricks.md).
@@ -44,9 +44,9 @@ For more placement and battery tips, see [Tips and Tricks](tips-and-tricks.md).
 
 Capture distance is how far **inside** the trap an animal must be before the door closes. In the app you pick a preset from **6 in to 18 in** (default **8 in**).
 
-- **8 in (default)** — a good starting point for most setups.
-- **Smaller (6–7 in)** — the animal must be deeper in the cage before the door closes. Use this to **reduce false triggers** from rain, debris, or movement near the opening.
-- **Larger (10 in and up)** — the animal can trigger from farther inside the cage.
+- **8 in (default):** a good starting point for most setups.
+- **Smaller (6 to 7 in):** the animal must be deeper in the cage before the door closes. Use this to **reduce false triggers** from rain, debris, or movement near the opening.
+- **Larger (10 in and up):** the animal can trigger from farther inside the cage.
 
 {% hint style="info" %}
 **Targeting smaller animals?** The sensor's detection area is naturally a little wider the farther it is from the POD, so a larger capture distance can help a small animal fall within it. Because smaller animals are harder to detect reliably, **confirm your target actually triggers at your chosen distance using [Scouting Mode](app/scouting-mode.md) (Step 4) before you rely on the trap.**
@@ -75,11 +75,11 @@ Never leave a trap deployed without confirming it fires:
 3. **Confirm** the door closes and you receive a capture alert.
 4. **Open the door and disarm**, then re-arm for real deployment.
 
-**Optional — validate with Scouting Mode.** [Scouting Mode](app/scouting-mode.md) watches for animals and sends alerts and photos **without closing the door**. It's the best way to confirm your placement and capture distance are actually catching your target — especially for smaller animals — before you commit to arming.
+**Optional: validate with Scouting Mode.** [Scouting Mode](app/scouting-mode.md) watches for animals and sends alerts and photos **without closing the door**. Use it to confirm your placement and capture distance detect your target, especially for smaller animals, before you arm.
 
 ---
 
-## 5. Before you leave — final checklist
+## 5. Before you leave: final checklist
 
 - [ ] LED shows **breathing cyan** (connected)
 - [ ] Trap shows **online** in the app
@@ -94,7 +94,7 @@ Never leave a trap deployed without confirming it fires:
 
 ## After you deploy
 
-- Turn on [Pre-Capture Notifications](trap-settings/pre-capture-notification.md) to get an alert and photo when an animal approaches — useful for confirming your target is showing up.
+- Turn on [Pre-Capture Notifications](trap-settings/pre-capture-notification.md) to get an alert and photo when an animal approaches. This helps confirm your target is showing up.
 - When you get a capture, follow [Handling & Releasing a Captured Animal](handling-a-captured-animal.md).
 
 ---

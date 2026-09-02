@@ -18,12 +18,12 @@ description: >-
 
 On a trap’s **Trap billing** page you can:
 
-* **Switch plans** – Under **Cellular plan**, select **Monthly** or **Annual**. The current one is marked **Current**.
-* **Pause subscription** – Temporarily pause a monthly plan (see below).
-* **Manage subscription** – Opens the secure Stripe portal to manage your card. The **Billing** page also has **Payment portal** and **Manage in portal**.
-* **Cancel subscription** – Cancel in the Stripe portal. You’ll continue to have access until the end of your current billing period.
-* **Reactivate** – Changed your mind after canceling? Until your billing period ends, a **Canceling at end of period** notice on the **Trap billing** page offers **Reactivate**, and your subscription continues as if you never canceled.
-* **View invoices** – See past charges under **Recent invoices** on the **Trap billing** page (this trap only) or under **Invoices** on the **Billing** page (all traps). Each row has **View** and **Receipt**.
+* **Switch plans:** Under **Cellular plan**, select **Monthly** or **Annual**. The current one is marked **Current**.
+* **Pause subscription:** Temporarily pause a monthly plan (see below).
+* **Manage subscription:** Opens the secure Stripe portal to manage your card. The **Billing** page also has **Payment portal** and **Manage in portal**.
+* **Cancel subscription:** Cancel in the Stripe portal. You’ll continue to have access until the end of your current billing period.
+* **Reactivate:** Changed your mind after canceling? Until your billing period ends, a **Canceling at end of period** notice on the **Trap billing** page offers **Reactivate**, and your subscription continues as if you never canceled.
+* **View invoices:** See past charges under **Recent invoices** on the **Trap billing** page (this trap only) or under **Invoices** on the **Billing** page (all traps). Each row has **View** and **Receipt**.
 
 If a payment failed, the button reads **Update payment**. If the trap was suspended, it reads **Resolve payment**. Both open the Stripe portal.
 
@@ -36,6 +36,5 @@ Monthly plans can be **paused** for up to **6 months** from the trap’s **Trap 
 ### Notes
 
 * All billing is processed securely through Stripe.
-* If you cancel, you won’t be charged again, but your subscription remains active until the billing period ends — and you can reactivate it any time before then.
+* If you cancel, you won’t be charged again, but your subscription remains active until the billing period ends. You can reactivate it any time before then.
 * Annual subscriptions are billed once per year, offering savings compared to monthly billing.
-

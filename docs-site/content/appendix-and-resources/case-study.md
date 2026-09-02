@@ -1,4 +1,5 @@
 ---
+description: A Springfield OcuTrap deployment, including the setup, monitoring period, and reported results.
 pdf-exclude: true
 ---
 
@@ -8,15 +9,15 @@ pdf-exclude: true
 
 **Introduction**
 
-**Background**: OcuTrap represents a significant leap in animal trapping technology. Designed to offer efficient, humane, and smart solutions for both domestic and wild animal control, OcuTrap combines advanced sensor technology with remote monitoring capabilities, drastically reducing the need for manual trap inspections.
+**Background**: OcuTrap combines sensor technology with remote monitoring for domestic and wild animal control. This can reduce manual trap inspections.
 
 <figure><img src="../.gitbook/assets/case-study-raccoon.jpg" alt=""><figcaption></figcaption></figure>
 
-**Objective**: The primary goal of OcuTrap is to modernize animal trapping, making it more efficient, humane, and safe for both the animals and the users. This case study explores the effectiveness of OcuTrap in a real-world scenario.
+**Objective**: This case study looks at OcuTrap's effectiveness in a real-world animal-control deployment, including efficiency, humane use, and safety for animals and operators.
 
 **Case Study Overview**
 
-**Location**: Springfield, a suburban area experiencing a significant increase in the raccoon population, leading to various urban challenges.
+**Location**: Springfield, a suburban area where a growing raccoon population caused urban challenges.
 
 **Client**: The Springfield Municipal Council, seeking an effective and humane solution for wildlife control.
 
@@ -28,15 +29,15 @@ pdf-exclude: true
 
 **Solution**
 
-The Council deployed 50 OcuTrap devices across various key locations in Springfield. Key features utilized included:
+The Council deployed 50 OcuTrap devices at key locations in Springfield. It used:
 
 * **Remote Monitoring**: Sending instant notifications upon the trapping of an animal.
 * **Smart Controls**: Enabling remote opening and closing of the trap door.
-* **Selective Targeting**: Advanced sensors to ensure only target species (raccoons in this case) were captured.
+* **Selective Targeting**: Sensors that ensure only the target species (raccoons in this case) are captured.
 
 **Implementation**
 
-* **Setup**: Traps were strategically placed in high-visibility areas with frequent raccoon activity.
+* **Setup**: Staff placed traps in high-visibility areas with frequent raccoon activity.
 * **Training**: Local animal control staff were trained on using the OcuTrap app for monitoring and managing the traps.
 * **Monitoring Period**: The traps were monitored over a 3-month period.
 
@@ -49,7 +50,7 @@ The Council deployed 50 OcuTrap devices across various key locations in Springfi
 
 **Conclusion**
 
-OcuTrap demonstrated its capability to effectively manage urban wildlife while addressing humanitarian and resource concerns. The technology proved to be a game-changer in animal trapping, offering a humane, efficient, and smart solution that benefited both the community and the wildlife.
+OcuTrap demonstrated its ability to manage urban wildlife while addressing humane-treatment and resource concerns. The deployment benefited the community and wildlife.
 
 **Future Recommendations**
 
@@ -57,4 +58,4 @@ OcuTrap demonstrated its capability to effectively manage urban wildlife while a
 * **Technology Upgrades**: Continuing to enhance sensor accuracy and remote capabilities.
 * **Community Engagement**: Educating the public on humane and effective wildlife management practices.
 
-This case study underscores OcuTrap's potential in transforming wildlife management and control, marking a significant step forward in humane and efficient animal trapping solutions.
+This case study shows how OcuTrap can support humane, efficient wildlife management and control.

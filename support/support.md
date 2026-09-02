@@ -8,12 +8,12 @@ description: >-
 
 ## Chat Support
 
-You can message OcuTrap support through the chat bubble that can be found on the [OcuTrap.com](https://ocutrap.com) homepage by clicking the chat icon on the bottom right of the page. &#x20;
+Message OcuTrap support through the chat bubble on the [OcuTrap.com](https://ocutrap.com) homepage. Click the chat icon at the bottom right of the page. &#x20;
 
 ## Email Support
 
-You can send us an email through the [contact page](https://ocutrap.com/pages/contact) or emailing us at [support@ocutrap.com](mailto:support@ocutrap.com?subject=Support%20from%20Knowledge%20Base)
+Send us an email through the [contact page](https://ocutrap.com/pages/contact) or at [support@ocutrap.com](mailto:support@ocutrap.com?subject=Support%20from%20Knowledge%20Base).
 
 ## Website Status
 
-Check if our website is down at  [ocutrap.statuspage.io](https://ocutrap.statuspage.io/)
+Check our website status at [ocutrap.statuspage.io](https://ocutrap.statuspage.io/).

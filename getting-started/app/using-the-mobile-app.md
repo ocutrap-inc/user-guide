@@ -6,7 +6,7 @@ description: >-
 
 # Using the Mobile App
 
-The OcuTrap mobile app gives you the same control as the web dashboard — manage traps, view captures, control the door, adjust settings, and see trap locations — from your phone. It's also how you receive **push notifications** the moment something happens.
+The OcuTrap mobile app gives you the same control as the web dashboard from your phone. Manage traps, view captures, control the door, adjust settings, and see trap locations. The app also sends **push notifications** when something happens.
 
 ***
 
@@ -56,5 +56,5 @@ If you're set up for push but not receiving alerts, the phone-level permission i
 
 * [Notification Settings](notification-settings.md)
 * [Adding a Trap to Your Account](adding-a-trap-to-your-account.md)
-* [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md) — force quit or reinstall on iOS and Android
-* [App](README.md) — overview of the OcuTrap app.
+* [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md): force quit or reinstall on iOS and Android
+* [App](README.md): overview of the OcuTrap app.

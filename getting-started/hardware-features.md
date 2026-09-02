@@ -6,23 +6,23 @@ description: >-
 
 # Hardware Features
 
-Overview of the OcuTrap R2 (and R1) hardware components and capabilities.
+This page explains the OcuTrap R2 (and R1) hardware components and what they do.
 
 ---
 
 #### Connectivity
 
-The OcuTrap connects via **LTE-M cellular (4G LTE network)**, providing nationwide coverage without the need for Wi-Fi or local network setup. Simply power on and the trap connects automatically.
+The OcuTrap connects through **LTE-M cellular (4G LTE network)** for nationwide coverage without Wi-Fi or local network setup. Power it on, and the trap connects automatically.
 
 ---
 
 #### Camera
 
 The integrated camera provides a clear view inside the trap with:
-- **Automatic night vision** — IR LEDs activate in low-light conditions
-- **Adjustable image quality** — Choose from 6 resolution sizes
-- **Image rotation** — 0°, 90°, 180°, or 270° to match your trap orientation
-- **Timelapse photos** — Periodic images in every mode: unarmed, armed, scouting, and after a capture (configurable interval)
+- **Automatic night vision**: IR LEDs activate in low-light conditions
+- **Adjustable image quality**: Choose from 6 resolution sizes
+- **Image rotation**: 0°, 90°, 180°, or 270° to match your trap orientation
+- **Timelapse photos**: Periodic images in every mode: unarmed, armed, scouting, and after a capture (configurable interval)
 
 ---
 
@@ -31,19 +31,19 @@ The integrated camera provides a clear view inside the trap with:
 The door is powered by a **linear motor** for fast, reliable operation:
 - **Close speed**: About 0.75 seconds
 - **Open speed**: Less than 1 second
-- **Remote control** — Open, close, and lock via the app
-- **Manual control** — Button sequence on the device; see [Using the Buttons on the Trap](using-the-trap-buttons.md)
-- **Enhanced closing** — Optional double-close sequence for secure locking
+- **Remote control**: Open, close, and lock via the app
+- **Manual control**: Button sequence on the device; see [Using the Buttons on the Trap](using-the-trap-buttons.md)
+- **Enhanced closing**: Optional double-close sequence for secure locking
 
 ---
 
 #### Location
 
 Track your trap location using the integrated **GPS module**:
-- **Satellite positioning** — Displays number of satellites connected
-- **Battery-optimized** — Updates every 8 hours by default
-- **Map view** — See trap location on Map or Satellite view in the app
-- **Captures take priority** — A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
+- **Satellite positioning**: Displays number of satellites connected
+- **Battery-optimized**: Updates every 8 hours by default
+- **Map view**: See trap location on Map or Satellite view in the app
+- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
 
 ---
 
@@ -62,19 +62,19 @@ OcuTrap includes multiple sensors for monitoring and capture detection:
 
 #### Audio & Haptic Feedback
 
-- **Buzzer** — Audible beeps for button feedback and status indication
-- **Vibration motor** — Haptic feedback for certain operations
+- **Buzzer**: Audible beeps for button feedback and status indication
+- **Vibration motor**: Haptic feedback for certain operations
 
 ---
 
 #### Battery
 
 Rechargeable **12V lithium-ion battery** for extended field deployment:
-- **5,200 mAh (56 Wh)** — Ships with the R2 and is the app default (~21 days runtime)
-- **10,000 mAh (111 Wh)** — Shipped with US R1 units; ~40+ days runtime per charge
-- **Battery Type setting** — Pick your pack in **Settings → Battery Type**; alert thresholds adjust automatically. If you have the 10,000 mAh pack, set Battery Type to match
-- **Low battery alerts** — Notifications at 20% and 10% levels
-- **Auto-hibernation** — Protects battery when voltage drops too low
+- **5,200 mAh (56 Wh)**: Ships with the R2 and is the app default (~21 days runtime)
+- **10,000 mAh (111 Wh)**: Shipped with US R1 units; ~40+ days runtime per charge
+- **Battery Type setting**: Pick your pack in **Settings → Battery Type**; alert thresholds adjust automatically. If you have the 10,000 mAh pack, set Battery Type to match
+- **Low battery alerts**: Notifications at 20% and 10% levels
+- **Auto-hibernation**: Protects battery when voltage drops too low
 
 ---
 
@@ -89,20 +89,20 @@ Rechargeable **12V lithium-ion battery** for extended field deployment:
 
 #### Smart Detection
 
-Advanced capture detection with false-trigger prevention:
-- **Dual-zone verification** — Objects must pass through detection zone before triggering
-- **Rain/debris filtering** — Rejects oscillating readings from environmental interference
-- **Consecutive reading requirement** — Prevents single-reading false triggers
-- **Pre-capture alerts** — Optional notification when animals approach
+The capture system filters false triggers:
+- **Dual-zone verification**: Objects must pass through detection zone before triggering
+- **Rain/debris filtering**: Rejects oscillating readings from environmental interference
+- **Consecutive reading requirement**: Prevents single-reading false triggers
+- **Pre-capture alerts**: Optional notification when animals approach
 
 ---
 
 #### Construction
 
-- **Weather-resistant enclosure** — Built for outdoor field deployment
+- **Weather-resistant enclosure**: Built for outdoor field deployment
 - **Dimensions**: 10" wide × 12" tall. Cage length is **32"** without the POD and with the door closed. The POD adds ~5"; with the door fully open, add ~4" more (~**41"** total length). See [Technical Specifications](technical-specifications.md) for details.
 - **Weight**: 24 lbs (10.9 kg)
-- **Target animals**: 5–25 lbs (cats, raccoons, opossums)
+- **Target animals**: 5 to 25 lbs (cats, raccoons, opossums)
 
 ---
 

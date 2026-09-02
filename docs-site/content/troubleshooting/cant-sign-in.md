@@ -1,8 +1,7 @@
 ---
 description: >-
-  What to do when you can't sign in to the OcuTrap app: reset a forgotten
-  password, find a missing reset code, fix common sign-in errors, and reach
-  support if you're still locked out.
+  Fix OcuTrap sign-in problems, reset a forgotten password, find a missing
+  reset code, or contact support if you are still locked out.
 ---
 
 # Can't Sign In to Your Account

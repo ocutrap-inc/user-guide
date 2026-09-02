@@ -1,7 +1,7 @@
 ---
 description: >-
-  In this guide, we’ll walk you through each step of building your OcuTrap to
-  ensure a smooth and successful setup.
+  Assemble your OcuTrap with videos for the door, motor, battery, POD, and
+  app setup.
 coverY: 0
 ---
 
@@ -9,7 +9,7 @@ coverY: 0
 
 ## Unpack the Components
 
-Welcome to the OcuTrap assembly guide! In this guide, we’ll walk you through each step of building your OcuTrap to ensure a smooth and successful setup.
+Follow these videos to assemble your OcuTrap.
 
 Before we begin, make sure you have all the necessary components:
 
@@ -18,11 +18,11 @@ Before we begin, make sure you have all the necessary components:
 * A fully charged battery
 * The Motor
 
-_Take a moment to confirm you have all these parts._
+_Confirm that you have all these parts._
 
 #### Prepare the Battery
 
-Ensure the battery is fully charged. A full charge takes about 5–6 hours (see [Battery Overview](battery-overview.md)), so it’s best to charge it ahead of time if you haven’t done so already.
+Make sure the battery is fully charged. A full charge takes about 5 to 6 hours (see [Battery Overview](battery-overview.md)), so charge it before you start.
 
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10-PePOjHAGWWKyRhQB1RGxHnD7d7LXuw.mp4" %}
 
@@ -46,7 +46,7 @@ For the motor assembly, gather these components:
 2. On each end of the rod, add a spacer and secure it with a capped nut. Tighten with the nut driver and assembly tool until snug.
 
 {% hint style="info" %}
-**Hardware note:** The video above shows an earlier door-rod revision with white washers and springs. Current OcuTrap R1 units ship with **black spacers and black capped nuts** instead — follow the written steps here and in [Hardware Set Up](setting-up.md), which match the parts in your box.
+**Hardware note:** The video above shows an earlier door-rod revision with white washers and springs. Current OcuTrap R1 units ship with **black spacers and black capped nuts** instead. Follow the written steps here and in [Hardware Set Up](setting-up.md), which match the parts in your box.
 {% endhint %}
 
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10doro2-AGiu99zDJTTZXnOOjPE2bn6wbqiiL5.mp4" %}
@@ -73,7 +73,7 @@ To attach the motor to the door, you’ll need:
 
 **Step 1:** **Connect** **Battery**
 
-1. Mate the battery **XT30** connector to the trap (10,000 mAh packs use **female XT30** on the harness; 5,200 mAh packs use **male XT30**). The connectors should fit without force — see [Battery](../faqs/battery.md) if they do not mate.
+1. Mate the battery **XT30** connector to the trap (10,000 mAh packs use **female XT30** on the harness; 5,200 mAh packs use **male XT30**). The connectors should fit without force. See [Battery](../faqs/battery.md) if they do not mate.
 
 **Step 2: Connect the Wire to the POD**
 
@@ -89,7 +89,7 @@ To attach the motor to the door, you’ll need:
 
 Connect the wire to the POD, ensuring the connection is secure.
 
-**With this step, your hardware setup is complete!**
+Your hardware setup is complete.
 
 ***
 
@@ -114,9 +114,4 @@ Once complete, the app opens your new trap's **console page**, showing a **Waiti
 
 ## Conclusion
 
-Congratulations! You’ve successfully assembled and set up your OcuTrap.
-
-If you have any questions or need assistance, [contact our team](https://ocutrap.com/pages/contact).
-
-Thank you for choosing OcuTrap, and happy trapping!
-
+You’ve assembled and set up your OcuTrap. If you have questions or need help, [contact our team](https://ocutrap.com/pages/contact).

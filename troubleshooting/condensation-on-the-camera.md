@@ -1,8 +1,7 @@
 ---
 description: >-
-  Dealing with Water or Occasional moisture on the OcuTrap lens can soften
-  image quality or trigger glare at night. This guide explains why it happens,
-  how to clear it quickly, and when to contact us
+  Clear condensation or water from the OcuTrap lens, dry the POD, protect its
+  seals, and know when to contact support.
 ---
 
 # Condensation on the Camera
@@ -11,9 +10,9 @@ description: >-
 
 | Symptom                                                    | Likely Cause                                                              | Severity |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------- | -------- |
-| **Foggy or “milky” images** that clear after a few minutes | **External condensation**—morning/evening temperature swings              | Low      |
-| Persistent haze or water beads **inside** the lens window  | **Internal moisture**—air leak at the lens gasket or loose accessory port | Medium   |
-| Visible droplets **inside** the device                     | **Water ingress**—damaged seal or submerged trap                          | High     |
+| **Foggy or “milky” images** that clear after a few minutes | **External condensation** from morning/evening temperature swings              | Low      |
+| Persistent haze or water beads **inside** the lens window  | **Internal moisture** from an air leak at the lens gasket or loose accessory port | Medium   |
+| Visible droplets **inside** the device                     | **Water ingress** from a damaged seal or submerged trap                          | High     |
 
 ***
 
@@ -32,22 +31,22 @@ description: >-
 
 ***
 
-#### 3. Deep-Dry Procedure (24–48 hrs)
+#### 3. Deep-Dry Procedure (24 to 48 hrs)
 
 If internal moisture persists:
 
 1. Remove the **battery**
-2. Leave the POD cracked open in a warm, ventilated spot for **24 hrs** —or—\
-   Seal the POD in a zipper bag with **desiccant** packs for **12–18 hrs**.
+2. Leave the POD cracked open in a warm, ventilated spot for **24 hrs**, or\
+   seal the POD in a zipper bag with **desiccant** packs for **12 to 18 hrs**.
 3. Re-assemble, close the POD, and request an image to confirm clarity.
 
 ***
 
 #### 4. Prevention Checklist
 
-* **Gasket care** – Lightly coat the rubber seal with silicone grease every 6 months.
-* **Tight hardware** – Finger-tighten the antenna and accessory caps after each service visit.
-* **Avoid submersion** – OcuTrap is weather-sealed, but not rated for full underwater exposure.
+* **Gasket care:** Lightly coat the rubber seal with silicone grease every 6 months.
+* **Tight hardware:** Finger-tighten the antenna and accessory caps after each service visit.
+* **Avoid submersion:** OcuTrap is weather-sealed, but not rated for full underwater exposure.
 
 ***
 
@@ -55,6 +54,6 @@ If internal moisture persists:
 
 1. Take **two clear photos** of the issue: one of the lens/window and one of the interior POD.
 2. Email [**support@ocutrap.com**](mailto:support@ocutrap.com) with the photos, trap id, and a brief description.
-3. Our technicians will review your case and advise the next step — whether the issue is covered under warranty, repairable, or best resolved with a replacement or upgrade.
+3. Our technicians will review your case and advise whether the issue is covered under warranty, repairable, or best resolved with a replacement or upgrade.
 
-For current repair terms, turnaround times, and any service fees, **contact support** — they'll confirm what applies to your trap based on its warranty status and condition.
+For current repair terms, turnaround times, and any service fees, **contact support**. They'll confirm what applies to your trap based on its warranty status and condition.

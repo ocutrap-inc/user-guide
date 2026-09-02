@@ -1,4 +1,5 @@
 ---
+description: News coverage of OcuTrap and its founders.
 pdf-exclude: true
 ---
 

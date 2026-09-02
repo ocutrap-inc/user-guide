@@ -6,7 +6,7 @@ description: >-
 
 # Reference
 
-Specs, connectivity, LEDs, and battery — look here when you need a number or a status light explained.
+Use these pages when you need a specification or an explanation of a status light.
 
 {% content-ref url="hardware-features.md" %}
 [Hardware Features](hardware-features.md)

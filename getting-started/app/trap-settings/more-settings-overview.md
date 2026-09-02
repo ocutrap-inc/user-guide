@@ -1,8 +1,7 @@
 ---
 description: >-
-  Below is a description of each available setting in the trap settings panel.
-  These settings control power behavior, notifications, camera behavior, and
-  hardware features.
+  See what each More Settings option controls, including the battery,
+  accessory port, door, camera, alerts, and GPS.
 ---
 
 # More Settings Overview

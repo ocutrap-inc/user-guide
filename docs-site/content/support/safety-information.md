@@ -1,15 +1,15 @@
 ---
-description: This article contains important safety information regarding your OcuTrap.
+description: Read these precautions before you set up, operate, or maintain your OcuTrap.
 ---
 
 # Safety Information
 
 {% hint style="danger" %}
-Using the OcuTrap involves inherent risks. Always adhere to the guidelines in this manual to ensure safe operation and prevent injury or equipment malfunction.
+Using the OcuTrap involves inherent risks. Follow these guidelines to operate it safely and prevent injury or equipment malfunction.
 {% endhint %}
 
 **Important:**\
-This manual should be read in its entirety prior to using the OcuTrap, in order to prevent any serious injury or harm. Failure to review this Operations Manual may result in injury.
+Read this manual in full before you use the OcuTrap. Failure to review this Operations Manual may result in injury.
 
 ***
 
@@ -33,7 +33,7 @@ This manual should be read in its entirety prior to using the OcuTrap, in order 
 * **Power Management:**\
   Make sure that your OcuTrap is turned off when not in use to preserve battery power.
 * **POD Security:**\
-  Keep the OcuTrap POD closed after setup to prevent any malfunctions in the system.
+  Keep the OcuTrap POD closed after setup to prevent system malfunctions.
 * **Water-Tight Assurance:**\
   Verify that the POD is water-tight during operation by closing both latches and tightening the knob on the right side of the device.
 
@@ -43,7 +43,7 @@ This manual should be read in its entirety prior to using the OcuTrap, in order 
 
 #### Overview
 
-The OcuTrap door is designed to open and close automatically and swiftly. While this is essential for its proper operation, it also poses a risk of injury—especially to fingers and hands—if safety precautions are not strictly observed.
+The OcuTrap door opens and closes automatically and quickly. It can injure your fingers or hands if you do not follow these safety precautions.
 
 #### Potential Injuries
 
@@ -55,15 +55,15 @@ The OcuTrap door is designed to open and close automatically and swiftly. While 
 #### Safety Guidelines
 
 * **Keep a Safe Distance:**\
-  Always ensure that your fingers, hands, and any other body parts are completely clear of the door's path before the trap is activated.
+  Keep your fingers, hands, and other body parts completely clear of the door's path before you activate the trap.
 * **Supervise Operation:**\
   Keep children and pets away from the device during its operation to prevent accidental injury.
 * **Review the Manual:**\
-  Familiarize yourself with all aspects of this manual and the device’s operation to fully understand the safety features and risks.
+  Read this manual and learn how the device operates so you understand its safety features and risks.
 * **Regular Maintenance:**\
-  Inspect the device frequently to ensure that the door mechanism and other components are functioning properly without signs of wear or misalignment.
+  Inspect the device often. Make sure the door mechanism and other components work properly and show no wear or misalignment.
 * **Stopping the Trap Quickly:**\
-  The OcuTrap has no dedicated emergency-stop button. The fastest ways to halt the door mechanism are: (1) set the trap to **Unarmed** in the app — an unarmed trap will not close on detection; and (2) **power the trap off** by holding the **power button** on the POD for about 3 seconds. Because the door can close quickly whenever the trap is armed, keep hands and fingers clear of the door path at all times rather than relying on a stop after the fact.
+  The OcuTrap has no dedicated emergency-stop button. To stop the door mechanism quickly: (1) set the trap to **Unarmed** in the app. An unarmed trap will not close on detection. You can also (2) **power the trap off** by holding the **power button** on the POD for about 3 seconds. The door can close quickly whenever the trap is armed. Always keep your hands and fingers clear of its path instead of relying on a stop after the fact.
 
 ***
 
@@ -74,6 +74,6 @@ The OcuTrap door is designed to open and close automatically and swiftly. While 
 * **Seek Medical Attention:**\
   For serious injuries, persistent pain, or significant swelling, contact a medical professional immediately.
 * **Report the Incident:**\
-  For additional support or to report an incident, please contact our support team at [support@ocutrap.com](mailto:support@ocutrap.com).
+  For additional support or to report an incident, contact our support team at [support@ocutrap.com](mailto:support@ocutrap.com).
 
 ***

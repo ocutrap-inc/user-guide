@@ -1,6 +1,6 @@
 # OcuTrap Knowledge Base
 
-**Complete User Guide & Reference — Smart Wildlife Trap System**
+**Complete User Guide & Reference: Smart Wildlife Trap System**
 
 www.ocutrap.com
 
@@ -71,7 +71,7 @@ www.ocutrap.com
 
 ## Introduction
 
-The OcuTrap is an innovative smart wildlife trap that transforms how traps are monitored, managed, and controlled. Whether you are a wildlife professional, pest control operator, researcher, or landowner, OcuTrap brings cutting-edge technology to humane animal management.
+OcuTrap is a smart wildlife trap for remote monitoring, management, and control. Wildlife professionals, pest control operators, researchers, and landowners can use it for humane animal management.
 
 **Key Benefits:**
 
@@ -87,11 +87,11 @@ The OcuTrap is an innovative smart wildlife trap that transforms how traps are m
 
 > **🎬 Video Tutorial:** A step-by-step hardware setup video is available at docs.ocutrap.com
 
-Setting up your OcuTrap involves unboxing and assembling the cage, door mechanism, handle, and POD (the smart electronics unit). Follow these steps carefully for a successful installation.
+To set up your OcuTrap, unbox and assemble the cage, door mechanism, handle, and POD (the smart electronics unit). Follow these steps in order.
 
 ### Step 1: Battery Preparation
 
-Charge the blue lithium-ion battery using the included charger until the indicator light turns green. This typically takes 4–6 hours from a full drain. The charger LED shows red while charging and green when complete.
+Charge the blue lithium-ion battery using the included charger until the indicator light turns green. This typically takes 4 to 6 hours from a full drain. The charger LED shows red while charging and green when complete.
 
 ### Step 2: Door Assembly
 
@@ -119,13 +119,13 @@ Gather the 4 three-inch bolts, handle guard, tube, washers, 2 top metal brackets
 
 1. Create an account at app.ocutrap.com and verify your email
 2. Open **Add trap** and follow the wizard: enter your **Trap ID** and **Device ID**, choose a cellular plan, name the trap and set its location, then tap **Activate trap**
-3. The app opens your new trap's page with an amber **Start your free trial** callout and a "Waiting for first check-in" note that clears once the trap connects. Your **30-day free trial** starts when you set up billing at checkout (not at activation) — open the trap's **Billing** page from the callout to start it
+3. The app opens your new trap's page with an amber **Start your free trial** callout and a "Waiting for first check-in" note that clears once the trap connects. Your **30-day free trial** starts when you set up billing at checkout (not at activation). Open the trap's **Billing** page from the callout to start it
 
 ---
 
 ## Video Assembly Guide
 
-> **🎬 Video Tutorial:** A comprehensive step-by-step assembly video is available at docs.ocutrap.com
+> **🎬 Video Tutorial:** A step-by-step assembly video is available at docs.ocutrap.com
 
 The video walkthrough covers all assembly steps: battery preparation, door assembly with rod/washers/springs/nuts, motor attachment with pins and clevises, and POD assembly with battery connection and mounting.
 
@@ -133,7 +133,7 @@ The video walkthrough covers all assembly steps: battery preparation, door assem
 
 ## Hardware Features
 
-The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready enclosure.
+The OcuTrap R1 combines these components in a field-ready enclosure.
 
 - **Connectivity:** 4G LTE cellular networks with nationwide multi-carrier coverage. Automatic network selection and fallback.
 - **Camera:** Automatic night vision with IR LEDs. Adjustable image quality across 6 resolution sizes (QVGA to UXGA). Image rotation (0°, 90°, 180°, 270°). Configurable time-lapse photography, which runs in every mode: unarmed, armed, scouting, and after a capture.
@@ -152,12 +152,12 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 |---|---|
 | Dimensions | 10" W × 12" H; 32" L cage only (no POD, door closed). POD adds ~5"; door open adds ~4" (~41" total) |
 | Weight | 24 lbs (complete unit) |
-| Target Species | 5–25 lb animals |
+| Target Species | 5 to 25 lb animals |
 | Trap Compatibility | Tomahawk-style trap frames |
 | Door Close Speed | About 0.75 seconds |
 | Door Open Speed | < 1 second |
 | Door States | 6 states tracked (open, closed, opening, closing, locked, fault) |
-| Battery | KBT 12V Li-ion — 5,200 mAh / 56 Wh (ships with R2, app default) / 10,000 mAh / 111 Wh (shipped with US R1) |
+| Battery | KBT 12V Li-ion: 5,200 mAh / 56 Wh (ships with R2, app default) / 10,000 mAh / 111 Wh (shipped with US R1) |
 | Battery Voltage Range | ~9.6 V (power-off) to 12.1 V (full), set by Battery Type |
 | Low Battery Warning (20%) | 10.4 V (10.2 V on the 10,000 mAh pack) |
 | Critical Battery Warning (10%) | 10.2 V (10.0 V on the 10,000 mAh pack) |
@@ -166,8 +166,8 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | GPS Updates | First fix 15 minutes after boot, then every 8 hours (interval fixed); requires 5+ satellites / 3D fix |
 | Distance Sensor | Up to 13 ft hardware range; the trap actively detects within ~34 in (875 mm); default capture distance ~8 in (200 mm) |
 | Camera Resolution | QVGA to UXGA (6 sizes) |
-| IR LEDs | Automatic activation; 0–100% brightness control |
-| Dark Threshold | 25 lux default (configurable 1–100) |
+| IR LEDs | Automatic activation; 0 to 100% brightness control |
+| Dark Threshold | 25 lux default (configurable 1 to 100) |
 | Operating Temp | -10°C to 45°C |
 | Environment | Designed for outdoor field deployment; weatherproof enclosure |
 
@@ -175,7 +175,7 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 
 ## The OcuTrap App
 
-The OcuTrap app is your command center for managing traps, viewing photos, and configuring settings. Create your account at app.ocutrap.com. The mobile app is available for both iOS (App Store) and Android (Google Play).
+Use the OcuTrap app to manage traps, view photos, and configure settings. Create your account at app.ocutrap.com. The mobile app is available for both iOS (App Store) and Android (Google Play).
 
 ### Adding a Trap to Your Account
 
@@ -183,7 +183,7 @@ The OcuTrap app is your command center for managing traps, viewing photos, and c
 2. Open **Add trap** to start the wizard
 3. Enter your **Trap ID** and **Device ID** (both are on labels on/inside the trap)
 4. Choose a cellular plan, name the trap and set its location, then tap **Activate trap**
-5. The app opens your new trap's page with an amber **Start your free trial** callout and a "Waiting for first check-in" note until the trap connects. The **30-day free trial** starts when you set up billing at checkout, not at activation — start it from the trap's **Billing** page
+5. The app opens your new trap's page with an amber **Start your free trial** callout and a "Waiting for first check-in" note until the trap connects. The **30-day free trial** starts when you set up billing at checkout, not at activation. Start it from the trap's **Billing** page
 
 ### Open & Closed Button
 
@@ -194,7 +194,7 @@ The Open/Close button controls the trap door remotely. **Open** lifts the door f
 The trap operates in three distinct states:
 
 - **Armed:** Trap set to capture. Door must be manually opened first. Enters low-power mode with periodic updates. Alerts if disconnected for more than 1 hour.
-- **Scouting:** Watch activity without closing the door. Records Scout Alert and Scout Trigger events in the trap's activity feed only — these do not send push or email notifications, appear in your Inbox, or affect the notification-bell count. Resets approximately 5 minutes after the animal leaves.
+- **Scouting:** Watch activity without closing the door. Records Scout Alert and Scout Trigger events in the trap's activity feed only. These do not send push or email notifications, appear in your Inbox, or affect the notification-bell count. Resets approximately 5 minutes after the animal leaves.
 - **Unarmed:** Standby mode. Listens for commands but is not set to capture. Automatically enters this state after a capture event.
 
 ### Interface Views
@@ -208,7 +208,7 @@ The app offers two main viewing modes:
 
 OcuTrap alerts come from your traps' firmware; the app lets you choose which events reach you and how they're delivered.
 
-On the **web** app (Settings → Notifications), pick channels (**Email**, **In-app**, **Push** — push is mobile-only) for each event category: **Captures**, **Trap alerts** (battery, signal, offline, tilt), **Billing**, and **System updates**. In-app notifications appear in your **Inbox**; the **notification bell** in the app header shows your unread-inbox count (the same number as the Inbox).
+On the **web** app (Settings → Notifications), pick channels (**Email**, **In-app**, **Push**; push is mobile-only) for each event category: **Captures**, **Trap alerts** (battery, signal, offline, tilt), **Billing**, and **System updates**. In-app notifications appear in your **Inbox**; the **notification bell** in the app header shows your unread-inbox count (the same number as the Inbox).
 
 In the **mobile** app (Notification Settings), toggle the **Push Notifications** and **Email Alerts** channels, then choose the **Alert Types** you want (Target detected, Animal captured, Capture reminders, Low battery, Device alerts) and a digest cadence (Immediate, Daily, or Weekly).
 
@@ -223,7 +223,7 @@ The control panel provides detailed device information and remote actions:
 
 ### Logs
 
-The logs section tracks the complete history of actions, events, and errors for each trap. Essential for troubleshooting issues and monitoring trap performance over time.
+The logs section tracks the complete history of actions, events, and errors for each trap. Use it to troubleshoot issues and monitor trap performance over time.
 
 ### Other App Features
 
@@ -244,19 +244,19 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| Capture Distance | 150–460 mm / 6–18 in (default: 200 mm / 8 in) |
+| Capture Distance | 150 to 460 mm / 6 to 18 in (default: 200 mm / 8 in) |
 | Pre-Capture Alerts | On / Off (default: On) |
 
 ### Camera
 
 | Setting | Range / Default |
 |---|---|
-| Time-Lapse Interval | 0–24 hours (default: 6 hours); runs in every mode |
-| Quality | 1–6 (default: 2) |
+| Time-Lapse Interval | 0 to 24 hours (default: 6 hours); runs in every mode |
+| Quality | 1 to 6 (default: 2) |
 | Rotate Image | 0° / 90° / 180° / 270° |
-| Dark Lux Threshold | 1–100 (default: 25) |
-| Min / Max IR Brightness | 0–100% (defaults: Min 10%, Max 100%) |
-| Image Cropping | Left / Right / Top / Bottom: 0–50% |
+| Dark Lux Threshold | 1 to 100 (default: 25) |
+| Min / Max IR Brightness | 0 to 100% (defaults: Min 10%, Max 100%) |
+| Image Cropping | Left / Right / Top / Bottom: 0 to 50% |
 
 ### Battery & Power
 
@@ -273,15 +273,15 @@ Complete list of all configurable trap settings.
 | Temperature Alerts | On / Off |
 | High Limit | 45°C |
 | Low Limit | -10°C |
-| Report Interval | 0–48 hours (default: 8 hours) |
+| Report Interval | 0 to 48 hours (default: 8 hours) |
 
 ### Other Settings
 
 | Setting | Range / Default |
 |---|---|
 | Location (GPS) | On / Off. When on: first fix 15 minutes after boot, then every 8 hours. The interval is fixed. |
-| Accessory Port | On-duration 0–30,000 ms; 0 means off |
-| Capture Alert Interval | 0–48 hours (default: 8 hours) |
+| Accessory Port | On-duration 0 to 30,000 ms; 0 means off |
+| Capture Alert Interval | 0 to 48 hours (default: 8 hours) |
 | Enhanced Door Closing | On / Off (default: On) |
 | EDC Backoff (ms) | 30 to 130 ms in 10 ms steps (default: 50 ms) |
 | Actuator Inverse | On / Off (default: Off) |
@@ -362,13 +362,13 @@ Hold the power button for 3 seconds for a proper shutdown.
 
 ### Optimal Placement
 
-- Position the distance sensor **6–10 inches inside the cage entrance**
+- Position the distance sensor **6 to 10 inches inside the cage entrance**
 - Place bait behind (deeper than) the sensor
 - Set the trap on level ground so the door opens and closes cleanly
 
 ### Detection Zones
 
-An approaching animal first enters the **alert zone** (~12–18 in from the sensor), which may trigger a pre-capture alert. When the animal reaches your **capture distance** (default ~8 in), the door closes.
+An approaching animal first enters the **alert zone** (~12 to 18 in from the sensor), which may trigger a pre-capture alert. When the animal reaches your **capture distance** (default ~8 in), the door closes.
 
 ### Reducing False Triggers
 
@@ -496,14 +496,14 @@ Perform these checks at the start of every trapping session:
 
 | LED Pattern | Meaning |
 |---|---|
-| Breathing Cyan | Connected to internet — fully operational |
+| Breathing Cyan | Connected to internet: fully operational |
 | Fast Blinking Cyan | Connecting to cloud |
 | Blinking Magenta | OTA firmware update in progress, or captured (on battery) |
 | Blinking Green | Searching for cellular connection |
 | Fast Blinking Blue | Trying to join the cellular network and failing. Move to better coverage. Contact support if it persists |
-| Red Flash SOS (rapid blinks) | System error — contact support if >10 blinks |
+| Red Flash SOS (rapid blinks) | System error: contact support if >10 blinks |
 | No LED | No power or failed to boot |
-| LED Off (after armed) | Hibernation — low-power sleep mode |
+| LED Off (after armed) | Hibernation: low-power sleep mode |
 
 ### User Button LED Patterns
 
@@ -526,8 +526,8 @@ Perform these checks at the start of every trapping session:
 
 | Battery Model | Capacity | Runtime | Charge Time | Charger |
 |---|---|---|---|---|
-| KBT 5200 mAh (12V) | 5,200 mAh (56 Wh) | ~21 days | 5–6 hours | 1A charger |
-| KBT 10000 mAh (12V) | 10,000 mAh (111 Wh) | ~40+ days | 5–6 hours | 2A charger |
+| KBT 5200 mAh (12V) | 5,200 mAh (56 Wh) | ~21 days | 5 to 6 hours | 1A charger |
+| KBT 10000 mAh (12V) | 10,000 mAh (111 Wh) | ~40+ days | 5 to 6 hours | 2A charger |
 
 **Trap connectors (XT30):** The 10,000 mAh pack uses a **female XT30** on the yellow harness; the 5,200 mAh pack uses **male XT30** (opposite gender). Each trap is wired for one mating pair. To use a different capacity, contact support for the correct PCB connector and battery holder.
 
@@ -550,7 +550,7 @@ Both the sharer and the recipient must have OcuTrap accounts. To share a trap:
 1. Log in and navigate to the Sharing section
 2. Select the trap you want to share
 3. Click the + icon and enter the recipient's email
-4. Confirm — access is granted based on user level
+4. Confirm: access is granted based on user level
 
 ### User Levels
 
@@ -566,13 +566,13 @@ Both the sharer and the recipient must have OcuTrap accounts. To share a trap:
 A: Yes. You can review captured images and release non-target animals remotely by opening the door from the app.
 
 **Q: What size is the OcuTrap?**
-A: The standard unit is 10" wide × 12" tall. Cage length is 32" without the POD and with the door closed; the POD adds about 5", and a fully open door adds about 4" more (~41" total). Targets animals in the 5–25 lb range.
+A: The standard unit is 10" wide × 12" tall. Cage length is 32" without the POD and with the door closed; the POD adds about 5", and a fully open door adds about 4" more (~41" total). Targets animals in the 5 to 25 lb range.
 
 **Q: Is the OcuTrap humane?**
-A: Absolutely. The system is designed with animal welfare as a priority, featuring rapid door closure, remote monitoring to minimize stress, and selective targeting to avoid non-target species.
+A: Yes. The system prioritizes animal welfare with rapid door closure, remote monitoring to minimize stress, and selective targeting to avoid non-target species.
 
 **Q: What is the battery life?**
-A: ~40+ days with the 10,000 mAh battery, ~21 days with the 5,200 mAh battery — depending on usage, settings, and environmental conditions.
+A: ~40+ days with the 10,000 mAh battery, ~21 days with the 5,200 mAh battery: depending on usage, settings, and environmental conditions.
 
 **Q: Is a subscription required?**
 A: A subscription enables cloud connectivity features. Check the current plans at ocutrap.com.
@@ -624,20 +624,20 @@ The device will proceed through its normal cloud connection sequence before ente
 
 ## Battery FAQ
 
-OcuTrap uses high-quality lithium-ion batteries with built-in protection boards. The yellow **XT30** harness powers the trap (10,000 mAh: female XT30; 5,200 mAh: male XT30); the black connector is for charging only. A full charge from empty takes about 5–6 hours with the matched charger. The indicator shows red while charging and green when complete. To switch pack sizes, contact support for the correct PCB connector and battery holder.
+OcuTrap uses lithium-ion batteries with built-in protection boards. The yellow **XT30** harness powers the trap (10,000 mAh: female XT30; 5,200 mAh: male XT30); the black connector is for charging only. A full charge from empty takes about 5 to 6 hours with the matched charger. The indicator shows red while charging and green when complete. To switch pack sizes, contact support for the correct PCB connector and battery holder.
 
 | Specification | Value |
 |---|---|
 | Dimensions | 70 × 55 × 40 mm |
 | Weight | ~295 g |
 | Cable Length | 90 cm |
-| Charge Time | 4–6 hours (from empty) |
+| Charge Time | 4 to 6 hours (from empty) |
 
 ---
 
 ## Updating Firmware
 
-Firmware updates are delivered automatically over the air (OTA) when the device is connected to cellular. Updates typically take 5–15 minutes.
+Firmware updates are delivered automatically over the air (OTA) when the device is connected to cellular. Updates typically take 5 to 15 minutes.
 
 **Requirements for successful update:**
 
@@ -661,7 +661,7 @@ Click the downward arrow icon beneath the settings button to expand the camera a
 
 ### Image Quality Settings
 
-Quality is adjustable from 1 (lowest) to 6 (highest). Higher quality produces more detailed images but uses more data and battery. For most deployments, quality 2–3 provides a good balance.
+Quality is adjustable from 1 (lowest) to 6 (highest). Higher quality produces more detailed images but uses more data and battery. For most deployments, quality 2 to 3 provides a good balance.
 
 ### Night Vision
 
@@ -712,12 +712,12 @@ The OcuTrap operates in temperatures as low as -10°C, though battery capacity i
 
 - Use the 10,000 mAh battery for extended winter deployments
 - Bring batteries indoors for charging below freezing
-- Store batteries in cool, dry conditions — avoid freezing
+- Store batteries in cool, dry conditions: avoid freezing
 - Swap batteries more frequently in winter
 - Check weather forecasts; retrieve the trap if ice is expected
 - Use silica gel packs to prevent internal condensation from temperature swings
 
-> **Condensation Prevention:** Morning and evening temperature swings can cause external fogging. For internal moisture, perform a deep-dry: leave the POD cracked open for 24 hours in a warm, ventilated area, or seal it with a desiccant pack for 12–18 hours.
+> **Condensation Prevention:** Morning and evening temperature swings can cause external fogging. For internal moisture, perform a deep-dry: leave the POD cracked open for 24 hours in a warm, ventilated area, or seal it with a desiccant pack for 12 to 18 hours.
 
 ---
 
@@ -734,7 +734,7 @@ The OcuTrap has six power modes that automatically optimize battery usage:
 | Armed Sleep Offline | 20-minute check-ins; captures reported at check-in | Flashes 3s |
 | Hibernation | Lowest power; no communication | Off |
 
-Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below an internal power-off threshold (about 9.6V, set automatically from your **Battery Type** — there are no manual voltage controls). During low-voltage hibernation the trap wakes once an hour to re-check, for two attempts. If the battery is still low after that, it stays off until you press the Power button.
+Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below an internal power-off threshold (about 9.6V, set automatically from your **Battery Type**: there are no manual voltage controls). During low-voltage hibernation the trap wakes once an hour to re-check, for two attempts. If the battery is still low after that, it stays off until you press the Power button.
 
 ---
 
@@ -747,7 +747,7 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 | Voltage | 12V DC |
 | Max Continuous Current | 3.0 A |
 | Polarity | Pin 1: Ground, Pin 2: +12V (not reversible) |
-| On-duration | Configurable 0–30,000 ms; 0 means off |
+| On-duration | Configurable 0 to 30,000 ms; 0 means off |
 
 ### Common Uses
 
@@ -756,7 +756,7 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 - Lure or bait dispensers
 - Vaccine feeders
 
-> ⚠️ **Warning:** Do not use the accessory port and door motor simultaneously — this can cause a power conflict. Do not exceed 3.0A. For motors and solenoids, use a relay or driver circuit. Do not connect external power to the port.
+> ⚠️ **Warning:** Do not use the accessory port and door motor simultaneously: this can cause a power conflict. Do not exceed 3.0A. For motors and solenoids, use a relay or driver circuit. Do not connect external power to the port.
 
 ---
 
@@ -826,10 +826,10 @@ The trap gets a fix 15 minutes after boot and then every 8 hours; the interval i
 
 ### Connectivity Issues
 
-The trap will try to reconnect on its own if it goes offline — this can take up to an hour. Leave it powered on with decent cellular coverage.
+The trap will try to reconnect on its own if it goes offline: this can take up to an hour. Leave it powered on with decent cellular coverage.
 
 1. Check that the battery is charged and connected
-2. Inspect the LED — if no LED, verify all connections are secure
+2. Inspect the LED: if no LED, verify all connections are secure
 3. Confirm the trap appears in your Main Console
 4. Verify the **Trap ID** in the app matches the **serial number** on the POD label inside the trap
 5. If blinking green, ensure you have adequate cellular coverage
@@ -846,7 +846,7 @@ The trap will try to reconnect on its own if it goes offline — this can take u
 
 - **Won't open/close:** Check motor connector; ensure no obstructions; verify adequate battery; try manual control (double-press + 5s hold)
 - **Slow operation:** Fully charge battery; check track for debris
-- **Orange motor LED:** Motor fault detected — contact support
+- **Orange motor LED:** Motor fault detected: contact support
 
 ---
 
@@ -882,13 +882,13 @@ If the pin and clevis don't fit into the motor connector during assembly, the mo
 3. Prop up the motor for clearance
 4. Let the door down completely
 5. Unplug the motor
-6. Insert the clevis and pin — they should now fit easily
+6. Insert the clevis and pin: they should now fit easily
 
 ### Motor Connector Tightness
 
 Symptoms include: motor doesn't move, door unresponsive, motor engages but no motion, or intermittent issues after handling.
 
-The correct gap specification is **0.15–0.20 inches**. Less causes connection issues; more causes loose operation. Gradually tighten to the proper range — firmly secured but not over-tightened.
+The correct gap specification is **0.15 to 0.20 inches**. Less causes connection issues; more causes loose operation. Gradually tighten to the proper range: firmly secured but not over-tightened.
 
 ---
 
@@ -909,7 +909,7 @@ The correct gap specification is **0.15–0.20 inches**. Less causes connection 
 
 ### Deep-Dry Procedure
 
-Remove the battery and leave the POD cracked open for 24 hours in a warm, ventilated area. Alternatively, seal the POD with a desiccant pack for 12–18 hours.
+Remove the battery and leave the POD cracked open for 24 hours in a warm, ventilated area. Alternatively, seal the POD with a desiccant pack for 12 to 18 hours.
 
 ### Prevention
 
@@ -984,7 +984,7 @@ OcuTrap offers special pricing and support for qualifying organizations.
 - Government agencies
 - Accredited educational institutions (verify state tax exemption)
 
-To apply, submit a contact form at ocutrap.com with the title "Nonprofit pricing and tax exemption" and include your organization name, EIN, addresses, website, and primary contact. Account review takes 1–2 weeks.
+To apply, submit a contact form at ocutrap.com with the title "Nonprofit pricing and tax exemption" and include your organization name, EIN, addresses, website, and primary contact. Account review takes 1 to 2 weeks.
 
 ---
 
@@ -1073,7 +1073,7 @@ If your mail app strips the button, the email also carries a reset code undernea
 3. Re-enter your account email to confirm
 4. Click **Delete account**
 
-> Cancel any active trap subscriptions first — the app blocks account deletion while you still own an active subscription.
+> Cancel any active trap subscriptions first: the app blocks account deletion while you still own an active subscription.
 
 ---
 
@@ -1110,9 +1110,9 @@ Log in, locate the trap, click "Delete Trap," and confirm by typing the exact tr
 
 ### Step 2: New owner adds the trap
 
-The new owner creates an OcuTrap account (if needed), verifies their email, opens **Add trap**, and completes the wizard — entering the **Trap ID** and **Device ID**, choosing a cellular plan, and tapping **Activate trap**.
+The new owner creates an OcuTrap account (if needed), verifies their email, opens **Add trap**, and completes the wizard: entering the **Trap ID** and **Device ID**, choosing a cellular plan, and tapping **Activate trap**.
 
-If the app reports the Device ID is already registered — common when buying a trap the previous owner already removed — OcuTrap automatically transfers the trap to the new owner when the entered **Trap ID** matches the one printed on the unit; no support ticket is needed. If it can't be claimed automatically, double-check the printed Trap ID or contact support.
+If the app reports the Device ID is already registered, which is common when buying a trap the previous owner already removed, OcuTrap automatically transfers the trap to the new owner when the entered **Trap ID** matches the one printed on the unit; no support ticket is needed. If it can't be claimed automatically, double-check the printed Trap ID or contact support.
 
 ### Step 3: Activate subscription
 
@@ -1136,23 +1136,23 @@ The new owner activates a subscription if required. Note: the warranty period da
 
 ## Media Kit
 
-OcuTrap provides high-quality media assets for press, partners, and promotional use. Available assets include logos in PNG, JPEG, and SVG formats, social media logos for LinkedIn, Google, and YouTube, app icons, and product brochures. Contact support@ocutrap.com or visit the media kit page for downloads.
+OcuTrap provides media assets for press, partners, and promotional use. Available assets include logos in PNG, JPEG, and SVG formats, social media logos for LinkedIn, Google, and YouTube, app icons, and product brochures. Contact support@ocutrap.com or visit the media kit page for downloads.
 
 ---
 
 ## Testimonials
 
 > *"OcuTrap has dramatically reduced the time we spend on trap checks. The real-time alerts mean we can respond immediately to captures instead of making daily rounds."*
-> — **Wildlife Management Professional**
+> **Wildlife Management Professional**
 
 > *"The ability to release non-target animals remotely without visiting the trap has transformed our humane pest control operations."*
-> — **Pest Control Operator**
+> **Pest Control Operator**
 
 > *"Real-time notifications let us respond to captures quickly, protecting both our livestock and the trapped animals."*
-> — **Farm Owner**
+> **Farm Owner**
 
 > *"The image capture and remote access capabilities provide invaluable research data without disturbing the animals or the trap site."*
-> — **Wildlife Researcher**
+> **Wildlife Researcher**
 
 ---
 
@@ -1175,19 +1175,19 @@ OcuTrap provides high-quality media assets for press, partners, and promotional 
 
 ## Recent Updates
 
-### May 2026 — Firmware v706
+### May 2026: Firmware v706
 
 Reliability, battery, and image improvements including faster cellular uploads, live photos during Scouting Mode, and low-battery alerts that retry after reconnect. See the full release notes in [Updates](appendix-and-resources/updates.md).
 
-### April 2026 — Scouting Mode
+### April 2026: Scouting Mode
 
-Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; records Scout Alert and Scout Trigger events in the trap's activity feed at pre-capture and trigger distances (feed only — no push, email, or Inbox notifications). Includes a 5-minute cooldown after the animal leaves the area.
+Scouting Mode lets you observe trap activity without closing the door. Requires door fully open; records Scout Alert and Scout Trigger events in the trap's activity feed at pre-capture and trigger distances (feed only, with no push, email, or Inbox notifications). Includes a 5-minute cooldown after the animal leaves the area.
 
-### April 2025 — Firmware v1.12.7-250
+### April 2025: Firmware v1.12.7-250
 
 General improvements including faster GPS acquisition, more accurate battery readings, sharper images, and overall stability enhancements.
 
-### January 2023 — UI Update
+### January 2023: UI Update
 
 Dark mode and general user interface improvements.
 
@@ -1195,7 +1195,7 @@ Dark mode and general user interface improvements.
 
 ## OcuTrap in the News
 
-OcuTrap founders Brian Quispe '20 '22G and Graham Patterson '20 won the Joan F. and John M. Thalheimer '55 Grand Prize at the Baker Institute's annual award competitions at Lehigh University, recognizing OcuTrap's innovative approach to humane wildlife management technology.
+OcuTrap founders Brian Quispe '20 '22G and Graham Patterson '20 won the Joan F. and John M. Thalheimer '55 Grand Prize at the Baker Institute's annual award competitions at Lehigh University for OcuTrap's approach to humane wildlife management technology.
 
 ---
 
@@ -1203,5 +1203,5 @@ OcuTrap founders Brian Quispe '20 '22G and Graham Patterson '20 won the Joan F. 
 
 **Document Version:** v1.0 | April 2026
 
-*OcuTrap — Smart Wildlife Management*
+*OcuTrap: Smart Wildlife Management*
 *www.ocutrap.com | support@ocutrap.com*

@@ -1,12 +1,12 @@
 ---
 description: >-
-  Maintenance checklist below to ensure optimal performance and longevity of
-  your OcuTrap.
+  Clean and inspect your OcuTrap before each trapping session to protect the
+  camera, door, battery, motor, sensors, and seals.
 ---
 
 # Maintenance
 
-To ensure optimal performance and longevity of your OcuTrap, please follow the maintenance checklist below. **Always power off the trap before performing any maintenance.**
+Follow this checklist before each trapping session. **Always power off the trap before performing any maintenance.**
 
 ### Maintenance Tasks (Every Trapping Session)
 

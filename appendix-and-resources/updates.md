@@ -30,13 +30,13 @@ This version is delivered **over-the-air (OTA)**. It downloads and installs auto
 
 **📷 Image capture**
 
-* **No more lost approach photos.** If the animal moved closer while your trap was still sending the previous photo, the next photo used to be silently dropped. The trap now holds onto the most recent approach moment and sends it as soon as the camera is free — so you see the most useful frame.
+* **No more lost approach photos.** If the animal moved closer while your trap was still sending the previous photo, the next photo used to be silently dropped. The trap now holds onto the most recent approach moment and sends it as soon as the camera is free, so you see the most useful frame.
 * **Faster image uploads on cellular.** Photos finish transferring noticeably faster, especially when the trap is sending many in a row.
-* **Live photos while you scout.** During Scouting Mode, the trap now sends a photo when an animal first enters and then a steady photo about every 15 seconds for as long as the animal stays in the detection zone — so you can watch activity unfold instead of seeing only the entry shot.
+* **Live photos while you scout.** During Scouting Mode, the trap now sends a photo when an animal first enters and then a steady photo about every 15 seconds for as long as the animal stays in the detection zone. You can watch activity unfold instead of seeing only the entry shot.
 
 **🔋 Battery life**
 
-* **No more red LED during sleep.** The status LED used to stay solid red while the trap was in deep sleep, slowly draining the battery. It's now off — quieter trap, longer life.
+* **No more red LED during sleep.** The status LED used to stay solid red while the trap was in deep sleep, slowly draining the battery. It's now off, which saves power.
 * **Low-battery alerts you won't miss.** If your trap loses cell service when it tries to alert you about low battery, the alert now waits and delivers as soon as the trap reconnects. No silent dead-trap surprises.
 
 **🛠️ Reliability**
@@ -48,7 +48,7 @@ This version is delivered **over-the-air (OTA)**. It downloads and installs auto
 
 **Scouting Mode is now documented**
 
-Full customer documentation for **Scouting Mode** — observe trap activity without closing the door — is now live in the docs at **Getting Started → App → Scouting Mode**. It covers how to start scouting, what alerts and photos to expect, when to use it instead of Armed mode, and troubleshooting.
+Full customer documentation for **Scouting Mode** is now live in the docs at **Getting Started → App → Scouting Mode**. Use it to observe trap activity without closing the door. The page covers how to start scouting, what alerts and photos to expect, when to use it instead of Armed mode, and troubleshooting.
 
 ***
 
@@ -68,7 +68,7 @@ If you're checking with support, the firmware version for this release is **v706
 
 > **Release date:** 3 Apr 2026
 >
-> _This feature shipped publicly with the v706 release on May 4 — see the entry above._
+> _This feature shipped publicly with the v706 release on May 4. See the entry above._
 
 _Scouting Mode lets you observe the trap without closing the door._
 
@@ -97,7 +97,7 @@ If you're checking with support, the firmware version for this release is **v632
 
 <summary>April 21, 2025</summary>
 
-#### Firmware v1.12.7‑250 — Release Notes
+#### Firmware v1.12.7‑250: Release Notes
 
 > **Release date:** 21 Apr 2025
 

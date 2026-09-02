@@ -1,7 +1,7 @@
 ---
 description: >-
-  This guide explains how to delete an image from a trap using the OcuTrap web
-  or mobile interface.
+  Permanently delete the current image or an older gallery image from the
+  OcuTrap web or mobile app.
 ---
 
 # Deleting an Image
@@ -42,4 +42,4 @@ To delete the **current image**, use the **trash icon in the bottom-right corner
   * Refresh the gallery view.
   * Allow a few seconds for the change to sync.
 
-For additional help, refer to the general Images and Gallery documentation or contact OcuTrap support.
+For more help, refer to the Images and Gallery documentation or contact OcuTrap support.

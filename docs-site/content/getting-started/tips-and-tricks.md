@@ -6,7 +6,7 @@ description: >-
 
 # Tips and Tricks
 
-Get the most out of your OcuTrap with these best practices and pro tips.
+Use these field tips for battery life, placement, captures, images, and daily operation.
 
 ---
 
@@ -24,10 +24,10 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 ## Maximizing Battery Life
 
 ### Deployment Tips
-- **Strong cellular signal** — Poor signal causes the trap to work harder to stay connected, draining battery faster
-- **Location (GPS)** — The trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off if you don't need location tracking
-- **Camera timelapse** — Set to 6+ hours or disable if you only need capture photos
-- **Firmware updates** — Keep updated for the latest battery optimizations
+- **Strong cellular signal**: Poor signal causes the trap to work harder to stay connected, draining battery faster
+- **Location (GPS)**: The trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off if you don't need location tracking
+- **Camera timelapse**: Set to 6+ hours or disable if you only need capture photos
+- **Firmware updates**: Keep updated for the latest battery optimizations
 
 ### What Drains Battery Fastest
 1. Poor cellular coverage (constant reconnection attempts)
@@ -40,13 +40,13 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 ## Optimal Trap Placement
 
 ### For Best Captures
-- Set your **capture distance** so the animal is fully inside before the door closes — the sensor is fixed in the POD, so there's nothing to position (see [Deploying Your Trap in the Field](deploying-in-the-field.md))
+- Set your **capture distance** so the animal is fully inside before the door closes: the sensor is fixed in the POD, so there's nothing to position (see [Deploying Your Trap in the Field](deploying-in-the-field.md))
 - Place bait **behind the sensor**, near the back of the cage, so animals must pass through the detection zone
 - Level ground helps the door open and close cleanly
 
 ### For Best Connectivity
 - Avoid metal buildings or dense structures that block cellular signal
-- Test signal strength before leaving the trap — check for cyan breathing LED
+- Test signal strength before leaving the trap: check for cyan breathing LED
 - Clear sky view improves GPS accuracy
 
 ---
@@ -62,10 +62,10 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 The **distance sensor** in the POD watches the inside of the trap for movement.
 
 ### Detection Process
-1. **Animal enters the detection area** (out to ~34 in / 875 mm from the sensor) — You may get a pre-capture alert
-2. **Steady presence confirmed** — The trap waits for several consistent readings to avoid false triggers
-3. **Animal reaches your capture distance** (default ~8 in) — The door closes
-4. **Capture complete** — Photo taken and alert sent
+1. **Animal enters the detection area** (out to ~34 in / 875 mm from the sensor): You may get a pre-capture alert
+2. **Steady presence confirmed**: The trap waits for several consistent readings to avoid false triggers
+3. **Animal reaches your capture distance** (default ~8 in): The door closes
+4. **Capture complete**: Photo taken and alert sent
 
 ### Why This Matters
 Unlike traditional traps that use a mechanical trip pan, OcuTrap uses a **distance sensor** to detect the animal's position. This method:
@@ -93,7 +93,7 @@ This video shows how your OcuTrap works once it's set up and ready to catch anim
 
 ### Capture Distance
 - **Default**: ~8 inches
-- **Adjustable range**: 6–18 inches (app presets)
+- **Adjustable range**: 6 to 18 inches (app presets)
 - **Tip**: Smaller values = animal must be closer before triggering
 
 ### Timing
@@ -107,10 +107,10 @@ This video shows how your OcuTrap works once it's set up and ready to catch anim
 
 If you're getting unwanted captures:
 
-1. **Decrease capture distance** — Requires the animal to be closer before the door closes (reduces false triggers from rain, debris, or distant movement)
-2. **Check sensor window** — Clean any dirt, debris, or condensation
-3. **Reposition the trap** — Avoid areas with blowing debris or heavy rain entry
-4. **Review pre-capture photos** — See what's triggering the trap
+1. **Decrease capture distance**: Requires the animal to be closer before the door closes (reduces false triggers from rain, debris, or distant movement)
+2. **Check sensor window**: Clean any dirt, debris, or condensation
+3. **Reposition the trap**: Avoid areas with blowing debris or heavy rain entry
+4. **Review pre-capture photos**: See what's triggering the trap
 
 The trap uses a **two-step check** to filter out most false triggers from rain and debris automatically.
 
@@ -182,7 +182,7 @@ Full step-by-step instructions, including the LED and beep cues for each sequenc
 ### Wet Conditions
 - The enclosure is weather-resistant but not waterproof
 - Avoid submerging or prolonged heavy rain exposure
-- Condensation on camera lens can occur — see [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md)
+- Condensation on camera lens can occur: see [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md)
 
 ---
 

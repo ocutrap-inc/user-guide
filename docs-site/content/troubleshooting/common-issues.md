@@ -1,12 +1,16 @@
+---
+description: Fix common arming, sensor, camera, connectivity, battery, door, GPS, and LED problems with your OcuTrap.
+---
+
 # Common Issues
 
-This guide covers frequently encountered issues and their solutions based on how OcuTrap operates.
+Use this guide to fix common OcuTrap problems.
 
 ---
 
 ## Trap Won't Arm
 
-If you're unable to arm your trap, check the following:
+If you cannot arm your trap, check the following:
 
 ### Door Must Be Fully Open
 
@@ -15,7 +19,7 @@ The trap **requires the door to be fully open** before arming. This is a safety 
 **Solution:**
 1. Open the OcuTrap app
 2. Tap the **Open** button and wait for the door to fully open
-3. Check that the light shows **blue** (unarmed and open) — see the [LED Guide](../getting-started/led-guide.md)
+3. Check that the light shows **blue** (unarmed and open). See the [LED Guide](../getting-started/led-guide.md)
 4. Try arming again
 
 ### Obstruction Detected
@@ -36,7 +40,7 @@ The trap uses a **warn-and-arm** approach: if the POD lens looks blocked or dirt
 - Arm: **`Trap armed. Check camera and clean sensor if blocked.`**
 - Scout: **`Scout on. Check camera and clean sensor if blocked.`**
 
-Clean the POD lens and clear the sensor path when you see this. The trap keeps working, but a dirty lens can affect detection — clean it as soon as you can.
+Clean the POD lens and clear the sensor path when you see this. The trap keeps working, but a dirty lens can affect detection. Clean it as soon as you can.
 
 A real object physically blocking the trap interior is different: arming is **blocked** with **`Remove object at <distance> first`**. Remove the object and arm again.
 
@@ -66,7 +70,7 @@ The trap tests motor connectivity before arming. If the motor doesn't respond, a
 
 ## False Triggers / Unwanted Captures
 
-OcuTrap has sophisticated false-trigger prevention, but environmental factors can sometimes cause issues.
+OcuTrap filters false triggers, but environmental conditions can still cause them.
 
 ### Rain or Debris Triggering
 
@@ -90,13 +94,13 @@ If the trap triggers before animals are fully inside:
 **Solution:**
 1. Go to **Settings → More Settings**
 2. Decrease the **Capture Distance** value (smaller = animal must be closer)
-3. Default is **8 in** — try **6 in** or **7 in** for more selective triggering
+3. Default is **8 in**. Try **6 in** or **7 in** for more selective triggering
 
 ---
 
 ## GPS Not Updating
 
-GPS updates are battery-optimized and may not update as frequently as expected.
+GPS updates limit battery use, so they may not happen as often as you expect.
 
 ### Understanding GPS Behavior
 
@@ -131,7 +135,7 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 - IR LEDs not activating
 
 **Solution:**
-1. Check **Dark Lux Threshold** setting — night vision and IR activate when light falls **below** this value, so **increase** it to enable them earlier (see [Camera](../faqs/camera.md))
+1. Check **Dark Lux Threshold** setting. Night vision and IR activate when light falls **below** this value, so **increase** it to enable them earlier (see [Camera](../faqs/camera.md))
 2. Increase **Minimum IR Brightness** setting
 3. Ensure the IR LED window is clean
 4. Verify the camera lens is not blocked or dirty
@@ -153,7 +157,7 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 1. Check cellular connectivity (LED should be breathing cyan when connected)
 2. Reduce **Camera Quality** setting (1-2 for faster transfer)
 3. Move trap to an area with better cellular coverage
-4. Wait — high-quality photos can take several minutes to upload, especially on a weak cellular connection
+4. Wait. High-quality photos can take several minutes to upload, especially on a weak cellular connection
 
 ---
 
@@ -161,7 +165,7 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 
 ### Trap Shows "Offline"
 
-For a step-by-step field guide — battery, hibernation, LED patterns, cellular coverage, and what to send Support — see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
+For a step-by-step field guide to the battery, hibernation, LED patterns, cellular coverage, and what to send Support, see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
 
 **Automatic reconnection:** If the trap loses connection, it will try to reconnect on its own. This can take up to an hour. Leave it powered on in an area with decent cellular coverage and check back later.
 
@@ -194,7 +198,7 @@ See [Trap Not Sending Commands](trap-not-sending-commands.md) for detailed troub
 
 If the trap enters hibernation unexpectedly:
 
-1. **Check battery level** — the trap hibernates when the battery is critically low
+1. **Check battery level.** The trap hibernates when the battery is critically low
 2. **Charge or replace the battery**
 3. **Verify the correct Battery Type** is selected in settings
 4. If the battery is charged but hibernation persists, the battery may be damaged
@@ -209,27 +213,27 @@ If the trap enters hibernation unexpectedly:
 1. Check motor connector is securely attached
 2. If red and black internal wires are visible at the connector, see [Wire Exposed](wire-exposed.md)
 3. Verify no physical obstruction is blocking the door
-4. Check battery level — door operation requires adequate power
+4. Check battery level. Door operation requires adequate power
 5. Use the manual door control: press the **User Button** once, then press again and **hold ~5 seconds** (about 7 seconds total before the door moves)
 6. Check for a sensor-fault indicator (3 orange flashes)
 
 ### Door Not Latching Behind the Locking Bar
 
-When the door closes correctly, it sits **behind and underneath the locking bar**, with the actuator extended to its full length. If the door comes to rest *in front of* the locking bar, the bar cannot hold the door down — a captured animal can push from the inside and bend the door upward, creating enough gap to escape.
+When the door closes correctly, it sits **behind and underneath the locking bar**, with the actuator extended to its full length. If the door comes to rest *in front of* the locking bar, the bar cannot hold the door down. A captured animal can push from the inside and bend the door upward, creating enough gap to escape.
 
 **What "fully closed and locked" looks like:**
 
-![Door fully closed and locked — door sits behind and underneath the locking bar, actuator at full length](../.gitbook/assets/door-fully-closed-locked.png)
+![Door fully closed and locked. Door sits behind and underneath the locking bar, actuator at full length](../.gitbook/assets/door-fully-closed-locked.png)
 
 - **Actuator** is at its **full length** (fully extended).
-- **Door** is **behind and underneath the locking bar** along its entire width — not resting on top of or in front of the bar.
+- **Door** is **behind and underneath the locking bar** along its entire width, not resting on top of or in front of the bar.
 - The locking bar runs across the door opening and physically blocks the door from lifting.
 
 **How to verify (every trapping session):**
 
 1. From the app, tap **Close** and wait for the door to fully close.
 2. Look at the door from the front of the trap.
-3. Confirm the door edge is *tucked under* the locking bar across the full width — not pinched on top of it or sitting outside it.
+3. Confirm the door edge is *tucked under* the locking bar across the full width, not pinched on top of it or sitting outside it.
 4. Gently try to lift the door by hand. It should not move; the locking bar should stop it within a small fraction of an inch.
 
 **If the door is on top of or in front of the locking bar:**
@@ -261,18 +265,18 @@ When the door closes correctly, it sits **behind and underneath the locking bar*
 
 **Solution:**
 1. Press the power button to wake from hibernation
-2. Charge the battery — the trap may have auto-hibernated due to low power
+2. Charge the battery. The trap may have auto-hibernated due to low power
 3. Check battery connections
 4. If battery is charged and power button doesn't respond, contact support
 
 ### Rapid Red Blinking
 
-Rapid red blinking means the trap is **powering down** because the power button is being held — it is **not** an error code.
+Rapid red blinking means the trap is **powering down** because the power button is being held. It is **not** an error code.
 
 **Solution:**
 1. If you didn't mean to power off, **release the power button within about 3 seconds** to cancel the shutdown.
 2. If it finishes shutting down, the LED goes **solid red** and the trap powers off. Press the power button again to turn it back on.
-3. Genuine faults show as brief flash bursts instead: **3 orange flashes** (sensor error — clean the POD lens and power-cycle) or **5 magenta flashes** (data error). If a fault repeats, contact support.
+3. Genuine faults show as brief flash bursts instead: **3 orange flashes** (sensor error; clean the POD lens and power-cycle) or **5 magenta flashes** (data error). If a fault repeats, contact support.
 
 For LED status meanings, see the [LED Guide](../getting-started/led-guide.md).
 

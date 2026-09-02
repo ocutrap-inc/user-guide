@@ -17,7 +17,7 @@ Adding a trap to an organization does **not** move its billing on its own. Trans
 You can transfer a trap's billing to an organization only when **all** of the following are true:
 
 * **You own the trap.** Only the trap owner can transfer its billing.
-* **You are the organization's primary owner.** Organization billing is handled by a single payer — the organization's primary owner. If someone else is the primary owner, they'll need to make the transfer (or transfer ownership to you first).
+* **You are the organization's primary owner.** One payer handles organization billing: the organization's primary owner. If someone else is the primary owner, they'll need to make the transfer (or transfer ownership to you first).
 * **The trap is already in the organization.** Add it to the organization first (from the Organizations area); adding it does not move billing by itself.
 * **The trap has an active individual subscription.** Its plan must be **Active** or in a free **Trial**, and not already billed to an organization.
 
@@ -43,7 +43,7 @@ There's **no free trial** on a transfer. The trap is already subscribed, so its 
 
 * **The organization pays going forward.** The organization's payment method is charged for the trap from now on, and the trap is included on the organization's invoice.
 * **Your individual subscription is canceled.** The trap's old individual subscription ends right away, and any unused paid time is returned to **you** as a **prorated credit** on your personal billing account.
-* **Your billing interval stays the same** — Monthly stays Monthly and Annual stays Annual — unless the organization is on a different billing cycle, in which case the organization's cycle applies.
+* **Your billing interval stays the same.** Monthly stays Monthly and Annual stays Annual, unless the organization is on a different billing cycle. In that case, the organization's cycle applies.
 * **Organization discounts apply automatically**, if your organization has one.
 
 ***

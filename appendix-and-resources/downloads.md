@@ -9,7 +9,7 @@ pdf-exclude: true
 
 Print-friendly PDFs of the OcuTrap docs and reference cards. Tap any link to download.
 
-### Knowledge Base — full docs as a PDF
+### Knowledge Base: full docs as a PDF
 
 The complete OcuTrap Knowledge Base. Print-quality letter portrait formatting with a numbered table of contents.
 
@@ -17,7 +17,7 @@ The complete OcuTrap Knowledge Base. Print-quality letter portrait formatting wi
 
 ### Operation Cheat Sheet
 
-A one-page letter-size reference card covering system LEDs, buttons, device states, and safety reminders. Designed to be printed and kept near your traps.
+A one-page letter-size reference card covering system LEDs, buttons, device states, and safety reminders. Print it and keep it near your traps.
 
 {% file src="../.gitbook/assets/R1_Operation_Cheat_Sheet.pdf" %}
 

@@ -1,8 +1,8 @@
 ---
 description: >-
   If your trap’s subscription has been canceled or was never set up, you can
-  start or renew it from the trap’s billing page. This keeps your OcuTrap
-  connected and working at its best.
+  start or renew it from the trap’s billing page to keep your OcuTrap
+  connected.
 ---
 
 # Update Individual Trap Subscriptions
@@ -33,4 +33,3 @@ Once finished, the trap shows **Active** and continues to work without interrupt
 ***
 
 **Tip:** Each trap has its own subscription, so if you have more than one, repeat these steps for each trap you want to activate. The **Billing** page lists every trap you can see under **Per-trap status**.
-

@@ -1,8 +1,7 @@
 ---
 description: >-
-  Two ways to hand an OcuTrap to a new owner: transfer ownership in the app,
-  which keeps the trap's capture history, or remove and re-add it for a fresh
-  start. Either way, cancel the trap's subscription first.
+  Transfer an OcuTrap with its history, or remove and re-add it for a fresh
+  start. Cancel the trap's subscription first.
 ---
 
 # Selling or Transferring a Trap
@@ -80,14 +79,14 @@ Removing the trap permanently deletes your images and history for that trap. Sav
 
 ### Buying a trap second-hand
 
-If you bought a trap from a previous owner, add it the normal way: open **Add trap** and enter the **Trap ID** and **Device ID** printed on the unit (and inside the POD), then finish the wizard — see [adding-a-trap-to-your-account.md](../getting-started/app/adding-a-trap-to-your-account.md "mention").
+If you bought a trap from a previous owner, add it the normal way. Open **Add trap** and enter the **Trap ID** and **Device ID** printed on the unit (and inside the POD), then finish the wizard. See [adding-a-trap-to-your-account.md](../getting-started/app/adding-a-trap-to-your-account.md "mention").
 
-If the app says **"Device ID already registered,"** OcuTrap automatically checks whether the trap is unclaimed. When the **Trap ID** you entered matches the one printed on the unit, the trap is transferred to your account and the add continues as normal — no support ticket needed.
+If the app says **"Device ID already registered,"** OcuTrap automatically checks whether the trap is unclaimed. When the **Trap ID** you entered matches the one printed on the unit, the trap is transferred to your account and the add continues as normal. You do not need a support ticket.
 
-If it can't be claimed automatically — the Trap ID doesn't match the unit, the trap still belongs to someone else, or the unit can't be verified — you'll be asked to double-check the **Trap ID** printed on the unit or contact support. Re-enter the printed Trap ID exactly; if it still won't add, contact us via [support.md](../support/support.md "mention").
+If it can't be claimed automatically because the Trap ID doesn't match the unit, the trap still belongs to someone else, or the unit can't be verified, you'll be asked to double-check the **Trap ID** printed on the unit or contact support. Re-enter the printed Trap ID exactly. If it still won't add, contact us via [support.md](../support/support.md "mention").
 
 {% hint style="info" %}
-A seller doesn't need to do anything special to release a trap — removing it from their account (Steps 1–2 above) is enough for the next owner to add it.
+A seller doesn't need to do anything special to release a trap. Removing it from their account (Steps 1 to 2 above) is enough for the next owner to add it.
 {% endhint %}
 
 ***
