@@ -57,6 +57,11 @@ These are the OcuTrap R2 technical specifications, with R1 values where they dif
 | **Trap connector (5200 mAh)**      | Male XT30 on pack; female XT30 on trap PCB |
 | **Trap connector (10000 mAh)**   | Female XT30 on pack; male XT30 on trap PCB |
 | **Alternate pack / connector**   | Contact support for PCB + holder swap   |
+| **Battery Pack Size**            | 70 x 55 x 40 mm (L x W x T)             |
+| **Battery Weight**               | Approx. 295g (5,200 mAh pack)           |
+| **Battery Connectors**           | Yellow connector to the trap; black connector for charging only |
+| **Charger Cable Length**         | 90 cm                                   |
+| **Built-in Protection Board**    | Prevents over-charge, over-discharge, over-voltage, and short circuits |
 
 > **Selecting your battery in the app:** The R2 ships with the **5,200 mAh (56 Wh)** 12 V 6-cell pack, which is the app default. R1 units sold in the US shipped with the **10,000 mAh (111 Wh)** pack. Tell the app which one your trap uses under **Settings → Battery Type**. It adjusts the low-battery alert thresholds and level readout to match. R1 owners should check this setting, because the default assumes the 5,200 mAh pack. There are no manual voltage or percentage threshold controls; the app derives them from your Battery Type.
 
@@ -81,7 +86,7 @@ These are the OcuTrap R2 technical specifications, with R1 values where they dif
 | -------------------- | ------------------------------------------ |
 | **Sensor Range**     | Up to 13 ft (4 m) hardware capability       |
 | **Active Detection Range** | Up to ~**34 in (875 mm)**. The trap detects, alerts, and photographs only within this distance |
-| **Capture Distance** | App presets **6 to 18 in**; default **8 in**. See [Distance Limits & Alerts](trap-settings/distance-safety-and-alerts.md) |
+| **Capture Distance** | App presets **6 to 18 in**; default **8 in**. See [Distance Limits & Alerts](capture-behavior/distance-safety-and-alerts.md) |
 
 ### Environmental Sensors
 
@@ -172,5 +177,4 @@ R1 units shipped with the 10,000 mAh (111 Wh) battery and its 2 A charger, plus 
 For warranty, safety, and compliance information, see:
 
 * [Safety Information](../support/safety-information.md)
-* [Warranty Information](../legal-and-compliance/warranty-information.md)
 * [Legal Disclaimers](../legal-and-compliance/legal-disclaimers-and-compliance-information.md)

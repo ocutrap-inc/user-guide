@@ -38,7 +38,7 @@ A low or disconnected battery is one of the most common reasons a trap appears o
 
 After reconnecting the battery, **press the power button once** and watch the LED.
 
-For more on battery care and charging, see the [Battery FAQ](../faqs/battery.md).
+For more on battery care and charging, see [Battery Overview](../getting-started/battery-overview.md).
 
 ## Step 2: Wake the Trap From Hibernation
 

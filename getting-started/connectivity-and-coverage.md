@@ -57,6 +57,13 @@ When a trap is in **Hibernation** (very low battery, long idle, or powered off),
 
 ***
 
+## Connectivity and Reporting
+
+* **Regular Updates**: The trap pings several times an hour to report its status and confirm network connection.
+* **Disconnection Alert**: Users are alerted if the trap loses network connectivity for over an hour.
+
+***
+
 ## See also
 
 * [Technical Specifications](technical-specifications.md): cellular, GPS, and sensor details.

@@ -50,7 +50,7 @@ There's **no free trial** on a transfer. The trap is already subscribed, so its 
 
 ## Moving Billing Back
 
-If the trap is later removed from the organization, its organization billing is canceled and the trap goes **Inactive**. To keep it running, start an individual subscription again from the trap's **Trap billing** page. See [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md).
+If the trap is later removed from the organization, its organization billing is canceled and the trap goes **Inactive**. To keep it running, start an individual subscription again from the trap's **Trap billing** page. See [Managing Your Subscription](managing-your-subscription.md).
 
 ***
 
@@ -58,4 +58,3 @@ If the trap is later removed from the organization, its organization billing is 
 
 * [Your OcuTrap Subscription](subscription-overview.md)
 * [Managing Your Subscription](managing-your-subscription.md)
-* [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md)

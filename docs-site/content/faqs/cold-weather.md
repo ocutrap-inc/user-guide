@@ -6,6 +6,8 @@ description: >-
 
 # Cold Weather
 
+_Applies to: OcuTrap R1 and R2._
+
 Cold weather affects your trap and battery. Use these guidelines during winter deployments.
 
 ## Temperature Ranges

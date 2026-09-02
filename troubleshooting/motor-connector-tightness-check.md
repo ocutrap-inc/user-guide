@@ -6,6 +6,8 @@ description: >-
 
 # Motor Connector Tightness Check
 
+_Applies to: OcuTrap R1, or any trap after a motor replacement._
+
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/ocutrapconnector-rW8IWV4raollIfvK0pq3yQD8toU1CQ.mp4" %}
 
 #### Symptoms

@@ -57,7 +57,7 @@ A few things the old app didn't have:
 
 * **Map:** see all your traps on a map with their live location.
 * **Analytics:** capture trends and a species breakdown across your fleet.
-* **Organizations:** share a fleet with a team and bill it together (useful for programs and multi-user operations). See [Sharing Traps](../faqs/sharing-traps/README.md).
+* **Organizations:** share a fleet with a team and bill it together (useful for programs and multi-user operations). See [Sharing Traps](../getting-started/app/sharing-traps/README.md).
 * **Command menu:** press <kbd>Cmd/Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on the web app to jump to any trap or screen.
 
 ***

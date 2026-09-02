@@ -100,8 +100,12 @@ The capture system filters false triggers:
 #### Construction
 
 - **Weather-resistant enclosure**: Built for outdoor field deployment
-- **Dimensions**: 10" wide × 12" tall. Cage length is **32"** without the POD and with the door closed. The POD adds ~5"; with the door fully open, add ~4" more (~**41"** total length). See [Technical Specifications](technical-specifications.md) for details.
-- **Weight**: 24 lbs (10.9 kg)
+- **Dimensions**: 10" wide × 12" tall on both models. The POD adds ~5"; with the door fully open, add ~4" more. See [Technical Specifications](technical-specifications.md) for details.
+  - **R1:** cage length **32"** without the POD and with the door closed (~**41"** total length)
+  - **R2:** cage length **36"** without the POD and with the door closed (~**45"** total length)
+- **Weight**:
+  - **R1:** 24 lbs (10.9 kg) with the 111 Wh battery
+  - **R2:** 19.8 lbs (8.98 kg) with the 56 Wh battery; 19.1 lbs (8.68 kg) without
 - **Target animals**: 5 to 25 lbs (cats, raccoons, opossums)
 
 ---

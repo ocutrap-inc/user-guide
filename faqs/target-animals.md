@@ -58,7 +58,7 @@ These animals are a poor match for the trap:
 Once you know your target species:
 
 1. Follow [Deploying Your Trap in the Field](../getting-started/deploying-in-the-field.md) for placement, capture distance, and the pre-deployment test.
-2. Set your capture distance for the animal's size. The default **8 in** works for most raccoon/cat/skunk setups. See [Distance Limits, Sensor Alerts & Errors](../getting-started/trap-settings/distance-safety-and-alerts.md).
+2. Set your capture distance for the animal's size. The default **8 in** works for most raccoon/cat/skunk setups. See [Distance Limits, Sensor Alerts & Errors](../getting-started/capture-behavior/distance-safety-and-alerts.md).
 3. Use bait suited to your target and place it **behind the sensor**, near the back of the cage.
 
 ---

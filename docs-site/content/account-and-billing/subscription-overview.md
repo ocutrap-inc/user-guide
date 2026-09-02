@@ -52,7 +52,7 @@ Reactivating your subscription restores full function. You can **reactivate at a
 2. Select **Billing** in the sidebar, find the trap under **Per-trap status**, and select **Manage**.
 3. Under **Cellular plan**, pick **Monthly** or **Annual** and complete checkout.
 
-Full steps: [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md).
+Full steps: [Managing Your Subscription](managing-your-subscription.md).
 
 ***
 
@@ -74,7 +74,6 @@ A paused trap shows a **Paused** status. This is different from a subscription t
 
 * [Billing When You Move to the New App](billing-when-you-move-to-the-new-app.md)
 * [Managing Your Subscription](managing-your-subscription.md)
-* [Update Individual Trap Subscriptions](update-individual-trap-subscriptions.md)
 * [Transferring Trap Billing to an Organization](transferring-trap-billing-to-an-organization.md)
-* [Changing Your Subscription Payment Method](billing/changing-your-subscription-payment-method.md)
+* [Changing Your Subscription Payment Method](changing-your-subscription-payment-method.md)
 * [Connectivity & Cellular Coverage](../getting-started/connectivity-and-coverage.md)

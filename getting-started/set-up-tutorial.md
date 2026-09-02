@@ -4,7 +4,11 @@ description: >-
   the detailed guide for each one.
 ---
 
-# Set-up Tutorial
+# Set up your trap
+
+{% content-ref url="../support/safety-information.md" %}
+[Safety Information](../support/safety-information.md)
+{% endcontent-ref %}
 
 Setting up your OcuTrap has two parts: **setting up the hardware** and **connecting it to the app**. Follow the steps from top to bottom. Open the linked guides when you need more detail or photos.
 
@@ -29,14 +33,10 @@ Follow the guide for your model.
 [Set up your OcuTrap R2](setting-up-r2.md)
 {% endcontent-ref %}
 
-**OcuTrap R1.** Needs assembly: the **door**, the **handle**, and the **POD**. Two guides cover the same build, written steps with photos or follow-along videos.
+**OcuTrap R1.** Needs assembly: the **door**, the **handle**, and the **POD**. The guide covers the build in written steps with photos and follow-along videos.
 
 {% content-ref url="setting-up.md" %}
-[Hardware set up (R1)](setting-up.md)
-{% endcontent-ref %}
-
-{% content-ref url="video-assembly.md" %}
-[Video Assembly (R1)](video-assembly.md)
+[Hardware set up (OcuTrap R1)](setting-up.md)
 {% endcontent-ref %}
 
 {% hint style="warning" %}
@@ -93,7 +93,7 @@ The full field guide covers placement, capture-distance tuning, the pre-departur
 ## Step 6: Arm it and turn on notifications
 
 1. **Manually open the door.** For safety, arming requires the door to already be open.
-2. Tap **Arm** in the app. See [Arm & Un-arm Button](app/arm-un-arm-button.md) for what each state means.
+2. Tap **Arm** in the app. See [Trap Control](app/trap-control.md) for what each state means.
 3. Choose how you want to be alerted (push, email, or both) in [Notification Settings](app/notification-settings.md).
 
 While armed, the trap checks in on a low-power cycle and can briefly show offline between check-ins. That's normal. You'll be alerted if it stays disconnected for more than an hour.

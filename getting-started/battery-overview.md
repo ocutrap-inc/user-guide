@@ -6,6 +6,8 @@ description: >-
 
 # Battery Overview
 
+_Applies to: OcuTrap R1 and R2._
+
 ### Current Models
 
 Battery capacity depends on your trap model:
@@ -29,11 +31,19 @@ For full electrical specs, see [Technical Specifications](technical-specificatio
 
 ### Charging
 
+Your battery pack has **two connectors**. The **yellow connector** is for connecting to the OcuTrap device. The **black connector** is used exclusively for charging the battery.
+
+1. Plug the **black connector** into the supplied **12V battery charger**.
+2. Connect the charger to a power source.
+3. Watch the charger's indicator light. **Red** means the battery is charging. **Green** means it is fully charged.
+4. Once the light turns **green**, the battery is fully charged and can be disconnected from the charger.
+
 * Use only the **provided KBT charger** (1A or 2A, matched to your pack) to ensure safety and proper charging.
 * The **5,200 mAh battery** takes approximately **5 to 6 hours** to fully recharge with the 1A charger.
 * The **10,000 mAh battery** takes approximately **5 to 6 hours** with its 2A charger.
-* The charger light turns **red** while charging and **green** when fully charged.
+* If the battery is **completely drained**, a full charge takes approximately **5 to 6 hours**.
 * Always disconnect the charger once fully charged to preserve long-term battery health.
+* The charger cable is **90 cm** long.
 
 ### Extending Battery Life
 

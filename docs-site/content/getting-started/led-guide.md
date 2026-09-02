@@ -6,6 +6,8 @@ description: >-
 
 # LED Guide
 
+_Applies to: OcuTrap R1 and R2._
+
 The light on your OcuTrap tells you what the trap is doing. **Pick the color you
 see, then how it's behaving, and this guide takes you straight to what it means
 and how to fix it.** Prefer a table? The full reference is right below the
@@ -141,8 +143,8 @@ entries:
     meaning: Battery critically low at startup, or the trap is hibernating / shut down.
     action: Charge or replace the battery, then press the power button to wake the trap.
     links:
-      - label: Battery
-        href: /faqs/battery
+      - label: Battery Overview
+        href: /getting-started/battery-overview
       - label: Trap Offline or Won't Connect
         href: /troubleshooting/trap-offline-or-wont-connect
   - color: red
@@ -201,6 +203,36 @@ The door light blinks **blue** while opening and **green** while closing.
 1. Press the **User Button**, then the **Power Button**
 
 The light blinks **yellow** while arming and **white** while unarming.
+
+***
+
+### Pattern animations
+
+The GIFs below are short visual examples of the most common **connection** patterns. They do not replace the reference above.
+
+#### Connected Mode
+
+* **Breathing Cyan**: The trap is connected to the cloud and online.
+* <img src="../.gitbook/assets/Breathing Cyan.gif" alt="" data-size="line">
+
+#### Connecting to the Cloud
+
+* **Rapidly Blinking Cyan**: The trap is connecting to the cloud, usually after finding cellular signal.
+* <img src="../.gitbook/assets/Untitled design (5).gif" alt="" data-size="line">
+
+#### OTA Firmware Update
+
+* **Blinking Magenta**: A firmware update is in progress, or the trap is captured and running on battery. Leave the trap powered on and wait, and check the app for a capture.
+* <img src="../.gitbook/assets/Rapidly Blinking Magenta.gif" alt="" data-size="line">
+
+#### Looking for Internet
+
+* **Blinking Green**: The device is attempting to establish a cellular connection.
+* <img src="../.gitbook/assets/Rapidly Blinking Green.gif" alt="" data-size="line">
+
+#### Red light or no light?
+
+Rapid red blinking usually means the trap is **powering down** (power button held), not an SOS/error code. Solid red, brief red flashes after a command, and “no light” cases are all covered above. If the LED never comes on after you reconnect the battery and press power, see [Trap Offline or Won't Connect](../troubleshooting/trap-offline-or-wont-connect.md).
 
 ***
 

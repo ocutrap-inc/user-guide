@@ -6,6 +6,8 @@ description: >-
 
 # Set up your OcuTrap R2
 
+_Applies to: OcuTrap R2._
+
 The R2 ships with the door and the motor already installed. Setup takes about 10 minutes. No tools required.
 
 Have an R1? Its door, handle, and motor ship as parts and need assembly. See [Hardware set up (OcuTrap R1)](setting-up.md).

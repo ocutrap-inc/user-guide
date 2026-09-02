@@ -6,6 +6,8 @@ description: >-
 
 # Wire Exposed
 
+_Applies to: OcuTrap R1 and R2._
+
 #### What You Are Seeing
 
 Sometimes the smaller internal wires (red and black) are visible where the cable enters the metal connector on the motor cable. This is usually not a big deal, but over time it can reduce waterproofing at that connection.

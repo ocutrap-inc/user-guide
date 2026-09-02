@@ -25,11 +25,3 @@ Where to go from here:
 {% content-ref url="settings-reference.md" %}
 [Settings Reference](settings-reference.md)
 {% endcontent-ref %}
-
-{% content-ref url="more-settings-overview.md" %}
-[More Settings Overview](more-settings-overview.md)
-{% endcontent-ref %}
-
-{% content-ref url="advanced-settings.md" %}
-[Advanced Settings](advanced-settings.md)
-{% endcontent-ref %}

@@ -27,3 +27,11 @@ Use these pages when you need a specification or an explanation of a status ligh
 {% content-ref url="battery-overview.md" %}
 [Battery Overview](battery-overview.md)
 {% endcontent-ref %}
+
+{% content-ref url="../faqs/power-modes.md" %}
+[Power Modes](../faqs/power-modes.md)
+{% endcontent-ref %}
+
+{% content-ref url="accessory-port.md" %}
+[Accessory Port](accessory-port.md)
+{% endcontent-ref %}

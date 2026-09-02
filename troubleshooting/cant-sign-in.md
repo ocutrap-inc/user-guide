@@ -25,8 +25,8 @@ Your new password needs at least 10 characters. No required mix of numbers or sy
 [Resetting Password](../account-and-billing/resetting-password.md)
 {% endcontent-ref %}
 
-{% content-ref url="../faqs/miscellaneous/password-policy-for-users.md" %}
-[Password Policy for Users](../faqs/miscellaneous/password-policy-for-users.md)
+{% content-ref url="../account-and-billing/password-policy.md" %}
+[Password Policy for Users](../account-and-billing/password-policy.md)
 {% endcontent-ref %}
 
 ## Reset Code Didn't Arrive

@@ -61,7 +61,7 @@ After you set your password and sign in, open your trap list. Every trap you own
 If a trap is missing, don't re-register it. [Contact support](../support/support.md), and we'll reconnect it for you.
 
 {% hint style="info" %}
-**Did your team share one login?** Some teams signed in to the old app with a single shared username. In the new app, each person gets their own account. Your shared login becomes **one** account, and you invite your teammates to the traps they need: open a trap, go to its **Sharing** tab, and enter each teammate's email. They'll get their own invite to set up an account, and the trap appears for them automatically. See [Sharing Traps](../faqs/sharing-traps/README.md).
+**Did your team share one login?** Some teams signed in to the old app with a single shared username. In the new app, each person gets their own account. Your shared login becomes **one** account, and you invite your teammates to the traps they need: open a trap, go to its **Sharing** tab, and enter each teammate's email. They'll get their own invite to set up an account, and the trap appears for them automatically. See [Sharing Traps](../getting-started/app/sharing-traps/README.md).
 {% endhint %}
 
 ### 4. Check your billing

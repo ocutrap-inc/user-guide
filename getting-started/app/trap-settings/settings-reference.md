@@ -75,7 +75,7 @@ Voltages shown are for the 5,200 mAh pack. The 10,000 mAh pack uses 10.2 V (20%)
 
 ## Temperature Alert Settings
 
-These alerts watch the **outdoor weather at the trap's location**, not the trap's own internal sensor. The trap's location can come from its GPS fix or from a location you set manually. See [Advanced settings](advanced-settings.md).
+These alerts watch the **outdoor weather at the trap's location**, not the trap's own internal sensor. The trap's location can come from its GPS fix or from a location you set manually. See [Temperature alerts](#temperature-alerts) below.
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
@@ -140,6 +140,45 @@ These settings remove portions of the image before processing. Values are percen
 | **Right Crop** | 0 to 50% | 0% | Removes right portion of image |
 | **Top Crop** | 0 to 50% | 0% | Removes top portion of image |
 | **Bottom Crop** | 0 to 50% | 0% | Removes bottom portion of image |
+
+---
+
+## Enhanced door closing and EDC backoff
+
+Enhanced Door Closing re-seats the door after every close, including closes on a capture. The door backs off slightly, then drives closed again to seat under the locking rod. This improves the chance the door locks. It does not confirm the lock. Enabled by default. Turn it off only if support asks. See [Enhanced Door Closing](../../capture-behavior/enhanced-door-closing.md).
+
+EDC Backoff sets how long the door reverses during Enhanced Door Closing. A higher time reverses farther; a lower time reverses less. Options run from 30 to 130 ms in 10 ms steps. Default is 50 ms, and most traps calibrate between about 40 and 120 ms.
+
+{% hint style="warning" %}
+**Advanced setting:** Leave EDC Backoff at its **50 ms default** if the door consistently finishes underneath the locking bar. An incorrect value can prevent EDC recovery or reverse the door too far and leave it effectively unlocked. Adjust only while calibrating an empty trap.
+{% endhint %}
+
+Every trap door is slightly different, and a fully charged battery can move the motor faster. Both too little and too much reverse can leave the door on top of the fixed locking bar:
+
+- Door does not retract enough to re-seat: raise the value by 10 ms.
+- Door retracts so far that it begins to lift and lands on top of the bar again: lower the value by 10 ms.
+
+Start at 40 ms and change one step at a time, testing with a fully charged battery. Pass only when repeated cycles finish underneath the bar every time. See [Enhanced Door Closing](../../capture-behavior/enhanced-door-closing.md) for the complete calibration and optional recovery test.
+
+Requires trap firmware v2.3.2-1010 or newer. Older firmware ignores this setting. Only applies while Enhanced Door Closing is On. If adjusting it does not fix the door, the mechanism needs physical inspection. Contact support.
+
+---
+
+## Temperature alerts
+
+Only a trap that has neither, one that has never reported a location and never had one set, cannot check the weather. If that happens, set the location yourself and the checks begin at the next interval.
+
+The selected interval determines how often the weather is checked.
+
+Until the first check comes back, the card shows **Not checked yet** and no temperature. Checks run on a schedule rather than the moment you switch them on, so give it up to an hour to fill in.
+
+Temperature limits use the selected unit system, shown as Imperial in the interface. **Above Upper Limit** sets the maximum temperature; an alert is sent if the outdoor temperature at the trap rises above this value. **Below Lower Limit** sets the minimum temperature; an alert is sent if the outdoor temperature at the trap falls below this value.
+
+---
+
+## Image cropping
+
+Cropping adjusts how images are cropped before being processed or uploaded. Use it to remove unnecessary areas of the image, reduce file size, or focus on a specific region inside the trap.
 
 ---
 
