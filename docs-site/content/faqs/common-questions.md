@@ -12,10 +12,10 @@ Short answers for the questions customers ask most. For deeper how-tos, follow t
 
 <summary>Does OcuTrap require a subscription?</summary>
 
-**Yes — each trap needs an active subscription** to stay connected over cellular and use the cloud app (remote control, captures, notifications, image history, GPS).
+**Yes. Each trap needs an active subscription** to stay connected over cellular and use the cloud app (remote control, captures, notifications, image history, GPS).
 
 * Cellular data is included in the subscription; there is no separate SIM plan to buy.
-* Without an active subscription, the trap **cannot connect** to the OcuTrap cloud — remote commands and live captures stop.
+* Without an active subscription, the trap **cannot connect** to the OcuTrap cloud. Remote commands and live captures stop.
 
 See [Your OcuTrap Subscription](../account-and-billing/subscription-overview.md) and [Managing Your Subscription](../account-and-billing/managing-your-subscription.md).
 
@@ -37,8 +37,8 @@ See [Switching to the new OcuTrap app](../switching-to-the-new-app/README.md).
 
 After purchase, the main ongoing costs are:
 
-* **Per-trap subscription** (monthly or annual) — required for cellular + cloud features.
-* **Battery charging / replacement** as packs age — see [Battery](battery.md) and [Battery Overview](../getting-started/battery-overview.md).
+* **Per-trap subscription** (monthly or annual), required for cellular + cloud features.
+* **Battery charging / replacement** as packs age. See [Battery](battery.md) and [Battery Overview](../getting-started/battery-overview.md).
 
 </details>
 
@@ -78,7 +78,7 @@ Open the trap → **Sharing** tab → enter their email → choose manager level
 
 <summary>Can I control the trap remotely?</summary>
 
-Yes — with an active subscription and cellular coverage, open/close, arm modes, and settings work from the web or mobile app. See [Trap Control](../getting-started/app/trap-control.md).
+Yes. With an active subscription and cellular coverage, open/close, arm modes, and settings work from the web or mobile app. See [Trap Control](../getting-started/app/trap-control.md).
 
 </details>
 
@@ -108,7 +108,7 @@ Step-by-step: [Resetting the Mobile App](../troubleshooting/resetting-the-mobile
 
 <summary>Does it need Wi-Fi?</summary>
 
-No. OcuTrap uses **4G LTE cellular only** — no Wi-Fi. Coverage must be available at the deploy site. See [Connectivity & Coverage](../getting-started/connectivity-and-coverage.md).
+No. OcuTrap uses **4G LTE cellular only**, not Wi-Fi. Coverage must be available at the deploy site. See [Connectivity & Coverage](../getting-started/connectivity-and-coverage.md).
 
 </details>
 
@@ -132,7 +132,7 @@ Runtime depends on temperature, photo cadence, and cellular conditions. Charging
 
 <summary>Is there an iOS and Android app?</summary>
 
-Yes — both platforms. Web: [app.ocutrap.com](https://app.ocutrap.com). Mobile overview: [Using the Mobile App](../getting-started/app/using-the-mobile-app.md).
+Yes, both platforms. Web: [app.ocutrap.com](https://app.ocutrap.com). Mobile overview: [Using the Mobile App](../getting-started/app/using-the-mobile-app.md).
 
 </details>
 

@@ -1,12 +1,12 @@
 ---
 description: >-
-  This guide explains how to adjust key camera settings, including time-lapse
-  frequency, image quality, and night vision parameters.
+  Adjust time-lapse frequency, image quality, resolution, and night vision
+  settings for your OcuTrap camera.
 ---
 
 # Camera
 
-The **OcuTrap camera** provides **daytime and night vision capabilities**, allowing users to configure image capture settings based on lighting conditions.
+The **OcuTrap camera** takes daytime and night vision images. You can adjust its capture settings for different lighting conditions.
 
 ***
 
@@ -16,7 +16,7 @@ OcuTrap can **automatically capture images** at set intervals in **every mode**:
 
 #### Configurable Option
 
-* **Photo Capture Frequency** – Defines how often the camera captures an image, in every mode (unarmed, armed, scouting, and after a capture).
+* **Photo Capture Frequency:** Defines how often the camera captures an image, in every mode (unarmed, armed, scouting, and after a capture).
 
 {% hint style="info" %}
 If images are too frequent, **reduce the frequency** to conserve battery and data. If you need more monitoring, **increase the frequency** to capture more activity.
@@ -28,9 +28,9 @@ If images are too frequent, **reduce the frequency** to conserve battery and dat
 
 These settings control **image quality, resolution, and night vision brightness**.
 
-* **Image Quality** – Adjusts resolution and compression. Higher quality means clearer images but **increased data usage**.
-* **Image Size** – Defines the resolution of captured images.
-* **Maximum IR Brightness** – Adjusts infrared light intensity in **night vision mode** to **prevent overexposure or underexposure**.
+* **Image Quality:** Adjusts resolution and compression. Higher quality means clearer images but **increased data usage**.
+* **Image Size:** Defines the resolution of captured images.
+* **Maximum IR Brightness:** Adjusts infrared light intensity in **night vision mode** to **prevent overexposure or underexposure**.
 
 {% hint style="info" %}
 If **daytime images look fine but nighttime images are too dark**, **increase** _Max IR Brightness_.
@@ -52,7 +52,7 @@ If **nighttime images are washed out or too bright**, **lower** _Max IR Brightne
 ### Night Vision & Light Adaptation
 
 {% hint style="warning" %}
-**Most users do not need to adjust light settings**, as the camera is designed to work automatically. However, users can fine-tune these settings for optimal image clarity in specific environments.
+**Most users do not need to adjust light settings** because the camera works automatically. You can fine-tune these settings for clearer images in specific environments.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Untitled (Flat Greeting Card - Landscape (7 in x 5 in)).png" alt=""><figcaption></figcaption></figure>
@@ -108,7 +108,7 @@ If you experience **image quality issues**, use the guide below to fine-tune you
 
 **For Most Users:**
 
-* No need to adjust light settings—the camera adapts automatically.
+* You do not need to adjust light settings. The camera adapts automatically.
 
 **If Adjustments Are Needed:**
 

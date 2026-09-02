@@ -22,11 +22,11 @@ You can permanently delete your OcuTrap account from the web app or the mobile a
 When you confirm deletion, OcuTrap will:
 
 - Permanently delete **traps you own**, including captures/images, settings, vitals, and location history for those traps
-- **Remove sharing access** — revoke shares you granted to others, and remove you from traps that were shared with you
+- **Remove sharing access:** revoke shares you granted to others, and remove you from traps that were shared with you
 - Remove your **organization memberships** (after the owner/billing guards above are satisfied)
 - Permanently delete your **account** and sign you out
 
-It does **not** cancel Stripe subscriptions for you — cancel those in Billing first.
+It does **not** cancel Stripe subscriptions for you. Cancel those in Billing first.
 
 ## Web
 

@@ -8,16 +8,16 @@ description: >-
 
 If your OcuTrap is not responding to commands and is displaying error codes, it may have entered hibernation mode or lost connection.
 
-When you send a command, the app shows its live status — **Sending…**, then **confirmed** once the trap acknowledges it, or a failure message with the device's error if something went wrong — so you can see exactly what happened.
+When you send a command, the app shows its live status: **Sending…**, then **confirmed** once the trap acknowledges it, or a failure message with the device's error if something went wrong.
 
 > For a full step-by-step guide when the trap shows offline or will not connect, see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
 
 ### Possible Causes
 
-1. **Sleep Mode** – When **unarmed and idle**, the trap drops into a low-power sleep after a few minutes to save battery. This is normal — it still wakes for commands on its next check-in, or press the power button to wake it immediately.
-2. **No Battery Connection** – Ensure the battery is properly connected and charged. A loose or depleted battery will prevent the trap from operating.
-3. **No Trap Online** – If the trap is not showing as online, it may not be connected to the network.
-4. **Poor Cellular Communication** – Weak signal strength can prevent the trap from sending or receiving commands.
+1. **Sleep Mode:** When **unarmed and idle**, the trap drops into a low-power sleep after a few minutes to save battery. This is normal. It still wakes for commands on its next check-in, or you can press the power button to wake it immediately.
+2. **No Battery Connection:** Make sure the battery is connected and charged. A loose or depleted battery will prevent the trap from operating.
+3. **No Trap Online:** If the trap is not showing as online, it may not be connected to the network.
+4. **Poor Cellular Communication:** Weak signal strength can prevent the trap from sending or receiving commands.
 
 ### Solutions
 
@@ -25,7 +25,7 @@ When you send a command, the app shows its live status — **Sending…**, then 
 
 * Press the **power button** (the left-most button) to wake up the trap.
 * Wait for the LED to show **breathing cyan** before retrying your command.
-* If the trap is **unarmed and idle**, a low-power sleep is expected — commands are picked up at the next check-in. Full hibernation only happens on very low battery or a long power-button press (see [Power Modes](../faqs/power-modes.md)).
+* If the trap is **unarmed and idle**, a low-power sleep is expected. Commands are picked up at the next check-in. Full hibernation only happens on very low battery or a long power-button press (see [Power Modes](../faqs/power-modes.md)).
 
 #### Check Battery Connection
 
@@ -39,4 +39,4 @@ When you send a command, the app shows its live status — **Sending…**, then 
 
 ### Additional Help
 
-If the issue persists after trying these steps, please contact support for further assistance.
+If the issue persists after these steps, contact support.

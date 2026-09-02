@@ -1,8 +1,7 @@
 ---
 description: >-
-  The advanced settings provide additional control over alerts, temperature
-  monitoring, and image processing. These options are intended for users who
-  want finer control over trap behavior.
+  Control outdoor temperature alerts, repeat capture alerts, and image
+  cropping in Advanced Settings.
 ---
 
 # Advanced Settings

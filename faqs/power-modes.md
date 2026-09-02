@@ -6,9 +6,7 @@ description: >-
 
 # Power Modes
 
-OcuTrap is designed with multiple power modes to **maximize battery life** while maintaining functionality in the field. These modes ensure that the device can operate efficiently for extended periods while allowing users to interact when needed.
-
-The power management system optimizes energy consumption by adjusting connectivity, sensor activity, and LED brightness based on usage. This allows for **extended deployment without frequent battery replacements or recharges**.
+OcuTrap uses multiple power modes to save battery while keeping the functions you need in the field. It adjusts connectivity, sensor activity, and LED brightness based on use.
 
 > **Quick Reference**: OcuTrap has 6 power modes ranging from full operation to complete shutdown. The device automatically transitions between modes based on activity, battery level, and armed state.
 
@@ -48,7 +46,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Description**: A deeper power-saving state where most systems are powered down except essential wake functions.
 * **When Active**: Extended periods of inactivity without being armed.
 * **Indicators**: LED is powered off.
-* **Power Consumption**: Very low — most sensors disabled.
+* **Power Consumption**: Very low, with most sensors disabled.
 * **Wake Events**: Button press, scheduled check-in, or incoming cloud command.
 
 ***
@@ -100,11 +98,11 @@ The power management system optimizes energy consumption by adjusting connectivi
 
 To ensure users are aware of power status, **OcuTrap sends battery warnings** at:
 
-* **20% Battery** – Low battery warning.
-* **10% Battery** – Critical battery warning.
-* **Hibernation** – Final alert before shutdown.
+* **20% Battery:** Low battery warning.
+* **10% Battery:** Critical battery warning.
+* **Hibernation:** Final alert before shutdown.
 
-These alerts help prevent unexpected downtime and allow users to take action before the device powers off.
+These alerts let you act before the device powers off.
 
 ***
 
@@ -118,6 +116,5 @@ These alerts help prevent unexpected downtime and allow users to take action bef
 | **Sleep Mode**             | Deep sleep, most systems off               | Off              | ✅ Yes (wakes on command) | ✅ Yes (when awake)       |
 | **Armed Sleep Offline**    | Periodic check-ins, no internet in between | Flashing (3s)    | ❌ No (Between check-ins) | ✅ Yes (During check-ins) |
 | **Hibernation**            | Fully powered down, no communication       | Off              | ❌ No                     | ❌ No                     |
-
 
 

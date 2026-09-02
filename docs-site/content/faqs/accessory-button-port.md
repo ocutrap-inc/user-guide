@@ -1,18 +1,18 @@
 ---
 description: >-
-  Complete guide to the OcuTrap Accessory Port: enabling and configuring the
-  port, electrical specifications, safety guidelines, and common use cases.
+  Set up and use the OcuTrap Accessory Port, including its electrical limits,
+  safety rules, and common uses.
 ---
 
 # Accessory Port
 
 #### Modifying Settings: Enable, Disable, and Adjust
 
-Learn how to manage your settings efficiently by enabling, disabling, or altering them as needed.&#x20;
+Set the accessory's power duration to enable, disable, or adjust it.&#x20;
 
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
-To use the button, simply click it to power the accessory.
+Click the button to power the accessory.
 
 <figure><img src="../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
 
@@ -127,9 +127,9 @@ The accessory port stays **OFF during startup** and turns **OFF if the control s
 
 The Accessory Port enables automation and remote activation for various external devices:
 
-1. **Rebaiter / Feeder** – Automatically dispense bait at specific intervals to keep the trap effective longer.
-2. **Vaccine Feeder** – Deliver oral vaccines to target animals, aiding in disease control efforts.
-3. **Lure Dispenser** – Release scent-based attractants to increase trapping efficiency for specific species.
+1. **Rebaiter / Feeder:** Automatically dispense bait at specific intervals to keep the trap effective longer.
+2. **Vaccine Feeder:** Deliver oral vaccines to target animals, aiding in disease control efforts.
+3. **Lure Dispenser:** Release scent-based attractants to increase trapping efficiency for specific species.
 
 Always test new accessories with short activations before regular use.
 
@@ -148,7 +148,7 @@ Always test new accessories with short activations before regular use.
 
 #### Accessory Shutdown When Door Motor is Operated
 
-If the door motor is moved to an open or closed position while the accessory is running, the accessory will automatically power off. This behavior is an intentional safety feature designed to prevent potential conflicts between the door mechanism and the accessory. To avoid an unexpected shutdown, always ensure that the accessory is stopped before adjusting the door motor.
+If you move the door motor to an open or closed position while the accessory is running, the accessory automatically powers off. This safety feature prevents conflicts between the door mechanism and the accessory. Stop the accessory before you adjust the door motor to avoid an unexpected shutdown.
 
 #### Timing Conflicts
 

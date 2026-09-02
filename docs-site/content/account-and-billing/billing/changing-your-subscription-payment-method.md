@@ -1,7 +1,7 @@
 ---
 description: >-
-  You can update your credit card or bank information at any time through the
-  OcuTrap subscription portal. This guide walks you through each step.
+  Update your credit card or bank information through the OcuTrap subscription
+  portal.
 ---
 
 # Changing Your Subscription Payment Method
@@ -29,7 +29,7 @@ If you see that your card is associated with Link:
 
 1. Click the **three dots** at the top right of the payment method.
 2. Select **Pay without Link**.\
-   This will allow you to use a normal card or bank account instead of Link.
+   You can then use a card or bank account instead of Link.
 
 ### 4. Enter Your New Payment Information
 

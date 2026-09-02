@@ -6,13 +6,13 @@ description: >-
 
 # GPS
 
-OcuTrap uses an integrated u-blox GPS module to provide location tracking and mapping capabilities. This guide explains the GPS settings and functionality to help you get the most accurate location data for your traps.
+OcuTrap uses an integrated u-blox GPS module for location tracking and mapping. These settings help you get accurate location data for your traps.
 
 ---
 
 ### How GPS Works on OcuTrap
 
-GPS is **battery-optimized by design**. Rather than continuously tracking location, OcuTrap uses strategic update intervals to maximize battery life while keeping you informed of trap locations.
+GPS limits its battery use. Instead of tracking location continuously, OcuTrap checks at set intervals so you can see trap locations without constant power use.
 
 #### Default Behavior
 - **Update Interval**: Every 8 hours (fixed)
@@ -58,7 +58,7 @@ When viewing trap locations, you'll see key metrics:
 #### Access Levels
 
 * Anyone with access to a trap can view that trap's location. The owner and any managers the trap is shared with all see the trap on the map tab.
-* You only see traps you own or that have been shared with you — a trap's location is not visible to anyone you haven't shared it with.
+* You only see traps you own or that have been shared with you. A trap's location is not visible to anyone you haven't shared it with.
 
 ### Troubleshooting
 

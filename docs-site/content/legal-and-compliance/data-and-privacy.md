@@ -13,10 +13,10 @@ This page explains, in plain terms, what information your OcuTrap collects and t
 
 To do its job, your trap and the OcuTrap app handle:
 
-* **Images** — capture photos and, if enabled, timelapse images from the trap's camera.
-* **Location** — GPS position of the trap (see [GPS](../faqs/gps.md)).
-* **Device & sensor data** — battery level, temperature/humidity, door state, connectivity, and similar status used to keep the trap running and to send you alerts.
-* **Account information** — the details you provide when you create and manage your account.
+* **Images:** capture photos and, if enabled, timelapse images from the trap's camera.
+* **Location:** GPS position of the trap (see [GPS](../faqs/gps.md)).
+* **Device & sensor data:** battery level, temperature/humidity, door state, connectivity, and similar status used to keep the trap running and to send you alerts.
+* **Account information:** the details you provide when you create and manage your account.
 
 ***
 
@@ -24,7 +24,7 @@ To do its job, your trap and the OcuTrap app handle:
 
 * **You**, as the account owner.
 * **People you share traps with.** When you share a trap, the recipient can see that trap's data according to their **user level**. See [Sharing Traps](../faqs/sharing-traps/README.md) and [User Levels](../faqs/sharing-traps/user-levels.md).
-* Sharing is under your control — you choose who to add and can manage access at any time.
+* You control sharing. You choose who to add and can manage access at any time.
 
 ***
 
@@ -39,8 +39,8 @@ To do its job, your trap and the OcuTrap app handle:
 
 ## Managing & Deleting Your Data
 
-* **Delete individual images** you no longer want — see [Deleting an Image](../getting-started/app/deleting-an-image.md).
-* **Delete your account and associated data** — see [Account Deletion](../account-and-billing/account-deletion.md).
+* **Delete individual images** you no longer want. See [Deleting an Image](../getting-started/app/deleting-an-image.md).
+* **Delete your account and associated data.** See [Account Deletion](../account-and-billing/account-deletion.md).
 
 ***
 
@@ -52,7 +52,7 @@ OcuTrap uses automated image recognition to help identify captures. How that wor
 
 ## See also
 
-* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md) — Privacy Policy, Data Use Policy, Animal Recognition Policy, and more.
+* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md): Privacy Policy, Data Use Policy, Animal Recognition Policy, and more.
 * [Sharing Traps](../faqs/sharing-traps/README.md) and [User Levels](../faqs/sharing-traps/user-levels.md)
 * [Deleting an Image](../getting-started/app/deleting-an-image.md)
 * [Account Deletion](../account-and-billing/account-deletion.md)

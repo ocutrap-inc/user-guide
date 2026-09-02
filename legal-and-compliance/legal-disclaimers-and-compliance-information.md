@@ -1,6 +1,6 @@
 ---
 description: >-
-  OcuTrap's policies, terms, and legal documents — all maintained in one place
+  Find OcuTrap's current policies, terms, and legal documents in one place
   on ocutrap.com.
 ---
 
@@ -9,7 +9,7 @@ description: >-
 All OcuTrap policies, terms, and legal documents are kept in a single place on our website. The versions there are always the most current.
 
 {% hint style="info" %}
-**Central source:** [OcuTrap Legal & Policy Documents](https://ocutrap.com/pages/legal-policy-documents) — one hub that links to every policy listed below.
+**Central source:** [OcuTrap Legal & Policy Documents](https://ocutrap.com/pages/legal-policy-documents). This hub links to every policy listed below.
 {% endhint %}
 
 ## General Policies
@@ -35,7 +35,7 @@ All OcuTrap policies, terms, and legal documents are kept in a single place on o
 
 ## See also
 
-* [Warranty Information](warranty-information.md) — where to find the full warranty terms.
-* [Your Data & Privacy](data-and-privacy.md) — what OcuTrap collects and your controls.
-* [Responsible & Legal Use](responsible-and-legal-use.md) — using OcuTrap within local laws.
-* [Safety Information](../support/safety-information.md) — operating the device safely.
+* [Warranty Information](warranty-information.md): where to find the full warranty terms.
+* [Your Data & Privacy](data-and-privacy.md): what OcuTrap collects and your controls.
+* [Responsible & Legal Use](responsible-and-legal-use.md): using OcuTrap within local laws.
+* [Safety Information](../support/safety-information.md): operating the device safely.

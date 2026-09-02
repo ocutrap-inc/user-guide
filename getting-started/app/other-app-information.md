@@ -16,15 +16,13 @@ description: >-
 * **Indicator**: The trap's status is communicated through its armed/unarmed state indicator.
 * **Command Listening**: In the unarmed state, the trap awaits user commands for further operations.
 
-This concise guide helps users understand the operational modes of the OcuTrap, ensuring efficient and safe usage.
-
 ### Refreshing data
 
-To pull the latest data, select **Last heard** on the trap's vitals and **Ping** the trap — it will check in right away if it's connected.
+To pull the latest data, select **Last heard** on the trap's vitals and **Ping** the trap. It will check in right away if it's connected.
 
 ### Trap controls
 
-Commands are sent from the **Trap Controls** bar on the trap detail screen — arm mode (Unarmed / Scouting / Armed), open/close door, request image, location, buzz, and (under Advanced) reboot and sleep. Battery, signal, temperature, last-heard, camera, and map are all shown on the same trap detail screen. See [Trap Control](trap-control.md) for the full rundown.
+Send commands from the **Trap Controls** bar on the trap detail screen: arm mode (Unarmed / Scouting / Armed), open/close door, request image, location, buzz, and (under Advanced) reboot and sleep. Battery, signal, temperature, last-heard, camera, and map are all shown on the same trap detail screen. See [Trap Control](trap-control.md) for the full rundown.
 
 ### Sharing
 
@@ -32,5 +30,4 @@ Share a trap from its **Sharing** tab: enter the email of the person you want to
 
 ### Changing trap name and notes
 
-On the trap detail screen, tap the **name** in the top bar to rename the trap. Tap **Notes** in the same top bar for the single free-form notes field (access directions, gate codes, etc.). Map position is separate — use **Set location** for a pin or address; that is not a text “location note.”
-
+On the trap detail screen, tap the **name** in the top bar to rename the trap. Tap **Notes** in the same top bar for the single free-form notes field (access directions, gate codes, etc.). Map position is separate: use **Set location** for a pin or address; that is not a text “location note.”

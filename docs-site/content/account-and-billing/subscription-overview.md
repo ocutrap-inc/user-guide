@@ -14,17 +14,17 @@ An active subscription keeps your trap **connected over cellular** and unlocks t
 
 With an active subscription, your trap stays online and you get the full OcuTrap experience:
 
-* **Cellular connectivity** — the cellular data your trap uses is included; there's no separate data plan or SIM card to buy.
-* **Remote monitoring and control** — open, close, arm, and adjust settings from anywhere.
-* **Captures and notifications** — real-time capture alerts by push and/or email (see [Notification Settings](../getting-started/app/notification-settings.md)).
-* **Image history** — view captured and timelapse images in the app.
-* **GPS and map view** — see where each trap is located.
+* **Cellular connectivity:** the cellular data your trap uses is included; there's no separate data plan or SIM card to buy.
+* **Remote monitoring and control:** open, close, arm, and adjust settings from anywhere.
+* **Captures and notifications:** real-time capture alerts by push and/or email (see [Notification Settings](../getting-started/app/notification-settings.md)).
+* **Image history:** view captured and timelapse images in the app.
+* **GPS and map view:** see where each trap is located.
 
 ***
 
 ## Plans & Billing
 
-* Choose **Monthly** or **Annual** billing — annual is billed once a year and costs less than paying monthly.
+* Choose **Monthly** or **Annual** billing. Annual is billed once a year and costs less than paying monthly.
 * All billing is handled securely through **Stripe**.
 * You can switch between plans, update your payment method, or cancel at any time. See [Managing Your Subscription](managing-your-subscription.md).
 
@@ -44,7 +44,7 @@ A trap’s subscription can end because you canceled it, a payment failed, or it
 Because cellular data is part of your subscription, a trap **without an active subscription can no longer connect to the OcuTrap cloud.** This means:
 
 * **Remote control stops**, except **Open door** and **Disarm & release**. Those stay available so an animal is never stuck behind a billing wall.
-* **Live captures and notifications stop** — the trap can't report events while disconnected.
+* **Live captures and notifications stop.** The trap can't report events while disconnected.
 
 Reactivating your subscription restores full function. You can **reactivate at any time**, and the trap continues to work without interruption once the plan is active again:
 
@@ -62,11 +62,11 @@ If you don’t need a trap for a while but don’t want to cancel, you can **pau
 
 * **Monthly plans only**, for up to **6 months**. Annual plans can't be paused.
 * **While paused, you're not billed** and no invoices are generated.
-* A paused trap is **dormant** — remote commands and new captures are off. (Opening the door and releasing an animal stay available for welfare.)
+* A paused trap is **dormant**. Remote commands and new captures are off. (Opening the door and releasing an animal stay available for welfare.)
 * **Your data and settings are kept** and restored in full when you resume.
 * It **resumes automatically** on the date you choose, or you can **Resume now** anytime.
 
-A paused trap shows a **Paused** status. This is different from a subscription that lapses from a failed payment (see above) — pausing is something you choose, and you can resume it yourself at any time.
+A paused trap shows a **Paused** status. This is different from a subscription that lapses from a failed payment (see above). You choose to pause, and you can resume it yourself at any time.
 
 ***
 

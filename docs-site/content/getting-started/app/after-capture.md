@@ -15,7 +15,7 @@ Once an Armed trap closes on a verified detection, the trap holds the animal unt
 * The door does **not** reopen because of a cooldown or any sensor reading.
 * The trap does **not** auto-disarm itself or change state on its own.
 
-You can be 15 minutes away — or 15 hours away — and the trap will stay locked.
+You can be 15 minutes away or 15 hours away, and the trap will stay locked.
 
 ## What you control
 
@@ -23,15 +23,15 @@ Two buttons matter after a capture:
 
 | Button | What it does |
 | --- | --- |
-| **Open** | Releases the door **and** returns the trap to **Unarmed**. This is the one you want most of the time — one tap, animal goes free, trap is reset for inspection. |
+| **Open** | Releases the door **and** returns the trap to **Unarmed**. Use this most of the time: one tap frees the animal and resets the trap for inspection. |
 | **Unarm** | Returns the state to **Unarmed** but **leaves the door closed**. Use this if you want to keep the animal contained while you transport the trap, then tap **Open** later when you're ready to release. |
 
 ### On-trap buttons (v927+)
 
 | Buttons | From **Captured** | Result |
 | --- | --- | --- |
-| **User + Power** (arm/disarm sequence) | Disarm **in place** | **Unarmed**, door **unchanged** (stays closed) — same as cloud **Unarm** |
-| **User hold-open** (press User once, then press again and **hold** — door opens ~7 s later) | Release door | Door **opens** and trap returns to **Unarmed** — same as cloud **Open**. Use this to free the animal, not User+Power |
+| **User + Power** (arm/disarm sequence) | Disarm **in place** | **Unarmed**, door **unchanged** (stays closed), same as cloud **Unarm** |
+| **User hold-open** (press User once, then press again and **hold**; door opens ~7 s later) | Release door | Door **opens** and trap returns to **Unarmed**, same as cloud **Open**. Use this to free the animal, not User+Power |
 
 > **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Open** in the app or the **hold-open** button sequence on the trap.
 
@@ -46,7 +46,7 @@ For full step-by-step instructions on both sequences, see [Using the Buttons on 
 ## Common questions
 
 **Q: If I'm out of cell range, will the trap eventually open?**
-No. The trap holds locally — no cloud command, no door movement.
+No. The trap holds locally. Without a cloud command, the door does not move.
 
 **Q: If the battery dies while captured, does the door open?**
 No. The latch is mechanical; loss of power does not release it.
@@ -59,6 +59,6 @@ After tapping **Open**, the trap is in **Unarmed / Open**. Tap **Arm** on the tr
 
 ## See also
 
-* [Arm & Un-arm Button](arm-un-arm-button.md) — how the modes relate.
-* [Open & Closed Button](open-closed-button.md) — door commands.
-* [Scouting Mode](scouting-mode.md) — non-trapping observation mode.
+* [Arm & Un-arm Button](arm-un-arm-button.md): how the modes relate.
+* [Open & Closed Button](open-closed-button.md): door commands.
+* [Scouting Mode](scouting-mode.md): non-trapping observation mode.

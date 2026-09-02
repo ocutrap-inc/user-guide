@@ -6,7 +6,7 @@ description: >-
 
 # LED Pattern Animations
 
-For what each color and pattern means — including red blinks, battery idle flashes, and what to do next — use the [LED Guide](../led-guide.md). That page is the single source of truth (interactive diagnostic + full reference table).
+For what each color and pattern means, including red blinks, battery idle flashes, and what to do next, use the [LED Guide](../led-guide.md). That page is the single source of truth (interactive diagnostic + full reference table).
 
 The GIFs below are short visual examples of the most common **connection** patterns. They do not replace the LED Guide.
 
@@ -32,4 +32,4 @@ The GIFs below are short visual examples of the most common **connection** patte
 
 ### Red light or no light?
 
-Rapid red blinking usually means the trap is **powering down** (power button held) — not an SOS/error code. Solid red, brief red flashes after a command, and “no light” cases are all covered in the [LED Guide](../led-guide.md). If the LED never comes on after you reconnect the battery and press power, see [Trap Offline or Won't Connect](../../troubleshooting/trap-offline-or-wont-connect.md).
+Rapid red blinking usually means the trap is **powering down** (power button held), not an SOS/error code. Solid red, brief red flashes after a command, and “no light” cases are all covered in the [LED Guide](../led-guide.md). If the LED never comes on after you reconnect the battery and press power, see [Trap Offline or Won't Connect](../../troubleshooting/trap-offline-or-wont-connect.md).

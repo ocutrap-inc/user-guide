@@ -8,7 +8,7 @@ description: >-
 
 Have an R2? See [Set up your OcuTrap R2](setting-up-r2.md). The R2 ships with the door and motor installed.
 
-This guide walks you through assembling your OcuTrap R1 step by step, in three sections: **Door**, **Handle**, and **POD**. Follow each step carefully to ensure your OcuTrap functions correctly. When the hardware is done, continue to [Adding a trap to your account](app/adding-a-trap-to-your-account.md) for the app setup.
+Assemble your OcuTrap R1 in three sections: **Door**, **Handle**, and **POD**. Follow each step in order. When the hardware is done, continue to [Adding a trap to your account](app/adding-a-trap-to-your-account.md) for the app setup.
 
 Prefer to watch? The full assembly video is below, and [Video Assembly](video-assembly.md) breaks it into per-section clips.
 
@@ -30,7 +30,7 @@ Examine each item for any visible damage. If anything is missing or appears dama
 
 ## Charge the Battery
 
-Fully charge the blue battery until the charger light is green, using the accompanying charger found in the small white box. A full charge takes about 5–6 hours — start it now so it's ready when assembly is done.
+Fully charge the blue battery until the charger light is green, using the accompanying charger found in the small white box. A full charge takes about 5 to 6 hours. Start it now so it's ready when assembly is done.
 
 ![](../.gitbook/assets/setup-charging-battery.png)
 
@@ -128,4 +128,4 @@ If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
 
 <figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
 
-**Next:** add the trap to your account — [Adding a trap to your account](app/adding-a-trap-to-your-account.md). To learn what each part of the trap does, see [Hardware Features](hardware-features.md).
+**Next:** add the trap to your account: [Adding a trap to your account](app/adding-a-trap-to-your-account.md). To learn what each part of the trap does, see [Hardware Features](hardware-features.md).

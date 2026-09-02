@@ -40,7 +40,7 @@ OcuTrap partners with wildlife rescues, shelters, conservation groups, municipal
 1. **Submit the application.** Use the contact form and title form “Nonprofit pricing and tax exemption.”\
    Apply on the [OcuTrap contact page](https://ocutrap.com/pages/contact) or email [support@ocutrap.com](mailto:support@ocutrap.com)
 2. **Share basic info.** Organization legal name, EIN, billing and shipping addresses, website, and a primary contact.
-3. **Account review.** We verify your details and flag your customer account for nonprofit pricing.
+3. **Account review.** We verify your details and mark your customer account for nonprofit pricing.
 4. **Sign in to order.** Your nonprofit pricing appears on quotes or invoices when you shop or place POs.
 
 > **Processing may take 1-2 weeks**

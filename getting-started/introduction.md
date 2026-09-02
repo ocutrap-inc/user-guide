@@ -10,11 +10,11 @@ description: >-
 
 ## What is OcuTrap?
 
-* **Innovative OcuTrap Technology:** Transforming the approach to trap monitoring, management, and control.
-* **Significant Time and Cost Savings:** Drastically reduces the need for frequent trap checks, saving both time and resources.
-* **Instant Mobile Alerts:** Get notified immediately upon the capture of your target animal, enabling efficient trap management.
-* **Smart Control Features:** Facilitates the precise capturing of target animals through advanced technology.
-* **Remote Operation Capability:** Manage trap doors from anywhere in the world, significantly reducing the risk of injuries from accidental encounters with the trapped animals.
+* **Remote monitoring:** Check and manage your trap without visiting it for every inspection.
+* **Time and cost:** Reduce frequent trap checks to save time and resources.
+* **Instant mobile alerts:** Get notified when the trap captures an animal.
+* **Capture controls:** Support precise capture of target animals.
+* **Remote operation:** Manage the trap door from anywhere in the world and reduce close contact with captured animals.
 
 First time using your OcuTrap? Check out the [Set-up Tutorial](set-up-tutorial.md).
 

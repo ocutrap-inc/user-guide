@@ -1,7 +1,7 @@
 ---
 description: >-
-  When and how often your OcuTrap takes photos—approach photos, scouting
-  photos, capture photos, and time-lapse—and what controls the timing.
+  When and how often your OcuTrap takes approach, scouting, capture, and
+  time-lapse photos, and what controls the timing.
 ---
 
 # When Your Trap Takes Photos
@@ -16,8 +16,8 @@ Photos only flow when the trap has cellular signal and enough battery. On low ba
 
 | Situation | When photos are taken |
 | --- | --- |
-| **Armed — animal approaching** | A photo the moment an animal is detected, then more as it moves deeper in |
-| **Armed — animal lingering in range** | Every **15 seconds** at first, stretching to about **every 4 minutes** if it stays put |
+| **Armed, animal approaching** | A photo the moment an animal is detected, then more as it moves deeper in |
+| **Armed, animal lingering in range** | Every **15 seconds** at first, stretching to about **every 4 minutes** if it stays put |
 | **Scouting Mode** | Fast photos about every **15 seconds** while an animal is active, with the same stretch-out if it stays put |
 | **At capture** | One photo when the door closes |
 | **After a capture** | A short burst (~every 15 s for the first minute), then one **every 2 hours** |
@@ -26,7 +26,7 @@ Photos only flow when the trap has cellular signal and enough battery. On low ba
 
 ## Approach photos (Armed Mode)
 
-When the trap is **Armed** and an animal enters the detection area, the camera powers up and takes a first photo right away—even if the animal never comes closer. As the animal continues in, you'll get more:
+When the trap is **Armed** and an animal enters the detection area, the camera powers up and takes a first photo right away, even if the animal never comes closer. As the animal continues in, you'll get more:
 
 * An initial **burst of up to two** quick photos.
 * After that, a new approach photo each time the animal moves **about 3 inches (75 mm) closer**.
@@ -58,7 +58,7 @@ Independent of animal activity, the trap takes periodic **time-lapse** photos in
 
 ## On-demand photos
 
-Any time, you can request a photo from the app—tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Requesting photos](../../faqs/manually-taking-an-image.md).
+Any time, you can request a photo from the app. Tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Requesting photos](../../faqs/manually-taking-an-image.md).
 
 ## What affects the timing
 
@@ -67,7 +67,7 @@ A few things can stretch out the intervals above:
 
 * **Low battery / power-saving:** scheduled photos pause until the trap is back on normal power.
 * **Slow cellular or a photo backlog:** the trap automatically spaces photos out so uploads can catch up.
-* **Detection range:** the trap only acts on animals within about **34 inches (875 mm)** of the sensor—anything farther out won't trigger a photo.
+* **Detection range:** the trap only acts on animals within about **34 inches (875 mm)** of the sensor. Anything farther out won't trigger a photo.
 {% endhint %}
 
 ***

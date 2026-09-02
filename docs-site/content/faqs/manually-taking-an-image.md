@@ -6,13 +6,13 @@ description: >-
 
 # Requesting photos
 
-You can request a fresh photo of the inside of your trap at any time. Open the trap's detail screen — the most recent photo is shown as a large image (the **camera view**) with the trap's controls beside it. There's no separate step to open the camera view.
+You can request a fresh photo of the inside of your trap at any time. Open the trap's detail screen. The most recent photo appears as a large image (the **camera view**) with the trap's controls beside it. There's no separate step to open the camera view.
 
 ## Request a photo
 
-To ask the trap for a new photo, use **Request image**. The trap captures a standard, full-quality photo and sends it to the app — the best choice for confirming what's inside or checking image clarity.
+To ask the trap for a new photo, use **Request image**. The trap captures a standard, full-quality photo and sends it to the app. Use this option to confirm what's inside or check image clarity.
 
-In the mobile app, you can also choose **Request quick image** for a faster, lower-resolution photo — handy when you just need a quick check and don't need full detail.
+In the mobile app, you can also choose **Request quick image** for a faster, lower-resolution photo. Use it when you need a quick check without full detail.
 
 <figure><img src="../.gitbook/assets/IMG_2083.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -29,6 +29,6 @@ If images look too dark, washed out, or blurry, see [Camera](camera.md) for ligh
 
 ## See also
 
-* [Trap Control](../getting-started/app/trap-control.md) — all the commands you can send your trap
-* [When Your Trap Takes Photos](../getting-started/app/image-cadence.md) — automatic capture timing
-* [Camera](camera.md) — image quality and night-vision settings
+* [Trap Control](../getting-started/app/trap-control.md): all the commands you can send your trap
+* [When Your Trap Takes Photos](../getting-started/app/image-cadence.md): automatic capture timing
+* [Camera](camera.md): image quality and night-vision settings

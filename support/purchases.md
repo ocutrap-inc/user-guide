@@ -8,10 +8,9 @@ description: >-
 
 ## Payments and Purchases
 
-New traps and accessories are purchased through the website at [OcuTrap.com](https://ocutrap.com) on your mobile phone or computer. Subscription billing is managed separately in the app — see [Billing](../account-and-billing/billing/README.md).
+Buy new traps and accessories at [OcuTrap.com](https://ocutrap.com) on your phone or computer. Manage subscription billing separately in the app. See [Billing](../account-and-billing/billing/README.md).
 
 Nonprofits and organizations that need purchase orders, invoicing, or ACH payment: see the [Nonprofit & 501(c) Program](nonprofit-and-501-c-program.md).
-
 
 
 

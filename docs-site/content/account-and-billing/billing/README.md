@@ -1,7 +1,7 @@
 ---
 description: >-
-  This guide explains how to access and manage your billing information for
-  OcuTrap.
+  Access and manage your OcuTrap billing information, subscriptions, payment
+  methods, and invoices.
 ---
 
 # Billing
@@ -41,16 +41,16 @@ Once you are in the secure billing portal, you’ll see an overview of your subs
 
 #### 3.1 Update Billing Information
 
-* **Address** – Update your physical billing or shipping address.
-* **Credit Cards** – Add, remove, or modify your credit card on file.
-* **Payment Methods** – Choose a default payment method if you have multiple.
+* **Address:** Update your physical billing or shipping address.
+* **Credit Cards:** Add, remove, or modify your credit card on file.
+* **Payment Methods:** Choose a default payment method if you have multiple.
 
 #### 3.2 Change Subscription Plans
 
 There is one plan, the **Cellular plan**, billed **Monthly** or **Annual** per trap. There are no feature tiers.
 
-* **Switch billing interval** – Do this in the app, not the portal. On the trap’s **Trap billing** page, under **Cellular plan**, select **Monthly** or **Annual**.
-* **Cancel** – End the subscription in the Stripe portal. You’ll still have access for the remainder of your billing cycle.
+* **Switch billing interval:** Do this in the app, not the portal. On the trap’s **Trap billing** page, under **Cellular plan**, select **Monthly** or **Annual**.
+* **Cancel:** End the subscription in the Stripe portal. You’ll still have access for the remainder of your billing cycle.
 
 #### 3.3 Status Definitions
 
@@ -94,8 +94,6 @@ Yes. The **Billing** page has an **Invoices** section covering all traps, with *
 
 ### 5. Getting Help
 
-If you encounter any issues or have additional questions, please reach out to us:
+If you have an issue or question, contact us:
 
 * **Email**: [support@ocutrap.com](mailto:support@ocutrap.com)
-
-We’re here to help you get the most out of your OcuTrap subscription.

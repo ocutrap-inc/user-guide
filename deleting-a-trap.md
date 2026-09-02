@@ -20,7 +20,7 @@ Removing a trap permanently deletes the trap and all of its data from your accou
 
 ### Steps
 
-1. **Open the trap** — sign in at [app.ocutrap.com](https://app.ocutrap.com) and select the trap you want to remove.
+1. **Open the trap:** sign in at [app.ocutrap.com](https://app.ocutrap.com) and select the trap you want to remove.
 2. **Go to the Settings tab** on the trap's page.
 3. **Scroll to the Danger zone** section at the bottom of Settings.
 4. **Click "Remove trap."** If the button is disabled, the trap still has an active subscription. Cancel it from the trap's **Trap billing** page first.
@@ -28,6 +28,6 @@ Removing a trap permanently deletes the trap and all of its data from your accou
 
 ### What happens when you remove a trap
 
-* The trap and all of its data — images, activity history, and vitals history — are permanently deleted from your account.
+* The trap and all of its data, including images, activity history, and vitals history, are permanently deleted from your account.
 * Sharing access is removed for everyone the trap was shared with.
-* The physical trap itself is unaffected. It can be added to another OcuTrap account later — if you're handing it to a new owner, follow [selling-or-transferring-a-trap.md](device-management/selling-or-transferring-a-trap.md "mention").
+* The physical trap itself is unaffected. It can be added to another OcuTrap account later. If you're handing it to a new owner, follow [selling-or-transferring-a-trap.md](device-management/selling-or-transferring-a-trap.md "mention").
