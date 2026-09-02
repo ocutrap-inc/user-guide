@@ -48,7 +48,7 @@ iPhone does not expose a separate "clear cache" control for apps. If force quit 
 Use this when force quit (and Android cache clear) didn't fix the problem, or when support asks you to reinstall so the app can re-register for push notifications.
 
 {% hint style="info" %}
-Before you delete the app, make sure you know the **email and password** for your OcuTrap account. You'll need them to sign in again. If you forgot your password, reset it first. See [Can't Sign In to Your Account](cant-sign-in.md).
+Before you delete the app, make sure you know the **email and password** for your OcuTrap account. You'll need them to sign in again. If you forgot your password, reset it first. See [Can't sign in to your account](cant-sign-in.md).
 {% endhint %}
 
 ### iPhone / iPad (iOS)
@@ -79,11 +79,11 @@ Before you delete the app, make sure you know the **email and password** for you
 3. Confirm the phone itself still allows OcuTrap notifications (steps above).
 
 {% content-ref url="../getting-started/app/using-the-mobile-app.md" %}
-[Using the Mobile App](../getting-started/app/using-the-mobile-app.md)
+[Using the mobile app](../getting-started/app/using-the-mobile-app.md)
 {% endcontent-ref %}
 
 {% content-ref url="../getting-started/app/notification-settings.md" %}
-[Notification Settings](../getting-started/app/notification-settings.md)
+[Notification settings](../getting-started/app/notification-settings.md)
 {% endcontent-ref %}
 
 ***
@@ -106,5 +106,5 @@ Email [support@ocutrap.com](mailto:support@ocutrap.com) and include:
 * A short description of what the app is doing wrong (a screenshot helps)
 
 {% content-ref url="../support/support.md" %}
-[Contact Us](../support/support.md)
+[Contact us](../support/support.md)
 {% endcontent-ref %}

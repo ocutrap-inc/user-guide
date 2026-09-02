@@ -33,7 +33,7 @@ Two buttons matter after a capture:
 
 > **Do not confuse the two:** User+Power disarms without opening. To release an animal, use **Open** in the app or the **hold-open** button sequence on the trap.
 
-For full step-by-step instructions on both sequences, see [Using the Buttons on the Trap](../using-the-trap-buttons.md).
+For full step-by-step instructions on both sequences, see [Using the buttons on the trap](../using-the-trap-buttons.md).
 
 ## What you'll see in the app while captured
 
@@ -57,5 +57,5 @@ After tapping **Open**, the trap is in **Unarmed / Open**. Tap **Arm** on the tr
 
 ## See also
 
-* [Trap Control](trap-control.md): how the modes relate and how to send door commands.
-* [Scouting Mode](scouting-mode.md): non-trapping observation mode.
+* [Trap control](trap-control.md): how the modes relate and how to send door commands.
+* [Scouting mode](scouting-mode.md): non-trapping observation mode.

@@ -5,7 +5,7 @@ description: >-
 
 # Your data and privacy
 
-This page explains, in plain terms, what information your OcuTrap collects and the controls you have over it. For the full legal text, see the **Privacy Policy** and **Data Use Policy**, linked from [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md).
+This page explains, in plain terms, what information your OcuTrap collects and the controls you have over it. For the full legal text, see the **Privacy Policy** and **Data Use Policy**, linked from [Legal disclaimers and compliance information](legal-disclaimers-and-compliance-information.md).
 
 ***
 
@@ -23,7 +23,7 @@ To do its job, your trap and the OcuTrap app handle:
 ## Who Can See Your Data
 
 * **You**, as the account owner.
-* **People you share traps with.** When you share a trap, the recipient can see that trap's data according to their **user level**. See [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User Levels](../getting-started/app/sharing-traps/user-levels.md).
+* **People you share traps with.** When you share a trap, the recipient can see that trap's data according to their **user level**. See [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User levels](../getting-started/app/sharing-traps/user-levels.md).
 * You control sharing. You choose who to add and can manage access at any time.
 
 ***
@@ -32,27 +32,27 @@ To do its job, your trap and the OcuTrap app handle:
 
 * **While your account is active,** your captures, images, and trap data remain available in the OcuTrap app so you can review past events and trends.
 * **You stay in control.** You can remove individual images whenever you like (see below); deleted images are removed from your account.
-* **When you delete your account,** your associated data is removed. See [Account Deletion](../account-and-billing/account-deletion.md).
+* **When you delete your account,** your associated data is removed. See [Account deletion](../account-and-billing/account-deletion.md).
 * Your data is **stored securely in the cloud** and protected both in transit and at rest. For the complete, authoritative terms, see our [Privacy Policy](legal-disclaimers-and-compliance-information.md).
 
 ***
 
 ## Managing & Deleting Your Data
 
-* **Delete individual images** you no longer want. See [Deleting an Image](../getting-started/app/deleting-an-image.md).
-* **Delete your account and associated data.** See [Account Deletion](../account-and-billing/account-deletion.md).
+* **Delete individual images** you no longer want. See [Deleting an image](../getting-started/app/deleting-an-image.md).
+* **Delete your account and associated data.** See [Account deletion](../account-and-billing/account-deletion.md).
 
 ***
 
 ## Image Recognition
 
-OcuTrap uses automated image recognition to help identify captures. How that works and how the resulting data is handled is described in our **Animal Recognition Policy**, linked from [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md).
+OcuTrap uses automated image recognition to help identify captures. How that works and how the resulting data is handled is described in our **Animal Recognition Policy**, linked from [Legal disclaimers and compliance information](legal-disclaimers-and-compliance-information.md).
 
 ***
 
 ## See also
 
-* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md): Privacy Policy, Data Use Policy, Animal Recognition Policy, and more.
-* [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User Levels](../getting-started/app/sharing-traps/user-levels.md)
-* [Deleting an Image](../getting-started/app/deleting-an-image.md)
-* [Account Deletion](../account-and-billing/account-deletion.md)
+* [Legal disclaimers and compliance information](legal-disclaimers-and-compliance-information.md): Privacy Policy, Data Use Policy, Animal Recognition Policy, and more.
+* [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User levels](../getting-started/app/sharing-traps/user-levels.md)
+* [Deleting an image](../getting-started/app/deleting-an-image.md)
+* [Account deletion](../account-and-billing/account-deletion.md)

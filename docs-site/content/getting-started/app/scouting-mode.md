@@ -61,7 +61,7 @@ You can stop Scouting Mode in either of these ways:
 * You are ready to capture a confirmed animal.
 * You want the door to close after a detection.
 
-For capture behavior after the door closes, see [After a Capture](after-capture.md).
+For capture behavior after the door closes, see [After a capture](after-capture.md).
 
 ## Troubleshooting
 

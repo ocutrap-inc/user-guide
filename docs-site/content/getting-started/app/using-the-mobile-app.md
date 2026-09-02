@@ -32,7 +32,7 @@ The mobile app has the **same features as the web dashboard**. From the app you 
 
 * View live trap status and **capture images**.
 * **Open, close, arm, and unarm** traps remotely.
-* Adjust [Trap Settings](trap-settings/README.md) and [Notification Settings](notification-settings.md).
+* Adjust [Trap Settings](trap-settings/README.md) and [Notification settings](notification-settings.md).
 * See trap locations on the map.
 
 ***
@@ -41,20 +41,20 @@ The mobile app has the **same features as the web dashboard**. From the app you 
 
 Push notifications are the fastest way to know about a capture. Two things need to be on:
 
-1. **In the app:** open **Notification Settings** and turn on **Push Notifications**, then enable the **Alert Types** you care about (Target detected, Animal captured, Low battery, Device alerts). See [Notification Settings](notification-settings.md).
+1. **In the app:** open **Notification Settings** and turn on **Push Notifications**, then enable the **Alert Types** you care about (Target detected, Animal captured, Low battery, Device alerts). See [Notification settings](notification-settings.md).
 2. **On your phone:** allow notifications for the OcuTrap app.
    * **iOS:** Settings → Notifications → OcuTrap → Allow Notifications.
    * **Android:** Settings → Apps → OcuTrap → Notifications.
 
 {% hint style="info" %}
-If you're set up for push but not receiving alerts, the phone-level permission in the step above is the most common thing to check. If that looks right and alerts still don't arrive, try [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md).
+If you're set up for push but not receiving alerts, the phone-level permission in the step above is the most common thing to check. If that looks right and alerts still don't arrive, try [Resetting the mobile app](../../troubleshooting/resetting-the-mobile-app.md).
 {% endhint %}
 
 ***
 
 ## See also
 
-* [Notification Settings](notification-settings.md)
+* [Notification settings](notification-settings.md)
 * [Adding a Trap to Your Account](adding-a-trap-to-your-account.md)
-* [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md): force quit or reinstall on iOS and Android
+* [Resetting the mobile app](../../troubleshooting/resetting-the-mobile-app.md): force quit or reinstall on iOS and Android
 * [App](README.md): overview of the OcuTrap app.

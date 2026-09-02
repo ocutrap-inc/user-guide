@@ -18,7 +18,7 @@ You can share a trap with another OcuTrap account for remote monitoring and cont
 1. **Log into your OcuTrap account** and open the **trap** you want to share.
 2. Open the trap's **Sharing** tab.
 3. Enter the recipient’s **valid email address**.
-4. If you're the trap **owner**, choose the manager level for this person: **Standard Manager** or **Full Manager** (see [User Levels](user-levels.md)).
+4. If you're the trap **owner**, choose the manager level for this person: **Standard Manager** or **Full Manager** (see [User levels](user-levels.md)).
 5. Send the invitation.
 
 You cannot share with yourself or double-share the same trap.
@@ -34,4 +34,4 @@ You stay in control of every share at any time:
 
 Trap owners and managers can cancel a pending invite or revoke access at any time.
 
-Once shared, the recipient will have access based on their **user level**. To learn more about different access levels, see the [User Levels](user-levels.md) page.
+Once shared, the recipient will have access based on their **user level**. To learn more about different access levels, see the [User levels](user-levels.md) page.

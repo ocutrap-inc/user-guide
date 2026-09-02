@@ -16,7 +16,7 @@ With an active subscription, your trap stays online and you get the full OcuTrap
 
 * **Cellular connectivity:** the cellular data your trap uses is included; there's no separate data plan or SIM card to buy.
 * **Remote monitoring and control:** open, close, arm, and adjust settings from anywhere.
-* **Captures and notifications:** real-time capture alerts by push and/or email (see [Notification Settings](../getting-started/app/notification-settings.md)).
+* **Captures and notifications:** real-time capture alerts by push and/or email (see [Notification settings](../getting-started/app/notification-settings.md)).
 * **Image history:** view captured and timelapse images in the app.
 * **GPS and map view:** see where each trap is located.
 
@@ -26,14 +26,14 @@ With an active subscription, your trap stays online and you get the full OcuTrap
 
 * Choose **Monthly** or **Annual** billing. Annual is billed once a year and costs less than paying monthly.
 * All billing is handled securely through **Stripe**.
-* You can switch between plans, update your payment method, or cancel at any time. See [Managing Your Subscription](managing-your-subscription.md).
+* You can switch between plans, update your payment method, or cancel at any time. See [Managing your subscription](managing-your-subscription.md).
 
 ***
 
 ## Canceling
 
 * You can **cancel at any time.** You won't be charged again, and your subscription **stays active until the end of the current billing period**.
-* See [Managing Your Subscription](managing-your-subscription.md) for steps.
+* See [Managing your subscription](managing-your-subscription.md) for steps.
 
 ***
 
@@ -52,7 +52,7 @@ Reactivating your subscription restores full function. You can **reactivate at a
 2. Select **Billing** in the sidebar, find the trap under **Per-trap status**, and select **Manage**.
 3. Under **Cellular plan**, pick **Monthly** or **Annual** and complete checkout.
 
-Full steps: [Managing Your Subscription](managing-your-subscription.md).
+Full steps: [Managing your subscription](managing-your-subscription.md).
 
 ***
 
@@ -72,8 +72,8 @@ A paused trap shows a **Paused** status. This is different from a subscription t
 
 ## See also
 
-* [Billing When You Move to the New App](billing-when-you-move-to-the-new-app.md)
-* [Managing Your Subscription](managing-your-subscription.md)
-* [Transferring Trap Billing to an Organization](transferring-trap-billing-to-an-organization.md)
-* [Changing Your Subscription Payment Method](changing-your-subscription-payment-method.md)
-* [Connectivity & Cellular Coverage](../getting-started/connectivity-and-coverage.md)
+* [Billing when you move to the new app](billing-when-you-move-to-the-new-app.md)
+* [Managing your subscription](managing-your-subscription.md)
+* [Transferring trap billing to an organization](transferring-trap-billing-to-an-organization.md)
+* [Changing your subscription payment method](changing-your-subscription-payment-method.md)
+* [Connectivity and cellular coverage](../getting-started/connectivity-and-coverage.md)

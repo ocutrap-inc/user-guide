@@ -6,10 +6,10 @@ description: >-
 
 # Handling and releasing a captured animal
 
-When an Armed trap closes on a verified detection, **it holds the animal until you release it**. There is no auto-release. This page covers what *you* do next in the field. For how the door and app behave after a capture, see [After a Capture](app/after-capture.md).
+When an Armed trap closes on a verified detection, **it holds the animal until you release it**. There is no auto-release. This page covers what *you* do next in the field. For how the door and app behave after a capture, see [After a capture](app/after-capture.md).
 
 {% hint style="danger" %}
-The OcuTrap door closes in about 0.75 seconds and can pinch or crush. A trapped animal may also be stressed and defensive. **Keep your hands, fingers, and face clear of the door's path at all times**, and keep children and pets away. See [Safety Information](../support/safety-information.md).
+The OcuTrap door closes in about 0.75 seconds and can pinch or crush. A trapped animal may also be stressed and defensive. **Keep your hands, fingers, and face clear of the door's path at all times**, and keep children and pets away. See [Safety information](../support/safety-information.md).
 {% endhint %}
 
 ***
@@ -34,7 +34,7 @@ The OcuTrap door closes in about 0.75 seconds and can pinch or crush. A trapped 
 ## Releasing a Target Animal
 
 {% hint style="warning" %}
-Where and how you may release or relocate an animal is regulated and varies by location. Read [Responsible & Legal Use](../legal-and-compliance/responsible-and-legal-use.md) **before** you release or relocate anything.
+Where and how you may release or relocate an animal is regulated and varies by location. Read [Responsible and legal use](../legal-and-compliance/responsible-and-legal-use.md) **before** you release or relocate anything.
 {% endhint %}
 
 1. Position the trap at your release point with the **door end facing away** from you and toward open space.
@@ -43,20 +43,20 @@ Where and how you may release or relocate an animal is regulated and varies by l
 4. Let the animal **leave on its own**. Do not reach in or tip the trap to force it out.
 
 {% hint style="info" %}
-**Out of cellular range?** You don't need the app. You can unarm the trap and open the door with the **User** and **Power** buttons on the POD. See [Using the Buttons on the Trap](using-the-trap-buttons.md).
+**Out of cellular range?** You don't need the app. You can unarm the trap and open the door with the **User** and **Power** buttons on the POD. See [Using the buttons on the trap](using-the-trap-buttons.md).
 {% endhint %}
 
 ## Transporting Before Release
 
 If you need to move the trap before releasing (for example, to an approved relocation site), you don't need to change the trap's state. It can **stay in Captured mode**, with the door closed, while you transport it.
 
-1. **Verify the door is fully closed and locked** before you lift the trap, so the animal cannot push it open in transit. For the most secure hold, see [Enhanced Door Closing](capture-behavior/enhanced-door-closing.md).
+1. **Verify the door is fully closed and locked** before you lift the trap, so the animal cannot push it open in transit. For the most secure hold, see [Enhanced door closing](capture-behavior/enhanced-door-closing.md).
 2. Keep the trap **covered, level, well-ventilated, and out of direct sun and heat**.
 3. Release **as soon as possible**. Minimize the time the animal is confined.
 4. At the release site, tap **Open** to release the door (this also returns the trap to **Unarmed**).
 
 {% hint style="info" %}
-You can also tap **Unarm**, which keeps the door closed but returns the trap to Unarmed for the move. Either way, confirm the door is locked first. See [After a Capture](app/after-capture.md) for how the Open and Unarm buttons differ.
+You can also tap **Unarm**, which keeps the door closed but returns the trap to Unarmed for the move. Either way, confirm the door is locked first. See [After a capture](app/after-capture.md) for how the Open and Unarm buttons differ.
 {% endhint %}
 
 ***
@@ -67,7 +67,7 @@ If you've caught an animal you didn't intend to (including someone's pet; the 5 
 
 * **Release it promptly and unharmed at the capture site.** As a rule, non-target and protected species should be let go where they were caught, not relocated.
 * If the animal appears injured or you're unsure how to proceed, contact your local wildlife authority or a licensed wildlife rehabilitator.
-* See [Responsible & Legal Use](../legal-and-compliance/responsible-and-legal-use.md) for rules on protected species and relocation.
+* See [Responsible and legal use](../legal-and-compliance/responsible-and-legal-use.md) for rules on protected species and relocation.
 
 ***
 
@@ -81,7 +81,7 @@ If you've caught an animal you didn't intend to (including someone's pet; the 5 
 
 ## See also
 
-* [After a Capture](app/after-capture.md): how the door and app behave once a trap closes.
-* [Responsible & Legal Use](../legal-and-compliance/responsible-and-legal-use.md): local laws on trapping and relocation.
-* [Safety Information](../support/safety-information.md): injury risks and precautions.
+* [After a capture](app/after-capture.md): how the door and app behave once a trap closes.
+* [Responsible and legal use](../legal-and-compliance/responsible-and-legal-use.md): local laws on trapping and relocation.
+* [Safety information](../support/safety-information.md): injury risks and precautions.
 * [Maintenance](maintenance.md): cleaning and inspection between captures.

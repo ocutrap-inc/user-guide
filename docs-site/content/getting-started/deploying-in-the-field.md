@@ -36,7 +36,7 @@ Good results depend on **where you place the whole trap** and **how you set the 
 - **Avoid metal buildings and dense structures** that block cellular signal. Poor signal also drains the battery faster.
 - **Leave a clear view of the sky** where you can, so GPS can update your trap's location.
 
-For more placement and battery tips, see [Tips and Tricks](tips-and-tricks.md).
+For more placement and battery tips, see [Tips and tricks](tips-and-tricks.md).
 
 ---
 
@@ -49,10 +49,10 @@ Capture distance is how far **inside** the trap an animal must be before the doo
 - **Larger (10 in and up):** the animal can trigger from farther inside the cage.
 
 {% hint style="info" %}
-**Targeting smaller animals?** The sensor's detection area is naturally a little wider the farther it is from the POD, so a larger capture distance can help a small animal fall within it. Because smaller animals are harder to detect reliably, **confirm your target actually triggers at your chosen distance using [Scouting Mode](app/scouting-mode.md) (Step 4) before you rely on the trap.**
+**Targeting smaller animals?** The sensor's detection area is naturally a little wider the farther it is from the POD, so a larger capture distance can help a small animal fall within it. Because smaller animals are harder to detect reliably, **confirm your target actually triggers at your chosen distance using [Scouting mode](app/scouting-mode.md) (Step 4) before you rely on the trap.**
 {% endhint %}
 
-Full details on presets and the sensor error messages you might see: [Distance Limits, Sensor Alerts & Errors](capture-behavior/distance-safety-and-alerts.md).
+Full details on presets and the sensor error messages you might see: [Distance limits, sensor alerts and errors](capture-behavior/distance-safety-and-alerts.md).
 
 ---
 
@@ -62,7 +62,7 @@ Full details on presets and the sensor error messages you might see: [Distance L
 2. Watch the status LED. A **breathing cyan** light means the trap is **connected to the cloud and ready**.
 3. Check that the trap shows as online in the app.
 
-If you don't see breathing cyan, give it a minute to connect, and check signal in the area. See the [LED Guide](led-guide.md) for what each color means and [Connectivity & Coverage](connectivity-and-coverage.md) if it won't connect.
+If you don't see breathing cyan, give it a minute to connect, and check signal in the area. See the [LED guide](led-guide.md) for what each color means and [Connectivity and cellular coverage](connectivity-and-coverage.md) if it won't connect.
 
 ---
 
@@ -70,12 +70,12 @@ If you don't see breathing cyan, give it a minute to connect, and check signal i
 
 Never leave a trap deployed without confirming it fires:
 
-1. **Arm the trap** from the app (see [Trap Control](app/trap-control.md)).
+1. **Arm the trap** from the app (see [Trap control](app/trap-control.md)).
 2. **Wave your hand** slowly through the detection zone, at about the depth your target animal would reach.
 3. **Confirm** the door closes and you receive a capture alert.
 4. **Open the door and disarm**, then re-arm for real deployment.
 
-**Optional: validate with Scouting Mode.** [Scouting Mode](app/scouting-mode.md) watches for animals and sends alerts and photos **without closing the door**. Use it to confirm your placement and capture distance detect your target, especially for smaller animals, before you arm.
+**Optional: validate with Scouting Mode.** [Scouting mode](app/scouting-mode.md) watches for animals and sends alerts and photos **without closing the door**. Use it to confirm your placement and capture distance detect your target, especially for smaller animals, before you arm.
 
 ---
 
@@ -94,9 +94,9 @@ Never leave a trap deployed without confirming it fires:
 
 ## After you deploy
 
-- Turn on [Pre-Capture Notifications](capture-behavior/pre-capture-notification.md) to get an alert and photo when an animal approaches. This helps confirm your target is showing up.
-- When you get a capture, follow [Handling & Releasing a Captured Animal](handling-a-captured-animal.md).
+- Turn on [Pre-capture notification](capture-behavior/pre-capture-notification.md) to get an alert and photo when an animal approaches. This helps confirm your target is showing up.
+- When you get a capture, follow [Handling and releasing a captured animal](handling-a-captured-animal.md).
 
 ---
 
-**Related:** [Set up your OcuTrap R2](setting-up-r2.md) · [Hardware set up (OcuTrap R1)](setting-up.md) · [Scouting Mode](app/scouting-mode.md) · [Distance Limits, Sensor Alerts & Errors](capture-behavior/distance-safety-and-alerts.md) · [Tips and Tricks](tips-and-tricks.md)
+**Related:** [Set up your OcuTrap R2](setting-up-r2.md) · [Hardware set up (OcuTrap R1)](setting-up.md) · [Scouting mode](app/scouting-mode.md) · [Distance limits, sensor alerts and errors](capture-behavior/distance-safety-and-alerts.md) · [Tips and tricks](tips-and-tricks.md)

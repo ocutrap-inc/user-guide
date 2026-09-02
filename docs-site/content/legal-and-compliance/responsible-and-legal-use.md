@@ -30,7 +30,7 @@ Rules commonly cover:
 ## Protected & Non-Target Species
 
 * **Release protected and non-target animals immediately and unharmed**, at the place they were caught. Do not relocate them.
-* OcuTrap's detection is **selective**, but no system is perfect. Be ready to release animals you didn't intend to catch. See [Handling & Releasing a Captured Animal](../getting-started/handling-a-captured-animal.md).
+* OcuTrap's detection is **selective**, but no system is perfect. Be ready to release animals you didn't intend to catch. See [Handling and releasing a captured animal](../getting-started/handling-a-captured-animal.md).
 * If an animal is injured, or you're unsure whether a species is protected, contact your **local wildlife authority or a licensed wildlife rehabilitator**.
 
 ***
@@ -45,7 +45,7 @@ OcuTrap's target weight range (**5 to 25 lb**) overlaps with domestic cats and s
 
 * Check captures **promptly**. OcuTrap reminds you for up to 48 hours, but sooner is better for the animal.
 * Keep a captured animal **shaded, ventilated, and out of extreme heat or cold**.
-* Minimize handling time and stress. See [Handling & Releasing a Captured Animal](../getting-started/handling-a-captured-animal.md).
+* Minimize handling time and stress. See [Handling and releasing a captured animal](../getting-started/handling-a-captured-animal.md).
 
 ***
 
@@ -53,13 +53,13 @@ OcuTrap's target weight range (**5 to 25 lb**) overlaps with domestic cats and s
 
 Your use of OcuTrap is also governed by our published policies:
 
-* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md): Terms of Service, Privacy Policy, Animal Recognition Policy, and more.
-* [Safety Information](../support/safety-information.md): operating the device safely.
+* [Legal disclaimers and compliance information](legal-disclaimers-and-compliance-information.md): Terms of Service, Privacy Policy, Animal Recognition Policy, and more.
+* [Safety information](../support/safety-information.md): operating the device safely.
 
 ***
 
 ## See also
 
-* [Handling & Releasing a Captured Animal](../getting-started/handling-a-captured-animal.md)
-* [Your Data & Privacy](data-and-privacy.md)
-* [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md)
+* [Handling and releasing a captured animal](../getting-started/handling-a-captured-animal.md)
+* [Your data and privacy](data-and-privacy.md)
+* [Legal disclaimers and compliance information](legal-disclaimers-and-compliance-information.md)

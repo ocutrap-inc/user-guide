@@ -27,7 +27,7 @@ Both packs are **12 V, 6-cell** lithium-ion batteries. The two packs use **oppos
 
 In the app, set your pack under **Settings → Battery Type** (choose **5,200 mAh** or **10,000 mAh**). The app uses this to adjust the **low-battery alert thresholds** and level readout for your pack, so alerts fire at the right time. This setting controls battery thresholds automatically. There are no manual voltage or percentage controls. Battery Type **defaults to the 5,200 mAh pack**. If your trap shipped with the 10,000 mAh battery, update this setting so battery level and alerts read correctly.
 
-For full electrical specs, see [Technical Specifications](technical-specifications.md).
+For full electrical specs, see [Technical specifications](technical-specifications.md).
 
 ### Charging
 

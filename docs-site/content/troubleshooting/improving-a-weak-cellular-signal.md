@@ -25,7 +25,7 @@ Its radio is a long-range, low-power type built for remote equipment. It can hol
 * The trap showing offline between check-ins.
 * Faster battery drain. The radio works harder in weak signal.
 
-Not sure what the light means? See the [LED Guide](../getting-started/led-guide.md).
+Not sure what the light means? See the [LED guide](../getting-started/led-guide.md).
 
 ***
 
@@ -53,13 +53,13 @@ An armed trap does not need continuous signal.
 * It reports any capture at its next check-in.
 * You can arm, unarm, and open the trap with the buttons on the trap, with no signal at all.
 
-See [Using the Buttons on the Trap](../getting-started/using-the-trap-buttons.md) and [Connectivity & Coverage](../getting-started/connectivity-and-coverage.md).
+See [Using the buttons on the trap](../getting-started/using-the-trap-buttons.md) and [Connectivity and cellular coverage](../getting-started/connectivity-and-coverage.md).
 
 ***
 
 ## See also
 
-* [Trap Offline or Won't Connect](trap-offline-or-wont-connect.md): the full offline checklist.
-* [Connectivity & Coverage](../getting-started/connectivity-and-coverage.md): how the trap stays connected.
-* [Using the Buttons on the Trap](../getting-started/using-the-trap-buttons.md): running the trap with no signal.
-* [Power Modes](../faqs/power-modes.md): check-in cycles and hibernation.
+* [Trap offline or won't connect](trap-offline-or-wont-connect.md): the full offline checklist.
+* [Connectivity and cellular coverage](../getting-started/connectivity-and-coverage.md): how the trap stays connected.
+* [Using the buttons on the trap](../getting-started/using-the-trap-buttons.md): running the trap with no signal.
+* [Power modes](../faqs/power-modes.md): check-in cycles and hibernation.

@@ -94,13 +94,13 @@ No. Your subscription does not lapse, so nothing about billing takes your trap o
 Reply to our email or contact [support@ocutrap.com](mailto:support@ocutrap.com). We'll move your account, traps, and subscription to your current address before you set a password. Your billing doesn't change.
 
 **Can I still pause, cancel, or change my plan?**\
-Yes. Those work the same way in the new app. See [Managing Your Subscription](managing-your-subscription.md).
+Yes. Those work the same way in the new app. See [Managing your subscription](managing-your-subscription.md).
 
 ***
 
 ## See also
 
-* [Switching to the new OcuTrap app](../switching-to-the-new-app/README.md)
-* [Your OcuTrap Subscription](subscription-overview.md)
-* [Managing Your Subscription](managing-your-subscription.md)
-* [Changing Your Subscription Payment Method](changing-your-subscription-payment-method.md)
+* [Move to the new OcuTrap app](../switching-to-the-new-app/README.md)
+* [Your OcuTrap subscription](subscription-overview.md)
+* [Managing your subscription](managing-your-subscription.md)
+* [Changing your subscription payment method](changing-your-subscription-payment-method.md)

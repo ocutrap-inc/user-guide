@@ -40,7 +40,7 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 ## Optimal Trap Placement
 
 ### For Best Captures
-- Set your **capture distance** so the animal is fully inside before the door closes: the sensor is fixed in the POD, so there's nothing to position (see [Deploying Your Trap in the Field](deploying-in-the-field.md))
+- Set your **capture distance** so the animal is fully inside before the door closes: the sensor is fixed in the POD, so there's nothing to position (see [Deploying your trap in the field](deploying-in-the-field.md))
 - Place bait **behind the sensor**, near the back of the cage, so animals must pass through the detection zone
 - Level ground helps the door open and close cleanly
 
@@ -142,7 +142,7 @@ Enable **Pre-Capture Alerts** to get notified when an animal is approaching:
 - Sends alert when object enters detection zone (before capture)
 - Includes a photo of what's approaching
 - 60-second cooldown between alerts to prevent spam
-- Great alongside [Scouting Mode](app/scouting-mode.md) when you want photos and alerts without animal captures
+- Great alongside [Scouting mode](app/scouting-mode.md) when you want photos and alerts without animal captures
 
 **Use cases:**
 - See if non-target animals are visiting
@@ -163,7 +163,7 @@ Learn the physical button controls:
 | **Power off** | Hold Power button for 3 seconds |
 | **Wake from hibernation** | Press Power button |
 
-Full step-by-step instructions, including the LED and beep cues for each sequence, are in [Using the Buttons on the Trap](using-the-trap-buttons.md).
+Full step-by-step instructions, including the LED and beep cues for each sequence, are in [Using the buttons on the trap](using-the-trap-buttons.md).
 
 ---
 
@@ -182,7 +182,7 @@ Full step-by-step instructions, including the LED and beep cues for each sequenc
 ### Wet Conditions
 - The enclosure is weather-resistant but not waterproof
 - Avoid submerging or prolonged heavy rain exposure
-- Condensation on camera lens can occur: see [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md)
+- Condensation on camera lens can occur: see [Condensation on the camera](../troubleshooting/condensation-on-the-camera.md)
 
 ---
 

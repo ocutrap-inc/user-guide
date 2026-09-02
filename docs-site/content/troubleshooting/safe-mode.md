@@ -10,7 +10,7 @@ _Applies to: OcuTrap R1 and R2._
 
 **What Safe Mode is for:** Safe Mode is a recovery mode built into the trap's cellular controller. In Safe Mode the device still starts up and connects to the cloud, but it does **not** run the trap's normal program. That lets it accept a firmware update (or clear a bad state) when the trap is stuck in a crash or boot loop and won't come online on its own. It's an advanced step. You normally only need it when **OcuTrap Support** asks you to use it while recovering a device.
 
-While in Safe Mode the LED shows **magenta** (the same firmware-update color you'll see in the [LED Guide](../getting-started/led-guide.md)).
+While in Safe Mode the LED shows **magenta** (the same firmware-update color you'll see in the [LED guide](../getting-started/led-guide.md)).
 
 **Buttons:** The **RESET** and **MODE** buttons referred to below are the two small buttons on the trap's internal cellular controller (the cellular module inside the POD), not the User and Power buttons you use for everyday operation.
 

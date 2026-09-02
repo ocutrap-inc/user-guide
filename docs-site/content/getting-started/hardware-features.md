@@ -32,7 +32,7 @@ The door is powered by a **linear motor** for fast, reliable operation:
 - **Close speed**: About 0.75 seconds
 - **Open speed**: Less than 1 second
 - **Remote control**: Open, close, and lock via the app
-- **Manual control**: Button sequence on the device; see [Using the Buttons on the Trap](using-the-trap-buttons.md)
+- **Manual control**: Button sequence on the device; see [Using the buttons on the trap](using-the-trap-buttons.md)
 - **Enhanced closing**: Optional double-close sequence for secure locking
 
 ---
@@ -100,7 +100,7 @@ The capture system filters false triggers:
 #### Construction
 
 - **Weather-resistant enclosure**: Built for outdoor field deployment
-- **Dimensions**: 10" wide × 12" tall on both models. The POD adds ~5"; with the door fully open, add ~4" more. See [Technical Specifications](technical-specifications.md) for details.
+- **Dimensions**: 10" wide × 12" tall on both models. The POD adds ~5"; with the door fully open, add ~4" more. See [Technical specifications](technical-specifications.md) for details.
   - **R1:** cage length **32"** without the POD and with the door closed (~**41"** total length)
   - **R2:** cage length **36"** without the POD and with the door closed (~**45"** total length)
 - **Weight**:
@@ -110,4 +110,4 @@ The capture system filters false triggers:
 
 ---
 
-For detailed specifications, see [Technical Specifications](technical-specifications.md).
+For detailed specifications, see [Technical specifications](technical-specifications.md).

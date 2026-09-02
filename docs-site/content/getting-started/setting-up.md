@@ -141,9 +141,9 @@ Fully tighten all the bolts (including the handle bolts you hand-tightened earli
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/mountingpod-QNbpObq2HrJNpyF1U65sTXmcDakQ8R.mp4" %}
 
 {% hint style="warning" %}
-If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
+If you have issues, see [Common issues](../troubleshooting/common-issues.md).
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/DSC03816.JPG" alt=""><figcaption><p>The OcuTrap hardware now set up!</p></figcaption></figure>
 
-**Next:** add the trap to your account: [Adding a trap to your account](app/adding-a-trap-to-your-account.md). To learn what each part of the trap does, see [Hardware Features](hardware-features.md).
+**Next:** add the trap to your account: [Adding a trap to your account](app/adding-a-trap-to-your-account.md). To learn what each part of the trap does, see [Hardware features](hardware-features.md).

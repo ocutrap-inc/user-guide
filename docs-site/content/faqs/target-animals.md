@@ -26,12 +26,12 @@ Raccoons, cats, and skunks are **nocturnal or crepuscular**: most of their activ
 
 * **Bait and arm the trap before dusk**, so it's ready when your target starts moving.
 * **Expect alerts overnight.** Captures most often happen in the hours after sunset and before sunrise. Make sure your [notification settings](../getting-started/app/notification-settings.md) will reach you.
-* **Plan a morning check.** A captured animal shouldn't sit in the trap through a hot or cold day. See [Handling & Releasing a Captured Animal](../getting-started/handling-a-captured-animal.md).
-* **Not sure what's visiting?** Run [Scouting Mode](../getting-started/app/scouting-mode.md) for a night or two first. It photographs whatever shows up without closing the door, so you know what you're targeting before you arm.
+* **Plan a morning check.** A captured animal shouldn't sit in the trap through a hot or cold day. See [Handling and releasing a captured animal](../getting-started/handling-a-captured-animal.md).
+* **Not sure what's visiting?** Run [Scouting mode](../getting-started/app/scouting-mode.md) for a night or two first. It photographs whatever shows up without closing the door, so you know what you're targeting before you arm.
 
 ## Will it fit? Cage size and geometry
 
-The cage interior is **10" wide × 12" high**, and **36" long** on the R2 (**32"** on the R1). See [Technical Specifications](../getting-started/technical-specifications.md) for full dimensions.
+The cage interior is **10" wide × 12" high**, and **36" long** on the R2 (**32"** on the R1). See [Technical specifications](../getting-started/technical-specifications.md) for full dimensions.
 
 | Fit | Animals | Notes |
 | --- | --- | --- |
@@ -50,17 +50,17 @@ These animals are a poor match for the trap:
 * **Birds and reptiles.** Detection is not designed or validated for them.
 
 {% hint style="warning" %}
-**Targeting something on the small end of the range?** Validate with [Scouting Mode](../getting-started/app/scouting-mode.md) first. If your target animal shows up in scouting photos and registers a **Scout Trigger** at your chosen capture distance, you know the trap can detect it. If it only appears in photos but never triggers, it's too small for reliable capture at that distance. Try a shorter capture distance, or reconsider whether the OcuTrap is the right tool.
+**Targeting something on the small end of the range?** Validate with [Scouting mode](../getting-started/app/scouting-mode.md) first. If your target animal shows up in scouting photos and registers a **Scout Trigger** at your chosen capture distance, you know the trap can detect it. If it only appears in photos but never triggers, it's too small for reliable capture at that distance. Try a shorter capture distance, or reconsider whether the OcuTrap is the right tool.
 {% endhint %}
 
 ## Setting up for your target
 
 Once you know your target species:
 
-1. Follow [Deploying Your Trap in the Field](../getting-started/deploying-in-the-field.md) for placement, capture distance, and the pre-deployment test.
-2. Set your capture distance for the animal's size. The default **8 in** works for most raccoon/cat/skunk setups. See [Distance Limits, Sensor Alerts & Errors](../getting-started/capture-behavior/distance-safety-and-alerts.md).
+1. Follow [Deploying your trap in the field](../getting-started/deploying-in-the-field.md) for placement, capture distance, and the pre-deployment test.
+2. Set your capture distance for the animal's size. The default **8 in** works for most raccoon/cat/skunk setups. See [Distance limits, sensor alerts and errors](../getting-started/capture-behavior/distance-safety-and-alerts.md).
 3. Use bait suited to your target and place it **behind the sensor**, near the back of the cage.
 
 ---
 
-**Related:** [Deploying Your Trap in the Field](../getting-started/deploying-in-the-field.md) · [Scouting Mode](../getting-started/app/scouting-mode.md) · [Common questions](common-questions.md) · [Technical Specifications](../getting-started/technical-specifications.md)
+**Related:** [Deploying your trap in the field](../getting-started/deploying-in-the-field.md) · [Scouting mode](../getting-started/app/scouting-mode.md) · [Common questions](common-questions.md) · [Technical specifications](../getting-started/technical-specifications.md)
