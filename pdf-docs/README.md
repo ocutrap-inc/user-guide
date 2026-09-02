@@ -21,13 +21,24 @@ Everything else the customer needs is pushed to `docs.ocutrap.com` via QR code.
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
-| `R1_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. Bare-minimum setup (charge → assemble → app → arm) plus a big QR code to the video guides. | `scripts/build_quick_start.py` |
-| `R1_Manual.pdf` | 20-page, letter-size, branded Installation & User Manual. Prints normally (one page per sheet, portrait — no 2-up). Full assembly, POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. Replaces the Google Docs "Manual v2". | `scripts/build_manual.py` (images in `pdf-docs/manual-images/`) |
+| `R2_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. R2 setup (charge → cut the shipping zip tie → mount the POD → app + arm) plus a big QR code to the video guides. | `scripts/build_quick_start_r2.py` |
+| `R2_Manual.pdf` | 17-page, letter-size, branded Installation & User Manual for the R2. Prints normally (one page per sheet, portrait — no 2-up). R2 setup flow, then POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. | `scripts/build_manual_r2.py` (images in `pdf-docs/manual-images/`) |
+| `R1_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. Bare-minimum R1 setup (charge → assemble → app → arm) plus a big QR code to the video guides. | `scripts/build_quick_start.py` |
+| `R1_Manual.pdf` | 20-page, letter-size, branded Installation & User Manual for the R1. Prints normally (one page per sheet, portrait — no 2-up). Full R1 assembly, POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. Replaces the Google Docs "Manual v2". | `scripts/build_manual.py` (images in `pdf-docs/manual-images/`) |
 | `inside_sticker.png` | LED/button reference graphic pre-applied inside the POD lid. | Hardware team |
 
-`pdf-docs/manual-images/` holds the photos/renders embedded in the manual,
-stored as plain git blobs. The TOC page numbers in `build_manual.py` are
-hard-coded — if you change the manual's layout, rebuild and re-verify them.
+The R2 ships with the door and motor installed, so the `R2_*` documents cover
+unbox → charge → cut the motor zip tie → mount the POD → battery in. The
+`R1_*` documents stay in the tree for R1 owners and reprints: they describe the
+R1 assembly build with R1 photos and must not be retitled R2. Every other
+chapter is shared between the two manuals, so a change to POD operation, LEDs,
+safety, warranty, or FCC copy has to be made in **both** `build_manual.py` and
+`build_manual_r2.py`.
+
+`pdf-docs/manual-images/` holds the photos/renders embedded in the manuals,
+stored as plain git blobs. The TOC page numbers in `build_manual.py` and
+`build_manual_r2.py` are hard-coded — if you change a manual's layout, rebuild
+and re-verify them against the built PDF's footer page numbers (pypdf).
 
 ## `.gitbook/assets/` — Customer downloads
 
@@ -81,8 +92,13 @@ From the repo root:
 ```bash
 pip3 install --user reportlab Pillow qrcode
 
-# 2-page Quick Start (shipped in box)
+# 2-page Quick Starts (shipped in box)
+python3 scripts/build_quick_start_r2.py
 python3 scripts/build_quick_start.py
+
+# Installation & User Manuals (shipped in box)
+python3 scripts/build_manual_r2.py
+python3 scripts/build_manual.py
 
 # 1-page Operation Cheat Sheet (online download)
 python3 scripts/build_cheat_sheet.py
@@ -91,12 +107,15 @@ python3 scripts/build_cheat_sheet.py
 ## When to update the hand-coded scripts
 
 - **Firmware changes that add/change LED patterns or button sequences**: update
-  the LED/button tables in `scripts/build_cheat_sheet.py` and
-  `scripts/build_quick_start.py`. Replace `inside_sticker.png` if the hardware
+  the LED/button tables in `scripts/build_cheat_sheet.py`,
+  `scripts/build_quick_start.py`, `scripts/build_quick_start_r2.py`, and both
+  manual scripts. Replace `inside_sticker.png` if the hardware
   team ships a new sticker design.
-- **Hardware revision (new parts list, different assembly steps)**: adjust the
-  4 setup cards in `scripts/build_quick_start.py` (text + referenced images
-  under `.gitbook/assets/`).
+- **Hardware revision (new parts list, different setup steps)**: adjust the
+  4 setup cards in the matching quick start script — `build_quick_start_r2.py`
+  for the R2 (images under `pdf-docs/manual-images/`, falling back to
+  `.gitbook/assets/`), `build_quick_start.py` for the R1 (images under
+  `.gitbook/assets/`) — and the setup chapter in the matching manual script.
 - **Contact/URL changes** (support email, dashboard URL, docs URL): update the
-  footer/support strings in both `build_quick_start.py` and
-  `build_cheat_sheet.py`.
+  footer/support strings in `build_quick_start.py`,
+  `build_quick_start_r2.py`, `build_cheat_sheet.py`, and both manual scripts.

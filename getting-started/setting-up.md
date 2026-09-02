@@ -4,11 +4,9 @@ description: >-
   handle, and POD. Includes the full assembly video.
 ---
 
-# Hardware Set Up
+# Hardware set up (OcuTrap R1)
 
-{% hint style="info" %}
-**This assembly guide and its photos show the OcuTrap R1.** The R2 uses the same door motor, POD, and electronics. If your R2 cage differs from the photos, follow the quick start card in the box and contact [support@ocutrap.com](mailto:support@ocutrap.com) with questions.
-{% endhint %}
+Have an R2? See [Set up your OcuTrap R2](setting-up-r2.md). The R2 ships with the door and motor installed.
 
 This guide walks you through assembling your OcuTrap R1 step by step, in three sections: **Door**, **Handle**, and **POD**. Follow each step carefully to ensure your OcuTrap functions correctly. When the hardware is done, continue to [Adding a trap to your account](app/adding-a-trap-to-your-account.md) for the app setup.
 

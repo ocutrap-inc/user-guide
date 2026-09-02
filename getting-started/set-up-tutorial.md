@@ -6,29 +6,37 @@ description: >-
 
 # Set-up Tutorial
 
-Setting up your OcuTrap has two parts: **assembling the hardware** and **connecting it to the app**. This page walks the whole path in order — follow the steps top to bottom, and open the linked guides when you want more detail or photos.
+Setting up your OcuTrap has two parts: **setting up the hardware** and **connecting it to the app**. This page walks the whole path in order — follow the steps top to bottom, and open the linked guides when you want more detail or photos.
 
 ***
 
 ## Step 1: Charge the battery
 
-Do this first so the battery charges while you assemble the trap.
+Do this first so the battery charges while you set up the trap.
 
 1. Open the small white box and find the charger.
 2. Charge the **blue battery** until the charger light turns **green** — a full charge takes about **5–6 hours**.
 
 ***
 
-## Step 2: Assemble the trap
+## Step 2: Set up the hardware
 
-Assembly covers the **door**, the **handle**, and the **POD** (the module that holds the camera, sensor, and electronics). Two guides cover the same build — written steps with photos, or follow-along videos:
+Follow the guide for your model.
+
+**OcuTrap R2.** Ships with the door and motor installed. Unbox, cut the shipping zip tie on the motor, mount the **POD** (the module that holds the camera, sensor, and electronics), insert the battery. About 10 minutes, no tools.
+
+{% content-ref url="setting-up-r2.md" %}
+[Set up your OcuTrap R2](setting-up-r2.md)
+{% endcontent-ref %}
+
+**OcuTrap R1.** Needs assembly: the **door**, the **handle**, and the **POD**. Two guides cover the same build, written steps with photos or follow-along videos.
 
 {% content-ref url="setting-up.md" %}
-[Hardware Set Up](setting-up.md)
+[Hardware set up (R1)](setting-up.md)
 {% endcontent-ref %}
 
 {% content-ref url="video-assembly.md" %}
-[Video Assembly](video-assembly.md)
+[Video Assembly (R1)](video-assembly.md)
 {% endcontent-ref %}
 
 {% hint style="warning" %}

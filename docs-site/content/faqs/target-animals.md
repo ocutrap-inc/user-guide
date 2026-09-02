@@ -1,18 +1,18 @@
 ---
 description: >-
-  The R1 is built for 5 to 25 lb wildlife like raccoons, feral cats, and
+  The OcuTrap is built for 5 to 25 lb wildlife like raccoons, feral cats, and
   skunks. Which animals fit the cage, and which ones it will not detect.
 ---
 
-# What animals is the OcuTrap R1 designed for?
+# What animals is the OcuTrap designed for?
 
-The OcuTrap R1 is built for **medium-sized nuisance wildlife** — animals roughly **5–25 lbs** that fit comfortably inside the cage. This page covers which species the trap is designed around, which ones are a poor match, and how to set your expectations honestly before you deploy.
+The OcuTrap R2 and R1 are built for **medium-sized nuisance wildlife** — animals roughly **5–25 lbs** that fit comfortably inside the cage. This page covers which species the trap is designed around, which ones are a poor match, and how to set your expectations honestly before you deploy.
 
 ---
 
 ## Primary target species
 
-The R1 was designed around three groups of animals:
+The trap was designed around three groups of animals:
 
 * **Raccoons** — the most common target. Adult raccoons fit the cage well and trigger the sensor reliably.
 * **Feral and stray cats** — a natural fit for the cage size, and a frequent use case for TNR (trap-neuter-return) programs and property managers.
@@ -31,7 +31,7 @@ Raccoons, cats, and skunks are **nocturnal or crepuscular**: most of their activ
 
 ## Will it fit? Cage size and geometry
 
-The cage interior is **10" wide × 12" high × 32" long** (see [Technical Specifications](../getting-started/technical-specifications.md) for full dimensions).
+The cage interior is **10" wide × 12" high**, and **36" long** on the R2 (**32"** on the R1). See [Technical Specifications](../getting-started/technical-specifications.md) for full dimensions.
 
 | Fit | Animals | Notes |
 | --- | --- | --- |
@@ -39,18 +39,18 @@ The cage interior is **10" wide × 12" high × 32" long** (see [Technical Specif
 | **Tight / poor fit** | Large dogs, coyotes, adult beavers, anything much over ~25 lbs | Too large to fully enter — the door can't close safely behind them |
 | **Poor match (too small)** | Mice, chipmunks, small squirrels, other very small rodents | Fit through the cage easily but are **not detected reliably** — see below |
 
-A good rule of thumb: the animal should be able to **walk fully inside the cage with room to spare** and reach bait placed near the back. If it has to squeeze in, or the door would close on its body, the R1 is the wrong size for that animal.
+A good rule of thumb: the animal should be able to **walk fully inside the cage with room to spare** and reach bait placed near the back. If it has to squeeze in, or the door would close on its body, the trap is the wrong size for that animal.
 
-## What the R1 is *not* designed for
+## What the OcuTrap is *not* designed for
 
 We'd rather be honest here than have you waste nights on the wrong tool:
 
-* **Very small rodents (mice, chipmunks, small squirrels).** The R1's sensor is tuned for medium-sized animals. Very small animals produce a weak detection signal and **may walk through the trap without ever triggering it** — especially at larger capture distances, where detection of small animals is less reliable. The R1 is not a rodent trap, and we don't recommend buying it for mice or rats.
+* **Very small rodents (mice, chipmunks, small squirrels).** The trap's sensor is tuned for medium-sized animals. Very small animals produce a weak detection signal and **may walk through the trap without ever triggering it** — especially at larger capture distances, where detection of small animals is less reliable. The OcuTrap is not a rodent trap, and we don't recommend buying it for mice or rats.
 * **Animals larger than the cage.** If the animal can't fully enter, the trap can't capture it safely.
 * **Birds and reptiles.** Detection is not designed or validated for them.
 
 {% hint style="warning" %}
-**Targeting something on the small end of the range?** Don't take our word for it — or the trap's. Validate with [Scouting Mode](../getting-started/app/scouting-mode.md) first: if your target animal shows up in scouting photos and registers a **Scout Trigger** at your chosen capture distance, you know the trap can actually detect it. If it only appears in photos but never triggers, it's too small for reliable capture at that distance — try a shorter capture distance, or reconsider whether the R1 is the right tool.
+**Targeting something on the small end of the range?** Don't take our word for it — or the trap's. Validate with [Scouting Mode](../getting-started/app/scouting-mode.md) first: if your target animal shows up in scouting photos and registers a **Scout Trigger** at your chosen capture distance, you know the trap can actually detect it. If it only appears in photos but never triggers, it's too small for reliable capture at that distance — try a shorter capture distance, or reconsider whether the OcuTrap is the right tool.
 {% endhint %}
 
 ## Setting up for your target

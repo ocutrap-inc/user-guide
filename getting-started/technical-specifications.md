@@ -136,13 +136,15 @@ OcuTrap uses a two-step detection process to prevent false triggers from rain, d
 
 ## What's in the Box
 
-* OcuTrap R2 smart cage
+* OcuTrap R2 smart cage, with the door and motor installed
+* POD (electronics module)
 * 5,200 mAh (56 Wh) 12 V lithium-ion battery
 * 1 A battery charger
 * Quick start guide
-* Assembly hardware
 
-R1 units shipped with the 10,000 mAh (111 Wh) battery and its 2 A charger.
+No tools required. Cut the shipping zip tie, mount the POD, insert the battery, and add the trap in the app. See [Set up your OcuTrap R2](setting-up-r2.md).
+
+R1 units shipped with the 10,000 mAh (111 Wh) battery and its 2 A charger, plus the assembly hardware for the door and handle.
 
 ***
 

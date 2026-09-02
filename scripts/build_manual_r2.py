@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
 """
-Build the OcuTrap R1 Installation & User Manual — letter-size, print-ready PDF.
+Build the OcuTrap R2 Installation & User Manual — letter-size, print-ready PDF.
 
-Replaces the Google Docs "Manual v2" (half-letter, 24 pages) with a branded,
-letter-portrait manual that prints normally (one page per sheet, no 2-up).
-Content parity with Manual v2: unboxing, assembly, app setup, POD operation,
-weather, maintenance, LED reference, battery safety, finger/animal safety,
-use restrictions, warranty, FCC, and laser safety.
+The R2 ships with the door and motor installed, so the setup chapter is
+unbox, charge, cut the shipping zip tie, mount the POD, battery in. Every
+later chapter (POD operation, weather, maintenance, LED reference, battery
+safety, finger/animal safety, use restrictions, warranty, FCC, laser safety)
+is shared with the R1 manual.
 
 Source of truth for content: docs.ocutrap.com (canonical knowledge base)
+Reference:                   getting-started/setting-up-r2.md
 Images:                      pdf-docs/manual-images/ (plain git blobs)
+
+The R1 manual (full assembly build) lives in scripts/build_manual.py.
 
 Usage:
     pip install reportlab Pillow qrcode
-    python scripts/build_manual.py
+    python scripts/build_manual_r2.py
 
-Output: pdf-docs/printed/R1_Manual.pdf
+Output: pdf-docs/printed/R2_Manual.pdf
 """
 
 import os
@@ -44,7 +47,7 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ASSETS = os.path.join(REPO_ROOT, ".gitbook", "assets")
 IMAGES = os.path.join(REPO_ROOT, "pdf-docs", "manual-images")
 OUT_DIR = os.path.join(REPO_ROOT, "pdf-docs", "printed")
-OUTPUT = os.path.join(OUT_DIR, "R1_Manual.pdf")
+OUTPUT = os.path.join(OUT_DIR, "R2_Manual.pdf")
 LOGO = os.path.join(ASSETS, "LogoMakr-1uMIUJ-300dpi (2).png")
 
 DOCS_URL = "https://docs.ocutrap.com"
@@ -321,7 +324,7 @@ def on_page(canvas, doc):
     canvas.setFont("Helvetica-Bold", 8)
     canvas.setFillColor(BRAND_DARK)
     canvas.drawString(MARGIN, PAGE_H - 0.48 * inch,
-                      "OcuTrap R1 — Installation & User Manual")
+                      "OcuTrap R2 — Installation & User Manual")
     canvas.setFont("Helvetica", 8)
     canvas.setFillColor(MUTED)
     canvas.drawRightString(PAGE_W - MARGIN, PAGE_H - 0.48 * inch, DOCS_URL)
@@ -347,7 +350,7 @@ def cover(story):
         story.append(logo)
     story.append(Spacer(1, 0.5 * inch))
     story.append(Paragraph(
-        "OcuTrap R1",
+        "OcuTrap R2",
         ParagraphStyle("CT1", parent=sH1, fontSize=34, leading=38,
                        alignment=TA_CENTER, textColor=BRAND_DARK)))
     story.append(Paragraph(
@@ -362,7 +365,7 @@ def cover(story):
     story.append(Spacer(1, 0.45 * inch))
     notice = Table([[Paragraph(
         "<b>Please read this manual fully before assembling or operating "
-        "your OcuTrap R1.</b>",
+        "your OcuTrap R2.</b>",
         ParagraphStyle("CN", parent=sBody, alignment=TA_CENTER,
                        fontSize=11, leading=14, spaceAfter=0))]],
         colWidths=[5.4 * inch])
@@ -393,19 +396,20 @@ def contents_and_unboxing(story):
     toc = [
         ("Unboxing and Initial Inspection", "3"),
         ("Hardware Setup", "3"),
-        ("Section 1 — Handle Assembly", "4"),
-        ("Section 2 — Door Assembly", "5"),
-        ("Section 3 — Motor &amp; POD Assembly", "7"),
-        ("Section 4 — App Setup", "7"),
-        ("Operating the POD", "8"),
-        ("Weather", "11"),
-        ("Routine Maintenance", "11"),
-        ("LED Indicator Reference", "12"),
-        ("Battery Safety Precautions", "13"),
-        ("Safety Warnings — Moving Parts &amp; Animal Handling", "15"),
-        ("Safety Information, Restrictions, and Notices", "15"),
-        ("OcuTrap R1 Hardware Warranty", "16"),
-        ("FCC Compliance and Laser Safety", "18"),
+        ("Charge the Battery", "3"),
+        ("Cut the Motor Zip Tie", "4"),
+        ("Mount the POD on the Back", "4"),
+        ("Insert the Battery and Power On", "4"),
+        ("App Setup", "5"),
+        ("Operating the POD", "5"),
+        ("Weather", "8"),
+        ("Routine Maintenance", "8"),
+        ("LED Indicator Reference", "9"),
+        ("Battery Safety Precautions", "10"),
+        ("Safety Warnings &mdash; Moving Parts &amp; Animal Handling", "12"),
+        ("Safety Information, Restrictions, and Notices", "12"),
+        ("OcuTrap R2 Hardware Warranty", "13"),
+        ("FCC Compliance and Laser Safety", "15"),
     ]
     rows = [[Paragraph(t, sTOC),
              Paragraph(p, ParagraphStyle("TP", parent=sTOC,
@@ -425,12 +429,15 @@ def contents_and_unboxing(story):
     story.append(section_heading("Unboxing and Initial Inspection"))
     story.append(Spacer(1, 4))
     story.append(Paragraph(
-        "Carefully unpack your OcuTrap R1 and check that all components "
-        "are included:", sBody))
+        "Carefully unpack your OcuTrap R2 and check that everything is "
+        "there:", sBody))
+    story.extend(bullets([
+        "<b>Cage</b>, with the door and motor already installed",
+        "<b>Parts box</b>: battery, charger, POD, quick start card",
+    ]))
     story.append(Spacer(1, 6))
     story.append(img_row([
-        ("cage.png", "Cage", 2.2 * inch),
-        ("parts-box.png", "Parts box", 2.2 * inch),
+        ("cage.png", "OcuTrap cage", 2.2 * inch),
     ], USABLE_W))
     story.append(Spacer(1, 8))
     story.append(callout("Before you continue", [
@@ -438,20 +445,41 @@ def contents_and_unboxing(story):
         "or appears damaged, halt installation and contact OcuTrap Support "
         "at <b>support@ocutrap.com</b> with your trap ID.",
     ], kind="note"))
+    story.append(Spacer(1, 6))
+    story.append(callout("About the photos", [
+        "Photos of the R2 cage are coming. The POD, battery, buttons, LEDs, "
+        "and app are identical on the R2 and the R1, so those photos and "
+        "screenshots apply to both models.",
+    ], kind="note"))
     story.append(Spacer(1, 14))
 
 
 def hardware_setup(story):
     story.append(section_heading("Hardware Setup"))
     story.append(Spacer(1, 4))
+    story.append(Paragraph(
+        "The OcuTrap R2 ships with the door and the motor already "
+        "installed. Setup takes about 10 minutes and needs no tools.", sBody))
+    story.extend(numbered([
+        "<b>Charge the battery</b>",
+        "<b>Cut the motor zip tie</b>",
+        "<b>Mount the POD on the back</b>",
+        "<b>Insert the battery and power on</b>",
+        "<b>App setup</b>",
+    ]))
+    story.append(Spacer(1, 6))
+
+    # ---- Charge
     story.append(Paragraph("Charge the Battery", sH2))
     half = (USABLE_W - 0.3 * inch) / 2
     charge_text = [
         Paragraph(
-            "Fully charge the blue battery <b>before assembly</b> using the "
-            "charger found in the small white box. The charger light is "
-            "<b>red</b> while charging and <b>green</b> when full. A full "
-            "charge takes 4&ndash;5 hours.", sBody),
+            "Fully charge the blue battery <b>first</b>, using the charger "
+            "found in the small white box. The charger light is <b>red</b> "
+            "while charging and <b>green</b> when full. The R2 ships with "
+            "the <b>5,200 mAh (56 Wh)</b> pack and its <b>1 A</b> charger. "
+            "A full charge takes about <b>5 to 6 hours</b>, so start it now "
+            "and set up the rest of the trap while it charges.", sBody),
         Spacer(1, 4),
         Paragraph(
             "If anything appears damaged, contact "
@@ -468,155 +496,71 @@ def hardware_setup(story):
         ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
     ]))
     story.append(row)
-    story.append(Spacer(1, 6))
-    story.append(Paragraph(
-        "Assembly is divided into four sections. Carefully follow each step "
-        "to ensure your OcuTrap functions correctly and efficiently:", sBody))
-    story.extend(numbered([
-        "<b>Handle Assembly</b>",
-        "<b>Door Assembly</b>",
-        "<b>Motor &amp; POD Assembly</b>",
-        "<b>App Setup</b>",
-    ]))
-    story.append(PageBreak())
-
-    # ---- Section 1: Handle
-    story.append(Paragraph("Section 1 — Handle Assembly", sH2))
-    story.append(Paragraph("Step 1: Gather your components", sH3))
-    parts_col = bullets([
-        "4&times; 3&rdquo; bolt", "1&times; handle guard", "1&times; tube",
-        "4&times; washer", "2&times; upper tube plastic spacer",
-        "2&times; lower tube plastic handle spacer",
-        "2&times; in-trap bracket with press-fit nut",
-        "2&times; top metal bracket", "1&times; nut driver",
-    ])
-    handle = img("handle-render.png", half - 0.1 * inch, 1.9 * inch) or ""
-    row = Table([[parts_col, handle]], colWidths=[half, half + 0.3 * inch])
-    row.setStyle(TableStyle([
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("ALIGN", (1, 0), (1, 0), "CENTER"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 0),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-        ("TOPPADDING", (0, 0), (-1, -1), 0),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-    ]))
-    story.append(row)
-    story.append(Paragraph("Step 2: Assemble the handle", sH3))
-    story.extend(numbered([
-        "Center the handle guard on the trap.",
-        "Insert the two top handle assembly pieces into the holes in the "
-        "handle guard.",
-        "Slide the tube between the two handle guards and ensure it is "
-        "centered.",
-        "Place the bracket (with the press-fit nut) inside the trap and "
-        "hand-tighten the bolts.",
-        "Use the nut driver to fully tighten the bolts from the top, "
-        "ensuring the handle remains secure.",
-    ]))
-    story.append(Spacer(1, 6))
-    story.append(img_row([
-        ("handle-installed.png", "Handle installed (top view)", 2.0 * inch),
-        ("handle-in-trap.png", "In-trap view", 2.0 * inch),
-    ], USABLE_W))
-    story.append(PageBreak())
-
-    # ---- Section 2: Door
-    story.append(Paragraph("Section 2 — Door Assembly", sH2))
-    story.append(Paragraph("Step 1: Gather your components", sH3))
-    door_parts = bullets([
-        "2&times; brackets (top locking mechanism)", "2&times; black spacers",
-        "2&times; black capped nuts", "1&times; metal door",
-        "1&times; 12&rdquo; rod", "1&times; nut driver",
-        "1&times; nut assembly tool <i>(figure right)</i>",
-    ])
-    motor_parts = bullets([
-        "1&times; motor", "2&times; pins", "2&times; clevises",
-        "1&times; top motor bracket", "2&times; washers",
-        "2&times; 1&rdquo; bolt",
-    ])
-    nut_tool = img("nut-tool.png", 1.7 * inch, 1.3 * inch) or ""
-    third = USABLE_W / 3
-    row = Table(
-        [[[Paragraph("<b>Door</b>", sCellHead)] + door_parts,
-          [Paragraph("<b>Motor</b>", sCellHead)] + motor_parts,
-          nut_tool]],
-        colWidths=[third + 0.4 * inch, third - 0.2 * inch, third - 0.2 * inch])
-    row.setStyle(TableStyle([
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("ALIGN", (2, 0), (2, 0), "CENTER"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 0),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 6),
-        ("TOPPADDING", (0, 0), (-1, -1), 0),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-    ]))
-    story.append(row)
-    story.append(Paragraph("Step 2: Assemble the door mechanism", sH3))
-    story.append(Paragraph("Align the metal door inside the trap.", sBody))
-    story.extend(numbered([
-        "Thread the metal rod through the oval slot in the metal bracket "
-        "attached to the top of the solid metal trap door.",
-        "On each end of the rod: place the black spacer, secure it with "
-        "the black capped nut, then use the nut assembly tool and nut "
-        "driver on each end to tighten the nut until snug.",
-    ]))
-    story.append(Spacer(1, 4))
-    diagram = img("door-rod-diagram.png", 5.6 * inch, 1.7 * inch)
-    if diagram:
-        diagram.hAlign = "CENTER"
-        story.append(diagram)
-        story.append(Paragraph("Door rod, spacers, and capped nuts",
-                               sCaption))
     story.append(Spacer(1, 8))
-    story.append(Paragraph("Step 3: Assemble the motor", sH3))
-    motor_steps = numbered([
-        "Install the top bracket with washers and bolts. Tighten with the "
-        "nut driver.",
-        "Use the pins and clevises to secure the motor to the door at both "
-        "the top and bottom attachment points.",
-        "Feed the cable through the metal handle.",
-        "Verify that all components are securely fastened.",
-        "Check that the door moves smoothly and is properly aligned.",
-    ])
-    bracket = img("motor-bracket.png", half - 0.2 * inch, 1.7 * inch) or ""
-    row = Table([[motor_steps, bracket]], colWidths=[half + 0.3 * inch, half])
-    row.setStyle(TableStyle([
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("ALIGN", (1, 0), (1, 0), "CENTER"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 0),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-        ("TOPPADDING", (0, 0), (-1, -1), 0),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-    ]))
-    story.append(row)
-    story.append(Spacer(1, 4))
-    motor_img = img("motor-in-trap.png", 3.4 * inch, 2.5 * inch)
-    if motor_img:
-        motor_img.hAlign = "CENTER"
-        story.append(motor_img)
-        story.append(Paragraph(
-            "Motor secured to the door with pins and clevises", sCaption))
-    story.append(PageBreak())
 
-    # ---- Section 3: POD
-    story.append(Paragraph("Section 3 — Motor &amp; POD Assembly", sH2))
-    story.append(Paragraph("Step 1: Prepare the battery", sH3))
+    # ---- Zip tie
+    story.append(Paragraph("Cut the Motor Zip Tie", sH2))
     story.append(Paragraph(
-        "Ensure the battery is fully charged. Charging can take "
-        "4&ndash;5 hours.", sBody))
-    story.append(Paragraph("Step 2: Connect the wire to the POD", sH3))
+        "The motor is zip-tied to the cage for shipping. Remove the tie "
+        "before you power the trap on.", sBody))
     story.extend(numbered([
-        "Slide the POD down the rails on the trap until it is in place.",
+        "Cut the zip tie with snips or scissors.",
+        "Pull the cut tie free and discard it.",
+    ]))
+    story.append(Spacer(1, 4))
+    story.append(callout("⚠ Caution: Moving door", [
+        "&bull;&nbsp; Keep hands and fingers clear of the door path. The "
+        "door can swing once the tie is cut.",
+        "&bull;&nbsp; <b>Cut the zip tie only. Do not cut any wire.</b>",
+    ]))
+    story.append(Spacer(1, 8))
+
+    # ---- POD
+    story.append(Paragraph("Mount the POD on the Back", sH2))
+    story.append(Paragraph(
+        "The POD holds the camera, the distance sensor, and the "
+        "electronics. It slides onto rails on the back of the cage.", sBody))
+    pod_steps = numbered([
+        "Slide the POD down the rails on the back of the trap until it is "
+        "in place.",
+        "Attach the clip at the top to keep the POD in place.",
         "Attach the motor&rsquo;s wire to the POD using the locking screw "
         "connector, ensuring a secure connection.",
         "Use the top latch to secure the POD in place.",
+    ])
+    pod_img = img("pod-panel.png", half - 0.1 * inch, 1.8 * inch) or ""
+    row = Table([[pod_steps, pod_img]], colWidths=[half + 0.3 * inch, half])
+    row.setStyle(TableStyle([
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("ALIGN", (1, 0), (1, 0), "CENTER"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+        ("TOPPADDING", (0, 0), (-1, -1), 0),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
     ]))
-    story.append(Spacer(1, 4))
-    story.append(Paragraph(
-        "At this point, your hardware setup is complete.", sBody))
-    story.append(Spacer(1, 10))
+    story.append(row)
+    story.append(Spacer(1, 8))
 
-    # ---- Section 4: App setup
-    story.append(Paragraph("Section 4 — App Setup", sH2))
+    # ---- Battery in
+    story.append(Paragraph("Insert the Battery and Power On", sH2))
+    story.extend(numbered([
+        "Open the POD latch.",
+        "Place the charged battery in the bracket at the bottom of the POD.",
+        "Plug the battery into the POD using the yellow connectors. Push "
+        "straight in until fully seated.",
+        "Tuck the cables along the edge of the enclosure, clear of the door "
+        "closing points, so the wires do not get squished.",
+        "Close the latch fully to maintain waterproofness.",
+        "Press the <b>Power</b> button to turn the trap on.",
+    ]))
+    story.append(Paragraph(
+        "Watch the status LED. <b>Breathing cyan</b> means the trap is "
+        "connected to the cloud and ready. Finding cellular can take up to "
+        "10 minutes on first power-up.", sBody))
+    story.append(Spacer(1, 8))
+
+    # ---- App setup
+    story.append(Paragraph("App Setup", sH2))
     story.append(Paragraph("Step 1: Create an account", sH3))
     acct = Paragraph(
         "Go to <b>base.ocutrap.com</b> (or scan the QR code on the right) "
@@ -1014,12 +958,12 @@ def safety_warnings(story):
 
 
 def warranty(story):
-    story.append(section_heading("OcuTrap R1 Hardware Warranty"))
+    story.append(section_heading("OcuTrap R2 Hardware Warranty"))
     story.append(Spacer(1, 4))
     story.append(Paragraph("1. Warranty Coverage", sH2))
     story.append(Paragraph(
         "OcuTrap, Inc. (&ldquo;Company&rdquo;) warrants that the "
-        "&ldquo;OcuTrap R1&rdquo; hardware will be free from defects in "
+        "&ldquo;OcuTrap R2&rdquo; hardware will be free from defects in "
         "materials and workmanship under normal use and conditions for a "
         "period of 12 months from the date of original purchase by the end "
         "user (&ldquo;Warranty Period&rdquo;).", sBody))
@@ -1048,7 +992,7 @@ def warranty(story):
         "surges, extreme weather conditions, or other environmental "
         "factors beyond the Company&rsquo;s control.",
         "<b>Normal Wear and Tear:</b> cosmetic damage or normal wear and "
-        "tear not affecting the functionality of the OcuTrap R1.",
+        "tear not affecting the functionality of the OcuTrap R2.",
         "<b>Non-OcuTrap Parts or Accessories:</b> damage caused by the use "
         "of parts or accessories not authorized by OcuTrap, Inc.",
     ]))
@@ -1070,7 +1014,7 @@ def warranty(story):
         "solely to the repair or replacement of the defective product or "
         "parts at its discretion. The Company is not liable for any "
         "indirect, incidental, or consequential damages arising from the "
-        "use of, or inability to use, the OcuTrap R1, including any loss "
+        "use of, or inability to use, the OcuTrap R2, including any loss "
         "of profits, business interruption, or damage to other property.",
         sBody))
     story.append(Paragraph("6. Governing Law", sH2))
@@ -1231,7 +1175,7 @@ def main():
         OUTPUT, pagesize=letter,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=MARGIN, bottomMargin=MARGIN,
-        title="OcuTrap R1 Installation & User Manual",
+        title="OcuTrap R2 Installation & User Manual",
         author="OcuTrap, Inc.",
     )
     cover_frame = Frame(MARGIN, 0.6 * inch, USABLE_W,

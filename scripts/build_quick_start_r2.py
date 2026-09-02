@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
-Build the OcuTrap R1 Quick Start — a 2-page, letter-size, print-ready PDF.
+Build the OcuTrap R2 Quick Start — a 2-page, letter-size, print-ready PDF.
 
 Print single sheet, double-sided (flip on long edge). Folded in half for
-shipping; read unfolded. Focus: bare-minimum hardware setup + a push to the
-video guides at docs.ocutrap.com.
+shipping; read unfolded. The R2 ships with the door and motor installed, so
+the hardware side is: charge, cut the shipping zip tie, mount the POD,
+battery in. Plus a push to the video guides at docs.ocutrap.com.
 
 Source of truth for content: docs.ocutrap.com (canonical knowledge base)
-Reference:                   getting-started/setting-up.md
+Reference:                   getting-started/setting-up-r2.md
+
+The R1 card (assembly build) lives in scripts/build_quick_start.py.
 
 Usage:
     pip install reportlab Pillow qrcode
-    python scripts/build_quick_start.py
+    python scripts/build_quick_start_r2.py
 
-Output: pdf-docs/printed/R1_Quick_Start.pdf
+Output: pdf-docs/printed/R2_Quick_Start.pdf
 """
 
 import io
@@ -40,8 +43,9 @@ from reportlab.platypus import (
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ASSETS = os.path.join(REPO_ROOT, ".gitbook", "assets")
+IMAGES = os.path.join(REPO_ROOT, "pdf-docs", "manual-images")
 OUT_DIR = os.path.join(REPO_ROOT, "pdf-docs", "printed")
-OUTPUT = os.path.join(OUT_DIR, "R1_Quick_Start.pdf")
+OUTPUT = os.path.join(OUT_DIR, "R2_Quick_Start.pdf")
 LOGO = os.path.join(ASSETS, "LogoMakr-1uMIUJ-300dpi (2).png")
 
 DOCS_URL = "https://docs.ocutrap.com"
@@ -197,11 +201,13 @@ def fit_image(path, max_w, max_h, target_dpi=200):
 
 
 def asset(*names):
-    """Return the first existing asset path from the list of names."""
+    """Return the first existing image path, looking in pdf-docs/manual-images/
+    first and then .gitbook/assets/."""
     for n in names:
-        p = os.path.join(ASSETS, n)
-        if os.path.exists(p):
-            return p
+        for root in (IMAGES, ASSETS):
+            p = os.path.join(root, n)
+            if os.path.exists(p):
+                return p
     return None
 
 
@@ -222,7 +228,7 @@ def two_panel_header(panel_w, page_label):
     if logo:
         left_cells.append([logo])
         left_cells.append([Spacer(1, 4)])
-    left_cells.append([Paragraph("OcuTrap R1 Quick Start", title_style)])
+    left_cells.append([Paragraph("OcuTrap R2 Quick Start", title_style)])
     left_cells.append([Spacer(1, 1)])
     left_cells.append([Paragraph(page_label, subtitle_style)])
     left_half = Table(left_cells, colWidths=[panel_w])
@@ -410,29 +416,32 @@ def build_page_1(story, usable_w, qr_docs):
         (
             "1", "Charge the battery",
             "Charge with the pack&rsquo;s <b>black</b> connector only (not the yellow XT30). "
-            "<b>Red</b> = charging, <b>green</b> = full (~5&ndash;6 hrs with matched charger). "
-            "5200 mAh: 1A. 10k mAh (111 Wh): 2A.",
-            asset("DSC03816.JPG"),
+            "<b>Red</b> = charging, <b>green</b> = full. The R2 ships with the "
+            "<b>5,200 mAh (56 Wh)</b> pack and its <b>1A</b> charger: "
+            "about <b>5&ndash;6 hours</b>. Start it now.",
+            asset("charger.png"),
         ),
         (
-            "2", "Assemble the handle",
-            "Center the handle guard. Insert the tube and bolts. "
-            "Place the internal bracket inside the trap; hand-tighten.",
-            asset("unknown (5).png", "image (25).png"),
+            "2", "Unbox &amp; cut the motor zip tie",
+            "The motor is zip-tied to the cage for shipping. Cut the tie with snips "
+            "or scissors and remove it. <b>Do not cut any wire.</b> "
+            "Keep fingers clear of the door path. The door can swing once the "
+            "tie is cut.",
+            asset("cage.png"),
         ),
         (
-            "3", "Attach door &amp; motor",
-            "Thread the metal rod through the door bracket. "
-            "Pin the motor to the door and feed its cable through the handle tube.",
-            asset("image (28).png",
-                  "Use the nut driver to mount the top motor bracket with the bolt and washer.png"),
+            "3", "Mount the POD on the back",
+            "Slide the POD down the rails on the back of the cage; attach the top clip. "
+            "Connect the motor wire with the <b>locking screw connector</b>. "
+            "Secure the top latch.",
+            asset("pod-panel.png"),
         ),
         (
-            "4", "Slide in the POD",
-            "Slide the POD down the rails. Mate battery <b>XT30</b> (yellow) to trap&mdash;"
-            "10k pack: <b>female</b>; 5200: <b>male</b>. Do not force. "
-            "Connect motor wire; close latch firmly.",
-            asset("image.png", "unknown (7).png"),
+            "4", "Add the trap &amp; arm",
+            "Battery into the POD (yellow <b>XT30</b>, straight in), close the latch, "
+            "power on. Add the trap in the app, wait for <b>breathing cyan</b>, "
+            "open the door, then tap <b>Arm</b>.",
+            asset("app-add-trap.png"),
         ),
     ]
 
@@ -802,7 +811,7 @@ def build():
         OUTPUT, pagesize=letter,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=MARGIN, bottomMargin=MARGIN,
-        title="OcuTrap R1 Quick Start",
+        title="OcuTrap R2 Quick Start",
         author="OcuTrap, Inc.",
     )
     usable_w = PAGE_W - 2 * MARGIN
