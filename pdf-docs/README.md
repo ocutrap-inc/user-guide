@@ -16,29 +16,61 @@ docs.ocutrap.com.
 
 ## `pdf-docs/printed/` — Ships with the trap
 
-The Quick Start and the full manual are the paper documents in the box.
-Everything else the customer needs is pushed to `docs.ocutrap.com` via QR code.
+The in-box manual is the only paper document in the box. Everything else the
+customer needs is pushed to `docs.ocutrap.com` via QR code.
+
+Both models get a **half-letter booklet, 5.5 x 8.5 in portrait, 8 pages**.
+Every booklet is built in two flavors from one script:
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
-| `R2_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. R2 setup (charge → cut the shipping zip tie → mount the POD → app + arm) plus a big QR code to the video guides. | `scripts/build_quick_start_r2.py` |
-| `R2_Manual.pdf` | 17-page, letter-size, branded Installation & User Manual for the R2. Prints normally (one page per sheet, portrait — no 2-up). R2 setup flow, then POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. | `scripts/build_manual_r2.py` (images in `pdf-docs/manual-images/`) |
-| `R1_Quick_Start.pdf` | 2-page, letter-size. Printed double-sided, folded in half. Bare-minimum R1 setup (charge → assemble → app → arm) plus a big QR code to the video guides. | `scripts/build_quick_start.py` |
-| `R1_Manual.pdf` | 20-page, letter-size, branded Installation & User Manual for the R1. Prints normally (one page per sheet, portrait — no 2-up). Full R1 assembly, POD operation, weather, maintenance, LED reference, battery/finger/laser safety, use restrictions, warranty, FCC. Replaces the Google Docs "Manual v2". | `scripts/build_manual.py` (images in `pdf-docs/manual-images/`) |
+| `R2_Manual.pdf` | 8 half-letter pages in reading order. Cover, R2 set up (charge, cut the shipping zip tie, mount the POD, battery, power on, app, place and arm), buttons, status light, battery/weather/care, safety and legal. Also copied to `.gitbook/assets/R2_Manual.pdf` as the docs download. | `scripts/build_box_manual.py --model r2` |
+| `R2_Manual_print-2up.pdf` | The same 8 pages imposed onto 2 letter-landscape sheets (4 sheet sides) for saddle folding. **This is the file you print.** | same script |
+| `R1_Manual.pdf` | 8 half-letter pages in reading order. Same shape as the R2, with the R1 kit assembly (door, motor, handle) on pages 3 and 4. Also copied to `.gitbook/assets/R1_Manual.pdf`. | `scripts/build_box_manual.py --model r1` |
+| `R1_Manual_print-2up.pdf` | The R1 pages imposed onto 2 letter-landscape sheets (4 sheet sides). **This is the file you print.** | same script |
 | `inside_sticker.png` | LED/button reference graphic pre-applied inside the POD lid. | Hardware team |
 
-The R2 ships with the door and motor installed, so the `R2_*` documents cover
-unbox → charge → cut the motor zip tie → mount the POD → battery in. The
-`R1_*` documents stay in the tree for R1 owners and reprints: they describe the
-R1 assembly build with R1 photos and must not be retitled R2. Every other
-chapter is shared between the two manuals, so a change to POD operation, LEDs,
-safety, warranty, or FCC copy has to be made in **both** `build_manual.py` and
-`build_manual_r2.py`.
+### Print recipe
 
-`pdf-docs/manual-images/` holds the photos/renders embedded in the manuals,
-stored as plain git blobs. The TOC page numbers in `build_manual.py` and
-`build_manual_r2.py` are hard-coded — if you change a manual's layout, rebuild
-and re-verify them against the built PDF's footer page numbers (pypdf).
+1. Open the `*_print-2up.pdf` file (not the reading-order one).
+2. Print on **US letter**, **duplex**, **flip on the short edge**, scaling
+   **1 page per sheet** (the sheets are already letter landscape, so do not
+   let the driver shrink them to fit).
+3. You get 2 sheets per booklet. Fold each sheet in half.
+4. Nest **sheet 2 inside sheet 1**. Page order then reads 1 through 8.
+
+The imposition is generated, not hand-placed. For `n` booklet pages (`n` a
+multiple of 4) and sheets `k = 0 .. n/4-1`, with 1-indexed page numbers:
+
+```
+sheet k front = [ page n-2k   | page 2k+1   ]
+sheet k back  = [ page 2k+2   | page n-2k-1 ]
+```
+
+For n = 8 that is: sheet 1 front `[8 | 1]`, back `[2 | 7]`; sheet 2 front
+`[6 | 3]`, back `[4 | 5]`. A faint dashed fold line is drawn down the middle
+of the 2-up sheets only.
+
+### Rebuild
+
+```bash
+python3 scripts/build_box_manual.py --model all   # or --model r1 / --model r2
+cp pdf-docs/printed/R2_Manual.pdf .gitbook/assets/R2_Manual.pdf
+cp pdf-docs/printed/R1_Manual.pdf .gitbook/assets/R1_Manual.pdf
+```
+
+The script fails loudly if a booklet does not land on exactly 8 pages, because
+the imposition needs a multiple of 4. If you add content and it spills, give it
+another page (and keep the total a multiple of 4) rather than shrinking the
+type: the type scale in the script's docstring (body 11 pt on 14.5 pt, step
+titles 12 pt, headings 16 pt, table cells 10 pt, captions 9 pt, legal 8.5 pt,
+footer 8.5 pt) is a legibility floor. The R1 buttons+lights page is the one
+exception: it carries both reference tables and keeps 9.5 pt cells.
+
+`pdf-docs/manual-images/` holds the photos and renders embedded in the
+booklets, stored as plain git blobs. The R2 and R1 booklets share every page
+except set up, so a change to buttons, LEDs, safety, warranty, or FCC copy is
+made once in `build_box_manual.py` and lands in both.
 
 ## `.gitbook/assets/` — Customer downloads
 
@@ -47,6 +79,8 @@ sidebar as "Downloads") via GitBook's `{% file %}` syntax.
 
 | File | Purpose | Source of truth |
 | --- | --- | --- |
+| `R2_Manual.pdf` | The R2 in-box booklet, 8 half-letter pages in reading order. Copied verbatim from `pdf-docs/printed/`. | `scripts/build_box_manual.py --model r2` |
+| `R1_Manual.pdf` | The R1 in-box booklet, 8 half-letter pages in reading order. Copied verbatim from `pdf-docs/printed/`. | `scripts/build_box_manual.py --model r1` |
 | `R1_Operation_Cheat_Sheet.pdf` | One-page letter-size reference for users unfamiliar with the device: system LEDs, buttons, device states, safety. Hand-coded ReportLab document. | `scripts/build_cheat_sheet.py` |
 | `OcuTrap_Knowledge_Base.pdf` | Print-quality PDF rendering of the full GitBook docs. Generated by `scripts/build_kb_pdf.py` from the markdown in `SUMMARY.md`. **You must commit the regenerated PDF in the same PR as your docs change** — see "If you change the docs" below. | The GitBook markdown (driven by `SUMMARY.md`) |
 
@@ -90,15 +124,11 @@ PR keeps downloads current immediately and avoids a second bot commit.
 From the repo root:
 
 ```bash
-pip3 install --user reportlab Pillow qrcode
+pip3 install -r requirements-dev.txt
+pip3 install reportlab            # build-only, not in requirements-dev.txt
 
-# 2-page Quick Starts (shipped in box)
-python3 scripts/build_quick_start_r2.py
-python3 scripts/build_quick_start.py
-
-# Installation & User Manuals (shipped in box)
-python3 scripts/build_manual_r2.py
-python3 scripts/build_manual.py
+# In-box booklets (shipped in box + published as downloads)
+python3 scripts/build_box_manual.py --model all
 
 # 1-page Operation Cheat Sheet (online download)
 python3 scripts/build_cheat_sheet.py
@@ -107,15 +137,14 @@ python3 scripts/build_cheat_sheet.py
 ## When to update the hand-coded scripts
 
 - **Firmware changes that add/change LED patterns or button sequences**: update
-  the LED/button tables in `scripts/build_cheat_sheet.py`,
-  `scripts/build_quick_start.py`, `scripts/build_quick_start_r2.py`, and both
-  manual scripts. Replace `inside_sticker.png` if the hardware
-  team ships a new sticker design.
+  `BUTTON_ROWS` / `LIGHT_ROWS` in `scripts/build_box_manual.py` and the
+  matching tables in `scripts/build_cheat_sheet.py`. Replace
+  `inside_sticker.png` if the hardware team ships a new sticker design.
 - **Hardware revision (new parts list, different setup steps)**: adjust the
-  4 setup cards in the matching quick start script — `build_quick_start_r2.py`
-  for the R2 (images under `pdf-docs/manual-images/`, falling back to
-  `.gitbook/assets/`), `build_quick_start.py` for the R1 (images under
-  `.gitbook/assets/`) — and the setup chapter in the matching manual script.
-- **Contact/URL changes** (support email, dashboard URL, docs URL): update the
-  footer/support strings in `build_quick_start.py`,
-  `build_quick_start_r2.py`, `build_cheat_sheet.py`, and both manual scripts.
+  model-specific page builders in `scripts/build_box_manual.py`
+  (`r2_page2` / `r2_page3` for the R2, `r1_page2` through `r1_page5` for the
+  R1). Photos come from `pdf-docs/manual-images/` first, then
+  `.gitbook/assets/`.
+- **Contact/URL changes** (support email, app URL, docs URL): update the
+  constants at the top of `scripts/build_box_manual.py` and the footer strings
+  in `scripts/build_cheat_sheet.py`.
