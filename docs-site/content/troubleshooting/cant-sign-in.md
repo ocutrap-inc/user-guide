@@ -69,7 +69,7 @@ Email [support@ocutrap.com](mailto:support@ocutrap.com) from any address you can
 
 ## Coming From the Old OcuTrap App
 
-The old app at `base.ocutrap.com` and the new app at [app.ocutrap.com](https://app.ocutrap.com) use separate sign-ins. Your old password does not work on the new app.
+The old app at `base.ocutrap.com` and the new app at [app.ocutrap.com](https://app.ocutrap.com) use separate sign-ins. Your old password does not work on the new app. Full walkthrough: [Switching to the new OcuTrap app](../switching-to-the-new-app/README.md).
 
 * Your account already exists in the new app under the **same email** you used before. Do not sign up for a new one.
 * When it is your turn to move, you get an email from OcuTrap with a **Set your password** link. Open it, choose a new password, and sign in at [app.ocutrap.com](https://app.ocutrap.com).
