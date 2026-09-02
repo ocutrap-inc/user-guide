@@ -43,6 +43,7 @@ For full details, see the [Scouting Mode](scouting-mode.md) page.
 Below the arm mode is the main door control:
 
 * **Open door / Close door:** moves the door.
+* The control shows the last door state the trap reported.
 * When the trap is **Captured**, the primary action becomes **Disarm & release** (returns to Unarmed and opens the door) with a **Snooze** option for the capture reminders. See [After a Capture](after-capture.md).
 
 > **Releasing a captured animal:** tap **Open**. This releases the door and returns the trap to **Unarmed** in one step. The trap never auto-releases. See [After a Capture](after-capture.md).
