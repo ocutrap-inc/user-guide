@@ -1,6 +1,6 @@
 ---
 description: >-
-  How OcuTrap's GPS works: the 8-hour update interval, satellite and fix
+  How OcuTrap's GPS works: the fixed 8-hour update interval, satellite and fix
   requirements, manual updates, accuracy tips, and battery impact.
 ---
 
@@ -15,22 +15,20 @@ OcuTrap uses an integrated u-blox GPS module to provide location tracking and ma
 GPS is **battery-optimized by design**. Rather than continuously tracking location, OcuTrap uses strategic update intervals to maximize battery life while keeping you informed of trap locations.
 
 #### Default Behavior
-- **Update Interval**: Every 8 hours (default)
-- **First Boot Delay**: 5-minute delay after power-on before first GPS acquisition
-- **Automatic Capture Updates**: GPS automatically triggered when a capture occurs
+- **Update Interval**: Every 8 hours (fixed)
+- **First Boot Delay**: 15 minutes after boot before the first GPS acquisition
+- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
 - **Fix Requirements**: Minimum 5 satellites with a 3D fix for valid position
 
 ---
 
 ### GPS Settings
 
-#### GPS Interval
+#### Location (GPS)
 
-* Controls how frequently the GPS updates location data
-* **Default**: 8 hours (recommended for battery life)
-* Can be disabled to conserve battery life
-* Located in Settings → GPS Interval
-* Manual updates still possible through the interface when disabled
+Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery.
+
+* Located in **Settings → Location**
 
 #### GPS Status Indicators
 
@@ -68,7 +66,7 @@ When viewing trap locations, you'll see key metrics:
 
 1. Ensure device is outdoors with clear view of sky
 2. Wait up to 3 minutes for initial fix
-3. Check GPS Interval setting is not disabled
+3. Check that Location (GPS) is on in settings
 4. Try manual update by clicking location data
 5. If problems persist, verify no physical obstructions are blocking GPS antenna
 

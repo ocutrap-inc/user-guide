@@ -32,7 +32,7 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | Specification       | Value                                                             |
 | ------------------- | ----------------------------------------------------------------- |
 | **Actuator Type**   | Linear motor with DRV8873 motor controller                        |
-| **Close Speed**     | < 0.5 seconds                                                     |
+| **Close Speed**     | About 0.75 seconds                                                |
 | **Open Speed**      | < 1 second                                                        |
 | **Door States**     | Opening, Closing, Fully Open, Fully Closed, Error, Forced Stopped |
 | **Control Methods** | App remote control, physical button sequence                      |
@@ -46,9 +46,9 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | **Battery Type**                   | Rechargeable KBT 12V Lithium-ion (6-cell pack)  |
 | **Ships with R2**                  | 5,200 mAh (56 Wh)                       |
 | **Shipped with R1 (US)**           | 10,000 mAh (111 Wh)                     |
-| **Operating Voltage Range**        | 7.0V – 15.0V                            |
-| **Low Battery Warning (20%)**      | \~10.4V (internal, set by Battery Type) |
-| **Critical Battery Warning (10%)** | \~9.5V                                  |
+| **Battery Voltage Range**          | \~9.6 V (power-off) to 12.1 V (full), set by Battery Type |
+| **Low Battery Warning (20%)**      | \~10.4V (internal, set by Battery Type; 10.2 V on the 10,000 mAh pack) |
+| **Critical Battery Warning (10%)** | 10.2 V (10.0 V on the 10,000 mAh pack)  |
 | **Auto Power-Off Threshold**       | \~9.6V (internal, set by Battery Type)  |
 | **Runtime (10000 mAh)**            | ~40+ days per charge (typical usage)    |
 | **Runtime (5200 mAh)**             | \~21 days per charge (typical usage)    |
@@ -89,7 +89,7 @@ This page provides detailed technical specifications for the OcuTrap R2 smart wi
 | -------------------------- | ---------------------------------------- |
 | **Temperature & Humidity** | Environmental monitoring, alerts         |
 | **Ambient Light**          | Automatic day/night detection for camera |
-| **Accelerometer**          | Tilt detection, movement alerts          |
+| **Accelerometer**          | Orientation and movement sensing         |
 
 ### Temperature Thresholds
 

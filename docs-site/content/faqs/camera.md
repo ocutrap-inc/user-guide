@@ -12,11 +12,11 @@ The **OcuTrap camera** provides **daytime and night vision capabilities**, allow
 
 ### Camera Time-Lapse Mode
 
-OcuTrap can **automatically capture images** at set intervals in **any mode**: unarmed, armed, or scouting.
+OcuTrap can **automatically capture images** at set intervals in **every mode**: unarmed, armed, scouting, and after a capture.
 
 #### Configurable Option
 
-* **Photo Capture Frequency** – Defines how often the camera captures an image while the trap is armed.
+* **Photo Capture Frequency** – Defines how often the camera captures an image, in every mode (unarmed, armed, scouting, and after a capture).
 
 {% hint style="info" %}
 If images are too frequent, **reduce the frequency** to conserve battery and data. If you need more monitoring, **increase the frequency** to capture more activity.
@@ -44,8 +44,8 @@ If **nighttime images are washed out or too bright**, **lower** _Max IR Brightne
 
 | **Setting**           | **Min Value** | **Default Value** | **Max Value** |
 | --------------------- | ------------- | ----------------- | ------------- |
-| **Max IR Brightness** | `0`           | `50`              | `100`         |
-| **Min IR Brightness** | `0`           | `20`              | `100`         |
+| **Max IR Brightness** | `0`           | `100`             | `100`         |
+| **Min IR Brightness** | `0`           | `10`              | `100`         |
 
 ***
 
@@ -64,13 +64,13 @@ The camera **automatically adjusts** between **color mode** (daytime) and **nigh
 * **Dark Lux Threshold**
   * If ambient light **falls below this value**, the camera activates **night vision mode** (greyscale) and **enables IR**.
 * **Dynamic Light Adaptation**
-  * When light is **between the two thresholds**, the IR brightness **gradually adjusts** to optimize visibility.
+  * There is one lux threshold. **Below it**, IR brightness ramps between _Min IR Brightness_ and _Max IR Brightness_ as light drops. **Above it**, the camera shoots color with IR off.
 
 #### Limits for Light Thresholds
 
 | **Setting**              | **Min Value** | **Default Value** | **Max Value** |
 | ------------------------ | ------------- | ----------------- | ------------- |
-| _**Dark Lux Threshold**_ | `10.0`        | `20.0`            | `100.0`       |
+| _**Dark Lux Threshold**_ | `1.0`         | `25.0`            | `100.0`       |
 
 {% hint style="info" %}
 If **daytime images are still in greyscale**, **lower** _Dark Lux Threshold_ so the camera switches to color mode sooner.
@@ -99,8 +99,8 @@ If you experience **image quality issues**, use the guide below to fine-tune you
 
 | **Light Condition**                              | **Camera Mode**              | **IR Brightness**                       |
 | ------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| **Bright daylight** (above _dark lux threshold_) | **Color**                    | **Off**                                 |
-| **Low light/Night** (below _dark lux threshold_) | **Greyscale (night vision)** | _**Between Max and Min IR Brightness**_ |
+| **Bright daylight** (above the _dark lux threshold_) | **Color**                | **Off**                                 |
+| **Low light/Night** (below the _dark lux threshold_) | **Greyscale (night vision)** | _**Ramps between Min and Max IR Brightness as light drops**_ |
 
 ***
 

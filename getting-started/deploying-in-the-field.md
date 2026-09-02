@@ -28,7 +28,7 @@ What this means for setup: getting a good result is about **where you place the 
 ### For the best captures
 
 - **Put bait behind the sensor**, near the back of the cage, so the animal has to walk through the detection zone to reach it.
-- **Set the trap on level ground.** A level trap avoids nuisance tilt alerts once it's armed and helps the door operate cleanly.
+- **Set the trap on level ground.** A level trap helps the door open and close cleanly.
 - **Give it a stable base** so wind or a struggling animal won't shift it.
 
 ### For the best connection

@@ -28,19 +28,19 @@ The accessory system consists of:
 
 ### Accessory Button Behavior
 
-The Accessory button appears in the **Controls** panel when the accessory port is enabled.
+The accessory port has a single control: the **on-duration**, from 0 to 30,000 ms. 0 means off. There is no separate on/off toggle. The Accessory quick action appears in the **Controls** panel only when the duration is above 0.
 
 #### When the button is visible
 
-* The accessory port is enabled in **Settings**
+* The accessory port on-duration is above 0 in **Settings**
 * The device is online and able to receive commands
 
 #### When the button disappears
 
-* The accessory port is disabled in **Settings**
+* The accessory port on-duration is 0 in **Settings**
 * This is expected behavior and helps prevent accidental activation
 
-If you do not see the Accessory button, check that **Accessory = Enabled** in the device Settings -> More Settings menu.
+If you do not see the Accessory button, check that the accessory port on-duration is above 0 in the device Settings -> More Settings menu.
 
 ***
 
@@ -161,7 +161,7 @@ If the door motor is moved to an open or closed position while the accessory is 
 
 **Accessory button missing**
 
-* Confirm the accessory port is enabled in Settings
+* Confirm the accessory port on-duration is above 0 in Settings
 * Refresh the page after changing settings
 
 **Accessory does not power on**

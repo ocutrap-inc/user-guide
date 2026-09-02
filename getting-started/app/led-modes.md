@@ -22,7 +22,7 @@ The GIFs below are short visual examples of the most common **connection** patte
 
 ### OTA Firmware Update
 
-* **Blinking Magenta**: A firmware update is in progress. Leave the trap powered on and wait.
+* **Blinking Magenta**: A firmware update is in progress, or the trap is captured and running on battery. Leave the trap powered on and wait, and check the app for a capture.
 * <img src="../../.gitbook/assets/Rapidly Blinking Magenta.gif" alt="" data-size="line">
 
 ### Looking for Internet

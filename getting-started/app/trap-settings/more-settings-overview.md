@@ -17,15 +17,9 @@ Selects the battery configuration installed in the trap. This setting is used to
 
 ***
 
-#### Accessory
+#### Accessory Port on-duration
 
-Enables or disables the accessory port on the trap. When enabled, the accessory port can power external devices such as dispensers or add-on hardware.
-
-***
-
-#### Accessory Timing
-
-Controls how long the accessory port remains powered when activated. Shorter durations reduce power consumption, while longer durations may be required for certain accessories.
+The accessory port has a single control: how long it stays powered when activated, from 0 to 30,000 ms. Set it to 0 to turn the port off. There is no separate on/off toggle. The **Accessory** quick action appears in Controls only when the duration is above 0. The port can power external devices such as dispensers or add-on hardware.
 
 ***
 
@@ -58,7 +52,7 @@ Requires trap firmware v2.3.2-1010 or newer. Older firmware ignores this setting
 
 #### Camera Time Lapse
 
-Sets how often the camera captures periodic photos while the trap is armed. More frequent photos provide better visibility but increase power and data usage.
+Sets how often the camera captures periodic photos in every mode (unarmed, armed, scouting, and after a capture). More frequent photos provide better visibility but increase power and data usage.
 
 ***
 
@@ -104,14 +98,8 @@ Enables or disables alerts that occur before a capture event. These alerts can p
 
 ***
 
-#### GPS Interval
-
-Sets how often the trap updates its GPS location. Shorter intervals provide more frequent location updates but increase power consumption.
-
-***
-
 #### Location
 
-Enables or disables periodic location logging. When enabled, the trap logs its location at regular intervals for tracking and history purposes.
+Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery.
 
 ***
