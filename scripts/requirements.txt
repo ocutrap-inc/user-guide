@@ -1,9 +1,10 @@
 # Build dependencies for the hand-coded printed PDFs.
-# Used by scripts/build_quick_start.py and scripts/build_manual.py.
+# Used by scripts/build_box_manual.py and scripts/build_cheat_sheet.py.
 #   python3 -m pip install -r scripts/requirements.txt
 #
-# Note: build_manual.py hard-requires qrcode (it raises on a missing import);
-# build_quick_start.py degrades gracefully (skips QR) but should also have it.
+# build_box_manual.py degrades gracefully without qrcode (it prints a warning
+# and skips the QR blocks), but the shipped booklets are built with it.
 reportlab>=4.0
 pillow>=10.0
-qrcode[pil]>=7.0
+qrcode[pil]>=7.4
+pypdf>=4.0

@@ -4,3 +4,4 @@ pillow>=10.0
 pillow-heif>=0.18.0
 pypdf>=4.0
 requests>=2.31
+qrcode[pil]>=7.4
