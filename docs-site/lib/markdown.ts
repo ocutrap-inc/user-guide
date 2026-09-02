@@ -143,8 +143,15 @@ function renderFileCard(src: string, caption?: string): string {
   } catch {
     // rawName contained a stray "%"; keep it as-is
   }
-  const label = caption && caption.trim() ? caption.trim() : filename;
-  return `\n<a href="${href}" class="file-card" download>\n<span class="file-card__icon" aria-hidden="true">↓</span>\n<span class="file-card__body">\n<span class="file-card__name">${label}</span>\n<span class="file-card__hint">Download ${filename}</span>\n</span>\n</a>\n`;
+  // Block-form caption: first line is the card title, an optional second
+  // line replaces the default "Download <filename>" hint.
+  const lines = (caption ?? "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const label = lines[0] ?? filename;
+  const hint = lines[1] ?? `Download ${filename}`;
+  return `\n<a href="${href}" class="file-card" download>\n<span class="file-card__icon" aria-hidden="true">↓</span>\n<span class="file-card__body">\n<span class="file-card__name">${label}</span>\n<span class="file-card__hint">${hint}</span>\n</span>\n</a>\n`;
 }
 
 // GitBook's markdown export sprinkles numeric HTML character references into
