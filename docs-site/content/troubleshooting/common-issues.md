@@ -100,14 +100,14 @@ GPS updates are battery-optimized and may not update as frequently as expected.
 
 ### Understanding GPS Behavior
 
-- **Default interval**: Every 8 hours (not real-time)
-- **First boot delay**: 5-minute delay before first GPS acquisition
-- **Capture updates**: GPS automatically updates when a capture occurs
+- **Update interval**: Every 8 hours, fixed (not real-time)
+- **First boot delay**: 15 minutes after boot before the first GPS acquisition
+- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
 
 ### GPS Shows Old Location
 
 **Solution:**
-1. Wait for the next scheduled update (check your GPS Interval setting)
+1. Wait for the next scheduled update (the trap updates every 8 hours)
 2. Request a manual update: in the Trap Controls bar, tap **Location**
 3. Ensure GPS is not disabled in settings
 
@@ -179,13 +179,13 @@ See [Trap Not Sending Commands](trap-not-sending-commands.md) for detailed troub
 
 **Common Causes:**
 - Poor cellular signal (device uses more power searching)
-- GPS interval set too frequently
+- Location (GPS) left on where the trap cannot get a fix
 - Camera timelapse interval set too short
 - Cold temperatures reduce battery capacity
 
 **Solution:**
 1. Deploy in areas with good cellular coverage
-2. Increase GPS Interval (8+ hours recommended)
+2. Turn Location (GPS) off if you do not need location tracking
 3. Increase Camera Time Lapse interval (6+ hours recommended)
 4. In cold weather, expect reduced battery life
 5. Keep firmware updated (includes battery optimizations)
@@ -278,16 +278,9 @@ For LED status meanings, see the [LED Guide](../getting-started/led-guide.md).
 
 ---
 
-## Tilt / Movement Alerts
+## Trap Placement
 
-### Unexpected Tilt Alerts
-
-The trap sends tilt alerts when not level during armed mode.
-
-**Solution:**
-1. Ensure the trap is placed on level ground
-2. Check that the trap is stable and not shifting
-3. Only one tilt alert is sent per arming session to prevent spam
+Set the trap on level, stable ground so it cannot shift and the door can operate cleanly.
 
 ---
 

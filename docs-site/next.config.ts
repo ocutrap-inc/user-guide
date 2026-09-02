@@ -88,6 +88,13 @@ const nextConfig: NextConfig = {
         destination: "https://ocutrap.com",
         permanent: true,
       },
+      // Trap Test / demo mode was dropped from the app (SW-117); the page is
+      // gone, so send bookmarks to the field-test step (DOC-25).
+      {
+        source: "/device-management/trap-test-mode",
+        destination: "/getting-started/deploying-in-the-field",
+        permanent: true,
+      },
     ];
   },
 };

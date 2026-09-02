@@ -8,13 +8,13 @@ description: >-
 
 ### Current Models
 
-Battery capacity depends on your shipment region:
+Battery capacity depends on your trap model:
 
-* **KBT 10,000 mAh (111 Wh, 12V)** — standard for **US shipments**
+* **KBT 10,000 mAh (111 Wh, 12V)** — shipped with **US R1 units**
   * Estimated battery life: **~40+ days** per charge (under normal usage).
   * Charger: **2A (12V)**
   * Trap cable: **female XT30** on the battery harness (trap uses mating **male XT30**).
-* **KBT 5,200 mAh (56 Wh, 12V)** — included with **Canadian shipments**; also used on some earlier US traps
+* **KBT 5,200 mAh (56 Wh, 12V)** — ships with the **R2** and is the **app default**
   * Estimated battery life: **~21 days** per charge (under normal usage).
   * Charger: **1A (12V)**
   * Trap cable: **male XT30** on the yellow harness (trap uses **female XT30**).

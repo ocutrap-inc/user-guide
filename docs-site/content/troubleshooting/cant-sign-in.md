@@ -20,7 +20,7 @@ Reset it from the email we send you:
 
 If your mail app strips the button, the email also carries a reset code. Click **Enter Reset Code** in the app and paste it in. The code is **long** (32 characters of mixed letters and numbers) and **case-sensitive**, so paste it rather than typing it.
 
-Your new password needs at least 8 characters, a number, and a special character.
+Your new password needs at least 10 characters. No required mix of numbers or symbols. Common or breached passwords are rejected.
 
 {% content-ref url="../account-and-billing/resetting-password.md" %}
 [Resetting Password](../account-and-billing/resetting-password.md)

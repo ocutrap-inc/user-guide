@@ -25,7 +25,7 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 
 ### Deployment Tips
 - **Strong cellular signal** — Poor signal causes the trap to work harder to stay connected, draining battery faster
-- **GPS interval** — Keep at 8 hours (default) or disable if you don't need location tracking
+- **Location (GPS)** — The trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off if you don't need location tracking
 - **Camera timelapse** — Set to 6+ hours or disable if you only need capture photos
 - **Firmware updates** — Keep updated for the latest battery optimizations
 
@@ -42,7 +42,7 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 ### For Best Captures
 - Set your **capture distance** so the animal is fully inside before the door closes — the sensor is fixed in the POD, so there's nothing to position (see [Deploying Your Trap in the Field](deploying-in-the-field.md))
 - Place bait **behind the sensor**, near the back of the cage, so animals must pass through the detection zone
-- Level ground helps prevent tilt alerts when armed
+- Level ground helps the door open and close cleanly
 
 ### For Best Connectivity
 - Avoid metal buildings or dense structures that block cellular signal
@@ -141,7 +141,7 @@ Enable **Pre-Capture Alerts** to get notified when an animal is approaching:
 
 - Sends alert when object enters detection zone (before capture)
 - Includes a photo of what's approaching
-- 2-minute cooldown between alerts to prevent spam
+- 60-second cooldown between alerts to prevent spam
 - Great alongside [Scouting Mode](app/scouting-mode.md) when you want photos and alerts without animal captures
 
 **Use cases:**
@@ -193,7 +193,7 @@ If you're managing multiple traps:
 - **Name your traps** clearly in the app for easy identification
 - **Use the map view** to see all trap locations at once
 - **Share traps** with team members using appropriate permission levels
-- **Stagger GPS intervals** if deploying many traps to spread data usage
+- **Turn Location (GPS) off** on traps that stay in one known spot, to save battery
 
 ---
 

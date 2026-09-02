@@ -22,14 +22,14 @@ The integrated camera provides a clear view inside the trap with:
 - **Automatic night vision** — IR LEDs activate in low-light conditions
 - **Adjustable image quality** — Choose from 6 resolution sizes
 - **Image rotation** — 0°, 90°, 180°, or 270° to match your trap orientation
-- **Timelapse photos** — Periodic images while armed (configurable interval)
+- **Timelapse photos** — Periodic images in every mode: unarmed, armed, scouting, and after a capture (configurable interval)
 
 ---
 
 #### Door
 
 The door is powered by a **linear motor** for fast, reliable operation:
-- **Close speed**: Less than 0.5 seconds
+- **Close speed**: About 0.75 seconds
 - **Open speed**: Less than 1 second
 - **Remote control** — Open, close, and lock via the app
 - **Manual control** — Button sequence on the device; see [Using the Buttons on the Trap](using-the-trap-buttons.md)
@@ -43,7 +43,7 @@ Track your trap location using the integrated **GPS module**:
 - **Satellite positioning** — Displays number of satellites connected
 - **Battery-optimized** — Updates every 8 hours by default
 - **Map view** — See trap location on Map or Satellite view in the app
-- **Automatic updates** — GPS triggered on capture events
+- **Captures take priority** — A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
 
 ---
 
@@ -70,9 +70,9 @@ OcuTrap includes multiple sensors for monitoring and capture detection:
 #### Battery
 
 Rechargeable **12V lithium-ion battery** for extended field deployment:
-- **10,000 mAh (111 Wh)** — Standard for new traps; ~40+ days runtime per charge
-- **5,200 mAh (56 Wh)** — Canadian shipments (~21 days runtime)
-- **Battery Type setting** — Pick your pack in **Settings → Battery Type**; alert thresholds adjust automatically
+- **5,200 mAh (56 Wh)** — Ships with the R2 and is the app default (~21 days runtime)
+- **10,000 mAh (111 Wh)** — Shipped with US R1 units; ~40+ days runtime per charge
+- **Battery Type setting** — Pick your pack in **Settings → Battery Type**; alert thresholds adjust automatically. If you have the 10,000 mAh pack, set Battery Type to match
 - **Low battery alerts** — Notifications at 20% and 10% levels
 - **Auto-hibernation** — Protects battery when voltage drops too low
 
@@ -82,8 +82,8 @@ Rechargeable **12V lithium-ion battery** for extended field deployment:
 
 **12V accessory port** for powering external devices:
 - Connect dispensers, pumps, or other add-on hardware
-- Configurable activation duration (0–30 seconds)
-- Enable/disable via app settings
+- Configurable on-duration, 0 to 30,000 ms; 0 means off
+- The **Accessory** quick action appears in Controls only when the duration is above 0
 
 ---
 

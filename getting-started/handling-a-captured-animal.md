@@ -9,7 +9,7 @@ description: >-
 When an Armed trap closes on a verified detection, **it holds the animal until you release it** — there is no auto-release. This page covers what *you* do next, in the field. For how the door and app behave after a capture, see [After a Capture](app/after-capture.md).
 
 {% hint style="danger" %}
-The OcuTrap door closes in under half a second and can pinch or crush. A trapped animal may also be stressed and defensive. **Keep your hands, fingers, and face clear of the door's path at all times**, and keep children and pets away. See [Safety Information](../support/safety-information.md).
+The OcuTrap door closes in about 0.75 seconds and can pinch or crush. A trapped animal may also be stressed and defensive. **Keep your hands, fingers, and face clear of the door's path at all times**, and keep children and pets away. See [Safety Information](../support/safety-information.md).
 {% endhint %}
 
 ***

@@ -57,7 +57,7 @@ This setting is configured per trap:
 | **Approach photos** | On zone entry and during approach — **not** blocked by the motion gate that holds the alert |
 | **Door close** | Only when the animal is confirmed in the capture zone (Armed mode) |
 
-> **Testing tip:** `Trap Test` / demo mode is **not** the same as **Armed** mode. To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for its alert; approach photos are not held by that gate.
+> **Testing tip:** To verify pre-capture behavior, arm the trap normally with the door open and approach slowly. Scout mode uses the same motion gate for its alert; approach photos are not held by that gate.
 
 ### Need to Turn It Off?
 

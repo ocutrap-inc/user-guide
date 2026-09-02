@@ -43,7 +43,7 @@ A trap’s subscription can end because you canceled it, a payment failed, or it
 
 Because cellular data is part of your subscription, a trap **without an active subscription can no longer connect to the OcuTrap cloud.** This means:
 
-* **Remote control stops** — you can't open, close, arm, or adjust the trap from the app.
+* **Remote control stops**, except **Open door** and **Disarm & release**. Those stay available so an animal is never stuck behind a billing wall.
 * **Live captures and notifications stop** — the trap can't report events while disconnected.
 
 Reactivating your subscription restores full function. You can **reactivate at any time**, and the trap continues to work without interruption once the plan is active again:

@@ -136,12 +136,12 @@ The video walkthrough covers all assembly steps: battery preparation, door assem
 The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready enclosure.
 
 - **Connectivity:** 4G LTE cellular networks with nationwide multi-carrier coverage. Automatic network selection and fallback.
-- **Camera:** Automatic night vision with IR LEDs. Adjustable image quality across 6 resolution sizes (QVGA to UXGA). Image rotation (0°, 90°, 180°, 270°). Configurable time-lapse photography.
-- **Door:** Linear motor with closing speed under 0.5 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
-- **Location:** Integrated GPS module with satellite positioning. Battery-optimized updates every 8 hours by default. Map view in the app.
-- **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Tilt detection.
-- **Battery:** 12V lithium-ion rechargeable. 10,000 mAh (111 Wh) for new traps (~40+ days runtime); 5,200 mAh (56 Wh) variant for Canada (~21 days). Set your pack under **Settings → Battery Type**; low battery alerts fire at 20% and 10% with thresholds set automatically.
-- **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. Configurable 0–30 second activation timer. 3.0A maximum continuous current.
+- **Camera:** Automatic night vision with IR LEDs. Adjustable image quality across 6 resolution sizes (QVGA to UXGA). Image rotation (0°, 90°, 180°, 270°). Configurable time-lapse photography, which runs in every mode: unarmed, armed, scouting, and after a capture.
+- **Door:** Linear motor with a closing speed of about 0.75 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
+- **Location:** Integrated GPS module with satellite positioning. First fix 15 minutes after boot, then every 8 hours; the interval is fixed. Map view in the app.
+- **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Orientation and movement sensing.
+- **Battery:** 12V lithium-ion rechargeable. 5,200 mAh (56 Wh) ships with the R2 and is the app default (~21 days runtime); 10,000 mAh (111 Wh) shipped with US R1 units (~40+ days). Set your pack under **Settings → Battery Type**; if you have the 10,000 mAh pack, set Battery Type to match. Low battery alerts fire at 20% and 10% with thresholds set automatically.
+- **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. A single control sets the on-duration, 0 to 30,000 ms; 0 means off. 3.0A maximum continuous current.
 - **Smart Detection:** Two-step verification to reduce false triggers. Rain and debris filtering. Pre-capture notification alerts.
 
 ---
@@ -154,14 +154,16 @@ The OcuTrap R1 packs a full suite of smart hardware into a rugged, field-ready e
 | Weight | 24 lbs (complete unit) |
 | Target Species | 5–25 lb animals |
 | Trap Compatibility | Tomahawk-style trap frames |
-| Door Close Speed | < 0.5 seconds |
+| Door Close Speed | About 0.75 seconds |
 | Door Open Speed | < 1 second |
 | Door States | 6 states tracked (open, closed, opening, closing, locked, fault) |
-| Battery | KBT 12V Li-ion — 10,000 mAh / 111 Wh (new traps) / 5,200 mAh / 56 Wh (Canada) |
-| Operating Voltage | 7.0–15.0 V |
+| Battery | KBT 12V Li-ion — 5,200 mAh / 56 Wh (ships with R2, app default) / 10,000 mAh / 111 Wh (shipped with US R1) |
+| Battery Voltage Range | ~9.6 V (power-off) to 12.1 V (full), set by Battery Type |
+| Low Battery Warning (20%) | 10.4 V (10.2 V on the 10,000 mAh pack) |
+| Critical Battery Warning (10%) | 10.2 V (10.0 V on the 10,000 mAh pack) |
 | Runtime | ~40+ days (10000 mAh) / ~21 days (5200 mAh), usage dependent |
 | Connectivity | 4G LTE cellular, multi-network |
-| GPS Updates | Default every 8 hours; requires 5+ satellites / 3D fix |
+| GPS Updates | First fix 15 minutes after boot, then every 8 hours (interval fixed); requires 5+ satellites / 3D fix |
 | Distance Sensor | Up to 13 ft hardware range; the trap actively detects within ~34 in (875 mm); default capture distance ~8 in (200 mm) |
 | Camera Resolution | QVGA to UXGA (6 sizes) |
 | IR LEDs | Automatic activation; 0–100% brightness control |
@@ -249,20 +251,20 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| Time-Lapse Interval | 0–24 hours (default: 6 hours) |
+| Time-Lapse Interval | 0–24 hours (default: 6 hours); runs in every mode |
 | Quality | 1–6 (default: 2) |
 | Rotate Image | 0° / 90° / 180° / 270° |
 | Dark Lux Threshold | 1–100 (default: 25) |
-| Min / Max IR Brightness | 0–100% |
+| Min / Max IR Brightness | 0–100% (defaults: Min 10%, Max 100%) |
 | Image Cropping | Left / Right / Top / Bottom: 0–50% |
 
 ### Battery & Power
 
 | Setting | Range / Default |
 |---|---|
-| Battery Type | 5200 mAh / 10000 mAh selection |
+| Battery Type | 5200 mAh / 10000 mAh selection (default: KBT 5,200 mAh / 56 Wh) |
 | Battery Alerts | On / Off |
-| Power-Off Voltage | 7–12 V (default: 9.6 V) |
+| Power-Off Voltage | Set by Battery Type (9.6 V for both packs) |
 
 ### Temperature
 
@@ -277,9 +279,8 @@ Complete list of all configurable trap settings.
 
 | Setting | Range / Default |
 |---|---|
-| GPS Interval | Configurable (default: 8 hours) |
-| Location Tracking | On / Off |
-| Accessory Port | Enable / Disable; activation time 0–30 seconds |
+| Location (GPS) | On / Off. When on: first fix 15 minutes after boot, then every 8 hours. The interval is fixed. |
+| Accessory Port | On-duration 0–30,000 ms; 0 means off |
 | Capture Alert Interval | 0–48 hours (default: 8 hours) |
 | Enhanced Door Closing | On / Off (default: On) |
 | EDC Backoff (ms) | 30 to 130 ms in 10 ms steps (default: 50 ms) |
@@ -355,7 +356,7 @@ Hold the power button for 3 seconds for a proper shutdown.
 ### Maximizing Battery Life
 
 - Deploy in areas with strong cellular signal (poor signal increases power consumption)
-- Keep GPS interval at the default 8 hours, or disable GPS if not needed
+- The GPS interval is fixed at 8 hours; turn Location (GPS) off if you do not need location tracking
 - Set camera time-lapse to 6 hours or more
 - Use the 10,000 mAh battery for extended winter deployments
 
@@ -363,7 +364,7 @@ Hold the power button for 3 seconds for a proper shutdown.
 
 - Position the distance sensor **6–10 inches inside the cage entrance**
 - Place bait behind (deeper than) the sensor
-- Set the trap on level ground to avoid false tilt alerts
+- Set the trap on level ground so the door opens and closes cleanly
 
 ### Detection Zones
 
@@ -468,7 +469,7 @@ Off by default.
 
 ### Pre-Capture Notification
 
-When enabled in armed mode, the system monitors two zones: an early detection zone (approximately 6 inches before the capture distance) and the primary detection zone (at the set capture distance). When an animal approaches, a pre-capture photo and alert are sent with the measured distance. There is a 2-minute cooldown between alerts. Enabled by default.
+When enabled in armed mode, the system monitors two zones: an early detection zone (approximately 6 inches before the capture distance) and the primary detection zone (at the set capture distance). When an animal approaches, a pre-capture photo and alert are sent with the measured distance. There is a 60-second cooldown between alerts. Enabled by default.
 
 ---
 
@@ -497,7 +498,7 @@ Perform these checks at the start of every trapping session:
 |---|---|
 | Breathing Cyan | Connected to internet — fully operational |
 | Fast Blinking Cyan | Connecting to cloud |
-| Blinking Magenta | OTA firmware update in progress |
+| Blinking Magenta | OTA firmware update in progress, or captured (on battery) |
 | Blinking Green | Searching for cellular connection |
 | Fast Blinking Blue | Trying to join the cellular network and failing. Move to better coverage. Contact support if it persists |
 | Red Flash SOS (rapid blinks) | System error — contact support if >10 blinks |
@@ -517,7 +518,7 @@ Perform these checks at the start of every trapping session:
 | Blinking Yellow | Arming Trap |
 | Blinking White | Unarming Trap |
 
-> **Low Battery Startup:** If the battery is critically low, the LED shows solid red during boot. The device will send a cloud error notification and automatically enter hibernation. Once the battery has been recharged the trap wakes on its own (it briefly checks about once an hour), or press the power button to wake it immediately.
+> **Low Battery Startup:** If the battery is critically low, the LED shows solid red during boot. The device will send a cloud error notification and automatically enter hibernation. It wakes once an hour to re-check, for two attempts. If the battery is still low after that, it stays off until you press the Power button.
 
 ---
 
@@ -586,7 +587,7 @@ A: Yes. OcuTrap is suitable for commercial pest control, wildlife management, an
 A: The trap uses a two-step check and filters out rain and debris before closing the door. Adjusting the capture distance and keeping the sensor clean further reduces false triggers.
 
 **Q: Can I connect multiple traps?**
-A: Yes. Name traps clearly, use map view for tracking, share with team members, and stagger GPS intervals for efficient management.
+A: Yes. Name traps clearly, use map view for tracking, share with team members, and turn Location (GPS) off on traps that stay in one known spot.
 
 **Q: Is it safe around children?**
 A: The door closes rapidly and can cause injury. Always keep children away from the trap and never allow unsupervised access.
@@ -664,7 +665,7 @@ Quality is adjustable from 1 (lowest) to 6 (highest). Higher quality produces mo
 
 ### Night Vision
 
-The camera automatically switches between color (daylight) and grayscale with IR illumination (dark conditions). The switch is controlled by the Dark Lux threshold setting (default 25). IR brightness is adjustable from 0–100%.
+The camera automatically switches between color (daylight) and grayscale with IR illumination (dark conditions). There is one lux threshold, the Dark Lux threshold (default 25.0, range 1.0 to 100.0). Above it the camera shoots color with IR off. Below it, IR brightness ramps between Min IR Brightness (default 10%) and Max IR Brightness (default 100%) as light drops.
 
 ### Troubleshooting Camera Issues
 
@@ -679,7 +680,7 @@ The camera automatically switches between color (daylight) and grayscale with IR
 
 ## GPS
 
-GPS is battery-optimized with strategic update intervals. By default, position updates occur every 8 hours. The first update after boot has a 5-minute delay. GPS automatically updates upon a capture event.
+GPS is battery-optimized. Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery. A capture in progress pauses GPS until it finishes; GPS never interrupts a capture.
 
 ### Best Practices
 
@@ -733,7 +734,7 @@ The OcuTrap has six power modes that automatically optimize battery usage:
 | Armed Sleep Offline | 20-minute check-ins; captures reported at check-in | Flashes 3s |
 | Hibernation | Lowest power; no communication | Off |
 
-Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below an internal power-off threshold (about 9.6V, set automatically from your **Battery Type** — there are no manual voltage controls). During low-voltage hibernation the trap briefly wakes about once an hour, so it recovers on its own once the battery is recharged.
+Battery warnings are sent at 20% and 10% remaining charge. The device auto-hibernates below an internal power-off threshold (about 9.6V, set automatically from your **Battery Type** — there are no manual voltage controls). During low-voltage hibernation the trap wakes once an hour to re-check, for two attempts. If the battery is still low after that, it stays off until you press the Power button.
 
 ---
 
@@ -746,7 +747,7 @@ The accessory port is located on top of the POD and provides a 12V DC output for
 | Voltage | 12V DC |
 | Max Continuous Current | 3.0 A |
 | Polarity | Pin 1: Ground, Pin 2: +12V (not reversible) |
-| Activation Time | Configurable 0–30 seconds |
+| On-duration | Configurable 0–30,000 ms; 0 means off |
 
 ### Common Uses
 
@@ -810,7 +811,7 @@ OcuTrap uses multiple safeguards to reduce false triggers from rain and debris. 
 
 ### GPS Not Updating
 
-GPS updates at the configured interval (default 8 hours) with a 5-minute delay on first boot. The system automatically updates on capture.
+The trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. A capture in progress pauses GPS until it finishes; GPS never interrupts a capture.
 
 - Ensure GPS is enabled in settings
 - Place the trap outdoors with clear sky visibility
@@ -1013,7 +1014,7 @@ Shown under **Per-trap status** on the **Billing** page.
 | Active | Subscription paid; trap has full function |
 | Trial | Free trial period; no charges until the trial ends |
 | Past Due | A payment failed; trap still works. Select **Update payment** |
-| Suspended | Payment unresolved; trap stops taking images and accepting commands. Select **Resolve payment** |
+| Suspended | Payment unresolved; trap stops taking images and accepting commands, except **Open door** and **Disarm & release**. Select **Resolve payment** |
 | Canceled | Access continues until the end of the current billing cycle |
 | Paused | Monthly plan paused by you; billing stopped and trap dormant |
 | Inactive | No subscription was ever started for this trap |

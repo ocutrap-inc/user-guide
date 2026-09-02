@@ -102,7 +102,6 @@
 
 * [Deleting a Trap](deleting-a-trap.md)
 * [Selling or Transferring a Trap](device-management/selling-or-transferring-a-trap.md)
-* [Trap Test Mode](device-management/trap-test-mode.md)
 
 ## Account and Billing
 

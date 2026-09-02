@@ -73,7 +73,7 @@ The power management system optimizes energy consumption by adjusting connectivi
 * **Power Consumption**: Minimal.
 * **Indicators**: LED is powered off.
 * **Recovery**:
-  * If due to **low battery**, the trap **checks the battery about once an hour on its own** and recovers automatically once voltage is back (for example after solar charging) — or **replace/recharge** the battery to bring it back sooner.
+  * If due to **low battery**, the trap wakes **once an hour to re-check, for two attempts**. If the battery is still low after that, it stays off until you press the Power button. Recharge or replace the battery to bring it back sooner.
   * If due to a **power button press**, the user must **press the power button to wake the device**.
 
 > **Note:** In hibernation mode, **OcuTrap cannot receive messages or send notifications**.

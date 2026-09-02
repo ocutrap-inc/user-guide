@@ -110,6 +110,16 @@ entries:
         href: /getting-started/handling-a-captured-animal
   - color: magenta
     pattern: blinking
+    context: on battery, idle (one short flash every 3 seconds)
+    meaning: An animal is captured and the door is closed. This is the normal captured indication on battery power.
+    action: Check the app for the capture photo and release the animal when ready.
+    links:
+      - label: After a Capture
+        href: /getting-started/app/after-capture
+      - label: Handling a Captured Animal
+        href: /getting-started/handling-a-captured-animal
+  - color: magenta
+    pattern: blinking
     meaning: Firmware update in progress, or booting in safe mode.
     action: Leave the trap powered on and wait — do not disconnect the battery.
     links:
@@ -164,8 +174,7 @@ When the battery is **critically low at startup**, the following will happen:
 * The trap shows a **solid red LED** during boot.
 * Sends a cloud error notification (if connected).
 * Automatically shuts down and enters hibernation.
-* Low-battery hibernation auto-wakes about once an hour to re-check the battery (v946+); it recovers on its own once voltage is back. Only a manual power-button shutdown stays off until you press the power button.
-* If voltage is still low, it will repeat the cycle.
+* It wakes once an hour to re-check, for two attempts. If the battery is still low after that, it stays off until you press the Power button.
 
 To recover, charge or replace the battery and press the power button again.
 

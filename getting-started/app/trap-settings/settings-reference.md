@@ -11,7 +11,7 @@ This page provides a complete reference of all configurable settings on your Ocu
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
 | **Capture Distance** | 6–18 in (app presets) | 8 in | How far inside the trap an animal must be before the door closes. |
-| **Pre-Capture Alerts** | On/Off | On | Sends an alert when an animal enters the detection zone (before capture). Includes a 2-minute cooldown between alerts. |
+| **Pre-Capture Alerts** | On/Off | On | Sends an alert when an animal enters the detection zone (before capture). Includes a 60-second cooldown between alerts. |
 
 ### Detection Zones Explained
 
@@ -28,7 +28,7 @@ This two-step check prevents false triggers from rain, debris, or quick movement
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Camera Time Lapse** | 0–24 hours | 6 hours | How often the camera takes periodic photos while armed. Set to 0 to disable timelapse. |
+| **Camera Time Lapse** | 0–24 hours | 6 hours | How often the camera takes periodic photos in every mode (unarmed, armed, scouting, and after a capture). Set to 0 to disable timelapse. |
 | **Camera Quality** | 1–6 | 2 | Image resolution size (1=QVGA smallest, 6=UXGA largest). Higher = better quality but more data/power. |
 | **Rotate Image** | 0°, 90°, 180°, 270° | 0° | Rotates captured images. Useful if trap is mounted in non-standard orientation. |
 | **Dark Lux Threshold** | 1–100 lux | 25 lux | Light level below which the environment is considered "dark" and IR lighting activates. |
@@ -52,18 +52,20 @@ This two-step check prevents false triggers from rain, debris, or quick movement
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Battery Type** | 5200 mAh / 10000 mAh | Varies by region | Must match installed battery for accurate level estimation. |
+| **Battery Type** | 5200 mAh / 10000 mAh | KBT 5,200 mAh (56 Wh) | Must match installed battery for accurate level estimation. |
 | **Battery Alerts** | On/Off | On | Enables low battery notifications at 20% and 10% levels. |
-| **Power-Off Voltage** | 7.0–12.0V | 9.6V | Voltage threshold below which the trap automatically hibernates. |
+| **Power-Off Voltage** | Set by Battery Type (9.6 V for both packs) | 9.6V | Voltage threshold below which the trap automatically hibernates. |
 
 ### Battery Alert Thresholds
 
 | Alert Level | Default Voltage | Description |
 |-------------|-----------------|-------------|
 | 20% Warning | 10.4V | Low battery warning sent |
-| 10% Critical | ~9.5V | Critical battery warning sent |
+| 10% Critical | 10.2V | Critical battery warning sent |
 | Auto Power-Off | 9.6V | Trap enters hibernation to protect battery |
 | Reset Threshold | 11.0V | Battery must reach this level to clear low-battery flags |
+
+Voltages shown are for the 5,200 mAh pack. The 10,000 mAh pack uses 10.2 V (20%) and 10.0 V (10%).
 
 ---
 
@@ -84,15 +86,14 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Location (GPS)** | On/Off | On | Enables periodic GPS location updates. |
-| **GPS Interval** | Configurable | 8 hours | How often the trap updates its GPS position. Longer intervals save battery. |
+| **Location (GPS)** | On/Off | On | Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery. |
 
 ### GPS Behavior Details
 
-- **First fix delay**: 5-minute initial delay after boot before first GPS acquisition
+- **First fix delay**: 15 minutes after boot before the first GPS acquisition
 - **Acquisition timeout**: 3 minutes for first fix, 2 minutes for subsequent fixes
 - **Fix requirements**: Minimum 5 satellites, 3D fix required for valid position
-- **Automatic updates**: GPS automatically triggered on capture events
+- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
 
 ---
 
@@ -100,8 +101,7 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Accessory** | On/Off | Off | Enables the 12V accessory port for external devices. |
-| **Accessory Timing** | 0–30 seconds | — | Duration the accessory port remains powered when activated. |
+| **Accessory Port on-duration** | 0–30,000 ms | 0 (off) | How long the 12V accessory port stays powered when activated. 0 means off. The **Accessory** quick action appears in Controls only when the duration is above 0. |
 
 The 12V accessory port can power external devices like dispensers, pumps, or other add-on hardware.
 
@@ -154,7 +154,7 @@ Settings are accessible in different locations:
 ## Tips for Optimal Settings
 
 ### For Maximum Battery Life
-- Set GPS Interval to 8+ hours
+- Turn Location (GPS) off if you do not need location tracking
 - Use Camera Quality level 1–2
 - Set Camera Time Lapse to 6+ hours or disable
 - Reduce Maximum IR Brightness if images are overexposed
@@ -165,6 +165,6 @@ Settings are accessible in different locations:
 - Fine-tune IR brightness settings for your environment
 
 ### For Fastest Response
-- Keep GPS enabled for accurate location on captures
+- Keep Location (GPS) on so the map stays current
 - Enable Pre-Capture Alerts to see animals approaching
 - Use shorter Capture Alert Intervals if monitoring actively
