@@ -44,7 +44,7 @@ description: >-
 
 * **Capacities**: **5,200 mAh (56 Wh)** or **10,000 mAh (111 Wh)** — both 12 V, 6-cell packs. Tell the app which pack you have under **Settings → Battery Type** so low-battery alert thresholds match automatically.
 * **Battery Pack Size**: 70 x 55 x 40 mm (L x W x T)
-* **Battery Weight**: Approx. 295g (5,200 mAh pack) — the **5,200 mAh** pack ships with the R2 and is the app default, and the **10,000 mAh** pack shipped with US R1 units; see [Battery Overview](../getting-started/battery-overview.md) for both models
+* **Battery Weight**: Approx. 295g (5,200 mAh pack). The 5,200 mAh pack ships with the R2 and is the app default; the 10,000 mAh pack shipped with US R1 units. See [Battery Overview](../getting-started/battery-overview.md) for both.
 * **Charger Cable Length**: 90 cm
 
 ***
