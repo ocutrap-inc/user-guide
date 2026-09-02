@@ -23,5 +23,5 @@ Everyone you share the trap with can read **and edit** name and notes. Sharing h
 Where to go from here:
 
 {% content-ref url="settings-reference.md" %}
-[Settings Reference](settings-reference.md)
+[Settings reference](settings-reference.md)
 {% endcontent-ref %}

@@ -45,12 +45,12 @@ If the animal stays put, the trap stretches the spacing to protect battery: afte
 
 In **Scouting Mode**, this is how you watch what's visiting without closing the door. You'll also get a **Scout Alert** when an animal first enters and a **Scout Trigger** if it reaches the trigger distance. Repeat alerts from the same visit are throttled so your activity feed isn't flooded, but **photos keep coming** either way. The scouting photo interval is adjustable in settings (from 15 seconds up to 5 minutes, or off).
 
-See [Scouting Mode](scouting-mode.md) and [Pre-Capture Notification](../capture-behavior/pre-capture-notification.md).
+See [Scouting mode](scouting-mode.md) and [Pre-capture notification](../capture-behavior/pre-capture-notification.md).
 
 ## Capture and after-capture photos
 
 * **At capture:** the trap takes one photo when the door closes.
-* **After capture:** to document the catch, the trap takes a short burst (about every 15 seconds for the first minute), then settles into one **check-in photo every 2 hours** while the animal is held. See [After a Capture](after-capture.md).
+* **After capture:** to document the catch, the trap takes a short burst (about every 15 seconds for the first minute), then settles into one **check-in photo every 2 hours** while the animal is held. See [After a capture](after-capture.md).
 
 ## Time-lapse photos
 
@@ -72,4 +72,4 @@ A few things can stretch out the intervals above:
 
 ***
 
-Need image quality, night-vision, or resolution settings instead? See the [Camera FAQ](../../faqs/camera.md) and [Settings Reference](trap-settings/settings-reference.md).
+Need image quality, night-vision, or resolution settings instead? See the [Camera FAQ](../../faqs/camera.md) and [Settings reference](trap-settings/settings-reference.md).

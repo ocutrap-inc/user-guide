@@ -16,7 +16,7 @@ You can still do everything from the old app in the new one. A few things have c
 | Old app | New app |
 | --- | --- |
 | `base.ocutrap.com` | `app.ocutrap.com` |
-| Your old username and password | The **same email**, with a new password you set from your welcome email. Your account is already set up. See [Switching to the new OcuTrap app](README.md) |
+| Your old username and password | The **same email**, with a new password you set from your welcome email. Your account is already set up. See [Move to the new OcuTrap app](README.md) |
 
 ***
 

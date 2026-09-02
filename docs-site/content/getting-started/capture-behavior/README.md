@@ -6,7 +6,7 @@ description: >-
 
 # Door and capture features
 
-Deep dives on door closing, pre-capture alerts, and capture-distance / sensor behavior. For the full list of knobs in the app UI, see [Settings in the App](../app/trap-settings/README.md).
+Deep dives on door closing, pre-capture alerts, and capture-distance / sensor behavior. For the full list of knobs in the app UI, see [Settings in the app](../app/trap-settings/README.md).
 
 ### Main Settings
 
@@ -24,9 +24,9 @@ By clicking **More Settings**, you can access advanced configuration options, in
 
 * **Battery Type:** Select which battery your trap uses (**5,200 mAh** or **10,000 mAh**). The app adjusts the low-battery alert thresholds to match your pack automatically.
 * **Accessory Controls:** Set the accessory port on-duration, 0 to 30,000 ms. 0 means off.
-* [**Enhanced Door Closing** ](enhanced-door-closing.md): Improve lock reliability by enabling automatic door re-locking.
-* [**Pre-capture Notifications**](pre-capture-notification.md): Get alerts and images when an animal nears the trap, before capture
-* [**Distance limits, sensor alerts & errors**](distance-safety-and-alerts.md): App preset table, 6 in expanded zone, dirty-sensor arm gate + 5 min retry
+* [**Enhanced door closing**](enhanced-door-closing.md): Improve lock reliability by enabling automatic door re-locking.
+* [**Pre-capture notification**](pre-capture-notification.md): Get alerts and images when an animal nears the trap, before capture
+* [**Distance limits, sensor alerts and errors**](distance-safety-and-alerts.md): App preset table, 6 in expanded zone, dirty-sensor arm gate + 5 min retry
 * **Camera Controls:** Set up time lapse, image quality, and night vision thresholds.
 * **Sensor Settings:** Adjust capture distance and infrared brightness.
 * **Temperature Alerts:** Turn temperature alerts on or off. (Battery alerts are always on, with thresholds set automatically from your **Battery Type**. There are no manual battery voltage or percentage controls.)

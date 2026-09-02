@@ -15,5 +15,5 @@ Have an R1? It needs assembly first: [Hardware set up (OcuTrap R1)](setting-up.m
 {% endcontent-ref %}
 
 {% content-ref url="deploying-in-the-field.md" %}
-[Deploying Your Trap in the Field](deploying-in-the-field.md)
+[Deploying your trap in the field](deploying-in-the-field.md)
 {% endcontent-ref %}

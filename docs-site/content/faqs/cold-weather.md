@@ -102,7 +102,7 @@ Temperature swings common in cold weather (such as morning/evening transitions) 
 
 ## Related Pages
 
-* [Weather & Environmental Guidelines](weather-and-environmental-guidelines.md): Full environmental guidelines including heat and rain
-* [Battery Overview](../getting-started/battery-overview.md): Complete battery information
-* [Tips and Tricks](../getting-started/tips-and-tricks.md): General deployment tips
-* [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md): Detailed condensation troubleshooting
+* [Weather and environmental guidelines](weather-and-environmental-guidelines.md): Full environmental guidelines including heat and rain
+* [Battery overview](../getting-started/battery-overview.md): Complete battery information
+* [Tips and tricks](../getting-started/tips-and-tricks.md): General deployment tips
+* [Condensation on the camera](../troubleshooting/condensation-on-the-camera.md): Detailed condensation troubleshooting

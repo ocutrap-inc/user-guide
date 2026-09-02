@@ -26,9 +26,9 @@ With the default **8 in (200 mm)** capture distance:
 * As the animal approaches within the detection area (out to ~34 in), you may receive a **Pre-Capture Alert** with an approach photo.
 * At **~8 in (200 mm) or closer**, the trap confirms capture and the door closes.
 
-In the app, the notification shows as a **Pre-Capture Alert**. It tells you an animal is approaching before a capture happens and includes an approach photo when available. In [Scouting Mode](../app/scouting-mode.md) the same approach event shows as a **Scout Alert** instead. The distance the animal was detected at is recorded on the event details.
+In the app, the notification shows as a **Pre-Capture Alert**. It tells you an animal is approaching before a capture happens and includes an approach photo when available. In [Scouting mode](../app/scouting-mode.md) the same approach event shows as a **Scout Alert** instead. The distance the animal was detected at is recorded on the event details.
 
-> Units (inches or millimeters) depend on your trap's **Units** setting. For the full sensor model, see [Technical Specifications](../technical-specifications.md).
+> Units (inches or millimeters) depend on your trap's **Units** setting. For the full sensor model, see [Technical specifications](../technical-specifications.md).
 
 ### How to Enable or Disable
 
@@ -46,7 +46,7 @@ This setting is configured per trap:
 
 * See what’s approaching your trap before it’s too late
 * Detect non-target animals early (like pets or skunks)
-* Monitor animal behavior without needing a capture, or use [Scouting Mode](../app/scouting-mode.md) to watch activity without closing the door
+* Monitor animal behavior without needing a capture, or use [Scouting mode](../app/scouting-mode.md) to watch activity without closing the door
 * Improve trap placement and setup based on activity patterns
 
 ### What you'll see (alert motion gate, firmware v906+)

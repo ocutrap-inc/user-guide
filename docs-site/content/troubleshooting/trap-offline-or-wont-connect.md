@@ -38,7 +38,7 @@ A low or disconnected battery is one of the most common reasons a trap appears o
 
 After reconnecting the battery, **press the power button once** and watch the LED.
 
-For more on battery care and charging, see [Battery Overview](../getting-started/battery-overview.md).
+For more on battery care and charging, see [Battery overview](../getting-started/battery-overview.md).
 
 ## Step 2: Wake the Trap From Hibernation
 
@@ -58,7 +58,7 @@ To wake the trap:
 If the trap **immediately powers down again** after you press the power button, the battery may be too low. Charge or replace the battery before trying again.
 {% endhint %}
 
-For a deeper explanation of power states, see [Power Modes](../faqs/power-modes.md).
+For a deeper explanation of power states, see [Power modes](../faqs/power-modes.md).
 
 ## Step 3: Read the LED Status
 
@@ -75,7 +75,7 @@ Use the table below to interpret what the trap is doing. If the LED never turns 
 | Solid red during boot | Battery too low at startup | Charge or replace the battery |
 | No light | Powered off, hibernating, no battery, or failed boot | Reconnect battery and press power button |
 
-For a full list of LED patterns, including door and arm/unarm indicators, see the [LED Guide](../getting-started/led-guide.md).
+For a full list of LED patterns, including door and arm/unarm indicators, see the [LED guide](../getting-started/led-guide.md).
 
 ## Step 4: Check Cellular Coverage
 
@@ -87,7 +87,7 @@ If the LED is **blinking green for a long time**, the trap may not have enough c
 2. Give it a few minutes to search for signal and reconnect.
 3. The trap may reconnect automatically once signal improves.
 
-For antenna checks, placement and height fixes, and how long to wait before escalating, see [Improving a Weak Cellular Signal](improving-a-weak-cellular-signal.md).
+For antenna checks, placement and height fixes, and how long to wait before escalating, see [Improving a weak cellular signal](improving-a-weak-cellular-signal.md).
 
 {% hint style="warning" %}
 **Fast blinking blue** means the trap is trying to join the cellular network and cannot. Move it to better coverage and wait 10 minutes. If it is still blinking blue quickly, that is not something you can fix in the field. Contact [OcuTrap Support](../support/support.md) with your Trap ID.
@@ -121,7 +121,7 @@ Recommended actions:
 3. **Retry the command**.
 4. If the trap is **armed and offline**, allow time for the **next check-in** before trying again.
 
-For more on command failures specifically, see [Trap Not Sending Commands](trap-not-sending-commands.md).
+For more on command failures specifically, see [Trap not sending commands](trap-not-sending-commands.md).
 
 ## What To Send OcuTrap Support
 

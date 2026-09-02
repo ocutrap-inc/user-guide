@@ -32,7 +32,7 @@ Press the **User button** once. You get a short beep, and the LED shows the trap
 
 Press again to keep the display up longer.
 
-Every color and blink pattern is in the [LED Guide](led-guide.md).
+Every color and blink pattern is in the [LED guide](led-guide.md).
 
 ***
 
@@ -69,7 +69,7 @@ The door must be fully open before the trap will arm. Open it first, with the **
 * **A firmware update is in progress.** The LED pulses red. Wait a minute and try again.
 
 {% hint style="info" %}
-Scouting mode cannot be started from the buttons. Start it in the app. See [Scouting Mode](app/scouting-mode.md).
+Scouting mode cannot be started from the buttons. Start it in the app. See [Scouting mode](app/scouting-mode.md).
 {% endhint %}
 
 ***
@@ -81,7 +81,7 @@ Same sequence as arming. Press the **User button** once, then press the **Power 
 This works while the trap is armed, while it is scouting, and after a capture.
 
 {% hint style="info" %}
-After a capture, User then Power unarms the trap but leaves the door closed, so the animal stays contained. To open the door and release the animal, use the open sequence above. Details: [After a Capture](app/after-capture.md).
+After a capture, User then Power unarms the trap but leaves the door closed, so the animal stays contained. To open the door and release the animal, use the open sequence above. Details: [After a capture](app/after-capture.md).
 {% endhint %}
 
 Pressing either button on a captured trap also acknowledges the capture and quiets the capture reminder notifications.
@@ -94,7 +94,7 @@ Hold the **Power button** about 3 seconds. The LED flashes red while you hold, t
 
 It stays off until you press the **Power button** again.
 
-See [Power Modes](../faqs/power-modes.md) for what the trap is doing in each state.
+See [Power modes](../faqs/power-modes.md) for what the trap is doing in each state.
 
 ***
 
@@ -104,14 +104,14 @@ Arming, unarming, opening the door, closing the door, checking status, and power
 
 An armed trap keeps watching for animals with or without signal. The app catches up the next time the trap checks in, about every 20 minutes while armed.
 
-See [Connectivity & Coverage](connectivity-and-coverage.md) and [Improving a Weak Cellular Signal](../troubleshooting/improving-a-weak-cellular-signal.md).
+See [Connectivity and cellular coverage](connectivity-and-coverage.md) and [Improving a weak cellular signal](../troubleshooting/improving-a-weak-cellular-signal.md).
 
 ***
 
 ## See also
 
-* [Trap Control](app/trap-control.md): setting the mode and sending door commands from the app.
-* [After a Capture](app/after-capture.md): what Open and Unarm each do once the trap is closed.
-* [LED Guide](led-guide.md): every color and blink pattern.
-* [Handling & Releasing a Captured Animal](handling-a-captured-animal.md): what to do in the field.
-* [Improving a Weak Cellular Signal](../troubleshooting/improving-a-weak-cellular-signal.md): getting a trap back online.
+* [Trap control](app/trap-control.md): setting the mode and sending door commands from the app.
+* [After a capture](app/after-capture.md): what Open and Unarm each do once the trap is closed.
+* [LED guide](led-guide.md): every color and blink pattern.
+* [Handling and releasing a captured animal](handling-a-captured-animal.md): what to do in the field.
+* [Improving a weak cellular signal](../troubleshooting/improving-a-weak-cellular-signal.md): getting a trap back online.

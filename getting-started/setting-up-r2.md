@@ -29,7 +29,7 @@ Fully charge the blue battery until the charger light is green, using the accomp
 
 ![](../.gitbook/assets/setup-charging-battery.png)
 
-More on packs, chargers, and runtime: [Battery Overview](battery-overview.md).
+More on packs, chargers, and runtime: [Battery overview](battery-overview.md).
 
 ## Cut the motor zip tie
 
@@ -67,7 +67,7 @@ The POD holds the camera, the sensor, and the electronics. It slides onto rails 
 2. Use the top latch to secure the POD in place.
 
 {% hint style="warning" %}
-If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
+If you have issues, see [Common issues](../troubleshooting/common-issues.md).
 {% endhint %}
 
 ## Insert the battery and power on
@@ -79,9 +79,9 @@ If you have issues, see [Common Issues](../troubleshooting/common-issues.md).
 5. Close the latch fully to keep the POD weather-tight.
 6. Press the **Power** button to turn the trap on.
 
-Watch the status LED. **Breathing cyan** means the trap is connected to the cloud and ready. Finding cellular can take up to 10 minutes on first power-up. Every color and pattern: [LED Guide](led-guide.md).
+Watch the status LED. **Breathing cyan** means the trap is connected to the cloud and ready. Finding cellular can take up to 10 minutes on first power-up. Every color and pattern: [LED guide](led-guide.md).
 
-Which pack you have and how to tell the app about it: [Battery Overview](battery-overview.md). Every button sequence at the trap: [Using the Buttons on the Trap](using-the-trap-buttons.md).
+Which pack you have and how to tell the app about it: [Battery overview](battery-overview.md). Every button sequence at the trap: [Using the buttons on the trap](using-the-trap-buttons.md).
 
 **Next:** add the trap to your account, then place it.
 
@@ -90,7 +90,7 @@ Which pack you have and how to tell the app about it: [Battery Overview](battery
 {% endcontent-ref %}
 
 {% content-ref url="deploying-in-the-field.md" %}
-[Deploying Your Trap in the Field](deploying-in-the-field.md)
+[Deploying your trap in the field](deploying-in-the-field.md)
 {% endcontent-ref %}
 
 {% hint style="info" %}

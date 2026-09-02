@@ -31,7 +31,7 @@ Only the trap owner can change a subscription or payment method. Shared users se
 
 ### Pausing a Trap
 
-Monthly plans can be **paused** for up to **6 months** from the trap’s **Trap billing** page (**Pause subscription**). While paused you aren’t billed, the trap is dormant (no remote commands or new captures, though you can still open the door and release an animal), and your data and settings are kept and restored when you resume. It resumes automatically on your chosen date, or you can **Resume now** anytime. Annual plans can’t be paused, and the button shows as **Pause (monthly only)**. See [Your OcuTrap Subscription](subscription-overview.md).
+Monthly plans can be **paused** for up to **6 months** from the trap’s **Trap billing** page (**Pause subscription**). While paused you aren’t billed, the trap is dormant (no remote commands or new captures, though you can still open the door and release an animal), and your data and settings are kept and restored when you resume. It resumes automatically on your chosen date, or you can **Resume now** anytime. Annual plans can’t be paused, and the button shows as **Pause (monthly only)**. See [Your OcuTrap subscription](subscription-overview.md).
 
 ### Restart a canceled or inactive subscription
 
@@ -81,7 +81,7 @@ If you have questions about a status, [contact our support team](https://ocutrap
 
 Yes. The **Billing** page has an **Invoices** section covering all traps, with **View** and **Receipt** on each row. A single trap's **Trap billing** page has **Recent invoices** for that trap only.
 
-To change the card on file, select **Payment portal** on the **Billing** page (or **Manage in portal** on the **Payment method** card), then **Payment Methods**. Full steps: [Changing Your Subscription Payment Method](changing-your-subscription-payment-method.md).
+To change the card on file, select **Payment portal** on the **Billing** page (or **Manage in portal** on the **Payment method** card), then **Payment Methods**. Full steps: [Changing your subscription payment method](changing-your-subscription-payment-method.md).
 
 ### Notes
 

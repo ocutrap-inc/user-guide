@@ -185,7 +185,7 @@ To recover, charge or replace the battery and press the power button again.
 The color and pattern for each of these actions is in the diagnostic and table
 above. This section covers **how to trigger** them with the physical buttons.
 For the full how-to, including arming failures and power off, see
-[Using the Buttons on the Trap](using-the-trap-buttons.md).
+[Using the buttons on the trap](using-the-trap-buttons.md).
 
 #### Manual Door Control
 
@@ -232,7 +232,7 @@ The GIFs below are short visual examples of the most common **connection** patte
 
 #### Red light or no light?
 
-Rapid red blinking usually means the trap is **powering down** (power button held), not an SOS/error code. Solid red, brief red flashes after a command, and “no light” cases are all covered above. If the LED never comes on after you reconnect the battery and press power, see [Trap Offline or Won't Connect](../troubleshooting/trap-offline-or-wont-connect.md).
+Rapid red blinking usually means the trap is **powering down** (power button held), not an SOS/error code. Solid red, brief red flashes after a command, and “no light” cases are all covered above. If the LED never comes on after you reconnect the battery and press power, see [Trap offline or won't connect](../troubleshooting/trap-offline-or-wont-connect.md).
 
 ***
 

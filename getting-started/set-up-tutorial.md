@@ -7,7 +7,7 @@ description: >-
 # Set up your trap
 
 {% content-ref url="../support/safety-information.md" %}
-[Safety Information](../support/safety-information.md)
+[Safety information](../support/safety-information.md)
 {% endcontent-ref %}
 
 Setting up your OcuTrap has two parts: **setting up the hardware** and **connecting it to the app**. Follow the steps from top to bottom. Open the linked guides when you need more detail or photos.
@@ -56,7 +56,7 @@ You manage your OcuTrap from the web portal at [app.ocutrap.com](https://app.ocu
 Full walkthrough with screenshots: [Adding a trap to your account](app/adding-a-trap-to-your-account.md).
 
 {% hint style="info" %}
-**Using a phone?** Install the mobile app and turn on push notifications so capture alerts reach you immediately. See [Using the Mobile App](app/using-the-mobile-app.md).
+**Using a phone?** Install the mobile app and turn on push notifications so capture alerts reach you immediately. See [Using the mobile app](app/using-the-mobile-app.md).
 {% endhint %}
 
 ***
@@ -64,10 +64,10 @@ Full walkthrough with screenshots: [Adding a trap to your account](app/adding-a-
 ## Step 4: Power on and confirm it's connected
 
 1. Insert the charged battery and power on the trap.
-2. Watch the status LED. **Breathing cyan** means the trap is connected to the cloud and ready. Other colors: [LED Guide](led-guide.md).
+2. Watch the status LED. **Breathing cyan** means the trap is connected to the cloud and ready. Other colors: [LED guide](led-guide.md).
 3. Confirm the trap shows as **online** in the app.
 
-If it won't connect, give it a minute, then see [Connectivity & Coverage](connectivity-and-coverage.md).
+If it won't connect, give it a minute, then see [Connectivity and cellular coverage](connectivity-and-coverage.md).
 
 ***
 
@@ -82,10 +82,10 @@ The essentials:
 * Pick a **capture distance** in the app (presets from 6 in to 18 in; default 8 in).
 * **Test before you walk away**: arm the trap, wave your hand slowly through the detection zone, and confirm the door closes and you get a capture alert.
 
-The full field guide covers placement, capture-distance tuning, the pre-departure checklist, and validation with [Scouting Mode](app/scouting-mode.md):
+The full field guide covers placement, capture-distance tuning, the pre-departure checklist, and validation with [Scouting mode](app/scouting-mode.md):
 
 {% content-ref url="deploying-in-the-field.md" %}
-[Deploying Your Trap in the Field](deploying-in-the-field.md)
+[Deploying your trap in the field](deploying-in-the-field.md)
 {% endcontent-ref %}
 
 ***
@@ -93,8 +93,8 @@ The full field guide covers placement, capture-distance tuning, the pre-departur
 ## Step 6: Arm it and turn on notifications
 
 1. **Manually open the door.** For safety, arming requires the door to already be open.
-2. Tap **Arm** in the app. See [Trap Control](app/trap-control.md) for what each state means.
-3. Choose how you want to be alerted (push, email, or both) in [Notification Settings](app/notification-settings.md).
+2. Tap **Arm** in the app. See [Trap control](app/trap-control.md) for what each state means.
+3. Choose how you want to be alerted (push, email, or both) in [Notification settings](app/notification-settings.md).
 
 While armed, the trap checks in on a low-power cycle and can briefly show offline between check-ins. That's normal. You'll be alerted if it stays disconnected for more than an hour.
 
@@ -102,10 +102,10 @@ While armed, the trap checks in on a low-power cycle and can briefly show offlin
 
 ## You're set: what happens next
 
-* **When your trap takes photos:** [When Your Trap Takes Photos](app/image-cadence.md)
-* **When you get a capture:** the door closes and locks, and you get an alert: see [After a Capture](app/after-capture.md) and [Handling & Releasing a Captured Animal](handling-a-captured-animal.md)
-* **Getting the most out of your trap:** [Tips and Tricks](tips-and-tricks.md)
+* **When your trap takes photos:** [When your trap takes photos](app/image-cadence.md)
+* **When you get a capture:** the door closes and locks, and you get an alert: see [After a capture](app/after-capture.md) and [Handling and releasing a captured animal](handling-a-captured-animal.md)
+* **Getting the most out of your trap:** [Tips and tricks](tips-and-tricks.md)
 
 {% hint style="info" %}
-**Something not working?** Check [Common Issues](../troubleshooting/common-issues.md) or [Trap Offline or Won't Connect](../troubleshooting/trap-offline-or-wont-connect.md).
+**Something not working?** Check [Common issues](../troubleshooting/common-issues.md) or [Trap offline or won't connect](../troubleshooting/trap-offline-or-wont-connect.md).
 {% endhint %}

@@ -145,7 +145,7 @@ These settings remove portions of the image before processing. Values are percen
 
 ## Enhanced door closing and EDC backoff
 
-Enhanced Door Closing re-seats the door after every close, including closes on a capture. The door backs off slightly, then drives closed again to seat under the locking rod. This improves the chance the door locks. It does not confirm the lock. Enabled by default. Turn it off only if support asks. See [Enhanced Door Closing](../../capture-behavior/enhanced-door-closing.md).
+Enhanced Door Closing re-seats the door after every close, including closes on a capture. The door backs off slightly, then drives closed again to seat under the locking rod. This improves the chance the door locks. It does not confirm the lock. Enabled by default. Turn it off only if support asks. See [Enhanced door closing](../../capture-behavior/enhanced-door-closing.md).
 
 EDC Backoff sets how long the door reverses during Enhanced Door Closing. A higher time reverses farther; a lower time reverses less. Options run from 30 to 130 ms in 10 ms steps. Default is 50 ms, and most traps calibrate between about 40 and 120 ms.
 
@@ -158,7 +158,7 @@ Every trap door is slightly different, and a fully charged battery can move the 
 - Door does not retract enough to re-seat: raise the value by 10 ms.
 - Door retracts so far that it begins to lift and lands on top of the bar again: lower the value by 10 ms.
 
-Start at 40 ms and change one step at a time, testing with a fully charged battery. Pass only when repeated cycles finish underneath the bar every time. See [Enhanced Door Closing](../../capture-behavior/enhanced-door-closing.md) for the complete calibration and optional recovery test.
+Start at 40 ms and change one step at a time, testing with a fully charged battery. Pass only when repeated cycles finish underneath the bar every time. See [Enhanced door closing](../../capture-behavior/enhanced-door-closing.md) for the complete calibration and optional recovery test.
 
 Requires trap firmware v2.3.2-1010 or newer. Older firmware ignores this setting. Only applies while Enhanced Door Closing is On. If adjusting it does not fix the door, the mechanism needs physical inspection. Contact support.
 

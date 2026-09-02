@@ -45,6 +45,6 @@ For warranty claims or questions, contact [support@ocutrap.com](mailto:support@o
 
 ## See also
 
-* [Your Data & Privacy](data-and-privacy.md): what OcuTrap collects and your controls.
-* [Responsible & Legal Use](responsible-and-legal-use.md): using OcuTrap within local laws.
-* [Safety Information](../support/safety-information.md): operating the device safely.
+* [Your data and privacy](data-and-privacy.md): what OcuTrap collects and your controls.
+* [Responsible and legal use](responsible-and-legal-use.md): using OcuTrap within local laws.
+* [Safety information](../support/safety-information.md): operating the device safely.

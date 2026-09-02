@@ -21,7 +21,7 @@ The trap **requires the door to be fully open** before arming. This is a safety 
 **Solution:**
 1. Open the OcuTrap app
 2. Tap the **Open** button and wait for the door to fully open
-3. Check that the light shows **blue** (unarmed and open). See the [LED Guide](../getting-started/led-guide.md)
+3. Check that the light shows **blue** (unarmed and open). See the [LED guide](../getting-started/led-guide.md)
 4. Try arming again
 
 ### Obstruction Detected
@@ -46,7 +46,7 @@ Clean the POD lens and clear the sensor path when you see this. The trap keeps w
 
 A real object physically blocking the trap interior is different: arming is **blocked** with **`Remove object at <distance> first`**. Remove the object and arm again.
 
-See [Distance Limits, Sensor Alerts & Errors](../getting-started/capture-behavior/distance-safety-and-alerts.md) for capture distance presets and other arming errors.
+See [Distance limits, sensor alerts and errors](../getting-started/capture-behavior/distance-safety-and-alerts.md) for capture distance presets and other arming errors.
 
 ### Sensor Error (Blocks Arming)
 
@@ -63,9 +63,9 @@ The trap tests motor connectivity before arming. If the motor doesn't respond, a
 
 **Solution:**
 1. Check the motor connector is securely attached
-2. See [Motor Connector Tightness Check](motor-connector-tightness-check.md)
+2. See [Motor connector tightness check](motor-connector-tightness-check.md)
 3. Verify the motor cable isn't damaged
-4. If red and black internal wires are visible at the connector, see [Wire Exposed](wire-exposed.md)
+4. If red and black internal wires are visible at the connector, see [Wire exposed](wire-exposed.md)
 5. Contact support if the issue persists
 
 ---
@@ -167,7 +167,7 @@ GPS updates limit battery use, so they may not happen as often as you expect.
 
 ### Trap Shows "Offline"
 
-For a step-by-step field guide to the battery, hibernation, LED patterns, cellular coverage, and what to send Support, see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
+For a step-by-step field guide to the battery, hibernation, LED patterns, cellular coverage, and what to send Support, see **[Trap offline or won't connect](trap-offline-or-wont-connect.md)**.
 
 **Automatic reconnection:** If the trap loses connection, it will try to reconnect on its own. This can take up to an hour. Leave it powered on in an area with decent cellular coverage and check back later.
 
@@ -175,7 +175,7 @@ If the trap stays offline after the steps in the guide above, contact support.
 
 ### Commands Not Reaching Trap
 
-See [Trap Not Sending Commands](trap-not-sending-commands.md) for detailed troubleshooting.
+See [Trap not sending commands](trap-not-sending-commands.md) for detailed troubleshooting.
 
 ---
 
@@ -213,7 +213,7 @@ If the trap enters hibernation unexpectedly:
 
 **Solution:**
 1. Check motor connector is securely attached
-2. If red and black internal wires are visible at the connector, see [Wire Exposed](wire-exposed.md)
+2. If red and black internal wires are visible at the connector, see [Wire exposed](wire-exposed.md)
 3. Verify no physical obstruction is blocking the door
 4. Check battery level. Door operation requires adequate power
 5. Use the manual door control: press the **User Button** once, then press again and **hold ~5 seconds** (about 7 seconds total before the door moves)
@@ -258,7 +258,7 @@ Rapid red blinking means the trap is **powering down** because the power button 
 2. If it finishes shutting down, the LED goes **solid red** and the trap powers off. Press the power button again to turn it back on.
 3. Genuine faults show as brief flash bursts instead: **3 orange flashes** (sensor error; clean the POD lens and power-cycle) or **5 magenta flashes** (data error). If a fault repeats, contact support.
 
-For LED status meanings, see the [LED Guide](../getting-started/led-guide.md).
+For LED status meanings, see the [LED guide](../getting-started/led-guide.md).
 
 ---
 

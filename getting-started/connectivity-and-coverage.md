@@ -13,11 +13,11 @@ OcuTrap connects to the OcuTrap app over **4G LTE cellular**, the same kind of n
 ## How OcuTrap Connects
 
 * **Cellular only.** OcuTrap uses **multi-network 4G LTE** across the **United States and Canada**. It does **not** use Wi-Fi, and no local network setup is required.
-* **Data included.** The cellular data your trap uses is **included in your OcuTrap subscription**. There's no separate data plan or SIM card to buy. See [Your OcuTrap Subscription](../account-and-billing/subscription-overview.md).
+* **Data included.** The cellular data your trap uses is **included in your OcuTrap subscription**. There's no separate data plan or SIM card to buy. See [Your OcuTrap subscription](../account-and-billing/subscription-overview.md).
 * **Automatic.** On power-up, the trap finds a network and comes online on its own.
 * **No hotspot or router needed.** You don't need any other equipment in the field.
 
-The trap is not tied to a single carrier. It reaches **multiple nationwide 4G LTE networks** and picks whichever one has the best usable signal at your site, switching automatically if that network fails. If a trap sits in marginal coverage, work through [Improving a Weak Cellular Signal](../troubleshooting/improving-a-weak-cellular-signal.md).
+The trap is not tied to a single carrier. It reaches **multiple nationwide 4G LTE networks** and picks whichever one has the best usable signal at your site, switching automatically if that network fails. If a trap sits in marginal coverage, work through [Improving a weak cellular signal](../troubleshooting/improving-a-weak-cellular-signal.md).
 
 ***
 
@@ -31,7 +31,7 @@ Like any cellular device, OcuTrap needs a usable signal where it's deployed.
 * **GPS is separate.** Location uses a built-in GPS module (clear view of the sky helps) and updates about every 8 hours. See [GPS](../faqs/gps.md).
 
 {% hint style="info" %}
-For battery and signal tips on where to place a trap, see **Optimal Trap Placement** in [Tips and Tricks](tips-and-tricks.md).
+For battery and signal tips on where to place a trap, see **Optimal Trap Placement** in [Tips and tricks](tips-and-tricks.md).
 {% endhint %}
 
 ***
@@ -42,10 +42,10 @@ OcuTrap is built to keep working through brief connectivity gaps:
 
 * In **Armed Sleep Offline** mode, the trap **stays armed and monitoring for captures even while disconnected**, checking in with the cloud about every **20 minutes**.
 * If a **capture happens while offline**, the trap **reports it at its next check-in**. You won't lose the event.
-* See [Power Modes](../faqs/power-modes.md) for how the trap balances connectivity and battery.
+* See [Power modes](../faqs/power-modes.md) for how the trap balances connectivity and battery.
 
 {% hint style="warning" %}
-When a trap is in **Hibernation** (very low battery, long idle, or powered off), it **cannot send or receive anything**. See [Power Modes](../faqs/power-modes.md).
+When a trap is in **Hibernation** (very low battery, long idle, or powered off), it **cannot send or receive anything**. See [Power modes](../faqs/power-modes.md).
 {% endhint %}
 
 ***
@@ -53,7 +53,7 @@ When a trap is in **Hibernation** (very low battery, long idle, or powered off),
 ## Checking Your Trap's Connection
 
 * The app shows each trap's status and how long ago it last checked in.
-* If a trap won't come online, work through [Trap Offline or Won't Connect](../troubleshooting/trap-offline-or-wont-connect.md).
+* If a trap won't come online, work through [Trap offline or won't connect](../troubleshooting/trap-offline-or-wont-connect.md).
 
 ***
 
@@ -66,7 +66,7 @@ When a trap is in **Hibernation** (very low battery, long idle, or powered off),
 
 ## See also
 
-* [Technical Specifications](technical-specifications.md): cellular, GPS, and sensor details.
-* [Power Modes](../faqs/power-modes.md): how the trap conserves battery and stays armed offline.
+* [Technical specifications](technical-specifications.md): cellular, GPS, and sensor details.
+* [Power modes](../faqs/power-modes.md): how the trap conserves battery and stays armed offline.
 * [GPS](../faqs/gps.md): location tracking and map view.
-* [Trap Offline or Won't Connect](../troubleshooting/trap-offline-or-wont-connect.md): troubleshooting connection issues.
+* [Trap offline or won't connect](../troubleshooting/trap-offline-or-wont-connect.md): troubleshooting connection issues.

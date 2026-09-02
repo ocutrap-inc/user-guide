@@ -32,4 +32,4 @@ When the door closes correctly, it sits **behind and underneath the locking bar*
 
 > **Why it matters:** A door that is not behind the locking bar may not prevent an animal from escaping.
 
-**See also:** [Enhanced Door Closing](../getting-started/capture-behavior/enhanced-door-closing.md)
+**See also:** [Enhanced door closing](../getting-started/capture-behavior/enhanced-door-closing.md)

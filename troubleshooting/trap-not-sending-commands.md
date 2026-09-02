@@ -10,7 +10,7 @@ If your OcuTrap is not responding to commands and is displaying error codes, it 
 
 When you send a command, the app shows its live status: **Sending…**, then **confirmed** once the trap acknowledges it, or a failure message with the device's error if something went wrong.
 
-> For a full step-by-step guide when the trap shows offline or will not connect, see **[Trap Offline or Won't Connect](trap-offline-or-wont-connect.md)**.
+> For a full step-by-step guide when the trap shows offline or will not connect, see **[Trap offline or won't connect](trap-offline-or-wont-connect.md)**.
 
 ### Possible Causes
 
@@ -25,7 +25,7 @@ When you send a command, the app shows its live status: **Sending…**, then **c
 
 * Press the **power button** (the left-most button) to wake up the trap.
 * Wait for the LED to show **breathing cyan** before retrying your command.
-* If the trap is **unarmed and idle**, a low-power sleep is expected. Commands are picked up at the next check-in. Full hibernation only happens on very low battery or a long power-button press (see [Power Modes](../faqs/power-modes.md)).
+* If the trap is **unarmed and idle**, a low-power sleep is expected. Commands are picked up at the next check-in. Full hibernation only happens on very low battery or a long power-button press (see [Power modes](../faqs/power-modes.md)).
 
 #### Check Battery Connection
 

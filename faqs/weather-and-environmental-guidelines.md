@@ -34,7 +34,7 @@ Since OcuTrap is powered by a lithium-ion battery:
 
 The OcuTrap has an integrated temperature sensor. You can see what it reports on the trap's **Charts**, under the temperature reading.
 
-This sensor does not send alerts. The temperature alerts you can switch on in **Trap settings** watch the **outdoor weather at the trap's location** instead, not the trap's own sensor. See [Settings Reference](../getting-started/app/trap-settings/settings-reference.md).
+This sensor does not send alerts. The temperature alerts you can switch on in **Trap settings** watch the **outdoor weather at the trap's location** instead, not the trap's own sensor. See [Settings reference](../getting-started/app/trap-settings/settings-reference.md).
 
 ### Handling Extreme Weather Conditions
 
@@ -52,7 +52,7 @@ In freezing weather:
 * The moving door mechanism (which opens and closes) may freeze shut.
 * To maintain functionality, avoid operating OcuTrap in conditions where icing is likely.
 
-For comprehensive cold weather guidance including battery care, condensation prevention, and seasonal deployment tips, see [Cold Weather](cold-weather.md).
+For comprehensive cold weather guidance including battery care, condensation prevention, and seasonal deployment tips, see [Cold weather](cold-weather.md).
 
 #### Heavy Rain and Flooding
 
@@ -69,10 +69,10 @@ To protect the performance and life of the lithium-ion battery:
 * Avoid exposing the battery to prolonged extreme temperatures.
 * No additional maintenance is required beyond following these guidelines.
 
-For more battery information, see [Battery Overview](../getting-started/battery-overview.md).
+For more battery information, see [Battery overview](../getting-started/battery-overview.md).
 
 ## Related Pages
 
-* [Cold Weather](cold-weather.md): Detailed guide for winter deployments
-* [Battery Overview](../getting-started/battery-overview.md): Complete battery information
-* [Condensation on the Camera](../troubleshooting/condensation-on-the-camera.md): Troubleshooting camera condensation
+* [Cold weather](cold-weather.md): Detailed guide for winter deployments
+* [Battery overview](../getting-started/battery-overview.md): Complete battery information
+* [Condensation on the camera](../troubleshooting/condensation-on-the-camera.md): Troubleshooting camera condensation

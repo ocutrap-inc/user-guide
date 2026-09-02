@@ -20,6 +20,6 @@ Check our website status at [ocutrap.statuspage.io](https://ocutrap.statuspage.i
 
 ## Purchases
 
-Buy new traps and accessories at [OcuTrap.com](https://ocutrap.com) on your phone or computer. Manage subscription billing separately in the app. See [Managing Your Subscription](../account-and-billing/managing-your-subscription.md).
+Buy new traps and accessories at [OcuTrap.com](https://ocutrap.com) on your phone or computer. Manage subscription billing separately in the app. See [Managing your subscription](../account-and-billing/managing-your-subscription.md).
 
-Nonprofits and organizations that need purchase orders, invoicing, or ACH payment: see the [Nonprofit & 501(c) Program](nonprofit-and-501-c-program.md).
+Nonprofits and organizations that need purchase orders, invoicing, or ACH payment: see the [Nonprofit and 501(c) program](nonprofit-and-501-c-program.md).

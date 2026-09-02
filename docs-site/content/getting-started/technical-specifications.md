@@ -86,7 +86,7 @@ These are the OcuTrap R2 technical specifications, with R1 values where they dif
 | -------------------- | ------------------------------------------ |
 | **Sensor Range**     | Up to 13 ft (4 m) hardware capability       |
 | **Active Detection Range** | Up to ~**34 in (875 mm)**. The trap detects, alerts, and photographs only within this distance |
-| **Capture Distance** | App presets **6 to 18 in**; default **8 in**. See [Distance Limits & Alerts](capture-behavior/distance-safety-and-alerts.md) |
+| **Capture Distance** | App presets **6 to 18 in**; default **8 in**. See [Distance limits, sensor alerts and errors](capture-behavior/distance-safety-and-alerts.md) |
 
 ### Environmental Sensors
 
@@ -176,5 +176,5 @@ R1 units shipped with the 10,000 mAh (111 Wh) battery and its 2 A charger, plus 
 
 For warranty, safety, and compliance information, see:
 
-* [Safety Information](../support/safety-information.md)
-* [Legal Disclaimers](../legal-and-compliance/legal-disclaimers-and-compliance-information.md)
+* [Safety information](../support/safety-information.md)
+* [Legal disclaimers and compliance information](../legal-and-compliance/legal-disclaimers-and-compliance-information.md)

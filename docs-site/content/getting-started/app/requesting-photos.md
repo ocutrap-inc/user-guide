@@ -29,6 +29,6 @@ If images look too dark, washed out, or blurry, see [Camera](../../faqs/camera.m
 
 ## See also
 
-* [Trap Control](trap-control.md): all the commands you can send your trap
-* [When Your Trap Takes Photos](image-cadence.md): automatic capture timing
+* [Trap control](trap-control.md): all the commands you can send your trap
+* [When your trap takes photos](image-cadence.md): automatic capture timing
 * [Camera](../../faqs/camera.md): image quality and night-vision settings

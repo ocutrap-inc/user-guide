@@ -22,11 +22,11 @@ If your mail app strips the button, the email also carries a reset code. Click *
 Your new password needs at least 10 characters. No required mix of numbers or symbols. Common or breached passwords are rejected.
 
 {% content-ref url="../account-and-billing/resetting-password.md" %}
-[Resetting Password](../account-and-billing/resetting-password.md)
+[Resetting password](../account-and-billing/resetting-password.md)
 {% endcontent-ref %}
 
 {% content-ref url="../account-and-billing/password-policy.md" %}
-[Password Policy for Users](../account-and-billing/password-policy.md)
+[Password policy for users](../account-and-billing/password-policy.md)
 {% endcontent-ref %}
 
 ## Reset Code Didn't Arrive
@@ -53,7 +53,7 @@ Match what you see on the sign-in page:
 Passwords stay in sync between the web and mobile apps, so a password that works on one works on the other.
 
 {% content-ref url="../account-and-billing/account-deletion.md" %}
-[Account Deletion](../account-and-billing/account-deletion.md)
+[Account deletion](../account-and-billing/account-deletion.md)
 {% endcontent-ref %}
 
 ## Lost Access to Your Email
@@ -68,7 +68,7 @@ Email [support@ocutrap.com](mailto:support@ocutrap.com) from any address you can
 
 ## Coming From the Old OcuTrap App
 
-The old app at `base.ocutrap.com` and the new app at [app.ocutrap.com](https://app.ocutrap.com) use separate sign-ins. Your old password does not work on the new app. Full walkthrough: [Switching to the new OcuTrap app](../switching-to-the-new-app/README.md).
+The old app at `base.ocutrap.com` and the new app at [app.ocutrap.com](https://app.ocutrap.com) use separate sign-ins. Your old password does not work on the new app. Full walkthrough: [Move to the new OcuTrap app](../switching-to-the-new-app/README.md).
 
 * Your account already exists in the new app under the **same email** you used before. Do not sign up for a new one.
 * When it is your turn to move, you get an email from OcuTrap with a **Set your password** link. Open it, choose a new password, and sign in at [app.ocutrap.com](https://app.ocutrap.com).
@@ -84,5 +84,5 @@ Email [support@ocutrap.com](mailto:support@ocutrap.com) with:
 * Whether you were on the **web app** or the **mobile app**
 
 {% content-ref url="../support/support.md" %}
-[Contact Us](../support/support.md)
+[Contact us](../support/support.md)
 {% endcontent-ref %}

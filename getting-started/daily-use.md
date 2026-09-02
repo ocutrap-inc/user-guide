@@ -13,13 +13,13 @@ Day-to-day app controls, tips, and the feature guides you’ll use after setup.
 {% endcontent-ref %}
 
 {% content-ref url="tips-and-tricks.md" %}
-[Tips and Tricks](tips-and-tricks.md)
+[Tips and tricks](tips-and-tricks.md)
 {% endcontent-ref %}
 
 {% content-ref url="handling-a-captured-animal.md" %}
-[Handling & Releasing a Captured Animal](handling-a-captured-animal.md)
+[Handling and releasing a captured animal](handling-a-captured-animal.md)
 {% endcontent-ref %}
 
 {% content-ref url="capture-behavior/README.md" %}
-[Door & Capture Features](capture-behavior/README.md)
+[Door and capture features](capture-behavior/README.md)
 {% endcontent-ref %}
