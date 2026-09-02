@@ -4,7 +4,7 @@ description: >-
   reset code, or contact support if you are still locked out.
 ---
 
-# Can't Sign In to Your Account
+# Can't sign in to your account
 
 Sign-in problems almost always come down to one of a few causes. Find the section below that matches what you see. Your email address is your username, and the same email and password work on the web app at [app.ocutrap.com](https://app.ocutrap.com) and in the mobile app.
 

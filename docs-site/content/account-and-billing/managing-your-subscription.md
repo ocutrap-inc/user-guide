@@ -4,7 +4,7 @@ description: >-
   Card and cancellation changes are handled securely in the Stripe portal.
 ---
 
-# Managing Your Subscription
+# Managing your subscription
 
 ### How to Access Subscription Settings
 

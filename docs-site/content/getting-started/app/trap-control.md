@@ -4,7 +4,7 @@ description: >-
   image and location, advanced commands, and command status.
 ---
 
-# Trap Control
+# Trap control
 
 Each trap's detail screen has a **Trap Controls** bar. This card sets the trap's arm mode and sends commands to the device. (It replaces the older pop-up control panel.)
 

@@ -4,7 +4,7 @@ description: >-
   freezing temperatures.
 ---
 
-# Cold Weather
+# Cold weather
 
 _Applies to: OcuTrap R1 and R2._
 

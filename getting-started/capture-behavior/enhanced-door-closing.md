@@ -4,7 +4,7 @@ description: >-
   under the locking bar without reversing too little or too far.
 ---
 
-# Enhanced Door Closing
+# Enhanced door closing
 
 _Applies to: OcuTrap R1 and R2._
 

@@ -4,7 +4,7 @@ description: >-
   to 0.20 inch mounting gap and tighten it correctly.
 ---
 
-# Motor Connector Tightness Check
+# Motor connector tightness check
 
 _Applies to: OcuTrap R1, or any trap after a motor replacement._
 

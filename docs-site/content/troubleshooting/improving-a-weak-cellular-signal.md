@@ -4,7 +4,7 @@ description: >-
   network, what weak signal looks like, and the field steps that actually help.
 ---
 
-# Improving a Weak Cellular Signal
+# Improving a weak cellular signal
 
 Weak coverage is the most common reason a trap checks in late or drops offline in the field. Most of it is fixable on site.
 

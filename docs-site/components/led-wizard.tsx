@@ -98,7 +98,7 @@ export default function LedWizard({ matrix }: { matrix: LedMatrix }) {
               <h3 className="led-wizard__q">What color is the light?</h3>
               <p className="led-wizard__hint">
                 Watch the trap for a few seconds. On battery the light flashes
-                briefly every ~10 seconds — that brief flash is the color to
+                briefly every ~10 seconds. That brief flash is the color to
                 pick. If you see nothing at all, choose “No light”.
               </p>
               <div className="led-wizard__swatches" role="list">

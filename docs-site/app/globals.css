@@ -970,6 +970,37 @@ body {
   color: var(--color-muted);
 }
 
+/* Model applicability badge (DOC-30). The markdown preprocessor turns a
+   standalone `_Applies to: OcuTrap R1 and R2._` paragraph into this pill so it
+   reads as metadata rather than as the page's first sentence. Theme tokens
+   only, so it follows light/dark. */
+.applies-to {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.applies-to__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.applies-to__value {
+  color: var(--color-heading);
+  font-weight: 500;
+}
+
 @media (max-width: 560px) {
   .page-title {
     font-size: 1.5rem;

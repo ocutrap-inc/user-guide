@@ -4,7 +4,7 @@ description: >-
   arming errors the app shows and what each one means.
 ---
 
-# Distance Limits, Sensor Alerts & Errors
+# Distance limits, sensor alerts and errors
 
 _Applies to: OcuTrap R1 and R2._
 

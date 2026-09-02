@@ -4,7 +4,7 @@ description: >-
   account secure.
 ---
 
-# Password Policy for Users
+# Password policy for users
 
 ### Who this applies to
 

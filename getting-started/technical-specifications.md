@@ -4,7 +4,7 @@ description: >-
   runtime, connectivity, sensors, camera, and environmental ratings.
 ---
 
-# Technical Specifications
+# Technical specifications
 
 These are the OcuTrap R2 technical specifications, with R1 values where they differ.
 

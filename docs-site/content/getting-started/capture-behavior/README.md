@@ -4,7 +4,7 @@ description: >-
   images, the battery, accessories, sensors, and temperature alerts.
 ---
 
-# Door & Capture Features
+# Door and capture features
 
 Deep dives on door closing, pre-capture alerts, and capture-distance / sensor behavior. For the full list of knobs in the app UI, see [Settings in the App](../app/trap-settings/README.md).
 

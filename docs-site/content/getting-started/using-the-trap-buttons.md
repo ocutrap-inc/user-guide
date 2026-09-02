@@ -4,7 +4,7 @@ description: >-
   buttons on the POD. Every step works at the trap, with no app and no signal.
 ---
 
-# Using the Buttons on the Trap
+# Using the buttons on the trap
 
 _Applies to: OcuTrap R1 and R2._
 

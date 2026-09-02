@@ -4,7 +4,7 @@ description: >-
   waterproof seal. Four steps to reseat the cable and tighten it.
 ---
 
-# Wire Exposed
+# Wire exposed
 
 _Applies to: OcuTrap R1 and R2._
 

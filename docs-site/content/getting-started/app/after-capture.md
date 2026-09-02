@@ -4,9 +4,7 @@ description: >-
   release. Open versus Unarm, on-trap buttons, and what the app shows.
 ---
 
-# After a Capture
-
-Once an Armed trap closes on a verified detection, the trap holds the animal until **you** release it. There is no auto-release of any kind.
+# After a capture
 
 ## What does *not* happen
 

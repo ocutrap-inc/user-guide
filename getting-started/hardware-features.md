@@ -4,7 +4,7 @@ description: >-
   GPS, sensors, battery, accessory port, and the detection system.
 ---
 
-# Hardware Features
+# Hardware features
 
 This page explains the OcuTrap R2 (and R1) hardware components and what they do.
 

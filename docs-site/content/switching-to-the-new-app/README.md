@@ -4,7 +4,7 @@ description: >-
   confirm that your traps and billing carried over.
 ---
 
-# Switching to the new OcuTrap app
+# Move to the new OcuTrap app
 
 Your traps, capture history, and subscription are already waiting for you in the new OcuTrap app. This page walks you through the one-time move.
 

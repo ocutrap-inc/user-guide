@@ -4,7 +4,7 @@ description: >-
   time-lapse photos, and what controls the timing.
 ---
 
-# When Your Trap Takes Photos
+# When your trap takes photos
 
 Your OcuTrap takes photos automatically at different times depending on what mode it's in and what's happening at the trap. This page explains when to expect photos and roughly how often.
 

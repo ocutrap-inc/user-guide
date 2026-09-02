@@ -4,9 +4,9 @@ description: >-
   organization's payment method is charged going forward.
 ---
 
-# Transferring Trap Billing to an Organization
+# Transferring trap billing to an organization
 
-If a trap you own is billed to you individually, you can move its subscription onto your **organization's** billing. After the transfer, the organization's payment method is charged for that trap going forward, and the trap appears on the organization's invoice alongside your other organization traps.
+After the transfer, the trap appears on the organization's invoice alongside your other organization traps.
 
 Adding a trap to an organization does **not** move its billing on its own. Transferring billing is a separate, deliberate step you take on the trap's **Trap billing** page.
 

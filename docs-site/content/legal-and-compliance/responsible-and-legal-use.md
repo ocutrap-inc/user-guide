@@ -4,7 +4,7 @@ description: >-
   your local laws and use OcuTrap responsibly.
 ---
 
-# Responsible & Legal Use
+# Responsible and legal use
 
 {% hint style="info" %}
 This page is **general guidance, not legal advice.** Laws differ by country, state/province, and municipality, and they change over time. **You are responsible for knowing and following the rules that apply where you use your OcuTrap.**

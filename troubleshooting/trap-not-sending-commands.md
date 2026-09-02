@@ -4,7 +4,7 @@ description: >-
   and cellular signal, with the steps to bring it back.
 ---
 
-# Trap Not Sending Commands
+# Trap not sending commands
 
 If your OcuTrap is not responding to commands and is displaying error codes, it may have entered hibernation mode or lost connection.
 

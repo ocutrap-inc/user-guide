@@ -4,7 +4,7 @@ description: >-
   OcuTrap.
 ---
 
-# Nonprofit and 501(c) Program
+# Nonprofit and 501(c) program
 
 Nonprofit and 501(c) Program
 

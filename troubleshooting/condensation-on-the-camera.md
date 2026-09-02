@@ -4,7 +4,7 @@ description: >-
   seals, and know when to contact support.
 ---
 
-# Condensation on the Camera
+# Condensation on the camera
 
 #### 1. How to Spot the Issue
 

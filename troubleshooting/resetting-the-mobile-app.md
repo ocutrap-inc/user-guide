@@ -4,7 +4,7 @@ description: >-
   on iPhone and Android when the app is stuck or push notifications stop working.
 ---
 
-# Resetting the Mobile App
+# Resetting the mobile app
 
 If the OcuTrap app is frozen, won't load, or you're not getting push notifications, a full quit or reinstall usually fixes it. Your **account, traps, images, and subscription stay on the server**. Resetting the app on your phone does not delete them. After you reinstall, sign in with the same email and password.
 
