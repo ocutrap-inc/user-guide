@@ -24,7 +24,7 @@ _Take a moment to confirm you have all these parts._
 
 Ensure the battery is fully charged. A full charge takes about 5–6 hours (see [Battery Overview](battery-overview.md)), so it’s best to charge it ahead of time if you haven’t done so already.
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10-PePOjHAGWWKyRhQB1RGxHnD7d7LXuw.mp4" %}
 
 ***
 
@@ -49,7 +49,7 @@ For the motor assembly, gather these components:
 **Hardware note:** The video above shows an earlier door-rod revision with white washers and springs. Current OcuTrap R1 units ship with **black spacers and black capped nuts** instead — follow the written steps here and in [Hardware Set Up](setting-up.md), which match the parts in your box.
 {% endhint %}
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10doro2.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10doro2-AGiu99zDJTTZXnOOjPE2bn6wbqiiL5.mp4" %}
 
 ### Step 2: Attach the Motor to the Door
 
@@ -65,7 +65,7 @@ To attach the motor to the door, you’ll need:
 3. Feed the cable through the metal handle.
 4. Double-check that all components are securely fastened and that the door moves smoothly.
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/step-2.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/step-2-XDSDNMLcaxG8RaUmjX9MQYq6fdQ3sK.mp4" %}
 
 ***
 
@@ -81,11 +81,11 @@ To attach the motor to the door, you’ll need:
 2. Make sure the connection is secure.
 3. Then mount the pod to the trap
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/threadinghandle.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/threadinghandle-BzOglE84FUBNxxAxyqCdvpx5lspbtd.mp4" %}
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/installingbattery.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/installingbattery-Y1XSwws5GxIWWPSOUODdtsjXbjI7eH.mp4" %}
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/mountingpod.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/mountingpod-QNbpObq2HrJNpyF1U65sTXmcDakQ8R.mp4" %}
 
 Connect the wire to the POD, ensuring the connection is secure.
 
