@@ -6,7 +6,7 @@ description: >-
 
 # Motor Connector Tightness Check
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/ocutrapconnector-obr9pAZdtXc729LOPqp9yRqguDy0Aa.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/ocutrapconnector.mp4" %}
 
 #### Symptoms
 

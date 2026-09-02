@@ -12,7 +12,7 @@ This guide walks you through assembling your OcuTrap R1 step by step, in three s
 
 Prefer to watch? The full assembly video is below, and [Video Assembly](video-assembly.md) breaks it into per-section clips.
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/ocutrap-assembly-xogIelE2sRdHVERAuoLtR1D2sx5GmB.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/ocutrap-assembly.mp4" %}
 
 ## Unboxing and Initial Inspection
 

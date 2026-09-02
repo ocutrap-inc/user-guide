@@ -1599,6 +1599,17 @@ body {
   border-radius: 10px;
 }
 
+.video-embed__open {
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.video-embed__open a {
+  color: #bbb;
+}
+
 .video-embed--youtube,
 .video-embed--vimeo {
   position: relative;

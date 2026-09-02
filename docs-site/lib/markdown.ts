@@ -110,9 +110,10 @@ function renderEmbed(url: string, caption?: string): string {
   if (isVideoUrl(url)) {
     return `<div class="video-embed video-embed--native">
 <video controls preload="metadata" playsinline>
-  <source src="${url}">
+  <source src="${url}" type="video/mp4">
   <p>Your browser does not support HTML5 video. <a href="${url}" target="_blank" rel="noopener noreferrer">Download the video</a>.</p>
 </video>
+<p class="video-embed__open"><a href="${url}" target="_blank" rel="noopener noreferrer">Open video in a new tab</a></p>
 </div>`;
   }
 
@@ -413,9 +414,10 @@ function convertVideoImgs(html: string): string {
       const altText = altMatch ? altMatch[1] : "";
       return `<div class="video-embed video-embed--native">
 <video controls preload="metadata" playsinline title="${altText}">
-  <source src="${src}">
+  <source src="${src}" type="video/mp4">
   <p><a href="${src}" target="_blank" rel="noopener noreferrer">Download video</a></p>
 </video>
+<p class="video-embed__open"><a href="${src}" target="_blank" rel="noopener noreferrer">Open video in a new tab</a></p>
 </div>`;
     }
   );

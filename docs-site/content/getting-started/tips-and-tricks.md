@@ -79,7 +79,7 @@ Unlike traditional traps that use a mechanical trip pan, OcuTrap uses a **distan
 
 This video shows how your OcuTrap works once it's set up and ready to catch animals.
 
-{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/my-movie-13-DRM3GWu9pZ7fmKIA1sFAksHQ2Qcuqq.mp4" %}
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-13.mp4" %}
 
 ### Test Before Deploying
 1. **Arm the trap** using the app
