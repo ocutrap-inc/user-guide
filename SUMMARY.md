@@ -46,6 +46,11 @@
 * [Care](getting-started/care.md)
   * [Maintenance](getting-started/maintenance.md)
 
+## Switching to the new app
+
+* [Switching to the new OcuTrap app](switching-to-the-new-app/README.md)
+  * [What's new: old app vs. new app](switching-to-the-new-app/whats-new.md)
+
 ## FAQs
 
 * [Sharing Traps](faqs/sharing-traps/README.md)

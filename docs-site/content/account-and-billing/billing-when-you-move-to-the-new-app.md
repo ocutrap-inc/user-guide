@@ -100,6 +100,7 @@ Yes. Those work the same way in the new app. See [Managing Your Subscription](ma
 
 ## See also
 
+* [Switching to the new OcuTrap app](../switching-to-the-new-app/README.md)
 * [Your OcuTrap Subscription](subscription-overview.md)
 * [Managing Your Subscription](managing-your-subscription.md)
 * [Billing](billing/README.md)

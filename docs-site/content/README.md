@@ -8,7 +8,7 @@ description: Set up, operate, and troubleshoot your OcuTrap smart trap.
 Everything you need to set up, operate, and troubleshoot your OcuTrap smart trap — hardware guides, app help, billing, and support.
 
 {% hint style="info" %}
-**New here?** Start with the [Set-up Tutorial](getting-started/set-up-tutorial.md). If something is not working, check [Common Issues](troubleshooting/common-issues.md) or [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md).
+**New here?** Start with the [Set-up Tutorial](getting-started/set-up-tutorial.md). If something is not working, check [Common Issues](troubleshooting/common-issues.md) or [Trap Offline or Won't Connect](troubleshooting/trap-offline-or-wont-connect.md). Moving from the old app? See [Switching to the new OcuTrap app](switching-to-the-new-app/README.md).
 {% endhint %}
 
 ## Browse the docs
