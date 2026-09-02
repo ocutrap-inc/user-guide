@@ -61,8 +61,10 @@ cp pdf-docs/printed/R1_Manual.pdf .gitbook/assets/R1_Manual.pdf
 The script exits non-zero if a booklet is not exactly 8 pages (the imposition
 needs a multiple of 4). If content spills, add a page and keep the total a
 multiple of 4. Do not shrink the type: the scale in the script docstring
-(body 10 pt on 13.5 pt, table cells 9.5 pt, legal 8 pt) is a legibility
-floor.
+(body 11 pt on 14.5 pt, step titles 12 pt, headings 16 pt, table cells 10 pt,
+captions 9 pt, legal 8.5 pt, footer 8.5 pt) is a legibility floor. The one
+exception is the R1 buttons+lights page, which carries both reference tables
+and keeps 9.5 pt cells.
 
 ---
 

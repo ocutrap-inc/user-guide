@@ -62,7 +62,10 @@ cp pdf-docs/printed/R1_Manual.pdf .gitbook/assets/R1_Manual.pdf
 The script fails loudly if a booklet does not land on exactly 8 pages, because
 the imposition needs a multiple of 4. If you add content and it spills, give it
 another page (and keep the total a multiple of 4) rather than shrinking the
-type: the type scale in the script's docstring is a legibility floor.
+type: the type scale in the script's docstring (body 11 pt on 14.5 pt, step
+titles 12 pt, headings 16 pt, table cells 10 pt, captions 9 pt, legal 8.5 pt,
+footer 8.5 pt) is a legibility floor. The R1 buttons+lights page is the one
+exception: it carries both reference tables and keeps 9.5 pt cells.
 
 `pdf-docs/manual-images/` holds the photos and renders embedded in the
 booklets, stored as plain git blobs. The R2 and R1 booklets share every page

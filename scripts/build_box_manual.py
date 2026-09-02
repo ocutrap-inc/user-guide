@@ -33,12 +33,14 @@ and the RIGHT edge of even pages.
 Type scale. This is a legibility floor: never go below it to make something
 fit, give the content another page instead.
 
-    body        10 pt on 13.5 pt leading
-    step title  11 pt bold
-    headings    15 pt
-    table cells 9.5 pt
-    legal       8 pt
-    footer      8 pt
+    body        11 pt on 14.5 pt leading
+    step title  12 pt bold
+    headings    16 pt
+    table cells 10 pt (9.5 pt only on the R1 buttons+lights page, which
+                carries both reference tables)
+    captions    9 pt
+    legal       8.5 pt
+    footer      8.5 pt
 
 Source of truth for content: docs.ocutrap.com (canonical knowledge base)
 References: getting-started/setting-up.md, getting-started/setting-up-r2.md
@@ -112,58 +114,65 @@ _ss = getSampleStyleSheet()
 
 sBody = ParagraphStyle(
     "Body", parent=_ss["Normal"], fontName="Helvetica",
-    fontSize=10, leading=13.5, textColor=INK, alignment=TA_LEFT, spaceAfter=0,
+    fontSize=11, leading=14.5, textColor=INK, alignment=TA_LEFT, spaceAfter=0,
 )
 sBodyBold = ParagraphStyle("BodyBold", parent=sBody, fontName="Helvetica-Bold")
-sLead = ParagraphStyle("Lead", parent=sBody, fontSize=11, leading=14.5)
+sLead = ParagraphStyle("Lead", parent=sBody, fontSize=12, leading=15.5)
 sStepTitle = ParagraphStyle(
     "StepTitle", parent=sBody, fontName="Helvetica-Bold",
-    fontSize=11, leading=14, textColor=NAVY, spaceAfter=0,
+    fontSize=12, leading=15, textColor=NAVY, spaceAfter=0,
 )
 sH1 = ParagraphStyle(
     "H1", parent=_ss["Heading1"], fontName="Helvetica-Bold",
-    fontSize=15, leading=17.5, textColor=NAVY, spaceBefore=0, spaceAfter=2,
+    fontSize=16, leading=18.5, textColor=NAVY, spaceBefore=0, spaceAfter=2,
 )
 sH2 = ParagraphStyle(
     "H2", parent=_ss["Heading2"], fontName="Helvetica-Bold",
-    fontSize=11.5, leading=14, textColor=NAVY, spaceBefore=0, spaceAfter=1,
+    fontSize=12, leading=15, textColor=NAVY, spaceBefore=0, spaceAfter=1,
 )
 sKicker = ParagraphStyle(
-    "Kicker", parent=sBody, fontName="Helvetica-Bold", fontSize=8,
-    leading=10, textColor=GOLD,
+    "Kicker", parent=sBody, fontName="Helvetica-Bold", fontSize=8.5,
+    leading=10.5, textColor=GOLD,
 )
-sSmall = ParagraphStyle("Small", parent=sBody, fontSize=9, leading=11.5,
+sSmall = ParagraphStyle("Small", parent=sBody, fontSize=9.5, leading=12.5,
                         textColor=MUTED)
-sTiny = ParagraphStyle("Tiny", parent=sBody, fontSize=8, leading=10,
+sTiny = ParagraphStyle("Tiny", parent=sBody, fontSize=8.5, leading=10.8,
                        textColor=MUTED)
-sLegal = ParagraphStyle("Legal", parent=sBody, fontSize=8, leading=10.2,
+sLegal = ParagraphStyle("Legal", parent=sBody, fontSize=8.5, leading=10.8,
                         textColor=INK)
 sLegalHead = ParagraphStyle("LegalHead", parent=sBody,
                             fontName="Helvetica-Bold",
-                            fontSize=9, leading=11, textColor=NAVY)
-sTable = ParagraphStyle("Tbl", parent=sBody, fontSize=9.5, leading=11.6)
+                            fontSize=9.5, leading=11.5, textColor=NAVY)
+sTable = ParagraphStyle("Tbl", parent=sBody, fontSize=10, leading=12.4)
+# The R1 buttons+lights page carries both reference tables, so it keeps the
+# old 9.5 pt cells rather than spilling onto a ninth page.
+sTableSm = ParagraphStyle("TblSm", parent=sTable, fontSize=9.5, leading=11.6)
 sTableBold = ParagraphStyle("TblB", parent=sTable, fontName="Helvetica-Bold")
 sTableHead = ParagraphStyle("TblH", parent=sTable, fontName="Helvetica-Bold",
                             textColor=NAVY)
-sWarn = ParagraphStyle("Warn", parent=sBody, fontSize=10, leading=13,
+sTableSmBold = ParagraphStyle("TblSmB", parent=sTableSm,
+                              fontName="Helvetica-Bold")
+sTableSmHead = ParagraphStyle("TblSmH", parent=sTableSm,
+                              fontName="Helvetica-Bold", textColor=NAVY)
+sWarn = ParagraphStyle("Warn", parent=sBody, fontSize=11, leading=14,
                        textColor=WARN_RED)
 sCaption = ParagraphStyle("Caption", parent=sBody,
                           fontName="Helvetica-Oblique",
-                          fontSize=8.5, leading=10.5, textColor=MUTED,
+                          fontSize=9, leading=11, textColor=MUTED,
                           alignment=TA_CENTER)
 sCoverTitle = ParagraphStyle(
     "CoverTitle", parent=sBody, fontName="Helvetica-Bold",
     fontSize=30, leading=33, textColor=NAVY,
 )
 sCoverSub = ParagraphStyle(
-    "CoverSub", parent=sBody, fontSize=12, leading=15, textColor=MUTED,
+    "CoverSub", parent=sBody, fontSize=12.5, leading=15.5, textColor=MUTED,
 )
-sCoverLine = ParagraphStyle("CoverLine", parent=sBody, fontSize=10, leading=14,
-                            textColor=INK)
-sQRUrl = ParagraphStyle("QRUrl", parent=sBody, fontSize=8, leading=10,
+sCoverLine = ParagraphStyle("CoverLine", parent=sBody, fontSize=10.5,
+                            leading=14.5, textColor=INK)
+sQRUrl = ParagraphStyle("QRUrl", parent=sBody, fontSize=8.5, leading=10.5,
                         textColor=MUTED, alignment=TA_CENTER)
 sQRLabel = ParagraphStyle("QRLabel", parent=sBody, fontName="Helvetica-Bold",
-                          fontSize=9, leading=11, textColor=NAVY,
+                          fontSize=9.5, leading=11.5, textColor=NAVY,
                           alignment=TA_CENTER)
 
 _TMP_FILES = []
@@ -461,11 +470,14 @@ def numbered_list(items, width, gap=7):
     return t
 
 
-def data_table(header, rows, col_widths):
+def data_table(header, rows, col_widths, small=False):
     """Header row on panel fill, 0.5 pt horizontal rules, no vertical rules."""
-    data = [[Paragraph(h, sTableHead) for h in header]]
+    head = sTableSmHead if small else sTableHead
+    bold = sTableSmBold if small else sTableBold
+    cell = sTableSm if small else sTable
+    data = [[Paragraph(h, head) for h in header]]
     for r in rows:
-        data.append([Paragraph(c, sTableBold if j == 0 else sTable)
+        data.append([Paragraph(c, bold if j == 0 else cell)
                      for j, c in enumerate(r)])
     t = Table(data, colWidths=col_widths)
     t.setStyle(TableStyle([
@@ -585,7 +597,7 @@ class BookletDoc(BaseDocTemplate):
         canv.setStrokeColor(BORDER)
         canv.setLineWidth(0.5)
         canv.line(x0, y + 11, x1, y + 11)
-        canv.setFont("Helvetica", 8)
+        canv.setFont("Helvetica", 8.5)
         canv.setFillColor(MUTED)
         canv.drawString(x0, y, f"OcuTrap {self.model_label}")
         canv.drawRightString(x1, y, str(n))
@@ -620,6 +632,18 @@ LIGHT_ROWS = [
     ("Solid red, staying on", "Battery critically low or trap shut down"),
     ("No light at all", "Off, hibernating, or failed boot"),
 ]
+
+R2_BATTERY_TEXT = (
+    "5,200 mAh pack (R2 default). Low alert at 20%, critical at 10%, auto "
+    "power-off at 9.6 V. Charge at room temperature. Runtime is about 3 "
+    "weeks on the 5,200 mAh pack and 40 days or more on the 10,000 mAh pack.")
+
+R1_BATTERY_TEXT = (
+    "US R1 units ship with the 10,000 mAh pack; some R1 units have the 5,200 "
+    "mAh pack. In the app, set Battery Type to the pack you have so the "
+    "low-battery alerts are right. Low alert at 20%, critical at 10%, auto "
+    "power-off at 9.6 V. Charge at room temperature. Runtime is 40 days or "
+    "more on the 10,000 mAh pack, about 3 weeks on the 5,200 mAh pack.")
 
 CARE_ITEMS = [
     "Wipe the camera and sensor window with a soft lint-free cloth.",
@@ -702,11 +726,11 @@ def cover_page(model, setup_url):
 
     # TODO: swap for R2 photo. No R2 product photo exists in the repo yet, so
     # both models currently use the assembled-R1 hero shot on the cover.
-    photo = fit_image(asset("DSC03816.JPG"), FRAME_W, 3.0 * inch)
+    photo = fit_image(asset("DSC03816.JPG"), FRAME_W, 3.4 * inch)
     if photo:
-        story.append(Spacer(1, 12))
+        story.append(Spacer(1, 14))
         story.append(photo)
-        story.append(Spacer(1, 24))
+        story.append(Spacer(1, 22))
 
     lines = Table(
         [[Paragraph("<b>Read this before first use.</b>", sCoverLine)],
@@ -744,13 +768,13 @@ def buttons_page(with_photo=True):
         BUTTON_ROWS,
         [1.15 * inch, 1.95 * inch, 1.50 * inch],
     ))
-    story.append(Spacer(1, 14))
+    story.append(Spacer(1, 11))
     if with_photo:
         row = image_row([(asset("pod-panel.png"), "The POD control panel")],
-                        FRAME_W, height=2.6 * inch)
+                        FRAME_W, height=2.0 * inch)
         if row:
             story.append(row)
-            story.append(Spacer(1, 14))
+            story.append(Spacer(1, 11))
     story.append(panel_box([
         Paragraph("Every button press also works in the app", sH2),
         Spacer(1, 3),
@@ -800,7 +824,7 @@ def buttons_and_lights_page():
     story.append(data_table(
         ["Action", "Steps", "Light"],
         BUTTON_ROWS,
-        [1.15 * inch, 1.90 * inch, 1.55 * inch],
+        [1.15 * inch, 1.90 * inch, 1.55 * inch], small=True,
     ))
     story.append(Spacer(1, 10))
 
@@ -812,14 +836,14 @@ def buttons_and_lights_page():
     story.append(data_table(
         ["Light", "Meaning"],
         LIGHT_ROWS,
-        [1.75 * inch, 2.85 * inch],
+        [1.75 * inch, 2.85 * inch], small=True,
     ))
     return story
 
 
-def battery_weather_care_page(with_after_capture):
+def battery_weather_care_page(with_after_capture, battery_text):
     story = [heading("Battery, weather, care", kicker="Keep it running")]
-    story.append(Spacer(1, 8))
+    story.append(Spacer(1, 5))
 
     if with_after_capture:
         story.append(Paragraph("After a capture", sH2))
@@ -829,16 +853,12 @@ def battery_weather_care_page(with_after_capture):
             "on its own. In the app, tap Open to release. This also returns "
             "the trap to Unarmed. Keep hands clear of the door: it closes in "
             "about 0.75 seconds and can pinch.", sBody))
-        story.append(Spacer(1, 11))
+        story.append(Spacer(1, 6))
 
     story.append(Paragraph("Battery", sH2))
     story.append(Spacer(1, 3))
-    story.append(Paragraph(
-        "5,200 mAh pack (R2 default). Low alert at 20%, critical at 10%, auto "
-        "power-off at 9.6 V. Charge at room temperature. Runtime is about 3 "
-        "weeks on the 5,200 mAh pack and 40 days or more on the 10,000 mAh "
-        "pack.", sBody))
-    story.append(Spacer(1, 11))
+    story.append(Paragraph(battery_text, sBody))
+    story.append(Spacer(1, 6))
 
     story.append(Paragraph("Weather", sH2))
     story.append(Spacer(1, 3))
@@ -846,27 +866,26 @@ def battery_weather_care_page(with_after_capture):
         "Rated 0 &deg;C to 40 &deg;C (32 &deg;F to 104 &deg;F). Do not "
         "submerge. In freezing weather the door can ice. Check it before "
         "arming.", sBody))
-    story.append(Spacer(1, 11))
+    story.append(Spacer(1, 6))
 
     story.append(Paragraph("Care after every capture and after harsh weather",
                            sH2))
-    story.append(Spacer(1, 4))
-    story.append(bullet_list(CARE_ITEMS, FRAME_W))
-    story.append(Spacer(1, 9))
+    story.append(Spacer(1, 3))
+    story.append(bullet_list(CARE_ITEMS, FRAME_W, gap=1))
+    story.append(Spacer(1, 7))
     story.append(warn_box(
         "<b>Power off and unplug the battery before any maintenance.</b> Hold "
-        "the Power button about 3 seconds, wait for the light to go out, then "
-        "open the POD latch and disconnect the yellow connectors.", FRAME_W))
-    story.append(Spacer(1, 12))
+        "Power about 3 seconds, wait for the light to go out, then disconnect "
+        "the yellow connectors.", FRAME_W))
+    story.append(Spacer(1, 7))
     story.append(panel_box([
         Paragraph("Something not right?", sH2),
-        Spacer(1, 3),
+        Spacer(1, 2),
         Paragraph(
-            "Troubleshooting, videos, and the full knowledge base live at "
-            "<b>docs.ocutrap.com</b>. If you are still stuck, email "
-            f"<b>{SUPPORT_EMAIL}</b> with your Trap ID and what the status "
-            "light is doing.", sBody),
-    ], FRAME_W, fill=white))
+            "Troubleshooting and videos are at <b>docs.ocutrap.com</b>. Still "
+            f"stuck? Email <b>{SUPPORT_EMAIL}</b> with your Trap ID and what "
+            "the status light is doing.", sBody),
+    ], FRAME_W, fill=white, pad=6))
     return story
 
 
@@ -955,10 +974,17 @@ def safety_page():
 def app_and_arm_page(app_step_num, place_step_num):
     story = [heading("Add the trap and arm it", kicker="Set up, continued")]
     story.append(Spacer(1, 9))
-    story.extend(steps_stack([
-        dict(num=app_step_num, title=APP_STEP[0], body=APP_STEP[1]),
-        dict(num=place_step_num, title=PLACE_STEP[0], body=PLACE_STEP[1]),
-    ], gap=14))
+    story.append(step(app_step_num, APP_STEP[0], APP_STEP[1]))
+    story.append(Spacer(1, 8))
+    story.append(panel_box([
+        Paragraph("Where the IDs are", sH2),
+        Spacer(1, 3),
+        Paragraph(
+            "The <b>Trap ID</b> is on the sticker on the cage. The "
+            "<b>Device ID</b> is on the sticker inside the POD.", sBody),
+    ], FRAME_W))
+    story.append(Spacer(1, 14))
+    story.append(step(place_step_num, PLACE_STEP[0], PLACE_STEP[1]))
     story.append(Spacer(1, 20))
     story.append(qr_block(APP_URL, "app.ocutrap.com", 1.35 * inch,
                           label="Open the app", width=FRAME_W))
@@ -1005,19 +1031,10 @@ def r2_page3():
         dict(num=3, title=POD_STEP[0], body=POD_STEP[1],
              images=[(asset("image.png"), "The POD"),
                      (asset(POD_CLIP_IMG), "Snap the top clip")],
-             img_h=1.85 * inch),
+             img_h=2.45 * inch),
         dict(num=4, title=BATTERY_STEP[0], body=BATTERY_STEP[1]),
         dict(num=5, title=POWER_STEP[0], body=POWER_STEP[1]),
     ], gap=14))
-    story.append(Spacer(1, 14))
-    story.append(panel_box([
-        Paragraph("Where the IDs are", sH2),
-        Spacer(1, 3),
-        Paragraph(
-            "The <b>Trap ID</b> is on the sticker on the cage. The "
-            "<b>Device ID</b> is on the sticker inside the POD. You need both "
-            "on the next page.", sBody),
-    ], FRAME_W))
     return story
 
 
@@ -1179,37 +1196,26 @@ def r1_page4():
 def r1_page5():
     """POD, battery, power on, then the app and arming. All of section 3."""
     story = [heading("3. POD, power, app", kicker="Section 3")]
-    story.append(Spacer(1, 8))
-    story.append(step(1, POD_STEP[0], POD_STEP[1]))
-    story.append(Spacer(1, 11))
+    story.append(Spacer(1, 7))
+    story.append(step(
+        1, POD_STEP[0],
+        POD_STEP[1] + " Now fully tighten all the bolts, including the handle "
+        "bolts you hand-tightened earlier."))
+    story.append(Spacer(1, 9))
     story.append(step(2, BATTERY_STEP[0], BATTERY_STEP[1]))
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
     story.append(panel_box([
         Paragraph(
             "US R1 units ship with the 10,000 mAh pack. In the app, set "
-            "<b>Battery Type</b> to 10,000 mAh so the low-battery alerts are "
-            "right.", sBody),
-    ], FRAME_W, fill=WARN_FILL, border=WARN_RED))
-    story.append(Spacer(1, 11))
+            "<b>Battery Type</b> to the pack you have so the low-battery "
+            "alerts are right.", sBody),
+    ], FRAME_W))
+    story.append(Spacer(1, 9))
     story.append(step(3, POWER_STEP[0], POWER_STEP[1]))
-    story.append(Spacer(1, 11))
+    story.append(Spacer(1, 9))
     story.append(step(4, APP_STEP[0], APP_STEP[1]))
-    story.append(Spacer(1, 11))
+    story.append(Spacer(1, 9))
     story.append(step(5, PLACE_STEP[0], PLACE_STEP[1]))
-    story.append(Spacer(1, 12))
-
-    note = Paragraph(
-        "Fully tighten all the bolts, including the handle bolts you "
-        "hand-tightened earlier. Hardware setup is now complete.", sSmall)
-    qr = qr_block(APP_URL, "app.ocutrap.com", 0.85 * inch,
-                  label="Open the app", width=1.5 * inch)
-    row = Table([[note, qr]], colWidths=[FRAME_W - 1.5 * inch, 1.5 * inch])
-    row.setStyle(TableStyle(NO_PAD + [
-        ("VALIGN", (0, 0), (0, 0), "MIDDLE"),
-        ("VALIGN", (1, 0), (1, 0), "TOP"),
-        ("RIGHTPADDING", (0, 0), (0, 0), 8),
-    ]))
-    story.append(row)
     return story
 
 
@@ -1236,7 +1242,8 @@ def r2_pages(cfg):
         app_and_arm_page(6, 7),               # 4 add the trap, place and arm
         buttons_page(with_photo=True),        # 5 buttons on the POD
         status_light_page(),                  # 6 status light, after a capture
-        battery_weather_care_page(False),     # 7 battery, weather, care
+        battery_weather_care_page(False, R2_BATTERY_TEXT),
+                                              # 7 battery, weather, care
         safety_page(),                        # 8 safety and legal
     ]
 
@@ -1249,7 +1256,8 @@ def r1_pages(cfg):
         r1_page4(),                           # 4 motor and handle
         r1_page5(),                           # 5 POD, power, app, arm
         buttons_and_lights_page(),            # 6 buttons + status light
-        battery_weather_care_page(True),      # 7 after a capture, battery,
+        battery_weather_care_page(True, R1_BATTERY_TEXT),
+                                              # 7 after a capture, battery,
                                               #   weather, care
         safety_page(),                        # 8 safety and legal
     ]
