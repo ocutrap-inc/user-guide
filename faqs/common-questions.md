@@ -38,7 +38,7 @@ See [Switching to the new OcuTrap app](../switching-to-the-new-app/README.md).
 After purchase, the main ongoing costs are:
 
 * **Per-trap subscription** (monthly or annual), required for cellular + cloud features.
-* **Battery charging / replacement** as packs age. See [Battery](battery.md) and [Battery Overview](../getting-started/battery-overview.md).
+* **Battery charging / replacement** as packs age. See [Battery Overview](../getting-started/battery-overview.md).
 
 </details>
 
@@ -70,7 +70,7 @@ Sign in at [app.ocutrap.com](https://app.ocutrap.com) → **Account** → edit y
 
 <summary>How do I share a trap with someone else?</summary>
 
-Open the trap → **Sharing** tab → enter their email → choose manager level (owner only) → send invite. Details: [Sharing Traps](sharing-traps/README.md) and [User Levels](sharing-traps/user-levels.md).
+Open the trap → **Sharing** tab → enter their email → choose manager level (owner only) → send invite. Details: [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User Levels](../getting-started/app/sharing-traps/user-levels.md).
 
 </details>
 
@@ -124,7 +124,7 @@ The trap is built for outdoor field use. For extremes and winter tips, see [Weat
 
 <summary>How long does the battery last?</summary>
 
-Runtime depends on temperature, photo cadence, and cellular conditions. Charging and pack basics: [Battery](battery.md). Overview: [Battery Overview](../getting-started/battery-overview.md).
+Runtime depends on temperature, photo cadence, and cellular conditions. Charging and pack basics: [Battery Overview](../getting-started/battery-overview.md).
 
 </details>
 
@@ -161,7 +161,7 @@ Start here:
 
 <summary>How do I reduce false triggers?</summary>
 
-Tune placement and bait, review pre-capture / capture photos, and adjust **Capture Distance** and related door/sensor settings. See [Distance Limits, Sensor Alerts & Errors](../getting-started/trap-settings/distance-safety-and-alerts.md) and [Pre-Capture Notification](../getting-started/trap-settings/pre-capture-notification.md).
+Tune placement and bait, review pre-capture / capture photos, and adjust **Capture Distance** and related door/sensor settings. See [Distance Limits, Sensor Alerts & Errors](../getting-started/capture-behavior/distance-safety-and-alerts.md) and [Pre-Capture Notification](../getting-started/capture-behavior/pre-capture-notification.md).
 
 </details>
 

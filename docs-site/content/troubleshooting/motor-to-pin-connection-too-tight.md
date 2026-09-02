@@ -6,6 +6,8 @@ description: >-
 
 # Motor-to-Pin Connection Too Tight
 
+_Applies to: OcuTrap R1._
+
 ### Issue
 
 When attaching the motor to the bracket:

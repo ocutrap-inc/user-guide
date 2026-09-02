@@ -23,7 +23,7 @@ To do its job, your trap and the OcuTrap app handle:
 ## Who Can See Your Data
 
 * **You**, as the account owner.
-* **People you share traps with.** When you share a trap, the recipient can see that trap's data according to their **user level**. See [Sharing Traps](../faqs/sharing-traps/README.md) and [User Levels](../faqs/sharing-traps/user-levels.md).
+* **People you share traps with.** When you share a trap, the recipient can see that trap's data according to their **user level**. See [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User Levels](../getting-started/app/sharing-traps/user-levels.md).
 * You control sharing. You choose who to add and can manage access at any time.
 
 ***
@@ -53,6 +53,6 @@ OcuTrap uses automated image recognition to help identify captures. How that wor
 ## See also
 
 * [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md): Privacy Policy, Data Use Policy, Animal Recognition Policy, and more.
-* [Sharing Traps](../faqs/sharing-traps/README.md) and [User Levels](../faqs/sharing-traps/user-levels.md)
+* [Sharing Traps](../getting-started/app/sharing-traps/README.md) and [User Levels](../getting-started/app/sharing-traps/user-levels.md)
 * [Deleting an Image](../getting-started/app/deleting-an-image.md)
 * [Account Deletion](../account-and-billing/account-deletion.md)

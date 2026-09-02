@@ -45,7 +45,7 @@ If the animal stays put, the trap stretches the spacing to protect battery: afte
 
 In **Scouting Mode**, this is how you watch what's visiting without closing the door. You'll also get a **Scout Alert** when an animal first enters and a **Scout Trigger** if it reaches the trigger distance. Repeat alerts from the same visit are throttled so your activity feed isn't flooded, but **photos keep coming** either way. The scouting photo interval is adjustable in settings (from 15 seconds up to 5 minutes, or off).
 
-See [Scouting Mode](scouting-mode.md) and [Pre-Capture Notification](../trap-settings/pre-capture-notification.md).
+See [Scouting Mode](scouting-mode.md) and [Pre-Capture Notification](../capture-behavior/pre-capture-notification.md).
 
 ## Capture and after-capture photos
 
@@ -58,7 +58,7 @@ Independent of animal activity, the trap takes periodic **time-lapse** photos in
 
 ## On-demand photos
 
-Any time, you can request a photo from the app. Tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Requesting photos](../../faqs/manually-taking-an-image.md).
+Any time, you can request a photo from the app. Tap the **camera** button for a full-quality image or the **lightning-bolt** for a fast image. On-demand photos ignore all the timers above and capture right away. See [Requesting photos](requesting-photos.md).
 
 ## What affects the timing
 

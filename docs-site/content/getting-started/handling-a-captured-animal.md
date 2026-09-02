@@ -50,7 +50,7 @@ Where and how you may release or relocate an animal is regulated and varies by l
 
 If you need to move the trap before releasing (for example, to an approved relocation site), you don't need to change the trap's state. It can **stay in Captured mode**, with the door closed, while you transport it.
 
-1. **Verify the door is fully closed and locked** before you lift the trap, so the animal cannot push it open in transit. For the most secure hold, see [Enhanced Door Closing](trap-settings/enhanced-door-closing.md).
+1. **Verify the door is fully closed and locked** before you lift the trap, so the animal cannot push it open in transit. For the most secure hold, see [Enhanced Door Closing](capture-behavior/enhanced-door-closing.md).
 2. Keep the trap **covered, level, well-ventilated, and out of direct sun and heat**.
 3. Release **as soon as possible**. Minimize the time the animal is confined.
 4. At the release site, tap **Open** to release the door (this also returns the trap to **Unarmed**).

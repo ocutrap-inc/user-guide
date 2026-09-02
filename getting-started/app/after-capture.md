@@ -59,6 +59,5 @@ After tapping **Open**, the trap is in **Unarmed / Open**. Tap **Arm** on the tr
 
 ## See also
 
-* [Arm & Un-arm Button](arm-un-arm-button.md): how the modes relate.
-* [Open & Closed Button](open-closed-button.md): door commands.
+* [Trap Control](trap-control.md): how the modes relate and how to send door commands.
 * [Scouting Mode](scouting-mode.md): non-trapping observation mode.

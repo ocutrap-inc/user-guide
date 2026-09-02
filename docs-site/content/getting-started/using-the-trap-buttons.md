@@ -6,6 +6,8 @@ description: >-
 
 # Using the Buttons on the Trap
 
+_Applies to: OcuTrap R1 and R2._
+
 The trap has two buttons on the POD: the **Power button** on the left and the **User button** on the right.
 
 Everything on this page works with the buttons alone. No app. No cell signal. Use it when you are standing at the trap and need to arm it, unarm it, open the door, or shut it down.
@@ -108,8 +110,7 @@ See [Connectivity & Coverage](connectivity-and-coverage.md) and [Improving a Wea
 
 ## See also
 
-* [Arm & Un-arm Button](app/arm-un-arm-button.md): setting the mode from the app.
-* [Open & Closed Button](app/open-closed-button.md): door commands from the app.
+* [Trap Control](app/trap-control.md): setting the mode and sending door commands from the app.
 * [After a Capture](app/after-capture.md): what Open and Unarm each do once the trap is closed.
 * [LED Guide](led-guide.md): every color and blink pattern.
 * [Handling & Releasing a Captured Animal](handling-a-captured-animal.md): what to do in the field.

@@ -33,9 +33,20 @@ All OcuTrap policies, terms, and legal documents are kept in a single place on o
 
 ***
 
+## Warranty
+
+The full OcuTrap hardware warranty terms are published on our website:
+
+{% embed url="https://ocutrap.com/pages/warranty" %}
+[OcuTrap Warranty: ocutrap.com/pages/warranty](https://ocutrap.com/pages/warranty)
+{% endembed %}
+
+For warranty claims or questions, contact [support@ocutrap.com](mailto:support@ocutrap.com) with your Trap ID.
+
+***
+
 ## See also
 
-* [Warranty Information](warranty-information.md): where to find the full warranty terms.
 * [Your Data & Privacy](data-and-privacy.md): what OcuTrap collects and your controls.
 * [Responsible & Legal Use](responsible-and-legal-use.md): using OcuTrap within local laws.
 * [Safety Information](../support/safety-information.md): operating the device safely.

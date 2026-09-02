@@ -10,7 +10,7 @@ You've assembled your OcuTrap and added it to your account. Now **set it up on s
 
 **Before you start, make sure you've done:**
 
-- [Hardware Set Up](setting-up.md): trap assembled, POD attached, battery charged
+- Hardware set up, for your model: [Set up your OcuTrap R2](setting-up-r2.md) or [Hardware set up (OcuTrap R1)](setting-up.md). Trap assembled, POD attached, battery charged
 - [Adding a trap to your account](app/adding-a-trap-to-your-account.md): trap paired and visible in the app
 
 ---
@@ -52,7 +52,7 @@ Capture distance is how far **inside** the trap an animal must be before the doo
 **Targeting smaller animals?** The sensor's detection area is naturally a little wider the farther it is from the POD, so a larger capture distance can help a small animal fall within it. Because smaller animals are harder to detect reliably, **confirm your target actually triggers at your chosen distance using [Scouting Mode](app/scouting-mode.md) (Step 4) before you rely on the trap.**
 {% endhint %}
 
-Full details on presets and the sensor error messages you might see: [Distance Limits, Sensor Alerts & Errors](trap-settings/distance-safety-and-alerts.md).
+Full details on presets and the sensor error messages you might see: [Distance Limits, Sensor Alerts & Errors](capture-behavior/distance-safety-and-alerts.md).
 
 ---
 
@@ -70,7 +70,7 @@ If you don't see breathing cyan, give it a minute to connect, and check signal i
 
 Never leave a trap deployed without confirming it fires:
 
-1. **Arm the trap** from the app (see [Arm & Un-arm Button](app/arm-un-arm-button.md)).
+1. **Arm the trap** from the app (see [Trap Control](app/trap-control.md)).
 2. **Wave your hand** slowly through the detection zone, at about the depth your target animal would reach.
 3. **Confirm** the door closes and you receive a capture alert.
 4. **Open the door and disarm**, then re-arm for real deployment.
@@ -94,9 +94,9 @@ Never leave a trap deployed without confirming it fires:
 
 ## After you deploy
 
-- Turn on [Pre-Capture Notifications](trap-settings/pre-capture-notification.md) to get an alert and photo when an animal approaches. This helps confirm your target is showing up.
+- Turn on [Pre-Capture Notifications](capture-behavior/pre-capture-notification.md) to get an alert and photo when an animal approaches. This helps confirm your target is showing up.
 - When you get a capture, follow [Handling & Releasing a Captured Animal](handling-a-captured-animal.md).
 
 ---
 
-**Related:** [Hardware Set Up](setting-up.md) · [Scouting Mode](app/scouting-mode.md) · [Distance Limits, Sensor Alerts & Errors](trap-settings/distance-safety-and-alerts.md) · [Tips and Tricks](tips-and-tricks.md)
+**Related:** [Set up your OcuTrap R2](setting-up-r2.md) · [Hardware set up (OcuTrap R1)](setting-up.md) · [Scouting Mode](app/scouting-mode.md) · [Distance Limits, Sensor Alerts & Errors](capture-behavior/distance-safety-and-alerts.md) · [Tips and Tricks](tips-and-tricks.md)

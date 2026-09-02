@@ -6,6 +6,8 @@ description: >-
 
 # Maintenance
 
+_Applies to: OcuTrap R1 and R2._
+
 Follow this checklist before each trapping session. **Always power off the trap before performing any maintenance.**
 
 ### Maintenance Tasks (Every Trapping Session)

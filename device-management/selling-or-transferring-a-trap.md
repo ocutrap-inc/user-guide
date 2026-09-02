@@ -69,7 +69,7 @@ Removing the trap permanently deletes your images and history for that trap. Sav
 1. On the trap's page, open the **Settings** tab and scroll to the **Danger zone**.
 2. Click **Remove trap** and confirm. This permanently deletes the trap and its data from your account.
 
-> Full instructions and what gets deleted: [deleting-a-trap.md](../deleting-a-trap.md "mention")
+> Full instructions and what gets deleted: [deleting-a-trap.md](deleting-a-trap.md "mention")
 
 ### Step 3: New owner adds the trap
 

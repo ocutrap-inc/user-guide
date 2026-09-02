@@ -6,11 +6,13 @@ description: >-
 
 # Hardware set up (OcuTrap R1)
 
+_Applies to: OcuTrap R1._
+
 Have an R2? See [Set up your OcuTrap R2](setting-up-r2.md). The R2 ships with the door and motor installed.
 
 Assemble your OcuTrap R1 in three sections: **Door**, **Handle**, and **POD**. Follow each step in order. When the hardware is done, continue to [Adding a trap to your account](app/adding-a-trap-to-your-account.md) for the app setup.
 
-Prefer to watch? The full assembly video is below, and [Video Assembly](video-assembly.md) breaks it into per-section clips.
+Prefer to watch? The full assembly video is below, and each section has its own clip.
 
 {% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/ocutrap-assembly-2OC4F7wiMOKgTuetzYpao6iOHGKpbX.mp4" %}
 
@@ -68,6 +70,12 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 <figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+**Hardware note:** The video below shows an earlier door-rod revision with white washers and springs. Current OcuTrap R1 units ship with **black spacers and black capped nuts** instead. Follow the written steps here, which match the parts in your box.
+{% endhint %}
+
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10doro2-AGiu99zDJTTZXnOOjPE2bn6wbqiiL5.mp4" %}
+
 #### Step 3: Setup the Motor
 
 1. Install top bracket with washers and bolts. Tighten with nut driver.
@@ -78,6 +86,8 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 \
 ![](../.gitbook/assets/setup-motor-installation.png)![](<../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png>)
+
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/step-2-XDSDNMLcaxG8RaUmjX9MQYq6fdQ3sK.mp4" %}
 
 ### Section 2: Handle Setup
 
@@ -104,6 +114,8 @@ Do not fully tighten the bolts until the motor connector is fully through the tu
 
 <figure><img src="../.gitbook/assets/image (27).png" alt="" width="188"><figcaption><p>Inside trap view</p></figcaption></figure>
 
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/threadinghandle-BzOglE84FUBNxxAxyqCdvpx5lspbtd.mp4" %}
+
 ### Section 3: POD
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
@@ -121,6 +133,12 @@ Do not fully tighten the bolts until the motor connector is fully through the tu
 2. Use the top latch to secure the POD in place.
 
 Fully tighten all the bolts (including the handle bolts you hand-tightened earlier). At this point, your hardware setup is complete.
+
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/my-movie-10-PePOjHAGWWKyRhQB1RGxHnD7d7LXuw.mp4" %}
+
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/installingbattery-Y1XSwws5GxIWWPSOUODdtsjXbjI7eH.mp4" %}
+
+{% embed url="https://hjxx5i3c7zgkvqye.public.blob.vercel-storage.com/videos/web/mountingpod-QNbpObq2HrJNpyF1U65sTXmcDakQ8R.mp4" %}
 
 {% hint style="warning" %}
 If you have issues, see [Common Issues](../troubleshooting/common-issues.md).

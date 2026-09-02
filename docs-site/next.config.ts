@@ -95,6 +95,152 @@ const nextConfig: NextConfig = {
         destination: "/getting-started/deploying-in-the-field",
         permanent: true,
       },
+
+      // IA restructure (DOC-26).
+      // A. One setup spine.
+      {
+        source: "/getting-started/introduction",
+        destination: "/getting-started/set-up-tutorial",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/video-assembly",
+        destination: "/getting-started/setting-up",
+        permanent: true,
+      },
+      // B. Battery FAQ merged into Battery Overview.
+      {
+        source: "/faqs/battery",
+        destination: "/getting-started/battery-overview",
+        permanent: true,
+      },
+      // C. Settings pages merged into the Settings Reference.
+      {
+        source: "/getting-started/app/trap-settings/more-settings-overview",
+        destination: "/getting-started/app/trap-settings/settings-reference",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/app/trap-settings/advanced-settings",
+        destination: "/getting-started/app/trap-settings/settings-reference",
+        permanent: true,
+      },
+      // C. getting-started/trap-settings renamed to capture-behavior.
+      {
+        source: "/getting-started/trap-settings",
+        destination: "/getting-started/capture-behavior",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/trap-settings/enhanced-door-closing",
+        destination: "/getting-started/capture-behavior/enhanced-door-closing",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/trap-settings/pre-capture-notification",
+        destination: "/getting-started/capture-behavior/pre-capture-notification",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/trap-settings/distance-safety-and-alerts",
+        destination: "/getting-started/capture-behavior/distance-safety-and-alerts",
+        permanent: true,
+      },
+      // D. Door and arm-mode pages folded into Trap Control.
+      {
+        source: "/getting-started/app/open-closed-button",
+        destination: "/getting-started/app/trap-control",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/app/arm-un-arm-button",
+        destination: "/getting-started/app/trap-control",
+        permanent: true,
+      },
+      {
+        source: "/getting-started/app/other-app-information",
+        destination: "/getting-started/app/trap-control",
+        permanent: true,
+      },
+      // E. Billing folder flattened into Account and Billing.
+      {
+        source: "/account-and-billing/billing",
+        destination: "/account-and-billing/managing-your-subscription",
+        permanent: true,
+      },
+      {
+        source: "/account-and-billing/billing/changing-your-subscription-payment-method",
+        destination: "/account-and-billing/changing-your-subscription-payment-method",
+        permanent: true,
+      },
+      {
+        source: "/account-and-billing/update-individual-trap-subscriptions",
+        destination: "/account-and-billing/managing-your-subscription",
+        permanent: true,
+      },
+      // F. LED pattern animations folded into the LED Guide.
+      {
+        source: "/getting-started/app/led-modes",
+        destination: "/getting-started/led-guide",
+        permanent: true,
+      },
+      // G. Placement moves.
+      {
+        source: "/deleting-a-trap",
+        destination: "/device-management/deleting-a-trap",
+        permanent: true,
+      },
+      {
+        source: "/faqs/safe-mode",
+        destination: "/troubleshooting/safe-mode",
+        permanent: true,
+      },
+      {
+        source: "/faqs/sharing-traps",
+        destination: "/getting-started/app/sharing-traps",
+        permanent: true,
+      },
+      {
+        source: "/faqs/sharing-traps/user-levels",
+        destination: "/getting-started/app/sharing-traps/user-levels",
+        permanent: true,
+      },
+      {
+        source: "/faqs/manually-taking-an-image",
+        destination: "/getting-started/app/requesting-photos",
+        permanent: true,
+      },
+      {
+        source: "/faqs/accessory-button-port",
+        destination: "/getting-started/accessory-port",
+        permanent: true,
+      },
+      {
+        source: "/faqs/miscellaneous/password-policy-for-users",
+        destination: "/account-and-billing/password-policy",
+        permanent: true,
+      },
+      {
+        source: "/faqs/miscellaneous",
+        destination: "/account-and-billing/password-policy",
+        permanent: true,
+      },
+      // H. Stubs and merged pages.
+      {
+        source: "/getting-started/care",
+        destination: "/getting-started/maintenance",
+        permanent: true,
+      },
+      {
+        source: "/legal-and-compliance/warranty-information",
+        destination: "/legal-and-compliance/legal-disclaimers-and-compliance-information",
+        permanent: true,
+      },
+      {
+        source: "/support/purchases",
+        destination: "/support/support",
+        permanent: true,
+      },
     ];
   },
 };

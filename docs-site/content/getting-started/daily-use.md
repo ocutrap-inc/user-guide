@@ -20,6 +20,6 @@ Day-to-day app controls, tips, and the feature guides you’ll use after setup.
 [Handling & Releasing a Captured Animal](handling-a-captured-animal.md)
 {% endcontent-ref %}
 
-{% content-ref url="trap-settings/README.md" %}
-[Door & Capture Features](trap-settings/README.md)
+{% content-ref url="capture-behavior/README.md" %}
+[Door & Capture Features](capture-behavior/README.md)
 {% endcontent-ref %}
