@@ -252,7 +252,7 @@ export function ledMatrixToMarkdownTable(matrix: LedMatrix): string {
         lines.push(
           `| ${esc(colorLabelOf(entry))} | ${esc(patternLabel(entry.pattern))} | ${esc(
             meaning
-          )} | ${esc(actionParts.join(" — ") || "—")} |`
+          )} | ${esc(actionParts.join(" · ") || "–")} |`
         );
       }
     }

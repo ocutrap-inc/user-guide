@@ -13,7 +13,7 @@ OcuTrap firmware updates are delivered automatically over-the-air (OTA) to ensur
 ### Automatic Updates
 
 * Firmware updates are pushed automatically when your OcuTrap is connected to the internet.
-* Updates typically occur during low-activity periods to minimize disruption.
+* Updates only download while the trap is **Unarmed**. An armed, scouting, or captured trap waits until you unarm it.
 * Your trap will briefly restart after an update is applied.
 
 ### Update Requirements
