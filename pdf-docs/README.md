@@ -1,6 +1,6 @@
 # PDF Docs
 
-All print-ready and online-distribution PDFs for the OcuTrap R1. Organized by
+All print-ready and online-distribution PDFs for the OcuTrap R2 and R1. Organized by
 how the document reaches the customer.
 
 ```

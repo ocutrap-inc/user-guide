@@ -270,6 +270,9 @@
   - [x] Root and `docs-site/content/` mirrors are byte-identical. Docs site and
     PDF builds pass, the PDF source hash verifies, and the rendered warning is
     visually clean. exit-impact: ops.
+- [ ] **DOC-22**: R2 cutover: specs page carries R2 and R1 physical/battery
+  values, generic product references model-neutral or R2-first, in-box PDFs
+  retitled R2, assembly guide labeled R1 with an R2 callout
 
 ### PDF Regeneration (PDF)
 
@@ -459,6 +462,7 @@
 | DOC-18  | Weak cellular signal page + multi-network copy |
 | DOC-19  | EDC backoff calibration procedure |
 | DOC-20  | EDC default and advanced-setting warning |
+| DOC-22  | R2 cutover in docs + in-box PDFs |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

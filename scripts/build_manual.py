@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the OcuTrap R1 Installation & User Manual — letter-size, print-ready PDF.
+Build the OcuTrap R2 Installation & User Manual — letter-size, print-ready PDF.
 
 Replaces the Google Docs "Manual v2" (half-letter, 24 pages) with a branded,
 letter-portrait manual that prints normally (one page per sheet, no 2-up).
@@ -321,7 +321,7 @@ def on_page(canvas, doc):
     canvas.setFont("Helvetica-Bold", 8)
     canvas.setFillColor(BRAND_DARK)
     canvas.drawString(MARGIN, PAGE_H - 0.48 * inch,
-                      "OcuTrap R1 — Installation & User Manual")
+                      "OcuTrap R2 — Installation & User Manual")
     canvas.setFont("Helvetica", 8)
     canvas.setFillColor(MUTED)
     canvas.drawRightString(PAGE_W - MARGIN, PAGE_H - 0.48 * inch, DOCS_URL)
@@ -347,7 +347,7 @@ def cover(story):
         story.append(logo)
     story.append(Spacer(1, 0.5 * inch))
     story.append(Paragraph(
-        "OcuTrap R1",
+        "OcuTrap R2",
         ParagraphStyle("CT1", parent=sH1, fontSize=34, leading=38,
                        alignment=TA_CENTER, textColor=BRAND_DARK)))
     story.append(Paragraph(
@@ -362,7 +362,7 @@ def cover(story):
     story.append(Spacer(1, 0.45 * inch))
     notice = Table([[Paragraph(
         "<b>Please read this manual fully before assembling or operating "
-        "your OcuTrap R1.</b>",
+        "your OcuTrap R2.</b>",
         ParagraphStyle("CN", parent=sBody, alignment=TA_CENTER,
                        fontSize=11, leading=14, spaceAfter=0))]],
         colWidths=[5.4 * inch])
@@ -404,7 +404,7 @@ def contents_and_unboxing(story):
         ("Battery Safety Precautions", "13"),
         ("Safety Warnings — Moving Parts &amp; Animal Handling", "15"),
         ("Safety Information, Restrictions, and Notices", "15"),
-        ("OcuTrap R1 Hardware Warranty", "16"),
+        ("OcuTrap R2 Hardware Warranty", "16"),
         ("FCC Compliance and Laser Safety", "18"),
     ]
     rows = [[Paragraph(t, sTOC),
@@ -425,7 +425,7 @@ def contents_and_unboxing(story):
     story.append(section_heading("Unboxing and Initial Inspection"))
     story.append(Spacer(1, 4))
     story.append(Paragraph(
-        "Carefully unpack your OcuTrap R1 and check that all components "
+        "Carefully unpack your OcuTrap R2 and check that all components "
         "are included:", sBody))
     story.append(Spacer(1, 6))
     story.append(img_row([
@@ -1014,12 +1014,12 @@ def safety_warnings(story):
 
 
 def warranty(story):
-    story.append(section_heading("OcuTrap R1 Hardware Warranty"))
+    story.append(section_heading("OcuTrap R2 Hardware Warranty"))
     story.append(Spacer(1, 4))
     story.append(Paragraph("1. Warranty Coverage", sH2))
     story.append(Paragraph(
         "OcuTrap, Inc. (&ldquo;Company&rdquo;) warrants that the "
-        "&ldquo;OcuTrap R1&rdquo; hardware will be free from defects in "
+        "&ldquo;OcuTrap R2&rdquo; hardware will be free from defects in "
         "materials and workmanship under normal use and conditions for a "
         "period of 12 months from the date of original purchase by the end "
         "user (&ldquo;Warranty Period&rdquo;).", sBody))
@@ -1048,7 +1048,7 @@ def warranty(story):
         "surges, extreme weather conditions, or other environmental "
         "factors beyond the Company&rsquo;s control.",
         "<b>Normal Wear and Tear:</b> cosmetic damage or normal wear and "
-        "tear not affecting the functionality of the OcuTrap R1.",
+        "tear not affecting the functionality of the OcuTrap R2.",
         "<b>Non-OcuTrap Parts or Accessories:</b> damage caused by the use "
         "of parts or accessories not authorized by OcuTrap, Inc.",
     ]))
@@ -1070,7 +1070,7 @@ def warranty(story):
         "solely to the repair or replacement of the defective product or "
         "parts at its discretion. The Company is not liable for any "
         "indirect, incidental, or consequential damages arising from the "
-        "use of, or inability to use, the OcuTrap R1, including any loss "
+        "use of, or inability to use, the OcuTrap R2, including any loss "
         "of profits, business interruption, or damage to other property.",
         sBody))
     story.append(Paragraph("6. Governing Law", sH2))
@@ -1231,7 +1231,7 @@ def main():
         OUTPUT, pagesize=letter,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=MARGIN, bottomMargin=MARGIN,
-        title="OcuTrap R1 Installation & User Manual",
+        title="OcuTrap R2 Installation & User Manual",
         author="OcuTrap, Inc.",
     )
     cover_frame = Frame(MARGIN, 0.6 * inch, USABLE_W,

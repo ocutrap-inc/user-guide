@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the OcuTrap R1 Quick Start — a 2-page, letter-size, print-ready PDF.
+Build the OcuTrap R2 Quick Start — a 2-page, letter-size, print-ready PDF.
 
 Print single sheet, double-sided (flip on long edge). Folded in half for
 shipping; read unfolded. Focus: bare-minimum hardware setup + a push to the
@@ -222,7 +222,7 @@ def two_panel_header(panel_w, page_label):
     if logo:
         left_cells.append([logo])
         left_cells.append([Spacer(1, 4)])
-    left_cells.append([Paragraph("OcuTrap R1 Quick Start", title_style)])
+    left_cells.append([Paragraph("OcuTrap R2 Quick Start", title_style)])
     left_cells.append([Spacer(1, 1)])
     left_cells.append([Paragraph(page_label, subtitle_style)])
     left_half = Table(left_cells, colWidths=[panel_w])
@@ -802,7 +802,7 @@ def build():
         OUTPUT, pagesize=letter,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=MARGIN, bottomMargin=MARGIN,
-        title="OcuTrap R1 Quick Start",
+        title="OcuTrap R2 Quick Start",
         author="OcuTrap, Inc.",
     )
     usable_w = PAGE_W - 2 * MARGIN

@@ -528,7 +528,7 @@ def build_cover_html(logo_uri: str | None) -> str:
     return f"""<div class="cover-page">
 {logo_html}
 <h1 class="cover-title">OcuTrap Knowledge Base</h1>
-<p class="cover-subtitle">Complete user guide for the OcuTrap R1 smart wildlife trap.</p>
+<p class="cover-subtitle">Complete user guide for the OcuTrap R2 and R1 smart wildlife traps.</p>
 <p class="cover-contact">
 Online docs: <strong>docs.ocutrap.com</strong><br/>
 Support: <strong>support@ocutrap.com</strong>

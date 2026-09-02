@@ -1,28 +1,29 @@
 ---
 description: >-
-  Full OcuTrap R1 specifications: dimensions, door speeds, battery and
+  OcuTrap R2 and R1 specifications: dimensions, door speeds, battery and
   runtime, connectivity, sensors, camera, and environmental ratings.
 ---
 
 # Technical Specifications
 
-This page provides detailed technical specifications for the OcuTrap R1 smart wildlife trap.
+This page provides detailed technical specifications for the OcuTrap R2 smart wildlife trap, with R1 values where they differ.
 
 ***
 
 ## Physical Specifications
 
-| Specification      | Value                                                             |
-| ------------------ | ----------------------------------------------------------------- |
-| **Width**          | 10" (25.4 cm)                                                     |
-| **Height**         | 12" (30.5 cm)                                                     |
-| **Length (cage only)** | 32" (81.3 cm) — trap body **without** the POD; door **closed** |
-| **POD (adds to length)** | ~5" (~12.7 cm)                                                |
-| **Door open (adds to length)** | ~4" (~10.2 cm)                                          |
-| **Approx. total length** | ~41" (~104 cm) with POD installed and door fully open       |
-| **Weight**         | 24 lbs (10.9 kg)                                                  |
-| **Construction**   | Weather-resistant enclosure, compatible with Tomahawk trap frames |
-| **Target Animals** | 5–25 lbs (cats, raccoons, opossums, similar wildlife)             |
+| Specification | OcuTrap R2 | OcuTrap R1 |
+| ------------- | ---------- | ---------- |
+| **Width** | 10" (25.4 cm) | 10" (25.4 cm) |
+| **Height** | 12" (30.5 cm) | 12" (30.5 cm) |
+| **Length (cage only)** · trap body **without** the POD; door **closed** | 36" (91.4 cm) | 32" (81.3 cm) |
+| **POD (adds to length)** | ~5" (~12.7 cm) | ~5" (~12.7 cm) |
+| **Door open (adds to length)** | ~4" (~10.2 cm) | ~4" (~10.2 cm) |
+| **Approx. total length** · with POD installed and door fully open | ~45" (~114 cm) | ~41" (~104 cm) |
+| **Weight** | 19.8 lbs (8.98 kg) with the 56 Wh battery · 19.1 lbs (8.68 kg) without | 24 lbs (10.9 kg) with the 111 Wh battery |
+| **Shipping box** | 36.5" × 11" × 15.5" | — see packing slip |
+| **Construction** | Weather-resistant enclosure, compatible with Tomahawk trap frames | Weather-resistant enclosure, compatible with Tomahawk trap frames |
+| **Target Animals** | 5–25 lbs (cats, raccoons, opossums, similar wildlife) | 5–25 lbs (cats, raccoons, opossums, similar wildlife) |
 
 ***
 
@@ -43,8 +44,8 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 | Specification                      | Value                                   |
 | ---------------------------------- | --------------------------------------- |
 | **Battery Type**                   | Rechargeable KBT 12V Lithium-ion (6-cell pack)  |
-| **Standard Capacity**              | 10,000 mAh (111 Wh) — new traps / US shipments |
-| **Canadian Variant**               | 5,200 mAh (56 Wh) — Canadian shipments  |
+| **Ships with R2**                  | 5,200 mAh (56 Wh)                       |
+| **Shipped with R1 (US)**           | 10,000 mAh (111 Wh)                     |
 | **Operating Voltage Range**        | 7.0V – 15.0V                            |
 | **Low Battery Warning (20%)**      | \~10.4V (internal, set by Battery Type) |
 | **Critical Battery Warning (10%)** | \~9.5V                                  |
@@ -57,7 +58,7 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 | **Trap connector (10000 mAh)**   | Female XT30 on pack; male XT30 on trap PCB |
 | **Alternate pack / connector**   | Contact support for PCB + holder swap   |
 
-> **Selecting your battery in the app:** OcuTrap ships with either the **5,200 mAh (56 Wh)** or **10,000 mAh (111 Wh)** 12 V 6-cell pack. Tell the app which one your trap uses under **Settings → Battery Type** — it adjusts the low-battery alert thresholds and level readout to match. The setting defaults to the 5,200 mAh pack, so update it if your trap shipped with the 10,000 mAh battery. There are no manual voltage or percentage threshold controls; the app derives them from your Battery Type.
+> **Selecting your battery in the app:** The R2 ships with the **5,200 mAh (56 Wh)** 12 V 6-cell pack, which is the app default. R1 units sold in the US shipped with the **10,000 mAh (111 Wh)** pack. Tell the app which one your trap uses under **Settings → Battery Type**. It adjusts the low-battery alert thresholds and level readout to match. R1 owners should check this setting, because the default assumes the 5,200 mAh pack. There are no manual voltage or percentage threshold controls; the app derives them from your Battery Type.
 
 ***
 
@@ -65,7 +66,7 @@ This page provides detailed technical specifications for the OcuTrap R1 smart wi
 
 | Specification           | Value                                      |
 | ----------------------- | ------------------------------------------ |
-| **Connection**          | 4G LTE Cellular                            |
+| **Connection**          | LTE-M cellular (4G LTE network)            |
 | **Coverage**            | Multi-network cellular coverage            |
 | **GPS Update Interval** | Every 8 hours (default, battery-optimized) |
 | **GPS Accuracy**        | Minimum 5 satellites, 3D fix required      |
@@ -135,11 +136,13 @@ OcuTrap uses a two-step detection process to prevent false triggers from rain, d
 
 ## What's in the Box
 
-* OcuTrap R1 Smart Cage Unit
-* 12V Lithium-ion Battery (10000 mAh US / 5200 mAh Canada)
-* Battery Charger (2A or 1A depending on battery)
-* Quick-Start Guide
+* OcuTrap R2 smart cage
+* 5,200 mAh (56 Wh) 12 V lithium-ion battery
+* 1 A battery charger
+* Quick start guide
 * Assembly hardware
+
+R1 units shipped with the 10,000 mAh (111 Wh) battery and its 2 A charger.
 
 ***
 
