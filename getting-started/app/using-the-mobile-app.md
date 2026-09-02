@@ -41,7 +41,7 @@ The mobile app has the **same features as the web dashboard**. From the app you 
 
 Push notifications are the fastest way to know about a capture. Two things need to be on:
 
-1. **In the app:** open **Notification Settings** and turn on **Push Notifications**, then enable the **Alert Types** you care about (Target detected, Animal captured, Capture reminders, Low battery, Device alerts). See [Notification Settings](notification-settings.md).
+1. **In the app:** open **Notification Settings** and turn on **Push Notifications**, then enable the **Alert Types** you care about (Target detected, Animal captured, Low battery, Device alerts). See [Notification Settings](notification-settings.md).
 2. **On your phone:** allow notifications for the OcuTrap app.
    * **iOS:** Settings → Notifications → OcuTrap → Allow Notifications.
    * **Android:** Settings → Apps → OcuTrap → Notifications.

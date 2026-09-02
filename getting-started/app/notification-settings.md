@@ -30,8 +30,8 @@ On the web app, open **Settings** and find the **Notifications** section. You pi
 In the mobile app, open **Notification Settings**:
 
 * **Notification Channels:** toggle **Push Notifications** and **Email Alerts**.
-* **Alert Types:** toggle **Target detected**, **Animal captured**, **Capture reminders**, **Low battery**, and **Device alerts** (battery, signal, offline, and tilt, **not** Scout triggers or alerts, which are activity-feed-only).
-* **Digest:** choose **Immediate**, **Daily Digest**, or **Weekly Digest**.
+* **Alert Types:** toggle **Target detected**, **Animal captured**, **Low battery**, and **Device alerts** (battery, signal, offline, and tilt, **not** Scout triggers or alerts, which are activity-feed-only).
+* Alerts are sent immediately. There is no digest option.
 
 {% hint style="info" %}
 Push notifications also require phone-level permission for the OcuTrap app. See [Using the Mobile App](using-the-mobile-app.md). If permissions look correct and push still fails, try [Resetting the Mobile App](../../troubleshooting/resetting-the-mobile-app.md).
