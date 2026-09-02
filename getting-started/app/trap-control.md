@@ -68,7 +68,7 @@ Expand **Advanced** for less-common commands:
 
 ### Command status
 
-After you send a command, a status line under the controls shows its progress: **Sending…**, then confirmed or failed, and **Image incoming…** when you request a photo. This tells you whether the trap received your command.
+After you send a command, a status line under the controls shows its progress: **Sending…**, then confirmed or failed. Photo requests show their progress on the camera view instead (**Camera starting…**, **Capturing image…**, **Image incoming…**, **Processing image…**). This tells you whether the trap received your command.
 
 ### Checking data, network, and charts
 
