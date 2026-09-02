@@ -4,7 +4,7 @@ description: >-
   work on the trap detail screen instead of under Settings.
 ---
 
-# Settings in the App
+# Settings in the app
 
 <figure><img src="../../../.gitbook/assets/image (30).png" alt="" width="375"><figcaption></figcaption></figure>
 

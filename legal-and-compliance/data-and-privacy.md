@@ -3,7 +3,7 @@ description: >-
   What data OcuTrap collects, who can see it, and how to manage or delete it.
 ---
 
-# Your Data & Privacy
+# Your data and privacy
 
 This page explains, in plain terms, what information your OcuTrap collects and the controls you have over it. For the full legal text, see the **Privacy Policy** and **Data Use Policy**, linked from [Legal Disclaimers & Compliance Information](legal-disclaimers-and-compliance-information.md).
 

@@ -4,7 +4,7 @@ description: >-
   32-character reset code and what to do if the button fails.
 ---
 
-# Resetting Password
+# Resetting password
 
 If you forget your password, you can reset it from the email we send you:
 

@@ -4,7 +4,7 @@ description: >-
   trap subscriptions first, and know exactly what gets erased.
 ---
 
-# Account Deletion
+# Account deletion
 
 You can permanently delete your OcuTrap account from the web app or the mobile app. Deletion cannot be undone.
 

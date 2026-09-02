@@ -7,8 +7,6 @@ pdf-exclude: true
 
 # Downloads
 
-Print-friendly PDFs of the OcuTrap docs and reference cards. Tap any link to download.
-
 ### Knowledge Base
 
 {% file src="../.gitbook/assets/OcuTrap_Knowledge_Base.pdf" %}

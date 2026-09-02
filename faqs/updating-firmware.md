@@ -4,7 +4,7 @@ description: >-
   clean update, how to check your version, and what to try if one stalls.
 ---
 
-# Updating Firmware
+# Updating firmware
 
 OcuTrap firmware updates are delivered automatically over-the-air (OTA) to ensure your device has the latest features and security improvements.
 

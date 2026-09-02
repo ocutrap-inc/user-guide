@@ -108,7 +108,8 @@ export default async function DocPage({
         </div>
 
         <header className="page-header">
-          {doc.section && <div className="page-eyebrow">{doc.section}</div>}
+          {/* No section eyebrow here — the breadcrumb directly above already
+              names the section, so the eyebrow was a duplicate (DOC-30). */}
           <h1 className="page-title">{doc.title}</h1>
           {doc.description && (
             <p className="page-subtitle">{doc.description}</p>

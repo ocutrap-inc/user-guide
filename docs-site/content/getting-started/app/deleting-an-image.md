@@ -4,7 +4,7 @@ description: >-
   OcuTrap web or mobile app.
 ---
 
-# Deleting an Image
+# Deleting an image
 
 {% hint style="info" %}
 To delete the **current image**, use the **trash icon in the bottom-right corner** of the live image on the trap's detail screen. The steps below cover deleting older images from the gallery.

@@ -203,6 +203,15 @@ function decodeGitBookEntities(content: string): string {
   return applyOutsideCode(content, normalizeEntity);
 }
 
+// Escape the characters that would break out of a text node when we emit raw
+// HTML from the preprocessor (DOC-30's "Applies to" pill).
+function escapeHtmlText(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 // Transform GitBook-specific syntax into standard markdown and HTML.
 // `sourcePath` (optional) is used only for build-time warnings.
 function preprocessGitBook(content: string, sourcePath?: string): string {
@@ -218,6 +227,23 @@ function preprocessGitBook(content: string, sourcePath?: string): string {
   //      (markdownToPlain) instead expands it into a real markdown table for
   //      llms.txt / copy-as-markdown / search / print corpora.
   content = content.replace(ledFenceRegex(), "");
+
+  // 0.7. Model applicability line (DOC-30). Pages carry a single italic
+  //      paragraph directly under the H1 — `_Applies to: OcuTrap R1 and R2._`
+  //      — which reads as body prose but is really metadata. Promote it to a
+  //      labelled pill so it scans as a badge instead of a first sentence.
+  //      Only a paragraph consisting *solely* of the italic run is matched, so
+  //      an inline "applies to" in real prose is untouched. The markdown
+  //      (markdownToPlain, KB PDF, llms.txt) is unaffected — this is HTML-only.
+  content = applyOutsideCode(content, (chunk) =>
+    chunk.replace(
+      /^[ \t]*(_|\*)Applies to:[ \t]*(.+?)\1[ \t]*$/gm,
+      (_full, _delim, value: string) => {
+        const text = escapeHtmlText(value.trim().replace(/\.$/, ""));
+        return `<p class="applies-to"><span class="applies-to__label">Applies to</span> <span class="applies-to__value">${text}</span></p>`;
+      }
+    )
+  );
 
   // 1. Hint/callout blocks
   content = content.replace(

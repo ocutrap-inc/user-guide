@@ -2,7 +2,7 @@
 description: Read these precautions before you set up, operate, or maintain your OcuTrap.
 ---
 
-# Safety Information
+# Safety information
 
 {% hint style="danger" %}
 Using the OcuTrap involves inherent risks. Follow these guidelines to operate it safely and prevent injury or equipment malfunction.

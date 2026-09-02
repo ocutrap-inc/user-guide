@@ -4,9 +4,9 @@ description: >-
   role, so everyone you share a trap with can control it.
 ---
 
-# User Levels
+# User levels
 
-When you share a trap, each person you share with is a **Manager**. There is no view-only role. Everyone you share a trap with can see and control it. The levels differ in who can manage billing, ownership, and other users.
+The levels differ in who can manage billing, ownership, and other users.
 
 ## The three levels
 

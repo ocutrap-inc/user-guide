@@ -4,9 +4,9 @@ description: >-
   not respond to commands from the app.
 ---
 
-# Trap Offline or Won't Connect
+# Trap offline or won't connect
 
-If your trap shows **offline**, will not connect, or does not respond to commands, the most common causes are **low battery**, **hibernation**, a **loose battery connection**, **weak cellular signal**, or the trap **still trying to connect**.
+The most common causes are **low battery**, **hibernation**, a **loose battery connection**, **weak cellular signal**, or the trap **still trying to connect**.
 
 OcuTrap connects primarily through **4G LTE cellular service**. The trap does **not** need local Wi-Fi for normal operation. Poor cellular coverage can prevent the trap from connecting or receiving commands.
 

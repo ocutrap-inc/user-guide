@@ -4,7 +4,7 @@ description: >-
   and battery damage during outdoor use.
 ---
 
-# Weather & Environmental Guidelines
+# Weather and environmental guidelines
 
 ### General Weatherproof Design
 

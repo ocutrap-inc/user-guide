@@ -4,9 +4,7 @@ description: >-
   on ocutrap.com.
 ---
 
-# Legal Disclaimers & Compliance Information
-
-All OcuTrap policies, terms, and legal documents are kept in a single place on our website. The versions there are always the most current.
+# Legal disclaimers and compliance information
 
 {% hint style="info" %}
 **Central source:** [OcuTrap Legal & Policy Documents](https://ocutrap.com/pages/legal-policy-documents). This hub links to every policy listed below.

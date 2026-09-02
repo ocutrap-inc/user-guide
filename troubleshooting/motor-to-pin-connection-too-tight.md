@@ -4,7 +4,7 @@ description: >-
   assembly, it can be difficult to fit the parts together.
 ---
 
-# Motor-to-Pin Connection Too Tight
+# Motor-to-pin connection too tight
 
 _Applies to: OcuTrap R1._
 

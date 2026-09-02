@@ -4,7 +4,7 @@ description: >-
   you never miss a capture.
 ---
 
-# Using the Mobile App
+# Using the mobile app
 
 The OcuTrap mobile app gives you the same control as the web dashboard from your phone. Manage traps, view captures, control the door, adjust settings, and see trap locations. The app also sends **push notifications** when something happens.
 

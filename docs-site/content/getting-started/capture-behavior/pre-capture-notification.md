@@ -4,7 +4,7 @@ description: >-
   before a capture happens.
 ---
 
-# Pre-Capture Notification
+# Pre-capture notification
 
 ### What It Does
 

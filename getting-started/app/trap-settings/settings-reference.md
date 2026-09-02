@@ -2,7 +2,7 @@
 description: Check every OcuTrap setting, including ranges, defaults, locations, and what each option controls.
 ---
 
-# Settings Reference
+# Settings reference
 
 Use this reference to check every configurable OcuTrap setting, including ranges and defaults.
 

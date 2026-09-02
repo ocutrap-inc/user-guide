@@ -4,7 +4,7 @@ description: >-
   portal.
 ---
 
-# Changing Your Subscription Payment Method
+# Changing your subscription payment method
 
 ### 1. Log in to Your Account
 

@@ -4,7 +4,7 @@ description: >-
   each one, the LED you see, and when the trap can still be reached.
 ---
 
-# Power Modes
+# Power modes
 
 OcuTrap uses multiple power modes to save battery while keeping the functions you need in the field. It adjusts connectivity, sensor activity, and LED brightness based on use.
 

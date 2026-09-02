@@ -4,7 +4,7 @@ description: >-
   and how the trap keeps working when signal is weak.
 ---
 
-# Connectivity & Cellular Coverage
+# Connectivity and cellular coverage
 
 OcuTrap connects to the OcuTrap app over **4G LTE cellular**, the same kind of network your phone uses. There is **no Wi-Fi and nothing to set up**. Power the trap on, and it connects automatically.
 

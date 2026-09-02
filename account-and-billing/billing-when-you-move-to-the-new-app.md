@@ -4,7 +4,7 @@ description: >-
   app: same plan, same price, same renewal date, and no second charge.
 ---
 
-# Billing When You Move to the New App
+# Billing when you move to the new app
 
 We rebuilt the OcuTrap app. Your account moves to it. **Your billing does not change.**
 

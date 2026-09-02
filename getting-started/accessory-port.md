@@ -4,7 +4,7 @@ description: >-
   safety rules, and common uses.
 ---
 
-# Accessory Port
+# Accessory port
 
 _Applies to: OcuTrap R1 and R2._
 

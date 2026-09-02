@@ -4,7 +4,7 @@ description: >-
   distance, confirming the connection, and testing before you walk away.
 ---
 
-# Deploying Your Trap in the Field
+# Deploying your trap in the field
 
 You've assembled your OcuTrap and added it to your account. Now **set it up on site**: choose a location, set the capture distance, and confirm everything works before you leave.
 

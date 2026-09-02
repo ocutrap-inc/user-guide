@@ -4,7 +4,7 @@ description: >-
   form, and where to check current system status.
 ---
 
-# Contact Us
+# Contact us
 
 ## Chat Support
 

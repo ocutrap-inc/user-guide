@@ -4,9 +4,9 @@ description: >-
   your traps' firmware; the app lets you pick the events and delivery channels.
 ---
 
-# Notification Settings
+# Notification settings
 
-OcuTrap alerts come from your traps themselves (their firmware), and the app lets you choose **which events notify you** and **how they're delivered**. The web and mobile apps present these controls a little differently.
+The web and mobile apps present these controls a little differently.
 
 ## Web (Settings → Notifications)
 

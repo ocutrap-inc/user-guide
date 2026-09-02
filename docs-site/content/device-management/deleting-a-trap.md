@@ -4,7 +4,7 @@ description: >-
   what gets deleted, and why the trap's subscription must be canceled first.
 ---
 
-# Deleting a Trap
+# Deleting a trap
 
 Removing a trap permanently deletes the trap and all of its data from your account. Review this page before proceeding.
 

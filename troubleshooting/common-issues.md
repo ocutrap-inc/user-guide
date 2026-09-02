@@ -2,7 +2,7 @@
 description: Fix common arming, sensor, camera, connectivity, battery, door, GPS, and LED problems with your OcuTrap.
 ---
 
-# Common Issues
+# Common issues
 
 _Applies to: OcuTrap R1 and R2._
 

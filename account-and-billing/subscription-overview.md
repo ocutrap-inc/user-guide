@@ -4,7 +4,7 @@ description: >-
   a subscription lapses.
 ---
 
-# Your OcuTrap Subscription
+# Your OcuTrap subscription
 
 An active subscription keeps your trap **connected over cellular** and unlocks the cloud features of the OcuTrap app. **Each trap has its own subscription**, so if you own more than one, each is billed and managed separately.
 

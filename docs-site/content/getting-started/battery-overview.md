@@ -4,7 +4,7 @@ description: >-
   and safe charging and storage.
 ---
 
-# Battery Overview
+# Battery overview
 
 _Applies to: OcuTrap R1 and R2._
 

@@ -4,7 +4,7 @@ description: >-
   better images, button shortcuts, and seasonal deployment.
 ---
 
-# Tips and Tricks
+# Tips and tricks
 
 Use these field tips for battery life, placement, captures, images, and daily operation.
 

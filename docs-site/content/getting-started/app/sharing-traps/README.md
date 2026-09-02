@@ -4,7 +4,7 @@ description: >-
   Pending means, and how to cancel an invite or revoke access later.
 ---
 
-# Sharing Traps
+# Sharing traps
 
 You can share a trap with another OcuTrap account for remote monitoring and control.
 

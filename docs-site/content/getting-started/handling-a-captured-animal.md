@@ -4,7 +4,7 @@ description: >-
   safely, releasing, transporting, and handling non-target captures.
 ---
 
-# Handling & Releasing a Captured Animal
+# Handling and releasing a captured animal
 
 When an Armed trap closes on a verified detection, **it holds the animal until you release it**. There is no auto-release. This page covers what *you* do next in the field. For how the door and app behave after a capture, see [After a Capture](app/after-capture.md).
 

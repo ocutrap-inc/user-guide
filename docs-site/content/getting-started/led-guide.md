@@ -4,7 +4,7 @@ description: >-
   reference table, including buttons and low-battery behavior.
 ---
 
-# LED Guide
+# LED guide
 
 _Applies to: OcuTrap R1 and R2._
 
@@ -167,7 +167,7 @@ entries:
 
 ***
 
-### ⚠️ Low Battery Startup Behavior
+### Low battery startup behavior
 
 When the battery is **critically low at startup**, the following will happen:
 
@@ -180,7 +180,7 @@ To recover, charge or replace the battery and press the power button again.
 
 ***
 
-### 🎛️ User Button Interactions
+### User button interactions
 
 The color and pattern for each of these actions is in the diagnostic and table
 above. This section covers **how to trigger** them with the physical buttons.

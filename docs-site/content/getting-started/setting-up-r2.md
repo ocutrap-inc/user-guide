@@ -17,7 +17,7 @@ Have an R1? Its door, handle, and motor ship as parts and need assembly. See [Ha
 Unpack the box and check that everything is there:
 
 * **Cage** with the door and motor installed
-* **Parts box**: battery, charger, POD, quick start card
+* **Parts box**: battery, charger, POD, Quick Start Guide
 
 <!-- TODO photo: R2 unboxing -->
 

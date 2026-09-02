@@ -4,7 +4,7 @@ description: >-
   start. Cancel the trap's subscription first.
 ---
 
-# Selling or Transferring a Trap
+# Selling or transferring a trap
 
 There are two ways to hand a trap to a new owner:
 
