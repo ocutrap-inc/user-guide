@@ -1,6 +1,6 @@
 ---
 description: >-
-  Dealing with Water or Occasional moisture on the OcuTrap R1 lens can soften
+  Dealing with Water or Occasional moisture on the OcuTrap lens can soften
   image quality or trigger glare at night. This guide explains why it happens,
   how to clear it quickly, and when to contact us
 ---
@@ -47,7 +47,7 @@ If internal moisture persists:
 
 * **Gasket care** – Lightly coat the rubber seal with silicone grease every 6 months.
 * **Tight hardware** – Finger-tighten the antenna and accessory caps after each service visit.
-* **Avoid submersion** – OcuTrap R1 is weather-sealed, but not rated for full underwater exposure.
+* **Avoid submersion** – OcuTrap is weather-sealed, but not rated for full underwater exposure.
 
 ***
 

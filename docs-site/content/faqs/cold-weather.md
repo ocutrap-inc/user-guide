@@ -22,7 +22,7 @@ Operating OcuTrap in cold weather requires some additional considerations. This 
 
 ### Temperature Alerts
 
-The OcuTrap R1 model features an integrated temperature sensor that monitors internal conditions:
+The OcuTrap features an integrated temperature sensor that monitors internal conditions:
 
 * **Low Temperature Alert:** Triggers at -10°C (14°F) by default
 * **Alert Interval:** Every 8 hours (configurable from 0–48 hours)

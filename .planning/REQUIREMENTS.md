@@ -270,6 +270,16 @@
   - [x] Root and `docs-site/content/` mirrors are byte-identical. Docs site and
     PDF builds pass, the PDF source hash verifies, and the rendered warning is
     visually clean. exit-impact: ops.
+- [ ] **DOC-22**: R2 cutover: specs page carries R2 and R1 physical/battery
+  values, generic product references model-neutral or R2-first, assembly guide
+  labeled R1 with an R2 pointer, a dedicated R2 setup page (unbox, cut the
+  shipping zip tie on the motor, mount the POD, battery in, app) that setup
+  routing pages link first, and R2 in-box PDFs (`R2_Quick_Start.pdf`,
+  `R2_Manual.pdf` from `scripts/build_quick_start_r2.py` and
+  `scripts/build_manual_r2.py`) alongside the R1 in-box PDFs, which keep their
+  R1 titles for R1 owners and reprints
+- [ ] **DOC-23**: R2 photos: unboxing, zip tie on motor, POD on the R2 cage,
+  replace placeholders on setting-up-r2 and in the R2 quick start / manual
 
 ### PDF Regeneration (PDF)
 
@@ -459,6 +469,8 @@
 | DOC-18  | Weak cellular signal page + multi-network copy |
 | DOC-19  | EDC backoff calibration procedure |
 | DOC-20  | EDC default and advanced-setting warning |
+| DOC-22  | R2 cutover in docs + in-box PDFs |
+| DOC-23  | R2 photos for the R2 setup page + R2 in-box PDFs |
 | PDF-01  | Phase 3: Regenerate & Verify   |
 | PDF-02  | Phase 3: Regenerate & Verify   |
 | PDF-03  | Phase 3: Regenerate & Verify   |

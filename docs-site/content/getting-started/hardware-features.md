@@ -1,18 +1,18 @@
 ---
 description: >-
-  What each part of the OcuTrap R1 does: cellular, camera, door motor, GPS,
-  sensors, battery, accessory port, and the detection system.
+  What each part of the OcuTrap R2 (and R1) does: cellular, camera, door motor,
+  GPS, sensors, battery, accessory port, and the detection system.
 ---
 
 # Hardware Features
 
-Overview of the OcuTrap R1 hardware components and capabilities.
+Overview of the OcuTrap R2 (and R1) hardware components and capabilities.
 
 ---
 
 #### Connectivity
 
-The OcuTrap connects via **4G LTE cellular** networks, providing nationwide coverage without the need for Wi-Fi or local network setup. Simply power on and the trap connects automatically.
+The OcuTrap connects via **LTE-M cellular (4G LTE network)**, providing nationwide coverage without the need for Wi-Fi or local network setup. Simply power on and the trap connects automatically.
 
 ---
 

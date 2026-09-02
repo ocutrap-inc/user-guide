@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the OcuTrap R1 Operation Cheat Sheet — a one-page, letter-size,
+Build the OcuTrap R2 Operation Cheat Sheet — a one-page, letter-size,
 print-ready PDF aimed at users not yet familiar with the device.
 
 Source of truth for content: docs.ocutrap.com (canonical knowledge base)
@@ -101,7 +101,7 @@ def header_flowable(width):
         logo_cell = img
 
     title_block = [
-        Paragraph("OcuTrap R1 &nbsp;&middot;&nbsp; Operation Cheat Sheet", sTitle),
+        Paragraph("OcuTrap R2 &nbsp;&middot;&nbsp; Operation Cheat Sheet", sTitle),
         Paragraph("Buttons, LEDs &amp; device states — keep near the trap.", sSubtitle),
     ]
 
@@ -160,7 +160,7 @@ def first_time_callout(width):
     """Point new users at the Quick Start guide for setup."""
     msg = (
         "<b>First time setting up?</b> &nbsp;"
-        "Follow the <b>R1 Quick Start</b> card (in the box) for battery, assembly, "
+        "Follow the <b>R2 Quick Start</b> card (in the box) for battery, assembly, "
         "and app pairing. This cheat sheet is for day-to-day operation."
     )
     tbl = Table(
@@ -303,7 +303,7 @@ def build():
         OUTPUT, pagesize=letter,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=MARGIN, bottomMargin=MARGIN,
-        title="OcuTrap R1 Cheat Sheet",
+        title="OcuTrap R2 Cheat Sheet",
         author="OcuTrap, Inc.",
     )
 

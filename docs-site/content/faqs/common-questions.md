@@ -36,15 +36,15 @@ After purchase, the main ongoing costs are:
 
 <summary>Can OcuTrap tell species apart (raccoon vs skunk vs opossum)?</summary>
 
-Not automatically. Any animal that enters can trigger a capture. Use **remote release** from the app, review capture photos, and tune placement / Capture Distance. See [What animals is the OcuTrap R1 designed for?](target-animals.md) and [Trap Control](../getting-started/app/trap-control.md).
+Not automatically. Any animal that enters can trigger a capture. Use **remote release** from the app, review capture photos, and tune placement / Capture Distance. See [What animals is the OcuTrap designed for?](target-animals.md) and [Trap Control](../getting-started/app/trap-control.md).
 
 </details>
 
 <details>
 
-<summary>What size is the OcuTrap R1?</summary>
+<summary>What size is the OcuTrap?</summary>
 
-About **10" wide × 12" tall**. Cage alone (door closed, without POD) is **~32"** long. The POD adds about **5"**; with the door fully open, add about **4"** more (~**41"** total). Full specs: [Technical Specifications](../getting-started/technical-specifications.md).
+About **10" wide × 12" tall**. Cage alone (door closed, without POD) is **~36"** long on the R2 and **~32"** on the R1. The POD adds about **5"**; with the door fully open, add about **4"** more, so about **45"** total on the R2 and **41"** on the R1. Full specs: [Technical Specifications](../getting-started/technical-specifications.md).
 
 </details>
 
