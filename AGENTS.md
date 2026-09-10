@@ -5,11 +5,23 @@
 - **Requirements home (spec-first):** `.planning/REQUIREMENTS.md`.
 - **Tracking:** ClickUp — **Internal Documentation** (Engineering space). Every task: `spec: REQ-ID` + `exit-impact:`.
 - **Docs follow product:** terminology home is `app/requirements.md`; notification behavior is ADR 0003 (firmware-sourced). Every customer-visible `app`/firmware change needs a pass through this repo (agents.md §7 — don't skip user-guide).
-- **Repo rules:** the GSD project doc below governs the docs-sync workflow; canonical source is git, published site is the target. (This file and `CLAUDE.md` are GSD-generated variants — parallel by design; edit sources, not the generated blocks.)
+- **Repo rules:** this file owns the documentation workflow; `CLAUDE.md` points here. Canonical source is git; the published site is the target.
 
----
 
-<!-- GSD:project-start source:PROJECT.md -->
+## Documentation workflow
+
+GSD is retired. Ignore legacy GSD commands, generated blocks, profile prompts,
+and `.planning/config.json`; they are historical tooling, not prerequisites.
+Do not install or run GSD or ask for a GSD bypass before editing.
+
+For authorized work, read the company routing and relevant specification, edit
+files directly, keep planning notes current, run the applicable checks, and use
+a branch and pull request. Preserve the existing product-before-docs publication
+order. These instructions are maintained directly; no generator is required.
+
+See `.planning/PROJECT.md` for project context and `.planning/REQUIREMENTS.md`
+for acceptance criteria (including REQ-DOC-WORKFLOW-01).
+
 ## Project
 
 **OcuTrap User Guide — Docs Sync**
@@ -41,50 +53,3 @@ on their screen.** When the docs and the product disagree, the docs lose.
   the blob URL.
 - **Source of truth direction**: Product (web app + firmware) is
   canonical. Docs follow product. We do not change product to match docs.
-<!-- GSD:project-end -->
-
-<!-- GSD:stack-start source:STACK.md -->
-## Technology Stack
-
-Technology stack not yet documented. Will populate after codebase mapping or first phase.
-<!-- GSD:stack-end -->
-
-<!-- GSD:conventions-start source:CONVENTIONS.md -->
-## Conventions
-
-Conventions not yet established. Will populate as patterns emerge during development.
-<!-- GSD:conventions-end -->
-
-<!-- GSD:architecture-start source:ARCHITECTURE.md -->
-## Architecture
-
-Architecture not yet mapped. Follow existing patterns found in the codebase.
-<!-- GSD:architecture-end -->
-
-<!-- GSD:skills-start source:skills/ -->
-## Project Skills
-
-No project skills found. Add skills to any of: `.Codex/skills/`, `.agents/skills/`, `.cursor/skills/`, `.github/skills/`, or `.codex/skills/` with a `SKILL.md` index file.
-<!-- GSD:skills-end -->
-
-<!-- GSD:workflow-start source:GSD defaults -->
-## GSD Workflow Enforcement
-
-Before using Edit, Write, or other file-changing tools, start work through a GSD command so planning artifacts and execution context stay in sync.
-
-Use these entry points:
-- `/gsd-quick` for small fixes, doc updates, and ad-hoc tasks
-- `/gsd-debug` for investigation and bug fixing
-- `/gsd-execute-phase` for planned phase work
-
-Do not make direct repo edits outside a GSD workflow unless the user explicitly asks to bypass it.
-<!-- GSD:workflow-end -->
-
-
-
-<!-- GSD:profile-start -->
-## Developer Profile
-
-> Profile not yet configured. Run `/gsd-profile-user` to generate your developer profile.
-> This section is managed by `generate-Codex-profile` -- do not edit manually.
-<!-- GSD:profile-end -->

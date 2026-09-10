@@ -1,5 +1,9 @@
 # STATE — OcuTrap User Guide Docs Sync
 
+> Workflow update, 2026-09-09: GSD is retired (REQ-DOC-WORKFLOW-01).
+> Follow `AGENTS.md` directly. The milestone status below is historical, not a
+> prerequisite for an authorized task; `.planning/config.json` is legacy metadata.
+
 ## Project Reference
 
 - **Repo**: `~/ocutrapinc/user-guide` on branch `feat/docs-sync-update`
@@ -15,7 +19,7 @@
 - **Milestone**: Docs Sync 2026-05
 - **Phase**: 1 of 3 — Audit
 - **Plan**: not yet planned
-- **Status**: roadmap approved, awaiting `/gsd-plan-phase 1`
+- **Status**: roadmap approved; audit planning remains open under the direct repo workflow
 - **Progress**: `[░░░░░░░░░░] 0%` (0/3 phases complete)
 
 ## Phase Map
@@ -61,7 +65,7 @@
 
 ### Todos / Carry-Forward
 
-- (none yet — populated by `/gsd-plan-phase 1`)
+- (none recorded in this historical milestone snapshot)
 
 ### Blockers
 
@@ -77,8 +81,8 @@
 
 - **Last session**: 2026-05-04 — `/gsd-new-project` created PROJECT.md,
   REQUIREMENTS.md, ROADMAP.md, STATE.md.
-- **Next action**: `/gsd-plan-phase 1` to decompose the Audit phase into a
-  concrete plan that produces the three drift checklists.
+- **Next action**: follow the current user task and `AGENTS.md`; if resuming
+  this audit milestone, write a concrete plan for the three drift checklists.
 - **Files of interest for next session**:
   - `.planning/ROADMAP.md` (phase definitions)
   - `.planning/REQUIREMENTS.md` (REQ-IDs and traceability)

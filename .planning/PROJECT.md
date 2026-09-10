@@ -103,8 +103,9 @@ on their screen.** When the docs and the product disagree, the docs lose.
   source of truth; Python + ReportLab for hand-coded PDFs;
   `scripts/build_kb_pdf.py` for auto-compiled KB PDF; CI via GitHub Actions
   (`build-kb-pdf.yml`).
-- **Workflow**: Branch + PR required; no direct push to `main`. PRs go
-  through harness pre-commit hooks.
+- **Workflow**: Follow `AGENTS.md` directly; GSD is retired and no GSD command
+  or bypass approval is required. Branch + PR required; no direct push to
+  `main`. PRs go through harness pre-commit hooks.
 - **Image storage**: Plain Git blobs only (no LFS) — `docs-site` serves
   images straight from the repo (`.gitbook/assets/` → `/gitbook-assets/`),
   and the KB PDF build reads them locally. Large media (video) does NOT go
@@ -127,14 +128,14 @@ on their screen.** When the docs and the product disagree, the docs lose.
 
 This document evolves at phase transitions and milestone boundaries.
 
-**After each phase transition** (via `/gsd-transition`):
+**After each phase transition**:
 1. Requirements invalidated? → Move to Out of Scope with reason
 2. Requirements validated? → Move to Validated with phase reference
 3. New requirements emerged? → Add to Active
 4. Decisions to log? → Add to Key Decisions
 5. "What This Is" still accurate? → Update if drifted
 
-**After each milestone** (via `/gsd-complete-milestone`):
+**After each milestone**:
 1. Full review of all sections
 2. Core Value check — still the right priority?
 3. Audit Out of Scope — reasons still valid?
