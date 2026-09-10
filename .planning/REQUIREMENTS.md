@@ -5,6 +5,17 @@
 
 ## v1 Requirements
 
+### Agent workflow
+
+- [x] **REQ-DOC-WORKFLOW-01**: GSD commands and generated GSD instruction blocks
+  are retired. Agents may edit files directly within the user's authorized task
+  after reading the company routing and relevant specifications. `AGENTS.md`
+  owns the repo workflow; `CLAUDE.md` points to it. No GSD installation, command,
+  profile, or bypass approval is required. Planning notes must not direct agents
+  to wait for a GSD command. Preserve spec-first work, branch/PR review, checks,
+  and the product-before-docs publication order. Approved by Graham on 2026-09-09.
+  exit-impact: ops.
+
 ### Audit (AUD)
 
 - [ ] **AUD-01**: Produce a written audit comparing every page in `SUMMARY.md`
