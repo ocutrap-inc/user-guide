@@ -90,14 +90,16 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Location (GPS)** | On/Off | On | Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery. |
+| **GPS Update Interval** | Disabled / 3 / 6 / 12 / 24 hours | 6 hours | Requires firmware v1073 or later and the updated app. First automatic attempt after 15 minutes; later attempts follow the selected interval. Manual Location requests remain available when disabled. Firmware through v1072 uses a fixed 8-hour interval when enabled. |
+
+For timing, compatibility, and manual requests, see [GPS](../../../faqs/gps.md).
 
 ### GPS Behavior Details
 
-- **First fix delay**: 15 minutes after boot before the first GPS acquisition
-- **Acquisition timeout**: 3 minutes for first fix, 2 minutes for subsequent fixes
+- **First attempt**: Eligible after 15 minutes from boot; checked on the five-minute schedule
+- **Acquisition timeout**: 3 minutes for the first attempt, 2 minutes for later attempts
 - **Fix requirements**: Minimum 5 satellites, 3D fix required for valid position
-- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
+- **Captures take priority**: Captures take priority and can postpone a GPS attempt
 
 ---
 
@@ -197,7 +199,7 @@ Settings are accessible in different locations:
 ## Tips for Optimal Settings
 
 ### For Maximum Battery Life
-- Turn Location (GPS) off if you do not need location tracking
+- Set GPS Update Interval to Disabled if you do not need automatic location tracking
 - Use Camera Quality level 1 to 2
 - Set Camera Time Lapse to 6+ hours or disable
 - Reduce Maximum IR Brightness if images are overexposed
@@ -208,6 +210,6 @@ Settings are accessible in different locations:
 - Fine-tune IR brightness settings for your environment
 
 ### For Fastest Response
-- Keep Location (GPS) on so the map stays current
+- Choose an enabled GPS Update Interval to keep the map current
 - Enable Pre-Capture Alerts to see animals approaching
 - Use shorter Capture Alert Intervals if monitoring actively

@@ -41,7 +41,7 @@ The door is powered by a **linear motor** for fast, reliable operation:
 
 Track your trap location using the integrated **GPS module**:
 - **Satellite positioning**: Displays number of satellites connected
-- **Battery-optimized**: Updates every 8 hours by default
+- **Automatic updates**: Firmware v1073+ with the updated app supports Disabled / 3 / 6 / 12 / 24 hours, default 6 hours. Older firmware uses 8 hours when enabled. See [GPS](../faqs/gps.md).
 - **Map view**: See trap location on Map or Satellite view in the app
 - **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
 

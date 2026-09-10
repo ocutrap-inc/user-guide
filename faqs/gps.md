@@ -1,6 +1,6 @@
 ---
 description: >-
-  How OcuTrap's GPS works: the fixed 8-hour update interval, satellite and fix
+  How OcuTrap's GPS works: automatic update intervals, satellite and fix
   requirements, manual updates, accuracy tips, and battery impact.
 ---
 
@@ -15,20 +15,24 @@ OcuTrap uses an integrated u-blox GPS module for location tracking and mapping. 
 GPS limits its battery use. Instead of tracking location continuously, OcuTrap checks at set intervals so you can see trap locations without constant power use.
 
 #### Default Behavior
-- **Update Interval**: Every 8 hours (fixed)
+- **Update Interval**: Every 6 hours by default on firmware v1073 or later. Choose Disabled, 3, 6, 12, or 24 hours. Firmware through v1072 uses a fixed 8-hour interval when enabled.
 - **First Boot Delay**: 15 minutes after boot before the first GPS acquisition
-- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
+- **Captures take priority**: Captures take priority and can postpone a GPS attempt
 - **Fix Requirements**: Minimum 5 satellites with a 3D fix for valid position
 
 ---
 
 ### GPS Settings
 
-#### Location (GPS)
+#### GPS Update Interval
 
-Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery.
+Choose **Disabled**, **3 hours**, **6 hours (default)**, **12 hours**, or **24 hours**. These choices require firmware v1073 or later and the updated app. Older firmware continues to use eight hours when GPS is enabled.
 
-* Located in **Settings → Location**
+After boot, the first automatic attempt is eligible after 15 minutes. The schedule is checked every five minutes. Later attempts wait the selected interval after the previous attempt finishes, even if it did not get a fix. Changing the interval starts a new wait; saving the same interval does not restart it. Captures, photos, or a disconnected trap can delay an attempt.
+
+**Disabled** stops automatic location updates. You can still request **Location** in Trap Controls. This can save battery on traps that stay in one known location. A saved setting is not confirmation that the trap has received it.
+
+* In the trap’s **Settings**, find **GPS Update Interval** in device configuration.
 
 #### GPS Status Indicators
 
@@ -43,7 +47,7 @@ When viewing trap locations, you'll see key metrics:
 #### Optimal GPS Performance
 
 * Place the OcuTrap outdoors with clear sky view for best results
-* **First fix**: Allow up to 3 minutes for initial GPS acquisition after power-on
+* **First attempt**: Once the search starts, allow up to 3 minutes for the first GPS acquisition after boot
 * **Subsequent fixes**: Typically acquired within 2 minutes
 * System will timeout if no fix is acquired within the timeout period
 * More satellites generally means better accuracy
@@ -51,8 +55,8 @@ When viewing trap locations, you'll see key metrics:
 
 #### Manual Updates
 
-* In controls, click on data button to request a GPS update
-* Only works when GPS is not disabled in settings
+* In Trap Controls, tap **Location** to request a GPS update
+* Works even when automatic GPS updates are disabled
 * Useful for verifying position without waiting for next interval
 
 #### Access Levels
@@ -66,8 +70,8 @@ When viewing trap locations, you'll see key metrics:
 
 1. Ensure device is outdoors with clear view of sky
 2. Wait up to 3 minutes for initial fix
-3. Check that Location (GPS) is on in settings
-4. Try manual update by clicking location data
+3. For automatic updates, check **GPS Update Interval** is not Disabled
+4. Request **Location** from Trap Controls
 5. If problems persist, verify no physical obstructions are blocking GPS antenna
 
 #### Poor Accuracy
@@ -79,11 +83,11 @@ When viewing trap locations, you'll see key metrics:
 
 ### Battery Considerations
 
-* GPS usage impacts battery life significantly
-* **Default 8-hour interval** is optimized for multi-week deployments
+* GPS attempts use battery power
+* **6 hours** is the default automatic interval on firmware v1073 or later
 * Shorter intervals provide more frequent updates but reduce battery life
-* Disable GPS when location tracking not needed
-* GPS is automatically disabled in Low Power mode to conserve battery
+* Disable automatic GPS updates when location tracking is not needed
+* Sleep and competing work can defer an attempt; a valid clock lets the trap account for elapsed sleep time
 * Poor cellular signal in combination with GPS can increase power consumption
 
 ### Map Interface

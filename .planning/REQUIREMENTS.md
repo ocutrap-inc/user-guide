@@ -500,3 +500,17 @@
 | SITE-11 | Docs Enhancements (post-cutover)|
 | SITE-12 | Docs Enhancements (post-launch)|
 | SITE-13 | Docs Enhancements (post-launch)|
+
+
+### GPS interval integration (REQ-GPS-SETTINGS-01 / FW-419 / SW-957)
+
+- [x] Prepare draft documentation for Disabled / 3 / 6 / 12 / 24 hours, default 6 hours, gated to
+  firmware v1073+ and the updated app. Describe the first 15-minute wait,
+  interval measured from attempt completion, and manual Location while disabled.
+- [x] Preserve the fixed-eight-hour description specifically for firmware
+  through v1072. Do not present cloud acceptance as confirmed device application.
+- [ ] Publish the synchronized website content and KB PDF only after the product
+  rollout is qualified, including the FW-420 armed offline sleep limitation.
+  Do not publish candidate behavior as already available to customers.
+
+exit-impact: revenue. Source: shared REQ-GPS-SETTINGS-01.

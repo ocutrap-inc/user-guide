@@ -25,7 +25,7 @@ Proper shutdown prevents unnecessary battery drain and extends the trap's lifesp
 
 ### Deployment Tips
 - **Strong cellular signal**: Poor signal causes the trap to work harder to stay connected, draining battery faster
-- **Location (GPS)**: The trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off if you don't need location tracking
+- **GPS Update Interval**: With firmware v1073+ and the updated app, choose Disabled, 3, 6, 12, or 24 hours; the default is 6 hours. Older firmware uses 8 hours when enabled. The first automatic attempt is eligible after 15 minutes. See [GPS](../faqs/gps.md).
 - **Camera timelapse**: Set to 6+ hours or disable if you only need capture photos
 - **Firmware updates**: Keep updated for the latest battery optimizations
 
@@ -193,7 +193,7 @@ If you're managing multiple traps:
 - **Name your traps** clearly in the app for easy identification
 - **Use the map view** to see all trap locations at once
 - **Share traps** with team members using appropriate permission levels
-- **Turn Location (GPS) off** on traps that stay in one known spot, to save battery
+- **Disable automatic GPS updates** on traps that stay in one known spot, to save battery. Manual Location requests remain available.
 
 ---
 
