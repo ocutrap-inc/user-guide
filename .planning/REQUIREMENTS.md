@@ -475,6 +475,14 @@ All items below have `exit-impact: ops`. Implementation is confined to
   matching ADR 0003 Amendment 1 and Scouting Mode. Keep root/content copies
   identical and regenerate/source-verify the Knowledge Base PDF in this PR.
 
+- [x] **SITE-18**: Article context is a single compact row with copy/print
+  actions. Remove the repeated site name, slash trail, and current page title.
+  Nested articles link to their immediate parent in SUMMARY; top-level pages
+  show only their section label. The homepage has no redundant context label.
+  Keep the row on one line at 320px, with accessible names, visible focus,
+  and 44px touch targets. Verify the supplied Daily use example and a nested
+  article on mobile and desktop. exit-impact: ops.
+
 ## Out of Scope
 
 - **Editing the website or firmware to match docs** — Product is canonical
@@ -534,3 +542,5 @@ All items below have `exit-impact: ops`. Implementation is confined to
 | SITE-16 | September 2026 responsive layout |
 | SITE-17 | September 2026 homepage hierarchy |
 | DOC-24 | September 2026 scouting-copy correction |
+
+| SITE-18 | Compact article context follow-up |
