@@ -138,7 +138,7 @@ The OcuTrap R1 combines these components in a field-ready enclosure.
 - **Connectivity:** 4G LTE cellular networks with nationwide multi-carrier coverage. Automatic network selection and fallback.
 - **Camera:** Automatic night vision with IR LEDs. Adjustable image quality across 6 resolution sizes (QVGA to UXGA). Image rotation (0°, 90°, 180°, 270°). Configurable time-lapse photography, which runs in every mode: unarmed, armed, scouting, and after a capture.
 - **Door:** Linear motor with a closing speed of about 0.75 seconds and opening speed under 1 second. Remote and manual control. Enhanced door closing option for secure locking.
-- **Location:** Integrated GPS with map view in the app. Firmware v1073+ and the updated app support Disabled / 3 / 6 / 12 / 24 hours, default 6 hours. The first automatic attempt is eligible after 15 minutes; older firmware uses 8 hours when enabled.
+- **Location:** Integrated GPS with map view in the app. Firmware v1073+ and the updated app support Disabled / 3 / 6 / 12 / 24 hours, default 6 hours. Startup timing depends on firmware; the unreleased v1081 candidate adds the extended search and refinement described in the GPS section below. Older firmware uses 8 hours when enabled.
 - **Sensors:** Distance sensor for capture detection. Temperature and humidity monitoring. Ambient light detection for automatic day/night camera switching. Orientation and movement sensing.
 - **Battery:** 12V lithium-ion rechargeable. 5,200 mAh (56 Wh) ships with the R2 and is the app default (~21 days runtime); 10,000 mAh (111 Wh) shipped with US R1 units (~40+ days). Set your pack under **Settings → Battery Type**; if you have the 10,000 mAh pack, set Battery Type to match. Low battery alerts fire at 20% and 10% with thresholds set automatically.
 - **Accessory Port:** 12V output port for external devices such as buzzers, solenoids, lure dispensers, or vaccine feeders. A single control sets the on-duration, 0 to 30,000 ms; 0 means off. 3.0A maximum continuous current.
@@ -163,7 +163,7 @@ The OcuTrap R1 combines these components in a field-ready enclosure.
 | Critical Battery Warning (10%) | 10.2 V (10.0 V on the 10,000 mAh pack) |
 | Runtime | ~40+ days (10000 mAh) / ~21 days (5200 mAh), usage dependent |
 | Connectivity | 4G LTE cellular, multi-network |
-| GPS Updates | Firmware v1073+ with updated app: Disabled / 3 / 6 / 12 / 24 hours, default 6 hours; older firmware: fixed 8 hours. First automatic attempt after 15 minutes; requires 5+ satellites / 3D fix. |
+| GPS Updates | Firmware v1073+ with updated app: Disabled / 3 / 6 / 12 / 24 hours, default 6 hours; older firmware: fixed 8 hours. See the GPS section for startup timing and the unreleased v1081 preview. Valid position data and 5+ satellites are required. |
 | Distance Sensor | Up to 13 ft hardware range; the trap actively detects within ~34 in (875 mm); default capture distance ~8 in (200 mm) |
 | Camera Resolution | QVGA to UXGA (6 sizes) |
 | IR LEDs | Automatic activation; 0 to 100% brightness control |
@@ -680,16 +680,32 @@ The camera automatically switches between color (daylight) and grayscale with IR
 
 ## GPS
 
-With firmware v1073+ and the updated app, GPS Update Interval offers Disabled, 3 hours, 6 hours (default), 12 hours, or 24 hours. Older firmware uses a fixed 8-hour interval when enabled. The first automatic attempt is eligible after 15 minutes; later attempts wait the selected interval from the end of the previous attempt, including an unsuccessful attempt. The schedule is checked every five minutes. Captures, photos and connectivity can postpone an attempt. Manual **Location** requests remain available when automatic GPS is disabled. A saved setting does not confirm that the trap has received it. See [GPS](faqs/gps.md).
+Firmware v1073+ and the updated app offer **Disabled / 3 / 6 / 12 / 24 hours**,
+with **6 hours** as the default. There is no four-hour option. Firmware through
+v1072 uses eight hours when enabled. Manual **Location** in Trap Controls works
+when automatic GPS is disabled. Later attempts wait the chosen interval from
+completion, with a five-minute scheduling tick and possible work/connectivity
+delays. A saved setting does not confirm that the trap received it.
 
-### Best Practices
+**Unreleased v1081 candidate:** With GPS enabled, startup searching becomes
+eligible after 30 seconds when priority work permits. The receiver has a fixed
+15-minute search/refinement window from first power-on, including camera pauses.
+The first valid location is sent promptly; better estimates can be sent once
+per minute. Firmware v1073-v1077 instead waits 15 minutes before its first attempt.
 
-- Place the trap with a clear view of the sky
-- Allow 3 minutes for initial satellite acquisition
-- More satellites connected means better accuracy (minimum 5 required)
-- Avoid placing under buildings, dense foliage, or metal structures
+Later manual and scheduled updates send the first valid fix, then refine for
+two additional minutes. An improvement needs at least 10% lower estimated
+horizontal error and is sent at most once per 30 seconds. Photos/captures end
+later refinement after a successful fix. Sleep and shutdown take priority;
+armed offline sleep does not guarantee a complete initial window.
 
----
+Fresh valid position data and at least five satellites are required. Failed
+searches keep the last known location; check its age. Accuracy estimates are not
+surveyed accuracy, and LTE-M delivery can lag the satellite fix. Six hours is a
+default, not a measured battery optimum. Longer intervals or Disabled reduce
+scheduled searches on stationary traps. Backup retention depends on the main
+power supply; there is no verified retention period after battery removal or
+guarantee of a fast fix six hours later. See [GPS](faqs/gps.md).
 
 ## Weather & Environmental Guidelines
 
@@ -811,7 +827,7 @@ OcuTrap uses multiple safeguards to reduce false triggers from rain and debris. 
 
 ### GPS Not Updating
 
-Check the GPS Update Interval: firmware v1073+ with the updated app supports Disabled / 3 / 6 / 12 / 24 hours, default 6 hours. Older firmware uses 8 hours when enabled. The first automatic attempt is eligible after 15 minutes. Captures, photos and connectivity can postpone an attempt.
+Check the GPS Update Interval: firmware v1073+ with the updated app supports Disabled / 3 / 6 / 12 / 24 hours, default 6 hours. Older firmware uses 8 hours when enabled. Startup timing depends on firmware: v1073-v1077 waits 15 minutes; the unreleased v1081 candidate starts searching after 30 seconds when work permits, within a fixed 15-minute window. Captures, photos, sleep and connectivity can postpone an attempt.
 
 - For automatic updates, ensure GPS Update Interval is not Disabled; manual Location remains available
 - Place the trap outdoors with clear sky visibility

@@ -74,9 +74,18 @@ These are the OcuTrap R2 technical specifications, with R1 values where they dif
 | **Connection**          | LTE-M cellular (4G LTE network)            |
 | **Coverage**            | Multi-network cellular coverage            |
 | **GPS Update Interval** | Firmware v1073+ with updated app: Disabled / 3 / 6 / 12 / 24 hours; default 6 hours. Older firmware: fixed 8 hours when enabled. |
-| **GPS Accuracy**        | Minimum 5 satellites, 3D fix required      |
+| **GPS Accuracy**        | Fresh valid position with at least 5 satellites; accuracy varies with reception      |
 
 
+
+### GPS firmware preview
+
+The unreleased v1081 candidate adds a GPS-enabled startup search of up to 15
+minutes, eligible after 30 seconds when other work permits. It sends the first
+valid fix promptly and seeks better estimates within that window. Later manual
+and scheduled updates refine for two additional minutes after the first fix.
+Photos, captures, sleep and shutdown take priority. See [GPS](../faqs/gps.md)
+for version compatibility, timing and battery limits.
 
 ## Sensors
 
