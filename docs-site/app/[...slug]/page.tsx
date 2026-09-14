@@ -116,6 +116,7 @@ export default async function DocPage({
           )}
         </header>
 
+        <TableOfContents headings={headings} compact />
         {STATUS_BANNER_HREFS.has(doc.href) && <StatusBanner />}
 
         {ledMatrix && <LedWizard matrix={ledMatrix} />}

@@ -10,7 +10,8 @@
     "start": "next start",
     "test": "tsx scripts/test-ask.mts",
     "test:led": "tsx scripts/test-led-wizard.mts",
-    "deploy": "cd .. && git add docs-site/ && git commit -m 'Update docs' && git push"
+    "deploy": "cd .. && git add docs-site/ && git commit -m 'Update docs' && git push",
+    "test:docs": "tsx scripts/test-docs-usability.mts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.71.0",

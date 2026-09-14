@@ -28,7 +28,7 @@ You can also arm and unarm at the trap itself, using the User and Power buttons 
 * **Purpose**: The trap watches activity without closing the door.
 * **Safety Requirement**: The door must already be fully open before Scouting Mode can be enabled.
 * **Behavior**: Scouting detects animals like Armed mode, but the door stays open.
-* **Notifications**: You can receive a Scout Alert when an animal first enters the pre-capture area and a Scout Trigger if it reaches the normal trigger distance. Each alert type can send once every 5 minutes. Photos may still continue during that window.
+* **Activity feed**: Scout Alert records an animal entering the pre-capture area; Scout Trigger records it reaching the normal trigger distance. Each event type is limited to once every 5 minutes, while photos may continue. Scouting events appear in the trap activity feed only — they do not send push or email notifications and do not appear in the notification Inbox or bell.
 
 For full details, see the [Scouting mode](scouting-mode.md) page.
 
@@ -68,7 +68,7 @@ Expand **Advanced** for less-common commands:
 
 ### Command status
 
-After you send a command, a status line under the controls shows its progress: **Sending…**, then confirmed or failed, and **Image incoming…** when you request a photo. This tells you whether the trap received your command.
+After you send a command, a status line under the controls shows its progress: **Sending…**, then confirmed or failed. Photo requests show their progress on the camera view instead (**Camera starting…**, **Capturing image…**, **Image incoming…**, **Processing image…**). This tells you whether the trap received your command.
 
 ### Checking data, network, and charts
 
