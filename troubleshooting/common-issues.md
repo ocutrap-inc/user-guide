@@ -106,16 +106,16 @@ GPS updates limit battery use, so they may not happen as often as you expect.
 
 ### Understanding GPS Behavior
 
-- **Update interval**: Every 8 hours, fixed (not real-time)
+- **Update interval**: Firmware v1073+ with the updated app supports Disabled, 3, 6, 12, or 24 hours; the default is 6 hours. Older firmware uses a fixed 8-hour interval when enabled. See [GPS](../faqs/gps.md).
 - **First boot delay**: 15 minutes after boot before the first GPS acquisition
-- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
+- **Captures take priority**: Captures take priority and can postpone a GPS attempt
 
 ### GPS Shows Old Location
 
 **Solution:**
-1. Wait for the next scheduled update (the trap updates every 8 hours)
+1. Check the selected GPS Update Interval and allow time for the next attempt
 2. Request a manual update: in the Trap Controls bar, tap **Location**
-3. Ensure GPS is not disabled in settings
+3. For automatic updates, make sure GPS Update Interval is not Disabled
 
 ### No GPS Fix Available
 
@@ -123,7 +123,7 @@ GPS updates limit battery use, so they may not happen as often as you expect.
 1. Ensure the trap is outdoors with a clear view of the sky
 2. Move away from buildings, dense tree cover, or metal structures
 3. Allow up to 3 minutes for the first fix after power-on
-4. Check that GPS is enabled in settings
+4. Try a manual **Location** request, which works even when automatic updates are disabled
 5. If problems persist, contact support for GPS troubleshooting
 
 ---
@@ -185,13 +185,13 @@ See [Trap not sending commands](trap-not-sending-commands.md) for detailed troub
 
 **Common Causes:**
 - Poor cellular signal (device uses more power searching)
-- Location (GPS) left on where the trap cannot get a fix
+- Automatic GPS updates left enabled where the trap cannot get a fix
 - Camera timelapse interval set too short
 - Cold temperatures reduce battery capacity
 
 **Solution:**
 1. Deploy in areas with good cellular coverage
-2. Turn Location (GPS) off if you do not need location tracking
+2. Disable automatic GPS updates if you do not need location tracking
 3. Increase Camera Time Lapse interval (6+ hours recommended)
 4. In cold weather, expect reduced battery life
 5. Keep firmware updated (includes battery optimizations)

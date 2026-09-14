@@ -543,3 +543,47 @@ All items below have `exit-impact: ops`. Implementation is confined to
 | SITE-17 | September 2026 homepage hierarchy |
 | DOC-24 | September 2026 scouting-copy correction |
 | SITE-18 | Compact article context follow-up |
+
+
+### GPS interval integration (REQ-GPS-SETTINGS-01 / FW-419 / SW-957)
+
+- [x] Prepare draft documentation for Disabled / 3 / 6 / 12 / 24 hours, default 6 hours, gated to
+  firmware v1073+ and the updated app. Describe the v1073-v1077 first 15-minute wait,
+  interval measured from attempt completion, and manual Location while disabled.
+- [x] Preserve the fixed-eight-hour description specifically for firmware
+  through v1072. Do not present cloud acceptance as confirmed device application.
+- [ ] Publish the synchronized website content and KB PDF as a clearly labeled
+  firmware preview, explicitly authorized by Graham on 2026-09-14. Preserve the
+  FW-420 armed offline sleep limitation and unreleased-candidate notice; this
+  approval does not authorize firmware rollout.
+
+exit-impact: revenue. Source: shared REQ-GPS-SETTINGS-01.
+
+### GPS initialization and refinement (REQ-GPS-BOOT-01 / REQ-GPS-REFINE-01 / FW-425 / FW-424)
+
+- [x] Update the GPS FAQ, settings reference, technical specifications and complete
+  knowledge-base summary for the combined v1081 candidate. Explicitly label it
+  unreleased and distinguish older firmware behavior.
+- [x] Explain startup eligibility after 30 seconds, a fixed 15-minute window from
+  first receiver power-on (including camera pauses), prompt first valid location,
+  and improved estimates at most once per minute. Later manual and scheduled
+  acquisitions refine for two additional minutes, at most once per 30 seconds;
+  only estimates at least 10% better qualify. Do not promise surveyed accuracy.
+- [x] Explain camera/capture priority, startup resume within its original window,
+  clean termination of later refinement, and sleep/shutdown priority. Do not
+  promise uninterrupted 15-minute GPS in armed offline sleep (FW-420).
+- [x] Keep Disabled/3/6/12/24-hour choices, default six hours; no four-hour option.
+  Manual Location remains available when automatic updates are disabled. A failed
+  search preserves the last known location; cellular delivery can lag acquisition.
+- [x] Explain battery tradeoffs without claiming a measured optimum or runtime.
+  Backup-clock retention depends on the main power supply; do not promise a
+  fixed retention period after battery removal or a six-hour hot start.
+- [x] Synchronize website content copies and regenerate/verify the downloadable
+  KB PDF, including visual checks of affected pages, in the same PR.
+- [ ] Publish this candidate documentation on explicit user authorization
+  (2026-09-14), retaining version gates and the unreleased notice. The earlier
+  publication hold is lifted for documentation only; firmware remains unreleased.
+
+exit-impact: revenue. Sources: internal-docs/specs/2026-07-integration-health.md
+§4.1 (PR #126), particle-firmware REQUIREMENTS.md §11.28 and GPS_BEHAVIOR.md
+(PR #253). Live qualification was limited to Tomahawk_2 over LTE-M.

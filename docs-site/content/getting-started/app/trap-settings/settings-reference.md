@@ -90,14 +90,33 @@ These alerts watch the **outdoor weather at the trap's location**, not the trap'
 
 | Setting | Range | Default | Description |
 |---------|-------|---------|-------------|
-| **Location (GPS)** | On/Off | On | Location (GPS) is on or off. When on, the trap gets a fix 15 minutes after boot and then every 8 hours; the interval is fixed. Turn it off for indoor or covered deployments to save battery. |
+| **GPS Update Interval** | Disabled / 3 / 6 / 12 / 24 hours | 6 hours | Requires firmware v1073 or later and the updated app. Startup behavior depends on firmware; see below. Later attempts follow the selected interval. Manual Location requests remain available when disabled. Firmware through v1072 uses a fixed 8-hour interval when enabled. |
+
+For timing, compatibility, and manual requests, see [GPS](../../../faqs/gps.md).
 
 ### GPS Behavior Details
 
-- **First fix delay**: 15 minutes after boot before the first GPS acquisition
-- **Acquisition timeout**: 3 minutes for first fix, 2 minutes for subsequent fixes
-- **Fix requirements**: Minimum 5 satellites, 3D fix required for valid position
-- **Captures take priority**: A capture in progress pauses GPS until it finishes; GPS never interrupts a capture
+**Unreleased v1081 candidate:** With GPS enabled, startup searching becomes
+eligible after 30 seconds when other work permits. A fixed 15-minute window
+starts at first receiver power-on; the first valid fix is sent promptly, with
+better estimates at most once per minute. Camera pauses use that same deadline.
+
+Later manual and scheduled requests send the first acceptable fix, then refine
+for two additional minutes. Improvements must reduce estimated horizontal error
+by at least 10% and are sent at most once per 30 seconds. Photos or captures end
+later refinement after a successful fix; sleep and shutdown also take priority.
+Armed offline sleep does not guarantee a full startup window.
+
+Firmware v1073-v1077 waits 15 minutes before the initial automatic attempt.
+Outside the candidate startup window, search limits remain three minutes for the
+first attempt and two minutes for later attempts, before refinement. Valid fixes
+require fresh position data and at least five satellites; satellite count alone
+is not an accuracy guarantee. Failed searches preserve the last known location.
+
+**Battery choice:** Six hours is the default, not a measured optimum. Choose a
+longer interval or Disabled for a trap that stays in one known location. Manual
+**Location** remains available when disabled. There is no four-hour option.
+
 
 ---
 
@@ -197,7 +216,7 @@ Settings are accessible in different locations:
 ## Tips for Optimal Settings
 
 ### For Maximum Battery Life
-- Turn Location (GPS) off if you do not need location tracking
+- Set GPS Update Interval to Disabled if you do not need automatic location tracking
 - Use Camera Quality level 1 to 2
 - Set Camera Time Lapse to 6+ hours or disable
 - Reduce Maximum IR Brightness if images are overexposed
@@ -208,6 +227,6 @@ Settings are accessible in different locations:
 - Fine-tune IR brightness settings for your environment
 
 ### For Fastest Response
-- Keep Location (GPS) on so the map stays current
+- Choose an enabled GPS Update Interval to keep the map current
 - Enable Pre-Capture Alerts to see animals approaching
 - Use shorter Capture Alert Intervals if monitoring actively

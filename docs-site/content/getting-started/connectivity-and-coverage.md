@@ -28,7 +28,7 @@ Like any cellular device, OcuTrap needs a usable signal where it's deployed.
 * **Available in the US and Canada.** OcuTrap's cellular service covers the **United States and Canada**. The trap is not supported in other countries.
 * **Place it where there's signal.** Areas with **strong cellular signal** give you the most reliable connection *and* the best battery life. A weak signal makes the trap work harder to stay connected and drains the battery faster.
 * **Obstacles matter.** Dense buildings, deep valleys, and very remote backcountry may have little or no coverage.
-* **GPS is separate.** Location uses a built-in GPS module (clear view of the sky helps) and updates about every 8 hours. See [GPS](../faqs/gps.md).
+* **GPS is separate.** Location uses a built-in GPS module; a clear view of the sky helps. Firmware v1073+ with the updated app supports Disabled / 3 / 6 / 12 / 24 hours, default 6 hours. Older firmware uses 8 hours when enabled. See [GPS](../faqs/gps.md).
 
 {% hint style="info" %}
 For battery and signal tips on where to place a trap, see **Optimal Trap Placement** in [Tips and tricks](tips-and-tricks.md).
