@@ -49,3 +49,17 @@ Validation completed:
 References:
 - https://mobbin.com/explore/screens/6e6184a1-50fb-4536-9e07-3b5e70966a10
 - https://mobbin.com/explore/screens/e4f5c37e-834c-4996-b0b3-f10c40b7ca67
+
+
+## Compact context follow-up (SITE-18)
+
+User screenshot: the Daily use breadcrumb repeats the site and page title,
+wrapping above the H1. Replaced it with the section label for top-level pages
+and one immediate-parent link for nested articles, derived from SUMMARY's
+hierarchy. Removed the homepage's redundant label and aligned the action row.
+No content or PDF source changed; existing tracker access limitation persists.
+
+Validation: production build/typecheck pass; PDF source hash still matches.
+Reviewed Daily use at 390px, Settings reference at 320px (44px row, no
+horizontal overflow), and nested parent navigation at 1440px in both themes.
+Parent links resolve to authored navigation parents, not URL-folder guesses.

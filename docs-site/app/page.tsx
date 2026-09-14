@@ -21,10 +21,7 @@ export default async function HomePage() {
   return (
     <div className="page-content home-page">
       <article className="doc-body">
-        <div className="doc-topbar">
-          <div className="breadcrumb">
-            <span>OcuTrap Knowledge Base</span>
-          </div>
+        <div className="doc-topbar doc-topbar--home">
           <div className="doc-actions">
             <CopyMarkdownButton markdown={pageMarkdown} />
             <PrintButton variant="icon" />

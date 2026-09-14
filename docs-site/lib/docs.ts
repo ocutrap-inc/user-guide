@@ -218,6 +218,19 @@ function getSectionTitle(
   return null;
 }
 
+// Use the authored navigation hierarchy, which can differ from URL folders.
+export function getParentNavItem(href: string): NavItem | null {
+  function find(items: NavItem[]): NavItem | null {
+    for (const item of items) {
+      if (item.children.some((child) => child.href === href)) return item;
+      const parent = find(item.children);
+      if (parent) return parent;
+    }
+    return null;
+  }
+  return find(parseSummary().flatMap((section) => section.items));
+}
+
 export function getDocBySlug(slug: string[]): DocData | null {
   const href = "/" + slug.join("/");
   const sections = parseSummary();
