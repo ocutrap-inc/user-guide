@@ -16,7 +16,7 @@ In the mobile app, you can also choose **Request quick image** for a faster, low
 
 <figure><img src="../../.gitbook/assets/IMG_2083.png" alt="" width="375"><figcaption></figcaption></figure>
 
-After you request a photo, an **Image incoming…** indicator appears on the camera view while the trap captures and uploads the new image. It clears on its own once the fresh photo arrives.
+After you request a photo, a status pill on the camera view follows the trap's own progress: **Camera starting…**, **Capturing image…**, **Image incoming…**, then **Processing image…** while the photo is assembled in the cloud. It clears on its own once the fresh photo arrives. If the trap reports **Image failed**, give the camera a moment and request the image again.
 
 ## Browse past images
 

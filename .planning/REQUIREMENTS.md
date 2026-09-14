@@ -446,6 +446,35 @@
   and link anchor text is descriptive rather than a raw URL. Root and
   `docs-site/content/` copies stay byte-identical. exit-impact: ops.
 
+## September 2026 docs usability corrections
+
+All items below have `exit-impact: ops`. Implementation is confined to
+`user-guide`; product behavior and brand contracts remain unchanged.
+
+- [x] **SITE-14**: Full-text search finds terms anywhere in published articles,
+  including Actuator Inverse, Camera Quality, Dark Lux Threshold, and Maximum
+  IR Brightness. Results show relevant snippets. Enter opens the first matching
+  page; asking AI is an explicit alternative. Cached search remains usable
+  offline and a query entered while the index loads is searched once ready.
+- [x] **SITE-15**: Mobile navigation and search use accessible modal behavior:
+  closed menu links cannot receive focus, open dialogs contain focus, Escape
+  and visible Close controls dismiss them, dismissal restores trigger focus,
+  and background scrolling is locked. Desktop navigation remains available.
+  Search has an accessible input label and reports loading/failure states.
+- [x] **SITE-16**: Settings tables scroll within their own labeled region,
+  without document overflow at 390px or 320px. The desktop TOC collapses before
+  it squeezes the article at 1024px; a collapsible in-article TOC replaces it.
+  Mobile menu/search/theme and article-action hit areas are at least 44px.
+  Verify desktop/mobile light and dark themes, table keyboard scrolling,
+  drawer/search dismissal, LED diagnosis, and print layout.
+- [x] **SITE-17**: The homepage offers labeled search and common field tasks
+  ahead of category browsing, with compact topic rows on mobile. Its Next
+  link advances to Setup rather than looping to home. Preserve SUMMARY URLs.
+- [x] **DOC-24**: Trap Control describes Scout Alert and Scout Trigger as
+  activity-feed events only, without push/email/Inbox/bell notifications,
+  matching ADR 0003 Amendment 1 and Scouting Mode. Keep root/content copies
+  identical and regenerate/source-verify the Knowledge Base PDF in this PR.
+
 ## Out of Scope
 
 - **Editing the website or firmware to match docs** — Product is canonical
@@ -500,3 +529,8 @@
 | SITE-11 | Docs Enhancements (post-cutover)|
 | SITE-12 | Docs Enhancements (post-launch)|
 | SITE-13 | Docs Enhancements (post-launch)|
+| SITE-14 | September 2026 search correction |
+| SITE-15 | September 2026 accessible navigation |
+| SITE-16 | September 2026 responsive layout |
+| SITE-17 | September 2026 homepage hierarchy |
+| DOC-24 | September 2026 scouting-copy correction |

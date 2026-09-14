@@ -6,6 +6,7 @@ import TabsInit from "@/components/tabs-init";
 import StatusPill from "@/components/status-pill";
 import PrintButton from "@/components/print-button";
 import CopyMarkdownButton from "@/components/copy-markdown-button";
+import HomeSearch from "@/components/home-search";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -18,7 +19,7 @@ export default async function HomePage() {
   const pageMarkdown = `# ${doc.title}\n\n${markdownToPlain(doc.contentRaw, doc.filePath)}\n`;
 
   return (
-    <div className="page-content">
+    <div className="page-content home-page">
       <article className="doc-body">
         <div className="doc-topbar">
           <div className="breadcrumb">
@@ -37,6 +38,8 @@ export default async function HomePage() {
           )}
         </header>
 
+        <HomeSearch />
+        <TableOfContents headings={headings} compact />
         <DocContent html={html} />
 
         {doc.next && (

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Search, X, Sparkles, CornerDownLeft } from "lucide-react";
-import Fuse from "fuse.js";
+import { createSearchEngine, searchDocuments } from "@/lib/search";
+import { useNativeDialog } from "./use-native-dialog";
 import type { SearchDoc } from "@/lib/docs";
 import { renderAnswerMarkdown } from "@/lib/answer-markdown";
 import { capture } from "@/lib/analytics";
@@ -43,10 +44,13 @@ type NavItem = { kind: "ask" } | { kind: "result"; doc: SearchDoc };
 export default function SearchDialog() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchDoc[]>([]);
   const [focused, setFocused] = useState(0);
   const [docs, setDocs] = useState<SearchDoc[]>([]);
-  const [fuse, setFuse] = useState<Fuse<SearchDoc> | null>(null);
+  const [indexStatus, setIndexStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
+  const [retry, setRetry] = useState(0);
+  const fuse = useMemo(() => createSearchEngine(docs), [docs]);
+  const results = useMemo(() => searchDocuments(fuse, query), [fuse, query]);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   // Answer ("ask AI") mode state.
   const [mode, setMode] = useState<"search" | "answer">("search");
@@ -56,10 +60,21 @@ export default function SearchDialog() {
   const [askStatus, setAskStatus] = useState<AskStatus>("idle");
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const modeRef = useRef(mode);
+  const backRef = useRef<HTMLButtonElement>(null);
+  useNativeDialog(open, dialogRef, inputRef);
   const abortRef = useRef<AbortController | null>(null);
   const resultsRef = useRef(results);
   const router = useRouter();
+
+  useEffect(() => {
+    if (!open) return;
+    // A mode switch removes the clicked option; focus after the browser has
+    // finished that click's default focus handling.
+    const frame = requestAnimationFrame(() => {
+      (mode === "search" ? inputRef.current : backRef.current)?.focus();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [open, mode]);
 
   // Keep the latest results readable from the debounced analytics timer
   // without retriggering it on every keystroke.
@@ -82,31 +97,26 @@ export default function SearchDialog() {
     return () => clearTimeout(t);
   }, [query]);
 
-  useEffect(() => {
-    modeRef.current = mode;
-  }, [mode]);
-
-  // Load search index once when dialog first opens.
+  // Recompute results when the index arrives, even if the query was typed first.
   useEffect(() => {
     if (!open || docs.length > 0) return;
-    fetch("/api/search")
-      .then((r) => r.json())
-      .then((data: SearchDoc[]) => {
-        setDocs(data);
-        setFuse(
-          new Fuse(data, {
-            keys: [
-              { name: "title", weight: 2 },
-              { name: "section", weight: 1 },
-              { name: "excerpt", weight: 0.5 },
-            ],
-            threshold: 0.35,
-            includeScore: true,
-          })
-        );
+    const controller = new AbortController();
+    setIndexStatus("loading");
+    fetch("/api/search", { signal: controller.signal })
+      .then((r) => {
+        if (!r.ok) throw new Error("Search index unavailable");
+        return r.json();
       })
-      .catch(() => {});
-  }, [open, docs.length]);
+      .then((data: SearchDoc[]) => {
+        if (!Array.isArray(data)) throw new Error("Invalid search index");
+        setDocs(data);
+        setIndexStatus("ready");
+      })
+      .catch((error) => {
+        if (error.name !== "AbortError") setIndexStatus("error");
+      });
+    return () => controller.abort();
+  }, [open, docs.length, retry]);
 
   const backToSearch = useCallback(() => {
     abortRef.current?.abort();
@@ -115,7 +125,6 @@ export default function SearchDialog() {
     setCitations([]);
     setAskStatus("idle");
     setFocused(0);
-    setTimeout(() => inputRef.current?.focus(), 20);
   }, []);
 
   const closeDialog = useCallback(() => {
@@ -123,32 +132,27 @@ export default function SearchDialog() {
     setOpen(false);
   }, []);
 
-  // Keyboard shortcut Cmd+K / Ctrl+K; Esc backs out of answer mode first.
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        if (document.querySelector("dialog:modal:not(.search-overlay)")) return;
         e.preventDefault();
         setOpen((v) => !v);
       }
-      if (e.key === "Escape") {
-        if (modeRef.current === "answer") {
-          e.preventDefault();
-          backToSearch();
-        } else {
-          setOpen(false);
-        }
-      }
     };
+    const openSearch = () => setOpen(true);
     document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
-  }, [backToSearch]);
+    document.addEventListener("docs:open-search", openSearch);
+    return () => {
+      document.removeEventListener("keydown", handler);
+      document.removeEventListener("docs:open-search", openSearch);
+    };
+  }, []);
 
   // Reset when dialog opens.
   useEffect(() => {
     if (open) {
-      setTimeout(() => inputRef.current?.focus(), 50);
       setQuery("");
-      setResults([]);
       setFocused(0);
       setMode("search");
       setAnswer("");
@@ -159,19 +163,10 @@ export default function SearchDialog() {
     }
   }, [open]);
 
-  const handleSearch = useCallback(
-    (q: string) => {
-      setQuery(q);
-      setFocused(0);
-      if (!fuse || !q.trim()) {
-        setResults([]);
-        return;
-      }
-      const hits = fuse.search(q.trim()).slice(0, 8);
-      setResults(hits.map((h) => h.item));
-    },
-    [fuse]
-  );
+  const handleSearch = (q: string) => {
+    setQuery(q);
+    setFocused(0);
+  };
 
   const runAsk = useCallback(async (q: string) => {
     const trimmed = q.trim();
@@ -285,8 +280,12 @@ export default function SearchDialog() {
         : docs.slice(0, 6);
 
   const navItems: NavItem[] = query.trim()
-    ? [{ kind: "ask" }, ...displayResults.map((doc) => ({ kind: "result" as const, doc }))]
+    ? [...displayResults.map((doc) => ({ kind: "result" as const, doc })), { kind: "ask" }]
     : displayResults.map((doc) => ({ kind: "result" as const, doc }));
+
+  useEffect(() => {
+    dialogRef.current?.querySelector(`[data-result-index="${focused}"]`)?.scrollIntoView({ block: "nearest" });
+  }, [focused]);
 
   const activate = (item: NavItem) => {
     if (item.kind === "ask") {
@@ -300,11 +299,11 @@ export default function SearchDialog() {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      setFocused((v) => Math.min(v + 1, navItems.length - 1));
+      setFocused((v) => Math.max(0, Math.min(v + 1, navItems.length - 1)));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       setFocused((v) => Math.max(v - 1, 0));
-    } else if (e.key === "Enter" && navItems[focused]) {
+    } else if (e.key === "Enter" && indexStatus !== "loading" && navItems[focused]) {
       e.preventDefault();
       activate(navItems[focused]);
     }
@@ -335,11 +334,16 @@ export default function SearchDialog() {
         <Search size={18} />
       </button>
 
-      {open && (
-        <div
+        <dialog
+          ref={dialogRef}
           className="search-overlay"
+          onCancel={(e) => {
+            e.preventDefault();
+            if (mode === "answer") backToSearch();
+            else closeDialog();
+          }}
+          onClose={closeDialog}
           onClick={(e) => e.target === e.currentTarget && closeDialog()}
-          role="dialog"
           aria-modal="true"
           aria-label="Search"
         >
@@ -351,7 +355,13 @@ export default function SearchDialog() {
                   <input
                     ref={inputRef}
                     className="search-input"
-                    placeholder="Search or ask a question..."
+                    placeholder="Search documentation..."
+                    aria-label="Search documentation"
+                    role="combobox"
+                    aria-autocomplete="list"
+                    aria-expanded={open && mode === "search"}
+                    aria-controls="docs-search-results"
+                    aria-activedescendant={navItems[focused] ? `docs-search-option-${focused}` : undefined}
                     value={query}
                     onChange={(e) => handleSearch(e.target.value)}
                     onKeyDown={handleKeyDown}
@@ -362,50 +372,24 @@ export default function SearchDialog() {
                     <button
                       onClick={() => handleSearch("")}
                       aria-label="Clear search"
-                      style={{
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
-                        color: "var(--color-muted)",
-                        display: "flex",
-                      }}
+                      className="search-clear"
                     >
                       <X size={16} />
                     </button>
                   )}
+                  <button className="dialog-close" onClick={closeDialog} aria-label="Close search">Close</button>
                 </div>
 
-                <div className="search-results" role="listbox">
-                  {query.trim() && (
-                    <button
-                      className={`search-result ask-row${
-                        focused === 0 ? " search-result--focused" : ""
-                      }`}
-                      onClick={() => runAsk(query)}
-                      onMouseEnter={() => setFocused(0)}
-                      role="option"
-                      aria-selected={focused === 0}
-                    >
-                      <span className="ask-row-icon">
-                        <Sparkles size={16} />
-                      </span>
-                      <span className="ask-row-label">
-                        Ask OcuTrap AI:{" "}
-                        <span className="ask-row-query">
-                          &ldquo;{query.trim()}&rdquo;
-                        </span>
-                      </span>
-                      <CornerDownLeft
-                        size={14}
-                        className="ask-row-enter"
-                        aria-hidden="true"
-                      />
-                    </button>
-                  )}
-
-                  {displayResults.length === 0 && query.trim() ? (
+                <div className="search-results" id="docs-search-results" role="listbox" aria-label="Search results" aria-busy={indexStatus === "loading"}>
+                  {indexStatus === "loading" ? (
+                    <div className="search-empty" role="status">Loading documentation…</div>
+                  ) : indexStatus === "error" ? (
+                    <div className="search-empty" role="status">
+                      Search could not load. Check your connection and <button className="search-retry" onClick={() => setRetry((v) => v + 1)}>try again</button>.
+                    </div>
+                  ) : displayResults.length === 0 && query.trim() ? (
                     <div className="search-empty">
-                      No pages match &ldquo;{query}&rdquo; — try Ask OcuTrap AI above.
+                      No pages match &ldquo;{query}&rdquo; — try a shorter search or ask OcuTrap AI below.
                     </div>
                   ) : displayResults.length === 0 ? (
                     <div className="search-empty">
@@ -424,11 +408,11 @@ export default function SearchDialog() {
                             color: "var(--color-muted)",
                           }}
                         >
-                          Recent pages
+                          Browse pages
                         </div>
                       )}
                       {displayResults.map((doc, i) => {
-                        const navIndex = query.trim() ? i + 1 : i;
+                        const navIndex = i;
                         return (
                           <button
                             key={doc.href}
@@ -439,6 +423,9 @@ export default function SearchDialog() {
                             }`}
                             onClick={() => navigate(doc.href)}
                             onMouseEnter={() => setFocused(navIndex)}
+                            id={`docs-search-option-${navIndex}`}
+                            data-result-index={navIndex}
+                            tabIndex={-1}
                             role="option"
                             aria-selected={navIndex === focused}
                           >
@@ -460,6 +447,36 @@ export default function SearchDialog() {
                       })}
                     </>
                   )}
+                  {query.trim() && (
+                    <button
+                      className={`search-result ask-row${
+                        focused === displayResults.length ? " search-result--focused" : ""
+                      }`}
+                      onClick={() => runAsk(query)}
+                      onMouseEnter={() => setFocused(displayResults.length)}
+                      id={`docs-search-option-${displayResults.length}`}
+                      data-result-index={displayResults.length}
+                      tabIndex={-1}
+                      role="option"
+                      aria-selected={focused === displayResults.length}
+                    >
+                      <span className="ask-row-icon">
+                        <Sparkles size={16} />
+                      </span>
+                      <span className="ask-row-label">
+                        Ask OcuTrap AI:{" "}
+                        <span className="ask-row-query">
+                          &ldquo;{query.trim()}&rdquo;
+                        </span>
+                      </span>
+                      <CornerDownLeft
+                        size={14}
+                        className="ask-row-enter"
+                        aria-hidden="true"
+                      />
+                    </button>
+                  )}
+
                 </div>
 
                 <div className="search-footer">
@@ -482,12 +499,14 @@ export default function SearchDialog() {
                   </span>
                   <span className="ask-header-question">{question}</span>
                   <button
+                    ref={backRef}
                     className="ask-back"
                     onClick={backToSearch}
                     aria-label="Back to search"
                   >
-                    <X size={16} />
+                    Back
                   </button>
+                  <button className="dialog-close" onClick={closeDialog} aria-label="Close search">Close</button>
                 </div>
 
                 <div className="ask-body">
@@ -567,8 +586,7 @@ export default function SearchDialog() {
               </>
             )}
           </div>
-        </div>
-      )}
+        </dialog>
     </>
   );
 }
