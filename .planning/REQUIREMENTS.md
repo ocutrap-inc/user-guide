@@ -542,5 +542,4 @@ All items below have `exit-impact: ops`. Implementation is confined to
 | SITE-16 | September 2026 responsive layout |
 | SITE-17 | September 2026 homepage hierarchy |
 | DOC-24 | September 2026 scouting-copy correction |
-
 | SITE-18 | Compact article context follow-up |
