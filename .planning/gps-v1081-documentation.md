@@ -24,3 +24,11 @@ Keep the PR draft. Website/PDF publication waits for coordinated product rollout
 qualification and authorization, including the FW-420 armed offline sleep limit.
 No device commands, firmware release, production site deployment or main merge
 in this task. GitHub may generate an automatic Vercel preview for PR review.
+
+## Live documentation authorization - 2026-09-14
+
+Graham requested live publication and a link. This supersedes the earlier draft
+hold for the documentation only. Keep the unreleased-v1081 notice and all
+firmware compatibility/power limitations. Merge current main's documentation
+updates, regenerate the combined PDF, pass checks, merge PR #133 and verify
+production GPS content. Do not release firmware or send device commands.

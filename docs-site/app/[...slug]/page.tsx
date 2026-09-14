@@ -1,4 +1,5 @@
-import { getAllSlugs, getDocBySlug } from "@/lib/docs";
+import { getAllSlugs, getDocBySlug, getParentNavItem } from "@/lib/docs";
+import { ChevronLeft } from "lucide-react";
 import { markdownToHtml, markdownToPlain, extractHeadings } from "@/lib/markdown";
 import DocContent from "@/components/doc-content";
 import TableOfContents from "@/components/toc";
@@ -71,6 +72,7 @@ export default async function DocPage({
   if (!doc) return notFound();
 
   const html = await markdownToHtml(doc.contentRaw, doc.filePath);
+  const parent = getParentNavItem(doc.href);
   const headings = extractHeadings(html);
   const pageMarkdown = `# ${doc.title}\n\n${markdownToPlain(doc.contentRaw, doc.filePath)}\n`;
 
@@ -88,19 +90,16 @@ export default async function DocPage({
       <article className="doc-body">
         {/* Breadcrumb + per-page copy/print affordances */}
         <div className="doc-topbar">
-          <nav className="breadcrumb" aria-label="Breadcrumb">
-            <Link href="/" style={{ color: "var(--color-muted)", textDecoration: "none" }}>
-              OcuTrap Knowledge Base
-            </Link>
-            {doc.section && (
-              <>
-                <span className="breadcrumb-sep">/</span>
-                <span>{doc.section}</span>
-              </>
-            )}
-            <span className="breadcrumb-sep">/</span>
-            <span style={{ color: "var(--color-heading)" }}>{doc.title}</span>
-          </nav>
+          {parent ? (
+            <nav className="doc-context" aria-label="Parent page">
+              <Link href={parent.href} className="doc-parent-link" aria-label={`Back to ${parent.title}`}>
+                <ChevronLeft size={16} aria-hidden="true" />
+                <span>{parent.title}</span>
+              </Link>
+            </nav>
+          ) : (
+            <span className="doc-context doc-context--section">{doc.section}</span>
+          )}
           <div className="doc-actions">
             <CopyMarkdownButton markdown={pageMarkdown} />
             <PrintButton variant="icon" />
@@ -108,14 +107,13 @@ export default async function DocPage({
         </div>
 
         <header className="page-header">
-          {/* No section eyebrow here — the breadcrumb directly above already
-              names the section, so the eyebrow was a duplicate (DOC-30). */}
           <h1 className="page-title">{doc.title}</h1>
           {doc.description && (
             <p className="page-subtitle">{doc.description}</p>
           )}
         </header>
 
+        <TableOfContents headings={headings} compact />
         {STATUS_BANNER_HREFS.has(doc.href) && <StatusBanner />}
 
         {ledMatrix && <LedWizard matrix={ledMatrix} />}

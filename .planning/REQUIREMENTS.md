@@ -446,6 +446,43 @@
   and link anchor text is descriptive rather than a raw URL. Root and
   `docs-site/content/` copies stay byte-identical. exit-impact: ops.
 
+## September 2026 docs usability corrections
+
+All items below have `exit-impact: ops`. Implementation is confined to
+`user-guide`; product behavior and brand contracts remain unchanged.
+
+- [x] **SITE-14**: Full-text search finds terms anywhere in published articles,
+  including Actuator Inverse, Camera Quality, Dark Lux Threshold, and Maximum
+  IR Brightness. Results show relevant snippets. Enter opens the first matching
+  page; asking AI is an explicit alternative. Cached search remains usable
+  offline and a query entered while the index loads is searched once ready.
+- [x] **SITE-15**: Mobile navigation and search use accessible modal behavior:
+  closed menu links cannot receive focus, open dialogs contain focus, Escape
+  and visible Close controls dismiss them, dismissal restores trigger focus,
+  and background scrolling is locked. Desktop navigation remains available.
+  Search has an accessible input label and reports loading/failure states.
+- [x] **SITE-16**: Settings tables scroll within their own labeled region,
+  without document overflow at 390px or 320px. The desktop TOC collapses before
+  it squeezes the article at 1024px; a collapsible in-article TOC replaces it.
+  Mobile menu/search/theme and article-action hit areas are at least 44px.
+  Verify desktop/mobile light and dark themes, table keyboard scrolling,
+  drawer/search dismissal, LED diagnosis, and print layout.
+- [x] **SITE-17**: The homepage offers labeled search and common field tasks
+  ahead of category browsing, with compact topic rows on mobile. Its Next
+  link advances to Setup rather than looping to home. Preserve SUMMARY URLs.
+- [x] **DOC-24**: Trap Control describes Scout Alert and Scout Trigger as
+  activity-feed events only, without push/email/Inbox/bell notifications,
+  matching ADR 0003 Amendment 1 and Scouting Mode. Keep root/content copies
+  identical and regenerate/source-verify the Knowledge Base PDF in this PR.
+
+- [x] **SITE-18**: Article context is a single compact row with copy/print
+  actions. Remove the repeated site name, slash trail, and current page title.
+  Nested articles link to their immediate parent in SUMMARY; top-level pages
+  show only their section label. The homepage has no redundant context label.
+  Keep the row on one line at 320px, with accessible names, visible focus,
+  and 44px touch targets. Verify the supplied Daily use example and a nested
+  article on mobile and desktop. exit-impact: ops.
+
 ## Out of Scope
 
 - **Editing the website or firmware to match docs** — Product is canonical
@@ -500,6 +537,12 @@
 | SITE-11 | Docs Enhancements (post-cutover)|
 | SITE-12 | Docs Enhancements (post-launch)|
 | SITE-13 | Docs Enhancements (post-launch)|
+| SITE-14 | September 2026 search correction |
+| SITE-15 | September 2026 accessible navigation |
+| SITE-16 | September 2026 responsive layout |
+| SITE-17 | September 2026 homepage hierarchy |
+| DOC-24 | September 2026 scouting-copy correction |
+| SITE-18 | Compact article context follow-up |
 
 
 ### GPS interval integration (REQ-GPS-SETTINGS-01 / FW-419 / SW-957)
@@ -509,9 +552,10 @@
   interval measured from attempt completion, and manual Location while disabled.
 - [x] Preserve the fixed-eight-hour description specifically for firmware
   through v1072. Do not present cloud acceptance as confirmed device application.
-- [ ] Publish the synchronized website content and KB PDF only after the product
-  rollout is qualified, including the FW-420 armed offline sleep limitation.
-  Do not publish candidate behavior as already available to customers.
+- [ ] Publish the synchronized website content and KB PDF as a clearly labeled
+  firmware preview, explicitly authorized by Graham on 2026-09-14. Preserve the
+  FW-420 armed offline sleep limitation and unreleased-candidate notice; this
+  approval does not authorize firmware rollout.
 
 exit-impact: revenue. Source: shared REQ-GPS-SETTINGS-01.
 
@@ -536,8 +580,9 @@ exit-impact: revenue. Source: shared REQ-GPS-SETTINGS-01.
   fixed retention period after battery removal or a six-hour hot start.
 - [x] Synchronize website content copies and regenerate/verify the downloadable
   KB PDF, including visual checks of affected pages, in the same PR.
-- [ ] Publish only after the corresponding product release is qualified and
-  authorized. This documentation task does not release firmware or update devices.
+- [ ] Publish this candidate documentation on explicit user authorization
+  (2026-09-14), retaining version gates and the unreleased notice. The earlier
+  publication hold is lifted for documentation only; firmware remains unreleased.
 
 exit-impact: revenue. Sources: internal-docs/specs/2026-07-integration-health.md
 §4.1 (PR #126), particle-firmware REQUIREMENTS.md §11.28 and GPS_BEHAVIOR.md

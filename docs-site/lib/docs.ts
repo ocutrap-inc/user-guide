@@ -82,6 +82,7 @@ export type SearchDoc = {
   href: string;
   section: string | null;
   excerpt: string;
+  text?: string; // Optional for older offline-cached indexes.
 };
 
 // A heading-scoped slice of a KB page, used for AI-ask retrieval (SITE-04).
@@ -217,6 +218,19 @@ function getSectionTitle(
   return null;
 }
 
+// Use the authored navigation hierarchy, which can differ from URL folders.
+export function getParentNavItem(href: string): NavItem | null {
+  function find(items: NavItem[]): NavItem | null {
+    for (const item of items) {
+      if (item.children.some((child) => child.href === href)) return item;
+      const parent = find(item.children);
+      if (parent) return parent;
+    }
+    return null;
+  }
+  return find(parseSummary().flatMap((section) => section.items));
+}
+
 export function getDocBySlug(slug: string[]): DocData | null {
   const href = "/" + slug.join("/");
   const sections = parseSummary();
@@ -279,7 +293,7 @@ export function getHomeDoc(): DocData | null {
 
   const sections = parseSummary();
   const flatItems = flattenNav(sections);
-  const next = flatItems.length > 0 ? flatItems[0] : null;
+  const next = flatItems.find((item) => item.href !== "/") ?? null;
 
   const title: string = data.title ?? "OcuTrap Knowledge Base";
   const description =
@@ -322,6 +336,7 @@ export function buildSearchIndex(): SearchDoc[] {
         .replace(/#+\s+/g, "")
         .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
         .replace(/[*_`~]/g, "")
+        .replace(/\|/g, " ")
         .replace(/<[^>]+>/g, "")
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -347,6 +362,7 @@ export function buildSearchIndex(): SearchDoc[] {
         href: item.href,
         section,
         excerpt,
+        text: plainText,
       });
     } catch {
       // Skip unreadable files

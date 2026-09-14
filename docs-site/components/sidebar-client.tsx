@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, FileDown, FileText, ChevronRight } from "lucide-react";
+import { useNativeDialog } from "./use-native-dialog";
 import type { NavSection, NavItem } from "@/lib/docs";
 
 /* True when the current page is this item or any of its descendants —
@@ -86,54 +87,23 @@ export default function SidebarClient({
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  useNativeDialog(open, dialogRef, closeRef);
 
   // Close sidebar on navigation
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // Close on Escape
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
+    const desktop = window.matchMedia("(min-width: 901px)");
+    const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => desktop.removeEventListener("change", closeOnDesktop);
   }, []);
 
-  return (
-    <>
-      {/* Mobile hamburger */}
-      <button
-        className="hamburger"
-        onClick={() => setOpen((v) => !v)}
-        aria-label={open ? "Close menu" : "Open menu"}
-        aria-expanded={open}
-      >
-        {open ? <X size={20} /> : <Menu size={20} />}
-      </button>
-
-      {/* Overlay for mobile */}
-      {open && (
-        <div
-          className="sidebar-overlay"
-          onClick={() => setOpen(false)}
-          aria-hidden="true"
-        />
-      )}
-
-      {/* Sidebar */}
-      <nav
-        className={`sidebar${open ? " sidebar--open" : ""}`}
-        aria-label="Documentation navigation"
-      >
-        {/* Mobile drawer header (hidden on desktop). Text-only: the old
-            low-res raccoon PNG is gone, and the left padding clears the
-            fixed close (X) button so the two never overlap. */}
-        <Link href="/" className="sidebar-logo">
-          OcuTrap Knowledge Base
-        </Link>
-
+  const navigation = (
         <ul style={{ listStyle: "none", margin: 0, padding: "0 0 2rem" }}>
           {sections.map((section, i) => (
             <li key={i}>
@@ -183,7 +153,28 @@ export default function SidebarClient({
             </li>
           ))}
         </ul>
-      </nav>
+  );
+
+  return (
+    <>
+      <button className="hamburger" onClick={() => setOpen(true)}
+        aria-label="Open menu" aria-expanded={open} aria-controls="mobile-navigation">
+        <Menu size={20} />
+      </button>
+      <nav className="sidebar sidebar--desktop" aria-label="Documentation navigation">{navigation}</nav>
+      <dialog id="mobile-navigation" ref={dialogRef} className="mobile-nav-dialog"
+        aria-label="Documentation menu" onCancel={() => setOpen(false)} onClose={() => setOpen(false)}
+        onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
+        <div className="mobile-nav-panel">
+          <div className="mobile-nav-header">
+            <Link href="/" onClick={() => setOpen(false)}>OcuTrap Knowledge Base</Link>
+            <button ref={closeRef} className="dialog-close" onClick={() => setOpen(false)} aria-label="Close menu"><X size={20} /></button>
+          </div>
+          <nav aria-label="Documentation navigation" onClick={(e) => {
+            if ((e.target as HTMLElement).closest("a")) setOpen(false);
+          }}>{navigation}</nav>
+        </div>
+      </dialog>
     </>
   );
 }
