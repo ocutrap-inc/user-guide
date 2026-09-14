@@ -22,4 +22,5 @@ layout, clipping and page transitions. No site code or firmware changed.
 
 Keep the PR draft. Website/PDF publication waits for coordinated product rollout
 qualification and authorization, including the FW-420 armed offline sleep limit.
-No device commands, firmware release, site deployment or main merge in this task.
+No device commands, firmware release, production site deployment or main merge
+in this task. GitHub may generate an automatic Vercel preview for PR review.
