@@ -16,13 +16,17 @@ Before working on the mechanism, fully lower the door and unplug the motor.
 
 Use the nut driver to remove the **two bolts and washers securing the black top motor bracket** to the metal mounting plate, as shown in the assembly diagram below. Support the motor and bracket while removing the hardware, then lift the bracket away from the plate. Keep both bolts and washers for reassembly.
 
-The black top bracket is the part removed for access. The metal plate underneath stays on the cage during the adjustment.
+The black top motor bracket is the part removed for access. The top and inner metal brackets stay on the cage during the adjustment.
 
-<figure><img src="../.gitbook/assets/Use the nut driver to mount the top motor bracket with the bolt and washer.png" alt="R1 assembly diagram showing the black top motor bracket and its two removable bolts and washers" width="360" style="width: 360px; max-width: 100%; height: auto;"><figcaption>Remove the black top bracket's two bolts and washers first. Use the same hardware to reinstall it after adjusting the plate.</figcaption></figure>
+<figure><img src="../.gitbook/assets/r1-top-motor-bracket-assembly-cropped.png" alt="Cropped R1 assembly diagram showing the black top motor bracket and its two removable bolts and washers" width="480" style="width: 480px; max-width: 100%; height: auto;"><figcaption>Remove the black top bracket's two bolts and washers first. Use the same hardware to reinstall it after adjusting the plate.</figcaption></figure>
 
-## 2. Locate the metal mounting plate
+## 2. Identify the top and inner metal brackets
 
-Find the metal plate shown below. This is the part you will slide toward the front opening.
+The mounting assembly has a **top metal bracket** and an **inner metal bracket**. The top metal bracket is the plate shown below; this assembly slides toward the front opening.
+
+The **inner metal bracket has two press-fit inserts**. Its **flat side sits on top of the cage**, and the **two inserts protrude into the inside of the trap**. Keep this orientation during adjustment and reassembly.
+
+**Six mounting bolts secure the metal bracket assembly, with their nuts underneath.** These are separate from the two bolts and washers used to attach the black top motor bracket in Step 1.
 
 <img src="../.gitbook/assets/r1-motor-bracket-location.png" alt="Metal motor mounting plate on the OcuTrap R1, with the black top bracket removed" width="480" style="width: 480px; max-width: 100%; height: auto;">
 
@@ -30,7 +34,7 @@ Find the metal plate shown below. This is the part you will slide toward the fro
 
 Place one nut driver on the nut underneath the plate and the other on the matching bolt head above it. **Hold the lower nut driver steady while turning the upper driver counterclockwise**, viewed from above, to loosen the hardware.
 
-Loosen the plate's mounting nuts just enough to allow it to slide. **Leave these nuts and bolts installed; they do not need to be fully removed.**
+Repeat for the mounting hardware at all **six bolts**, loosening the nuts underneath the metal bracket assembly just enough to allow it to slide. **Leave these nuts and bolts installed; they do not need to be fully removed.** Keep the inner metal bracket in the orientation described above.
 
 <img src="../.gitbook/assets/r1-motor-bracket-hold-and-turn.png" alt="Turn the upper nut driver while holding the lower driver steady" width="480" style="width: 480px; max-width: 100%; height: auto;">
 
@@ -44,7 +48,7 @@ Hold both ends of the metal plate and slide it **toward the front opening of the
 
 ## 5. Tighten the plate's mounting hardware
 
-Hold the plate in its new position. Hold the lower nut driver steady and turn the upper driver clockwise to tighten the hardware. Secure all the mounting hardware you loosened and check that the plate does not slide.
+Hold the plate in its new position. Check that the inner metal bracket's flat side remains on top of the cage and its two press-fit inserts protrude into the trap. Hold the lower nut driver steady and turn the upper driver clockwise to tighten the hardware. Secure all **six mounting bolts** and check that the plate does not slide.
 
 ## 6. Reinstall the black top motor bracket
 
