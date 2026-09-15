@@ -493,6 +493,23 @@ All items below have `exit-impact: ops`. Implementation is confined to
 - **Rewriting the GitBook information architecture** — `SUMMARY.md` table
   of contents stays as-is unless a specific drift item demands a new page.
 
+## R1 motor bracket adjustment (DOC-25)
+
+exit-impact: ops
+
+- [x] Publish an R1-only troubleshooting guide for adjusting the motor bracket
+  toward the front opening to decrease the gap and improve catches. State that
+  usually only a small movement is needed; do not invent a distance or torque.
+- [x] Show the owner-approved bracket identification, upper-driver turning / lower-driver
+  holding, and sliding images. Remove obsolete draft labels for publication.
+- [x] Explain that mounting nuts need only be loosened, not fully removed.
+- [x] Remove the black top motor bracket first and reinstall it last, using the
+  existing R1 assembly diagram. The owner confirmed this part on 2026-09-15.
+  Distinguish its two bolts and washers from the metal mounting plate's nuts,
+  which remain installed while loosened for sliding.
+- [x] Link from Troubleshooting and related R1 assembly / door-lock guidance,
+  synchronize the site content, rebuild and verify the KB PDF, and verify the live page.
+
 ## Traceability
 
 | REQ-ID  | Phase                          |

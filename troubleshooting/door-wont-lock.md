@@ -33,3 +33,5 @@ When the door closes correctly, it sits **behind and underneath the locking bar*
 > **Why it matters:** A door that is not behind the locking bar may not prevent an animal from escaping.
 
 **See also:** [Enhanced door closing](../getting-started/capture-behavior/enhanced-door-closing.md)
+
+**R1 only:** If the motor mounting position needs adjustment to reduce the gap, see [Adjusting the motor bracket](adjusting-the-motor-bracket-r1.md). That procedure applies only to the R1.

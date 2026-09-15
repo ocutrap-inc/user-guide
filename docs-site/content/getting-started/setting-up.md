@@ -78,6 +78,8 @@ Before beginning, ensure you have the following parts for the door assembly:
 
 #### Step 3: Setup the Motor
 
+For an assembled R1 that needs a smaller gap at the front opening, see [Adjusting the motor bracket (R1 only)](../troubleshooting/adjusting-the-motor-bracket-r1.md).
+
 1. Install top bracket with washers and bolts. Tighten with nut driver.
 2. Use the pins and clevises to secure the motor to the door at both the top and bottom attachment points.
 3. Feed the cable through the metal handle.
