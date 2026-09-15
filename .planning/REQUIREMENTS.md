@@ -526,6 +526,18 @@ exit-impact: ops
 - [x] Synchronize website source, rebuild and verify the KB PDF, and publish
   through a checked PR with live verification.
 
+## R1 bracket copy audit (DOC-27)
+
+exit-impact: ops
+
+- [x] Remove repeated explanations and shorten the adjustment page while
+  retaining its approved images and the complete removal-to-reassembly sequence.
+- [x] Preserve six mounting bolts with nuts underneath, top/inner bracket
+  identification, flat side above the cage and two inserts projecting inside,
+  lower-driver hold, small forward slide, and loosening without removal.
+- [x] Preserve motor disconnection and the final door/locking-bar check;
+  synchronize site content, rebuild/verify the PDF and publish through a checked PR.
+
 ## Traceability
 
 | REQ-ID  | Phase                          |
