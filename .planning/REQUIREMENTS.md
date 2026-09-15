@@ -510,6 +510,22 @@ exit-impact: ops
 - [x] Link from Troubleshooting and related R1 assembly / door-lock guidance,
   synchronize the site content, rebuild and verify the KB PDF, and verify the live page.
 
+## R1 bracket hardware clarification (DOC-26)
+
+exit-impact: ops
+
+- [x] Crop the black top motor bracket assembly illustration to exclude the
+  nut driver, instruction text and surrounding black border. Preserve the
+  black bracket, metal bracket, two removable bolts and washers.
+- [x] Identify the top and inner metal brackets and the six mounting bolts
+  with nuts beneath the metal bracket assembly. Explain that the inner metal
+  bracket's flat side sits on top of the cage and its two press-fit inserts
+  protrude into the trap, as specified by the owner on 2026-09-15.
+- [x] Retain the small forward adjustment and loosen-without-removal
+  instructions; secure all six mounting bolts before reinstalling the black bracket.
+- [x] Synchronize website source, rebuild and verify the KB PDF, and publish
+  through a checked PR with live verification.
+
 ## Traceability
 
 | REQ-ID  | Phase                          |
