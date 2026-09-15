@@ -63,6 +63,7 @@
 * [Improving a weak cellular signal](troubleshooting/improving-a-weak-cellular-signal.md)
 * [Common issues](troubleshooting/common-issues.md)
 * [Door won't lock behind the locking bar](troubleshooting/door-wont-lock.md)
+* [Adjusting the motor bracket (R1 only)](troubleshooting/adjusting-the-motor-bracket-r1.md)
 * [Trap not sending commands](troubleshooting/trap-not-sending-commands.md)
 * [Motor-to-pin connection too tight](troubleshooting/motor-to-pin-connection-too-tight.md)
 * [Condensation on the camera](troubleshooting/condensation-on-the-camera.md)
