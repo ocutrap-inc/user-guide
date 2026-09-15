@@ -39,3 +39,17 @@ the original assembly graphic remains available to existing setup pages.
 Image edit: built-in imagegen, crop to the bracket assembly and its two exploded
 bolts/washers; remove driver, text and black border, preserving the depicted
 hardware. Output: `.gitbook/assets/r1-top-motor-bracket-assembly-cropped.png`.
+
+## DOC-27 copy audit (2026-09-15)
+
+Reduced visible page copy from 653 to 338 words (48%) by removing duplicate
+introductory statements, image captions, orientation reminders and related links.
+Retained all six steps, four approved images, bracket/insert orientation, the
+six-bolt count, hold/turn directions, small forward slide, loosen-without-removal
+instruction, motor disconnection and final door/locking-bar check.
+
+Site typecheck, docs/search/LED checks and production build passed. Root/site
+content and local links/assets verified. KB PDF rebuilt and source-hash verified;
+article pages 166-170 visually inspected. Publication proceeds through a checked
+PR, followed by live copy and PDF source verification. ClickUp remains unavailable
+as described above; no substitute issue was created.
