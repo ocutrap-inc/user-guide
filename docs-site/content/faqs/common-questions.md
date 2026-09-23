@@ -25,7 +25,7 @@ See [Your OcuTrap subscription](../account-and-billing/subscription-overview.md)
 
 <summary>Can I still use the old OcuTrap app?</summary>
 
-Only until **September 30, 2026**. The old app at `base.ocutrap.com` retires that day and then sends you to the new app at [app.ocutrap.com](https://app.ocutrap.com). Your traps, capture history, and subscription are already in the new app under the same email. You only need to set a new password.
+Only until **October 31, 2026**. The old app at `base.ocutrap.com` retires that day and then sends you to the new app at [app.ocutrap.com](https://app.ocutrap.com). Your traps, capture history, and subscription are already in the new app under the same email. You only need to set a new password.
 
 See [Move to the new OcuTrap app](../switching-to-the-new-app/README.md).
 
