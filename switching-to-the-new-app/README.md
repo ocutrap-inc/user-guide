@@ -9,7 +9,7 @@ description: >-
 Your traps, capture history, and subscription are already waiting for you in the new OcuTrap app. This page walks you through the one-time move.
 
 {% hint style="info" %}
-**Key date:** the old app at `base.ocutrap.com` retires on **September 30, 2026**. After that it sends you to the new app. Move before then so your alerts keep coming.
+**Key date:** the old app at `base.ocutrap.com` retires on **October 31, 2026**. After that it sends you to the new app. Move before then so your alerts keep coming.
 {% endhint %}
 
 {% hint style="info" %}
@@ -31,7 +31,7 @@ Your traps, capture history, and subscription are already waiting for you in the
 
 ### 1. Watch for the announcement
 
-You'll get an email from us when it's your turn to move. It confirms your account path and includes either a **"Set your password"** link or a clear sign-up link. We'll also post a banner in the old app. The old app stays available until **September 30, 2026**, so you have a clear window to move at your own pace.
+You'll get an email from us when it's your turn to move. It confirms your account path and includes either a **"Set your password"** link or a clear sign-up link. We'll also post a banner in the old app. The old app stays available until **October 31, 2026**, so you have a clear window to move at your own pace.
 
 ### 2. Activate your account: same email as before
 
@@ -87,7 +87,7 @@ When you first sign in, the app also offers a short guided tour that points out 
 
 * This guide covers these steps and common questions. Start with **[Getting Started → App](../getting-started/app/README.md)**.
 * Stuck on any step? **[Contact support](../support/support.md)**. Tell us the email your account is under, and we'll sort it out.
-* The old app retires on **September 30, 2026**. After that, `base.ocutrap.com` automatically sends you to the new app (your old bookmark still works). Everything you need is already in the new app, so there's nothing to save or export from the old one.
+* The old app retires on **October 31, 2026**. After that, `base.ocutrap.com` automatically sends you to the new app (your old bookmark still works). Everything you need is already in the new app, so there's nothing to save or export from the old one.
 
 ***
 
